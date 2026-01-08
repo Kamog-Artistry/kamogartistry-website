@@ -1,0 +1,44 @@
+<!DOCTYPE html><html><head>
+<title>Portfolio | Kamog Artistry</title>
+<link rel="stylesheet" href="css/style.css"></head><body>
+
+<header class="header">
+<nav class="nav">
+<a href="index.html"><img src="images/logo-white.png" class="logo"></a>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="blog.html">Insights</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+</nav>
+</header>
+
+<section class="section light">
+<h2 class="animate">Our Portfolio</h2>
+
+<div class="portfolio-filters animate">
+<button onclick="filterPortfolio('all')">All</button>
+<button onclick="filterPortfolio('branding')">Branding</button>
+<button onclick="filterPortfolio('printing')">Printing</button>
+<button onclick="filterPortfolio('signage')">Signage</button>
+<button onclick="filterPortfolio('art')">Art</button>
+</div>
+
+<div class="grid animate">
+<div class="portfolio-item branding" onclick="openLightbox(this)"><img src="images/brand identity 1.png"><p>Brand Identity</p></div>
+<div class="portfolio-item printing" onclick="openLightbox(this)"><img src="images/large format.jpg"><p>Large Format Print</p></div>
+<div class="portfolio-item signage" onclick="openLightbox(this)"><img src="images/signage 1.png"><p>Outdoor Signage</p></div>
+<div class="portfolio-item art" onclick="openLightbox(this)"><img src="images/custom Art 1.jpg"><p>Custom Art</p></div>
+</div>
+</section>
+
+<div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img"></div>
+
+<footer class="footer"><p>© 2026 Kamog Artistry (U) Ltd</p></footer>
+<script src="js/script.js"></script><script src="js/animations.js"></script>
+</body></html>
