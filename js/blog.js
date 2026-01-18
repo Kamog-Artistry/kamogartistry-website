@@ -1,72 +1,78 @@
-const params = new URLSearchParams(window.location.search);
-const post = params.get("post");
-const container = document.getElementById("postContent");
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get("post");
+  const container = document.getElementById("postContent");
+  const readingEl = document.getElementById("readingTime");
 
-if (!post) {
-  container.innerHTML = "<p>No article selected.</p>";
-} else {
-  fetch(`content/blog/${post}.md`)
-    .then(res => res.text())
+  if (!container) return;
+
+  if (!slug) {
+    container.innerHTML = "<p><strong>Error:</strong> No article selected.</p>";
+    return;
+  }
+
+  // IMPORTANT: absolute path so it works on /post route too
+  const mdPath = `/content/blog/${slug}.md`;
+
+  container.innerHTML = "<p>Loading article…</p>";
+
+  fetch(mdPath)
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}: ${mdPath}`);
+      return res.text();
+    })
     .then(md => {
-      const parts = md.split('---');
+      // Split YAML front matter
       let front = {};
       let body = md;
 
-      if (parts.length > 2) {
-        body = parts.slice(2).join('---').trim();
-        parts[1].split('\n').forEach(line => {
-          const [k, ...v] = line.split(':');
-          if (k && v) front[k.trim()] = v.join(':').trim().replace(/"/g, '');
+      const fmMatch = md.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
+      if (fmMatch) {
+        const fm = fmMatch[1];
+        body = fmMatch[2].trim();
+
+        fm.split("\n").forEach(line => {
+          const idx = line.indexOf(":");
+          if (idx === -1) return;
+          const key = line.slice(0, idx).trim();
+          const value = line.slice(idx + 1).trim().replace(/^"|"$/g, "");
+          if (key) front[key] = value;
         });
       }
 
       // Reading time
-      const words = body.split(/\s+/).length;
-      const minutes = Math.ceil(words / 200);
-      document.getElementById("readingTime").innerText =
-        `${minutes} min read`;
+      const words = body.split(/\s+/).filter(Boolean).length;
+      const mins = Math.max(1, Math.ceil(words / 200));
+      if (readingEl) readingEl.textContent = `${mins} min read`;
 
-      let html = '';
-      if (front.image) html += `<img src="${front.image}" class="article-img">`;
-      if (front.title) html += `<h1>${front.title}</h1>`;
-      if (front.date) html += `<p class="article-date">${front.date}</p>`;
-      html += marked.parse(body);
+      // Build article header (image, title, date)
+      let html = "";
+      if (front.image) {
+        html += `<img src="${front.image}" class="article-img" alt="Article image">`;
+      }
+      if (front.title) {
+        html += `<h1 class="article-title">${front.title}</h1>`;
+      }
+      if (front.date) {
+        html += `<p class="article-date">${front.date}</p>`;
+      }
+
+      // Render markdown
+      if (typeof marked === "undefined") {
+        html += `<pre>${body.replace(/</g, "&lt;")}</pre>`;
+      } else {
+        html += marked.parse(body);
+      }
 
       container.innerHTML = html;
+      document.title = (front.title ? `${front.title} | Kamog Artistry` : document.title);
     })
-    .catch(() => {
-      container.innerHTML = "<p>Failed to load article.</p>";
+    .catch(err => {
+      container.innerHTML = `
+        <h3 style="color:#b00020;margin-bottom:8px">Failed to load article</h3>
+        <p><strong>Expected file:</strong> <code>${mdPath}</code></p>
+        <p style="opacity:.8">${err.message}</p>
+      `;
+      console.error(err);
     });
-}
-function copyLink(){
-  navigator.clipboard.writeText(window.location.href);
-  alert("Link copied");
-}
-
-function shareArticle(){
-  if (navigator.share) {
-    navigator.share({
-      title: document.title,
-      url: window.location.href
-    });
-  } else {
-    copyLink();
-  }
-}
-
-// Likes (per article, per user)
-function likeArticle(){
-  const key = "likes_" + window.location.search;
-  let likes = parseInt(localStorage.getItem(key) || "0", 10);
-  likes++;
-  localStorage.setItem(key, likes);
-  document.getElementById("likeCount").innerText = likes;
-}
-
-window.addEventListener("load", () => {
-  const el = document.getElementById("likeCount");
-  if(el){
-    const key = "likes_" + window.location.search;
-    el.innerText = localStorage.getItem(key) || "0";
-  }
-});
+})();
