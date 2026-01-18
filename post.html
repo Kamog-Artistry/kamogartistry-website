@@ -1,3 +1,21 @@
+<div class="article-meta">
+  <span id="readingTime"></span>
+</div>
+
+<div class="article-actions">
+  <button onclick="shareArticle()">Share</button>
+  <button onclick="copyLink()">Copy Link</button>
+  <button onclick="likeArticle()">👍 Like (<span id="likeCount">0</span>)</button>
+</div>
+
+
+<div id="postContent" ...
+<div class="article-actions">
+  <button class="action-btn" onclick="shareArticle()">Share</button>
+  <button class="action-btn" onclick="copyLink()">Copy Link</button>
+  <button class="action-btn" onclick="window.print()">Print</button>
+</div>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +65,32 @@
 
 </body>
 </html>
+
+<button class="action-btn" onclick="likeArticle()">👍 Like <span id="likeCount">0</span></button>
+
+<div id="disqus_thread"></div>
+
+<script>
+  var disqus_config = function () {
+    // Use full URL including query string (?post=...)
+    this.page.url = window.location.href;
+
+    // Unique identifier per article
+    this.page.identifier = new URLSearchParams(window.location.search).get("post");
+  };
+
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-kamogartistry-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the comments powered by Disqus.
+</noscript>
+
 
 
 
