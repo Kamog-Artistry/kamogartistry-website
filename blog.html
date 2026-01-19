@@ -1,63 +1,147 @@
-<!DOCTYPE html><html><head>
-<title>About | Kamog Artistry</title>
-<link rel="stylesheet" href="css/style.css"></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Insights | Kamog Artistry (U) Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
 
 <header class="header">
-<nav class="nav">
-<a href="index.html"><img src="images/logo-white.png" class="logo"></a>
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="portfolio.html">Portfolio</a></li>
-<li><a href="blog.html">Insights</a></li>
-<li><a href="testimonials.html">Testimonials</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-<button class="menu-btn" onclick="toggleMenu()">☰</button>
-</nav>
+  <nav class="nav">
+    <a href="index.html"><img src="images/logo-white.png" class="logo" alt="Kamog Artistry logo"></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Insights</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </nav>
 </header>
 
+<!-- spacer for fixed header -->
+<div style="height:95px"></div>
 
-<section class="section animate">
-  <h2>Insights & Articles</h2>
+<section class="section light animate">
 
-  <div class="grid">
+  <div style="text-align:center;max-width:950px;margin:0 auto">
+    <h2>Insights & Articles</h2>
+    <p style="opacity:.9;margin-top:12px">
+      News, announcements, and practical insights on branding, printing, signage, and creative production.
+    </p>
+  </div>
 
-    <!-- BLOG POST 1 -->
-    <a href="post.html?post=fastercapital-press-release" class="card highlight">
+  <div class="grid" style="margin-top:28px">
+
+    <!-- BLOG POST 1 (FEATURED) -->
+    <a href="post.html?post=fastercapital-press-release" class="card highlight" style="border:1px solid rgba(47,107,255,.25)">
       <h3>FasterCapital Partnership Announcement</h3>
-      <p>Kamog Artistry (U) Ltd joins the FasterCapital program.</p>
+      <p style="opacity:.85">
+        Kamog Artistry (U) Ltd joins the FasterCapital LaunchUp program—what it means and what’s next.
+      </p>
 
-      <span data-disqus-identifier="fastercapital-press-release">
-  Comments
-</span>
+      <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <span class="disqus-comment-count" data-disqus-identifier="fastercapital-press-release" style="opacity:.75">
+          0 Comments
+        </span>
 
-
-      <span class="read-more">Read Article →</span>
+        <span class="read-more">Read Article →</span>
+      </div>
     </a>
 
     <!-- BLOG POST 2 -->
     <a href="post.html?post=first-post" class="card">
       <h3>Why Branding Matters</h3>
-      <p>Understanding the power of strong visual identity.</p>
-      <span class="read-more">Read Article →</span>
-    </a>
+      <p style="opacity:.85">Understanding how strong visual identity builds trust and grows business.</p>
 
+      <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <span class="disqus-comment-count" data-disqus-identifier="first-post" style="opacity:.75">
+          0 Comments
+        </span>
+
+        <span class="read-more">Read Article →</span>
+      </div>
+    </a>
 
     <!-- BLOG POST 3 -->
     <a href="post.html?post=creative-industry-trends" class="card">
       <h3>Creative Industry Trends</h3>
-      <p>How design and production are shaping modern brands.</p>
-      <span class="read-more">Read Article →</span>
+      <p style="opacity:.85">How design and production are shaping modern brands and marketing.</p>
+
+      <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <span class="disqus-comment-count" data-disqus-identifier="creative-industry-trends" style="opacity:.75">
+          0 Comments
+        </span>
+
+        <span class="read-more">Read Article →</span>
+      </div>
     </a>
 
   </div>
 </section>
 
-<script id="dsq-count-scr"
-src="//https-kamogartistry-com.disqus.com/count.js" async></script>
+<!-- DISQUS COMMENT COUNTS -->
+<script id="dsq-count-scr" src="https://https-kamogartistry-com.disqus.com/count.js" async></script>
 
-<footer class="footer"><p>© 2026 Kamog Artistry (U) Ltd</p></footer>
-<script src="js/script.js"></script><script src="js/animations.js"></script>
-</body></html>
+
+<footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-col">
+      <h4>Kamog Artistry (U) Ltd</h4>
+      <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
+
+      <div class="footer-badges">
+        <span class="badge">Branding</span>
+        <span class="badge">Print</span>
+        <span class="badge">Signage</span>
+        <span class="badge">Stationery</span>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="footer-list">
+        <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
+        <li><a href="tel:+256775251445">+256 775 251 445</a></li>
+        <li>P.O. Box 201929, Kampala - Uganda</li>
+      </ul>
+
+      <a class="footer-cta" href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow</h4>
+
+      <div class="social">
+        <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/256775251445" aria-label="WhatsApp">WA</a>
+        <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">in</a>
+        <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">TT</a>
+        <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">IG</a>
+        <a class="social-btn" title="X" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">X</a>
+        <a class="social-btn" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">f</a>
+        <a class="social-btn" title="Behance" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">Be</a>
+        <a class="social-btn" title="Threads" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">@</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="js/script.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
+
+
