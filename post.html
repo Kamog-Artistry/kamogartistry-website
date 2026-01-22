@@ -466,21 +466,11 @@ const cleanedMd = md
 <!-- Disqus (lazy load) -->
 
 <script>
+
   var disqus_config = function () {
-    var slug = new URLSearchParams(window.location.search).get("post");
-
-    this.page.url = window.location.origin + "/post?post=" + slug;
-    this.page.identifier = slug;
+    this.page.url = window.location.href;
+    this.page.identifier = new URLSearchParams(window.location.search).get("post");
   };
-
-  (function () {
-    var d = document, s = d.createElement("script");
-    s.src = "https://kamogartistry-com.disqus.com/embed.js";
-    s.setAttribute("data-timestamp", +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-
 
   (function () {
     var loaded = false;
