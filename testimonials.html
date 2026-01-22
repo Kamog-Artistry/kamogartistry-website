@@ -1,271 +1,541 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <title>Testimonials | Kamog Artistry (U) Ltd</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css" />
+
+
+  <!-- Root structure (current) -->
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+
+  <!-- Small page-only fixes (won't affect other pages) -->
+
+  <style>
+
+    /* Safer: only apply offset when header is fixed (prevents odd gaps if header height changes) */
+    @media (min-width: 768px){
+      body { padding-top: 95px; }
+    }
+
+    /* Make client logo cards consistent */
+
+    .client-logo-card{
+
+      display:flex; align-items:center; justify-content:center;
+
+      min-height:96px;
+
+    }
+
+    .client-logo-card img{
+
+      max-width:150px; max-height:64px; object-fit:contain;
+
+      filter: saturate(1.05);
+
+    }
+
+
+    /* Optional: keep testimonial box white if your theme changes */
+
+    .testimonial-box{
+
+      background:#fff;
+
+      color: inherit;
+
+    }
+
+
+    /* Social icon SVG sizing */
+
+    .social-btn img{
+
+      width:20px; height:20px;
+
+      display:block;
+
+      filter: none;
+
+    }
+
+  </style>
+
 </head>
+
+
 
 <body>
 
+
+
 <header class="header">
+
   <nav class="nav">
-    <a href="index.html"><img src="images/logo-white.png" class="logo" alt="Kamog Artistry logo"></a>
+
+    <a href="index.html" aria-label="Go to homepage">
+
+      <!-- UPDATED: standardized logo format/path -->
+      <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
+
+    </a>
+
+
 
     <ul class="nav-links" id="navLinks">
+
       <li><a href="index.html">Home</a></li>
+
       <li><a href="about.html">About</a></li>
+
       <li><a href="services.html">Services</a></li>
+
       <li><a href="portfolio.html">Portfolio</a></li>
+
       <li><a href="blog.html">Insights</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
+
+      <li><a href="testimonials.html" aria-current="page">Testimonials</a></li>
+
       <li><a href="contact.html">Contact</a></li>
+
     </ul>
 
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
+
+    <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
   </nav>
+
 </header>
 
-<!-- spacer for fixed header -->
-<div style="height:95px"></div>
+
 
 <!-- HERO INTRO -->
+
 <section class="section animate">
+
   <div style="max-width:1000px;margin:auto;text-align:center">
+
     <h2>Client Testimonials</h2>
+
     <p style="opacity:.9;margin-top:12px">
+
       We’re trusted for design, print quality, clean finishing, and reliable execution.
+
       Here’s what clients say after working with Kamog Artistry (U) Ltd.
+
     </p>
 
+
+
     <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+
       <a href="portfolio.html" class="btn-secondary">View Portfolio</a>
+
       <a href="contact.html" class="btn-primary">Request a Quote</a>
+
     </div>
+
+
 
     <div style="margin-top:18px;opacity:.85">
+
       ⭐⭐⭐⭐⭐ <strong>Quality</strong> • ⚡ <strong>Fast turnaround</strong> • ✅ <strong>Trusted finishing</strong>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- CAROUSEL -->
+
+
+<!-- FEATURED REVIEW (Carousel uses your existing JS IDs) -->
+
 <section class="section light animate">
+
   <h2 style="margin-bottom:20px">Featured Review</h2>
 
+
+
   <div class="testimonial-box animate">
-    <p id="testimonialText" style="font-size:1.05rem;line-height:1.7"></p>
+
+    <p id="testimonialText" style="font-size:1.05rem;line-height:1.7;margin:0"></p>
+
     <h4 id="testimonialAuthor" style="margin-top:14px"></h4>
 
+
+
     <div class="testimonial-controls" style="margin-top:10px">
-      <button onclick="prevTestimonial()" aria-label="Previous testimonial">‹</button>
-      <button onclick="nextTestimonial()" aria-label="Next testimonial">›</button>
+
+      <button type="button" onclick="prevTestimonial()" aria-label="Previous testimonial">‹</button>
+
+      <button type="button" onclick="nextTestimonial()" aria-label="Next testimonial">›</button>
+
     </div>
+
+
 
     <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+
       <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">Leave a WhatsApp Review</a>
+
       <a class="btn-secondary" href="mailto:info@kamogartistry.com?subject=Testimonial%20for%20Kamog%20Artistry%20(U)%20Ltd">Send via Email</a>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- TESTIMONIALS GRID -->
+
+
+<!-- TESTIMONIALS GRID + CLIENT LOGOS -->
+
 <section class="section light animate">
+
   <h2>More Client Feedback</h2>
 
+
+
+  <div class="grid" style="margin-top:22px;max-width:1000px;margin-left:auto;margin-right:auto">
+
+    <div class="card">
+
+      <p style="opacity:.9;line-height:1.7;margin:0">
+
+        “Their creativity and professionalism stand out. Clean finishing and strong brand consistency.”
+
+      </p>
+
+      <p style="opacity:.8;margin-top:10px"><strong>Voltech Engineering Services</strong></p>
+
+    </div>
+
+
+
+    <div class="card">
+
+      <p style="opacity:.9;line-height:1.7;margin:0">
+
+        “Excellent execution from design to installation. Timelines were respected and the outcome was impressive.”
+
+      </p>
+
+      <p style="opacity:.8;margin-top:10px"><strong>BIRDC / Exhibition Branding</strong></p>
+
+    </div>
+
+
+
+    <div class="card">
+
+      <p style="opacity:.9;line-height:1.7;margin:0">
+
+        “High-quality print and branding work. Professional communication and reliable delivery.”
+
+      </p>
+
+      <p style="opacity:.8;margin-top:10px"><strong>Ability Pharmacy</strong></p>
+
+    </div>
+
+  </div>
+
+
+
   <!-- CLIENT LOGOS -->
-<div style="margin-top:60px;text-align:center">
-  <h3 style="margin-bottom:20px">Trusted by Clients Across Industries</h3>
-  <p style="opacity:.85;max-width:700px;margin:0 auto 30px">
-    We’ve worked with organizations and businesses across engineering,
-    healthcare, education, hospitality, retail, and creative industries.
-  </p>
 
-  <div class="grid" style="max-width:1000px;margin:auto">
-    <!-- LOGO 1 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <img src="images/clients/voltech.png" alt="Voltech Engineering Services"
-           style="max-width:140px;max-height:60px;object-fit:contain">
+  <div style="margin-top:60px;text-align:center">
+
+    <h3 style="margin-bottom:20px">Trusted by Clients Across Industries</h3>
+
+    <p style="opacity:.85;max-width:700px;margin:0 auto 30px">
+
+      We’ve worked with organizations and businesses across engineering, healthcare, education,
+
+      hospitality, retail, and creative industries.
+
+    </p>
+
+
+
+    <div class="grid" style="max-width:1000px;margin:auto">
+
+      <div class="card client-logo-card">
+
+        <img src="assets/img/clients/voltech.png" alt="Voltech Engineering Services" loading="lazy" decoding="async" onerror="this.style.display='none'">
+
+      </div>
+
+
+
+      <div class="card client-logo-card">
+
+        <img src="assets/img/clients/ability-pharmacy.png" alt="Ability Pharmacy" loading="lazy" decoding="async" onerror="this.style.display='none'">
+
+      </div>
+
+
+
+      <div class="card client-logo-card">
+
+        <img src="assets/img/clients/royal-ice-cream.png" alt="Royal Ice Cream" loading="lazy" decoding="async" onerror="this.style.display='none'">
+
+      </div>
+
+
+
+      <div class="card client-logo-card">
+
+        <img src="assets/img/clients/birdc.png" alt="Banana Industrial Research & Development Centre" loading="lazy" decoding="async" onerror="this.style.display='none'">
+
+      </div>
+
+
+
+      <div class="card client-logo-card">
+
+        <img src="assets/img/clients/sme-client.png" alt="SME Client" loading="lazy" decoding="async" onerror="this.style.display='none'">
+
+      </div>
+
+
+
+      <div class="card client-logo-card">
+
+        <img src="assets/img/clients/NYANZO SERVICE STATION-01.png" alt="Nyanzo Service Station" loading="lazy" decoding="async" onerror="this.style.display='none'">
+
+      </div>
+
     </div>
 
-    <!-- LOGO 2 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <img src="images/clients/ability-pharmacy.png" alt="Ability Pharmacy"
-           style="max-width:140px;max-height:60px;object-fit:contain">
-    </div>
-
-    <!-- LOGO 3 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <img src="images/clients/royal-ice-cream.png" alt="Royal Ice Cream"
-           style="max-width:140px;max-height:60px;object-fit:contain">
-    </div>
-
-    <!-- LOGO 4 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <img src="images/clients/birdc.png" alt="Banana Industrial Research & Development Centre"
-           style="max-width:140px;max-height:60px;object-fit:contain">
-    </div>
-
-    <!-- LOGO 5 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <img src="images/clients/sme-client.png" alt="SME Client"
-           style="max-width:140px;max-height:60px;object-fit:contain">
-    </div>
-
-     <!-- LOGO 6 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <img src="images/clients/NYANZO SERVICE STATION-01.png" alt="SME Client"
-           style="max-width:140px;max-height:60px;object-fit:contain">
-    </div>
-
-    <!-- LOGO 6 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <img src="images/clients/TANN ENERGIES-01.png" alt="SME Client"
-           style="max-width:140px;max-height:60px;object-fit:contain">
-    </div>
-
-    <!-- LOGO 6 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <img src="images/clients/ABUNDANCE-01.png" alt="SME Client"
-           style="max-width:140px;max-height:60px;object-fit:contain">
-    </div>
-
-
-    <!-- LOGO 6 -->
-    <div class="card" style="display:flex;align-items:center;justify-content:center">
-      <span style="opacity:.6;font-weight:700">+ Many SMEs</span>
-    </div>
-  </div>
-</div>
-
-</p>
-      <p style="margin-top:12px;opacity:.8"><strong> </strong></p>
-    </div>
   </div>
 
 
 
-  <div class="grid">
-    <div class="card">
-      <h3 style="margin-bottom:10px">“Clean finishing and strong branding.”</h3>
-      <p style="opacity:.85">
-        We needed professional visuals for our brand and print materials. The output was sharp, clean,
-        and delivered on time. Highly recommended.
-      </p>
-      <p style="margin-top:12px;opacity:.8"><strong>— Abundance Herbal Products</strong></p>
-    </div>
+  <!-- CTA -->
 
-    <div class="card">
-      <h3 style="margin-bottom:10px">“Great communication and reliable delivery.”</h3>
-      <p style="opacity:.85">
-        From concept to final output, they kept us updated and delivered exactly what we needed.
-        The quality of print and design was top-level.
-      </p>
-      <p style="margin-top:12px;opacity:.8"><strong>— Capsada Company Limited</strong></p>
-    </div>
+  <div class="card cta-card" style="margin-top:28px">
 
-    <div class="card">
-      <h3 style="margin-bottom:10px">“Our signage now stands out.”</h3>
-      <p style="opacity:.85">
-        The signage and installation were done professionally. Visibility improved and customers
-        can locate us easily. Very satisfied.
-      </p>
-      <p style="margin-top:12px;opacity:.8"><strong>— Ability Pharmacy </strong></p>
-    </div>
+    <h2 style="margin-bottom:10px">Need results like these?</h2>
 
-    <div class="card">
-      <h3 style="margin-bottom:10px">“Professional design work.”</h3>
-      <p style="opacity:.85">
-        The branding concepts were creative and aligned with our mission. We got a consistent look
-        across our materials and online visuals.
-      </p>
-      <p style="margin-top:12px;opacity:.8"><strong>— Voltech Engineering Services Co Ltd</strong></p>
-    </div>
-
-    <div class="card">
-      <h3 style="margin-bottom:10px">“Fast turnaround without compromising quality.”</h3>
-      <p style="opacity:.85">
-        We had a tight deadline for an event. They delivered quickly, and the results looked premium.
-      </p>
-      <p style="margin-top:12px;opacity:.8"><strong>— TOOKE</strong></p>
-    </div>
-
-    <div class="card">
-      <h3 style="margin-bottom:10px">“Excellent outdoor impact.”</h3>
-      <p style="opacity:.85">
-        Our banners and outdoor prints were vibrant and durable. The installation was neat and
-        the visuals attract attention.
-      </p>
-      <p style="margin-top:12px;opacity:.8"><strong>— Hope Ceremonials</strong></p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section animate">
-  <div class="card cta-card">
-    <h2 style="margin-bottom:10px">Want results like these?</h2>
     <p style="opacity:.85;margin-bottom:18px">
-      Tell us your project goal and deadline. We’ll recommend the best option and share a quick quote.
+
+      Share your goal, deadline, and budget range—we’ll recommend the best design + production approach.
+
     </p>
 
     <div class="hero-actions">
+
       <a href="contact.html" class="btn-primary">Send Inquiry</a>
+
       <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
+
     </div>
+
   </div>
+
 </section>
 
+
+
 <footer class="footer">
+
   <div class="footer-wrap">
+
     <div class="footer-col">
+
       <h4>Kamog Artistry (U) Ltd</h4>
+
       <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
 
+
+
       <div class="footer-badges">
+
         <span class="badge">Branding</span>
+
         <span class="badge">Print</span>
+
         <span class="badge">Signage</span>
+
         <span class="badge">Stationery</span>
+
       </div>
+
     </div>
 
+
+
     <div class="footer-col">
+
       <h4>Contact</h4>
+
       <ul class="footer-list">
+
         <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
+
         <li><a href="tel:+256775251445">+256 775 251 445</a></li>
+
         <li>P.O. Box 201929, Kampala - Uganda</li>
+
       </ul>
 
+
+
       <a class="footer-cta" href="contact.html">Contact Us</a>
+
     </div>
+
+
 
     <div class="footer-col">
+
       <h4>Follow</h4>
 
+
+
       <div class="social">
-        <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/256775251445" aria-label="WhatsApp">WA</a>
-        <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">in</a>
-        <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">TT</a>
-        <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">IG</a>
-        <a class="social-btn" title="X" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">X</a>
-        <a class="social-btn" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">f</a>
-        <a class="social-btn" title="Behance" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">Be</a>
-        <a class="social-btn" title="Threads" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">@</a>
+
+        <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/256775251445" aria-label="WhatsApp">
+
+          <img src="assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
+
+        </a>
+
+        <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
+
+          <img src="assets/img/icons/linkedin.svg" alt="" aria-hidden="true">
+
+        </a>
+
+        <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
+
+          <img src="assets/img/icons/instagram.svg" alt="" aria-hidden="true">
+
+        </a>
+
+        <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
+
+          <img src="assets/img/icons/tiktok.svg" alt="" aria-hidden="true">
+
+        </a>
+
+        <a class="social-btn" title="X" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">
+
+          <img src="assets/img/icons/x.svg" alt="" aria-hidden="true">
+
+        </a>
+
+        <a class="social-btn" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">
+
+          <img src="assets/img/icons/facebook.svg" alt="" aria-hidden="true">
+
+        </a>
+
+        <a class="social-btn" title="Behance" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">
+
+          <img src="assets/img/icons/behance.svg" alt="" aria-hidden="true">
+
+        </a>
+
+        <a class="social-btn" title="Threads" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
+
+          <img src="assets/img/icons/threads.svg" alt="" aria-hidden="true">
+
+        </a>
+
       </div>
+
     </div>
+
   </div>
 
+
+
   <div class="footer-bottom">
+
     <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
+
   </div>
+
 </footer>
 
 
-<script src="js/script.js"></script>
-<script src="js/animations.js"></script>
-</body>
-</html>
 
+<!-- Scripts (UPDATED: defer for performance + avoids timing issues) -->
+
+<script src="assets/js/script.js" defer></script>
+
+<script src="assets/js/animations.js" defer></script>
+
+
+
+<!-- Fallback carousel (ONLY runs if your functions aren't already defined) -->
+
+<script>
+
+  (function () {
+
+    if (typeof window.nextTestimonial === "function" && typeof window.prevTestimonial === "function") return;
+
+
+
+    const tEl = document.getElementById("testimonialText");
+
+    const aEl = document.getElementById("testimonialAuthor");
+
+    if (!tEl || !aEl) return;
+
+
+
+    const data = window.KA_TESTIMONIALS || [
+
+      { text: "Kamog Artistry elevated our brand presence beyond expectations.", author: "— Capsada Co. Ltd" },
+
+      { text: "Their creativity and professionalism stand out.", author: "— Voltech Engineering Services" },
+
+      { text: "From print to branding, the quality is outstanding.", author: "— TOOKE" }
+
+    ];
+
+
+
+    let i = 0;
+
+    function render() {
+
+      tEl.textContent = data[i].text;
+
+      aEl.textContent = data[i].author;
+
+    }
+
+    window.nextTestimonial = function () { i = (i + 1) % data.length; render(); };
+
+    window.prevTestimonial = function () { i = (i - 1 + data.length) % data.length; render(); };
+
+
+
+    render();
+
+    setInterval(window.nextTestimonial, 5000);
+
+  })();
+
+</script>
+
+
+
+</body>
+
+</html>

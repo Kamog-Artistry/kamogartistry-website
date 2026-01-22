@@ -4,144 +4,324 @@
   <meta charset="UTF-8" />
   <title>Insights | Kamog Artistry (U) Ltd</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Root structure -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Page-only fix: replace spacer div with safe offset (prevents overlap if header is fixed) -->
+  <style>
+    @media (min-width: 768px){
+      body { padding-top: 95px; }
+    }
+
+    /* Ensure blog filter buttons inherit your existing portfolio tab styling */
+    .pf-btn.filter-btn { display:inline-flex; align-items:center; gap:8px; }
+    .pf-btn.filter-btn.is-active { /* keep old state + map to existing active look */
+      /* no hard styling here; class mapping handled in JS by also adding .active */
+    }
+
+    /* Stronger featured card emphasis (FasterCapital press) while keeping layout */
+    .blog-item.highlight{
+      position:relative;
+      overflow:hidden;
+  
+  </style>
 </head>
 
 <body>
 
-<header class="header">
-  <nav class="nav">
-    <a href="index.html"><img src="images/logo-white.png" class="logo" alt="Kamog Artistry logo"></a>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" aria-label="Go to homepage">
+        <!-- Standardized to SVG for consistency with updated pages -->
+        <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
+      </a>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="blog.html">Insights</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-  </nav>
-</header>
-
-<!-- spacer for fixed header -->
-<div style="height:95px"></div>
-
-<section class="section light animate">
-
-  <div style="text-align:center;max-width:950px;margin:0 auto">
-    <h2>Insights & Articles</h2>
-    <p style="opacity:.9;margin-top:12px">
-      News, announcements, and practical insights on branding, printing, signage, and creative production.
-    </p>
-  </div>
-
-  <div class="grid" style="margin-top:28px">
-
-    <!-- BLOG POST 1 (FEATURED) -->
-    <a href="post.html?post=fastercapital-press-release" class="card highlight" style="border:1px solid rgba(47,107,255,.25)">
-      <h3>FasterCapital Partnership Announcement</h3>
-      <p style="opacity:.85">
-        Kamog Artistry (U) Ltd joins the FasterCapital LaunchUp program—what it means and what’s next.
-      </p>
-
-      <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-        <span class="disqus-comment-count" data-disqus-identifier="fastercapital-press-release" style="opacity:.75">
-          0 Comments
-        </span>
-
-        <span class="read-more">Read Article →</span>
-      </div>
-    </a>
-
-    <!-- BLOG POST 2 -->
-    <a href="post.html?post=first-post" class="card">
-      <h3>Why Branding Matters</h3>
-      <p style="opacity:.85">Understanding how strong visual identity builds trust and grows business.</p>
-
-      <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-        <span class="disqus-comment-count" data-disqus-identifier="first-post" style="opacity:.75">
-          0 Comments
-        </span>
-
-        <span class="read-more">Read Article →</span>
-      </div>
-    </a>
-
-    <!-- BLOG POST 3 -->
-    <a href="post.html?post=creative-industry-trends" class="card">
-      <h3>Creative Industry Trends</h3>
-      <p style="opacity:.85">How design and production are shaping modern brands and marketing.</p>
-
-      <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-        <span class="disqus-comment-count" data-disqus-identifier="creative-industry-trends" style="opacity:.75">
-          0 Comments
-        </span>
-
-        <span class="read-more">Read Article →</span>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- DISQUS COMMENT COUNTS -->
-<script id="dsq-count-scr" src="https://https-kamogartistry-com.disqus.com/count.js" async></script>
-
-
-<footer class="footer">
-  <div class="footer-wrap">
-    <div class="footer-col">
-      <h4>Kamog Artistry (U) Ltd</h4>
-      <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
-
-      <div class="footer-badges">
-        <span class="badge">Branding</span>
-        <span class="badge">Print</span>
-        <span class="badge">Signage</span>
-        <span class="badge">Stationery</span>
-      </div>
-    </div>
-
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul class="footer-list">
-        <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
-        <li><a href="tel:+256775251445">+256 775 251 445</a></li>
-        <li>P.O. Box 201929, Kampala - Uganda</li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html" aria-current="page">Insights</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
-      <a class="footer-cta" href="contact.html">Contact Us</a>
-    </div>
+      <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+    </nav>
+  </header>
 
-    <div class="footer-col">
-      <h4>Follow</h4>
 
-      <div class="social">
-        <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/256775251445" aria-label="WhatsApp">WA</a>
-        <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">in</a>
-        <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">TT</a>
-        <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">IG</a>
-        <a class="social-btn" title="X" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">X</a>
-        <a class="social-btn" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">f</a>
-        <a class="social-btn" title="Behance" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">Be</a>
-        <a class="social-btn" title="Threads" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">@</a>
+  <!-- HERO -->
+  <section class="section animate">
+    
+      <h2>Insights & <span>Articles</span></h2>
+
+      
+      <p style="opacity:.9;margin-top:12px">
+        News, announcements, and practical insights on branding, printing, signage, and creative production.
+      </p>
+
+      <!-- Updated to friendlier universal credibility line -->
+      <p style="opacity:.85;margin-top:10px">
+        Delivered by <strong>Kamog Artistry (U) Ltd</strong> — a registered Ugandan creative branding and production company.
+      </p>
+
+      <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn-primary" href="contact.html">Submit a Story </a>
+        <a class="btn-secondary" href="portfolio.html">View Portfolio</a>
       </div>
     </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
-  </div>
-</footer>
+  </section>
 
 
-<script src="js/script.js"></script>
-<script src="js/animations.js"></script>
+  <!-- FILTERS + SEARCH -->
+  <section class="section light animate" style="padding-top:60px">
+    <div style="max-width:1000px;margin:0 auto">
+      <h2 style="text-align:center">Browse an Article</h2>
+
+      <div class="card" style="margin-top:18px">
+        <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <!-- Keep existing categories + add filter-btn class for styling reuse -->
+            <button class="pf-btn filter-btn is-active active" type="button" data-cat="all">All</button>
+            <button class="pf-btn filter-btn" type="button" data-cat="news">News</button>
+            <button class="pf-btn filter-btn" type="button" data-cat="branding">Branding</button>
+            <button class="pf-btn filter-btn" type="button" data-cat="printing">Printing</button>
+            <button class="pf-btn filter-btn" type="button" data-cat="creative">Creative</button>
+          </div>
+
+          <input
+            id="blogSearch"
+            type="search"
+            placeholder="Search articles…"
+            aria-label="Search articles"
+            style="width:min(360px,100%);padding:12px 14px;border-radius:12px;border:1px solid rgba(0,0,0,.12);background:#fff;color:#013144"
+          />
+        </div>
+
+       
+      </div>
+
+      <!-- POSTS GRID -->
+      <div class="grid" id="blogGrid" style="margin-top:22px">
+
+        <!-- 1) FEATURED (FasterCapital PRESS) — same link kept, stronger emphasis -->
+        <a
+          href="post.html?post=fastercapital-press-release"
+          class="card highlight blog-item"
+          data-title="FasterCapital Partnership Announcement Kamog Artistry LaunchUp program press release"
+          data-cat="news"
+          style="border:1px solid rgba(47,107,255,.25)"
+        >
+          <h3>FasterCapital Partnership Announcement</h3>
+
+          <p style="opacity:.85">
+            Official press update: Kamog Artistry (U) Ltd joins the FasterCapital LaunchUp program—what it means, what we’re building, and what’s next.
+          </p>
+
+          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+            <span class="disqus-comment-count" data-disqus-identifier="fastercapital-press-release" style="opacity:.75">
+              0 Comments
+            </span>
+
+            <span class="read-more">Read Press Release →</span>
+          </div>
+        </a>
+
+        <!-- 2 (unchanged link + article) -->
+        <a
+          href="post.html?post=first-post"
+          class="card blog-item"
+          data-title="Why Branding Matters visual identity trust recognition business growth"
+          data-cat="branding"
+        >
+          <h3>Why Branding Matters</h3>
+          <p style="opacity:.85">Understanding how strong visual identity builds trust and grows business.</p>
+
+          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+            <span class="disqus-comment-count" data-disqus-identifier="first-post" style="opacity:.75">
+              0 Comments
+            </span>
+            <span class="read-more">Read Article →</span>
+          </div>
+        </a>
+
+        <!-- 3 (unchanged link + article) -->
+        <a
+          href="post.html?post=creative-industry-trends"
+          class="card blog-item"
+          data-title="Creative Industry Trends design production modern brands marketing"
+          data-cat="creative"
+        >
+          <h3>Creative Industry Trends</h3>
+          <p style="opacity:.85">How design and production are shaping modern brands and marketing.</p>
+
+          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+            <span class="disqus-comment-count" data-disqus-identifier="creative-industry-trends" style="opacity:.75">
+              0 Comments
+            </span>
+            <span class="read-more">Read Article →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="section animate">
+    <div class="card cta-card">
+      <h2 style="margin-bottom:10px">Want us to write about your project?</h2>
+      <p style="opacity:.85;margin-bottom:18px">
+        We can document your branding process—from design to production and installation—into a clean case-study article.
+      </p>
+
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Send Us a Message</a>
+        <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-col">
+        <h4>Kamog Artistry (U) Ltd</h4>
+        <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
+
+        <div class="footer-badges">
+          <span class="badge">Branding</span>
+          <span class="badge">Print</span>
+          <span class="badge">Signage</span>
+          <span class="badge">Stationery</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-list">
+          <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
+          <li><a href="tel:+256775251445">+256 775 251 445</a></li>
+          <li>P.O. Box 201929, Kampala - Uganda</li>
+        </ul>
+
+        <a class="footer-cta" href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow</h4>
+
+        <div class="social">
+          <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener"
+             href="https://wa.me/256775251445" aria-label="WhatsApp">
+            <img src="assets/img/icons/whatsapp.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
+          </a>
+
+          <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener"
+             href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
+            <img src="assets/img/icons/linkedin.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
+          </a>
+
+          <a class="social-btn" title="TikTok" target="_blank" rel="noopener"
+             href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
+            <img src="assets/img/icons/tiktok.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
+          </a>
+
+          <a class="social-btn" title="Instagram" target="_blank" rel="noopener"
+             href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
+            <img src="assets/img/icons/instagram.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
+          </a>
+
+          <a class="social-btn" title="X" target="_blank" rel="noopener"
+             href="https://x.com/kamogartistry" aria-label="X">
+            <img src="assets/img/icons/x.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
+          </a>
+
+          <a class="social-btn" title="Facebook" target="_blank" rel="noopener"
+             href="https://www.facebook.com/611977605339985" aria-label="Facebook">
+            <img src="assets/img/icons/facebook.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
+          </a>
+
+          <a class="social-btn" title="Behance" target="_blank" rel="noopener"
+             href="https://www.behance.net/kamogArtistry" aria-label="Behance">
+            <img src="assets/img/icons/behance.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
+          </a>
+
+          <a class="social-btn" title="Threads" target="_blank" rel="noopener"
+             href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
+            <img src="assets/img/icons/threads.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+
+  <!-- DISQUS COMMENT COUNTS -->
+  <script id="dsq-count-scr" src="https://kamogartistry-com.disqus.com/count.js" async></script>
+
+  <!-- Blog search + category filter -->
+  <script>
+    (function () {
+      const btns = Array.from(document.querySelectorAll(".pf-btn"));
+      const search = document.getElementById("blogSearch");
+      const items = Array.from(document.querySelectorAll(".blog-item"));
+
+      let activeCat = "all";
+
+      function setActiveBtn(cat) {
+        btns.forEach(b => {
+          b.classList.remove("is-active");
+          b.classList.remove("active");
+        });
+        const btn = btns.find(b => b.dataset.cat === cat);
+        if (btn) {
+          btn.classList.add("is-active");
+          btn.classList.add("active"); // maps to your existing .filter-btn.active styling
+        }
+      }
+
+      function applyFilters() {
+        const term = (search && search.value ? search.value : "").trim().toLowerCase();
+
+        items.forEach(item => {
+          const title = (item.getAttribute("data-title") || "").toLowerCase();
+          const cat = item.getAttribute("data-cat") || "all";
+
+          const catOk = (activeCat === "all" || cat === activeCat);
+          const termOk = (!term || title.includes(term));
+
+          item.style.display = (catOk && termOk) ? "block" : "none";
+        });
+      }
+
+      btns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          activeCat = btn.dataset.cat || "all";
+          setActiveBtn(activeCat);
+          applyFilters();
+        });
+      });
+
+      if (search) search.addEventListener("input", applyFilters);
+
+      setActiveBtn("all");
+      applyFilters();
+    })();
+  </script>
+
 </body>
 </html>
-
-
