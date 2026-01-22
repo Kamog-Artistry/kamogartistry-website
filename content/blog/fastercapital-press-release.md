@@ -1,8 +1,7 @@
-```md
 ---
 title: "Kamog Artistry (U) Ltd Partners with FasterCapital LaunchUp Program to Accelerate Stationery and Print Innovation in Uganda"
 date: 2026-01-18
-image: "/assets/img/uploads/press-release.png"
+image: "assets/img/uploads/press-release.png"
 ---
 
 ## Press Release
@@ -41,11 +40,11 @@ This partnership is expected to fast-track operational scaling, market penetrati
 
 ## Executive Quotes
 
-*<span style="opacity:.7">Hesham Zreik, Founder & CEO of FasterCapital</span>, stated:*
+**Hesham Zreik, Founder & CEO of FasterCapital**, stated:
 
 > “Kamog Artistry exemplifies the kind of innovative and market-driven startup that aligns perfectly with FasterCapital’s mission to empower entrepreneurs in emerging markets. Their integrated approach to printing, branding, and community engagement addresses a clear market gap in Uganda. We are excited to support their journey through our LaunchUp Program and help them scale efficiently to meet growing demand.”
 
-*<span style="opacity:.7">Kamoga Daniel, Founder of Kamog Artistry</span>, commented:*
+**Kamoga Daniel, Founder of Kamog Artistry**, commented:
 
 > “Partnering with FasterCapital marks a pivotal milestone for Kamog Artistry. Their mentorship and global resources will enable us to accelerate our vision of transforming Kikoni’s printing and branding landscape while fostering local artistic expression. This collaboration brings us closer to building a trusted print and branding hub that supports businesses, students, and creative communities in Uganda and beyond.”
 
@@ -80,4 +79,3 @@ Through various programs—including funding assistance, business development, a
 **Rasha Almasri**  
 📧 rasha.almasri@fastercapital.com  
 📞 +1 (512) 400-0256
-```
