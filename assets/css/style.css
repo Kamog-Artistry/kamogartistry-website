@@ -466,3 +466,25 @@ a.portfolio-item.no-image{
   opacity: 0.7;
   margin-top: 24px;
 }
+
+/* =========================
+   LOADER SAFETY (MUST ADD)
+   Prevents loader from trapping mobile pages
+========================= */
+#loader.hidden{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .3s ease;
+}
+
+/* =========================
+   MOBILE SAFETY FOR ANIMATIONS
+   If animations.js is slow or blocked, content must still show.
+========================= */
+@media (max-width: 800px){
+  .animate{
+    opacity:1 !important;
+    transform:none !important;
+  }
+}
