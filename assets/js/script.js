@@ -1,26 +1,43 @@
 // ===============================
 // Kamog Artistry (U) Ltd — script.js
-// Shared across all pages (safe checks included)
+// Site-wide script (safe checks included)
+// Fixes:
+// - Loader blocking mobile portfolio (hide early + only if loader exists)
+// - Pause other videos when one plays
+// - Performance helpers (no video preload, gallery load-more)
+// - Portfolio filter, lightbox, testimonials, blog actions
 // ===============================
 
-// Hide loader (only if loader exists on the page)
-window.addEventListener("load", () => {
+/* ===============================
+   LOADER (FIXED)
+   - Only runs if #loader exists
+   - Hides on DOMContentLoaded (not waiting for images/videos)
+   - Safety timeout
+=============================== */
+(function () {
   const loader = document.getElementById("loader");
-  if (loader) loader.style.display = "none";
-});
+  if (!loader) return; // critical: do nothing on pages without loader
 
-// Mobile menu toggle
+  const hide = () => loader.classList.add("hidden");
+
+  document.addEventListener("DOMContentLoaded", hide);
+  setTimeout(hide, 2000);
+  window.addEventListener("load", hide);
+})();
+
+/* ===============================
+   MOBILE NAV
+=============================== */
 function toggleMenu() {
   const nav = document.getElementById("navLinks");
   if (nav) nav.classList.toggle("show");
 }
 
-// Close mobile menu after clicking a link (nice UX)
+// Close mobile menu after clicking a link
 window.addEventListener("click", (e) => {
   const nav = document.getElementById("navLinks");
   if (!nav || !nav.classList.contains("show")) return;
 
-  // If a nav link is clicked, close menu
   if (e.target && e.target.closest && e.target.closest("#navLinks a")) {
     nav.classList.remove("show");
   }
@@ -57,12 +74,12 @@ function closeLightbox() {
 }
 
 /* ===============================
-   TESTIMONIALS (no redeclare error)
+   TESTIMONIALS (SAFE GLOBALS)
 =============================== */
 window.KA_TESTIMONIALS = window.KA_TESTIMONIALS || [
-  { text: "Kamog Artistry elevated our brand presence beyond expectations.", author: "— Capsada Co. Ltd" },
-  { text: "Their creativity and professionalism stand out.", author: "— Voltech Engineering Services" },
-  { text: "From print to branding, the quality is outstanding.", author: "— TOOKE)" }
+  { text: "Kamog Artistry elevated our brand presence beyond expectations.", author: "— Client" },
+  { text: "Their creativity and professionalism stand out.", author: "— Client" },
+  { text: "From print to branding, the quality is outstanding.", author: "— Client" }
 ];
 
 window.KA_T_INDEX = window.KA_T_INDEX || 0;
@@ -88,7 +105,6 @@ function prevTestimonial() {
   showTestimonial();
 }
 
-// Only auto-rotate if testimonial elements exist on the page
 window.addEventListener("load", () => {
   if (document.getElementById("testimonialText")) {
     showTestimonial();
@@ -99,8 +115,6 @@ window.addEventListener("load", () => {
 /* ===============================
    BLOG / ARTICLE ACTIONS
 =============================== */
-
-// Copy current page link
 function copyLink() {
   if (!navigator.clipboard) {
     alert("Clipboard not supported in this browser.");
@@ -113,19 +127,15 @@ function copyLink() {
     .catch(() => alert("Failed to copy link."));
 }
 
-// Native share (mobile) fallback to copy
 function shareArticle() {
   if (navigator.share) {
-    navigator
-      .share({ title: document.title, url: window.location.href })
-      .catch(() => {}); // user may cancel share, that's okay
+    navigator.share({ title: document.title, url: window.location.href }).catch(() => {});
   } else {
     copyLink();
     alert("Sharing not supported here — link copied instead.");
   }
 }
 
-// Like counter (stored in localStorage per article URL query string)
 function likeArticle() {
   const key = "likes_" + window.location.search;
   let count = parseInt(localStorage.getItem(key) || "0", 10);
@@ -136,7 +146,6 @@ function likeArticle() {
   if (el) el.innerText = count;
 }
 
-// Load like count on page (if likeCount exists)
 window.addEventListener("load", () => {
   const el = document.getElementById("likeCount");
   if (el) {
@@ -145,14 +154,101 @@ window.addEventListener("load", () => {
   }
 });
 
+/* ===============================
+   VIDEO FIX: Pause other videos when one starts
+=============================== */
+document.addEventListener(
+  "play",
+  (e) => {
+    const target = e.target;
+    if (!(target instanceof HTMLVideoElement)) return;
 
+    document.querySelectorAll("video").forEach((v) => {
+      if (v !== target) v.pause();
+    });
+  },
+  true
+);
 
-// Pause other videos when any video starts playing (works everywhere)
-document.addEventListener("play", (e) => {
-  const target = e.target;
-  if (!(target instanceof HTMLVideoElement)) return;
-
-  document.querySelectorAll("video").forEach(v => {
-    if (v !== target) v.pause();
+/* ===============================
+   PERFORMANCE HELPERS (GLOBAL)
+   - Force no-preload on videos (reduces mobile blocking)
+   - Universal lazy/async images (safety)
+   - Optional true lazy-video if you use data-src on <source>
+   - Auto "Load more" for big galleries (.portfolio-preview)
+=============================== */
+(function () {
+  // Image safety net
+  document.querySelectorAll("img").forEach((img) => {
+    if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+    if (!img.hasAttribute("decoding")) img.setAttribute("decoding", "async");
   });
-}, true);
+
+  // Make videos not preload (big win)
+  document.querySelectorAll("video").forEach((v) => {
+    v.setAttribute("preload", "none");
+    if (!v.hasAttribute("playsinline")) v.setAttribute("playsinline", "");
+    // If you want ALL videos muted by default, uncomment:
+    // if (!v.hasAttribute("muted")) v.setAttribute("muted", "");
+  });
+
+  // Optional true lazy-video loading (only works if you change src -> data-src)
+  const canIO = "IntersectionObserver" in window;
+  if (canIO) {
+    const vids = Array.from(document.querySelectorAll("video"));
+    if (vids.length) {
+      const io = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            const v = entry.target;
+            const sources = v.querySelectorAll("source");
+            let changed = false;
+
+            sources.forEach((s) => {
+              const ds = s.getAttribute("data-src");
+              if (ds && !s.getAttribute("src")) {
+                s.setAttribute("src", ds);
+                changed = true;
+              }
+            });
+
+            if (changed) v.load();
+            obs.unobserve(v);
+          });
+        },
+        { rootMargin: "300px 0px" }
+      );
+
+      vids.forEach((v) => io.observe(v));
+    }
+  }
+
+  // Gallery: auto "Load more" for big case-study grids
+  const previews = Array.from(document.querySelectorAll(".portfolio-preview"));
+  if (previews.length > 8) {
+    const SHOW_FIRST = 6;
+
+    previews.forEach((el, i) => {
+      if (i >= SHOW_FIRST) el.style.display = "none";
+    });
+
+    const grid = previews[0].closest(".grid") || previews[0].parentElement;
+    if (grid) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "btn-secondary";
+      btn.style.margin = "18px auto 0";
+      btn.style.display = "block";
+      btn.textContent = `Load more (${previews.length - SHOW_FIRST})`;
+
+      btn.addEventListener("click", () => {
+        previews.forEach((el) => (el.style.display = ""));
+        btn.remove();
+      });
+
+      grid.insertAdjacentElement("afterend", btn);
+    }
+  }
+})();
