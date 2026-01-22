@@ -339,6 +339,29 @@
     return { words, minutes };
   }
 
+  // Front-matter: strip YAML + optionally extract key fields
+  function parseFrontMatter(md) {
+    // default
+    const out = { meta: {}, body: md || "" };
+
+    if (!md || !md.startsWith("---")) return out;
+
+    // find closing --- after the first line
+    const end = md.indexOf("---", 3);
+    if (end === -1) return out;
+
+    const raw = md.slice(3, end).trim();
+    out.body = md.slice(end + 3).trim();
+
+    raw.split("\n").forEach(line => {
+      const [key, ...rest] = line.split(":");
+      if (!key || !rest.length) return;
+      out.meta[key.trim()] = rest.join(":").trim().replace(/^["']|["']$/g, "");
+    });
+
+    return out;
+  }
+
   // Actions
   function shareArticle() {
     const title = document.title;
@@ -385,7 +408,6 @@
 
     if (!slug) {
       document.title = "Article Not Found | Kamog Artistry (U) Ltd";
-      document.getElementById("crumbTitle").textContent = "Not found";
       postEl.innerHTML = "<h2>Article not found</h2><p>Missing <code>?post=</code> in the URL.</p>";
       return;
     }
@@ -396,32 +418,42 @@
       if (!res.ok) throw new Error("Missing markdown file: " + slug);
 
       const md = await res.text();
-      const html = marked.parse(md);
 
+      // ✅ FIX: strip YAML front-matter so it never renders as visible text
+      const parsed = parseFrontMatter(md);
+
+      // Render ONLY the markdown body
+      const html = marked.parse(parsed.body);
       postEl.innerHTML = html;
 
-      // Title: use first H1 if exists
+      // Title: use first H1 if exists, else use front-matter title, else slug
       const h1 = postEl.querySelector("h1");
-      const titleText = h1 ? h1.textContent.trim() : slug.replace(/-/g, " ");
+      const fmTitle = (parsed.meta && parsed.meta.title) ? String(parsed.meta.title).trim() : "";
+      const titleText = h1
+        ? h1.textContent.trim()
+        : (fmTitle || slug.replace(/-/g, " "));
+
       document.title = titleText + " | Kamog Artistry (U) Ltd";
-      document.getElementById("crumbTitle").textContent = titleText;
 
       // Reading time
       const plainText = postEl.textContent || "";
       const { minutes } = estimateReadingTime(plainText);
       document.getElementById("readingTime").textContent = minutes + " min read";
 
-      // Optional: show date if markdown has a line like "Date: 2026-01-20"
-      const dateLine = md.match(/^Date:\s*(.+)$/mi);
-      if (dateLine && dateLine[1]) {
-        document.getElementById("postDate").textContent = "• " + dateLine[1].trim();
+      // Date: prefer front-matter date, else optional "Date: ...." line
+      if (parsed.meta && parsed.meta.date) {
+        document.getElementById("postDate").textContent = "• " + String(parsed.meta.date).trim();
       } else {
-        document.getElementById("postDate").textContent = "";
+        const dateLine = md.match(/^Date:\s*(.+)$/mi);
+        if (dateLine && dateLine[1]) {
+          document.getElementById("postDate").textContent = "• " + dateLine[1].trim();
+        } else {
+          document.getElementById("postDate").textContent = "";
+        }
       }
 
     } catch (err) {
       document.title = "Article Not Found | Kamog Artistry (U) Ltd";
-      document.getElementById("crumbTitle").textContent = "Not found";
       postEl.innerHTML =
         "<h2>Article not found</h2>" +
         "<p>We couldn’t load this article. Check that the file exists at:</p>" +
@@ -479,7 +511,3 @@
 </body>
 
 </html>
-
-
-
-
