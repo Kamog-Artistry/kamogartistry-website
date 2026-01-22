@@ -144,3 +144,15 @@ window.addEventListener("load", () => {
     el.innerText = localStorage.getItem(key) || "0";
   }
 });
+
+
+
+// Pause other videos when any video starts playing (works everywhere)
+document.addEventListener("play", (e) => {
+  const target = e.target;
+  if (!(target instanceof HTMLVideoElement)) return;
+
+  document.querySelectorAll("video").forEach(v => {
+    if (v !== target) v.pause();
+  });
+}, true);
