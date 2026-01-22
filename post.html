@@ -408,9 +408,15 @@
       if (!res.ok) throw new Error("Missing markdown file: " + slug);
 
       const md = await res.text();
+// Remove accidental ChatGPT citation artifacts if they ever get pasted into MD
+const cleanedMd = md
+  .replace(/:contentReference\[oaicite:\d+\]\{index=\d+\}/g, "")
+  .replace(/contentReference\[oaicite:\d+\]\{index=\d+\}/g, "")
+  .replace(/\[oaicite:\d+\]/g, "");
 
       // ✅ FIX: strip YAML front-matter so it never renders as visible text
-      const parsed = parseFrontMatter(md);
+      const parsed = parseFrontMatter(cleanedMd);
+
 
       // Render ONLY the markdown body
       const html = marked.parse(parsed.body);
@@ -460,11 +466,21 @@
 <!-- Disqus (lazy load) -->
 
 <script>
-
   var disqus_config = function () {
-    this.page.url = window.location.href;
-    this.page.identifier = new URLSearchParams(window.location.search).get("post");
+    var slug = new URLSearchParams(window.location.search).get("post");
+
+    this.page.url = window.location.origin + "/post?post=" + slug;
+    this.page.identifier = slug;
   };
+
+  (function () {
+    var d = document, s = d.createElement("script");
+    s.src = "https://kamogartistry-com.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
 
   (function () {
     var loaded = false;
