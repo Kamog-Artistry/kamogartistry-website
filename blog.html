@@ -24,7 +24,17 @@
     .blog-item.highlight{
       position:relative;
       overflow:hidden;
-  
+    }
+
+    /* Cover image styling (added) */
+    .blog-cover{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      border-radius:16px;
+      margin-bottom:12px;
+      display:block;
+    }
   </style>
 </head>
 
@@ -55,10 +65,8 @@
 
   <!-- HERO -->
   <section class="section animate">
-    
       <h2>Insights & <span>Articles</span></h2>
 
-      
       <p style="opacity:.9;margin-top:12px">
         News, announcements, and practical insights on branding, printing, signage, and creative production.
       </p>
@@ -100,8 +108,6 @@
             style="width:min(360px,100%);padding:12px 14px;border-radius:12px;border:1px solid rgba(0,0,0,.12);background:#fff;color:#013144"
           />
         </div>
-
-       
       </div>
 
       <!-- POSTS GRID -->
@@ -111,6 +117,7 @@
         <a
           href="post.html?post=fastercapital-press-release"
           class="card highlight blog-item"
+          data-slug="fastercapital-press-release"
           data-title="FasterCapital Partnership Announcement Kamog Artistry LaunchUp program press release"
           data-cat="news"
           style="border:1px solid rgba(47,107,255,.25)"
@@ -134,6 +141,7 @@
         <a
           href="post.html?post=first-post"
           class="card blog-item"
+          data-slug="first-post"
           data-title="Why Branding Matters visual identity trust recognition business growth"
           data-cat="branding"
         >
@@ -152,6 +160,7 @@
         <a
           href="post.html?post=creative-industry-trends"
           class="card blog-item"
+          data-slug="creative-industry-trends"
           data-title="Creative Industry Trends design production modern brands marketing"
           data-cat="creative"
         >
@@ -320,6 +329,65 @@
 
       setActiveBtn("all");
       applyFilters();
+    })();
+  </script>
+
+  <!-- AUTO-LOAD COVER IMAGES FROM content/blog/<slug>.md FRONT-MATTER -->
+  <script>
+    (function () {
+      function parseFrontMatter(md) {
+        const out = { meta: {}, body: md || "" };
+        if (!md || !md.startsWith("---")) return out;
+
+        const end = md.indexOf("---", 3);
+        if (end === -1) return out;
+
+        const raw = md.slice(3, end).trim();
+        out.body = md.slice(end + 3).trim();
+
+        raw.split("\n").forEach(line => {
+          const [key, ...rest] = line.split(":");
+          if (!key || !rest.length) return;
+          out.meta[key.trim()] = rest.join(":").trim().replace(/^["']|["']$/g, "");
+        });
+
+        return out;
+      }
+
+      async function addCovers() {
+        const cards = Array.from(document.querySelectorAll(".blog-item[data-slug]"));
+        if (!cards.length) return;
+
+        for (const card of cards) {
+          const slug = card.getAttribute("data-slug");
+          if (!slug) continue;
+
+          try {
+            const res = await fetch("content/blog/" + slug + ".md", { cache: "no-store" });
+            if (!res.ok) continue;
+
+            const md = await res.text();
+            const parsed = parseFrontMatter(md);
+            const imgSrc = parsed.meta.image;
+
+            if (!imgSrc) continue;
+            if (card.querySelector(".blog-cover")) continue;
+
+            const img = document.createElement("img");
+            img.className = "blog-cover";
+            img.src = imgSrc;
+            img.alt = (parsed.meta.title || card.querySelector("h3")?.textContent || "Article cover").trim();
+            img.loading = "lazy";
+            img.decoding = "async";
+
+            card.insertBefore(img, card.firstChild);
+          } catch (e) {
+            // silent fail
+          }
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", addCovers);
     })();
   </script>
 
