@@ -1,7 +1,7 @@
 ---
 title: "Kamog Artistry (U) Ltd Partners with FasterCapital LaunchUp Program to Accelerate Stationery and Print Innovation in Uganda"
 date: 2026-01-23
-image: "/assets/img/uploads/press-release02.webp"
+image: "/assets/img/uploads/press-release.webp"
 
 ---
 
