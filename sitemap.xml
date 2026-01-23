@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://kamogartistry.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- CORE PAGES -->
+  <url><loc>https://kamogartistry.com/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/services.html</loc><priority>0.9</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio.html</loc><priority>0.9</priority></url>
+  <url><loc>https://kamogartistry.com/testimonials.html</loc><priority>0.7</priority></url>
+  <url><loc>https://kamogartistry.com/blog.html</loc><priority>0.7</priority></url>
+  <url><loc>https://kamogartistry.com/contact.html</loc><priority>0.9</priority></url>
+
+  <!-- PORTFOLIO PROJECT PAGES -->
+  <url><loc>https://kamogartistry.com/portfolio/ability-pharmacy.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/abundance-herbal-products.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/birdc-photo-frames-kololo-nrm.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/create-and-cook-competition.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/exam-gifts.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/kiosa.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/mobile-money-branding.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/modva-updf-spouses-desk.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/motion-graphics.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/mountains-of-the-moon-tourism.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/rokastars-film-productions.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/sbl-intel-systems.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/sme-branding-showcase.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/social-media-designs.html</loc><priority>0.7</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/tooke-birdc-uma-2025.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/traditional-painting.html</loc><priority>0.6</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/voltech-branding.html</loc><priority>0.8</priority></url>
+  <url><loc>https://kamogartistry.com/portfolio/yabx-christmas-package.html</loc><priority>0.7</priority></url>
+
+</urlset>
