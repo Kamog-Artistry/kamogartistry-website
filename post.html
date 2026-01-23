@@ -46,7 +46,6 @@
       background: rgba(0,0,0,.06);
     }
 
-    /* Images inside markdown body */
     .article-card article img{
       max-width: 100%;
       height: auto;
@@ -82,13 +81,11 @@
 <section class="section light animate">
   <div style="max-width:1000px;margin:0 auto">
 
-    <!-- Meta -->
     <div class="article-meta" style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:12px">
       <span id="readingTime" style="opacity:.8"></span>
       <span id="postDate" style="opacity:.8"></span>
     </div>
 
-    <!-- Actions -->
     <div class="article-actions" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">
       <button class="action-btn" type="button" onclick="shareArticle()">Share</button>
       <button class="action-btn" type="button" onclick="copyLink()">Copy Link</button>
@@ -96,36 +93,20 @@
       <button class="action-btn" type="button" onclick="likeArticle()">👍 Like (<span id="likeCount">0</span>)</button>
     </div>
 
-    <!-- Article card -->
     <div class="card article-card" style="padding:22px">
 
-      <!-- HERO IMAGE (from front-matter image:) -->
-      <img id="postHero"
-           alt=""
-           loading="lazy"
-           decoding="async"
-           style="
-             display:none;
-             width:100%;
-             height:380px;
-             object-fit:cover;
-             border-radius:18px;
-             margin-bottom:22px;
-           ">
+      <img id="postHero" alt="" loading="lazy" decoding="async"
+           style="display:none;width:100%;height:380px;object-fit:cover;border-radius:18px;margin-bottom:22px;">
 
-      <!-- ARTICLE CONTENT -->
       <article id="postContent"></article>
     </div>
 
     <a href="blog.html" class="back-link" style="display:inline-block;margin-top:16px">← Back to Insights</a>
 
-    <!-- Comments -->
     <div class="card article-card" style="margin-top:20px;padding:18px">
       <h3 style="margin-bottom:12px">Comments</h3>
       <div id="disqus_thread"></div>
-      <p style="opacity:.75;margin-top:10px">
-        Comments load after a moment (or when you scroll).
-      </p>
+      <p style="opacity:.75;margin-top:10px">Comments load after a moment (or when you scroll).</p>
     </div>
 
   </div>
@@ -136,246 +117,40 @@
     <div class="footer-col">
       <h4>Kamog Artistry (U) Ltd</h4>
       <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
-
-      <div class="footer-badges">
-        <span class="badge">Branding</span>
-        <span class="badge">Print</span>
-        <span class="badge">Signage</span>
-        <span class="badge">Stationery</span>
-      </div>
     </div>
-
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul class="footer-list">
-        <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
-        <li><a href="tel:+256775251445">+256 775 251 445</a></li>
-        <li>P.O. Box 201929, Kampala - Uganda</li>
-      </ul>
-
-      <a class="footer-cta" href="contact.html">Contact Us</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Follow</h4>
-
-      <div class="social">
-        <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener"
-           href="https://wa.me/256775251445" aria-label="WhatsApp">
-          <img src="assets/img/icons/whatsapp.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
-        </a>
-
-        <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener"
-           href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
-          <img src="assets/img/icons/linkedin.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
-        </a>
-
-        <a class="social-btn" title="TikTok" target="_blank" rel="noopener"
-           href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
-          <img src="assets/img/icons/tiktok.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
-        </a>
-
-        <a class="social-btn" title="Instagram" target="_blank" rel="noopener"
-           href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
-          <img src="assets/img/icons/instagram.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
-        </a>
-
-        <a class="social-btn" title="X" target="_blank" rel="noopener"
-           href="https://x.com/kamogartistry" aria-label="X">
-          <img src="assets/img/icons/x.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
-        </a>
-
-        <a class="social-btn" title="Facebook" target="_blank" rel="noopener"
-           href="https://www.facebook.com/611977605339985" aria-label="Facebook">
-          <img src="assets/img/icons/facebook.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
-        </a>
-
-        <a class="social-btn" title="Behance" target="_blank" rel="noopener"
-           href="https://www.behance.net/kamogArtistry" aria-label="Behance">
-          <img src="assets/img/icons/behance.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
-        </a>
-
-        <a class="social-btn" title="Threads" target="_blank" rel="noopener"
-           href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
-          <img src="assets/img/icons/threads.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- Scripts -->
 <script src="assets/js/script.js" defer></script>
 <script src="assets/js/animations.js" defer></script>
 
-<!-- Post loader -->
 <script>
-  function getSlug() {
-    const params = new URLSearchParams(window.location.search);
-    return (params.get("post") || "").trim();
+  function getSlug(){
+    return new URLSearchParams(window.location.search).get("post") || "";
   }
 
-  function estimateReadingTime(text) {
-    const words = (text || "").trim().split(/\s+/).filter(Boolean).length;
-    const minutes = Math.max(1, Math.round(words / 200));
-    return { words, minutes };
-  }
-
-  function parseFrontMatter(md) {
-    const out = { meta: {}, body: md || "" };
-    if (!md || !md.startsWith("---")) return out;
-
-    const end = md.indexOf("---", 3);
-    if (end === -1) return out;
-
-    const raw = md.slice(3, end).trim();
-    out.body = md.slice(end + 3).trim();
-
-    raw.split("\n").forEach(line => {
-      const [key, ...rest] = line.split(":");
-      if (!key || !rest.length) return;
-      out.meta[key.trim()] = rest.join(":").trim().replace(/^["']|["']$/g, "");
-    });
-
-    return out;
-  }
-
-  function shareArticle() {
-    const title = document.title;
-    const url = window.location.href;
-    if (navigator.share) {
-      navigator.share({ title, url }).catch(() => {});
-    } else {
-      copyLink();
-      alert("Share not supported on this browser. Link copied.");
-    }
-  }
-
-  function copyLink() {
-    const url = window.location.href;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(() => alert("Link copied."));
-    } else {
-      const tmp = document.createElement("input");
-      tmp.value = url;
-      document.body.appendChild(tmp);
-      tmp.select();
-      document.execCommand("copy");
-      document.body.removeChild(tmp);
-      alert("Link copied.");
-    }
-  }
-
-  function likeArticle() {
-    const slug = getSlug() || "default";
+  function likeArticle(){
+    const slug = getSlug() || "static-article";
     const key = "ka_like_" + slug;
-    const count = parseInt(localStorage.getItem(key) || "0", 10) + 1;
-    localStorage.setItem(key, String(count));
-    document.getElementById("likeCount").textContent = String(count);
+    const count = parseInt(localStorage.getItem(key) || "0",10) + 1;
+    localStorage.setItem(key,count);
+    document.getElementById("likeCount").textContent = count;
   }
-
-  (async function initPost() {
-    const slug = getSlug();
-    const postEl = document.getElementById("postContent");
-
-    const likeKey = "ka_like_" + (slug || "default");
-    document.getElementById("likeCount").textContent = localStorage.getItem(likeKey) || "0";
-
-    if (!slug) {
-      document.title = "Article Not Found | Kamog Artistry (U) Ltd";
-      postEl.innerHTML = "<h2>Article not found</h2><p>Missing <code>?post=</code> in the URL.</p>";
-      return;
-    }
-
-    try {
-      const res = await fetch("content/blog/" + slug + ".md", { cache: "no-store" });
-      if (!res.ok) throw new Error("Missing markdown file: " + slug);
-
-      const md = await res.text();
-
-      // Remove accidental ChatGPT citation artifacts if they ever get pasted into MD
-      const cleanedMd = md
-        .replace(/:contentReference\[oaicite:\d+\]\{index=\d+\}/g, "")
-        .replace(/contentReference\[oaicite:\d+\]\{index=\d+\}/g, "")
-        .replace(/\[oaicite:\d+\]/g, "");
-
-      const parsed = parseFrontMatter(cleanedMd);
-
-      // Hero image from front-matter
-      if (parsed.meta && parsed.meta.image) {
-        const hero = document.getElementById("postHero");
-        hero.src = parsed.meta.image;
-        hero.alt = parsed.meta.title || "Article cover";
-        hero.style.display = "block";
-      }
-
-      // Render markdown body only
-      postEl.innerHTML = marked.parse(parsed.body);
-
-      // Title
-      const h1 = postEl.querySelector("h1");
-      const fmTitle = (parsed.meta && parsed.meta.title) ? String(parsed.meta.title).trim() : "";
-      const titleText = h1 ? h1.textContent.trim() : (fmTitle || slug.replace(/-/g, " "));
-      document.title = titleText + " | Kamog Artistry (U) Ltd";
-
-      // Reading time
-      const plainText = postEl.textContent || "";
-      const { minutes } = estimateReadingTime(plainText);
-      document.getElementById("readingTime").textContent = minutes + " min read";
-
-      // Date
-      if (parsed.meta && parsed.meta.date) {
-        document.getElementById("postDate").textContent = "• " + String(parsed.meta.date).trim();
-      } else {
-        const dateLine = md.match(/^Date:\s*(.+)$/mi);
-        document.getElementById("postDate").textContent = (dateLine && dateLine[1]) ? ("• " + dateLine[1].trim()) : "";
-      }
-
-    } catch (err) {
-      document.title = "Article Not Found | Kamog Artistry (U) Ltd";
-      postEl.innerHTML =
-        "<h2>Article not found</h2>" +
-        "<p>We couldn’t load this article. Check that the file exists at:</p>" +
-        "<p><code>content/blog/" + slug + ".md</code></p>" +
-        "<p style='opacity:.8'>If you’re the site owner, ensure the <code>content/blog/</code> folder is published by Netlify/GitHub and not blocked by redirects or missing files.</p>";
-      console.error(err);
-    }
-  })();
 </script>
 
-<!-- Disqus (lazy load) -->
+<!-- FIXED DISQUS -->
 <script>
   var disqus_config = function () {
-    var slug = new URLSearchParams(window.location.search).get("post") || "";
-    // Stable URL + identifier
+    var slug = new URLSearchParams(window.location.search).get("post") || "static-article";
     this.page.url = window.location.origin + "/post?post=" + slug;
     this.page.identifier = slug;
   };
 
   (function () {
-    var loaded = false;
-
-    function loadDisqus() {
-      if (loaded) return;
-      loaded = true;
-
-      var d = document, s = d.createElement("script");
-      s.src = "https://kamogartistry-com.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
-    }
-
-    window.addEventListener("scroll", function () {
-      if (window.scrollY + window.innerHeight > document.body.offsetHeight - 600) {
-        loadDisqus();
-      }
-    });
-
-    setTimeout(loadDisqus, 2000);
+    var d = document, s = d.createElement("script");
+    s.src = "https://https-kamogartistry-com.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
   })();
 </script>
 
