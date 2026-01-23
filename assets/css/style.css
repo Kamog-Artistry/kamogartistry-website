@@ -488,3 +488,21 @@ a.portfolio-item.no-image{
     transform:none !important;
   }
 }
+
+/* Default (desktop & tablet) */
+#postHero {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Mobile fix */
+@media (max-width: 640px) {
+  #postHero {
+    height: auto;
+    max-height: 260px;
+    object-fit: contain;
+    background: #0a5c85; /* optional brand-safe fallback */
+  }
+}
