@@ -1,13 +1,13 @@
 ---
 title: "Kamog Artistry (U) Ltd Partners with FasterCapital LaunchUp Program to Accelerate Stationery and Print Innovation in Uganda"
-date: 2026-01-18
-image: "/assets/img/uploads/press-release.png"
+date: 2026-01-23
+image: "/assets/img/uploads/press-release.webp"
 
 ---
 
 ## Press Release
 
-**Kampala, Uganda & Dubai, UAE – January 18, 2026**
+**Kampala, Uganda & Dubai, UAE – January 23, 2026**
 
 Kamog Artistry (U) Ltd, an innovative stationery, print press, and branding startup company based in Kikoni, Kampala – Uganda, today announced a strategic partnership with FasterCapital through its **LaunchUp Program**. This collaboration aims to accelerate Kamog Artistry’s growth by leveraging FasterCapital’s global resources and expertise to meet the rising demand for high-quality printing, branding, and artistic services in the East African market.
 
