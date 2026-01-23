@@ -493,6 +493,7 @@ a.portfolio-item.no-image{
 #postHero {
   width: 640px;
   height: auto;
+  max-height: 260px;
   object-fit: contain;
   border-radius: 18px;
 }
