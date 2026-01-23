@@ -2,135 +2,206 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Us | Kamog Artistry (U) Ltd</title>
+  <title>Contact | Kamog Artistry (U) Ltd</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <!-- New root structure -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-<header class="header">
-  <nav class="nav">
-    <a href="index.html">
-      <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
-    </a>
+  <!-- Header (layout unchanged) -->
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="blog.html">Insights</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-    </ul>
+  <header class="header">
 
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-  </nav>
-</header>
+    <nav class="nav">
 
-<section class="section light animate">
-  <div style="max-width:700px;margin:0 auto">
+      <a href="index.html" aria-label="Go to homepage">
 
-    <h1>Contact Us</h1>
-    <p style="opacity:.85">
-      Have a project in mind or need a quote? Send us a message and we’ll get back to you shortly.
-    </p>
+        <!-- UPDATED: standardized logo path -->
+        <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" />
 
-    <!-- SUCCESS MESSAGE -->
-    <div id="successMsg"
-         style="display:none;margin:16px 0;padding:14px;border-radius:12px;
-                background:#e9fff2;color:#0b6b3a;font-weight:600;">
-      ✅ Thank you! Your message has been sent successfully.
-    </div>
+      </a>
 
-    <!-- CONTACT FORM -->
-    <form
-      action="https://formsubmit.co/kamoga.artistry@gmail.com"
-      method="POST"
-      class="card"
-      style="padding:22px;margin-top:16px"
-    >
 
-      <!-- FormSubmit config -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New Contact Message — Kamog Artistry">
-      <input type="hidden" name="_next" value="https://kamogartistry.com/contact.html?sent=1">
+      <ul class="nav-links" id="navLinks">
 
-      <!-- Honeypot -->
-      <input type="text" name="_honey" style="display:none">
+        <li><a href="index.html">Home</a></li>
 
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-      </div>
+        <li><a href="about.html">About</a></li>
 
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-      </div>
+        <li><a href="services.html" aria-current="page">Services</a></li>
 
-      <div class="form-group">
-        <label for="phone">Phone / WhatsApp (optional)</label>
-        <input type="text" id="phone" name="phone" placeholder="+256 …">
-      </div>
+        <li><a href="portfolio.html">Portfolio</a></li>
 
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5"
-                  placeholder="Tell us briefly about your project…" required></textarea>
-      </div>
+        <li><a href="blog.html">Insights</a></li>
 
-      <button type="submit" class="btn-primary">
-        Send Message
-      </button>
-    </form>
+        <li><a href="testimonials.html">Testimonials</a></li>
 
-  </div>
-</section>
+        <li><a href="contact.html">Contact</a></li>
 
-<footer class="footer">
-  <div class="footer-wrap">
-
-    <div class="footer-col">
-      <h4>Kamog Artistry (U) Ltd</h4>
-      <p>Branding, printing, signage & creative production in Kampala, Uganda.</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul class="footer-list">
-        <li><a href="mailto:kamoga.artistry@gmail.com">info@kamogartistry.com</a></li>
-        <li><a href="tel:+256775251445">+256 775 251 445</a></li>
-        <li>Kampala, Uganda</li>
       </ul>
+
+
+      <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
+    </nav>
+
+  </header>
+
+  <!-- Spacer to match your header behavior -->
+  <div style="height:95px"></div>
+
+  <section class="section light animate">
+    <div style="max-width:1100px;margin:auto;text-align:center">
+      <h2>Contact Us</h2>
+      <p style="opacity:.85;margin-top:12px">
+        Tell us what you need—branding, printing, signage, stationery, or custom production.
+        We’ll reply with timelines and a quote.
+      </p>
     </div>
 
-    <div class="footer-col">
-      <h4>Follow</h4>
-      <div class="social">
-        <a href="https://www.instagram.com/kamog_artistry_u_ltd" target="_blank">Instagram</a>
-        <a href="https://www.linkedin.com/company/kamog-artistry-u-ltd" target="_blank">LinkedIn</a>
+    <div class="grid" style="align-items:start;max-width:1100px;margin:35px auto 0">
+
+      <!-- FORM -->
+      <div class="card">
+        <h3>Send us a message</h3>
+        <p style="opacity:.8;margin-top:8px">
+          Fill in the form below. Your message will be delivered to our email.
+        </p>
+
+        <form class="contact-form"
+              action="https://formsubmit.co/kamoga.artistry@gmail.com"
+              method="POST">
+
+          <input type="hidden" name="_cc" value="sales@kamogartistry.com" />
+          <input type="hidden" name="_subject" value="New Website Inquiry — Kamog Artistry (U) Ltd" />
+          <input type="hidden" name="_next" value="contact.html?sent=1" />
+
+          <!-- Spam protection -->
+          <input type="text" name="_honey" style="display:none" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <input name="name" required placeholder="Your Name" />
+          <input name="email" type="email" required placeholder="Email Address" />
+          <input name="phone" placeholder="Phone / WhatsApp (optional)" />
+          <textarea name="message" rows="6" required
+            placeholder="Your Message (include what you need, quantity, deadline, location)"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <p id="sentMsg" style="display:none;text-align:center;margin-top:14px;color:#013144;font-weight:700">
+          ✅ Message sent! We’ll get back to you shortly.
+        </p>
+
+        <p style="opacity:.75;margin-top:12px;text-align:center">
+          Prefer WhatsApp? <a href="https://wa.me/256775251445" target="_blank" rel="noopener">Chat now</a>
+        </p>
+      </div>
+
+      <!-- CONTACT DETAILS -->
+      <div class="card">
+        <h3>Contact Details</h3>
+        <p style="opacity:.85;margin-top:10px">
+          Reach us using the details below. We’re available for consultations, quotations, and project planning.
+        </p>
+
+        <!-- KEEP CONTACT DETAILS AS YOU HAD THEM -->
+        <ul style="margin:14px 0 0 18px;display:flex;flex-direction:column;gap:10px;opacity:.9">
+          <li><strong>Email:</strong> <a href="mailto:kamoga.artistry@gmail.com">info@kamogartistry.com</a></li>
+          <li><strong>Sales:</strong> <a href="mailto:sales@kamogartistry.com">sales@kamogartistry.com</a></li>
+          <li><strong>Phone / WhatsApp:</strong> <a href="tel:+256775251445">+256 775 251 445</a></li>
+          <li><strong>P.O. Box:</strong> 201929, Kampala - Uganda</li>
+        </ul>
+
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn-secondary" href="mailto:kamoga.artistry@gmail.com">Email Us</a>
+        </div>
+
+        <div style="margin-top:18px;padding:14px;border-radius:14px;background:rgba(0,0,0,.06)">
+          <strong>Quick Note:</strong>
+          <p style="margin-top:8px;opacity:.85">
+            For faster quotes, include: service needed, size, quantity, deadline, and delivery location.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SOCIAL / MAP -->
+    <div class="card" style="max-width:1100px;margin:25px auto 0">
+      <h3>Follow & Connect</h3>
+      <p style="opacity:.85;margin-top:8px">See our latest work and updates on social platforms.</p>
+
+      <!-- Real SVG icons from your folder -->
+      <div class="social" style="margin-top:14px">
+        <a class="social-btn" target="_blank" rel="noopener" href="https://wa.me/256775251445" aria-label="WhatsApp">
+          <img src="assets/img/icons/whatsapp.svg" alt="" width="20" height="20">
+        </a>
+        <a class="social-btn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
+          <img src="assets/img/icons/linkedin.svg" alt="" width="20" height="20">
+        </a>
+        <a class="social-btn" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
+          <img src="assets/img/icons/tiktok.svg" alt="" width="20" height="20">
+        </a>
+        <a class="social-btn" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
+          <img src="assets/img/icons/instagram.svg" alt="" width="20" height="20">
+        </a>
+        <a class="social-btn" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">
+          <img src="assets/img/icons/x.svg" alt="" width="20" height="20">
+        </a>
+        <a class="social-btn" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">
+          <img src="assets/img/icons/facebook.svg" alt="" width="20" height="20">
+        </a>
+        <a class="social-btn" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">
+          <img src="assets/img/icons/behance.svg" alt="" width="20" height="20">
+        </a>
+        <a class="social-btn" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
+          <img src="assets/img/icons/threads.svg" alt="" width="20" height="20">
+        </a>
+      </div>
+
+      <div style="margin-top:18px;text-align:center">
+        <a class="mini-link" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Kampala%20Uganda">
+          Open in Google Maps →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-col">
+        
+      <div class="footer-col">
+
+          </a>
+        </div>
       </div>
     </div>
 
-  </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
+    </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Scripts (ONLY ONCE) -->
+  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
 
-<script src="assets/js/script.js" defer></script>
-<script src="assets/js/animations.js" defer></script>
-
-<!-- Show success message if redirected -->
-<script>
-  if (new URLSearchParams(window.location.search).get("sent") === "1") {
-    document.getElementById("successMsg").style.display = "block";
-  }
-</script>
-
+  <!-- show success message if ?sent=1 -->
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("sent") === "1") {
+        const msg = document.getElementById("sentMsg");
+        if (msg) msg.style.display = "block";
+      }
+    })();
+  </script>
 </body>
 </html>
+
