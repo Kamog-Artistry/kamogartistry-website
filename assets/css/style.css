@@ -492,7 +492,7 @@ a.portfolio-item.no-image{
 /* Default (desktop & tablet) */
 #postHero {
   width: 100%;
-  height: 380px;
+  height: auto;
   object-fit: cover;
   border-radius: 18px;
 }
