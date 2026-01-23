@@ -1,4 +1,0 @@
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.disqus.com https://c.disquscdn.com; frame-src https://disqus.com https://*.disqus.com; connect-src 'self' https://*.disqus.com https://c.disquscdn.com; img-src 'self' data: https: https://*.disqus.com https://c.disquscdn.com; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:;"
