@@ -227,8 +227,8 @@ document.addEventListener(
 
   // Gallery: auto "Load more" for big case-study grids
   const previews = Array.from(document.querySelectorAll(".portfolio-preview"));
-  if (previews.length > 8) {
-    const SHOW_FIRST = 6;
+  if (previews.length > 20) {
+    const SHOW_FIRST = 20;
 
     previews.forEach((el, i) => {
       if (i >= SHOW_FIRST) el.style.display = "none";
