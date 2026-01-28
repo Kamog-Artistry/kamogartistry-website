@@ -223,90 +223,370 @@
   </div>
 </section>
 
-<!-- MEDIA (VIDEOS) -->
+<!-- MEDIA (VIDEOS) — PORTRAIT-FIRST VIMEO EMBEDS (FIXED FIT)
+     Keeps your existing grid + card styling.
+     Change: wrapper aspect-ratio is portrait by default (9:16).
+     If any specific clip is landscape, add: class="video-embed is-landscape"
+-->
+
 <section class="section light animate">
   <h2>Media (Videos)</h2>
 
+  <style>
+    /* Portrait-first wrapper (Vimeo-like for phone clips) */
+    .video-embed{
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;   /* ✅ portrait default */
+      background: #000;
+      overflow: hidden;
+    }
+
+    /* Use ONLY when a specific video is landscape */
+    .video-embed.is-landscape{
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-embed iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
   <div class="grid" style="max-width:1100px;margin:22px auto 0">
+
+    <!-- Video 1 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video1.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158428994?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 2 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video2.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158429271?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 3 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video3.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158429391?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 4 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video4.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158429473?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 5 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video5.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158429634?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 6 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video6.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158425198?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 7 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video7.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158425439?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 8 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video8.mp4" type="video/mp4" />
-      </video>
-    </div>
-    
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video9.mp4" type="video/mp4" />
-      </video>
-    </div>
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video10.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158425990?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 9 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video11.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158426073?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 10 -->
     <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/sme-branding-showcase/video12.mp4" type="video/mp4" />
-      </video>
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158426205?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
     </div>
 
+    <!-- Video 11 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158426257?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 12 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158426336?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 13 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158426418?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 14 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158426515?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 15 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158426776?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 16 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158426958?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 17 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158428395?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 18 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158428522?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 19 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158428874?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
+
+    <!-- Video 20 -->
+    <div class="card" style="padding:0;overflow:hidden">
+      <div class="video-embed">
+        <iframe
+          src="https://player.vimeo.com/video/1158133801?title=0&byline=0&portrait=0"
+          loading="lazy"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div style="padding:14px 16px">
+        <strong>Custom Gift Bags</strong>
+        <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+      </div>
+    </div>
 
   </div>
 </section>
 
+<!-- Note: Your original list included a small typo on Video 11 (a space before ?). Fixed here. -->
+
+
 
 <!-- NEXT / PREVIOUS -->
-<section class="section animate">
+<section c lass="section animate">
   <div class="grid">
     <div class="card">
       <h3>Previous Project</h3>

@@ -224,31 +224,147 @@
 <!-- MEDIA (VIDEOS) -->
 <section class="section light animate">
   <h2>Media (Videos)</h2>
-  <p style="opacity:.85;max-width:1000px;margin:10px auto 0;text-align:center">
-    Short clips highlighting event setup, branding, and key moments.
-  </p>
 
-  <div class="grid" style="max-width:1100px;margin:22px auto 0">
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/create-and-cook-competition/video1.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong>Event Setup</strong>
-        <div style="opacity:.8;margin-top:4px">Branding in place</div>
-      </div>
+<!-- VIDEO GRID SECTION (Vimeo embeds – FIXED HEIGHT ISSUE)
+     FIX APPLIED:
+     - REMOVED fixed iframe height
+     - Wrapper now controls aspect ratio (16:9)
+-->
+
+<style>
+  /* Video wrapper controls height */
+  .video-embed {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background: #000;
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
+<div class="grid" style="max-width:1100px;margin:22px auto 0">
+
+  <!-- Video 1 -->
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="video-embed">
+      <iframe
+        src="https://player.vimeo.com/video/1159206165?title=0&byline=0&portrait=0"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/create-and-cook-competition/video2.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
+    <div style="padding:14px 16px">
+      <strong>Custom Gift Bags</strong>
+      <div style="opacity:.8;margin-top:4px">For booth visitors</div>
     </div>
   </div>
+
+  <!-- Video 2 -->
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="video-embed">
+      <iframe
+        src="https://player.vimeo.com/video/1158130972?title=0&byline=0&portrait=0"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="padding:14px 16px">
+      <strong>Custom Gift Bags</strong>
+      <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+    </div>
+  </div>
+
+  <!-- Video 3 -->
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="video-embed">
+      <iframe
+        src="https://player.vimeo.com/video/1158131495?title=0&byline=0&portrait=0"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="padding:14px 16px">
+      <strong>Custom Gift Bags</strong>
+      <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+    </div>
+  </div>
+
+  <!-- Video 4 -->
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="video-embed">
+      <iframe
+        src="https://player.vimeo.com/video/1158132257?title=0&byline=0&portrait=0"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="padding:14px 16px">
+      <strong>Custom Gift Bags</strong>
+      <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+    </div>
+  </div>
+
+  <!-- Video 5 -->
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="video-embed">
+      <iframe
+        src="https://player.vimeo.com/video/1158133360?title=0&byline=0&portrait=0"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="padding:14px 16px">
+      <strong>Custom Gift Bags</strong>
+      <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+    </div>
+  </div>
+
+  <!-- Video 6 -->
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="video-embed">
+      <iframe
+        src="https://player.vimeo.com/video/1158133547?title=0&byline=0&portrait=0"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="padding:14px 16px">
+      <strong>Custom Gift Bags</strong>
+      <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+    </div>
+  </div>
+
+  <!-- Video 7 -->
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="video-embed">
+      <iframe
+        src="https://player.vimeo.com/video/1158133801?title=0&byline=0&portrait=0"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div style="padding:14px 16px">
+      <strong>Custom Gift Bags</strong>
+      <div style="opacity:.8;margin-top:4px">For booth visitors</div>
+    </div>
+  </div>
+
+</div>
+
 </section>
 
 <!-- NEXT / PREVIOUS -->
