@@ -7,7 +7,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Kamog Artistry (U) Ltd",
-  "url": "https://kamogartistry.com",
+  "url": "https://kamogartistry.com/", 
   "email": "info@kamogartistry.com",
   "telephone": "+256775251445",
   "address": {
@@ -24,16 +24,17 @@
     "https://x.com/kamogartistry",
     "https://www.tiktok.com/@kamogartistry",
     "https://www.behance.net/kamogArtistry",
-    "https://www.threads.net/@kamog_artistry_u_ltd"
+    "https://www.threads.com/@kamog_artistry_u_ltd"
   ]
 }
 </script>
 
-
-  <meta charset="UTF-8" />
   <title>Kamog Artistry (U) Ltd | Branding • Print • Signage • Creative Production</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Kamog Artistry (U) Ltd is a registered Ugandan creative branding and production company delivering design, print production, signage, stationery, packaging, motion graphics, and fine arts." />
+
+  <!-- ✅ FIX: Canonical (place inside head) -->
+  <link rel="canonical" href="https://kamogartistry.com/">
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -41,26 +42,27 @@
 <body>
 
   <!-- Loader: made non-blocking by default (prevents “stuck loading”) -->
-  <div id="loader" style="display:none">
-    <img src="assets/img/brand/loader-logo.png" alt="Loading">
+  <div id="loader" style="display:none" class="hidden">
+    <img src="assets/img/brand/loader-logo.png" alt="Loading" loading="lazy" decoding="async" />
     <div class="loader-bar"></div>
   </div>
 
   <header class="header">
     <nav class="nav">
-      <a href="index.html" aria-label="Go to homepage">
+      <!-- ✅ FIX: Ensure homepage link is canonical "/" -->
+      <a aria-label="Go to homepage" href="/">
         <!-- Standardized: use the same brand logo path across site -->
-        <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" />
+        <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="blog.html">Insights</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a aria-current="page" href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/blog">Insights</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
 
       <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
@@ -73,7 +75,7 @@
     <div class="hero-inner">
       <div class="hero-badge">Welcome to Kamog Artistry (U) Ltd </div>
 
-      <h1>Branding, Print & Signage <span>Delivered End-to-End</span></h1>
+      <h1>Branding, Print &amp; Signage <span>Delivered End-to-End</span></h1>
 
       <p>
         We help businesses and institutions look professional everywhere—through clear design,
@@ -86,14 +88,14 @@
       </p>
 
       <div class="hero-actions">
-        <a href="contact.html" class="btn-primary">Request a Quote</a>
-        <a href="portfolio.html" class="btn-secondary">View Portfolio</a>
+        <a class="btn-primary" href="/contact">Request a Quote</a>
+        <a class="btn-secondary" href="/portfolio">View Portfolio</a>
       </div>
 
       <div class="hero-stats">
-        <div class="stat"><strong>Design</strong><span>Branding & Digital</span></div>
-        <div class="stat"><strong>Production</strong><span>Print & Finishing</span></div>
-        <div class="stat"><strong>Install</strong><span>Signage & Setups</span></div>
+        <div class="stat"><strong>Design</strong><span>Branding &amp; Digital</span></div>
+        <div class="stat"><strong>Production</strong><span>Print &amp; Finishing</span></div>
+        <div class="stat"><strong>Install</strong><span>Signage &amp; Setups</span></div>
       </div>
     </div>
   </section>
@@ -106,19 +108,19 @@
     <div class="grid">
       <div class="card feature-card">
         <div class="icon" aria-hidden="true">✦</div>
-        <h3>Branding & Identity</h3>
+        <h3>Branding &amp; Identity</h3>
         <p>Logo design, brand kits, company profiles, and marketing creatives.</p>
       </div>
 
       <div class="card feature-card">
         <div class="icon" aria-hidden="true">⎙</div>
-        <h3>Printing & Finishing</h3>
+        <h3>Printing &amp; Finishing</h3>
         <p>Flyers, brochures, posters, business cards, stickers, and premium finishing.</p>
       </div>
 
       <div class="card feature-card">
         <div class="icon" aria-hidden="true">▣</div>
-        <h3>Signage & Installation</h3>
+        <h3>Signage &amp; Installation</h3>
         <p>Indoor/outdoor signage, wall branding, shop/office branding, and setup support.</p>
       </div>
 
@@ -130,7 +132,7 @@
     </div>
 
     <div style="text-align:center;margin-top:18px">
-      <a href="services.html" class="btn-primary">Explore Services</a>
+      <a class="btn-primary" href="/services">Explore Services</a>
     </div>
   </section>
 
@@ -140,24 +142,24 @@
     <h2>Featured Work</h2>
 
     <div class="grid">
-      <a class="portfolio-item portfolio-preview" href="portfolio/voltech-branding.html">
-        <img src="assets/img/portfolio/voltech-branding/homecover.jpg" alt="Voltech Branding" loading="lazy" decoding="async">
+      <a class="portfolio-item portfolio-preview" href="/portfolio/voltech-branding">
+        <img src="assets/img/portfolio/voltech-branding/homecover.jpg" alt="Voltech Branding" loading="lazy" decoding="async" />
         <div class="pp-text">
           <strong>Voltech Branding</strong>
           <span>Branding • Print</span>
         </div>
       </a>
 
-      <a class="portfolio-item portfolio-preview" href="portfolio/tooke-birdc-uma-2025.html">
-        <img src="assets/img/portfolio/tooke-birdc-uma-2025/homecover.jpg" alt="TOOKE - BIRDC UMA 2025" loading="lazy" decoding="async">
+      <a class="portfolio-item portfolio-preview" href="/portfolio/tooke-birdc-uma-2025">
+        <img src="assets/img/portfolio/tooke-birdc-uma-2025/homecover.jpg" alt="TOOKE - BIRDC UMA 2025" loading="lazy" decoding="async" />
         <div class="pp-text">
           <strong>TOOKE – BIRDC (UMA 2025)</strong>
           <span>Event • Branding • Print</span>
         </div>
       </a>
 
-      <a class="portfolio-item portfolio-preview" href="portfolio/mountains-of-the-moon-tourism.html">
-        <img src="assets/img/portfolio/mountains-of-the-moon-tourism/homecover.jpg" alt="Mountains of the Moon Tourism" loading="lazy" decoding="async">
+      <a class="portfolio-item portfolio-preview" href="/portfolio/mountains-of-the-moon-tourism">
+        <img src="assets/img/portfolio/mountains-of-the-moon-tourism/homecover.jpg" alt="Mountains of the Moon Tourism" loading="lazy" decoding="async" />
         <div class="pp-text">
           <strong>Mountains of the Moon Hotel</strong>
           <span>Hospitality • Branding</span>
@@ -165,8 +167,8 @@
       </a>
 
       <!-- FIXED: Ability Pharmacy folder slug -->
-      <a class="portfolio-item portfolio-preview" href="portfolio/ability-pharmacy.html">
-        <img src="assets/img/portfolio/ability-pharmacy/homecover.jpg" alt="Ability Pharmacy Branding" loading="lazy" decoding="async">
+      <a class="portfolio-item portfolio-preview" href="/portfolio/ability-pharmacy">
+        <img src="assets/img/portfolio/ability-pharmacy/homecover.jpg" alt="Ability Pharmacy Branding" loading="lazy" decoding="async" />
         <div class="pp-text">
           <strong>Ability Pharmacy</strong>
           <span>Branding • Print</span>
@@ -175,7 +177,7 @@
     </div>
 
     <div style="text-align:center;margin-top:18px">
-      <a href="portfolio.html" class="btn-secondary">See All Case Studies</a>
+      <a class="btn-secondary" href="/portfolio">See All Case Studies</a>
     </div>
 
     <!-- UPDATED: replaces “portfolio is being updated” with confidence-led line -->
@@ -236,7 +238,7 @@
     </div>
 
     <div style="text-align:center;margin-top:18px">
-      <a href="testimonials.html" class="btn-secondary">Read More Testimonials</a>
+      <a class="btn-secondary" href="/testimonials">Read More Testimonials</a>
     </div>
   </section>
 
@@ -250,7 +252,7 @@
       </p>
 
       <div class="hero-actions">
-        <a href="contact.html" class="btn-primary">Send Inquiry</a>
+        <a class="btn-primary" href="/contact">Send Inquiry</a>
         <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
       </div>
     </div>
@@ -262,7 +264,7 @@
     <div class="footer-wrap">
       <div class="footer-col">
         <h4>Kamog Artistry (U) Ltd</h4>
-        <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
+        <p>Branding, printing, signage, stationery &amp; creative production in Kampala, Uganda.</p>
 
         <div class="footer-badges">
           <span class="badge">Branding</span>
@@ -279,7 +281,7 @@
           <li><a href="tel:+256775251445">+256 775 251 445</a></li>
           <li>P.O. Box 201929, Kampala - Uganda</li>
         </ul>
-        <a class="footer-cta" href="contact.html">Contact Us</a>
+        <a class="footer-cta" href="/contact">Contact Us</a>
       </div>
 
       <div class="footer-col">
@@ -291,7 +293,7 @@
           <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
             <img src="assets/img/icons/linkedin.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
           </a>
-          <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
+          <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&amp;_t=ZT-93C8X0CPXUt" aria-label="TikTok">
             <img src="assets/img/icons/tiktok.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
           </a>
           <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">

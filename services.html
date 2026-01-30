@@ -10,9 +10,13 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- ✅ FIX: Add meta description (helps indexing + snippets) -->
+  <meta name="description" content="Explore Kamog Artistry (U) Ltd services: branding & identity, printing & production, large format campaign print, indoor/outdoor signage, stationery & corporate materials, and fine art & creative production in Kampala, Uganda." />
+
+  <!-- ✅ FIX: Add canonical (page-specific) -->
+  <link rel="canonical" href="https://kamogartistry.com/services.html" />
 
   <!-- UPDATED: new root structure -->
-
   <link rel="stylesheet" href="assets/css/style.css" />
 
 </head>
@@ -26,7 +30,8 @@
 
     <nav class="nav">
 
-      <a href="index.html" aria-label="Go to homepage">
+      <!-- ✅ FIX: Homepage link uses canonical "/" (keeps other links untouched) -->
+      <a href="/" aria-label="Go to homepage">
 
         <!-- UPDATED: standardized logo path -->
         <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" />
@@ -36,7 +41,8 @@
 
       <ul class="nav-links" id="navLinks">
 
-        <li><a href="index.html">Home</a></li>
+        <!-- ✅ FIX: Home link uses canonical "/" -->
+        <li><a href="/">Home</a></li>
 
         <li><a href="about.html">About</a></li>
 
@@ -230,7 +236,6 @@
 
         <p style="margin-top:12px;opacity:.85"><strong>Typical turnaround:</strong> 1–3 days</p>
 
-
         <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
 
           <a href="contact.html" class="btn-primary">Request a Quote</a>
@@ -274,7 +279,6 @@
 
         <p style="margin-top:12px;opacity:.85"><strong>Typical turnaround:</strong> 1–5 days</p>
 
-
         <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
 
           <a href="contact.html" class="btn-primary">Request a Quote</a>
@@ -317,7 +321,6 @@
         <p style="margin-top:10px;opacity:.85"><strong>Best for:</strong> shops, offices, clinics, hotels, institutions</p>
 
         <p style="margin-top:12px;opacity:.85"><strong>Typical turnaround:</strong> 3–10 days</p>
-
 
         <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
 
@@ -405,6 +408,48 @@
         <p style="margin-top:10px;opacity:.85"><strong>Best for:</strong> gifts, campaigns, special projects, artistic branding</p>
 
         <p style="margin-top:12px;opacity:.85"><strong>Typical turnaround:</strong> Depends on scope</p>
+
+
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+
+          <a href="contact.html" class="btn-primary">Request a Quote</a>
+
+          <a href="portfolio.html" class="btn-secondary">See Examples</a>
+
+        </div>
+
+      </div>
+
+
+      <!-- NEW: Digital services (added, existing content unchanged) -->
+
+      <!-- 7 -->
+
+      <div class="card feature-card">
+
+        <div class="icon" aria-hidden="true">✎</div>
+
+        <h3>Website Design & Development</h3>
+
+        <p style="opacity:.85;margin-top:10px">
+
+          Custom, fast, and mobile-friendly business websites that strengthen your brand and convert visitors into clients.
+
+        </p>
+
+
+        <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:6px;opacity:.85">
+
+          <li>Business &amp; portfolio websites</li>
+          <li>Responsive UI/UX (mobile-first)</li>
+          <li>SEO-ready structure (titles, sitemap, indexing)</li>
+          <li>Secure, high-performance deployment</li>
+
+        </ul>
+
+        <p style="margin-top:10px;opacity:.85"><strong>Best for:</strong> businesses that want a strong, consistent digital identity.</p>
+
+        <p style="margin-top:12px;opacity:.85"><strong>Typical turnaround:</strong> 2–5 days</p>
 
 
         <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
@@ -623,7 +668,6 @@
       <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
 
 
-
       <div class="footer-badges">
 
         <span class="badge">Branding</span>
@@ -665,7 +709,6 @@
     <div class="footer-col">
 
       <h4>Follow</h4>
-
 
 
       <div class="social">
