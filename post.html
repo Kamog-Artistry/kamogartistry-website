@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- ✅ Dynamic canonical + meta (filled by JS below) -->
+  <link rel="canonical" href="https://kamogartistry.com/post.html" id="canonicalLink">
+
+  <meta name="description" content="Kamog Artistry insights and articles." id="metaDescription">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Kamog Artistry (U) Ltd">
+  <meta property="og:title" content="" id="ogTitle">
+  <meta property="og:description" content="" id="ogDescription">
+  <meta property="og:url" content="" id="ogUrl">
+  <meta property="og:image" content="" id="ogImage">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="" id="twTitle">
+  <meta name="twitter:description" content="" id="twDescription">
+  <meta name="twitter:image" content="" id="twImage">
+
+  <script type="application/ld+json" id="articleSchema"></script>
+
   <meta charset="UTF-8" />
   <title>Article | Kamog Artistry (U) Ltd</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -61,16 +81,17 @@
 
 <header class="header">
   <nav class="nav">
-    <a href="index.html" aria-label="Go to homepage">
+    <!-- ✅ FIX: use "/" -->
+    <a href="/" aria-label="Go to homepage">
       <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
     </a>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="blog.html" aria-current="page">Insights</a></li>
+      <li><a href="blog.html">Insights</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -164,37 +185,30 @@
            href="https://wa.me/256775251445" aria-label="WhatsApp">
           <img src="assets/img/icons/whatsapp.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
         </a>
-
         <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener"
            href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
           <img src="assets/img/icons/linkedin.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
         </a>
-
         <a class="social-btn" title="TikTok" target="_blank" rel="noopener"
            href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
           <img src="assets/img/icons/tiktok.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
         </a>
-
         <a class="social-btn" title="Instagram" target="_blank" rel="noopener"
            href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
           <img src="assets/img/icons/instagram.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
         </a>
-
         <a class="social-btn" title="X" target="_blank" rel="noopener"
            href="https://x.com/kamogartistry" aria-label="X">
           <img src="assets/img/icons/x.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
         </a>
-
         <a class="social-btn" title="Facebook" target="_blank" rel="noopener"
            href="https://www.facebook.com/611977605339985" aria-label="Facebook">
           <img src="assets/img/icons/facebook.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
         </a>
-
         <a class="social-btn" title="Behance" target="_blank" rel="noopener"
            href="https://www.behance.net/kamogArtistry" aria-label="Behance">
           <img src="assets/img/icons/behance.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
         </a>
-
         <a class="social-btn" title="Threads" target="_blank" rel="noopener"
            href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
           <img src="assets/img/icons/threads.svg" alt="" aria-hidden="true" style="width:22px;height:22px">
@@ -244,6 +258,24 @@
     return out;
   }
 
+  // Convert common date formats to ISO where possible (safe fallback)
+  function toISODateMaybe(dateText) {
+    if (!dateText) return "";
+    const t = String(dateText).trim();
+    if (/^\d{4}-\d{2}-\d{2}/.test(t)) return t; // already ISO
+    const d = new Date(t);
+    if (!isNaN(d.getTime())) return d.toISOString().slice(0, 10);
+    return "";
+  }
+
+  function absUrlMaybe(url) {
+    if (!url) return "";
+    const u = String(url).trim();
+    if (/^https?:\/\//i.test(u)) return u;
+    if (u.startsWith("/")) return window.location.origin + u;
+    return u; // relative like "assets/..." (kept)
+  }
+
   function shareArticle() {
     const title = document.title;
     const url = window.location.href;
@@ -278,6 +310,14 @@
     document.getElementById("likeCount").textContent = String(count);
   }
 
+  function setMeta(id, value) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.tagName.toLowerCase() === "meta") el.setAttribute("content", value);
+    else if (el.tagName.toLowerCase() === "link") el.setAttribute("href", value);
+    else el.textContent = value;
+  }
+
   (async function initPost() {
     const slug = getSlug();
     const postEl = document.getElementById("postContent");
@@ -288,6 +328,18 @@
     if (!slug) {
       document.title = "Article Not Found | Kamog Artistry (U) Ltd";
       postEl.innerHTML = "<h2>Article not found</h2><p>Missing <code>?post=</code> in the URL.</p>";
+
+      const url = "https://kamogartistry.com/post.html";
+      setMeta("canonicalLink", url);
+      setMeta("metaDescription", "Article not found.");
+      setMeta("ogTitle", "Article Not Found | Kamog Artistry (U) Ltd");
+      setMeta("ogDescription", "This article could not be found.");
+      setMeta("ogUrl", url);
+      setMeta("ogImage", "https://kamogartistry.com/assets/img/brand/logo-white.svg");
+      setMeta("twTitle", "Article Not Found | Kamog Artistry (U) Ltd");
+      setMeta("twDescription", "This article could not be found.");
+      setMeta("twImage", "https://kamogartistry.com/assets/img/brand/logo-white.svg");
+      setMeta("articleSchema", "");
       return;
     }
 
@@ -304,30 +356,91 @@
 
       const parsed = parseFrontMatter(cleanedMd);
 
+      // Render hero image
+      let heroUrl = "";
       if (parsed.meta && parsed.meta.image) {
+        heroUrl = parsed.meta.image; // can be "/assets/..." (good)
         const hero = document.getElementById("postHero");
-        hero.src = parsed.meta.image;
+        hero.src = heroUrl;
         hero.alt = parsed.meta.title || "Article cover";
         hero.style.display = "block";
       }
 
+      // Render body
       postEl.innerHTML = marked.parse(parsed.body);
 
+      // Determine title
       const h1 = postEl.querySelector("h1");
       const fmTitle = (parsed.meta && parsed.meta.title) ? String(parsed.meta.title).trim() : "";
       const titleText = h1 ? h1.textContent.trim() : (fmTitle || slug.replace(/-/g, " "));
       document.title = titleText + " | Kamog Artistry (U) Ltd";
 
+      // Reading time
       const plainText = postEl.textContent || "";
       const { minutes } = estimateReadingTime(plainText);
       document.getElementById("readingTime").textContent = minutes + " min read";
 
+      // Date
+      let dateText = "";
       if (parsed.meta && parsed.meta.date) {
-        document.getElementById("postDate").textContent = "• " + String(parsed.meta.date).trim();
+        dateText = String(parsed.meta.date).trim();
       } else {
         const dateLine = md.match(/^Date:\s*(.+)$/mi);
-        document.getElementById("postDate").textContent = (dateLine && dateLine[1]) ? ("• " + dateLine[1].trim()) : "";
+        dateText = (dateLine && dateLine[1]) ? dateLine[1].trim() : "";
       }
+      document.getElementById("postDate").textContent = dateText ? ("• " + dateText) : "";
+
+      // Build absolute URL for this post
+      const postUrl = "https://kamogartistry.com/post.html?post=" + encodeURIComponent(slug);
+      setMeta("canonicalLink", postUrl);
+
+      // Description: front-matter description/excerpt OR first 170 chars of text
+      const fmDesc = (parsed.meta && (parsed.meta.description || parsed.meta.excerpt))
+        ? String(parsed.meta.description || parsed.meta.excerpt).trim()
+        : "";
+      const autoDesc = plainText.replace(/\s+/g, " ").trim().slice(0, 170);
+      const desc = fmDesc || autoDesc || "Kamog Artistry insights and articles.";
+      setMeta("metaDescription", desc);
+
+      // OG/Twitter
+      setMeta("ogTitle", titleText);
+      setMeta("ogDescription", desc);
+      setMeta("ogUrl", postUrl);
+
+      const ogImg = absUrlMaybe(heroUrl) || "https://kamogartistry.com/assets/img/brand/logo-white.svg";
+      setMeta("ogImage", ogImg);
+
+      setMeta("twTitle", titleText);
+      setMeta("twDescription", desc);
+      setMeta("twImage", ogImg);
+
+      // Article schema
+      const isoDate = toISODateMaybe(dateText);
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": postUrl },
+        "headline": titleText,
+        "description": desc,
+        "image": ogImg ? [ogImg] : undefined,
+        "datePublished": isoDate || undefined,
+        "author": {
+          "@type": "Organization",
+          "name": "Kamog Artistry (U) Ltd",
+          "url": "https://kamogartistry.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Kamog Artistry (U) Ltd",
+          "url": "https://kamogartistry.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://kamogartistry.com/assets/img/brand/logo-white.svg"
+          }
+        }
+      };
+      Object.keys(schema).forEach(k => schema[k] === undefined && delete schema[k]);
+      setMeta("articleSchema", JSON.stringify(schema));
 
     } catch (err) {
       document.title = "Article Not Found | Kamog Artistry (U) Ltd";
@@ -344,9 +457,8 @@
 <!-- Disqus (lazy load) -->
 <script>
   var disqus_config = function () {
-    // ✅ FIX 2: never allow empty identifier
     var slug = new URLSearchParams(window.location.search).get("post") || "static-article";
-    this.page.url = window.location.origin + "/post?post=" + slug;
+    this.page.url = window.location.origin + "/post.html?post=" + slug;
     this.page.identifier = slug;
   };
 
@@ -358,7 +470,6 @@
       loaded = true;
 
       var d = document, s = d.createElement("script");
-      // ✅ FIX 1: correct shortname (matches your Disqus admin)
       s.src = "https://https-kamogartistry-com.disqus.com/embed.js";
       s.setAttribute("data-timestamp", +new Date());
       (d.head || d.body).appendChild(s);

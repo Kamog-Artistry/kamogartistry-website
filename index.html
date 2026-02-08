@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
 
+  <meta charset="UTF-8" />
+
+  <!-- ✅ Schema: keep (expanded areaServed a bit) -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Kamog Artistry (U) Ltd",
-  "url": "https://kamogartistry.com/", 
+  "url": "https://kamogartistry.com/",
   "email": "info@kamogartistry.com",
   "telephone": "+256775251445",
   "address": {
@@ -15,7 +18,7 @@
     "addressLocality": "Kampala",
     "addressCountry": "UG"
   },
-  "areaServed": ["Kampala", "Uganda"],
+  "areaServed": ["Kampala", "Wakiso", "Mukono", "Uganda"],
   "description": "Branding, print production, signage fabrication and installation services for businesses and institutions in Uganda.",
   "sameAs": [
     "https://www.facebook.com/611977605339985",
@@ -27,21 +30,37 @@
     "https://www.threads.com/@kamog_artistry_u_ltd"
   ]
 }
-</script>
+  </script>
 
   <title>Kamog Artistry (U) Ltd | Branding • Print • Signage • Creative Production</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="description" content="Kamog Artistry (U) Ltd is a registered Ugandan creative branding and production company delivering design, print production, signage, stationery, packaging, motion graphics, and fine arts." />
 
-  <!-- ✅ FIX: Canonical (place inside head) -->
+  <!-- ✅ Canonical -->
   <link rel="canonical" href="https://kamogartistry.com/">
+
+  <!-- ✅ NEW: Open Graph (helps social + AI discovery) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kamog Artistry (U) Ltd | Branding • Print • Signage" />
+  <meta property="og:description" content="End-to-end branding, print production, signage and creative production for businesses and institutions in Uganda." />
+  <meta property="og:url" content="https://kamogartistry.com/" />
+  <!-- Use a real existing image path on your site -->
+  <meta property="og:image" content="https://kamogartistry.com/assets/img/brand/logo-white.svg" />
+
+  <!-- ✅ NEW: Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kamog Artistry (U) Ltd" />
+  <meta name="twitter:description" content="Branding, print production, signage and creative production in Uganda." />
+  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/brand/logo-white.svg" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
-  <!-- Loader: made non-blocking by default (prevents “stuck loading”) -->
+  <!-- Loader: non-blocking by default -->
   <div id="loader" style="display:none" class="hidden">
     <img src="assets/img/brand/loader-logo.png" alt="Loading" loading="lazy" decoding="async" />
     <div class="loader-bar"></div>
@@ -49,20 +68,21 @@
 
   <header class="header">
     <nav class="nav">
-      <!-- ✅ FIX: Ensure homepage link is canonical "/" -->
+      <!-- ✅ Home canonical "/" -->
       <a aria-label="Go to homepage" href="/">
-        <!-- Standardized: use the same brand logo path across site -->
         <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a aria-current="page" href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/blog">Insights</a></li>
-        <li><a href="/testimonials">Testimonials</a></li>
-        <li><a href="/contact">Contact</a></li>
+
+        <!-- ✅ FIX: use .html links (prevents Cannot GET /about locally) -->
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Insights</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
       <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
@@ -82,14 +102,14 @@
         quality print production, durable signage, and consistent brand execution.
       </p>
 
-      <!-- NEW: short proof line (confidence booster) -->
       <p style="opacity:.85;margin-top:10px">
         Trusted by SMEs, institutions, and event teams across Uganda for reliable production and clean finishing.
       </p>
 
       <div class="hero-actions">
-        <a class="btn-primary" href="/contact">Request a Quote</a>
-        <a class="btn-secondary" href="/portfolio">View Portfolio</a>
+        <!-- ✅ FIX: .html -->
+        <a class="btn-primary" href="contact.html">Request a Quote</a>
+        <a class="btn-secondary" href="portfolio.html">View Portfolio</a>
       </div>
 
       <div class="hero-stats">
@@ -132,7 +152,8 @@
     </div>
 
     <div style="text-align:center;margin-top:18px">
-      <a class="btn-primary" href="/services">Explore Services</a>
+      <!-- ✅ FIX: .html -->
+      <a class="btn-primary" href="services.html">Explore Services</a>
     </div>
   </section>
 
@@ -142,6 +163,7 @@
     <h2>Featured Work</h2>
 
     <div class="grid">
+      <!-- NOTE: if your portfolio pages are folders with index.html, these clean URLs are fine -->
       <a class="portfolio-item portfolio-preview" href="/portfolio/voltech-branding">
         <img src="assets/img/portfolio/voltech-branding/homecover.jpg" alt="Voltech Branding" loading="lazy" decoding="async" />
         <div class="pp-text">
@@ -166,7 +188,6 @@
         </div>
       </a>
 
-      <!-- FIXED: Ability Pharmacy folder slug -->
       <a class="portfolio-item portfolio-preview" href="/portfolio/ability-pharmacy">
         <img src="assets/img/portfolio/ability-pharmacy/homecover.jpg" alt="Ability Pharmacy Branding" loading="lazy" decoding="async" />
         <div class="pp-text">
@@ -177,10 +198,10 @@
     </div>
 
     <div style="text-align:center;margin-top:18px">
-      <a class="btn-secondary" href="/portfolio">See All Case Studies</a>
+      <!-- ✅ FIX: .html -->
+      <a class="btn-secondary" href="portfolio.html">See All Case Studies</a>
     </div>
 
-    <!-- UPDATED: replaces “portfolio is being updated” with confidence-led line -->
     <p style="opacity:.85;text-align:center;margin-top:14px">
       Need samples for your industry? Share your brief and we’ll send the most relevant case studies.
     </p>
@@ -238,7 +259,8 @@
     </div>
 
     <div style="text-align:center;margin-top:18px">
-      <a class="btn-secondary" href="/testimonials">Read More Testimonials</a>
+      <!-- ✅ FIX: .html -->
+      <a class="btn-secondary" href="testimonials.html">Read More Testimonials</a>
     </div>
   </section>
 
@@ -252,7 +274,8 @@
       </p>
 
       <div class="hero-actions">
-        <a class="btn-primary" href="/contact">Send Inquiry</a>
+        <!-- ✅ FIX: .html -->
+        <a class="btn-primary" href="contact.html">Send Inquiry</a>
         <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
       </div>
     </div>
@@ -281,7 +304,8 @@
           <li><a href="tel:+256775251445">+256 775 251 445</a></li>
           <li>P.O. Box 201929, Kampala - Uganda</li>
         </ul>
-        <a class="footer-cta" href="/contact">Contact Us</a>
+        <!-- ✅ FIX: .html -->
+        <a class="footer-cta" href="contact.html">Contact Us</a>
       </div>
 
       <div class="footer-col">
@@ -319,7 +343,6 @@
       <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
     </div>
   </footer>
-
 
   <script src="assets/js/script.js" defer></script>
   <script src="assets/js/animations.js" defer></script>

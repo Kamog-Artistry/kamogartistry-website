@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -10,14 +9,47 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- ✅ SEO -->
+  <meta name="description"
+    content="Read testimonials from clients who trusted Kamog Artistry (U) Ltd for branding, printing, signage, design, clean finishing, and reliable execution across Uganda." />
+  <link rel="canonical" href="https://kamogartistry.com/testimonials.html" />
+
+  <!-- ✅ Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Testimonials | Kamog Artistry (U) Ltd" />
+  <meta property="og:description"
+    content="Client feedback on design quality, clean finishing, reliable execution, and fast turnaround by Kamog Artistry (U) Ltd." />
+  <meta property="og:url" content="https://kamogartistry.com/testimonials.html" />
+  <!-- Replace with a real existing image if you don't have this file -->
+  <meta property="og:image" content="https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg" />
+
+  <!-- ✅ Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Testimonials | Kamog Artistry (U) Ltd" />
+  <meta name="twitter:description"
+    content="Client feedback on design, printing, signage, clean finishing and reliable delivery across Uganda." />
+  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg" />
+
+  <!-- ✅ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Testimonials | Kamog Artistry (U) Ltd",
+    "url":"https://kamogartistry.com/testimonials.html",
+    "description":"Client feedback on design quality, clean finishing, reliable execution, and fast turnaround by Kamog Artistry (U) Ltd.",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"Kamog Artistry (U) Ltd",
+      "url":"https://kamogartistry.com/"
+    }
+  }
+  </script>
 
   <!-- Root structure (current) -->
-
   <link rel="stylesheet" href="assets/css/style.css" />
 
-
   <!-- Small page-only fixes (won't affect other pages) -->
-
   <style>
 
     /* Safer: only apply offset when header is fixed (prevents odd gaps if header height changes) */
@@ -26,45 +58,27 @@
     }
 
     /* Make client logo cards consistent */
-
     .client-logo-card{
-
       display:flex; align-items:center; justify-content:center;
-
       min-height:96px;
-
     }
 
     .client-logo-card img{
-
       max-width:150px; max-height:64px; object-fit:contain;
-
       filter: saturate(1.05);
-
     }
-
 
     /* Optional: keep testimonial box white if your theme changes */
-
     .testimonial-box{
-
       background:#fff;
-
       color: inherit;
-
     }
 
-
     /* Social icon SVG sizing */
-
     .social-btn img{
-
       width:20px; height:20px;
-
       display:block;
-
       filter: none;
-
     }
 
   </style>
@@ -78,10 +92,10 @@
 
 
 <header class="header">
-
   <nav class="nav">
 
-    <a href="index.html" aria-label="Go to homepage">
+    <!-- ✅ FIX: Home uses "/" -->
+    <a href="/" aria-label="Go to homepage">
 
       <!-- UPDATED: standardized logo format/path -->
       <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
@@ -92,7 +106,8 @@
 
     <ul class="nav-links" id="navLinks">
 
-      <li><a href="index.html">Home</a></li>
+      <!-- ✅ FIX: Home uses "/" -->
+      <li><a href="/">Home</a></li>
 
       <li><a href="about.html">About</a></li>
 
@@ -124,7 +139,8 @@
 
   <div style="max-width:1000px;margin:auto;text-align:center">
 
-    <h2>Client Testimonials</h2>
+    <!-- ✅ SEO: H1 -->
+    <h1>Client Testimonials</h1>
 
     <p style="opacity:.9;margin-top:12px">
 
@@ -488,46 +504,27 @@
 
     if (typeof window.nextTestimonial === "function" && typeof window.prevTestimonial === "function") return;
 
-
-
     const tEl = document.getElementById("testimonialText");
-
     const aEl = document.getElementById("testimonialAuthor");
-
     if (!tEl || !aEl) return;
 
-
-
     const data = window.KA_TESTIMONIALS || [
-
       { text: "Kamog Artistry elevated our brand presence beyond expectations.", author: "— Capsada Co. Ltd" },
-
       { text: "Their creativity and professionalism stand out.", author: "— Voltech Engineering Services" },
-
       { text: "From print to branding, the quality is outstanding.", author: "— TOOKE" }
-
     ];
-
-
 
     let i = 0;
 
     function render() {
-
       tEl.textContent = data[i].text;
-
       aEl.textContent = data[i].author;
-
     }
 
     window.nextTestimonial = function () { i = (i + 1) % data.length; render(); };
-
     window.prevTestimonial = function () { i = (i - 1 + data.length) % data.length; render(); };
 
-
-
     render();
-
     setInterval(window.nextTestimonial, 5000);
 
   })();
