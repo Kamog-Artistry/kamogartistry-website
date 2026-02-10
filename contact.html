@@ -43,7 +43,6 @@
   <meta property="og:title" content="Contact | Kamog Artistry (U) Ltd" />
   <meta property="og:description" content="Request a quote for branding, printing, signage and creative production. Reach us via WhatsApp, email, or the contact form." />
   <meta property="og:url" content="https://kamogartistry.com/contact.html" />
-  <!-- Replace with a real existing image if needed -->
   <meta property="og:image" content="https://kamogartistry.com/assets/img/hero/contact-cover.jpg" />
 
   <!-- ✅ Twitter -->
@@ -110,14 +109,16 @@
         </p>
 
         <form class="contact-form"
-              action="https://formsubmit.co/kamoga.artistry@gmail.com"
+              action="https://formsubmit.co/info@kamogartistry.com"
               method="POST">
 
           <!-- ✅ REMOVE: sales email (user request) -->
           <!-- <input type="hidden" name="_cc" value="sales@kamogartistry.com" /> -->
 
           <input type="hidden" name="_subject" value="New Website Inquiry — Kamog Artistry (U) Ltd" />
-          <input type="hidden" name="_next" value="contact.html?sent=1" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_next" value="https://kamogartistry.com/thank-you.html" />
+
 
           <!-- Spam protection -->
           <input type="text" name="_honey" style="display:none" />
@@ -225,7 +226,6 @@
     </div>
   </section>
 
-  <!-- ✅ FIXED FOOTER: your previous footer was broken/incomplete -->
   <footer class="footer">
     <div class="footer-wrap">
 
@@ -268,11 +268,9 @@
     </div>
   </footer>
 
-  <!-- Scripts (ONLY ONCE) -->
   <script src="assets/js/script.js" defer></script>
   <script src="assets/js/animations.js" defer></script>
 
-  <!-- show success message if ?sent=1 -->
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);

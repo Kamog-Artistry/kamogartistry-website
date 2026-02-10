@@ -14,6 +14,10 @@
     content="Read testimonials from clients who trusted Kamog Artistry (U) Ltd for branding, printing, signage, design, clean finishing, and reliable execution across Uganda." />
   <link rel="canonical" href="https://kamogartistry.com/testimonials.html" />
 
+  <!-- ✅ Indexing -->
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0b2230" />
+
   <!-- ✅ Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Testimonials | Kamog Artistry (U) Ltd" />
@@ -30,7 +34,10 @@
     content="Client feedback on design, printing, signage, clean finishing and reliable delivery across Uganda." />
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg" />
 
-  <!-- ✅ Schema -->
+  <!-- Optional preload for social/hero cover (safe even if browser ignores) -->
+  <link rel="preload" as="image" href="assets/img/hero/testimonials-cover.jpg" />
+
+  <!-- ✅ Schema: Web page + Organization (no fake ratings) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -46,11 +53,39 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Kamog Artistry (U) Ltd",
+    "url":"https://kamogartistry.com/",
+    "email":"info@kamogartistry.com",
+    "telephone":"+256775251445",
+    "sameAs":[
+      "https://www.facebook.com/611977605339985",
+      "https://www.instagram.com/kamog_artistry_u_ltd",
+      "https://www.linkedin.com/company/kamog-artistry-u-ltd",
+      "https://x.com/kamogartistry",
+      "https://www.tiktok.com/@kamogartistry",
+      "https://www.behance.net/kamogArtistry",
+      "https://www.threads.com/@kamog_artistry_u_ltd"
+    ]
+  }
+  </script>
+
   <!-- Root structure (current) -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Small page-only fixes (won't affect other pages) -->
   <style>
+    #toggleClientsBtn{
+  color:#0b2230 !important;
+}
+#toggleClientsBtn{
+  color:#0b2230 !important;
+  border: 1px solid rgba(11,34,48,.25) !important;
+}
+
 
     /* Safer: only apply offset when header is fixed (prevents odd gaps if header height changes) */
     @media (min-width: 768px){
@@ -80,6 +115,9 @@
       display:block;
       filter: none;
     }
+
+    /* Clients toggle */
+    .clients-more{ display:none; }
 
   </style>
 
@@ -148,6 +186,11 @@
 
       Here’s what clients say after working with Kamog Artistry (U) Ltd.
 
+    </p>
+
+    <!-- ✅ Added trust line -->
+    <p style="opacity:.75;margin-top:10px">
+      Reviews are collected from clients via WhatsApp and email after successful delivery/installation. Names may be shortened for privacy.
     </p>
 
 
@@ -274,7 +317,7 @@
 
     <h3 style="margin-bottom:20px">Trusted by Clients Across Industries</h3>
 
-    <p style="opacity:.85;max-width:700px;margin:0 auto 30px">
+    <p style="opacity:.85;max-width:700px;margin:0 auto 18px">
 
       We’ve worked with organizations and businesses across engineering, healthcare, education,
 
@@ -282,55 +325,92 @@
 
     </p>
 
+    <p style="opacity:.75;max-width:800px;margin:0 auto 26px">
+      Below is a selection of client brands we’ve supported through design, print, branding and signage production.
+    </p>
 
 
+    <!-- ✅ First 20 logos (visible) -->
     <div class="grid" style="max-width:1000px;margin:auto">
 
-      <div class="card client-logo-card">
+      <div class="card client-logo-card"><img src="assets/img/clients/01_Voltech.png" alt="Voltech" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/02_Tooke.png" alt="Tooke" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/03_MODVA.png" alt="MODVA" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/04_SBL.png" alt="SBL" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/05_EasyXport.png" alt="EasyXport" width="150" height="64" loading="lazy" decoding="async"></div>
 
-        <img src="assets/img/clients/voltech.png" alt="Voltech Engineering Services" loading="lazy" decoding="async" onerror="this.style.display='none'">
+      <div class="card client-logo-card"><img src="assets/img/clients/06_MOTMH.png" alt="MOTMH" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/07_Abundance.png" alt="Abundance" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/08_LMN.png" alt="LMN" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/08_ROKASTARS.png" alt="ROKASTARS" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/09_YABX.png" alt="YABX" width="150" height="64" loading="lazy" decoding="async"></div>
+
+      <div class="card client-logo-card"><img src="assets/img/clients/10.png" alt="Client 10" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/10_CAPSADA.png" alt="Capsada" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/10_LEGACY_FASHIONS.png" alt="Legacy Fashions" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/10_Nyanzo.png" alt="Nyanzo Service Station" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/10_Seeka_Energy.png" alt="Seeka Energy" width="150" height="64" loading="lazy" decoding="async"></div>
+
+      <div class="card client-logo-card"><img src="assets/img/clients/11_OWM.png" alt="OWM" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/12_Tann.png" alt="Tann" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/13_Netpark.png" alt="Netpark" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/13_NOZOTEK.png" alt="Nozotek" width="150" height="64" loading="lazy" decoding="async"></div>
+      <div class="card client-logo-card"><img src="assets/img/clients/14_PAPAN_SSD.png" alt="PAPAN SSD" width="150" height="64" loading="lazy" decoding="async"></div>
+
+    </div>
+
+    <!-- Toggle button -->
+    <div style="margin-top:18px">
+      <button id="toggleClientsBtn" class="btn-secondary" type="button">
+        Show all clients (50+)
+      </button>
+    </div>
+
+    <!-- ✅ Remaining 30 logos (hidden until toggle) -->
+    <div id="clientsMore" class="clients-more" style="margin-top:18px">
+      <div class="grid" style="max-width:1000px;margin:auto">
+
+        <div class="card client-logo-card"><img src="assets/img/clients/15_PK.png" alt="PK" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/16_KH.png" alt="KH" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/17_MG.png" alt="MG" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/18_All_Parents.png" alt="All Parents" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/19_RHSS.png" alt="RHSS" width="150" height="64" loading="lazy" decoding="async"></div>
+
+        <div class="card client-logo-card"><img src="assets/img/clients/20_Talisstar.png" alt="Talisstar" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/21_Hope_Ceremonials.png" alt="Hope Ceremonials" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/22_Al_Bashir.png" alt="Al Bashir" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/23_Chillzone.png" alt="Chillzone" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/24_wags.png" alt="Wags" width="150" height="64" loading="lazy" decoding="async"></div>
+
+        <div class="card client-logo-card"><img src="assets/img/clients/B_J_RESTAURANT.png" alt="B & J Restaurant" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/CHOSEN_BEAUTY_PARLOUR.png" alt="Chosen Beauty Parlour" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/CRANE_FILM.png" alt="Crane Film" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/Da_Wizzy-01.png" alt="Da Wizzy" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/DIVINE_&_Cakes.png" alt="Divine & Cakes" width="150" height="64" loading="lazy" decoding="async"></div>
+
+        <div class="card client-logo-card"><img src="assets/img/clients/GOK.png" alt="GOK" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/Kamp_Travel.png" alt="Kamp Travel" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/keem_logo.png" alt="Keem" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/Legacy_ushers.png" alt="Legacy Ushers" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/Luna_Collections.png" alt="Luna Collections" width="150" height="64" loading="lazy" decoding="async"></div>
+
+        <div class="card client-logo-card"><img src="assets/img/clients/MECHANLINK.png" alt="Mechanlink" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/MI_GADGETS_LOGO.png" alt="MI Gadgets" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/POWER_OF_HOLY_SPIRIT.png" alt="Power of Holy Spirit" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/RAM_COLLECTIONZ.png" alt="RAM Collectionz" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/RealArtist.png" alt="RealArtist" width="150" height="64" loading="lazy" decoding="async"></div>
+
+        <div class="card client-logo-card"><img src="assets/img/clients/SPENSA.png" alt="Spensa" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/STONE_PROMOTIONS.png" alt="Stone Promotions" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/Team_Kawumbi.png" alt="Team Kawumbi" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/The_Beauty_Sport.png" alt="The Beauty Sport" width="150" height="64" loading="lazy" decoding="async"></div>
+        <div class="card client-logo-card"><img src="assets/img/clients/THE_TAP.png" alt="The Tap" width="150" height="64" loading="lazy" decoding="async"></div>
 
       </div>
 
-
-
-      <div class="card client-logo-card">
-
-        <img src="assets/img/clients/ability-pharmacy.png" alt="Ability Pharmacy" loading="lazy" decoding="async" onerror="this.style.display='none'">
-
-      </div>
-
-
-
-      <div class="card client-logo-card">
-
-        <img src="assets/img/clients/royal-ice-cream.png" alt="Royal Ice Cream" loading="lazy" decoding="async" onerror="this.style.display='none'">
-
-      </div>
-
-
-
-      <div class="card client-logo-card">
-
-        <img src="assets/img/clients/birdc.png" alt="Banana Industrial Research & Development Centre" loading="lazy" decoding="async" onerror="this.style.display='none'">
-
-      </div>
-
-
-
-      <div class="card client-logo-card">
-
-        <img src="assets/img/clients/sme-client.png" alt="SME Client" loading="lazy" decoding="async" onerror="this.style.display='none'">
-
-      </div>
-
-
-
-      <div class="card client-logo-card">
-
-        <img src="assets/img/clients/NYANZO SERVICE STATION-01.png" alt="Nyanzo Service Station" loading="lazy" decoding="async" onerror="this.style.display='none'">
-
-      </div>
+      <p style="opacity:.7;margin-top:18px;max-width:800px;margin-left:auto;margin-right:auto">
+        Note: Client logos are shown for portfolio credibility. Some projects may be represented without naming for confidentiality.
+      </p>
 
     </div>
 
@@ -427,43 +507,36 @@
           <img src="assets/img/icons/whatsapp.svg" alt="" aria-hidden="true">
 
         </a>
-
         <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
 
           <img src="assets/img/icons/linkedin.svg" alt="" aria-hidden="true">
 
         </a>
-
         <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
 
           <img src="assets/img/icons/instagram.svg" alt="" aria-hidden="true">
 
         </a>
-
         <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
 
           <img src="assets/img/icons/tiktok.svg" alt="" aria-hidden="true">
 
         </a>
-
         <a class="social-btn" title="X" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">
 
           <img src="assets/img/icons/x.svg" alt="" aria-hidden="true">
 
         </a>
-
         <a class="social-btn" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">
 
           <img src="assets/img/icons/facebook.svg" alt="" aria-hidden="true">
 
         </a>
-
         <a class="social-btn" title="Behance" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">
 
           <img src="assets/img/icons/behance.svg" alt="" aria-hidden="true">
 
         </a>
-
         <a class="social-btn" title="Threads" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
 
           <img src="assets/img/icons/threads.svg" alt="" aria-hidden="true">
@@ -494,7 +567,20 @@
 
 <script src="assets/js/animations.js" defer></script>
 
+<!-- ✅ Clients toggle (small, safe, no dependencies) -->
+<script>
+  (function () {
+    var btn = document.getElementById("toggleClientsBtn");
+    var more = document.getElementById("clientsMore");
+    if (!btn || !more) return;
 
+    btn.addEventListener("click", function () {
+      var isOpen = more.style.display === "block";
+      more.style.display = isOpen ? "none" : "block";
+      btn.textContent = isOpen ? "Show all clients (50+)" : "Show fewer clients";
+    });
+  })();
+</script>
 
 <!-- Fallback carousel (ONLY runs if your functions aren't already defined) -->
 
@@ -522,7 +608,8 @@
     }
 
     window.nextTestimonial = function () { i = (i + 1) % data.length; render(); };
-    window.prevTestimonial = function () { i = (i - 1 + data.length) % data.length; render(); };
+window.prevTestimonial = function () { i = (i - 1 + data.length) % data.length; render(); };
+
 
     render();
     setInterval(window.nextTestimonial, 5000);
