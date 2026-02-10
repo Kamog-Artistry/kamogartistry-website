@@ -4,101 +4,195 @@
 
   <meta charset="UTF-8" />
   <title>Thank You | Kamog Artistry (U) Ltd</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO -->
-  <meta name="description" content="Thank you for contacting Kamog Artistry. We have received your message and will respond shortly." />
-  <link rel="canonical" href="https://kamogartistry.com/thank-you.html" />
+  <!-- SEO (light, not aggressive) -->
+  <meta name="description"
+    content="Thank you for contacting Kamog Artistry (U) Ltd. We have received your inquiry and will get back to you shortly." />
+  <meta name="robots" content="noindex, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Thank You | Kamog Artistry (U) Ltd" />
-  <meta property="og:description" content="Your message has been successfully sent. We’ll get back to you shortly." />
+  <meta property="og:description"
+    content="Your message has been successfully received by Kamog Artistry (U) Ltd." />
   <meta property="og:url" content="https://kamogartistry.com/thank-you.html" />
-  <meta property="og:image" content="https://kamogartistry.com/assets/img/hero/contact-cover.jpg" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Thank You | Kamog Artistry (U) Ltd" />
-  <meta name="twitter:description" content="Your message has been successfully sent." />
-  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/hero/contact-cover.jpg" />
 
   <!-- Site CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
 </head>
 
 <body>
 
-  <!-- HEADER (same as other pages) -->
-  <header class="header">
-    <nav class="nav">
-      <a href="/" aria-label="Go to homepage">
-        <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" />
+<!-- HEADER -->
+<header class="header">
+  <nav class="nav">
+
+    <a href="/" aria-label="Go to homepage">
+      <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Insights</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
+  </nav>
+</header>
+
+<!-- Spacer for fixed header -->
+<div style="height:95px"></div>
+
+<!-- THANK YOU CONTENT -->
+<section class="section animate">
+  <div style="max-width:900px;margin:auto;text-align:center">
+
+    <h1>Thank You for Contacting Us</h1>
+
+    <p style="margin-top:14px;opacity:.9">
+      Your message has been successfully received.
+      We appreciate you reaching out to <strong>Kamog Artistry (U) Ltd</strong>.
+    </p>
+
+    <p style="margin-top:10px;opacity:.85">
+      A member of our team will review your inquiry and get back to you as soon as possible.
+      If your request is urgent, you can contact us directly via WhatsApp.
+    </p>
+
+    <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-primary">
+        Chat on WhatsApp
       </a>
+      <a href="/" class="btn-secondary">
+        Back to Homepage
+      </a>
+    </div>
 
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+    <div style="margin-top:26px;opacity:.75">
+      📧 info@kamogartistry.com &nbsp; | &nbsp; 📞 +256 775 251 445
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-wrap">
+
+    <div class="footer-col">
+
+      <h4>Kamog Artistry (U) Ltd</h4>
+
+      <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
+
+
+      <div class="footer-badges">
+
+        <span class="badge">Branding</span>
+
+        <span class="badge">Print</span>
+
+        <span class="badge">Signage</span>
+
+        <span class="badge">Stationery</span>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="footer-col">
+
+      <h4>Contact</h4>
+
+      <ul class="footer-list">
+
+        <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
+
+        <li><a href="tel:+256775251445">+256 775 251 445</a></li>
+
+        <li>P.O. Box 201929, Kampala - Uganda</li>
+
       </ul>
-    </nav>
-  </header>
 
-  <div style="height:95px"></div>
 
-  <!-- MAIN CONTENT -->
-  <section class="section light animate">
-    <div class="card" style="max-width:650px;margin:60px auto;text-align:center">
+      <a class="footer-cta" href="contact.html">Contact Us</a>
 
-      <h1>Thank you! ✅</h1>
+    </div>
 
-      <p style="margin-top:14px;opacity:.85">
-        Your message has been successfully sent to our team.
-        We’ll review it and get back to you shortly.
-      </p>
 
-      <p style="margin-top:10px;opacity:.75">
-        For urgent inquiries, you may contact us directly on WhatsApp.
-      </p>
 
-      <div style="margin-top:22px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">
-          Chat on WhatsApp
+    <div class="footer-col">
+
+      <h4>Follow</h4>
+
+      <div class="social">
+
+        <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/256775251445" aria-label="WhatsApp">
+          <img src="assets/img/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" loading="lazy">
         </a>
-        <a class="btn-secondary" href="/">
-          Back to Home
+
+        <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
+          <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" width="20" height="20" loading="lazy">
         </a>
+
+        <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
+          <img src="assets/img/icons/tiktok.svg" alt="TikTok" width="20" height="20" loading="lazy">
+        </a>
+
+        <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
+          <img src="assets/img/icons/instagram.svg" alt="Instagram" width="20" height="20" loading="lazy">
+        </a>
+
+        <a class="social-btn" title="X" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">
+          <img src="assets/img/icons/x.svg" alt="X" width="20" height="20" loading="lazy">
+        </a>
+
+        <a class="social-btn" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">
+          <img src="assets/img/icons/facebook.svg" alt="Facebook" width="20" height="20" loading="lazy">
+        </a>
+
+        <a class="social-btn" title="Behance" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">
+          <img src="assets/img/icons/behance.svg" alt="Behance" width="20" height="20" loading="lazy">
+        </a>
+
+        <a class="social-btn" title="Threads" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
+          <img src="assets/img/icons/threads.svg" alt="Threads" width="20" height="20" loading="lazy">
+        </a>
+
       </div>
 
     </div>
-  </section>
 
-  <!-- FOOTER (same style as site) -->
-  <footer class="footer">
-    <div class="footer-wrap">
+  </div>
 
-      <div class="footer-col">
-        <h4>Kamog Artistry (U) Ltd</h4>
-        <p>Branding, printing, signage & creative production in Uganda.</p>
-      </div>
 
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul class="footer-list">
-          <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
-          <li><a href="tel:+256775251445">+256 775 251 445</a></li>
-        </ul>
-      </div>
 
-    </div>
+  <div class="footer-bottom">
 
-    <div class="footer-bottom">
-      <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
-    </div>
-  </footer>
+    <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
 
-  <script src="assets/js/animations.js" defer></script>
+  </div>
+
+</footer>
+
+
+<!-- Scripts -->
+<script src="assets/js/script.js" defer></script>
+<script src="assets/js/animations.js" defer></script>
 
 </body>
 </html>
