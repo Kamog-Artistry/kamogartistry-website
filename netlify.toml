@@ -32,3 +32,19 @@
       form-action 'self' https:;
       frame-ancestors 'none';
     """
+
+# ------------------------------------
+# Pretty URL for Services
+# 1) /services loads services.html (rewrite)
+# 2) /services.html permanently redirects to /services
+# ------------------------------------
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/services.html"
+  to = "/services"
+  status = 301
+  force = true
