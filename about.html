@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
   <meta charset="UTF-8" />
 
-  <!-- ✅ SEO: improved title (still matches your page intent) -->
+  <!-- ✅ SEO: improved title -->
   <title>About Kamog Artistry (U) Ltd | Branding, Printing & Signage in Kampala</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
   <!-- ✅ SEO: refined description -->
   <meta name="description"
     content="Kamog Artistry (U) Ltd is a Kampala-based creative branding and production company delivering design, printing, signage, stationery, packaging, promotional items, motion graphics, and fine arts across Kampala, Wakiso, Mukono and Uganda." />
 
-  <!-- ✅ SEO: canonical -->
+  <!-- ✅ Canonical (keep what your site already uses) -->
   <link rel="canonical" href="https://kamogartistry.com/about.html" />
 
   <!-- ✅ Social preview -->
@@ -33,657 +33,746 @@
     content="Creative branding and production in Kampala, Uganda — design, printing, signage, packaging, promotional items, motion graphics and fine arts." />
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/hero/about-cover.jpg" />
 
-  <!-- ✅ Schema (helps search + AI systems understand the business) -->
+  <!-- ✅ Schema: LocalBusiness (kept) + AboutPage + Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"Kamog Artistry (U) Ltd",
-    "url":"https://kamogartistry.com/",
-    "image":"https://kamogartistry.com/assets/img/brand/logo-white.svg",
-    "description":"Creative branding and production company in Uganda providing design, printing, signage, packaging, promotional items, motion graphics and fine arts.",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Kampala",
-      "addressCountry":"UG"
-    },
-    "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
-    "email":"info@kamogartistry.com",
-    "telephone":"+256775251445",
-    "sameAs":[
-      "https://www.linkedin.com/company/kamog-artistry-u-ltd",
-      "https://x.com/kamogartistry",
-      "https://www.facebook.com/611977605339985",
-      "https://www.behance.net/kamogArtistry",
-      "https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt",
-      "https://www.threads.com/@kamog_artistry_u_ltd",
-      "https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg=="
+    "@graph":[
+      {
+        "@type":"LocalBusiness",
+        "@id":"https://kamogartistry.com/#business",
+        "name":"Kamog Artistry (U) Ltd",
+        "url":"https://kamogartistry.com/",
+        "image":"https://kamogartistry.com/assets/img/brand/logo-white.svg",
+        "description":"Creative branding and production company in Uganda providing design, printing, signage, packaging, promotional items, motion graphics and fine arts.",
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Kampala",
+          "addressCountry":"UG"
+        },
+        "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
+        "email":"info@kamogartistry.com",
+        "telephone":"+256775251445",
+        "sameAs":[
+          "https://www.linkedin.com/company/kamog-artistry-u-ltd",
+          "https://x.com/kamogartistry",
+          "https://www.facebook.com/611977605339985",
+          "https://www.behance.net/kamogArtistry",
+          "https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt",
+          "https://www.threads.com/@kamog_artistry_u_ltd",
+          "https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg=="
+        ]
+      },
+      {
+        "@type":"AboutPage",
+        "@id":"https://kamogartistry.com/about.html#about",
+        "name":"About Kamog Artistry (U) Ltd",
+        "url":"https://kamogartistry.com/about.html",
+        "isPartOf":{
+          "@type":"WebSite",
+          "@id":"https://kamogartistry.com/#website",
+          "url":"https://kamogartistry.com/"
+        },
+        "about":{"@id":"https://kamogartistry.com/#business"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://kamogartistry.com/about.html#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://kamogartistry.com/"},
+          {"@type":"ListItem","position":2,"name":"About","item":"https://kamogartistry.com/about.html"}
+        ]
+      }
     ]
   }
   </script>
 
-  <!-- NEW structure -->
+  <!-- ✅ FAQ Schema (matches FAQ section below) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What does Kamog Artistry (U) Ltd do?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"We provide end-to-end branding and production: design, printing, signage fabrication and installation (where required), stationery, packaging and labels, promotional items, motion graphics and fine arts."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Which areas do you serve?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"We are based in Kampala and commonly serve Kampala, Wakiso and Mukono, with support for projects across Uganda depending on scope."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you handle design plus production?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We can manage design, proofing, production and delivery/installation so your brand stays consistent and timelines are smoother."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"How do you ensure quality?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"We follow proofing and approval steps before production, select appropriate materials (especially for outdoor work), and conduct quality checks on finishing before delivery or installation."
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- ✅ ABOUT PAGE SAFETY CSS (CLEAN + FIXED VARIABLES) -->
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* ✅ DEFINE brand variables (this was missing; caused links to look black) */
+    :root{
+      --km-blue: #2F6BFF;     /* brand blue */
+      --km-orange: #F39A2B;   /* brand orange */
+      --km-ink: #0B2233;      /* deep teal ink (not black) */
+    }
+
+    /* Quick links */
+    .about-quicklinks{
+      margin-top:14px;
+      opacity:.92;
+      line-height:1.9;
+      text-align:center;
+      padding:0 12px;
+    }
+    .about-quicklinks a,
+    .about-quicklinks a:visited{
+      color:inherit;
+      text-decoration:underline;
+      text-underline-offset:4px;
+      font-weight:700;
+    }
+    .about-quicklinks .dot{ opacity:.6; user-select:none; }
+
+    /* Case cards */
+    .case-link{ text-decoration:none; color:inherit; display:block; }
+    .case-link:hover{ transform:translateY(-2px); transition:transform .18s ease; }
+
+    /* FAQ base */
+    .faq-item{
+      padding:18px;
+      border-radius:16px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    /* Default link styling */
+    .hero a, .section a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 700;
+    }
+
+    /* Links on dark sections */
+    .hero a,
+    .section:not(.light) a {
+      color: rgba(190, 220, 255, 1) !important;
+    }
+
+    /* ✅ Card text on LIGHT sections (not black) */
+    .section.light .card,
+    .section.light .card h1, .section.light .card h2, .section.light .card h3, .section.light .card h4,
+    .section.light .card p, .section.light .card li, .section.light .card span, .section.light .card strong {
+      color: var(--km-ink) !important;
+    }
+
+    /* ✅ NORMAL TEXT LINKS on LIGHT sections (exclude buttons) */
+    .section.light a:not(.btn-primary):not(.btn-secondary),
+    .section.light a:not(.btn-primary):not(.btn-secondary):visited,
+    .section.light .card a:not(.btn-primary):not(.btn-secondary),
+    .section.light .card a:not(.btn-primary):not(.btn-secondary):visited,
+    .section.light .cta-card a:not(.btn-primary):not(.btn-secondary),
+    .section.light .cta-card a:not(.btn-primary):not(.btn-secondary):visited {
+      color: var(--km-blue) !important;
+      -webkit-text-fill-color: var(--km-blue) !important;
+    }
+
+    .section.light a:not(.btn-primary):not(.btn-secondary):hover,
+    .section.light .card a:not(.btn-primary):not(.btn-secondary):hover,
+    .section.light .cta-card a:not(.btn-primary):not(.btn-secondary):hover {
+      color: var(--km-orange) !important;
+      -webkit-text-fill-color: var(--km-orange) !important;
+    }
+
+    /* ✅ Featured Work cards: white cards inside dark section -> force readable ink */
+    a.card.case-link,
+    a.card.case-link h1, a.card.case-link h2, a.card.case-link h3, a.card.case-link h4,
+    a.card.case-link p, a.card.case-link li, a.card.case-link span, a.card.case-link strong {
+      color: var(--km-ink) !important;
+      text-decoration: none !important;
+    }
+
+    /* Buttons: remove underline */
+    .btn-primary,
+    .btn-secondary {
+      text-decoration: none !important;
+    }
+
+    /* ✅ Primary buttons always white text (everywhere) */
+    a.btn-primary,
+    a.btn-primary:visited,
+    a.btn-primary:hover,
+    a.btn-primary:active,
+    a.btn-primary *{
+      color:#ffffff !important;
+      -webkit-text-fill-color:#ffffff !important;
+    }
+
+    /* Secondary button: dark sections (glassy) */
+    .section:not(.light) .btn-secondary,
+    .hero .btn-secondary {
+      background: rgba(255, 255, 255, 0.10) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.22) !important;
+      backdrop-filter: blur(6px);
+    }
+
+    /* Secondary button: light sections (deep teal ink, not black) */
+    .section.light .btn-secondary {
+      background: rgba(11, 34, 51, 1) !important;
+      color: #ffffff !important;
+      border: none !important;
+    }
+  </style>
 
 </head>
 
-
-
 <body>
 
-
-<!-- Optional loader (kept but non-blocking by default) -->
-<div id="loader" style="display:none">
-  <img src="assets/img/brand/loader-logo.svg" alt="Loading">
-  <div class="loader-bar"></div>
-</div>
-
-
-
-<header class="header">
-
-  <nav class="nav">
-
-    <!-- ✅ FIX: homepage link consistency -->
-    <a href="/" aria-label="Go to homepage">
-
-      <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
-
-    </a>
-
-
-
-    <ul class="nav-links" id="navLinks">
-
-      <!-- ✅ FIX: homepage link consistency -->
-      <li><a href="/">Home</a></li>
-
-      <li><a href="about.html" aria-current="page">About</a></li>
-
-      <li><a href="services.html">Services</a></li>
-
-      <li><a href="portfolio.html">Portfolio</a></li>
-
-      <li><a href="blog.html">Insights</a></li>
-
-      <li><a href="testimonials.html">Testimonials</a></li>
-
-      <li><a href="contact.html">Contact</a></li>
-
-    </ul>
-
-
-
-    <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-
-  </nav>
-
-</header>
-
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-  <div class="hero-inner">
-
-    <div class="hero-badge">Kamog Artistry (U) Ltd • Kampala, Uganda</div>
-
-
-    <h1>About <span>Kamog Artistry</span></h1>
-
-    <p>
-      We help brands look professional everywhere—through clear design, quality printing, durable signage,
-      and consistent production across both digital and physical touchpoints.
-    </p>
-
-
-    <div class="hero-actions">
-
-      <a href="portfolio.html" class="btn-primary">View Portfolio</a>
-
-      <a href="contact.html" class="btn-secondary">Request a Quote</a>
-
-    </div>
-
-    <p style="opacity:.85;margin-top:12px">
-      Official registered business name: <strong>Kamog Artistry (U) Ltd</strong>.
-    </p>
-
-    <!-- ✅ NEW: service area (trust + local relevance; no personal exposure) -->
-    <p style="opacity:.85;margin-top:10px">
-      We primarily serve clients in <strong>Kampala</strong>, <strong>Wakiso</strong>, <strong>Mukono</strong>, and across <strong>Uganda</strong>.
-    </p>
-
-
-    <div class="hero-stats">
-
-      <div class="stat"><strong>End-to-End</strong><span>Design → Production → Delivery</span></div>
-
-      <div class="stat"><strong>Professional</strong><span>Proofing & Quality Control</span></div>
-
-      <div class="stat"><strong>Reliable</strong><span>Timelines & Execution</span></div>
-
-    </div>
-
+  <!-- Optional loader -->
+  <div id="loader" style="display:none">
+    <img src="assets/img/brand/loader-logo.svg" alt="Loading">
+    <div class="loader-bar"></div>
   </div>
 
-</section>
+  <header class="header">
+    <nav class="nav">
+      <a href="/" aria-label="Go to homepage">
+        <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
+      </a>
 
-
-
-<!-- STORY + IMAGE -->
-
-<section class="section light animate">
-
-  <div class="grid" style="align-items:center">
-
-    <div class="card">
-
-      <h2>Our Story</h2>
-
-      <p style="opacity:.88">
-        Kamog Artistry (U) Ltd was built to bridge the gap between strong ideas and clean execution.
-        Many brands need more than design—they need production-ready artwork, accurate print, durable signage,
-        and reliable delivery.
-      </p>
-
-      <p style="opacity:.88;margin-top:10px">
-        We serve SMEs, institutions, events, campaigns, and individuals with practical, modern, and consistent
-        branding—across both digital and physical touchpoints.
-      </p>
-
-      <p style="opacity:.88;margin-top:10px">
-        Our work spans brand identity, signage installation, promotional items (UV printing and laser engraving),
-        packaging/label design, motion graphics, and fine arts.
-      </p>
-
-
-      <a class="mini-link" href="portfolio.html">Explore our work →</a>
-
-    </div>
-
-
-
-    <div class="card" style="padding:0;overflow:hidden">
-
-      <img
-        src="assets/img/hero/about-cover.jpg"
-        alt="Kamog Artistry (U) Ltd — branding and production"
-        loading="lazy"
-        decoding="async"
-        style="width:100%;height:100%;max-height:380px;object-fit:cover;display:block"
-      >
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ✅ NEW: MANDATE & SCOPE (MEMARTS-aligned, human tone) -->
-<section class="section animate">
-  <h2>Our Mandate & Scope</h2>
-
-  <p style="opacity:.88">
-    Kamog Artistry (U) Ltd operates as a multidisciplinary creative branding and production company,
-    delivering visual communication solutions across print, digital, spatial, and artistic formats.
-  </p>
-
-  <p style="opacity:.88;margin-top:10px">
-    Our scope covers brand development, advertising and promotional materials, printing and finishing,
-    signage production and installation, packaging and labeling, motion graphics, fine arts,
-    promotional items, and related creative consultancy services.
-  </p>
-
-  <p style="opacity:.88;margin-top:10px">
-    This end-to-end approach enables us to support clients from concept development through production,
-    execution, and deployment—while keeping quality, consistency, and timelines in focus.
-  </p>
-</section>
-
-
-
-<!-- TRUST / SECTORS -->
-
-<section class="section animate">
-  <h2>Who We Serve</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>SMEs & Startups</h3>
-      <p style="opacity:.88;margin-top:10px">
-        Launch packs, rebrands, and consistent marketing materials that help small businesses look established.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Institutions & Organizations</h3>
-      <p style="opacity:.88;margin-top:10px">
-        Corporate-ready delivery—clear approvals, clean finishing, and reliable rollouts for repeat orders.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Events & Campaigns</h3>
-      <p style="opacity:.88;margin-top:10px">
-        Fast, coordinated production for posters, banners, backdrops, photo frames, and on-site setup.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- MISSION / VISION / VALUES (✅ KEPT EXACTLY, nothing removed) -->
-
-<section class="section animate">
-
-  <h2>Mission, Vision & Values</h2>
-
-
-  <div class="grid">
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">🎯</div>
-
-      <h3>Mission</h3>
-
-      <p style="opacity:.88;margin-top:10px">
-        To deliver high-quality, affordable, and creative branding and production solutions that help people
-        and businesses communicate clearly and grow confidently.
-      </p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">👁️</div>
-
-      <h3>Vision</h3>
-
-      <p style="opacity:.88;margin-top:10px">
-        To become a trusted creative partner in Uganda and East Africa for design, printing, signage,
-        stationery, motion graphics, packaging, promotional items, and fine arts.
-      </p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">💡</div>
-
-      <h3>Values</h3>
-
-      <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.88">
-
-        <li>Quality craftsmanship</li>
-
-        <li>Integrity & transparency</li>
-
-        <li>Client-first service</li>
-
-        <li>Creativity with purpose</li>
-
-        <li>Reliable turnaround</li>
-
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Insights</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
-    </div>
+      <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+    </nav>
+  </header>
 
-  </div>
 
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
 
+      <div class="hero-badge">Kamog Artistry (U) Ltd • Kampala, Uganda</div>
 
+      <h1>About <span>Kamog Artistry</span></h1>
 
-<!-- UPDATED CAPABILITIES (MATCHES PORTFOLIO FILTERS) (✅ KEPT ALL CARDS) -->
-
-<section class="section light animate">
-
-  <h2>What We Do</h2>
-
-
-  <div class="grid">
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">✦</div>
-
-      <h3>Branding & Identity</h3>
-
-      <p>Logo design, brand kits, guidelines, business profiles, and brand systems for SMEs and institutions.</p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">⎙</div>
-
-      <h3>Printing & Finishing</h3>
-
-      <p>Flyers, brochures, posters, business cards, stickers, binding, lamination, and premium finishing.</p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">▣</div>
-
-      <h3>Signage & Installation</h3>
-
-      <p>Indoor/outdoor signage, wall branding, office/shop branding, event branding, and installation support.</p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">▤</div>
-
-      <h3>Packaging & Labels</h3>
-
-      <p>Product label design, mockups, final labels, and supporting promo flyers for brands like herbal products.</p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">★</div>
-
-      <h3>Promotional Items & Gifts</h3>
-
-      <p>Mugs, bottles, shirts, jumpers, pillows, notebooks, pens — UV printing and laser engraving where required.</p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">▶</div>
-
-      <h3>Motion Graphics</h3>
-
-      <p>After Effects motion designs for promotions, greetings, anniversaries, birthdays, campaigns, and seasons.</p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">🎨</div>
-
-      <h3>Fine Arts</h3>
-
-      <p>Traditional painting and custom art — prepared, dried, and finished with protective coats where needed.</p>
-
-    </div>
-
-
-    <div class="card feature-card">
-
-      <div class="icon" aria-hidden="true">▦</div>
-
-      <h3>Campaign & Event Production</h3>
-
-      <p>Event branding, photo frames, foamboard vinyl application, banners, pull-ups, and on-site setup.</p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ✅ NEW: CAPABILITIES & RESOURCES (adds authority; doesn’t remove anything) -->
-<section class="section light animate">
-  <h2>Capabilities & Resources</h2>
-
-  <p style="opacity:.88">
-    We combine creative expertise with production coordination and modern tools to ensure accuracy,
-    durability, and consistency across deliverables—especially where your brand is publicly visible.
-  </p>
-
-  <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.88">
-    <li>Professional design and proofing workflows</li>
-    <li>Large-format and finishing coordination based on project needs</li>
-    <li>Signage fabrication, mounting, and installation support</li>
-    <li>Appropriate materials selection for indoor vs outdoor durability</li>
-    <li>Quality control checks before delivery or installation</li>
-  </ul>
-</section>
-
-
-<!-- ✅ NEW: PARTNERSHIPS & INSTITUTIONAL ENGAGEMENT (MEMARTS-aligned, no personal details) -->
-<section class="section animate">
-  <h2>Partnerships & Institutional Engagement</h2>
-
-  <p style="opacity:.88">
-    We are structured to collaborate with institutions, organizations, agencies, and partner entities on creative,
-    branding, and production initiatives.
-  </p>
-
-  <p style="opacity:.88;margin-top:10px">
-    Our work supports advertising campaigns, corporate branding, community initiatives, events, and long-term rollout
-    projects that require coordination, documentation, and consistency.
-  </p>
-</section>
-
-
-<!-- ✅ NEW: CREATIVE DEVELOPMENT (kept short and safe) -->
-<section class="section light animate">
-  <h2>Creative Development & Knowledge Sharing</h2>
-
-  <p style="opacity:.88">
-    As part of our broader vision, we support skills development through mentorship, workshops,
-    and collaborative learning initiatives when opportunities arise.
-  </p>
-</section>
-
-
-
-<!-- HOW WE WORK (✅ KEPT) -->
-
-<section class="section animate">
-
-  <h2>How We Work</h2>
-
-
-  <div class="grid">
-
-    <div class="card">
-
-      <h3>1) Discovery</h3>
-
-      <p style="opacity:.88;margin-top:10px">
-        You share your goal, deadline, and budget range. We recommend the best options and materials.
+      <p>
+        We help brands look professional everywhere—through clear design, quality printing, durable signage,
+        and consistent production across both digital and physical touchpoints.
       </p>
 
-    </div>
+      <div class="hero-actions">
+        <a href="portfolio.html" class="btn-primary">View Portfolio</a>
+        <a href="contact.html" class="btn-secondary">Request a Quote</a>
+      </div>
 
-
-    <div class="card">
-
-      <h3>2) Proofing</h3>
-
-      <p style="opacity:.88;margin-top:10px">
-        We share mockups and proofs for approval before production. This reduces errors and ensures accuracy.
+      <p style="opacity:.85;margin-top:12px">
+        Official registered business name: <strong>Kamog Artistry (U) Ltd</strong>.
       </p>
 
-    </div>
-
-
-    <div class="card">
-
-      <h3>3) Production</h3>
-
-      <p style="opacity:.88;margin-top:10px">
-        We produce with quality control for color, finishing, durability, and alignment.
+      <p style="opacity:.85;margin-top:10px">
+        We primarily serve clients in <strong>Kampala</strong>, <strong>Wakiso</strong>, <strong>Mukono</strong>, and across <strong>Uganda</strong>.
       </p>
 
-    </div>
-
-
-    <div class="card">
-
-      <h3>4) Delivery / Installation</h3>
-
-      <p style="opacity:.88;margin-top:10px">
-        We deliver, set up, and install where required—especially for signage and event branding.
+      <p class="about-quicklinks">
+        Quick links:
+        <a href="/services">Services</a>
+        <span class="dot">•</span>
+        <a href="portfolio.html">Case Studies</a>
+        <span class="dot">•</span>
+        <a href="blog.html">Insights</a>
+        <span class="dot">•</span>
+        <a href="contact.html">Contact</a>
       </p>
 
+      <div class="hero-stats">
+        <div class="stat"><strong>End-to-End</strong><span>Design → Production → Delivery</span></div>
+        <div class="stat"><strong>Professional</strong><span>Proofing & Quality Control</span></div>
+        <div class="stat"><strong>Reliable</strong><span>Timelines & Execution</span></div>
+      </div>
+
     </div>
-
-  </div>
-
-</section>
+  </section>
 
 
+  <!-- STORY + IMAGE -->
+  <section class="section light animate">
+    <div class="grid" style="align-items:center">
 
-<!-- CTA (✅ KEPT) -->
+      <div class="card">
+        <h2>Our Story</h2>
 
-<section class="section light animate" style="padding-top:50px">
+        <p style="opacity:.88">
+          Kamog Artistry (U) Ltd was built to bridge the gap between strong ideas and clean execution.
+          Many brands need more than design—they need production-ready artwork, accurate print, durable signage,
+          and reliable delivery.
+        </p>
 
-  <div class="card cta-card">
+        <p style="opacity:.88;margin-top:10px">
+          We serve SMEs, institutions, events, campaigns, and individuals with practical, modern, and consistent
+          branding—across both digital and physical touchpoints.
+        </p>
 
-    <h2 style="margin-bottom:10px">Let’s build something outstanding.</h2>
+        <p style="opacity:.88;margin-top:10px">
+          Our work spans brand identity, signage installation, promotional items (UV printing and laser engraving),
+          packaging/label design, motion graphics, and fine arts.
+        </p>
 
-    <p style="opacity:.88;margin-bottom:18px">
-      Tell us what you need—branding, printing, signage, packaging, promotional items, motion graphics, or fine arts.
+        <p style="opacity:.88;margin-top:10px">
+          If you want a single team to handle <strong>branding + print + signage</strong> (instead of juggling suppliers),
+          you’re in the right place.
+        </p>
+
+        <a class="mini-link" href="portfolio.html">Explore our work →</a>
+      </div>
+
+      <div class="card" style="padding:0;overflow:hidden">
+        <img src="assets/img/hero/about-cover.jpg" alt="Kamog Artistry (U) Ltd — branding and production" loading="lazy"
+          decoding="async" style="width:100%;height:100%;max-height:380px;object-fit:cover;display:block">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- MANDATE & SCOPE -->
+  <section class="section animate">
+    <h2>Our Mandate & Scope</h2>
+
+    <p style="opacity:.88">
+      Kamog Artistry (U) Ltd operates as a multidisciplinary creative branding and production company,
+      delivering visual communication solutions across print, digital, spatial, and artistic formats.
     </p>
 
+    <p style="opacity:.88;margin-top:10px">
+      Our scope covers brand development, advertising and promotional materials, printing and finishing,
+      signage production and installation, packaging and labeling, motion graphics, fine arts,
+      promotional items, and related creative consultancy services.
+    </p>
 
-    <div class="hero-actions">
+    <p style="opacity:.88;margin-top:10px">
+      This end-to-end approach enables us to support clients from concept development through production,
+      execution, and deployment—while keeping quality, consistency, and timelines in focus.
+    </p>
 
-      <a href="contact.html" class="btn-primary">Send Inquiry</a>
+    <p style="opacity:.88;margin-top:12px">
+      Explore our <a href="/services">services</a>, browse <a href="portfolio.html">case studies</a>, or reach out via <a
+        href="contact.html">contact</a>.
+    </p>
+  </section>
 
-      <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
 
+  <!-- NEW: WHY WE ARE DIFFERENT (E-E-A-T) -->
+  <section class="section light animate">
+    <h2>What Makes Our Work Different</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>We design for production</h3>
+        <p style="opacity:.88;margin-top:10px">
+          Our designs are built for real-world output: correct sizes, print-ready files, neat finishing, and signage visibility.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>We protect consistency</h3>
+        <p style="opacity:.88;margin-top:10px">
+          Whether it’s a signboard, business cards, packaging or office branding, we keep your brand consistent across every touchpoint.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>We coordinate end-to-end</h3>
+        <p style="opacity:.88;margin-top:10px">
+          From proofing to production and installation (where needed), we reduce delays and deliver with clear timelines.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TRUST / SECTORS -->
+  <section class="section animate">
+    <h2>Who We Serve</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>SMEs & Startups</h3>
+        <p style="opacity:.88;margin-top:10px">
+          Launch packs, rebrands, and consistent marketing materials that help small businesses look established.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Institutions & Organizations</h3>
+        <p style="opacity:.88;margin-top:10px">
+          Corporate-ready delivery—clear approvals, clean finishing, and reliable rollouts for repeat orders.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Events & Campaigns</h3>
+        <p style="opacity:.88;margin-top:10px">
+          Fast, coordinated production for posters, banners, backdrops, photo frames, and on-site setup.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MISSION / VISION / VALUES -->
+  <section class="section animate">
+    <h2>Mission, Vision & Values</h2>
+
+    <div class="grid">
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">🎯</div>
+        <h3>Mission</h3>
+        <p style="opacity:.88;margin-top:10px">
+          To deliver high-quality, affordable, and creative branding and production solutions that help people
+          and businesses communicate clearly and grow confidently.
+        </p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">👁️</div>
+        <h3>Vision</h3>
+        <p style="opacity:.88;margin-top:10px">
+          To become a trusted creative partner in Uganda and East Africa for design, printing, signage,
+          stationery, motion graphics, packaging, promotional items, and fine arts.
+        </p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">💡</div>
+        <h3>Values</h3>
+        <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.88">
+          <li>Quality craftsmanship</li>
+          <li>Integrity & transparency</li>
+          <li>Client-first service</li>
+          <li>Creativity with purpose</li>
+          <li>Reliable turnaround</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CAPABILITIES -->
+  <section class="section light animate">
+    <h2>What We Do</h2>
+
+    <div class="grid">
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">✦</div>
+        <h3>Branding & Identity</h3>
+        <p>Logo design, brand kits, guidelines, business profiles, and brand systems for SMEs and institutions.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">⎙</div>
+        <h3>Printing & Finishing</h3>
+        <p>Flyers, brochures, posters, business cards, stickers, binding, lamination, and premium finishing.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">▣</div>
+        <h3>Signage & Installation</h3>
+        <p>Indoor/outdoor signage, wall branding, office/shop branding, event branding, and installation support.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">▤</div>
+        <h3>Packaging & Labels</h3>
+        <p>Product label design, mockups, final labels, and supporting promo flyers for brands like herbal products.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">★</div>
+        <h3>Promotional Items & Gifts</h3>
+        <p>Mugs, bottles, shirts, jumpers, pillows, notebooks, pens — UV printing and laser engraving where required.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">▶</div>
+        <h3>Motion Graphics</h3>
+        <p>After Effects motion designs for promotions, greetings, anniversaries, birthdays, campaigns, and seasons.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">🎨</div>
+        <h3>Fine Arts</h3>
+        <p>Traditional painting and custom art — prepared, dried, and finished with protective coats where needed.</p>
+      </div>
+
+      <div class="card feature-card">
+        <div class="icon" aria-hidden="true">▦</div>
+        <h3>Campaign & Event Production</h3>
+        <p>Event branding, photo frames, foamboard vinyl application, banners, pull-ups, and on-site setup.</p>
+      </div>
     </div>
 
-  </div>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-  <div class="footer-wrap">
-
-    <div class="footer-col">
-
-      <h4>Kamog Artistry (U) Ltd</h4>
-
-      <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
+    <div style="text-align:center;margin-top:18px">
+      <a class="btn-primary" href="/services">Explore Services</a>
+      <a class="btn-secondary" href="contact.html" style="margin-left:8px">Request a Quote</a>
+    </div>
+  </section>
 
 
-      <div class="footer-badges">
+  <!-- FEATURED CASE STUDIES -->
+  <section class="section animate">
+    <h2>Featured Work (Case Studies)</h2>
+    <p style="opacity:.88;max-width:980px;margin:0 auto 16px;text-align:center">
+      A few projects that show our range in branding, print production and signage. Click to view the related case study.
+    </p>
 
-        <span class="badge">Branding</span>
+    <div class="grid" style="max-width:1000px;margin:auto">
+      <a class="card case-link" href="/portfolio/voltech-branding">
+        <h3 style="margin:0 0 8px">Voltech Branding</h3>
+        <p style="opacity:.88;margin:0">Brand identity + production support for consistent presentation.</p>
+        <p style="opacity:.8;margin-top:10px"><strong>View case study →</strong></p>
+      </a>
 
-        <span class="badge">Print</span>
+      <a class="card case-link" href="/portfolio/tooke-birdc-uma-2025">
+        <h3 style="margin:0 0 8px">TOOKE – BIRDC (UMA 2025)</h3>
+        <p style="opacity:.88;margin:0">Event branding + production rollout support.</p>
+        <p style="opacity:.8;margin-top:10px"><strong>View case study →</strong></p>
+      </a>
 
-        <span class="badge">Signage</span>
+      <a class="card case-link" href="/portfolio/mountains-of-the-moon-tourism">
+        <h3 style="margin:0 0 8px">Mountains of the Moon Hotel</h3>
+        <p style="opacity:.88;margin:0">Brand presentation for hospitality.</p>
+        <p style="opacity:.8;margin-top:10px"><strong>View case study →</strong></p>
+      </a>
 
-        <span class="badge">Stationery</span>
+      <a class="card case-link" href="/portfolio/ability-pharmacy">
+        <h3 style="margin:0 0 8px">Ability Pharmacy</h3>
+        <p style="opacity:.88;margin:0">Print + branded materials for customer-facing presentation.</p>
+        <p style="opacity:.8;margin-top:10px"><strong>View case study →</strong></p>
+      </a>
+    </div>
 
+    <div style="text-align:center;margin-top:18px">
+      <a class="btn-secondary" href="portfolio.html">Browse All Work</a>
+    </div>
+  </section>
+
+
+  <!-- HOW WE WORK -->
+  <section class="section animate">
+    <h2>How We Work</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1) Discovery</h3>
+        <p style="opacity:.88;margin-top:10px">
+          You share your goal, deadline, and budget range. We recommend the best options and materials.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>2) Proofing</h3>
+        <p style="opacity:.88;margin-top:10px">
+          We share mockups and proofs for approval before production. This reduces errors and ensures accuracy.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>3) Production</h3>
+        <p style="opacity:.88;margin-top:10px">
+          We produce with quality control for color, finishing, durability, and alignment.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>4) Delivery / Installation</h3>
+        <p style="opacity:.88;margin-top:10px">
+          We deliver, set up, and install where required—especially for signage and event branding.
+        </p>
+      </div>
+    </div>
+
+    <p style="opacity:.86;text-align:center;margin-top:14px">
+      For more details, explore <a href="/services">services</a> or read practical guides on <a href="blog.html">Insights</a>.
+    </p>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section light animate" id="faq">
+    <h2 style="text-align:center">FAQ</h2>
+    <p style="opacity:.88;text-align:center;max-width:900px;margin:0 auto 16px">
+      A few quick answers to common questions clients ask when learning about Kamog Artistry (U) Ltd.
+    </p>
+
+    <div class="grid" style="max-width:1000px;margin:auto">
+      <div class="faq-item">
+        <h3>What does Kamog Artistry (U) Ltd do?</h3>
+        <p>
+          We provide end-to-end branding and production: design, printing, signage fabrication and installation (where required), stationery,
+          packaging and labels, promotional items, motion graphics and fine arts.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Which areas do you serve?</h3>
+        <p>
+          We are based in Kampala and commonly serve Kampala, Wakiso and Mukono, with support for projects across Uganda depending on scope.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you handle design plus production?</h3>
+        <p>
+          Yes. We can manage design, proofing, production and delivery/installation so your brand stays consistent and timelines are smoother.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do you ensure quality?</h3>
+        <p>
+          We follow proofing and approval steps before production, select appropriate materials (especially for outdoor work),
+          and conduct quality checks on finishing before delivery or installation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="section light animate" style="padding-top:50px">
+    <div class="card cta-card">
+      <h2 style="margin-bottom:10px">Let’s build something outstanding.</h2>
+      <p style="opacity:.88;margin-bottom:18px">
+        Tell us what you need—branding, printing, signage, packaging, promotional items, motion graphics, or fine arts.
+      </p>
+
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Send Inquiry</a>
+        <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
+      </div>
+
+      <p style="opacity:.82;margin-top:14px">
+        Prefer to browse first? Start with <a href="portfolio.html">case studies</a>, then visit <a href="/services">services</a>.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wrap">
+
+      <div class="footer-col">
+        <h4>Kamog Artistry (U) Ltd</h4>
+        <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
+
+        <div class="footer-badges">
+          <span class="badge">Branding</span>
+          <span class="badge">Print</span>
+          <span class="badge">Signage</span>
+          <span class="badge">Stationery</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-list">
+          <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
+          <li><a href="tel:+256775251445">+256 775 251 445</a></li>
+          <li>P.O. Box 201929, Kampala - Uganda</li>
+        </ul>
+        <a class="footer-cta" href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow</h4>
+
+        <div class="social">
+          <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener"
+            href="https://wa.me/256775251445" aria-label="WhatsApp">
+            <img src="assets/img/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" loading="lazy">
+          </a>
+
+          <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener"
+            href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
+            <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" width="20" height="20" loading="lazy">
+          </a>
+
+          <a class="social-btn" title="TikTok" target="_blank" rel="noopener"
+            href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
+            <img src="assets/img/icons/tiktok.svg" alt="TikTok" width="20" height="20" loading="lazy">
+          </a>
+
+          <a class="social-btn" title="Instagram" target="_blank" rel="noopener"
+            href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
+            <img src="assets/img/icons/instagram.svg" alt="Instagram" width="20" height="20" loading="lazy">
+          </a>
+
+          <a class="social-btn" title="X" target="_blank" rel="noopener"
+            href="https://x.com/kamogartistry" aria-label="X">
+            <img src="assets/img/icons/x.svg" alt="X" width="20" height="20" loading="lazy">
+          </a>
+
+          <a class="social-btn" title="Facebook" target="_blank" rel="noopener"
+            href="https://www.facebook.com/611977605339985" aria-label="Facebook">
+            <img src="assets/img/icons/facebook.svg" alt="Facebook" width="20" height="20" loading="lazy">
+          </a>
+
+          <a class="social-btn" title="Behance" target="_blank" rel="noopener"
+            href="https://www.behance.net/kamogArtistry" aria-label="Behance">
+            <img src="assets/img/icons/behance.svg" alt="Behance" width="20" height="20" loading="lazy">
+          </a>
+
+          <a class="social-btn" title="Threads" target="_blank" rel="noopener"
+            href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
+            <img src="assets/img/icons/threads.svg" alt="Threads" width="20" height="20" loading="lazy">
+          </a>
+        </div>
       </div>
 
     </div>
 
-
-
-    <div class="footer-col">
-
-      <h4>Contact</h4>
-
-      <ul class="footer-list">
-
-        <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
-
-        <li><a href="tel:+256775251445">+256 775 251 445</a></li>
-
-        <li>P.O. Box 201929, Kampala - Uganda</li>
-
-      </ul>
-
-
-      <a class="footer-cta" href="contact.html">Contact Us</a>
-
+    <div class="footer-bottom">
+      <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
     </div>
+  </footer>
 
-
-
-    <div class="footer-col">
-
-      <h4>Follow</h4>
-
-      <div class="social">
-
-        <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/256775251445" aria-label="WhatsApp">
-          <img src="assets/img/icons/whatsapp.svg" alt="WhatsApp" width="20" height="20" loading="lazy">
-        </a>
-
-        <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
-          <img src="assets/img/icons/linkedin.svg" alt="LinkedIn" width="20" height="20" loading="lazy">
-        </a>
-
-        <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt" aria-label="TikTok">
-          <img src="assets/img/icons/tiktok.svg" alt="TikTok" width="20" height="20" loading="lazy">
-        </a>
-
-        <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
-          <img src="assets/img/icons/instagram.svg" alt="Instagram" width="20" height="20" loading="lazy">
-        </a>
-
-        <a class="social-btn" title="X" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">
-          <img src="assets/img/icons/x.svg" alt="X" width="20" height="20" loading="lazy">
-        </a>
-
-        <a class="social-btn" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">
-          <img src="assets/img/icons/facebook.svg" alt="Facebook" width="20" height="20" loading="lazy">
-        </a>
-
-        <a class="social-btn" title="Behance" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">
-          <img src="assets/img/icons/behance.svg" alt="Behance" width="20" height="20" loading="lazy">
-        </a>
-
-        <a class="social-btn" title="Threads" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
-          <img src="assets/img/icons/threads.svg" alt="Threads" width="20" height="20" loading="lazy">
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="footer-bottom">
-
-    <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
-
-  </div>
-
-</footer>
-
-
-
-<script src="assets/js/script.js" defer></script>
-
-<script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
 
 </body>
 
