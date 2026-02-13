@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
 
   <!-- ✅ Dynamic canonical + meta (filled by JS below) -->
   <link rel="canonical" href="https://kamogartistry.com/post.html" id="canonicalLink">
 
   <meta name="description" content="Kamog Artistry insights and articles." id="metaDescription">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0b6fbf">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Kamog Artistry (U) Ltd">
@@ -21,11 +25,9 @@
 
   <script type="application/ld+json" id="articleSchema"></script>
 
-  <meta charset="UTF-8" />
   <title>Article | Kamog Artistry (U) Ltd</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Root structure -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <!-- Markdown parser -->
@@ -33,11 +35,49 @@
 
   <!-- Page-only improvements -->
   <style>
+    :root{
+      --km-blue:#0b6fbf;
+      --km-orange:#f28c28;
+      --km-ink:#08354a;
+    }
+
     @media (min-width: 768px){
       body { padding-top: 95px; }
     }
 
-    .article-card h1{ margin-top:0; }
+    html { scroll-behavior: smooth; }
+
+    /* Skip link */
+    .skip-link{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus{
+      left:12px; top:12px; width:auto; height:auto; padding:10px 12px;
+      background:#fff; color:var(--km-ink); border-radius:10px; z-index:9999;
+      box-shadow:0 10px 22px rgba(0,0,0,.18);
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs{
+      opacity:.9;
+      font-size:.95rem;
+      margin: 0 0 10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+    }
+    .breadcrumbs a{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 900;
+      color: var(--km-blue);
+      -webkit-text-fill-color: var(--km-blue);
+    }
+    .breadcrumbs .sep{ opacity:.65; user-select:none; }
+
+    /* Article typography */
+    .article-card h1{ margin-top:0; line-height:1.2; }
     .article-card h2{ margin-top:28px; }
     .article-card h3{ margin-top:22px; }
     .article-card p{ line-height:1.85; }
@@ -74,14 +114,63 @@
       display: block;
       margin: 14px 0;
     }
+
+    /* ToC */
+    .toc{
+      border: 1px solid rgba(0,0,0,.10);
+      background: rgba(0,0,0,.02);
+      border-radius: 16px;
+      padding: 14px 14px;
+      margin: 14px 0 18px;
+    }
+    .toc h3{ margin:0 0 8px; font-size:1.05rem; }
+    .toc a{
+      display:block;
+      padding: 6px 0;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--km-blue);
+    }
+    .toc a:hover{ color: var(--km-orange); }
+
+    /* Buttons safety */
+    .btn-primary, .btn-secondary{ text-decoration:none !important; }
+    .btn-primary, .btn-primary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
+    .btn-secondary, .btn-secondary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
+
+    /* Fix link visibility on white cards */
+    .section.light a:not(.btn-primary):not(.btn-secondary):not(.action-btn):not(.footer-cta):not(.social-btn){
+      color: var(--km-blue);
+      -webkit-text-fill-color: var(--km-blue);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 800;
+    }
+    .section.light a:not(.btn-primary):not(.btn-secondary):not(.action-btn):not(.footer-cta):not(.social-btn):hover{
+      color: var(--km-orange);
+      -webkit-text-fill-color: var(--km-orange);
+    }
+
+    /* Footer links */
+    .footer a, .footer a:visited{ color:#ffffff !important; }
+    .footer a:not(.footer-cta):not(.social-btn),
+    .footer a:not(.footer-cta):not(.social-btn):visited{ text-decoration:none !important; opacity:.95; }
+    .footer a:not(.footer-cta):not(.social-btn):hover{
+      text-decoration: underline !important;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      opacity:.95;
+    }
+    .footer a.footer-cta, .footer a.footer-cta:visited{ text-decoration:none !important; }
   </style>
 </head>
 
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- ✅ HEADER (updated to your standard: includes Corporate) -->
 <header class="header">
   <nav class="nav">
-    <!-- ✅ FIX: use "/" -->
     <a href="/" aria-label="Go to homepage">
       <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd">
     </a>
@@ -93,6 +182,7 @@
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="blog.html">Insights</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="corporate-profile.html">Corporate</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
 
@@ -100,13 +190,24 @@
   </nav>
 </header>
 
+<main id="main">
 <section class="section light animate">
   <div style="max-width:1000px;margin:0 auto">
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <a href="blog.html">Insights</a>
+      <span class="sep">›</span>
+      <span id="crumbTitle" style="opacity:.92;font-weight:900">Article</span>
+    </div>
 
     <!-- Meta -->
     <div class="article-meta" style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:12px">
       <span id="readingTime" style="opacity:.8"></span>
       <span id="postDate" style="opacity:.8"></span>
+      <span id="postTags" style="opacity:.8"></span>
     </div>
 
     <!-- Actions -->
@@ -115,6 +216,25 @@
       <button class="action-btn" type="button" onclick="copyLink()">Copy Link</button>
       <button class="action-btn" type="button" onclick="window.print()">Print</button>
       <button class="action-btn" type="button" onclick="likeArticle()">👍 Like (<span id="likeCount">0</span>)</button>
+    </div>
+
+    <!-- Conversion strip -->
+    <div class="card" style="padding:16px;margin-bottom:14px">
+      <div style="display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <div style="min-width:240px">
+          <strong>Need branding, print or signage in Kampala?</strong>
+          <div style="opacity:.86;margin-top:6px">
+            Get a clean quote with timeline + finishing options.
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn-primary" href="contact.html">Request a Quote</a>
+          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <div style="opacity:.82;margin-top:10px">
+        Explore: <a href="services.html">Services</a> • <a href="portfolio.html">Portfolio</a> • <a href="corporate-profile.html">Corporate</a>
+      </div>
     </div>
 
     <!-- Article card -->
@@ -134,8 +254,27 @@
              margin-bottom:22px;
            ">
 
+      <!-- TOC -->
+      <div id="tocWrap" class="toc" style="display:none">
+        <h3>On this page</h3>
+        <div id="tocLinks"></div>
+      </div>
+
       <!-- ARTICLE CONTENT -->
       <article id="postContent"></article>
+
+      <!-- Bottom CTA -->
+      <div class="card" style="margin-top:18px;padding:16px;background:rgba(11,111,191,.06);border:1px solid rgba(11,111,191,.18)">
+        <h3 style="margin:0 0 8px">Want us to execute this for your business?</h3>
+        <p style="opacity:.88;margin:0 0 12px;line-height:1.8">
+          If you’re in Kampala / Uganda and you need clean branding, printing or signage execution, send your requirements and we’ll advise the best materials + finishing for your budget.
+        </p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn-primary" href="contact.html">Send Requirements</a>
+          <a class="btn-primary" href="services.html">Browse Services</a>
+          <a class="btn-primary" href="portfolio.html">See Case Studies</a>
+        </div>
+      </div>
     </div>
 
     <a href="blog.html" class="back-link" style="display:inline-block;margin-top:16px">← Back to Insights</a>
@@ -151,12 +290,14 @@
 
   </div>
 </section>
+</main>
 
+<!-- ✅ FOOTER (standard: Corporate + Compliance) -->
 <footer class="footer">
   <div class="footer-wrap">
     <div class="footer-col">
       <h4>Kamog Artistry (U) Ltd</h4>
-      <p>Branding, printing, signage, stationery & creative production in Kampala, Uganda.</p>
+      <p>Branding, printing, signage, stationery &amp; creative production in Kampala, Uganda.</p>
 
       <div class="footer-badges">
         <span class="badge">Branding</span>
@@ -164,6 +305,16 @@
         <span class="badge">Signage</span>
         <span class="badge">Stationery</span>
       </div>
+
+      <p style="opacity:.8;margin-top:12px">
+        Serving Kampala, Wakiso, Mukono and central Uganda.
+      </p>
+
+      <p style="opacity:.8;margin-top:10px">
+        <a href="corporate-profile.html">Corporate Profile</a>
+        <span style="opacity:.6"> • </span>
+        <a href="compliance.html">Compliance</a>
+      </p>
     </div>
 
     <div class="footer-col">
@@ -179,7 +330,6 @@
 
     <div class="footer-col">
       <h4>Follow</h4>
-
       <div class="social">
         <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener"
            href="https://wa.me/256775251445" aria-label="WhatsApp">
@@ -258,11 +408,10 @@
     return out;
   }
 
-  // Convert common date formats to ISO where possible (safe fallback)
   function toISODateMaybe(dateText) {
     if (!dateText) return "";
     const t = String(dateText).trim();
-    if (/^\d{4}-\d{2}-\d{2}/.test(t)) return t; // already ISO
+    if (/^\d{4}-\d{2}-\d{2}/.test(t)) return t;
     const d = new Date(t);
     if (!isNaN(d.getTime())) return d.toISOString().slice(0, 10);
     return "";
@@ -273,7 +422,37 @@
     const u = String(url).trim();
     if (/^https?:\/\//i.test(u)) return u;
     if (u.startsWith("/")) return window.location.origin + u;
-    return u; // relative like "assets/..." (kept)
+    return u; // relative like "assets/..."
+  }
+
+  function slugifyHeading(text) {
+    return String(text || "")
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "")
+      .trim()
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-");
+  }
+
+  function buildTOC(container) {
+    const headings = Array.from(container.querySelectorAll("h2, h3"));
+    if (!headings.length) return;
+
+    const tocWrap = document.getElementById("tocWrap");
+    const tocLinks = document.getElementById("tocLinks");
+    if (!tocWrap || !tocLinks) return;
+
+    tocLinks.innerHTML = "";
+
+    headings.forEach(h => {
+      if (!h.id) h.id = slugifyHeading(h.textContent || "");
+      const a = document.createElement("a");
+      a.href = "#" + h.id;
+      a.textContent = (h.tagName.toLowerCase() === "h3" ? "— " : "") + (h.textContent || "").trim();
+      tocLinks.appendChild(a);
+    });
+
+    tocWrap.style.display = "block";
   }
 
   function shareArticle() {
@@ -359,7 +538,7 @@
       // Render hero image
       let heroUrl = "";
       if (parsed.meta && parsed.meta.image) {
-        heroUrl = parsed.meta.image; // can be "/assets/..." (good)
+        heroUrl = parsed.meta.image;
         const hero = document.getElementById("postHero");
         hero.src = heroUrl;
         hero.alt = parsed.meta.title || "Article cover";
@@ -374,6 +553,7 @@
       const fmTitle = (parsed.meta && parsed.meta.title) ? String(parsed.meta.title).trim() : "";
       const titleText = h1 ? h1.textContent.trim() : (fmTitle || slug.replace(/-/g, " "));
       document.title = titleText + " | Kamog Artistry (U) Ltd";
+      setMeta("crumbTitle", titleText);
 
       // Reading time
       const plainText = postEl.textContent || "";
@@ -390,11 +570,15 @@
       }
       document.getElementById("postDate").textContent = dateText ? ("• " + dateText) : "";
 
+      // Tags (optional in front matter: tags:)
+      const tags = (parsed.meta && parsed.meta.tags) ? String(parsed.meta.tags).trim() : "";
+      document.getElementById("postTags").textContent = tags ? ("• " + tags) : "";
+
       // Build absolute URL for this post
       const postUrl = "https://kamogartistry.com/post.html?post=" + encodeURIComponent(slug);
       setMeta("canonicalLink", postUrl);
 
-      // Description: front-matter description/excerpt OR first 170 chars of text
+      // Description
       const fmDesc = (parsed.meta && (parsed.meta.description || parsed.meta.excerpt))
         ? String(parsed.meta.description || parsed.meta.excerpt).trim()
         : "";
@@ -442,6 +626,9 @@
       Object.keys(schema).forEach(k => schema[k] === undefined && delete schema[k]);
       setMeta("articleSchema", JSON.stringify(schema));
 
+      // Build TOC after render
+      buildTOC(postEl);
+
     } catch (err) {
       document.title = "Article Not Found | Kamog Artistry (U) Ltd";
       postEl.innerHTML =
@@ -454,7 +641,7 @@
   })();
 </script>
 
-<!-- Disqus (lazy load) -->
+<!-- ✅ Disqus (lazy load) -->
 <script>
   var disqus_config = function () {
     var slug = new URLSearchParams(window.location.search).get("post") || "static-article";
@@ -470,6 +657,7 @@
       loaded = true;
 
       var d = document, s = d.createElement("script");
+      /* ✅ FIXED: removed the double https:// */
       s.src = "https://https-kamogartistry-com.disqus.com/embed.js";
       s.setAttribute("data-timestamp", +new Date());
       (d.head || d.body).appendChild(s);
