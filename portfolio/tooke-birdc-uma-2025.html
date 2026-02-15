@@ -3,34 +3,63 @@
 <head>
   <meta charset="UTF-8" />
 
-  <title>TOOKE – BIRDC (UMA 2025 Trade Expo Branding) | Kampala | Kamog Artistry (U) Ltd</title>
+  <!-- ✅ PRIMARY SEO TITLE (clean, high intent, local) -->
+  <title>UMA 2025 Exhibition Branding in Kampala (TOOKE – BIRDC) | Case Study | Kamog Artistry (U) Ltd</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO -->
-  <meta name="description" content="TOOKE – BIRDC at UMA 2025 International Trade Expo (Lugogo, Kampala): exhibition branding, booth visuals, stand banners, large format prints, selfie frames, and on-site setup support by Kamog Artistry (U) Ltd." />
+  <!-- ✅ SEO -->
+  <meta name="description" content="Case study: TOOKE – BIRDC UMA 2025 exhibition branding at Lugogo (UMA Show Grounds), Kampala. We delivered canopy branding, stand banners in custom frames, large format booth visuals, selfie frames, production finishing, delivery and setup support." />
   <link rel="canonical" href="https://kamogartistry.com/portfolio/tooke-birdc-uma-2025" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="theme-color" content="#0b2230" />
+  <meta name="theme-color" content="#0b6fbf" />
 
-  <!-- Open Graph -->
+  <!-- ✅ Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="TOOKE – BIRDC (UMA 2025 Trade Expo Branding) | Kamog Artistry (U) Ltd" />
-  <meta property="og:description" content="Exhibition branding and print production for UMA 2025 (Lugogo, Kampala): canopy branding, banners, stand frames, selfie frames, and booth-ready visuals." />
+  <meta property="og:title" content="UMA 2025 Exhibition Branding in Kampala (TOOKE – BIRDC) | Kamog Artistry (U) Ltd" />
+  <meta property="og:description" content="Expo booth branding, large format prints, stand banners, selfie frames and setup support delivered for TOOKE – BIRDC at UMA 2025 (Lugogo, Kampala)." />
   <meta property="og:url" content="https://kamogartistry.com/portfolio/tooke-birdc-uma-2025" />
   <meta property="og:image" content="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/homecover.jpg" />
 
-  <!-- Twitter -->
+  <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TOOKE – BIRDC (UMA 2025 Trade Expo Branding)" />
-  <meta name="twitter:description" content="Expo booth branding, print assets and installation support delivered by Kamog Artistry (U) Ltd in Kampala." />
+  <meta name="twitter:title" content="UMA 2025 Exhibition Branding in Kampala (TOOKE – BIRDC)" />
+  <meta name="twitter:description" content="Trade show branding + production + setup support delivered by Kamog Artistry (U) Ltd at UMA Show Grounds, Lugogo (Kampala)." />
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/homecover.jpg" />
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- ✅ Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
-  <!-- Captions always visible (fix hover-only captions) -->
+  <!-- ✅ Minimal overrides: match index/portfolio behavior + keep captions visible + fix hero links -->
   <style>
-    .portfolio-preview { display:block; background:#ffffff; border-radius:18px; overflow:hidden; text-decoration:none; }
-    .portfolio-preview img { display:block; width:100%; height:auto; }
+    :root{
+      --km-blue:#0b6fbf;
+      --km-orange:#f28c28;
+      --km-ink:#08354a;
+    }
+
+    /* ✅ A11y skip link */
+    .skip-link{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus{
+      left:12px; top:12px; width:auto; height:auto; padding:10px 12px;
+      background:#fff; color:var(--km-ink); border-radius:10px; z-index:9999;
+      box-shadow:0 10px 22px rgba(0,0,0,.18);
+    }
+
+    img{ max-width:100%; height:auto; }
+
+    /* ✅ Portfolio preview cards (Gallery): captions always visible */
+    .portfolio-preview{
+      display:block;
+      background:#ffffff;
+      border-radius:18px;
+      overflow:hidden;
+      text-decoration:none !important;
+      color: inherit !important;
+    }
+    .portfolio-preview img{ display:block; width:100%; height:auto; }
     .portfolio-preview .pp-text{
       position: static !important;
       opacity: 1 !important;
@@ -40,11 +69,95 @@
       color: #0b2230;
       padding: 12px 14px;
     }
-    .portfolio-preview .pp-text strong{ display:block; font-weight:700; }
-    .portfolio-preview .pp-text span{ display:block; opacity:.85; margin-top:4px; line-height:1.35; }
+    .portfolio-preview .pp-text strong{ display:block; font-weight:800; }
+    .portfolio-preview .pp-text span{ display:block; opacity:.85; margin-top:4px; line-height:1.45; }
+
+    /* ✅ Buttons always readable (fix white-on-white issues) */
+    .btn-primary, .btn-primary *,
+    .btn-secondary, .btn-secondary *{
+      color:#ffffff !important;
+      text-decoration:none !important;
+    }
+    .section.light .btn-secondary{
+      background: var(--km-blue) !important;
+      border: 1px solid var(--km-blue) !important;
+    }
+
+    /* ✅ Prevent underlines on card links */
+    a.card, a.card *{ text-decoration:none !important; }
+    a.card:hover{ transform: translateY(-2px); transition: transform .2s ease; }
+
+    /* ✅ Video embed responsiveness */
+    .video-card{
+      padding:0;
+      overflow:hidden;
+    }
+    .video-embed{
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      background: #000;
+      border-radius:18px;
+    }
+    .video-embed iframe{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      border:0;
+    }
+
+    /* ✅ HERO related services links must ALWAYS be visible */
+    .hero .hero-quicklinks{
+      position: relative;
+      z-index: 3;
+      opacity: 1 !important;
+    }
+    .hero .hero-quicklinks,
+    .hero .hero-quicklinks .ql-label,
+    .hero .hero-quicklinks .dot{
+      color: rgba(255,255,255,.92) !important;
+    }
+    .hero .hero-quicklinks a,
+    .hero .hero-quicklinks a:visited{
+      color: #ffffff !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      font-weight: 800;
+    }
+    .hero .hero-quicklinks a:hover{ opacity: .9; }
+
+    /* ✅ Footer link behavior consistent */
+    .footer a, .footer a:visited{ color:#ffffff !important; }
+    .footer a:not(.footer-cta):not(.social-btn),
+    .footer a:not(.footer-cta):not(.social-btn):visited{ text-decoration:none !important; opacity:.95; }
+    .footer a:not(.footer-cta):not(.social-btn):hover{
+      text-decoration: underline !important;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      opacity:.95;
+    }
+    .footer a.footer-cta, .footer a.footer-cta:visited{ text-decoration:none !important; }
+
+    /* ✅ Bottom navigation row */
+    .case-nav{
+      max-width: 1100px;
+      margin: 0 auto;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .case-nav .left,
+    .case-nav .right{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
   </style>
 
-  <!-- Schema: Breadcrumbs -->
+  <!-- ✅ Schema: Breadcrumbs -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -57,28 +170,21 @@
   }
   </script>
 
-  <!-- Schema: Project / CreativeWork -->
+  <!-- ✅ Schema: Case Study (CreativeWork) + Videos (VideoObject) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"CreativeWork",
-    "name":"TOOKE – BIRDC (UMA 2025 International Trade Expo) — Exhibition Branding & Print",
+    "name":"UMA 2025 Exhibition Branding in Kampala — TOOKE – BIRDC",
     "url":"https://kamogartistry.com/portfolio/tooke-birdc-uma-2025",
-    "description":"Exhibition branding and print production for TOOKE – BIRDC at UMA 2025 in Lugogo (Kampala). Deliverables included canopy branding, large banners, stand frames, selfie frames, and booth-ready visuals for on-site setup.",
+    "mainEntityOfPage":"https://kamogartistry.com/portfolio/tooke-birdc-uma-2025",
+    "description":"Exhibition branding and print production for TOOKE – BIRDC at UMA 2025 in Lugogo (Kampala). Deliverables included canopy branding, stand banners in custom frames, large format booth visuals, selfie frames, production finishing, delivery and setup support.",
     "image":[
       "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/homecover.jpg",
       "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg",
       "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg",
       "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG03.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG04.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img05.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img06.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img07.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img08.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img09.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img10.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img11.jpg",
-      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img12.jpg"
+      "https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG04.jpg"
     ],
     "creator":{
       "@type":"Organization",
@@ -101,408 +207,486 @@
       "trade show branding Uganda",
       "UMA 2025 branding",
       "booth branding Kampala",
-      "canopy branding Kampala",
-      "banners printing Kampala",
+      "large format printing Kampala",
+      "event branding Kampala",
       "stand banners Uganda",
-      "Kamog Artistry portfolio"
+      "canopy branding Kampala"
+    ],
+    "subjectOf":[
+      {"@type":"VideoObject","name":"UMA 2025 video 01","embedUrl":"https://player.vimeo.com/video/1159222760"},
+      {"@type":"VideoObject","name":"UMA 2025 video 02","embedUrl":"https://player.vimeo.com/video/1159224239"},
+      {"@type":"VideoObject","name":"UMA 2025 video 03","embedUrl":"https://player.vimeo.com/video/1159225280"},
+      {"@type":"VideoObject","name":"UMA 2025 video 04","embedUrl":"https://player.vimeo.com/video/1159226369"},
+      {"@type":"VideoObject","name":"UMA 2025 video 05","embedUrl":"https://player.vimeo.com/video/1159228305"},
+      {"@type":"VideoObject","name":"UMA 2025 video 06","embedUrl":"https://player.vimeo.com/video/1159229449"},
+      {"@type":"VideoObject","name":"UMA 2025 video 07","embedUrl":"https://player.vimeo.com/video/1159229449"},
+      {"@type":"VideoObject","name":"UMA 2025 video 08","embedUrl":"https://player.vimeo.com/video/1159229899"},
+      {"@type":"VideoObject","name":"UMA 2025 video 09","embedUrl":"https://player.vimeo.com/video/1159241185"},
+      {"@type":"VideoObject","name":"UMA 2025 video 10","embedUrl":"https://player.vimeo.com/video/1159234863"}
     ]
   }
   </script>
+
+  <!-- ✅ Schema: FAQ for this case study -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Do you provide exhibition branding services at UMA Show Grounds (Lugogo) in Kampala?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We handle exhibition branding and trade show production in Kampala, including canopy branding, stand banners, large format booth visuals, frames and setup support at venues like Lugogo (UMA Show Grounds)."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What items do you usually deliver for a trade show booth in Kampala?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Common deliverables include canopy/tent branding, backdrops, stand banners in frames, large format panels, photo/selfie frames, table branding and directional/visibility signage—depending on the booth size and goals."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Can you work under tight expo deadlines?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. For urgent expo jobs, we prioritize design finalization, print checks, production scheduling and delivery coordination. Share your deadline early and we will advise the fastest reliable workflow."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Do you handle both printing and fabrication for exhibition branding?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We cover design, large format printing, fabrication (frames/structures where needed), finishing and delivery—so the booth looks consistent and professional on event day."
+        }
+      }
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
 
-  <!-- ✅ HEADER (matches your main standard header) -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ✅ HEADER (same structure as index + portfolio hub) -->
   <header class="header">
     <nav class="nav">
-      <a href="/" aria-label="Go to homepage">
-        <img src="assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" loading="lazy" decoding="async">
+      <a aria-label="Go to homepage" href="/">
+        <img src="/assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="/">Home</a></li>
-        <li><a href="about" aria-current="page">About</a></li>
-        <li><a href="services">Services</a></li>
-        <li><a href="portfolio">Portfolio</a></li>
-        <li><a href="blog">Insights</a></li>
-        <li><a href="testimonials">Testimonials</a></li>
-        <li><a href="corporate-profile">Corporate</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/portfolio" aria-current="page">Portfolio</a></li>
+        <li><a href="/blog">Insights</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+        <li><a href="/corporate-profile">Corporate</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
 
       <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
     </nav>
   </header>
 
-<!-- HERO -->
-<section class="section animate">
-  <div style="max-width:1000px;margin:auto;text-align:center">
-    <h1>TOOKE – BIRDC (UMA 2025 International Trade Expo)</h1>
+  <main id="main">
 
-    <p style="opacity:.9;margin-top:14px">
-      Exhibition branding and print assets prepared for <strong>UMA 2025</strong> at <strong>Lugogo (UMA Show Grounds), Kampala</strong>—
-      supporting TOOKE – BIRDC’s visibility, messaging, and booth presentation.
-    </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">Lugogo (UMA Show Grounds) • Kampala • Uganda</div>
 
-    <!-- ✅ Removed the “Related” section as requested -->
+        <h1>UMA 2025 Exhibition Branding in Kampala <span>(TOOKE – BIRDC)</span></h1>
 
-    <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a class="btn-primary" href="../contact">Request a Quote</a>
-      <a class="btn-secondary" href="../portfolio">Back to Portfolio</a>
-      <a class="btn-secondary" target="_blank" rel="noopener" href="https://wa.me/256775251445">Chat on WhatsApp</a>
-    </div>
+        <p>
+          This case study covers end-to-end <strong>trade show branding</strong> for TOOKE – BIRDC at the
+          <strong>UMA 2025 International Trade Expo</strong> held at <strong>Lugogo (UMA Show Grounds), Kampala</strong>.
+          We delivered booth visuals designed for distance readability—then produced, finished, delivered and supported setup so the stand looked complete on event day.
+        </p>
 
-    <p style="opacity:.85;margin-top:18px">Delivered by Kamog Artistry (U) Ltd.</p>
-  </div>
-</section>
+        <div class="hero-actions">
+          <a class="btn-primary" href="/contact">Request a Quote</a>
+          <a class="btn-secondary" href="/portfolio">Back to Portfolio</a>
+        </div>
 
-<!-- SUMMARY -->
-<section class="section light animate">
-  <h2>Project Summary</h2>
+        <div class="hero-cta-row" style="margin-top:12px">
+          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn-secondary" href="/services">Explore Services</a>
+          <a class="btn-secondary" href="/contact#upload-artwork">Upload Artwork</a>
+        </div>
 
-  <div class="grid" style="align-items:stretch">
-    <div class="card">
-      <h3>Client / Project</h3>
-      <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.9">
-        <li><strong>Client:</strong> TOOKE – BIRDC</li>
-        <li><strong>Event:</strong> UMA 2025 International Trade Expo</li>
-        <li><strong>Location:</strong> Lugogo (UMA Show Grounds), Kampala</li>
-        <li><strong>Category:</strong> Exhibition Branding &amp; Print Production</li>
-        <li><strong>Approach:</strong> Design → Print → Fabrication → Setup support</li>
-      </ul>
-    </div>
+        <p class="hero-quicklinks" style="margin-top:14px">
+          <span class="ql-label">Related services:</span>
+          <a href="/large-format-printing-kampala">Large format printing</a>
+          <span class="dot">•</span>
+          <a href="/signage-fabrication-uganda">Fabrication & installation</a>
+          <span class="dot">•</span>
+          <a href="/printing-services-kampala">Printing services</a>
+          <span class="dot">•</span>
+          <a href="/branding-kampala">Branding in Kampala</a>
+        </p>
+      </div>
+    </section>
 
-    <div class="card">
-      <h3>What We Delivered</h3>
-      <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.9">
-        <li>Canopy / tent branding (high-visibility top banner)</li>
-        <li>Stand banners in custom metal frames</li>
-        <li>Large format booth visuals and panels</li>
-        <li>Branded selfie/photo frames for engagement</li>
-        <li>Production finishing + delivery for setup</li>
-      </ul>
-      <p style="opacity:.85;margin-top:12px">
-        Planning an expo? See our <a href="../services"><strong>Services</strong></a> or <a href="../contact"><strong>send your brief</strong></a>.
+    <!-- SUMMARY -->
+    <section class="section light animate">
+      <h2>Project Summary</h2>
+
+      <div class="grid" style="align-items:stretch">
+        <div class="card">
+          <h3>Client / Event</h3>
+          <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.9">
+            <li><strong>Client:</strong> TOOKE – BIRDC</li>
+            <li><strong>Event:</strong> UMA 2025 International Trade Expo</li>
+            <li><strong>Location:</strong> Lugogo (UMA Show Grounds), Kampala</li>
+            <li><strong>Category:</strong> Exhibition Branding &amp; Print Production</li>
+            <li><strong>Workflow:</strong> Design → Pre-press checks → Print → Fabrication → Delivery/Setup support</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Scope of Work</h3>
+          <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.9">
+            <li>Canopy / tent branding (high-visibility header area)</li>
+            <li>Stand banners in custom metal frames</li>
+            <li>Large format booth visuals &amp; panels</li>
+            <li>Branded selfie/photo frames for engagement</li>
+            <li>Production finishing + delivery coordination</li>
+          </ul>
+          <p style="opacity:.88;margin-top:12px">
+            Planning an expo? Send size + deadline and we’ll advise the fastest reliable approach:
+            <a href="/contact"><strong>Contact Kamog Artistry →</strong></a>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Production Notes</h3>
+          <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.9">
+            <li><strong>Design tools:</strong> Illustrator, Photoshop, InDesign</li>
+            <li><strong>Pre-press:</strong> correct sizes, safe margins, bleed, resolution checks</li>
+            <li><strong>Output:</strong> large format printing + mounting where required</li>
+            <li><strong>Fabrication:</strong> metal frames + paint finishing for a clean presentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE STORY -->
+    <section class="section animate">
+      <h2>What Made This Booth Stand Out</h2>
+
+      <p style="opacity:.9;max-width:1000px;margin:0 auto 18px;text-align:center">
+        Exhibition branding only works when it’s readable from a distance, consistent across every piece,
+        and professionally finished—so the booth looks “complete” even in a crowded trade fair.
       </p>
-    </div>
 
-    <div class="card">
-      <h3>Tools &amp; Production</h3>
-      <ul style="margin:12px 0 0 18px;display:flex;flex-direction:column;gap:8px;opacity:.9">
-        <li><strong>Design:</strong> Adobe Illustrator, Photoshop, InDesign</li>
-        <li><strong>Pre-press:</strong> correct sizes, safe margins, bleed, and print checks</li>
-        <li><strong>Output:</strong> large format printing + panel mounting</li>
-        <li><strong>Fabrication:</strong> metal frames + paint finishing</li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <div class="grid">
+        <div class="card">
+          <h3>Distance readability</h3>
+          <p style="opacity:.88;margin-top:10px">
+            We prioritized clear typography, contrast, and spacing so key messaging stays readable in a fast-moving expo environment.
+          </p>
+        </div>
 
-<!-- STORY -->
-<section class="section animate">
-  <h2>What Made This Project Work</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Clear visibility</h3>
-      <p style="opacity:.85;margin-top:10px">
-        We designed for distance readability—strong typography, clear contrast, and a consistent TOOKE brand look across all booth touchpoints.
+        <div class="card">
+          <h3>Consistency across touchpoints</h3>
+          <p style="opacity:.88;margin-top:10px">
+            Canopy branding + stand frames + panels were aligned to one look, so the booth felt cohesive from every angle.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Engagement that pulls people in</h3>
+          <p style="opacity:.88;margin-top:10px">
+            The branded selfie frames created moments visitors could interact with—simple activation that boosts foot traffic and shares.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="section light animate">
+      <h2>Results &amp; Impact</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Stronger booth visibility</h3>
+          <p style="opacity:.88;margin-top:10px">
+            The canopy header and tall stand banners improved “first notice” visibility—helping the brand cut through the noise.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Professional presentation</h3>
+          <p style="opacity:.88;margin-top:10px">
+            Clean finishing and frame fabrication ensured the booth looked corporate and organized, not temporary or improvised.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Visitor engagement moments</h3>
+          <p style="opacity:.88;margin-top:10px">
+            Photo/selfie frames encouraged interaction—useful for brand recall and shareable content during the expo.
+          </p>
+        </div>
+      </div>
+
+      <p style="opacity:.9;margin-top:14px;max-width:1000px;margin-left:auto;margin-right:auto">
+        Need similar execution for your expo/activation? We handle design + production + fabrication + delivery support.
+        <a href="/contact"><strong>Send your brief →</strong></a>
       </p>
-    </div>
-    <div class="card">
-      <h3>Strong booth presence</h3>
-      <p style="opacity:.85;margin-top:10px">
-        Canopy branding + stand frames + large panels created a “complete” look, helping the booth stand out even in a busy expo environment.
+    </section>
+
+    <!-- GALLERY (kept as-is; only paths normalized to absolute) -->
+    <section class="section animate">
+      <h2>Gallery</h2>
+      <p style="opacity:.85;max-width:950px;margin:0 auto 18px;text-align:center">
+        Real visuals from design, production and the final booth setup at UMA 2025 in Lugogo, Kampala.
       </p>
-    </div>
-    <div class="card">
-      <h3>Engagement element</h3>
-      <p style="opacity:.85;margin-top:10px">
-        The branded selfie frames helped attract visitors and created shareable moments—simple, but powerful for booth traffic.
+
+      <div class="grid" style="margin-top:18px">
+
+        <!-- IMG01 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg"
+               alt="3D preview of TOOKE stand banners in green metal frames for UMA 2025 trade expo booth branding in Kampala"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>3D stand banner preview</strong>
+            <span>Early mockups showing the final look of the TOOKE stand displays in custom frames.</span>
+          </div>
+        </a>
+
+        <!-- IMG02 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg"
+               alt="Fabrication process of TOOKE stand banner metal frames including raw frames, green paint finishing, and completed frames for expo branding"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Frame fabrication &amp; finishing</strong>
+            <span>From raw metal frames to the final green finish—built to carry stand banners neatly and safely.</span>
+          </div>
+        </a>
+
+        <!-- IMG03 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/IMG03.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/IMG03.jpg"
+               alt="Final TOOKE stand banners mounted in green frames during workshop quality check before delivery for UMA 2025 exhibition in Kampala"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Final stand banners (quality check)</strong>
+            <span>Mounted and checked before delivery—clean edges, correct tension, and good readability.</span>
+          </div>
+        </a>
+
+        <!-- IMG04 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/IMG04.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/IMG04.jpg"
+               alt="Workshop production scene showing TOOKE branded panels and vinyl finishing during booth branding preparation for UMA 2025"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Production in progress</strong>
+            <span>Panel finishing and assembly—getting all booth pieces ready for a professional expo setup.</span>
+          </div>
+        </a>
+
+        <!-- img05 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/img05.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/img05.jpg"
+               alt="Application of vinyl graphics on a large TOOKE branded photo frame board used for visitor engagement at UMA 2025 trade expo"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Vinyl application (photo frame)</strong>
+            <span>Applying graphics to the branded selfie frame—built for visitor interaction and photos.</span>
+          </div>
+        </a>
+
+        <!-- img06 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/img06.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/img06.jpg"
+               alt="TOOKE exhibition collateral prepared for UMA 2025 including a tall banner, branded product display boxes, large booth panel, and stacked yellow boards"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Booth collateral ready</strong>
+            <span>Display pieces staged together—backdrop banners, custom table frames, place banners, ready for deployment.</span>
+          </div>
+        </a>
+
+        <!-- img07 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/img07.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/img07.jpg"
+               alt="Loading a TOOKE stand banner frame into a truck for delivery and setup at UMA 2025 trade expo in Lugogo Kampala"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Loading for delivery</strong>
+            <span>Stand frame carefully loaded—part of the logistics that makes setup day smooth.</span>
+          </div>
+        </a>
+
+        <!-- img08 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/img08.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/img08.jpg"
+               alt="Large TOOKE banner production process showing welding of metal structure, banner laid out for checks, and banner positioned near a tent at the expo"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Large banner prep &amp; structure</strong>
+            <span>Welding the structure and checking the banner layout before final placement at the booth.</span>
+          </div>
+        </a>
+
+        <!-- img09 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/img09.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/img09.jpg"
+               alt="TOOKE branded exhibition booth with canopy banner and printed panels during setup at UMA 2025 trade expo in Lugogo Kampala"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Booth setup at UMA 2025</strong>
+            <span>The canopy branding and visuals coming together on-site at Lugogo (UMA Show Grounds).</span>
+          </div>
+        </a>
+
+        <!-- img10 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/img10.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/img10.jpg"
+               alt="Two TOOKE branded selfie photo frames prepared for visitors to take pictures during UMA 2025 trade expo activation"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Branded selfie frames</strong>
+            <span>Engagement-ready photo frames prepared for booth visitors and brand photos.</span>
+          </div>
+        </a>
+
+        <!-- img11 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/img11.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/img11.jpg"
+               alt="Visitors posing with a TOOKE branded selfie frame at the exhibition booth during UMA 2025 trade expo in Kampala"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>Visitor engagement moment</strong>
+            <span>The selfie frame in action—simple activation that pulls people in and creates shareable content.</span>
+          </div>
+        </a>
+
+        <!-- img12 -->
+        <a class="portfolio-preview" href="/assets/img/portfolio/tooke-birdc-uma-2025/img12.jpg">
+          <img src="/assets/img/portfolio/tooke-birdc-uma-2025/img12.jpg"
+               alt="Uganda Manufacturers Association award trophy received at the Uganda International Trade Fair 2025"
+               loading="lazy" decoding="async" />
+          <div class="pp-text">
+            <strong>UMA recognition</strong>
+            <span>TOOKE captured the award moment—proof of impact and presence at the Uganda International Trade Fair.</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- VIDEOS (Vimeo embeds ONLY — no captions) -->
+    <section class="section light animate">
+      <h2>Videos (On-Ground Booth Experience)</h2>
+      <p style="opacity:.85;max-width:1000px;margin:10px auto 0;text-align:center">
+        Short clips showing the booth presence at UMA Show Grounds (Lugogo), Kampala.
       </p>
-    </div>
-  </div>
-</section>
 
-<!-- GALLERY -->
-<section class="section animate">
-  <h2>Gallery</h2>
-  <p style="opacity:.85;max-width:950px;margin:0 auto 18px;text-align:center">
-    Real visuals from design, production and the final booth setup at UMA 2025 in Lugogo, Kampala.
-  </p>
+      <div class="grid" style="max-width:1100px;margin:22px auto 0">
 
-  <div class="grid" style="margin-top:18px">
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159222760?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 01"></iframe>
+        </div></div>
 
-    <!-- IMG01 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg"
-           alt="3D preview of TOOKE stand banners in green metal frames for UMA 2025 trade expo booth branding in Kampala"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>3D stand banner preview</strong>
-        <span>Early mockups showing the final look of the TOOKE stand displays in custom frames.</span>
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159224239?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 02"></iframe>
+        </div></div>
+
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159225280?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 03"></iframe>
+        </div></div>
+
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159226369?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 04"></iframe>
+        </div></div>
+
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159228305?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 05"></iframe>
+        </div></div>
+
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159229449?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 06"></iframe>
+        </div></div>
+
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159229449?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 07"></iframe>
+        </div></div>
+
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159229899?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 08"></iframe>
+        </div></div>
+
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159241185?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 09"></iframe>
+        </div></div>
+
+        <div class="card video-card"><div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1159234863?title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="UMA 2025 Video 10"></iframe>
+        </div></div>
+
       </div>
-    </a>
+    </section>
 
-    <!-- IMG02 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg"
-           alt="Fabrication process of TOOKE stand banner metal frames including raw frames, green paint finishing, and completed frames for expo branding"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Frame fabrication &amp; finishing</strong>
-        <span>From raw metal frames to the final green finish—built to carry stand banners neatly and safely.</span>
+    <!-- CTA + CASE STUDY NAV -->
+    <section class="section light animate">
+      <h2>Need Exhibition Branding in Kampala?</h2>
+      <p style="opacity:.88;max-width:980px;margin:10px auto 0;text-align:center">
+        If you’re planning an exhibition, trade fair, or activation, we can handle design, printing, fabrication and setup support—
+        from canopy branding to banners, frames, panels and booth visuals.
+      </p>
+
+      <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn-primary" href="/contact">Send Your Brief</a>
+        <a class="btn-secondary" href="/services">Explore Services</a>
+        <a class="btn-secondary" href="/portfolio">View More Work</a>
       </div>
-    </a>
 
-    <!-- IMG03 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/IMG03.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/IMG03.jpg"
-           alt="Final TOOKE stand banners mounted in green frames during workshop quality check before delivery for UMA 2025 exhibition in Kampala"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Final stand banners (quality check)</strong>
-        <span>Mounted and checked before delivery—clean edges, correct tension, and good readability.</span>
+      <p style="opacity:.9;margin-top:14px;text-align:center">
+        Prefer WhatsApp? <a href="https://wa.me/256775251445" target="_blank" rel="noopener"><strong>Chat now →</strong></a>
+      </p>
+
+      <!-- ✅ Bottom navigation: first case study -> Next only -->
+      <div class="card" style="max-width:1100px;margin:22px auto 0">
+        <div class="case-nav">
+          <div class="left">
+            <span style="opacity:.85;font-weight:800">Case study navigation:</span>
+          </div>
+          <div class="right">
+            <a class="btn-secondary" href="/portfolio/voltech-branding" aria-label="Next case study: Voltech Engineering branding">
+              Next case study → Voltech Engineering
+            </a>
+          </div>
+        </div>
       </div>
-    </a>
+    </section>
 
-    <!-- IMG04 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/IMG04.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/IMG04.jpg"
-           alt="Workshop production scene showing TOOKE branded panels and vinyl finishing during booth branding preparation for UMA 2025"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Production in progress</strong>
-        <span>Panel finishing and assembly—getting all booth pieces ready for a professional expo setup.</span>
-      </div>
-    </a>
+  </main>
 
-    <!-- img05 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/img05.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/img05.jpg"
-           alt="Application of vinyl graphics on a large TOOKE branded photo frame board used for visitor engagement at UMA 2025 trade expo"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Vinyl application (photo frame)</strong>
-        <span>Applying graphics to the branded selfie frame—built for visitor interaction and photos.</span>
-      </div>
-    </a>
-
-    <!-- img06 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/img06.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/img06.jpg"
-           alt="TOOKE exhibition collateral prepared for UMA 2025 including a tall banner, branded product display boxes, large booth panel, and stacked yellow boards"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Booth collateral ready</strong>
-        <span>Display pieces staged together—backdrop banners, custom table frames, place banners, ready for deployment.</span>
-      </div>
-    </a>
-
-    <!-- img07 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/img07.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/img07.jpg"
-           alt="Loading a TOOKE stand banner frame into a truck for delivery and setup at UMA 2025 trade expo in Lugogo Kampala"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Loading for delivery</strong>
-        <span>Stand frame carefully loaded—part of the logistics that makes setup day smooth.</span>
-      </div>
-    </a>
-
-    <!-- img08 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/img08.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/img08.jpg"
-           alt="Large TOOKE banner production process showing welding of metal structure, banner laid out for checks, and banner positioned near a tent at the expo"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Large banner prep &amp; structure</strong>
-        <span>Welding the structure and checking the banner layout before final placement at the booth.</span>
-      </div>
-    </a>
-
-    <!-- img09 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/img09.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/img09.jpg"
-           alt="TOOKE branded exhibition booth with canopy banner and printed panels during setup at UMA 2025 trade expo in Lugogo Kampala"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Booth setup at UMA 2025</strong>
-        <span>The canopy branding and visuals coming together on-site at Lugogo (UMA Show Grounds).</span>
-      </div>
-    </a>
-
-    <!-- img10 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/img10.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/img10.jpg"
-           alt="Two TOOKE branded selfie photo frames prepared for visitors to take pictures during UMA 2025 trade expo activation"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Branded selfie frames</strong>
-        <span>Engagement-ready photo frames prepared for booth visitors and brand photos.</span>
-      </div>
-    </a>
-
-    <!-- img11 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/img11.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/img11.jpg"
-           alt="Visitors posing with a TOOKE branded selfie frame at the exhibition booth during UMA 2025 trade expo in Kampala"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>Visitor engagement moment</strong>
-        <span>The selfie frame in action—simple activation that pulls people in and creates shareable content.</span>
-      </div>
-    </a>
-
-    <!-- img12 -->
-    <a class="portfolio-preview" href="../assets/img/portfolio/tooke-birdc-uma-2025/img12.jpg">
-      <img src="../assets/img/portfolio/tooke-birdc-uma-2025/img12.jpg"
-           alt="Uganda Manufacturers Association award trophy received at the Uganda International Trade Fair 2025"
-           loading="lazy" decoding="async" />
-      <div class="pp-text">
-        <strong>UMA recognition</strong>
-        <span>TOOKE Captured the award  moment—proof of impact and presence at the Uganda International Trade Fair.</span>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- MEDIA (VIDEOS) -->
-<section class="section light animate">
-  <h2>Videos</h2>
-  <p style="opacity:.85;max-width:1000px;margin:10px auto 0;text-align:center">
-    Short clips showing booth setup, visitor engagement, and the exhibitor visuals in use.
-  </p>
-
-  <div class="grid" style="max-width:1100px;margin:22px auto 0">
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video01.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
-    </div>
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video02.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px">  </div>
-      </div>
-    </div>
-
-    <div class="card" style="padding:0;overflow:hidden">
-
-      <video controls muted preload="metadata"
-       style="width:100%;height:280px;object-fit:cover">
-  <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video03.mp4" type="video/mp4" />
-
-
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video03.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"> </div>
-      </div>
-    </div>
-
-<div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video04.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
-    </div>
-
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video05.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
-    </div>
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video06.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
-    </div>
-
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video07.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
-    </div>
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video08.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
-    </div>
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video09.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
-    </div>
-
-    <div class="card" style="padding:0;overflow:hidden">
-      <video controls preload="metadata" style="width:100%;height:280px;object-fit:cover">
-        <source src="../assets/video/portfolio/tooke-birdc-uma-2025/video10.mp4" type="video/mp4" />
-      </video>
-      <div style="padding:14px 16px">
-        <strong></strong>
-        <div style="opacity:.8;margin-top:4px"></div>
-      </div>
-    </div>
-    
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section light animate">
-  <h2>Need Expo Branding in Kampala?</h2>
-  <p style="opacity:.85;max-width:980px;margin:10px auto 0;text-align:center">
-    If you’re planning an exhibition, trade fair, or activation, we can handle design, printing, fabrication and setup support—
-    from canopy branding to banners, frames, panels and booth visuals.
-  </p>
-
-  <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a class="btn-primary" href="../contact">Send Your Brief</a>
-    <a class="btn-primary" href="../services">Explore Services</a>
-    <a class="btn-primary" href="../portfolio">View More Work</a>
-  </div>
-</section>
-
-  <!-- ✅ FOOTER (matches your main standard footer: includes Corporate + Compliance) -->
+  <!-- ✅ FOOTER (same structure pattern as your main pages) -->
   <footer class="footer">
     <div class="footer-wrap">
 
@@ -522,9 +706,9 @@
         </p>
 
         <p style="opacity:.8;margin-top:10px">
-          <a href="corporate-profile">Corporate Profile</a>
+          <a href="/corporate-profile">Corporate Profile</a>
           <span style="opacity:.6"> • </span>
-          <a href="compliance">Compliance</a>
+          <a href="/compliance">Compliance</a>
         </p>
       </div>
 
@@ -535,7 +719,7 @@
           <li><a href="tel:+256775251445">+256 775 251 445</a></li>
           <li>P.O. Box 201929, Kampala - Uganda</li>
         </ul>
-        <a class="footer-cta" href="contact">Contact Us</a>
+        <a class="footer-cta" href="/contact">Contact Us</a>
       </div>
 
       <div class="footer-col">
@@ -543,42 +727,42 @@
         <div class="social">
           <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener"
             href="https://wa.me/256775251445" aria-label="WhatsApp">
-            <img src="assets/img/icons/whatsapp.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            <img src="/assets/img/icons/whatsapp.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
           </a>
 
           <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener"
             href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
-            <img src="assets/img/icons/linkedin.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            <img src="/assets/img/icons/linkedin.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
           </a>
 
           <a class="social-btn" title="TikTok" target="_blank" rel="noopener"
             href="https://www.tiktok.com/@kamogartistry?_r=1&amp;_t=ZT-93C8X0CPXUt" aria-label="TikTok">
-            <img src="assets/img/icons/tiktok.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            <img src="/assets/img/icons/tiktok.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
           </a>
 
           <a class="social-btn" title="Instagram" target="_blank" rel="noopener"
             href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
-            <img src="assets/img/icons/instagram.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            <img src="/assets/img/icons/instagram.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
           </a>
 
           <a class="social-btn" title="X" target="_blank" rel="noopener"
             href="https://x.com/kamogartistry" aria-label="X">
-            <img src="assets/img/icons/x.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            <img src="/assets/img/icons/x.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
           </a>
 
           <a class="social-btn" title="Facebook" target="_blank" rel="noopener"
             href="https://www.facebook.com/611977605339985" aria-label="Facebook">
-            <img src="assets/img/icons/facebook.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            <img src="/assets/img/icons/facebook.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
           </a>
 
           <a class="social-btn" title="Behance" target="_blank" rel="noopener"
             href="https://www.behance.net/kamogArtistry" aria-label="Behance">
-            <img src="assets/img/icons/behance.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            <img src="/assets/img/icons/behance.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
           </a>
 
           <a class="social-btn" title="Threads" target="_blank" rel="noopener"
             href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
-            <img src="assets/img/icons/threads.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            <img src="/assets/img/icons/threads.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
@@ -590,8 +774,8 @@
     </div>
   </footer>
 
-<script src="../assets/js/script.js" defer></script>
-<script src="../assets/js/animations.js" defer></script>
+  <script src="/assets/js/script.js" defer></script>
+  <script src="/assets/js/animations.js" defer></script>
 
 </body>
 </html>
