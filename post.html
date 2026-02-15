@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
 
   <!-- ✅ Dynamic canonical + meta (filled by JS below) -->
-  <link rel="canonical" href="https://kamogartistry.com/post.html" id="canonicalLink">
+  <link rel="canonical" href="https://kamogartistry.com/post" id="canonicalLink">
 
   <meta name="description" content="Kamog Artistry insights and articles." id="metaDescription">
 
@@ -177,13 +177,13 @@
 
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="blog.html">Insights</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="corporate-profile.html">Corporate</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="services">Services</a></li>
+      <li><a href="portfolio">Portfolio</a></li>
+      <li><a href="blog">Insights</a></li>
+      <li><a href="testimonials">Testimonials</a></li>
+      <li><a href="corporate-profile">Corporate</a></li>
+      <li><a href="contact">Contact</a></li>
     </ul>
 
     <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
@@ -198,7 +198,7 @@
     <div class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="sep">›</span>
-      <a href="blog.html">Insights</a>
+      <a href="blog">Insights</a>
       <span class="sep">›</span>
       <span id="crumbTitle" style="opacity:.92;font-weight:900">Article</span>
     </div>
@@ -228,12 +228,12 @@
           </div>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn-primary" href="contact.html">Request a Quote</a>
+          <a class="btn-primary" href="contact">Request a Quote</a>
           <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
       <div style="opacity:.82;margin-top:10px">
-        Explore: <a href="services.html">Services</a> • <a href="portfolio.html">Portfolio</a> • <a href="corporate-profile.html">Corporate</a>
+        Explore: <a href="services">Services</a> • <a href="portfolio">Portfolio</a> • <a href="corporate-profile">Corporate</a>
       </div>
     </div>
 
@@ -270,14 +270,14 @@
           If you’re in Kampala / Uganda and you need clean branding, printing or signage execution, send your requirements and we’ll advise the best materials + finishing for your budget.
         </p>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn-primary" href="contact.html">Send Requirements</a>
-          <a class="btn-primary" href="services.html">Browse Services</a>
-          <a class="btn-primary" href="portfolio.html">See Case Studies</a>
+          <a class="btn-primary" href="contact">Send Requirements</a>
+          <a class="btn-primary" href="services">Browse Services</a>
+          <a class="btn-primary" href="portfolio">See Case Studies</a>
         </div>
       </div>
     </div>
 
-    <a href="blog.html" class="back-link" style="display:inline-block;margin-top:16px">← Back to Insights</a>
+    <a href="blog" class="back-link" style="display:inline-block;margin-top:16px">← Back to Insights</a>
 
     <!-- Comments -->
     <div class="card article-card" style="margin-top:20px;padding:18px">
@@ -311,9 +311,9 @@
       </p>
 
       <p style="opacity:.8;margin-top:10px">
-        <a href="corporate-profile.html">Corporate Profile</a>
+        <a href="corporate-profile">Corporate Profile</a>
         <span style="opacity:.6"> • </span>
-        <a href="compliance.html">Compliance</a>
+        <a href="compliance">Compliance</a>
       </p>
     </div>
 
@@ -325,7 +325,7 @@
         <li>P.O. Box 201929, Kampala - Uganda</li>
       </ul>
 
-      <a class="footer-cta" href="contact.html">Contact Us</a>
+      <a class="footer-cta" href="contact">Contact Us</a>
     </div>
 
     <div class="footer-col">
@@ -508,7 +508,7 @@
       document.title = "Article Not Found | Kamog Artistry (U) Ltd";
       postEl.innerHTML = "<h2>Article not found</h2><p>Missing <code>?post=</code> in the URL.</p>";
 
-      const url = "https://kamogartistry.com/post.html";
+      const url = "https://kamogartistry.com/post";
       setMeta("canonicalLink", url);
       setMeta("metaDescription", "Article not found.");
       setMeta("ogTitle", "Article Not Found | Kamog Artistry (U) Ltd");
@@ -575,7 +575,7 @@
       document.getElementById("postTags").textContent = tags ? ("• " + tags) : "";
 
       // Build absolute URL for this post
-      const postUrl = "https://kamogartistry.com/post.html?post=" + encodeURIComponent(slug);
+      const postUrl = "https://kamogartistry.com/post?post=" + encodeURIComponent(slug);
       setMeta("canonicalLink", postUrl);
 
       // Description
@@ -645,7 +645,7 @@
 <script>
   var disqus_config = function () {
     var slug = new URLSearchParams(window.location.search).get("post") || "static-article";
-    this.page.url = window.location.origin + "/post.html?post=" + slug;
+    this.page.url = window.location.origin + "/post?post=" + slug;
     this.page.identifier = slug;
   };
 
