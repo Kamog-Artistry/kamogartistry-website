@@ -52,6 +52,42 @@ body{background:var(--dark);color:#fffefd;line-height:1.6}
 .hero p{opacity:.9;margin:14px 0 22px}
 
 .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* ✅ HERO: prevent CTA rows from crowding/overlap */
+.hero-actions,
+.hero-cta-row{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+/* Make buttons stable across widths */
+.hero-actions a,
+.hero-cta-row a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  white-space:nowrap;
+}
+
+/* Tablet: buttons become neat 2-per-row */
+@media (max-width: 900px){
+  .hero-actions a,
+  .hero-cta-row a{
+    width: min(260px, 100%);
+  }
+}
+
+/* Mobile: full width buttons */
+@media (max-width: 520px){
+  .hero-actions a,
+  .hero-cta-row a{
+    width: 100%;
+  }
+}
+
 .btn-primary{
   background:linear-gradient(45deg,var(--blue),var(--orange));
   padding:14px 34px;border-radius:40px;
@@ -493,7 +529,8 @@ a.portfolio-item.no-image{
 #postHero {
   width: 640px;
   height: auto;
-  object-fit: cover;
+  max-height: 260px;
+  object-fit: contain;
   border-radius: 18px;
 }
 
@@ -505,4 +542,20 @@ a.portfolio-item.no-image{
     object-fit: contain;
     background: #0a5c85; /* optional brand-safe fallback */
   }
+}
+
+
+
+.video-embed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
