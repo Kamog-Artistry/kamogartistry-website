@@ -6,22 +6,24 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
   http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- HOME -->
   <url>
     <loc>https://kamogartistry.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- CORE PAGES -->
   <url>
     <loc>https://kamogartistry.com/about</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/contact</loc>
+    <loc>https://kamogartistry.com/services</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
@@ -31,204 +33,290 @@
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <loc>https://kamogartistry.com/testimonials</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/testimonials</loc>
+    <loc>https://kamogartistry.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://kamogartistry.com/post</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- CORPORATE / COMPLIANCE (keep if live) -->
+  <url>
+    <loc>https://kamogartistry.com/corporate-profile</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/compliance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- THANK YOU (OPTIONAL: you can remove this) -->
+  <url>
+    <loc>https://kamogartistry.com/thank-you</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.10</priority>
+  </url>
+
+  <!-- SERVICES (SEO / LOCATION PAGES) -->
   <url>
     <loc>https://kamogartistry.com/branding-kampala</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
-  <!-- ✅ Added: Branding Kampala Cluster Pages (12) -->
+  <!-- BRANDING KAMPALA CLUSTERS (CLEAN URLS) -->
   <url>
     <loc>https://kamogartistry.com/services/branding/logo-design-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/corporate-brand-identity-design-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/brand-guidelines-design-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/packaging-design-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/product-label-design-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/rebranding-services-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/brand-strategy-consulting-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/startup-branding-packages-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/sme-brand-development-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/event-branding-design-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/social-media-brand-design-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
   <url>
     <loc>https://kamogartistry.com/services/branding/brand-rollout-management-kampala/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
-  <!-- ✅ End Added -->
 
   <url>
-    <loc>https://kamogartistry.com/printing-kampala</loc>
+    <loc>https://kamogartistry.com/printing-services-kampala</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/signage-kampala</loc>
+    <loc>https://kamogartistry.com/signage-fabrication-uganda</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://kamogartistry.com/vehicle-branding-kampala</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.92</priority>
+    <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/event-branding-kampala</loc>
+    <loc>https://kamogartistry.com/corporate-identity-design-kampala</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/corporate-profile-documents-kampala</loc>
+    <loc>https://kamogartistry.com/large-format-printing-kampala</loc>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/logo-design-uganda</loc>
+    <loc>https://kamogartistry.com/signage-fabrication</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/branding-uganda</loc>
+    <loc>https://kamogartistry.com/printing-services</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/printing-uganda</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/signage-uganda</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/vehicle-branding-uganda</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://kamogartistry.com/custom-merchandise-uganda</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.78</priority>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://kamogartistry.com/branded-stationery-uganda</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.78</priority>
+    <priority>0.90</priority>
   </url>
 
+  <!-- PORTFOLIO CASE STUDIES -->
   <url>
-    <loc>https://kamogartistry.com/blog/branding</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/blog/printing</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/blog/signage</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.72</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/blog/vehicle-branding</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/blog/events</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/privacy-policy</loc>
+    <loc>https://kamogartistry.com/portfolio/ability-pharmacy</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.60</priority>
+    <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/terms</loc>
+    <loc>https://kamogartistry.com/portfolio/abundance-herbal-products</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.60</priority>
+    <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/robots.txt</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.10</priority>
+    <loc>https://kamogartistry.com/portfolio/birdc-photo-frames-kololo-nrm</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/create-and-cook-competition</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/exam-gifts</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/kiosa</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/mobile-money-branding</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/modva-updf-spouses-desk</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/motion-graphics</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/mountains-of-the-moon-tourism</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/rokastars-film-productions</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/sbl-intel-systems</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/sme-branding-showcase</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/social-media-designs</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/tooke-birdc-uma-2025</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/traditional-painting</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/voltech-branding</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio/yabx-christmas-package</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.80</priority>
   </url>
 
 </urlset>
