@@ -4,35 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Brand Guidelines Development Kampala | Brand Manual & Usage Rules | Kamog Artistry (U) Ltd</title>
+  <title>Brand Guidelines Design Kampala | Brand Style Guide & Usage Rules | Kamog Artistry (U) Ltd</title>
 
-  <meta name="description" content="Brand guidelines development in Kampala by Kamog Artistry (U) Ltd. Get a clear brand manual: logo usage rules, spacing, colors, typography, templates and print/signage-ready standards—so your brand stays consistent." />
+  <meta name="description" content="Brand guidelines design in Kampala by Kamog Artistry (U) Ltd. We create brand style guides that keep your logo, colors, typography, layouts and printing consistent across teams, designers and vendors. Serving Kampala, Wakiso & Mukono." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b6fbf" />
 
-  <!-- Clean URL canonical -->
-  <link rel="canonical" href="https://kamogartistry.com/branding/brand-guidelines-development-kampala/" />
-
-  <!-- DO NOT touch global CSS includes -->
+  <link rel="canonical" href="https://kamogartistry.com/branding/brand-guidelines-design-kampala/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kamogartistry.com/sitemap.xml" />
   <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <link rel="preload" as="image" href="/assets/img/brand/logo-white.svg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
-  <meta property="og:title" content="Brand Guidelines Development Kampala | Kamog Artistry (U) Ltd" />
-  <meta property="og:description" content="Brand guidelines in Kampala: logo usage rules, colors, typography, templates and production-ready standards so your brand stays consistent across print, signage and digital." />
-  <meta property="og:url" content="https://kamogartistry.com/branding/brand-guidelines-development-kampala/" />
-  <meta property="og:image" content="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg" />
-  <meta property="og:image:alt" content="Voltech Engineering branding rollout in Kampala (project by Kamog Artistry)" />
+  <meta property="og:title" content="Brand Guidelines Design Kampala | Kamog Artistry (U) Ltd" />
+  <meta property="og:description" content="Brand style guides that keep your brand consistent across print, signage, documents and digital. Kampala brand guideline designers." />
+  <meta property="og:url" content="https://kamogartistry.com/branding/brand-guidelines-design-kampala/" />
+  <meta property="og:image" content="https://kamogartistry.com/assets/img/clients/01_Voltech.png" />
+  <meta property="og:image:alt" content="Voltech brand assets supported by Kamog Artistry (U) Ltd" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Brand Guidelines Development Kampala | Kamog Artistry (U) Ltd" />
-  <meta name="twitter:description" content="A practical brand manual for Kampala businesses: usage rules, colors, typography, templates and print/signage-ready guidance." />
-  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg" />
-  <meta name="twitter:image:alt" content="Voltech Engineering branding rollout in Kampala (project by Kamog Artistry)" />
+  <meta name="twitter:title" content="Brand Guidelines Design Kampala | Kamog Artistry (U) Ltd" />
+  <meta name="twitter:description" content="Professional brand guidelines and usage rules built for teams, printers and vendors." />
+  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/clients/01_Voltech.png" />
 
-  <!-- Page-only safe upgrades (NO TOC). Do not alter global CSS files -->
+  <!-- Page-only fixes (safe, local). No global CSS edits. No TOC. -->
   <style>
     :root{
       --km-blue:#0b6fbf;
@@ -42,62 +41,92 @@
     }
 
     html{ scroll-behavior:smooth; }
-    .content-wrap{ max-width:1100px; margin:0 auto; padding:0 16px; }
+    .content-wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
 
-    .skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
     .skip-link:focus{
       left:12px; top:12px; width:auto; height:auto; padding:10px 12px;
       background:#fff; color:var(--km-ink); border-radius:10px; z-index:9999;
       box-shadow:0 10px 22px rgba(0,0,0,.18);
     }
 
-    /* Breadcrumbs on dark hero */
-    .breadcrumbs{
-      opacity:.92;
-      font-size:.95rem;
-      margin-bottom:12px;
+    /* Breadcrumbs (hero is dark) */
+    .breadcrumbs {
+      opacity: .92;
+      font-size: .95rem;
+      margin-bottom: 12px;
       display:flex;
       flex-wrap:wrap;
       gap:8px;
       align-items:center;
     }
     .breadcrumbs a{
-      color:rgba(255,255,255,.92);
-      text-decoration:underline;
-      text-underline-offset:3px;
-      font-weight:900;
+      color: rgba(255,255,255,.92);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 900;
     }
     .breadcrumbs .sep{ opacity:.65; user-select:none; color:#fff; }
 
-    /* Ensure hero CTAs are visible */
+    /* Button text safety */
     .btn-primary, .btn-secondary{ text-decoration:none !important; }
     .btn-primary, .btn-primary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
     .btn-secondary, .btn-secondary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
 
-    /* Links in light sections */
-    .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link){
-      color:var(--km-blue);
-      -webkit-text-fill-color:var(--km-blue);
-      text-decoration:underline;
-      text-underline-offset:4px;
-      font-weight:900;
+    /* FIX: secondary buttons visible on LIGHT sections */
+    .section.light .btn-secondary{
+      background: var(--km-blue) !important;
+      border: 1px solid rgba(11,111,191,.25) !important;
+      opacity: 1 !important;
     }
-    .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
-      color:var(--km-orange);
-      -webkit-text-fill-color:var(--km-orange);
+    .section.light .btn-secondary:hover{
+      background: var(--km-orange) !important;
+      border-color: rgba(242,140,40,.35) !important;
     }
 
-    /* Cards readability */
-    a.card-link{ text-decoration:none !important; display:block; }
-    a.card-link:hover{ transform:translateY(-2px); transition:transform .15s ease; }
-    .card, .card *{ color:var(--km-ink); -webkit-text-fill-color:var(--km-ink); }
-    .card p{ color:var(--km-muted); -webkit-text-fill-color:var(--km-muted); }
+    /* Links in LIGHT sections */
+    .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link){
+      color: var(--km-blue);
+      -webkit-text-fill-color: var(--km-blue);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 900;
+    }
+    .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
+      color: var(--km-orange);
+      -webkit-text-fill-color: var(--km-orange);
+    }
+
+    /* FIX: Links visible on DARK sections */
+    .section:not(.light) a:not(.btn-primary):not(.btn-secondary):not(.card-link){
+      color: rgba(255,255,255,.92) !important;
+      -webkit-text-fill-color: rgba(255,255,255,.92) !important;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 900;
+    }
+    .section:not(.light) a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+      opacity:.95;
+    }
+
+    a.card-link { text-decoration:none !important; display:block; }
+    a.card-link:hover { transform: translateY(-2px); transition: transform .15s ease; }
+
+    .card, .card *{
+      color: var(--km-ink);
+      -webkit-text-fill-color: var(--km-ink);
+    }
+    .card p{ color: var(--km-muted); -webkit-text-fill-color: var(--km-muted); }
 
     .cta-strip{
       border:1px solid rgba(11,111,191,.18);
-      background:rgba(11,111,191,.06);
-      border-radius:18px;
-      padding:16px;
+      background: rgba(11,111,191,.06);
+      border-radius: 18px;
+      padding: 16px;
       display:flex;
       gap:14px;
       align-items:center;
@@ -106,71 +135,109 @@
       margin-top:16px;
     }
 
-    .pill-row{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:14px; }
-    .pill{
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.25);
-      background:rgba(255,255,255,.08);
-      color:#fff;
-      font-weight:800;
-      font-size:.95rem;
-    }
+    .pill-row { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:14px; }
+    .pill { padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); color:#fff; font-weight: 800; font-size: .95rem; }
 
-    .list-clean{ margin-top:10px; opacity:.92; line-height:1.85; }
-
-    /* Callout */
-    .note{
-      border-left:4px solid rgba(242,140,40,.9);
-      padding:12px 14px;
-      border-radius:14px;
-      background:rgba(242,140,40,.08);
-      margin-top:14px;
-    }
-
-    /* Gallery */
-    .gallery-grid{
+    .list-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-      gap:12px;
-      margin-top:16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
     }
-    .gallery-item figure{ margin:0; }
-    .gallery-item img{
+    .list-clean { margin-top: 10px; opacity:.92; line-height: 1.85; }
+
+    /* Proof cards */
+    .proof-card{ display:flex; flex-direction:column; gap:12px; }
+    .proof-frame{
+      background:#ffffff;
+      border:1px solid rgba(11,111,191,.12);
+      border-radius:16px;
+      padding:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:160px;
+      box-shadow:0 10px 22px rgba(0,0,0,.06);
+    }
+    .proof-frame img{
+      max-width:240px;
       width:100%;
       height:auto;
       display:block;
-      border-radius:14px;
+      object-fit:contain;
     }
-    .gallery-item figcaption{
-      opacity:.88;
-      font-size:.95rem;
-      margin-top:10px;
-      line-height:1.55;
+    .proof-card .meta{ font-size:.95rem; opacity:.9; line-height:1.6; }
+
+    /* 12-logo gallery */
+    .logo-gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+      align-items: stretch;
+    }
+    .logo-tile{
+      border: 1px solid rgba(11,111,191,.14);
+      background: #fff;
+      border-radius: 16px;
+      padding: 14px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      justify-content:space-between;
+      min-height: 170px;
+    }
+    .logo-box{
+      border-radius: 12px;
+      background: rgba(11,111,191,.04);
+      border: 1px solid rgba(11,111,191,.10);
+      padding: 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height: 110px;
+    }
+    .logo-box img{
+      max-width: 160px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display:block;
+    }
+    .logo-cap{
+      font-size: .95rem;
+      line-height: 1.35;
+      color: var(--km-muted);
+      -webkit-text-fill-color: var(--km-muted);
+      margin: 0;
+    }
+    .logo-cap strong{
+      color: var(--km-ink);
+      -webkit-text-fill-color: var(--km-ink);
     }
 
-    /* FAQ */
     .faq-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:12px;
-      margin-top:18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
     }
 
-    /* Footer link underline only on hover (page-local safety) */
+    /* Footer links: underline only on hover */
     .footer a, .footer a:visited{ color:#ffffff !important; }
     .footer a:not(.footer-cta):not(.social-btn),
     .footer a:not(.footer-cta):not(.social-btn):visited{ text-decoration:none !important; opacity:.95; }
     .footer a:not(.footer-cta):not(.social-btn):hover{
-      text-decoration:underline !important;
-      text-underline-offset:3px;
-      text-decoration-thickness:1px;
+      text-decoration: underline !important;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
       opacity:.95;
     }
     .footer a.footer-cta, .footer a.footer-cta:visited{ text-decoration:none !important; }
   </style>
 
-  <!-- Schema: Breadcrumb -->
+  <!-- Simplified Schema (high-signal only) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -178,12 +245,11 @@
     "itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://kamogartistry.com/"},
       {"@type":"ListItem","position":2,"name":"Branding Kampala","item":"https://kamogartistry.com/branding-kampala"},
-      {"@type":"ListItem","position":3,"name":"Brand Guidelines Development Kampala","item":"https://kamogartistry.com/branding/brand-guidelines-development-kampala/"}
+      {"@type":"ListItem","position":3,"name":"Brand Guidelines Design Kampala","item":"https://kamogartistry.com/branding/brand-guidelines-design-kampala/"}
     ]
   }
   </script>
 
-  <!-- Schema: Organization -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -192,25 +258,29 @@
     "url":"https://kamogartistry.com/",
     "logo":"https://kamogartistry.com/assets/img/brand/logo-white.svg",
     "email":"info@kamogartistry.com",
-    "telephone":"+256775251445",
-    "sameAs":[
-      "https://www.facebook.com/611977605339985",
-      "https://www.instagram.com/kamog_artistry_u_ltd",
-      "https://www.linkedin.com/company/kamog-artistry-u-ltd",
-      "https://x.com/kamogartistry",
-      "https://www.behance.net/kamogArtistry",
-      "https://www.threads.com/@kamog_artistry_u_ltd"
-    ]
+    "telephone":"+256775251445"
   }
   </script>
 
-  <!-- Schema: Service -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Kamog Artistry (U) Ltd",
+    "url":"https://kamogartistry.com/",
+    "email":"info@kamogartistry.com",
+    "telephone":"+256775251445",
+    "address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},
+    "areaServed":["Kampala","Wakiso","Mukono","Uganda"]
+  }
+  </script>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Service",
-    "name":"Brand Guidelines Development in Kampala",
-    "serviceType":["Brand Guidelines","Brand Manual","Logo Usage Guidelines","Brand Standards"],
+    "name":"Brand Guidelines Design Kampala",
+    "serviceType":"Brand Guidelines Design",
     "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
     "provider":{
       "@type":"LocalBusiness",
@@ -220,7 +290,7 @@
       "email":"info@kamogartistry.com",
       "address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"}
     },
-    "url":"https://kamogartistry.com/branding/brand-guidelines-development-kampala/"
+    "url":"https://kamogartistry.com/branding/brand-guidelines-design-kampala/"
   }
   </script>
 </head>
@@ -228,7 +298,7 @@
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- HEADER (UNIVERSAL — MUST REMAIN EXACT) -->
+  <!-- HEADER (universal) -->
   <header class="header">
     <nav class="nav">
       <a aria-label="Go to homepage" href="/">
@@ -252,7 +322,7 @@
 
   <main id="main">
 
-    <!-- A) HERO (above the fold) -->
+    <!-- HERO (dark) -->
     <section class="hero">
       <div class="content-wrap">
 
@@ -261,54 +331,52 @@
           <span class="sep">›</span>
           <a href="/branding-kampala">Branding Kampala</a>
           <span class="sep">›</span>
-          <span style="opacity:.92;font-weight:900;color:#fff">Brand Guidelines Development Kampala</span>
+          <span style="opacity:.92;font-weight:900;color:#fff">Brand Guidelines Design</span>
         </div>
 
         <div class="hero-badge">Kampala • Wakiso • Mukono • Central Uganda</div>
 
-        <h1>Brand Guidelines Development Kampala (Protect Your Brand From Inconsistency)</h1>
+        <h1>Brand Guidelines Design Kampala (A Clear Style Guide That Stops Brand Confusion)</h1>
 
         <p style="opacity:.92;margin-top:12px;max-width:980px;">
-          Many Kampala businesses invest in a logo and identity — then lose consistency within a few months.
-          Different designers use different fonts, printers guess colors, staff stretch logos, and social posts start looking like different brands.
-          Brand guidelines solve that problem by giving clear rules everyone can follow.
+          If your logo, colors, and layouts keep changing depending on who is designing or printing—your brand will never look consistent.
+          Kamog Artistry (U) Ltd creates <strong>brand guidelines</strong> that make your identity easy to manage: <strong>logo usage rules, colors, typography, spacing, layouts, and print standards</strong>.
         </p>
 
         <p style="opacity:.9;margin-top:10px;max-width:980px;">
-          Kamog Artistry (U) Ltd develops practical brand guidelines (brand manuals) in Kampala that protect your identity across
-          <strong>print, signage, stationery, social media, and corporate documents</strong>.
-          The result is a brand that stays clean and recognisable — not a brand that keeps “changing” every time someone designs.
+          This is the document your team, designers, printers, and vendors follow—so your brand stays clean across <strong>documents, signage, packaging, uniforms, and digital</strong>.
         </p>
 
         <div class="hero-actions" style="margin-top:18px;">
-          <a class="btn-primary" href="/contact">Request Brand Guidelines</a>
+          <a class="btn-primary" href="/contact">Request Guidelines Quote</a>
           <a class="btn-secondary" href="/portfolio">View Portfolio</a>
         </div>
 
         <div class="pill-row">
-          <div class="pill">Logo Usage Rules</div>
-          <div class="pill">Colors & Typography</div>
-          <div class="pill">Templates Guidance</div>
-          <div class="pill">Print + Signage Ready</div>
-          <div class="pill">Consistency System</div>
+          <div class="pill">Logo Rules</div>
+          <div class="pill">Colors + Typography</div>
+          <div class="pill">Templates Direction</div>
+          <div class="pill">Print Standards</div>
+          <div class="pill">Vendor Consistency</div>
         </div>
 
         <p style="opacity:.9;margin-top:14px;max-width:980px;">
-          Explore all branding services in one place:
-          <a href="/branding-kampala" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Branding Hub →</a>
+          Explore all 12 branding clusters:
+          <a href="/branding-kampala" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Branding Kampala Hub →</a>
         </p>
 
       </div>
     </section>
 
-    <!-- Quick trust strip -->
+    <!-- Quick Trust Strip (light) -->
     <section class="section light animate" style="padding-top:52px;">
       <div class="content-wrap">
         <div class="cta-strip">
           <div style="min-width:260px">
-            <strong>Guidelines are essential when:</strong>
+            <strong>What we need to start</strong>
             <div style="opacity:.86;margin-top:6px">
-              You have staff, multiple designers, or frequent printing/signage — and you want your brand to look the same everywhere, every time.
+              Send your logo files (or current logo), brand colors (if any), and 3–5 materials you use most (quotation, invoice, profile, signage, packaging, social).
+              We’ll recommend the right guideline scope.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -317,546 +385,334 @@
           </div>
         </div>
 
-        <div class="note">
-          <strong>Reality in Kampala:</strong> Without guidelines, most brand damage happens during printing and signage —
-          wrong colors, poor contrast, stretched logos, and inconsistent layouts. A good brand manual prevents that.
-        </div>
-
         <p style="opacity:.88;margin-top:12px;">
-          If you still need the identity system first, start with:
-          <a href="/branding/corporate-identity-design-kampala/">Corporate Identity Design Kampala</a>.
-          If you’re fixing an old brand, see:
-          <a href="/branding/rebranding-services-kampala/">Rebranding Services Kampala</a>.
+          Most requested alongside guidelines:
+          <a href="/branding/corporate-brand-identity-design-kampala/">Corporate Brand Identity</a> •
+          <a href="/branding/rebranding-services-kampala/">Rebranding</a>
         </p>
       </div>
     </section>
 
-    <!-- B) AUTHORITY EXPLANATION -->
+    <!-- Authority / Scope (light) -->
     <section class="section light animate" id="authority">
       <div class="content-wrap">
-        <h2>What Brand Guidelines Are (Educational + Commercial)</h2>
+        <h2>Brand Guidelines in Kampala: What They Are, Who They’re For, and Why They Matter</h2>
 
         <p style="opacity:.9;max-width:980px;">
-          Brand guidelines (often called a brand manual or brand book) are the rules and standards that protect your brand identity.
-          They explain how to use the logo, what colors are allowed, what fonts to use, how layouts should look, and what mistakes to avoid.
-          In simple terms: guidelines stop your brand from being “misused.”
+          Brand guidelines are the “rules of the brand.” They show how to use your logo properly, which colors are approved, what fonts to use,
+          and how layouts should look—so every output feels like the same business. This matters most when multiple people handle your brand,
+          or when you regularly work with printers and suppliers.
         </p>
 
-        <p style="opacity:.9;max-width:980px;">
-          This matters more than people think. In Kampala, your brand appears on many fast touchpoints: WhatsApp graphics, posters, quotations, signboards,
-          invoices, uniforms, stickers, vehicle graphics, and more. If each piece is done differently, customers feel inconsistency — and inconsistency reduces trust.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
+        <div class="list-grid">
           <div class="card">
-            <h3>Who brand guidelines are for</h3>
+            <h3>Who needs brand guidelines</h3>
             <ul class="list-clean">
-              <li><strong>Businesses with staff</strong> creating designs or coordinating printing.</li>
-              <li><strong>Companies using multiple vendors</strong> (designers, printers, signage fabricators).</li>
-              <li><strong>Brands scaling up</strong> and needing consistent presentation across branches.</li>
-              <li><strong>Corporate / tender-facing firms</strong> that must look structured in documents and proposals.</li>
-              <li><strong>Any business printing often</strong> (stationery, posters, banners, packaging, signage).</li>
+              <li><strong>SMEs</strong> scaling marketing and needing consistency across documents and posts.</li>
+              <li><strong>Companies</strong> that outsource design or printing to different vendors.</li>
+              <li><strong>NGOs & institutions</strong> with formal communication and reporting requirements.</li>
+              <li><strong>Brands</strong> rolling out signage, uniforms, packaging, and branded items.</li>
+              <li><strong>Teams</strong> where multiple staff create designs (internal consistency issue).</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>When to choose guidelines</h3>
+            <h3>When to choose guidelines (vs identity build)</h3>
             <ul class="list-clean">
-              <li>Your brand looks inconsistent across platforms.</li>
-              <li>Different designers produce different “versions” of your brand.</li>
-              <li>Printing results vary because colors and files are not controlled.</li>
-              <li>You want a professional identity system that lasts for years.</li>
-              <li>You’re planning rollout: signage, stationery, uniforms, or vehicles.</li>
+              <li>Choose <strong>guidelines</strong> when you already have an identity but need rules to keep it consistent.</li>
+              <li>Choose <strong>identity design</strong> if you need the system built first: logo rules + colors + typography + layouts.</li>
+              <li>If your current logo feels weak or outdated, start with <a href="/branding/rebranding-services-kampala/">rebranding</a>.</li>
+              <li>For brand direction before visuals, use <a href="/branding/brand-strategy-consulting-kampala/">brand strategy</a>.</li>
             </ul>
           </div>
         </div>
 
-        <h3 style="margin-top:18px;">Common mistakes businesses make</h3>
+        <h3 style="margin-top:18px;">The common Kampala problem (and why guidelines fix it)</h3>
         <ul class="list-clean">
-          <li><strong>No spacing rules</strong> — logos get squeezed into corners and look cheap.</li>
-          <li><strong>Wrong backgrounds</strong> — the logo loses visibility on dark surfaces or bright prints.</li>
-          <li><strong>Random colors</strong> — printers guess shades; different posters look like different brands.</li>
-          <li><strong>Font inconsistency</strong> — one week is bold, next week is script; corporate trust drops.</li>
-          <li><strong>Stretching and distortion</strong> — logo proportions get damaged on banners and signage.</li>
-          <li><strong>No file control</strong> — people use low-quality screenshots instead of proper exports.</li>
-        </ul>
-
-        <h3 style="margin-top:18px;">What success looks like</h3>
-        <ul class="list-clean">
-          <li><strong>Consistency everywhere</strong> — the brand looks like one system across touchpoints.</li>
-          <li><strong>Cleaner production results</strong> — printing and signage outputs look professional.</li>
-          <li><strong>Faster execution</strong> — staff and vendors don’t guess; they follow the manual.</li>
-          <li><strong>Stronger trust</strong> — customers perceive structure, credibility, and seriousness.</li>
-          <li><strong>Brand protection</strong> — fewer mistakes that make the business look “informal.”</li>
+          <li><strong>Different designers, different results</strong> — guidelines remove guesswork.</li>
+          <li><strong>Printers change colors</strong> — guidelines define print color standards and acceptable variations.</li>
+          <li><strong>Logo distortion</strong> — guidelines define spacing, size, and do/don’t rules.</li>
+          <li><strong>Unreadable layouts</strong> — guidelines define typography hierarchy and layout structure.</li>
+          <li><strong>Brand looks “random”</strong> — guidelines create one consistent system across all outputs.</li>
         </ul>
 
         <div class="cta-strip">
           <div style="min-width:260px">
-            <strong>Not sure what level of guidelines you need?</strong>
+            <strong>Want to stop brand inconsistency?</strong>
             <div style="opacity:.86;margin-top:6px">
-              Tell us where your brand appears (documents, signage, social, packaging). We’ll recommend a practical manual scope.
+              Share your most-used materials (quotation, invoice, company profile, signage, packaging, social). We’ll recommend the right guideline depth.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Ask for Guidance</a>
-            <a class="btn-primary" href="/branding-kampala">Back to Hub</a>
+            <a class="btn-primary" href="/contact">Ask a Question</a>
+            <a class="btn-primary" href="/branding-kampala">Branding Hub</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- C) DELIVERABLES -->
+    <!-- Deliverables (dark) -->
     <section class="section animate" id="deliverables">
       <div class="content-wrap">
-        <h2>Brand Guidelines Deliverables (Commercial Intent)</h2>
-
+        <h2>Brand Guidelines Deliverables (What You Receive)</h2>
         <p style="opacity:.9;max-width:980px;">
-          Your deliverables are designed for real use — for your staff, designers, printers, and signage teams.
-          We provide both the guideline document and the practical brand assets required to apply it correctly.
+          You receive a practical guideline document that works in real business operations. It becomes the reference file your team and vendors follow
+          for printing, signage, documents, and digital outputs.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
-            <h3>Brand manual (guidelines document)</h3>
+            <h3>Logo usage rules</h3>
             <ul class="list-clean">
-              <li>Logo usage rules (safe spacing, minimum sizes, correct placement)</li>
-              <li>Approved logo versions (primary, stacked, icon, monochrome where needed)</li>
-              <li>Do/Don’t examples (common distortions and misuse prevention)</li>
-              <li>Background control (light/dark surfaces, contrast standards)</li>
+              <li>Correct logo variations (primary/secondary/icon)</li>
+              <li>Clear space + minimum size rules</li>
+              <li>Approved backgrounds (light/dark)</li>
+              <li>Do/Don’t examples (stretching, effects, bad colors)</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Color system (print + digital)</h3>
+            <h3>Colors + typography</h3>
             <ul class="list-clean">
-              <li>Primary and secondary palette</li>
-              <li>Color codes for print/digital (where applicable in your workflow)</li>
-              <li>Contrast rules so text doesn’t disappear on dark backgrounds</li>
-              <li>Practical guidance for consistent printing results</li>
+              <li>Primary + secondary palettes</li>
+              <li>Color usage rules (dominant vs accent)</li>
+              <li>Typography hierarchy (headings/body)</li>
+              <li>Font usage guidance for documents and graphics</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Typography & hierarchy</h3>
+            <h3>Layout direction</h3>
             <ul class="list-clean">
-              <li>Primary font and secondary font recommendations</li>
-              <li>Heading and body hierarchy rules</li>
-              <li>Spacing and layout discipline to keep a clean corporate look</li>
-              <li>Examples for posters, documents, and social headings</li>
+              <li>Spacing and grid direction</li>
+              <li>Card/section layout style rules</li>
+              <li>Icon and illustration style guidance (if needed)</li>
+              <li>Photography/visual tone direction</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Templates guidance (optional add-on)</h3>
+            <h3>Print + production standards</h3>
             <ul class="list-clean">
-              <li>Stationery usage guidance (letterheads, business cards)</li>
-              <li>Quotation / invoice styling direction (if needed)</li>
-              <li>Social template direction to stop “random weekly designs”</li>
-              <li>Optional integration with full identity templates</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Production readiness (printing/signage)</h3>
-            <ul class="list-clean">
-              <li>Print-ready logo exports (vector-ready formats)</li>
-              <li>Notes for signage readability (spacing, stroke weights, contrast)</li>
-              <li>Guidance for large-format applications (banners, signboards)</li>
-              <li>Consistency notes for uniforms, stickers and labels</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Organised asset package</h3>
-            <ul class="list-clean">
-              <li>Clean folder structure (logo files, exports, guideline PDF)</li>
-              <li>Digital exports (PNG transparent, JPG)</li>
-              <li>Vector files where required (SVG/PDF)</li>
-              <li>Usage-ready versions for different backgrounds</li>
+              <li>Export formats guidance (print/digital)</li>
+              <li>Color consistency guidance for printing</li>
+              <li>Signage readability and contrast checks</li>
+              <li>Vendor notes (how to share correct files)</li>
             </ul>
           </div>
         </div>
 
         <p style="opacity:.88;margin-top:12px;">
-          If you want the full identity system + templates before the manual, start with:
-          <a href="/branding/corporate-identity-design-kampala/">Corporate Identity Design Kampala</a>.
+          Need the identity system built first? Start here:
+          <a href="/branding/corporate-brand-identity-design-kampala/">Corporate Brand Identity Design →</a>
         </p>
       </div>
     </section>
 
-    <!-- D) PROCESS -->
+    <!-- Process (light) -->
     <section class="section light animate" id="process">
       <div class="content-wrap">
-        <h2>Our Brand Guidelines Process (4–6 Steps)</h2>
-
+        <h2>Our Brand Guidelines Process (Clear, Practical, Vendor-Friendly)</h2>
         <p style="opacity:.9;max-width:980px;">
-          We build brand guidelines like a control system — not just a PDF. We structure the rules around how your business actually uses branding in Kampala:
-          documents, signage, print, and day-to-day marketing.
+          Guidelines only work when they’re simple enough for real teams and vendors to follow—without sacrificing standards.
+          We keep the guideline document practical for Kampala production reality.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
-            <h3>1) Discovery (audit + touchpoints)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We review your current brand assets and where they are used: social media, stationery, quotations, posters, signboards, uniforms, vehicles (if applicable).
-              This helps us write guidelines that prevent the real problems you face.
-            </p>
+            <h3>1) Audit</h3>
+            <p style="opacity:.88;margin-top:10px;">We review your current logo files, existing colors/fonts, and the materials you use most.</p>
           </div>
 
           <div class="card">
-            <h3>2) Direction (what must stay consistent)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We define what must be protected: logo versions, colors, typography rules, spacing discipline, background control and layout approach.
-              This becomes the “non-negotiable brand system.”
-            </p>
+            <h3>2) Standardise</h3>
+            <p style="opacity:.88;margin-top:10px;">We define the approved logo versions, color palette, and typography rules for consistency.</p>
           </div>
 
           <div class="card">
-            <h3>3) Standardisation (rules + usage examples)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We build the guideline structure with practical examples: correct usage, incorrect usage, and the exact rules that staff and vendors can follow.
-              This is where brand consistency becomes enforceable.
-            </p>
+            <h3>3) Usage rules</h3>
+            <p style="opacity:.88;margin-top:10px;">We define spacing, minimum sizes, backgrounds, and do/don’t rules to prevent misuse.</p>
           </div>
 
           <div class="card">
-            <h3>4) Refinement (review + clarity)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We refine the document so it’s clear and easy to implement—no complicated language, no confusion.
-              The goal is to make brand control simple for daily Kampala operations.
-            </p>
+            <h3>4) Layout direction</h3>
+            <p style="opacity:.88;margin-top:10px;">We define layout style, spacing logic, and visual direction so materials match.</p>
           </div>
 
           <div class="card">
-            <h3>5) Delivery (manual + asset pack)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              You receive the brand guidelines document plus organised brand assets (exports and versions) so printers and designers stop using screenshots or wrong files.
-            </p>
+            <h3>5) Production notes</h3>
+            <p style="opacity:.88;margin-top:10px;">We add print and signage notes so vendors keep quality and color consistent.</p>
           </div>
 
           <div class="card">
-            <h3>6) Optional implementation (rollout support)</h3>
+            <h3>6) Optional rollout support</h3>
             <p style="opacity:.88;margin-top:10px;">
-              If you want practical rollout support (printing, signage prep, branding coordination), we can assist with execution so the new standards land properly.
-              For physical rollout, see:
-              <a href="/signage-fabrication-uganda">Signage Fabrication in Uganda</a>.
+              If you’re rolling out prints, signage or branded items, we can guide execution.
+              See: <a href="/printing-kampala">Printing Services Kampala →</a>
             </p>
           </div>
-        </div>
-
-        <div class="note">
-          <strong>Tip:</strong> The biggest brand consistency wins often come from controlling: logo spacing, background usage, typography hierarchy, and printing/export standards.
         </div>
       </div>
     </section>
 
-    <!-- E) REAL WORK EXAMPLES -->
+    <!-- Real Work Examples (light) -->
     <section class="section light animate" id="proof">
       <div class="content-wrap">
-        <h2>Real Work Examples (Where Guidelines Matter in Execution)</h2>
-
+        <h2>Real Work Examples (Consistency That Shows in Production)</h2>
         <p style="opacity:.9;max-width:980px;">
-          Brand guidelines show their value when your brand appears across many materials — and still looks like one system.
-          Below are portfolio examples where structured rollout and consistency are clearly important.
+          Guidelines matter most when work goes to printers, fabricators, and teams. Consistency becomes visible—and mistakes become expensive.
+          Below are examples connected to real execution outcomes.
         </p>
 
         <div class="grid" style="margin-top:18px;">
-          <a class="card card-link" href="/portfolio/voltech-branding" aria-label="Voltech Engineering branding rollout case study">
-            <h3>Voltech Engineering — Consistency Across Corporate Touchpoints</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Corporate brands require discipline: spacing, hierarchy, consistent color usage, and correct logo placement.
-              A brand guideline document is what ensures these standards stay intact across future materials.
-            </p>
-            <p class="list-clean">
-              <strong>Guidelines lesson:</strong> When rules exist, future designs stay consistent even when different teams execute them.
-            </p>
+          <a class="card card-link proof-card" href="/portfolio/voltech-branding" aria-label="Voltech branding case study">
+            <div class="proof-frame">
+              <img src="/assets/img/clients/01_Voltech.png" alt="Voltech brand assets supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            </div>
+            <h3>Voltech Engineering — Identity Consistency Across Materials</h3>
+            <p class="meta">Brand consistency applied to real outputs, maintaining a clean corporate look.</p>
             <p style="margin-top:10px;"><strong>View case study →</strong></p>
           </a>
 
-          <a class="card card-link" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 event branding case study">
-            <h3>TOOKE – BIRDC (UMA 2025) — System Discipline Across Pieces</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Event environments produce multiple deliverables quickly. Without clear standards, visuals break.
-              Guidelines (even a mini version) keep typography, colors, and layouts consistent across different materials.
-            </p>
-            <p class="list-clean">
-              <strong>Guidelines lesson:</strong> A simple system prevents design drift when speed increases.
-            </p>
-            <p style="margin-top:10px;"><strong>View case study →</strong></p>
+          <a class="card card-link proof-card" href="/branding/logo-design-kampala/" aria-label="Logo design cluster">
+            <div class="proof-frame">
+              <img src="/assets/img/clients/04_SBL.png" alt="SBL identity supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            </div>
+            <h3>Where Guidelines Start: Correct Logo Usage</h3>
+            <p class="meta">Guidelines prevent distortion, wrong colors, and inconsistent application across vendors.</p>
+            <p style="margin-top:10px;"><strong>Explore logo rules →</strong></p>
           </a>
 
-          <a class="card card-link" href="/portfolio" aria-label="Browse Kamog Artistry portfolio">
+          <a class="card card-link proof-card" href="/portfolio" aria-label="Browse portfolio">
+            <div class="proof-frame">
+              <img src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img06.jpg" alt="Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            </div>
             <h3>More Branding Proof</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Want examples closer to your industry (construction, hospitality, retail, NGOs, events)?
-              Browse our portfolio for real work and consistent execution outcomes.
-            </p>
+            <p class="meta">Browse projects across branding, printing, signage and production outcomes.</p>
             <p style="margin-top:10px;"><strong>Browse portfolio →</strong></p>
           </a>
         </div>
 
         <div style="text-align:center;margin-top:18px;">
           <a class="btn-primary" href="/portfolio">See More Work</a>
-          <a class="btn-primary" href="/contact" style="margin-left:8px;">Request Brand Guidelines</a>
+          <a class="btn-primary" href="/contact" style="margin-left:8px;">Request a Quote</a>
         </div>
       </div>
     </section>
 
-    <!-- F) GALLERY (MANDATORY) -->
+    <!-- 12 Logo Gallery (light) -->
     <section class="section light animate" id="gallery">
       <div class="content-wrap">
-        <h2>Gallery: Brand Guidelines Work From Our Portfolio</h2>
-
+        <h2>Gallery: Brands We’ve Helped Keep Consistent</h2>
         <p style="opacity:.9;max-width:980px;">
-          This gallery highlights disciplined execution — the kind of consistency brand guidelines protect.
-          Where exact asset paths are unknown, we’ve added safe TODO placeholders. Replace them with real paths from your <strong>/assets/img/portfolio/...</strong> folders.
+          A quick snapshot of client brands we’ve supported—minimal captions, just proof. (No external links here.)
         </p>
 
-        <div class="gallery-grid">
-          <a class="card card-link gallery-item" href="/portfolio/voltech-branding" aria-label="Voltech branding gallery item">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg"
-                alt="Voltech Engineering branding rollout showing consistent corporate usage rules in Kampala"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Consistency across outputs</strong><br/>
-                Guidelines keep logo placement, spacing, and hierarchy consistent across future corporate materials.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio/voltech-branding" aria-label="Voltech branding additional image">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg"
-                alt="Voltech branding image showing clean typography hierarchy and layout discipline"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Typography and hierarchy discipline</strong><br/>
-                A brand manual standardises how headings and body text appear, preventing “random fonts” over time.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC branding image">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg"
-                alt="TOOKE BIRDC UMA 2025 visuals showing cohesive styling system"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>One system, many pieces</strong><br/>
-                Even under time pressure, standards keep visuals aligned—colors, type, spacing and layout cues stay consistent.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC branding image 2">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg"
-                alt="TOOKE BIRDC branding image showing cohesive graphic system"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Repeatable visual direction</strong><br/>
-                Guidelines are what make a style repeatable—so your brand remains recognisable across channels.
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO placeholders (replace with real asset paths from /assets/img/portfolio/... ) -->
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Brand guideline placeholder 1">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-                alt="Brand guideline example showing logo clear space and minimum size rules"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Logo spacing rules (clear space)</strong><br/>
-                <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-                Clear space prevents cramped logos and keeps a premium look on documents and signage.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Brand guideline placeholder 2">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-                alt="Brand guideline example showing approved color palette for print and digital"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Approved palette for print + digital</strong><br/>
-                <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-                Standard colors reduce printing variation and keep the brand consistent across suppliers in Kampala.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Brand guideline placeholder 3">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-                alt="Brand guideline example showing correct and incorrect logo usage"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Do/Don’t examples</strong><br/>
-                <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-                Prevent stretching, recoloring, wrong backgrounds, and distortion that weaken brand trust.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Brand guideline placeholder 4">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-                alt="Brand guideline example showing typography hierarchy rules"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Typography hierarchy rules</strong><br/>
-                <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-                A consistent typographic system makes proposals, profiles, and marketing materials look corporate.
-              </figcaption>
-            </figure>
-          </a>
+        <div class="logo-gallery" aria-label="Client brands gallery (12)">
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/01_Voltech.png" alt="Voltech brand consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>Voltech Engineering</strong><br/>Consistency support</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/02_Tooke.png" alt="TOOKE brand consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>TOOKE</strong><br/>Brand system</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/03_MODVA.png" alt="UPDF Spouses Desk consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>UPDF Spouses Desk</strong><br/>Institutional</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/04_SBL.png" alt="SBL consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>SBL Intel Systems</strong><br/>Usage rules</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/05_EasyXport.png" alt="EasyXport consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>EasyXport</strong><br/>Brand direction</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/06_MOTMH.png" alt="MOTMH consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>MOTMH</strong><br/>Visual standards</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/07_Abundance.png" alt="Abundance consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>Abundance Herbal</strong><br/>Brand standards</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/08_LMN.png" alt="LMN consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>LMN</strong><br/>Clean system</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/08_ROKASTARS.png" alt="Roka Stars consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>Roka Stars</strong><br/>Visual rules</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/09_YABX.png" alt="YABX consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>YABX</strong><br/>Usage standards</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/10_CAPSADA.png" alt="CAPSADA consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>CAPSADA</strong><br/>Brand rules</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/10_LEGACY_FASHIONS.png" alt="Legacy Fashions consistency supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>Legacy Fashions</strong><br/>Consistency</p></div>
         </div>
 
-        <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/portfolio">Browse Full Portfolio</a>
-          <a class="btn-primary" href="/contact" style="margin-left:8px;">Start Guidelines</a>
+        <div class="cta-strip">
+          <div style="min-width:260px">
+            <strong>Need guidelines that printers and vendors can follow?</strong>
+            <div style="opacity:.86;margin-top:6px">
+              We’ll structure your rules clearly so execution stays clean across printing, signage, and digital.
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn-primary" href="/contact">Request a Quote</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- G) RELATED BRANDING SERVICES (MANDATORY internal linking) -->
+    <!-- Related Services (dark) -->
     <section class="section animate" id="related">
       <div class="content-wrap">
-        <h2>Related Branding Services (Recommended Next Steps)</h2>
-
+        <h2>Related Branding Services in Kampala (Build and Roll Out the System)</h2>
         <p style="opacity:.9;max-width:980px;">
-          Brand guidelines work best when they sit on top of a strong identity and clear positioning.
-          Use these links to connect guidelines into a full authority branding system.
+          Guidelines keep the system consistent. If you still need the system built—or you want roll-out support—use the services below.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <a class="card card-link" href="/branding-kampala">
-            <h3>Branding Services in Kampala (Hub)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Explore the full branding hub with cluster pages designed for topical authority and internal linking strength.
-            </p>
+            <h3>Branding Kampala (Hub)</h3>
+            <p style="opacity:.88;margin-top:10px;">All branding clusters in one place.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Open hub →</strong></p>
           </a>
 
-          <a class="card card-link" href="/branding/brand-strategy-services-kampala/">
-            <h3>Brand Strategy Services Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If your messaging and positioning are unclear, strategy creates a foundation that guidelines can protect.
-            </p>
+          <a class="card card-link" href="/branding/corporate-brand-identity-design-kampala/">
+            <h3>Corporate Brand Identity Design</h3>
+            <p style="opacity:.88;margin-top:10px;">Build the identity system first: colors, typography, layouts, and templates direction.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
           </a>
 
           <a class="card card-link" href="/branding/logo-design-kampala/">
             <h3>Logo Design Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Guidelines protect your logo from misuse. If you still need a modern mark built for real production, start here.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">Start with the logo foundation (then lock usage rules in guidelines).</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
           </a>
 
-          <a class="card card-link" href="/branding/corporate-identity-design-kampala/">
-            <h3>Corporate Identity Design Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Turn your brand into a full system—templates and identity assets that work in corporate documents and marketing.
-            </p>
+          <a class="card card-link" href="/branding/rebranding-services-kampala/">
+            <h3>Rebranding Services Kampala</h3>
+            <p style="opacity:.88;margin-top:10px;">If your current identity feels outdated or inconsistent, upgrade the system first.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
           </a>
 
-          <!-- ONE relevant money page -->
-          <a class="card card-link" href="/signage-fabrication-uganda">
-            <h3>Signage Fabrication in Uganda</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If your brand appears on signboards, guidelines prevent wrong colors and poor contrast on physical installations.
-            </p>
+          <a class="card card-link" href="/branding/brand-strategy-consulting-kampala/">
+            <h3>Brand Strategy Consulting Kampala</h3>
+            <p style="opacity:.88;margin-top:10px;">Clarify message and positioning before heavy rollout.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
+          </a>
+
+          <a class="card card-link" href="/branding/packaging-design-kampala/">
+            <h3>Packaging Design Kampala</h3>
+            <p style="opacity:.88;margin-top:10px;">Apply guidelines to product packaging for a consistent shelf-ready look.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
           </a>
         </div>
+
+        <p style="opacity:.88;margin-top:12px;">
+          Back to the hub for all 12 branding clusters:
+          <a href="/branding-kampala"><strong>Branding Kampala →</strong></a>
+        </p>
       </div>
     </section>
 
-    <!-- H) PRICING DRIVERS + TIMELINES (no fixed prices) -->
+    <!-- Pricing Drivers + Timelines (dark) -->
     <section class="section animate" id="pricing-timeline">
       <div class="content-wrap">
         <h2>Brand Guidelines Pricing in Kampala: What Affects Cost + Typical Timelines</h2>
-
         <p style="opacity:.9;max-width:980px;">
-          Brand guideline cost and timing depend on depth. A simple “logo usage sheet” is different from a full manual that covers typography, colors, layouts,
-          templates guidance, and production-ready standards for printing and signage.
+          Guidelines pricing depends on how deep the document goes and how many materials you want standardised. Below are the main drivers—kept clear and practical.
         </p>
 
         <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Guideline depth</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              A mini guide (logo rules + palette + typography basics) is lighter than a full manual with multiple usage examples and application pages.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Number of brand assets</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If your brand needs multiple logo versions, sub-brands, icon sets, and extended applications, guidelines become broader and more detailed.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Template integration</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Adding stationery/document template guidance increases scope because we must define consistent layouts and usage rules.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Production requirements</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If you need print and signage readiness, we add practical standards for contrast, minimum sizes, and export controls to prevent wrong results.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Existing identity quality</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If your logo and identity files are already clean, guidelines are easier. If the identity needs refinement first, we scope it in phases.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Typical timelines (range)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Many brand guideline projects take <strong>about several working days to 2 weeks</strong> depending on depth, number of assets, and review speed.
-              If guidelines are part of a full identity build or rebrand, overall timelines extend based on execution scope.
-            </p>
-          </div>
+          <div class="card"><h3>Guideline depth</h3><p style="opacity:.88;margin-top:10px;">Basic logo + color rules vs full brand system rules and templates direction.</p></div>
+          <div class="card"><h3>Materials included</h3><p style="opacity:.88;margin-top:10px;">Stationery, social templates direction, documents, packaging, signage notes—each adds scope.</p></div>
+          <div class="card"><h3>Existing brand quality</h3><p style="opacity:.88;margin-top:10px;">If files are missing or inconsistent, the guideline build takes longer.</p></div>
+          <div class="card"><h3>Revision structure</h3><p style="opacity:.88;margin-top:10px;">We keep refinements structured so rules stay clear and final.</p></div>
+          <div class="card"><h3>Timeline expectations</h3><p style="opacity:.88;margin-top:10px;">Urgent timelines are possible when scope and approvals are clear.</p></div>
+          <div class="card"><h3>Typical ranges</h3><p style="opacity:.88;margin-top:10px;">Most guideline projects take <strong>several working days to a few weeks</strong> depending on depth.</p></div>
         </div>
 
         <div class="cta-strip">
           <div style="min-width:260px">
-            <strong>Get the right guideline level</strong>
+            <strong>Get a quick guidelines estimate</strong>
             <div style="opacity:.86;margin-top:6px">
-              Tell us where your brand appears most: signage, stationery, social, packaging, or corporate documents. We’ll recommend scope.
+              Send: logo files + any current colors/fonts + the materials you use most + deadline. We’ll recommend scope and next steps.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -867,131 +723,70 @@
       </div>
     </section>
 
-    <!-- I) FAQ (6–10 questions) + JSON-LD FAQPage schema -->
+    <!-- FAQ (light) -->
     <section class="section light animate" id="faqs">
       <div class="content-wrap">
-        <h2>Brand Guidelines Development Kampala FAQs</h2>
-
+        <h2>Brand Guidelines Design Kampala FAQs</h2>
         <p style="opacity:.9;max-width:980px;">
-          Common questions from Kampala businesses that want to protect their branding across designers, printers, and signage teams.
+          Quick answers for Kampala businesses looking to standardise brand usage and stop inconsistency.
         </p>
 
         <div class="faq-grid">
-          <div class="card">
-            <h3>What are brand guidelines?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Brand guidelines are the rules that control how your brand is used: logo spacing, colors, typography, layout style, and what to avoid—so everything looks consistent.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Do Kampala SMEs really need a brand manual?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. Even small teams often use multiple printers and designers. Guidelines stop your logo from being stretched, recolored, or placed wrongly on posters and signage.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What is included in a good guidelines document?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              A strong manual includes logo usage rules, spacing, minimum sizes, approved versions, color system, typography hierarchy, and do/don’t examples—plus production notes where needed.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Will brand guidelines improve printing and signage quality?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. Guidelines reduce guessing: correct file formats, contrast rules, consistent colors, and spacing standards help printers and signage teams deliver better results.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Do you develop guidelines even if I already have a logo?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. If the logo files are usable, we create rules around them. If the logo needs refinement first, we recommend:
-              <a href="/branding/logo-design-kampala/">Logo Design Kampala</a>
-              or a
-              <a href="/branding/rebranding-services-kampala/">Rebranding refresh</a>.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>How long does brand guidelines development take in Kampala?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Many guideline projects take several working days to around two weeks, depending on depth, number of assets, and review speed.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Can guidelines include templates for quotations and documents?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. For full template systems, we typically pair guidelines with:
-              <a href="/branding/corporate-identity-design-kampala/">Corporate Identity Design Kampala</a>.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What affects the cost of a brand manual?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Guideline depth, number of logo versions and assets, template integration, and whether you require production-ready standards for print and signage.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Can you help implement the guidelines after delivery?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. If you need rollout support (printing or signage prep), we can support execution so your standards are applied correctly.
-            </p>
-          </div>
+          <div class="card"><h3>What are brand guidelines?</h3><p style="opacity:.88;margin-top:10px;">Brand guidelines are the rules for using your logo, colors, typography and layouts so your brand stays consistent across print, signage, documents and digital.</p></div>
+          <div class="card"><h3>Do I need guidelines if I already have an identity?</h3><p style="opacity:.88;margin-top:10px;">Yes if multiple people or vendors handle your brand. Guidelines protect consistency and reduce misuse.</p></div>
+          <div class="card"><h3>Will guidelines help with printing consistency?</h3><p style="opacity:.88;margin-top:10px;">Yes. Guidelines define color standards, file formats, and production notes so vendors keep output consistent.</p></div>
+          <div class="card"><h3>Do guidelines include do/don’t examples?</h3><p style="opacity:.88;margin-top:10px;">Yes. We include practical do/don’t rules to prevent distortion, wrong colors, and poor placement.</p></div>
+          <div class="card"><h3>Can you create guidelines for a new logo?</h3><p style="opacity:.88;margin-top:10px;">Yes. Many brands start with <a href="/branding/logo-design-kampala/">logo design</a>, then add guidelines to lock usage rules.</p></div>
+          <div class="card"><h3>How long does it take?</h3><p style="opacity:.88;margin-top:10px;">Depends on depth. Many guideline projects take several working days to a few weeks.</p></div>
+          <div class="card"><h3>What files do I need to send?</h3><p style="opacity:.88;margin-top:10px;">Logo files (if available), any existing brand colors/fonts, and examples of materials you use most (quotation, invoice, profile, signage, packaging, social).</p></div>
+          <div class="card"><h3>Can guidelines cover templates too?</h3><p style="opacity:.88;margin-top:10px;">Yes. Template direction can be included based on scope (documents, social layouts, presentations).</p></div>
+          <div class="card"><h3>Do you help implement the guidelines?</h3><p style="opacity:.88;margin-top:10px;">Yes. We can support roll-out across real materials and production outputs.</p></div>
         </div>
 
         <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/contact">Request Brand Guidelines</a>
+          <a class="btn-primary" href="/contact">Request Guidelines Quote</a>
           <a class="btn-primary" href="/branding-kampala" style="margin-left:8px;">Back to Branding Hub</a>
         </div>
 
-        <!-- JSON-LD FAQPage (matches visible FAQs) -->
         <script type="application/ld+json">
         {
           "@context":"https://schema.org",
           "@type":"FAQPage",
           "mainEntity":[
-            {"@type":"Question","name":"What are brand guidelines?","acceptedAnswer":{"@type":"Answer","text":"Brand guidelines are the rules that control how your brand is used: logo spacing, colors, typography, layout style, and what to avoid—so everything looks consistent."}},
-            {"@type":"Question","name":"Do Kampala SMEs really need a brand manual?","acceptedAnswer":{"@type":"Answer","text":"Yes. Even small teams often use multiple printers and designers. Guidelines stop your logo from being stretched, recolored, or placed wrongly on posters and signage."}},
-            {"@type":"Question","name":"What is included in a good guidelines document?","acceptedAnswer":{"@type":"Answer","text":"A strong manual includes logo usage rules, spacing, minimum sizes, approved versions, color system, typography hierarchy, and do/don’t examples—plus production notes where needed."}},
-            {"@type":"Question","name":"Will brand guidelines improve printing and signage quality?","acceptedAnswer":{"@type":"Answer","text":"Yes. Guidelines reduce guessing: correct file formats, contrast rules, consistent colors, and spacing standards help printers and signage teams deliver better results."}},
-            {"@type":"Question","name":"Do you develop guidelines even if I already have a logo?","acceptedAnswer":{"@type":"Answer","text":"Yes. If the logo files are usable, rules are created around them. If the logo needs refinement first, logo design or a rebranding refresh is recommended."}},
-            {"@type":"Question","name":"How long does brand guidelines development take in Kampala?","acceptedAnswer":{"@type":"Answer","text":"Many guideline projects take several working days to around two weeks, depending on depth, number of assets, and review speed."}},
-            {"@type":"Question","name":"Can guidelines include templates for quotations and documents?","acceptedAnswer":{"@type":"Answer","text":"Yes. For full template systems, guidelines are often paired with corporate identity design."}},
-            {"@type":"Question","name":"What affects the cost of a brand manual?","acceptedAnswer":{"@type":"Answer","text":"Guideline depth, number of logo versions and assets, template integration, and whether production-ready standards for print and signage are required."}},
-            {"@type":"Question","name":"Can you help implement the guidelines after delivery?","acceptedAnswer":{"@type":"Answer","text":"Yes. Rollout support for printing or signage prep can be provided so standards are applied correctly."}}
+            {"@type":"Question","name":"What are brand guidelines?","acceptedAnswer":{"@type":"Answer","text":"Brand guidelines are the rules for using your logo, colors, typography and layouts so your brand stays consistent across print, signage, documents and digital."}},
+            {"@type":"Question","name":"Do I need guidelines if I already have an identity?","acceptedAnswer":{"@type":"Answer","text":"Yes if multiple people or vendors handle your brand. Guidelines protect consistency and reduce misuse."}},
+            {"@type":"Question","name":"Will guidelines help with printing consistency?","acceptedAnswer":{"@type":"Answer","text":"Yes. Guidelines define color standards, file formats, and production notes so vendors keep output consistent."}},
+            {"@type":"Question","name":"Do guidelines include do/don’t examples?","acceptedAnswer":{"@type":"Answer","text":"Yes. We include practical do/don’t rules to prevent distortion, wrong colors, and poor placement."}},
+            {"@type":"Question","name":"Can you create guidelines for a new logo?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many brands start with logo design, then add guidelines to lock usage rules."}},
+            {"@type":"Question","name":"How long does it take?","acceptedAnswer":{"@type":"Answer","text":"Depends on depth. Many guideline projects take several working days to a few weeks."}},
+            {"@type":"Question","name":"What files do I need to send?","acceptedAnswer":{"@type":"Answer","text":"Logo files (if available), any existing brand colors/fonts, and examples of materials you use most (quotation, invoice, profile, signage, packaging, social)."}},
+            {"@type":"Question","name":"Can guidelines cover templates too?","acceptedAnswer":{"@type":"Answer","text":"Yes. Template direction can be included based on scope (documents, social layouts, presentations)."}},
+            {"@type":"Question","name":"Do you help implement the guidelines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can support roll-out across real materials and production outputs."}}
           ]
         }
         </script>
       </div>
     </section>
 
-    <!-- J) FINAL CTA -->
+    <!-- Final CTA (light) -->
     <section class="section light animate" style="padding-top:50px;">
       <div class="content-wrap">
         <div class="card">
-          <h2 style="margin-bottom:10px;">Ready to protect your brand from misuse and inconsistency?</h2>
+          <h2 style="margin-bottom:10px;">Ready to stop brand inconsistency across your business?</h2>
           <p style="opacity:.88;margin-bottom:16px;">
-            A good brand guideline manual keeps your identity clean across designers, printers and staff.
-            If you want consistent branding in Kampala — on documents, posters, signage and digital — share your current logo and where you use it.
-            We’ll respond as soon as possible with practical next steps.
+            If you want a clear brand style guide that keeps your identity consistent across printing, signage, documents and digital—send your brief and we’ll guide next steps.
           </p>
 
           <div class="hero-actions">
-            <a class="btn-primary" href="/contact">Start Brand Guidelines</a>
-            <a class="btn-secondary" href="/portfolio" style="margin-left:8px;">See Portfolio Proof</a>
+            <a class="btn-primary" href="/contact">Start Guidelines Project</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener" style="margin-left:8px;">WhatsApp</a>
           </div>
 
           <p style="opacity:.82;margin-top:14px;">
             Next:
-            <a href="/branding/brand-strategy-services-kampala/">Brand Strategy</a> •
-            <a href="/branding/corporate-identity-design-kampala/">Corporate Identity</a> •
-            <a href="/branding/logo-design-kampala/">Logo Design Kampala</a>
+            <a href="/branding/corporate-brand-identity-design-kampala/">Corporate Identity</a> •
+            <a href="/branding/rebranding-services-kampala/">Rebranding</a> •
+            <a href="/branding/brand-strategy-consulting-kampala/">Brand Strategy</a>
           </p>
         </div>
       </div>
@@ -999,7 +794,7 @@
 
   </main>
 
-  <!-- FOOTER (UNIVERSAL — MUST REMAIN EXACT) -->
+  <!-- FOOTER (universal) -->
   <footer class="footer">
     <div class="footer-wrap">
       <div class="footer-col">
@@ -1070,7 +865,9 @@
     </div>
   </footer>
 
+  <!-- Scripts (must be inside body) -->
   <script src="/assets/js/script.js" defer></script>
   <script src="/assets/js/animations.js" defer></script>
+
 </body>
 </html>

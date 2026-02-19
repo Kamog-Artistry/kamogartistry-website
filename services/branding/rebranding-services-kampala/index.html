@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Rebranding Services Kampala | Refresh, Reposition & Rollout | Kamog Artistry (U) Ltd</title>
+  <title>Rebranding Services Kampala | Brand Refresh & Identity Upgrade | Kamog Artistry (U) Ltd</title>
 
-  <meta name="description" content="Rebranding services in Kampala by Kamog Artistry (U) Ltd. Refresh your brand identity, messaging, and rollout assets for print, signage, stationery and digital—without losing trust or continuity." />
+  <meta name="description" content="Rebranding services in Kampala by Kamog Artistry (U) Ltd. We refresh outdated brands, modernise logos, rebuild identity systems, and roll out consistent visuals across documents, signage, packaging and digital. Serving Kampala, Wakiso & Mukono." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b6fbf" />
 
@@ -14,25 +14,24 @@
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kamogartistry.com/sitemap.xml" />
   <link rel="stylesheet" href="/assets/css/style.css" />
 
-  <!-- Tiny technical polish -->
   <link rel="preload" as="image" href="/assets/img/brand/logo-white.svg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
   <meta property="og:title" content="Rebranding Services Kampala | Kamog Artistry (U) Ltd" />
-  <meta property="og:description" content="A structured rebrand in Kampala: identity refresh, messaging clarity and rollout assets aligned for print, signage and digital." />
+  <meta property="og:description" content="Modernise your brand identity and roll out a consistent, premium look across print, signage, packaging and digital." />
   <meta property="og:url" content="https://kamogartistry.com/branding/rebranding-services-kampala/" />
-  <meta property="og:image" content="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg" />
-  <meta property="og:image:alt" content="Brand rollout example from Kamog Artistry portfolio (Kampala)" />
+  <meta property="og:image" content="https://kamogartistry.com/assets/img/clients/01_Voltech.png" />
+  <meta property="og:image:alt" content="Voltech brand consistency supported by Kamog Artistry (U) Ltd" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rebranding Services Kampala | Kamog Artistry (U) Ltd" />
-  <meta name="twitter:description" content="Rebrand with clarity and continuity: identity refresh + rollout assets built for real production (print & signage)." />
-  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg" />
+  <meta name="twitter:description" content="Rebrand and upgrade your identity for stronger trust, consistency and market confidence." />
+  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/clients/01_Voltech.png" />
 
-  <!-- Page-only safe upgrades (NO TOC). Do not alter global CSS files -->
+  <!-- Page-only fixes (safe, local). No global CSS edits. No TOC. -->
   <style>
     :root{
       --km-blue:#0b6fbf;
@@ -42,62 +41,92 @@
     }
 
     html{ scroll-behavior:smooth; }
-    .content-wrap{ max-width:1100px; margin:0 auto; padding:0 16px; }
+    .content-wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
 
-    .skip-link{ position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link{
+      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
     .skip-link:focus{
       left:12px; top:12px; width:auto; height:auto; padding:10px 12px;
       background:#fff; color:var(--km-ink); border-radius:10px; z-index:9999;
       box-shadow:0 10px 22px rgba(0,0,0,.18);
     }
 
-    /* Breadcrumbs on dark hero */
-    .breadcrumbs{
-      opacity:.92;
-      font-size:.95rem;
-      margin-bottom:12px;
+    /* Breadcrumbs (hero is dark) */
+    .breadcrumbs {
+      opacity: .92;
+      font-size: .95rem;
+      margin-bottom: 12px;
       display:flex;
       flex-wrap:wrap;
       gap:8px;
       align-items:center;
     }
     .breadcrumbs a{
-      color:rgba(255,255,255,.92);
-      text-decoration:underline;
-      text-underline-offset:3px;
-      font-weight:900;
+      color: rgba(255,255,255,.92);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 900;
     }
     .breadcrumbs .sep{ opacity:.65; user-select:none; color:#fff; }
 
-    /* Ensure hero CTAs are visible */
+    /* Button text safety */
     .btn-primary, .btn-secondary{ text-decoration:none !important; }
     .btn-primary, .btn-primary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
     .btn-secondary, .btn-secondary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
 
-    /* Links in light sections */
-    .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link){
-      color:var(--km-blue);
-      -webkit-text-fill-color:var(--km-blue);
-      text-decoration:underline;
-      text-underline-offset:4px;
-      font-weight:900;
+    /* FIX: secondary buttons visible on LIGHT sections */
+    .section.light .btn-secondary{
+      background: var(--km-blue) !important;
+      border: 1px solid rgba(11,111,191,.25) !important;
+      opacity: 1 !important;
     }
-    .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
-      color:var(--km-orange);
-      -webkit-text-fill-color:var(--km-orange);
+    .section.light .btn-secondary:hover{
+      background: var(--km-orange) !important;
+      border-color: rgba(242,140,40,.35) !important;
     }
 
-    /* Cards readability */
-    a.card-link{ text-decoration:none !important; display:block; }
-    a.card-link:hover{ transform:translateY(-2px); transition:transform .15s ease; }
-    .card, .card *{ color:var(--km-ink); -webkit-text-fill-color:var(--km-ink); }
-    .card p{ color:var(--km-muted); -webkit-text-fill-color:var(--km-muted); }
+    /* Links in LIGHT sections */
+    .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link){
+      color: var(--km-blue);
+      -webkit-text-fill-color: var(--km-blue);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 900;
+    }
+    .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
+      color: var(--km-orange);
+      -webkit-text-fill-color: var(--km-orange);
+    }
+
+    /* FIX: Links visible on DARK sections */
+    .section:not(.light) a:not(.btn-primary):not(.btn-secondary):not(.card-link){
+      color: rgba(255,255,255,.92) !important;
+      -webkit-text-fill-color: rgba(255,255,255,.92) !important;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 900;
+    }
+    .section:not(.light) a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+      opacity:.95;
+    }
+
+    a.card-link { text-decoration:none !important; display:block; }
+    a.card-link:hover { transform: translateY(-2px); transition: transform .15s ease; }
+
+    .card, .card *{
+      color: var(--km-ink);
+      -webkit-text-fill-color: var(--km-ink);
+    }
+    .card p{ color: var(--km-muted); -webkit-text-fill-color: var(--km-muted); }
 
     .cta-strip{
       border:1px solid rgba(11,111,191,.18);
-      background:rgba(11,111,191,.06);
-      border-radius:18px;
-      padding:16px;
+      background: rgba(11,111,191,.06);
+      border-radius: 18px;
+      padding: 16px;
       display:flex;
       gap:14px;
       align-items:center;
@@ -106,71 +135,109 @@
       margin-top:16px;
     }
 
-    .pill-row{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:14px; }
-    .pill{
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.25);
-      background:rgba(255,255,255,.08);
-      color:#fff;
-      font-weight:800;
-      font-size:.95rem;
-    }
+    .pill-row { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:14px; }
+    .pill { padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); color:#fff; font-weight: 800; font-size: .95rem; }
 
-    .list-clean{ margin-top:10px; opacity:.92; line-height:1.85; }
-
-    /* Callout */
-    .note{
-      border-left:4px solid rgba(242,140,40,.9);
-      padding:12px 14px;
-      border-radius:14px;
-      background:rgba(242,140,40,.08);
-      margin-top:14px;
-    }
-
-    /* Gallery */
-    .gallery-grid{
+    .list-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-      gap:12px;
-      margin-top:16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
     }
-    .gallery-item figure{ margin:0; }
-    .gallery-item img{
+    .list-clean { margin-top: 10px; opacity:.92; line-height: 1.85; }
+
+    /* Proof cards */
+    .proof-card{ display:flex; flex-direction:column; gap:12px; }
+    .proof-frame{
+      background:#ffffff;
+      border:1px solid rgba(11,111,191,.12);
+      border-radius:16px;
+      padding:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:160px;
+      box-shadow:0 10px 22px rgba(0,0,0,.06);
+    }
+    .proof-frame img{
+      max-width:240px;
       width:100%;
       height:auto;
       display:block;
-      border-radius:14px;
+      object-fit:contain;
     }
-    .gallery-item figcaption{
-      opacity:.88;
-      font-size:.95rem;
-      margin-top:10px;
-      line-height:1.55;
+    .proof-card .meta{ font-size:.95rem; opacity:.9; line-height:1.6; }
+
+    /* 12-item gallery */
+    .logo-gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+      align-items: stretch;
+    }
+    .logo-tile{
+      border: 1px solid rgba(11,111,191,.14);
+      background: #fff;
+      border-radius: 16px;
+      padding: 14px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      justify-content:space-between;
+      min-height: 170px;
+    }
+    .logo-box{
+      border-radius: 12px;
+      background: rgba(11,111,191,.04);
+      border: 1px solid rgba(11,111,191,.10);
+      padding: 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height: 110px;
+    }
+    .logo-box img{
+      max-width: 160px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display:block;
+    }
+    .logo-cap{
+      font-size: .95rem;
+      line-height: 1.35;
+      color: var(--km-muted);
+      -webkit-text-fill-color: var(--km-muted);
+      margin: 0;
+    }
+    .logo-cap strong{
+      color: var(--km-ink);
+      -webkit-text-fill-color: var(--km-ink);
     }
 
-    /* FAQ */
     .faq-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:12px;
-      margin-top:18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
     }
 
-    /* Footer link underline only on hover (page-local safety) */
+    /* Footer links: underline only on hover */
     .footer a, .footer a:visited{ color:#ffffff !important; }
     .footer a:not(.footer-cta):not(.social-btn),
     .footer a:not(.footer-cta):not(.social-btn):visited{ text-decoration:none !important; opacity:.95; }
     .footer a:not(.footer-cta):not(.social-btn):hover{
-      text-decoration:underline !important;
-      text-underline-offset:3px;
-      text-decoration-thickness:1px;
+      text-decoration: underline !important;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
       opacity:.95;
     }
     .footer a.footer-cta, .footer a.footer-cta:visited{ text-decoration:none !important; }
   </style>
 
-  <!-- Schema: Breadcrumb -->
+  <!-- Simplified Schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -183,7 +250,6 @@
   }
   </script>
 
-  <!-- Schema: Organization -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -192,25 +258,29 @@
     "url":"https://kamogartistry.com/",
     "logo":"https://kamogartistry.com/assets/img/brand/logo-white.svg",
     "email":"info@kamogartistry.com",
-    "telephone":"+256775251445",
-    "sameAs":[
-      "https://www.facebook.com/611977605339985",
-      "https://www.instagram.com/kamog_artistry_u_ltd",
-      "https://www.linkedin.com/company/kamog-artistry-u-ltd",
-      "https://x.com/kamogartistry",
-      "https://www.behance.net/kamogArtistry",
-      "https://www.threads.com/@kamog_artistry_u_ltd"
-    ]
+    "telephone":"+256775251445"
   }
   </script>
 
-  <!-- Schema: Service -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Kamog Artistry (U) Ltd",
+    "url":"https://kamogartistry.com/",
+    "email":"info@kamogartistry.com",
+    "telephone":"+256775251445",
+    "address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},
+    "areaServed":["Kampala","Wakiso","Mukono","Uganda"]
+  }
+  </script>
+
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Service",
-    "name":"Rebranding Services in Kampala",
-    "serviceType":["Rebranding","Brand Refresh","Brand Repositioning","Brand Rollout"],
+    "name":"Rebranding Services Kampala",
+    "serviceType":"Rebranding Services",
     "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
     "provider":{
       "@type":"LocalBusiness",
@@ -228,8 +298,8 @@
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- HEADER (UNIVERSAL — MUST REMAIN EXACT) -->
-<header class="header">
+  <!-- HEADER (universal) -->
+  <header class="header">
     <nav class="nav">
       <a aria-label="Go to homepage" href="/">
         <img src="/assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
@@ -252,7 +322,7 @@
 
   <main id="main">
 
-    <!-- A) HERO (above the fold) -->
+    <!-- HERO (dark) -->
     <section class="hero">
       <div class="content-wrap">
 
@@ -266,47 +336,48 @@
 
         <div class="hero-badge">Kampala • Wakiso • Mukono • Central Uganda</div>
 
-        <h1>Rebranding Services Kampala (Refresh Without Losing Trust)</h1>
+        <h1>Rebranding Services Kampala (Upgrade Your Brand Without Losing Trust)</h1>
 
         <p style="opacity:.92;margin-top:12px;max-width:980px;">
-          A good rebrand is not “changing everything.” It’s upgrading clarity, professionalism, and consistency — while protecting the trust you have already built.
-          In Kampala, customers notice when a brand looks organised. They also notice when a rebrand feels confusing or unstable.
+          If your brand feels outdated, inconsistent, or “not serious enough” for bigger clients, a rebrand is the clean fix.
+          Kamog Artistry (U) Ltd helps Kampala businesses <strong>modernise logos, rebuild identity systems, and roll out consistency</strong>
+          across documents, signage, packaging and digital.
         </p>
 
         <p style="opacity:.9;margin-top:10px;max-width:980px;">
-          Kamog Artistry (U) Ltd offers structured rebranding services in Kampala: we refine your visual identity, strengthen your messaging,
-          and prepare a rollout system that works in real life — on <strong>print, signage, stationery, social media, and corporate documents</strong>.
+          Rebranding is not just a new logo. It’s a strategy + visual system upgrade that makes your brand look premium, clearer, and more trusted—especially when customers compare you to competitors.
         </p>
 
         <div class="hero-actions" style="margin-top:18px;">
-          <a class="btn-primary" href="/contact">Request Rebranding</a>
+          <a class="btn-primary" href="/contact">Request Rebrand Quote</a>
           <a class="btn-secondary" href="/portfolio">View Portfolio</a>
         </div>
 
         <div class="pill-row">
           <div class="pill">Brand Refresh</div>
-          <div class="pill">Identity Upgrade</div>
-          <div class="pill">Messaging Clarity</div>
-          <div class="pill">Rollout Assets</div>
-          <div class="pill">Print + Signage Ready</div>
+          <div class="pill">Logo Modernisation</div>
+          <div class="pill">Identity System</div>
+          <div class="pill">Brand Guidelines</div>
+          <div class="pill">Rollout Support</div>
         </div>
 
         <p style="opacity:.9;margin-top:14px;max-width:980px;">
-          Back to the hub:
-          <a href="/branding-kampala" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Branding Kampala →</a>
+          Explore all branding clusters:
+          <a href="/branding-kampala" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Branding Kampala Hub →</a>
         </p>
 
       </div>
     </section>
 
-    <!-- Quick trust strip -->
+    <!-- Quick Trust Strip (light) -->
     <section class="section light animate" style="padding-top:52px;">
       <div class="content-wrap">
         <div class="cta-strip">
           <div style="min-width:260px">
-            <strong>Rebranding is best for:</strong>
+            <strong>What we need to start</strong>
             <div style="opacity:.86;margin-top:6px">
-              Businesses whose current brand looks outdated, inconsistent, or doesn’t match the quality of their services — especially when moving into corporate clients or scaling.
+              Send your current logo, 3–5 samples of what you use most (quotation, invoice, company profile, signage, packaging, social),
+              and tell us what you want to improve (premium feel, clarity, consistency, modern look, market positioning).
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -315,540 +386,331 @@
           </div>
         </div>
 
-        <div class="note">
-          <strong>Practical reality:</strong> Most “bad rebrands” fail because rollout is ignored. New identity must be applied to the touchpoints customers actually see:
-          signage, quotations, stationery, social graphics, posters, profiles, and vehicle graphics (if applicable).
-        </div>
-
         <p style="opacity:.88;margin-top:12px;">
-          If you want clarity first (before visuals), start with:
-          <a href="/branding/brand-strategy-services-kampala/">Brand Strategy Services Kampala</a>.
-          If you only need a fresh logo, see:
-          <a href="/branding/logo-design-kampala/">Logo Design Kampala</a>.
+          Closely related clusters:
+          <a href="/branding/corporate-brand-identity-design-kampala/">Corporate Brand Identity</a> •
+          <a href="/branding/brand-guidelines-design-kampala/">Brand Guidelines</a>
         </p>
       </div>
     </section>
 
-    <!-- B) AUTHORITY EXPLANATION (educational + commercial) -->
+    <!-- Authority / Scope (light) -->
     <section class="section light animate" id="authority">
       <div class="content-wrap">
-        <h2>What Rebranding Means (And When It’s the Right Move)</h2>
+        <h2>Rebranding in Kampala: What It Includes, When It’s Needed, and What “Good” Looks Like</h2>
 
         <p style="opacity:.9;max-width:980px;">
-          Rebranding is the process of improving how your business is positioned and presented — to better match your market, your growth level, and the customers you want.
-          In Kampala, competition is tight. Many businesses offer similar services, so perception and trust matter.
-          A strong rebrand helps you look established, consistent, and easier to choose.
+          Rebranding is a controlled upgrade. You keep what still has trust, but rebuild what’s holding you back—logo quality,
+          typography, color discipline, layout consistency, and how your brand appears across real business materials.
         </p>
 
-        <p style="opacity:.9;max-width:980px;">
-          Rebranding can be a <strong>refresh</strong> (upgrade without changing the core identity) or a deeper <strong>reposition</strong> (new direction, messaging, and identity system).
-          We scope the rebrand based on what must remain familiar — and what must improve.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
+        <div class="list-grid">
           <div class="card">
-            <h3>Who rebranding is for</h3>
+            <h3>Signs you need rebranding</h3>
             <ul class="list-clean">
-              <li><strong>SMEs</strong> that have grown but still look “informal” in branding.</li>
-              <li><strong>Businesses entering corporate markets</strong> (tenders, B2B, partnerships).</li>
-              <li><strong>Companies with inconsistent visuals</strong> across posters, social, and documents.</li>
-              <li><strong>Brands with outdated logos</strong> that don’t work on signage or digital.</li>
-              <li><strong>Businesses expanding</strong> into new services or customer segments in Kampala.</li>
+              <li><strong>Inconsistent look</strong> (different colors/fonts on every design).</li>
+              <li><strong>Logo feels old</strong> and doesn’t compete with modern brands.</li>
+              <li><strong>Brand looks cheap</strong> in printing, signage, and documents.</li>
+              <li><strong>Growth shift</strong> (new market, new clients, bigger contracts).</li>
+              <li><strong>Confusion</strong> (customers can’t quickly understand what you do).</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>When to choose rebranding</h3>
+            <h3>What a strong rebrand achieves</h3>
             <ul class="list-clean">
-              <li>Your logo feels outdated or doesn’t scale well.</li>
-              <li>Customers struggle to understand what you do quickly.</li>
-              <li>Brand materials look inconsistent across channels.</li>
-              <li>Competitors look more professional — even if your service is better.</li>
-              <li>You are planning a new branch, new service line, or major rollout.</li>
+              <li><strong>Confidence</strong> (brand looks serious and premium).</li>
+              <li><strong>Consistency</strong> across documents, signage, packaging and digital.</li>
+              <li><strong>Clear messaging</strong> and positioning for your audience.</li>
+              <li><strong>Better conversion</strong> because people trust what they see.</li>
+              <li><strong>Smoother execution</strong> with vendors and printers.</li>
             </ul>
           </div>
         </div>
 
-        <h3 style="margin-top:18px;">Common mistakes businesses make</h3>
+        <h3 style="margin-top:18px;">Common Kampala rebrand problems (and how we solve them)</h3>
         <ul class="list-clean">
-          <li><strong>Changing visuals without strategy</strong> — the brand still feels unclear.</li>
-          <li><strong>Over-changing too fast</strong> — customers lose recognition and trust.</li>
-          <li><strong>Ignoring rollout</strong> — new logo exists, but old materials remain everywhere.</li>
-          <li><strong>No standards</strong> — different designers reintroduce inconsistency.</li>
-          <li><strong>Poor production planning</strong> — colors and layouts fail in printing/signage.</li>
-        </ul>
-
-        <h3 style="margin-top:18px;">What success looks like</h3>
-        <ul class="list-clean">
-          <li><strong>Clear positioning</strong> — customers understand you quickly.</li>
-          <li><strong>Modern, usable identity</strong> — works on signage, print, and digital.</li>
-          <li><strong>Consistency</strong> — templates and standards reduce random designs.</li>
-          <li><strong>Stronger trust</strong> — your business looks organised and corporate-ready.</li>
-          <li><strong>Smoother rollout</strong> — customers see one unified brand across touchpoints.</li>
+          <li><strong>Random redesigns</strong> without rules → we build a consistent system and guidelines.</li>
+          <li><strong>New logo, old materials</strong> still everywhere → we plan roll-out across priority items.</li>
+          <li><strong>Color mismatch in printing</strong> → we set production-aware standards.</li>
+          <li><strong>Weak typography</strong> and spacing → we rebuild hierarchy and layout discipline.</li>
+          <li><strong>Brand drift over time</strong> → we provide a clear reference document.</li>
         </ul>
 
         <div class="cta-strip">
           <div style="min-width:260px">
-            <strong>Need a rebrand scope recommendation?</strong>
+            <strong>Want to rebrand without confusion?</strong>
             <div style="opacity:.86;margin-top:6px">
-              Share what you do, who you target, and where your brand appears (signage, documents, social, packaging). We’ll recommend the best rebrand level.
+              Share your current brand materials and what’s not working. We’ll recommend the cleanest upgrade path.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Ask for Scope</a>
-            <a class="btn-primary" href="/branding-kampala">Back to Hub</a>
+            <a class="btn-primary" href="/contact">Ask a Question</a>
+            <a class="btn-primary" href="/branding-kampala">Branding Hub</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- C) DELIVERABLES (commercial intent) -->
+    <!-- Deliverables (dark) -->
     <section class="section animate" id="deliverables">
       <div class="content-wrap">
         <h2>Rebranding Deliverables (What You Receive)</h2>
-
         <p style="opacity:.9;max-width:980px;">
-          Rebranding deliverables depend on whether you’re doing a refresh or deeper reposition.
-          Our deliverables are structured to support real execution in Kampala — not just “a new logo file.”
+          Rebranding deliverables depend on scope, but the goal stays the same: a stronger identity system and consistent rollout across real materials.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
-            <h3>Identity assets</h3>
+            <h3>Logo upgrade</h3>
             <ul class="list-clean">
-              <li>Updated logo (primary + alternate versions where needed)</li>
-              <li>Logo exports for different backgrounds (light/dark)</li>
-              <li>Print-ready & scalable files (vector-ready formats where required)</li>
-              <li>Icon / mark options (if your brand needs a symbol)</li>
+              <li>Modernised logo direction (clean + scalable)</li>
+              <li>Primary / secondary / icon variations</li>
+              <li>Correct files for print and digital use</li>
+              <li>Basic usage rules for consistency</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Brand system</h3>
+            <h3>Identity system</h3>
             <ul class="list-clean">
-              <li>Updated color palette (usable for print + digital)</li>
-              <li>Typography recommendations (consistent hierarchy)</li>
-              <li>Layout direction (spacing, balance, visual discipline)</li>
-              <li>Guidance on imagery style (where applicable)</li>
+              <li>Color palette discipline (primary + accents)</li>
+              <li>Typography hierarchy (headings/body)</li>
+              <li>Layout direction and spacing logic</li>
+              <li>Brand tone direction for visuals</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Messaging alignment</h3>
+            <h3>Brand guidelines</h3>
             <ul class="list-clean">
-              <li>Refined value proposition (clear and believable)</li>
-              <li>Key messaging pillars (what to repeat consistently)</li>
-              <li>Short brand description for profiles and documents</li>
-              <li>Optional brand tone guidance (how you sound)</li>
+              <li>Logo do/don’t rules + clear space</li>
+              <li>Colors + typography rules</li>
+              <li>Layout direction guidance</li>
+              <li>Vendor-ready usage reference</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Templates guidance (optional add-on)</h3>
+            <h3>Roll-out support</h3>
             <ul class="list-clean">
-              <li>Stationery direction (business cards, letterheads)</li>
-              <li>Quotation/proposal layout direction (corporate-ready)</li>
-              <li>Social layout system to prevent random designs</li>
-              <li>Optional identity template pack (if scoped)</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Production readiness</h3>
-            <ul class="list-clean">
-              <li>Print-safe guidance (contrast, readable sizes, file control)</li>
-              <li>Signage alignment notes (visibility at distance)</li>
-              <li>Consistency guidance for banners, stickers and labels</li>
-              <li>Optional rollout checklist (what to change first)</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Brand standards (recommended)</h3>
-            <ul class="list-clean">
-              <li>Basic usage rules to prevent logo misuse</li>
-              <li>Spacing rules and minimum size guidance</li>
-              <li>Do/Don’t examples (avoid distortions)</li>
-              <li>Option to build full manual: <a href="/branding/brand-guidelines-development-kampala/">Brand Guidelines Development</a></li>
+              <li>Priority materials upgrade plan</li>
+              <li>Business stationery direction (quotation, invoice, letterhead)</li>
+              <li>Company profile refresh direction</li>
+              <li>Signage, packaging & digital consistency guidance</li>
             </ul>
           </div>
         </div>
 
         <p style="opacity:.88;margin-top:12px;">
-          For a full system rebrand with templates, combine rebranding with:
-          <a href="/branding/corporate-identity-design-kampala/">Corporate Identity Design Kampala</a>.
+          If you want a system build without a full rebrand:
+          <a href="/branding/corporate-brand-identity-design-kampala/">Corporate Brand Identity →</a>
         </p>
       </div>
     </section>
 
-    <!-- D) PROCESS (4–6 steps) -->
+    <!-- Process (light) -->
     <section class="section light animate" id="process">
       <div class="content-wrap">
-        <h2>Our Rebranding Process (Structured, Practical, Kampala-Focused)</h2>
-
+        <h2>Our Rebranding Process (Structured, Clear, Rollout-Ready)</h2>
         <p style="opacity:.9;max-width:980px;">
-          We keep rebranding structured to avoid confusion. The goal is to upgrade your brand while preserving recognition.
-          We also plan rollout so the rebrand doesn’t “live only in a folder.”
+          Rebrands fail when they’re rushed or when materials aren’t updated consistently. We keep the process structured so the new brand lands clean and stays consistent.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
-            <h3>1) Discovery</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We audit your current identity, your market position in Kampala, and how customers currently perceive you.
-              We also review existing materials: posters, social graphics, documents, signage, and printed touchpoints.
-            </p>
+            <h3>1) Audit</h3>
+            <p style="opacity:.88;margin-top:10px;">We review your current brand, materials, and what’s causing inconsistency or low trust.</p>
           </div>
 
           <div class="card">
             <h3>2) Direction</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We define what must stay familiar and what must change. This protects brand continuity and makes the rebrand feel like an upgrade—not a reset.
-              If positioning is unclear, we integrate strategy scope using:
-              <a href="/branding/brand-strategy-services-kampala/">Brand Strategy Services Kampala</a>.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">We define rebrand goals: premium feel, clarity, modern look, audience fit, and tone.</p>
           </div>
 
           <div class="card">
-            <h3>3) Design</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We develop updated identity directions (logo refinement or redesign, palette and typography direction).
-              Everything is built to work in real production: print, signage, stationery, and digital.
-            </p>
+            <h3>3) Identity rebuild</h3>
+            <p style="opacity:.88;margin-top:10px;">We upgrade the logo and rebuild the supporting system: colors, typography, and layout discipline.</p>
           </div>
 
           <div class="card">
-            <h3>4) Refinement</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We refine based on clear feedback. This stage focuses on clarity, legibility, balance, and how the identity performs across different uses.
-            </p>
+            <h3>4) Guidelines</h3>
+            <p style="opacity:.88;margin-top:10px;">We document usage rules so your brand doesn’t drift after the rebrand.</p>
           </div>
 
           <div class="card">
-            <h3>5) Delivery</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We deliver organised brand assets (export versions, background-safe options, production-ready files) and practical usage guidance to prevent misuse.
-            </p>
+            <h3>5) Roll-out plan</h3>
+            <p style="opacity:.88;margin-top:10px;">We prioritise what gets updated first—documents, signage, packaging, social, profile—based on impact.</p>
           </div>
 
           <div class="card">
-            <h3>6) Optional implementation</h3>
+            <h3>6) Execution support</h3>
             <p style="opacity:.88;margin-top:10px;">
-              If you want rollout support (printing, signage preparation, coordination), we can help implement the new brand so it lands properly in Kampala.
-              For physical rollout, see:
-              <a href="/signage-fabrication-uganda">Signage Fabrication in Uganda</a>.
+              Need print/signage support? We coordinate production guidance when required.
+              See: <a href="/printing-kampala">Printing Services Kampala →</a>
             </p>
           </div>
-        </div>
-
-        <div class="note">
-          <strong>Tip:</strong> A rebrand becomes effective when customers repeatedly see the new system across touchpoints. Rollout planning is what makes it real.
         </div>
       </div>
     </section>
 
-    <!-- E) REAL WORK EXAMPLES (proof) -->
+    <!-- Real Work Examples (light) -->
     <section class="section light animate" id="proof">
       <div class="content-wrap">
-        <h2>Real Work Examples (How Brand Rollout Creates Trust)</h2>
-
+        <h2>Real Work Examples (Consistency That Makes Brands Look Serious)</h2>
         <p style="opacity:.9;max-width:980px;">
-          Rebranding is proven through consistent execution. Below are portfolio examples where disciplined identity application and rollout consistency matter.
-          If you need more examples related to your industry, browse the full portfolio.
+          Rebranding is about visible consistency. When the identity system is clean, everything—from documents to signage—starts looking premium.
         </p>
 
         <div class="grid" style="margin-top:18px;">
-          <a class="card card-link" href="/portfolio/voltech-branding" aria-label="Voltech Engineering branding rollout case study">
-            <h3>Voltech Engineering — Corporate Rollout Discipline</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              This portfolio example shows why corporate brands need consistency. A rebrand is not only the mark—it’s how the identity appears across real business materials.
-            </p>
-            <p class="list-clean">
-              <strong>Rebrand lesson:</strong> Consistent hierarchy and spacing across touchpoints makes a company feel more established.
-            </p>
+          <a class="card card-link proof-card" href="/portfolio/voltech-branding" aria-label="Voltech branding case study">
+            <div class="proof-frame">
+              <img src="/assets/img/clients/01_Voltech.png" alt="Voltech brand system supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            </div>
+            <h3>Voltech Engineering — Strong Corporate Consistency</h3>
+            <p class="meta">Brand system discipline across materials makes companies look established and trusted.</p>
             <p style="margin-top:10px;"><strong>View case study →</strong></p>
           </a>
 
-          <a class="card card-link" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 branding case study">
-            <h3>TOOKE – BIRDC (UMA 2025) — Consistency at Speed</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Multiple deliverables, fast production, and public visibility. When direction is clear, the brand stays cohesive even when output volume increases.
-            </p>
-            <p class="list-clean">
-              <strong>Rebrand lesson:</strong> A clear system prevents “design drift” when multiple pieces are produced quickly.
-            </p>
-            <p style="margin-top:10px;"><strong>View case study →</strong></p>
+          <a class="card card-link proof-card" href="/branding/brand-guidelines-design-kampala/" aria-label="Brand guidelines cluster">
+            <div class="proof-frame">
+              <img src="/assets/img/clients/04_SBL.png" alt="SBL identity supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            </div>
+            <h3>Guidelines Prevent Drift After Rebranding</h3>
+            <p class="meta">A rebrand stays clean when rules are documented and shared with teams and vendors.</p>
+            <p style="margin-top:10px;"><strong>Explore guidelines →</strong></p>
           </a>
 
-          <a class="card card-link" href="/portfolio" aria-label="Browse Kamog Artistry portfolio">
-            <h3>More Rebranding & Brand Upgrade Proof</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Want examples closer to your field (construction, hospitality, retail, NGOs, events)? Explore our portfolio for real executions.
-            </p>
+          <a class="card card-link proof-card" href="/portfolio" aria-label="Browse portfolio">
+            <div class="proof-frame">
+              <img src="/assets/img/brand/logo-white.svg" alt="Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            </div>
+            <h3>More Branding Proof</h3>
+            <p class="meta">Browse projects across branding, printing, signage and production outcomes.</p>
             <p style="margin-top:10px;"><strong>Browse portfolio →</strong></p>
           </a>
         </div>
 
         <div style="text-align:center;margin-top:18px;">
           <a class="btn-primary" href="/portfolio">See More Work</a>
-          <a class="btn-primary" href="/contact" style="margin-left:8px;">Request Rebranding</a>
+          <a class="btn-primary" href="/contact" style="margin-left:8px;">Request a Quote</a>
         </div>
       </div>
     </section>
 
-    <!-- F) GALLERY (MANDATORY) -->
+    <!-- 12-item Gallery (light) -->
     <section class="section light animate" id="gallery">
       <div class="content-wrap">
-        <h2>Gallery: Rebranding Work From Our Portfolio</h2>
-
+        <h2>Gallery: Brands We’ve Supported (Minimal Captions, Real Proof)</h2>
         <p style="opacity:.9;max-width:980px;">
-          This gallery demonstrates the kind of consistency a strong rebrand creates.
-          Where exact asset paths are unknown, we’ve used safe TODO placeholders—replace them with real image paths from your <strong>/assets/img/portfolio/...</strong> folders.
+          A snapshot of brands we’ve supported—clean, simple, and consistent. (No external links inside tiles.)
         </p>
 
-        <div class="gallery-grid">
-          <a class="card card-link gallery-item" href="/portfolio/voltech-branding" aria-label="Voltech branding gallery item">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg"
-                alt="Voltech Engineering brand rollout showing consistency across corporate materials in Kampala"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Corporate consistency</strong><br/>
-                Rebranding success is visible when the identity stays clean across different outputs—layout discipline builds trust.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio/voltech-branding" aria-label="Voltech branding image showing layout hierarchy">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg"
-                alt="Voltech branding image showing professional hierarchy and clean layout structure"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Hierarchy upgrade</strong><br/>
-                A rebrand improves clarity: what leads, what follows, and how information is structured for corporate trust.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC cohesive styling example">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg"
-                alt="TOOKE BIRDC UMA 2025 visuals showing cohesive system and consistent direction"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Cohesive system</strong><br/>
-                Rebranding is strongest when the same style cues repeat across pieces—colors, spacing, and typography feel unified.
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link gallery-item" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC consistent layout example">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg"
-                alt="TOOKE BIRDC branding image showing consistent layouts across event deliverables"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Consistency at speed</strong><br/>
-                A clear system keeps the brand aligned even when multiple outputs are produced quickly.
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Rebranding placeholder image 1">
-            <figure>
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-                alt="Rebranding example showing old vs new brand clarity improvement"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Clarity upgrade (before/after)</strong><br/>
-                <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-                A good rebrand makes the business easier to understand at a glance—cleaner message and stronger presentation.
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Rebranding placeholder image 2">
-            <figure>
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-                alt="Rebranding example showing consistent stationery and document styling"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Documents + stationery alignment</strong><br/>
-                <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-                Rebranding should show on quotations, letterheads and proposals—these are key trust points in Kampala corporate markets.
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Rebranding placeholder image 3">
-            <figure>
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-                alt="Rebranding example showing signage-ready brand visibility and contrast"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Signage-ready visibility</strong><br/>
-                <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-                A rebrand must work at distance: readable sizes, correct contrast, and clean spacing for signboards and banners.
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Rebranding placeholder image 4">
-            <figure>
-              <img
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
-                alt="Rebranding example showing social media system and consistent layout templates"
-                loading="lazy" decoding="async"
-              />
-              <figcaption>
-                <strong>Social template system</strong><br/>
-                <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-                A rebrand stays strong when weekly posts follow a system—consistent type hierarchy and spacing prevents brand drift.
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-
-        <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/portfolio">Browse Full Portfolio</a>
-          <a class="btn-primary" href="/contact" style="margin-left:8px;">Start Rebranding</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- G) RELATED BRANDING SERVICES (MANDATORY internal linking) -->
-    <section class="section animate" id="related">
-      <div class="content-wrap">
-        <h2>Related Branding Services in Kampala (Build a Complete System)</h2>
-
-        <p style="opacity:.9;max-width:980px;">
-          Rebranding is strongest when strategy, identity, and standards connect. Use the links below to build a full branding system around your rebrand.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <a class="card card-link" href="/branding-kampala">
-            <h3>Branding Services in Kampala (Hub)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Explore all branding cluster pages designed to support topical authority and internal linking dominance.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Open hub →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/branding/brand-strategy-services-kampala/">
-            <h3>Brand Strategy Services Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If the brand feels unclear, strategy gives direction before the new identity is applied.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/branding/corporate-identity-design-kampala/">
-            <h3>Corporate Identity Design Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Turn your rebrand into usable templates for documents, proposals, profiles and consistent marketing layouts.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/branding/brand-guidelines-development-kampala/">
-            <h3>Brand Guidelines Development Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Protect the rebrand from misuse by giving staff, designers and printers clear rules and standards.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
-          </a>
-
-          <!-- One relevant money page (relevant to rebrand rollout) -->
-          <a class="card card-link" href="/signage-fabrication-uganda">
-            <h3>Signage Fabrication in Uganda</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              A rebrand must show on signboards and physical branding. We align identity for real signage visibility and production.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- H) PRICING DRIVERS + TIMELINES (no fixed prices) -->
-    <section class="section animate" id="pricing-timeline">
-      <div class="content-wrap">
-        <h2>Rebranding Pricing in Kampala: What Affects Cost + Typical Timelines</h2>
-
-        <p style="opacity:.9;max-width:980px;">
-          Rebranding pricing depends on the level of change and the rollout scope. Some businesses need a clean refresh; others need repositioning, identity rebuild,
-          templates, and production-ready rollout preparation. We scope rebranding to match your goals and reality in Kampala markets.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Refresh vs full reposition</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              A refresh improves and modernises while keeping recognition. A full reposition changes direction and messaging more deeply, which requires more work and alignment.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Number of touchpoints</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If your brand appears on signage, stationery, documents, packaging, uniforms, and vehicles, rollout planning becomes broader—and more valuable.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Asset quality & availability</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If current files are missing or low quality, we may need to rebuild assets properly (vector-ready exports, correct versions, background-safe options).
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Guidelines & standards</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Adding a full brand manual increases scope but protects the investment long-term—especially when multiple people handle design and printing.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Implementation support</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If you want assistance applying the rebrand across real outputs (print/signage coordination), we scope implementation in phases.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Typical timelines (range)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Many rebrand projects take <strong>about one to several weeks</strong> depending on depth, stakeholder feedback, and rollout needs.
-              Larger rollouts extend based on the number of materials being updated.
-            </p>
-          </div>
+        <div class="logo-gallery" aria-label="Rebranding-related brand gallery (12)">
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/01_Voltech.png" alt="Voltech brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>Voltech Engineering</strong><br/>Corporate</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/02_Tooke.png" alt="TOOKE brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>TOOKE</strong><br/>Brand mark</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/03_MODVA.png" alt="UPDF Spouses Desk brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>UPDF Spouses Desk</strong><br/>Institutional</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/04_SBL.png" alt="SBL brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>SBL Intel Systems</strong><br/>Tech</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/05_EasyXport.png" alt="EasyXport brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>EasyXport</strong><br/>Trade</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/06_MOTMH.png" alt="MOTMH brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>MOTMH</strong><br/>Hospitality</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/07_Abundance.png" alt="Abundance brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>Abundance Herbal</strong><br/>Product</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/08_LMN.png" alt="LMN brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>LMN</strong><br/>Minimal</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/08_ROKASTARS.png" alt="Roka Stars brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>Roka Stars</strong><br/>Creative</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/09_YABX.png" alt="YABX brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>YABX</strong><br/>Corporate</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/10_CAPSADA.png" alt="CAPSADA brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>CAPSADA</strong><br/>Organisation</p></div>
+          <div class="logo-tile"><div class="logo-box"><img src="/assets/img/clients/10_LEGACY_FASHIONS.png" alt="Legacy Fashions brand supported by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div><p class="logo-cap"><strong>Legacy Fashions</strong><br/>Retail</p></div>
         </div>
 
         <div class="cta-strip">
           <div style="min-width:260px">
-            <strong>Get a practical rebrand scope</strong>
+            <strong>Want a clean rebrand plan?</strong>
             <div style="opacity:.86;margin-top:6px">
-              Tell us your industry, your target clients, and where your brand appears most. We’ll recommend the right rebranding approach.
+              Send your current logo + 3–5 materials you use most. We’ll recommend a rollout path that keeps trust and improves clarity.
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn-primary" href="/contact">Request a Quote</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services (dark) -->
+    <section class="section animate" id="related">
+      <div class="content-wrap">
+        <h2>Related Branding Services in Kampala (Build and Protect the New System)</h2>
+        <p style="opacity:.9;max-width:980px;">
+          Rebranding works best when the system is clearly documented, then rolled out consistently across business touchpoints.
+        </p>
+
+        <div class="grid" style="margin-top:18px;">
+          <a class="card card-link" href="/branding-kampala">
+            <h3>Branding Kampala (Hub)</h3>
+            <p style="opacity:.88;margin-top:10px;">All branding clusters in one place.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Open hub →</strong></p>
+          </a>
+
+          <a class="card card-link" href="/branding/corporate-brand-identity-design-kampala/">
+            <h3>Corporate Brand Identity Design</h3>
+            <p style="opacity:.88;margin-top:10px;">Build the identity system: logo, colors, typography, and layout direction.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
+          </a>
+
+          <a class="card card-link" href="/branding/brand-guidelines-design-kampala/">
+            <h3>Brand Guidelines Design Kampala</h3>
+            <p style="opacity:.88;margin-top:10px;">Lock your new identity rules so future designs stay consistent.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
+          </a>
+
+          <a class="card card-link" href="/branding/logo-design-kampala/">
+            <h3>Logo Design Kampala</h3>
+            <p style="opacity:.88;margin-top:10px;">If the logo is the main issue, start with a logo upgrade then add guidelines.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
+          </a>
+
+          <a class="card card-link" href="/branding/packaging-design-kampala/">
+            <h3>Packaging Design Kampala</h3>
+            <p style="opacity:.88;margin-top:10px;">Roll out the rebrand into packaging and product presentation.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
+          </a>
+
+          <a class="card card-link" href="/printing-kampala">
+            <h3>Printing Services Kampala</h3>
+            <p style="opacity:.88;margin-top:10px;">Need new materials printed after rebranding? We support production checks.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
+          </a>
+        </div>
+
+        <p style="opacity:.88;margin-top:12px;">
+          Back to the hub:
+          <a href="/branding-kampala"><strong>Branding Kampala →</strong></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Pricing Drivers + Timelines (dark) -->
+    <section class="section animate" id="pricing-timeline">
+      <div class="content-wrap">
+        <h2>Rebranding Pricing in Kampala: What Affects Cost + Typical Timelines</h2>
+        <p style="opacity:.9;max-width:980px;">
+          Rebranding pricing depends on how deep the identity rebuild is and how many materials are included in the roll-out.
+        </p>
+
+        <div class="grid" style="margin-top:18px;">
+          <div class="card"><h3>Rebrand depth</h3><p style="opacity:.88;margin-top:10px;">Light refresh vs full identity rebuild with guidelines and roll-out support.</p></div>
+          <div class="card"><h3>Materials to update</h3><p style="opacity:.88;margin-top:10px;">Stationery, profile, signage, packaging, digital templates—each adds scope.</p></div>
+          <div class="card"><h3>Number of variants</h3><p style="opacity:.88;margin-top:10px;">Multiple product lines or departments require stronger system planning.</p></div>
+          <div class="card"><h3>Execution support</h3><p style="opacity:.88;margin-top:10px;">If you need print/signage coordination, the project becomes more hands-on.</p></div>
+          <div class="card"><h3>Timeline expectations</h3><p style="opacity:.88;margin-top:10px;">Faster timelines work when approvals are quick and scope is clear.</p></div>
+          <div class="card"><h3>Typical ranges</h3><p style="opacity:.88;margin-top:10px;">Many rebrands take <strong>several working days to a few weeks</strong> depending on depth.</p></div>
+        </div>
+
+        <div class="cta-strip">
+          <div style="min-width:260px">
+            <strong>Get a quick rebrand estimate</strong>
+            <div style="opacity:.86;margin-top:6px">
+              Send: current logo + 3–5 materials + what you want to improve + deadline. We’ll recommend the right scope.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -859,128 +721,70 @@
       </div>
     </section>
 
-    <!-- I) FAQ (6–10) + JSON-LD FAQPage schema -->
+    <!-- FAQ (light) -->
     <section class="section light animate" id="faqs">
       <div class="content-wrap">
         <h2>Rebranding Services Kampala FAQs</h2>
-
         <p style="opacity:.9;max-width:980px;">
-          Common questions from Kampala businesses considering a rebrand, a refresh, or a repositioning.
+          Quick answers for Kampala businesses planning a brand upgrade.
         </p>
 
         <div class="faq-grid">
-          <div class="card">
-            <h3>What is the difference between rebranding and a logo redesign?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              A logo redesign updates the mark. Rebranding is broader: it can include messaging, identity system, templates, standards and rollout planning—so everything looks consistent.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>When should a business in Kampala consider rebranding?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              When the current brand looks outdated, inconsistent, or doesn’t match service quality—especially when targeting corporate clients, scaling, or entering new markets.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Will rebranding confuse my existing customers?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              It can if the change is too sudden or inconsistent. That’s why we focus on continuity and rollout planning—so customers recognise it as an upgrade.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Can you rebrand without changing the business name?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. Most rebrands focus on identity, messaging and presentation while keeping the name. If naming support is needed, we can scope it separately.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Do you include brand guidelines after a rebrand?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Guidelines are recommended. They protect the new identity from misuse by staff, designers and printers.
-              See: <a href="/branding/brand-guidelines-development-kampala/">Brand Guidelines Development Kampala</a>.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>How long does a rebrand take in Kampala?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Many rebrand projects take one to several weeks depending on depth, number of stakeholders, and rollout scope.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What affects the cost of rebranding?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Depth of change (refresh vs reposition), number of touchpoints (signage, stationery, documents), asset rebuilding needs, standards/manual scope, and implementation support.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Can you help apply the rebrand to signage and print?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. If rollout includes physical branding, we plan for production readiness so visibility and consistency are maintained.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Should we start with strategy before rebranding?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If messaging and direction are unclear, strategy first saves time and reduces rework.
-              See: <a href="/branding/brand-strategy-services-kampala/">Brand Strategy Services Kampala</a>.
-            </p>
-          </div>
+          <div class="card"><h3>Is rebranding just changing the logo?</h3><p style="opacity:.88;margin-top:10px;">No. A strong rebrand upgrades the identity system: logo, colors, typography, layouts and how everything looks across materials.</p></div>
+          <div class="card"><h3>Will we lose trust if we change the logo?</h3><p style="opacity:.88;margin-top:10px;">Not if it’s done correctly. We upgrade what’s weak but keep recognisable elements where necessary—so trust remains.</p></div>
+          <div class="card"><h3>Do you provide brand guidelines after rebranding?</h3><p style="opacity:.88;margin-top:10px;">Yes. Guidelines lock usage rules so the brand stays consistent long after launch.</p></div>
+          <div class="card"><h3>Can you roll out the new brand across materials?</h3><p style="opacity:.88;margin-top:10px;">Yes. We prioritise key touchpoints like documents, signage, profile, packaging and digital.</p></div>
+          <div class="card"><h3>How long does a rebrand take?</h3><p style="opacity:.88;margin-top:10px;">Depends on scope. Many rebrands take several working days to a few weeks.</p></div>
+          <div class="card"><h3>What should I send to start?</h3><p style="opacity:.88;margin-top:10px;">Your current logo + samples of your most-used materials + what you want to improve + deadline.</p></div>
+          <div class="card"><h3>Do you handle printing after the rebrand?</h3><p style="opacity:.88;margin-top:10px;">Yes. We can support production guidance for new stationery, signage, and marketing materials.</p></div>
+          <div class="card"><h3>Can we rebrand a product line only?</h3><p style="opacity:.88;margin-top:10px;">Yes. We can focus on a specific product line and still maintain consistency with your main brand direction.</p></div>
+          <div class="card"><h3>Can we rebrand gradually?</h3><p style="opacity:.88;margin-top:10px;">Yes. We can plan a phased roll-out starting with the most visible and high-impact items.</p></div>
         </div>
 
         <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/contact">Request Rebranding</a>
+          <a class="btn-primary" href="/contact">Request Rebrand Quote</a>
           <a class="btn-primary" href="/branding-kampala" style="margin-left:8px;">Back to Branding Hub</a>
         </div>
 
-        <!-- JSON-LD FAQPage (matches visible FAQs) -->
         <script type="application/ld+json">
         {
           "@context":"https://schema.org",
           "@type":"FAQPage",
           "mainEntity":[
-            {"@type":"Question","name":"What is the difference between rebranding and a logo redesign?","acceptedAnswer":{"@type":"Answer","text":"A logo redesign updates the mark. Rebranding is broader: it can include messaging, identity system, templates, standards and rollout planning—so everything looks consistent."}},
-            {"@type":"Question","name":"When should a business in Kampala consider rebranding?","acceptedAnswer":{"@type":"Answer","text":"When the current brand looks outdated, inconsistent, or doesn’t match service quality—especially when targeting corporate clients, scaling, or entering new markets."}},
-            {"@type":"Question","name":"Will rebranding confuse my existing customers?","acceptedAnswer":{"@type":"Answer","text":"It can if the change is too sudden or inconsistent. That’s why continuity and rollout planning matter, so customers recognise it as an upgrade."}},
-            {"@type":"Question","name":"Can you rebrand without changing the business name?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most rebrands focus on identity, messaging and presentation while keeping the name. Naming support can be scoped separately if needed."}},
-            {"@type":"Question","name":"Do you include brand guidelines after a rebrand?","acceptedAnswer":{"@type":"Answer","text":"Guidelines are recommended to protect the new identity from misuse by staff, designers and printers."}},
-            {"@type":"Question","name":"How long does a rebrand take in Kampala?","acceptedAnswer":{"@type":"Answer","text":"Many rebrand projects take one to several weeks depending on depth, stakeholder feedback speed, and rollout scope."}},
-            {"@type":"Question","name":"What affects the cost of rebranding?","acceptedAnswer":{"@type":"Answer","text":"Depth of change, number of touchpoints, asset rebuilding needs, brand standards/manual scope, and implementation support."}},
-            {"@type":"Question","name":"Can you help apply the rebrand to signage and print?","acceptedAnswer":{"@type":"Answer","text":"Yes. Rollout support can be scoped to ensure production readiness and consistent visibility across signage and print."}},
-            {"@type":"Question","name":"Should we start with strategy before rebranding?","acceptedAnswer":{"@type":"Answer","text":"If messaging and direction are unclear, strategy first saves time and reduces rework."}}
+            {"@type":"Question","name":"Is rebranding just changing the logo?","acceptedAnswer":{"@type":"Answer","text":"No. A strong rebrand upgrades the identity system: logo, colors, typography, layouts and how everything looks across materials."}},
+            {"@type":"Question","name":"Will we lose trust if we change the logo?","acceptedAnswer":{"@type":"Answer","text":"Not if it’s done correctly. We upgrade what’s weak but keep recognisable elements where necessary so trust remains."}},
+            {"@type":"Question","name":"Do you provide brand guidelines after rebranding?","acceptedAnswer":{"@type":"Answer","text":"Yes. Guidelines lock usage rules so the brand stays consistent long after launch."}},
+            {"@type":"Question","name":"Can you roll out the new brand across materials?","acceptedAnswer":{"@type":"Answer","text":"Yes. We prioritise key touchpoints like documents, signage, profile, packaging and digital."}},
+            {"@type":"Question","name":"How long does a rebrand take?","acceptedAnswer":{"@type":"Answer","text":"Depends on scope. Many rebrands take several working days to a few weeks."}},
+            {"@type":"Question","name":"What should I send to start?","acceptedAnswer":{"@type":"Answer","text":"Your current logo and samples of your most-used materials, plus what you want to improve and your deadline."}},
+            {"@type":"Question","name":"Do you handle printing after the rebrand?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can support production guidance for new stationery, signage, and marketing materials."}},
+            {"@type":"Question","name":"Can we rebrand a product line only?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can focus on a specific product line and still maintain consistency with your main brand direction."}},
+            {"@type":"Question","name":"Can we rebrand gradually?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can plan a phased roll-out starting with the most visible and high-impact items."}}
           ]
         }
         </script>
       </div>
     </section>
 
-    <!-- J) FINAL CTA -->
+    <!-- Final CTA (light) -->
     <section class="section light animate" style="padding-top:50px;">
       <div class="content-wrap">
         <div class="card">
-          <h2 style="margin-bottom:10px;">Ready to upgrade your brand and roll it out properly in Kampala?</h2>
+          <h2 style="margin-bottom:10px;">Ready to upgrade your brand and look more serious?</h2>
           <p style="opacity:.88;margin-bottom:16px;">
-            A rebrand should feel like an upgrade — clearer message, stronger visuals, and consistent execution across touchpoints.
-            Share your current brand materials and where you use them most (signage, documents, social, print). We’ll respond as soon as possible with a practical scope.
+            Send your current logo + 3–5 samples of what you use most, and tell us what you want to improve. We’ll recommend the cleanest rebrand path.
           </p>
 
           <div class="hero-actions">
-            <a class="btn-primary" href="/contact">Start Rebranding</a>
-            <a class="btn-secondary" href="/portfolio" style="margin-left:8px;">See Portfolio Proof</a>
+            <a class="btn-primary" href="/contact">Start Rebrand Project</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener" style="margin-left:8px;">WhatsApp</a>
           </div>
 
           <p style="opacity:.82;margin-top:14px;">
-            Recommended next steps:
-            <a href="/branding/brand-strategy-services-kampala/">Brand Strategy</a> •
-            <a href="/branding/corporate-identity-design-kampala/">Corporate Identity</a> •
-            <a href="/branding/brand-guidelines-development-kampala/">Brand Guidelines</a>
+            Next:
+            <a href="/branding/corporate-brand-identity-design-kampala/">Corporate Identity</a> •
+            <a href="/branding/brand-guidelines-design-kampala/">Brand Guidelines</a> •
+            <a href="/branding/packaging-design-kampala/">Packaging Design</a>
           </p>
         </div>
       </div>
@@ -988,8 +792,8 @@
 
   </main>
 
-  <!-- FOOTER (UNIVERSAL — MUST REMAIN EXACT) -->
-<footer class="footer">
+  <!-- FOOTER (universal) -->
+  <footer class="footer">
     <div class="footer-wrap">
       <div class="footer-col">
         <h4>Kamog Artistry (U) Ltd</h4>
@@ -1059,6 +863,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="/assets/js/script.js" defer></script>
   <script src="/assets/js/animations.js" defer></script>
 

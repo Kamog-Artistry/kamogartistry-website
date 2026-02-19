@@ -4,30 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Signage Company in Kampala | 3D Signs, LED Signboards, Shop & Office Signage | Kamog Artistry (U) Ltd</title>
+  <title>Signage Fabrication in Uganda | 3D Signs, Light Box Signage, LED Sign Boards, Acrylic & Metal Signs | Kamog Artistry (U) Ltd</title>
 
-  <meta name="description" content="Kamog Artistry (U) Ltd designs, fabricates and installs professional signage in Kampala: 3D signage, LED signboards, outdoor & indoor signs, shop signage, acrylic and metal signs, pylon/totem signs, directional, safety signage, lightboxes and wayfinding systems." />
+  <meta name="description" content="Kamog Artistry (U) Ltd designs, fabricates and installs professional signage in Uganda: 3D signage fabrication, light box signage, outdoor business signage, indoor branding signage, shop-front signage, office door label signage, pylon signage, wayfinding & caution signage, LED sign boards, acrylic signage, metal sign fabrication and hospital & school signage nationwide." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b6fbf" />
-  <link rel="canonical" href="https://kamogartistry.com/signage-kampala" />
+
+  <!-- Use your preferred canonical slug for this hub -->
+  <link rel="canonical" href="https://kamogartistry.com/signage-fabrication-uganda" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kamogartistry.com/sitemap.xml" />
 
-  <!-- Preload key brand asset -->
   <link rel="preload" as="image" href="assets/img/brand/logo-white.svg" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
-  <meta property="og:title" content="Signage Company in Kampala | Kamog Artistry (U) Ltd" />
-  <meta property="og:description" content="Design, fabricate & install 3D signage, LED signboards, shop and office signage, acrylic and metal signs, pylon/totem, safety and wayfinding in Kampala." />
-  <meta property="og:url" content="https://kamogartistry.com/signage-kampala" />
+  <meta property="og:title" content="Signage Fabrication in Uganda | Kamog Artistry (U) Ltd" />
+  <meta property="og:description" content="Nationwide signage fabrication: 3D signs, light box signage, LED sign boards, shop-front & office signage, wayfinding, acrylic and metal signs across Uganda." />
+  <meta property="og:url" content="https://kamogartistry.com/signage-fabrication-uganda" />
   <meta property="og:image" content="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg" />
-  <meta property="og:image:alt" content="Signage and branding execution in Kampala by Kamog Artistry (U) Ltd" />
+  <meta property="og:image:alt" content="Signage and branding execution in Uganda by Kamog Artistry (U) Ltd" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Signage Company in Kampala | Kamog Artistry (U) Ltd" />
-  <meta name="twitter:description" content="3D signage, LED signboards, outdoor & indoor signs, shop signage, acrylic and metal signs, pylon/totem, safety and wayfinding in Kampala." />
+  <meta name="twitter:title" content="Signage Fabrication in Uganda | Kamog Artistry (U) Ltd" />
+  <meta name="twitter:description" content="3D signage, light box signage, outdoor & indoor signs, shop-front signage, wayfinding, LED sign boards, acrylic and metal sign fabrication in Uganda." />
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg" />
 
   <!-- Global CSS (UNCHANGED) -->
@@ -94,6 +95,19 @@
     .btn-primary, .btn-primary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
     .btn-secondary, .btn-secondary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
 
+    /* ✅ FIX: make btn-secondary visible on light/white sections (page-only) */
+    .section.light .btn-secondary{
+      background: var(--km-blue) !important;
+      border-color: var(--km-blue) !important;
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+    }
+    .section.light .btn-secondary:hover{
+      background: var(--km-orange) !important;
+      border-color: var(--km-orange) !important;
+    }
+
+    /* ✅ Standard “blue underlined link style” on light sections (cluster titles inherit this) */
     .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link){
       color: var(--km-blue);
       -webkit-text-fill-color: var(--km-blue);
@@ -143,6 +157,7 @@
       margin-bottom: 10px;
     }
 
+    /* Featured grid */
     .feat-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -162,6 +177,16 @@
       font-size:.95rem;
       margin-top: 10px;
       line-height: 1.55;
+    }
+
+    /* Cluster cards with image thumbs */
+    .cluster-thumb{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius: 14px;
+      margin: 0 0 12px 0;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
     }
 
     /* Footer links: underline only on hover */
@@ -185,7 +210,7 @@
     "itemListElement":[
       {"@type":"ListItem","position":1,"name":"Home","item":"https://kamogartistry.com/"},
       {"@type":"ListItem","position":2,"name":"Services","item":"https://kamogartistry.com/services"},
-      {"@type":"ListItem","position":3,"name":"Signage Kampala","item":"https://kamogartistry.com/signage-kampala"}
+      {"@type":"ListItem","position":3,"name":"Signage Fabrication Uganda","item":"https://kamogartistry.com/signage-fabrication-uganda"}
     ]
   }
   </script>
@@ -213,7 +238,7 @@
   {
     "@context":"https://schema.org",
     "@type":"Service",
-    "name":"Signage Design, Fabrication & Installation in Kampala",
+    "name":"Signage Fabrication & Installation in Uganda",
     "provider":{
       "@type":"LocalBusiness",
       "name":"Kamog Artistry (U) Ltd",
@@ -222,22 +247,22 @@
       "email":"info@kamogartistry.com",
       "address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"}
     },
-    "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
+    "areaServed":["Uganda","Kampala","Wakiso","Mukono"],
     "serviceType":[
-      "3D Signage Kampala",
-      "LED Signboard Installation Kampala",
-      "Outdoor Signage Kampala",
-      "Indoor Office Signage Kampala",
-      "Shop Signage Kampala",
-      "Acrylic Signage Kampala",
-      "Metal Sign Fabrication Kampala",
-      "Pylon & Totem Signs Kampala",
-      "Directional Signage Kampala",
-      "Safety Signage Kampala",
-      "Lightbox Signage Kampala",
-      "Wayfinding Systems Kampala"
+      "3D Signage Fabrication Uganda",
+      "Light Box Signage Uganda",
+      "Outdoor Business Signage Uganda",
+      "Indoor Branding Signage Uganda",
+      "Shop Front Signage Uganda",
+      "Office Door Label Signage Uganda",
+      "Pylon Signage Uganda",
+      "Wayfinding and Caution Signage Uganda",
+      "LED Sign Boards Uganda",
+      "Acrylic Signage Uganda",
+      "Metal Sign Fabrication Uganda",
+      "Hospital and School Signage Uganda"
     ],
-    "url":"https://kamogartistry.com/signage-kampala"
+    "url":"https://kamogartistry.com/signage-fabrication-uganda"
   }
   </script>
 
@@ -247,14 +272,12 @@
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"What’s the difference between a signboard and signage?","acceptedAnswer":{"@type":"Answer","text":"A signboard is one type of signage (usually the main external brand sign). Signage includes all signs: indoor, outdoor, directional, safety, lightboxes, and wayfinding systems."}},
-      {"@type":"Question","name":"How long does signage fabrication take in Kampala?","acceptedAnswer":{"@type":"Answer","text":"Timelines depend on size, materials, lighting requirements and approvals. After confirming specs, we share a clear production timeline and installation plan."}},
-      {"@type":"Question","name":"Do you handle design, fabrication and installation?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can handle the full process: design, material selection, fabrication, finishing and installation coordination."}},
-      {"@type":"Question","name":"Can you do LED signboards and lightboxes?","acceptedAnswer":{"@type":"Answer","text":"Yes. We fabricate LED signboards and lightboxes and advise on visibility, placement and durability for your location."}},
-      {"@type":"Question","name":"Do you offer indoor office signage and wayfinding?","acceptedAnswer":{"@type":"Answer","text":"Yes. We produce office signage, door signs, directional signage and wayfinding systems for buildings and institutions."}},
-      {"@type":"Question","name":"What should I send to get a fast signage quote?","acceptedAnswer":{"@type":"Answer","text":"Send your location, sign type, approximate size, whether it’s illuminated, and any reference images. Photos of the frontage help a lot."}},
-      {"@type":"Question","name":"How do revisions work for signage design?","acceptedAnswer":{"@type":"Answer","text":"We share a design proof for approval. Revisions are handled in the design phase before fabrication to avoid expensive changes later."}},
-      {"@type":"Question","name":"How do we start a signage project with Kamog Artistry?","acceptedAnswer":{"@type":"Answer","text":"Contact us with your sign goal and location. We confirm specs, propose options, quote, then proceed after approval and scheduling."}}
+      {"@type":"Question","name":"What should I send for a fast signage quote in Uganda?","acceptedAnswer":{"@type":"Answer","text":"Send your location, sign type, approximate size, whether it’s illuminated, and photos of the frontage. Reference images help too."}},
+      {"@type":"Question","name":"Do you handle design, fabrication and installation?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can handle the full process: design, materials, fabrication, finishing and installation coordination."}},
+      {"@type":"Question","name":"How long does signage fabrication take?","acceptedAnswer":{"@type":"Answer","text":"Timelines depend on size, materials, illumination and approvals. After confirming specs, we share a clear production and installation schedule."}},
+      {"@type":"Question","name":"Which signage lasts longer outdoors?","acceptedAnswer":{"@type":"Answer","text":"Outdoor lifespan depends on material choice and finishing. We recommend weather-appropriate materials and coatings for durability."}},
+      {"@type":"Question","name":"Do you fabricate LED and illuminated signs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We fabricate illuminated signage and LED sign boards and advise on visibility, power and installation considerations."}},
+      {"@type":"Question","name":"Can you do office directional and wayfinding systems?","acceptedAnswer":{"@type":"Answer","text":"Yes. We design and produce directional signage and full wayfinding systems for offices, institutions and buildings."}}
     ]
   }
   </script>
@@ -264,7 +287,7 @@
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- ✅ UNIVERSAL HEADER — DO NOT MODIFY -->
+  <!-- ✅ UNIVERSAL HEADER — DO NOT MODIFY (kept exact) -->
   <header class="header">
     <nav class="nav">
       <a aria-label="Go to homepage" href="/">
@@ -297,21 +320,21 @@
           <span class="sep">›</span>
           <a href="services">Services</a>
           <span class="sep">›</span>
-          <span style="opacity:.92;font-weight:900;color:#fff">Signage Kampala</span>
+          <span style="opacity:.92;font-weight:900;color:#fff">Signage Fabrication Uganda</span>
         </div>
 
         <div class="hero-badge">Design • Fabrication • Installation • Kampala & Nationwide</div>
 
-        <h1>Signage Company in Kampala (3D Signage + LED Signboards + Office & Shop Signage)</h1>
+        <h1>Signage Fabrication in Uganda (3D Signs, Light Box Signage, LED Sign Boards & Premium Finishes)</h1>
 
         <p style="opacity:.92;margin-top:12px;max-width:980px;">
-          Kamog Artistry (U) Ltd designs, fabricates and installs professional <strong>signage in Kampala</strong> for businesses, institutions and projects that need visibility.
-          We focus on <strong>clean design</strong>, <strong>durable materials</strong>, and <strong>professional finishing</strong> so your sign looks credible up close and readable from a distance.
+          Kamog Artistry (U) Ltd designs, fabricates and installs professional <strong>signage in Uganda</strong> for businesses and institutions that need visibility and credibility.
+          We focus on <strong>clean design</strong>, <strong>durable materials</strong>, and <strong>professional finishing</strong> so your sign looks premium up close and readable from a distance.
         </p>
 
         <p style="opacity:.9;margin-top:10px;max-width:980px;">
-          From <strong>3D signage</strong> and <strong>LED signboards</strong> to <strong>shop signage</strong>, <strong>office wayfinding</strong>, <strong>directional</strong> and <strong>safety signs</strong>,
-          we advise on the best option for your location, budget and visibility needs.
+          From <strong>3D signage fabrication</strong> and <strong>light box signage</strong> to <strong>shop-front signage</strong>, <strong>office door labels</strong>, and <strong>wayfinding systems</strong>,
+          we recommend the best option based on your location, environment, and visibility needs.
         </p>
 
         <div class="hero-actions" style="margin-top:18px;">
@@ -322,18 +345,20 @@
         <div class="mini-cta">
           <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp (Fastest)</a>
           <a class="btn-secondary" href="/contact#free-consult">Free 10-Min Consultation</a>
-          <a class="btn-secondary" href="/contact#upload-artwork">Upload Artwork / References</a>
+          <a class="btn-secondary" href="/contact#upload-artwork">Upload References / Frontage Photos</a>
         </div>
 
         <div class="pill-row">
           <div class="pill">3D Signage</div>
-          <div class="pill">LED Signboards</div>
-          <div class="pill">Shop Signage</div>
-          <div class="pill">Office Signage</div>
-          <div class="pill">Lightboxes</div>
-          <div class="pill">Directional Signs</div>
-          <div class="pill">Safety Signs</div>
+          <div class="pill">Light Box</div>
+          <div class="pill">Outdoor Signs</div>
+          <div class="pill">Indoor Branding</div>
+          <div class="pill">Shop-front</div>
+          <div class="pill">Door Labels</div>
           <div class="pill">Wayfinding</div>
+          <div class="pill">LED Sign Boards</div>
+          <div class="pill">Acrylic</div>
+          <div class="pill">Metal Fabrication</div>
         </div>
 
         <p style="opacity:.9;margin-top:14px;">
@@ -355,9 +380,9 @@
       <div class="content-wrap">
         <div class="cta-strip">
           <div style="min-width:260px">
-            <strong>Need a signboard for your shop or office?</strong>
+            <strong>Need a sign fast?</strong>
             <div style="opacity:.86;margin-top:6px">
-              Send your location + sign type + approximate size + whether it’s illuminated. Photos of the frontage help.
+              Send location + sign type + size estimate + “illuminated or not” + photos of your frontage.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -367,9 +392,8 @@
         </div>
 
         <p style="opacity:.88;margin-top:12px;">
-          If you need design alignment first:
-          <a href="/branding-kampala">Branding in Kampala</a> •
-          <a href="/portfolio">Portfolio</a>
+          If you want consistency first:
+          <a href="/branding-kampala">Branding</a> • <a href="/portfolio">Portfolio</a> • <a href="/testimonials">Testimonials</a>
         </p>
       </div>
     </section>
@@ -379,36 +403,36 @@
       <div class="content-wrap">
         <h2>What Professional Signage Really Means</h2>
         <p style="opacity:.9;max-width:980px;">
-          Strong signage is not just “a printed board.” It’s a mix of <strong>visibility</strong>, <strong>legibility</strong>, <strong>durability</strong> and <strong>brand consistency</strong>.
-          The right sign should be readable at the correct distance, look professional up close, and withstand the environment it’s installed in.
+          Professional signage is a mix of <strong>visibility</strong>, <strong>legibility</strong>, <strong>durability</strong> and <strong>brand consistency</strong>.
+          The right signage should attract attention, guide customers confidently, and hold up over time in real environments.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
             <h3>Visibility & Legibility</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Correct sizing, clean typography and contrast so your sign is readable from the road and inside the premises.
+              Correct sizing, clean typography, strong contrast and correct placement—so your sign is readable from the right distance.
             </p>
           </div>
 
           <div class="card">
             <h3>Material Durability</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Outdoor signage requires materials and finishing that resist weather, heat and fading—this is where shortcuts show quickly.
+              Outdoor conditions require durable materials and protective finishing—this is where cheap shortcuts fail quickly.
             </p>
           </div>
 
           <div class="card">
             <h3>Professional Finishing</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Clean edges, solid mounting, neat lighting integration and a finish that looks “corporate”, not rushed.
+              Clean edges, solid mounting, neat lighting integration and a finish that looks premium in daylight and at night.
             </p>
           </div>
 
           <div class="card">
             <h3>Brand Consistency</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Your signage should match your brand identity—colors, spacing and layout should look intentional and premium.
+              Colors, spacing and layout should match your brand identity so your signage looks intentional and trustworthy.
             </p>
           </div>
         </div>
@@ -416,90 +440,112 @@
         <div class="card" style="margin-top:16px;">
           <h3 style="margin-bottom:10px;">Outcomes businesses expect</h3>
           <ul class="list-clean" style="margin-top:0;">
-            <li><strong>More walk-ins:</strong> people notice and locate your business faster.</li>
-            <li><strong>Trust:</strong> clean signage signals professionalism and stability.</li>
-            <li><strong>Better brand recall:</strong> consistent visibility reinforces your name.</li>
-            <li><strong>Longer lifespan:</strong> durable materials reduce replacements.</li>
+            <li><strong>More walk-ins:</strong> customers locate and trust you faster.</li>
+            <li><strong>Stronger brand recall:</strong> consistent visibility reinforces your name.</li>
+            <li><strong>Better navigation:</strong> directional/wayfinding reduces confusion.</li>
+            <li><strong>Longer lifespan:</strong> durable builds reduce replacement costs.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section class="section light animate" id="gallery">
+    <!-- Featured Work (12) -->
+    <section class="section light animate" id="featured-signage-work">
       <div class="content-wrap">
-        <h2>Signage Work From Our Portfolio</h2>
+        <h2>Featured Signage Work (Real Delivery)</h2>
         <p style="opacity:.9;max-width:980px;">
-          Here are real examples of execution. Where a relevant case study exists, we link it so you can see context and implementation.
+          These are real projects where visibility and finishing mattered. Each image links to a case study (more media inside).
         </p>
 
         <div class="feat-grid">
           <a class="card card-link feat" href="/portfolio/ability-pharmacy" aria-label="Ability Pharmacy case study">
             <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg"
-                alt="Shop signage and branded visibility execution for Ability Pharmacy in Kampala by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Ability Pharmacy</strong><br/>
-                Retail visibility materials aligned to a consistent brand look. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
+              <img src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg" alt="Shop signage and retail visibility for Ability Pharmacy by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Ability Pharmacy</strong><br/>Retail visibility execution. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
             </figure>
           </a>
 
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link feat" href="/portfolio/voltech-branding" aria-label="Voltech branding case study">
-            <figure>
-              <img
-                src="assets/img/portfolio/voltech-branding/IMG03.jpg"
-                alt="Corporate branding and signage-ready applications for Voltech Engineering in Kampala by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Voltech Engineering — Brand Rollout</strong><br/>
-                Corporate-grade applications prepared for production and execution. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
           <a class="card card-link feat" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 case study">
             <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg"
-                alt="Event signage and display visuals for TOOKE BIRDC (UMA 2025) Kampala by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>TOOKE – BIRDC (UMA 2025)</strong><br/>
-                Event display visuals and coordinated branding output. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
+              <img src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg" alt="Event display signage and branding visuals for UMA 2025 by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>UMA 2025 Exhibition</strong><br/>Display + visibility assets. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
             </figure>
           </a>
 
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link feat" href="/portfolio" aria-label="Portfolio hub">
+          <a class="card card-link feat" href="/portfolio/voltech-branding" aria-label="Voltech branding case study">
             <figure>
-              <img
-                src="assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg"
-                alt="Kamog Artistry portfolio hub for branding, signage and printing work in Kampala"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>More Signage Examples</strong><br/>
-                Browse our portfolio hub for execution work across industries. <span style="opacity:.85"><strong>Browse →</strong></span>
-              </figcaption>
+              <img src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg" alt="Corporate rollout assets prepared for visibility and production for Voltech by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Voltech Rollout</strong><br/>Corporate-grade delivery. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/mobile-money-branding" aria-label="Mobile money branding case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/mobile-money-branding/IMG01.jpg" alt="Outdoor-facing shop branding and visibility execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Shop Branding</strong><br/>Readable from distance. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/modva-updf-spouses-desk" aria-label="MODVA UPDF Spouses Desk case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/modva-updf-spouses-desk/IMG01.jpg" alt="Institutional branding and visibility delivery by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Institutional Delivery</strong><br/>Clean finishing. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/create-and-cook" aria-label="Create and Cook case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/create-and-cook/IMG01.jpg" alt="Brand visibility execution for Create and Cook by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Brand Visibility</strong><br/>Consistent look. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/mountains-of-moon-tourism" aria-label="Mountains of the Moon Tourism case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/mountains-of-moon-tourism/IMG01.jpg" alt="Campaign visibility materials for tourism project by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Campaign Visibility</strong><br/>Outdoor-ready. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/birdc-photo-frames-kololo-nrm" aria-label="BIRDC photo frames case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/birdc-photo-frames-kololo-nrm/IMG01.jpg" alt="Presentation finishing and display output by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Display Finishing</strong><br/>Neat presentation. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/exam-gifts-initiative" aria-label="Exam Gifts Initiative case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/exam-gifts-initiative/IMG01.jpg" alt="Promotional materials and campaign visibility by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Promo Visibility</strong><br/>Campaign ready. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/kiosa-ramadan-2025" aria-label="KIOSA Ramadan 2025 case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/kiosa-ramadan-2025/IMG01.jpg" alt="Event outreach and visibility materials for KIOSA by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Event Visibility</strong><br/>Outreach materials. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/sbl-intel-systems" aria-label="SBL Intel Systems case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/sbl-intel-systems/IMG01.jpg" alt="Corporate brand applications for visibility and production by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Corporate Delivery</strong><br/>Professional output. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/abundance-herbal-products" aria-label="Abundance Herbal Products case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/abundance-herbal-products/IMG01.jpg" alt="Product label and packaging output by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Packaging Output</strong><br/>Clean finishing. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
             </figure>
           </a>
         </div>
 
         <div style="text-align:center;margin-top:18px;">
           <a class="btn-primary" href="/portfolio">Browse All Case Studies</a>
+          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener" style="margin-left:8px;">WhatsApp</a>
         </div>
       </div>
     </section>
@@ -507,51 +553,51 @@
     <!-- Services Summary -->
     <section class="section light animate" id="core-signage-services">
       <div class="content-wrap">
-        <h2>Signage Services We Offer in Kampala</h2>
+        <h2>Signage Services We Offer (Uganda-Wide)</h2>
         <p style="opacity:.9;max-width:980px;">
-          We help you choose the right signage type based on location, visibility needs, budget and durability. We can handle design, fabrication and installation coordination.
+          We help you choose the right signage type based on your location, visibility requirements, environment, and budget—then we design and fabricate for clean installation.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
-            <h3>Shop Signage & Signboards</h3>
+            <h3>Outdoor Business Signage</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Front-facing signs that attract walk-ins and make your business easy to locate.
+              Signs designed for visibility on roads and busy areas—built for durability and readability.
             </p>
           </div>
 
           <div class="card">
-            <h3>Office & Indoor Signage</h3>
+            <h3>Shop-front Signage</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Door signs, reception branding, room labels and internal directional signage.
+              Front-facing signage that attracts walk-ins and makes your business easy to locate.
             </p>
           </div>
 
           <div class="card">
-            <h3>Illuminated Signage</h3>
+            <h3>Light Box & Illuminated Signage</h3>
             <p style="opacity:.88;margin-top:10px;">
-              LED signboards and lightbox signage for visibility at night and in low-light areas.
+              Strong night visibility for shops, clinics, restaurants and roadside businesses.
             </p>
           </div>
 
           <div class="card">
-            <h3>Directional & Safety Signs</h3>
+            <h3>Indoor Branding Signage</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Wayfinding and safety signage for institutions, buildings, sites and compliance needs.
+              Reception branding, wall signs, and indoor brand visuals that make spaces feel premium.
             </p>
           </div>
 
           <div class="card">
-            <h3>Premium Materials</h3>
+            <h3>Directional & Wayfinding Systems</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Acrylic signage, metal signs and 3D letters for a more premium, corporate finish.
+              Office, institutional and building navigation that guides visitors confidently.
             </p>
           </div>
 
           <div class="card">
-            <h3>Production-Ready Design</h3>
+            <h3>Premium Materials (Acrylic & Metal)</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We design with fabrication in mind—proper sizing, clean layout, and install-friendly builds.
+              Acrylic and metal builds for corporate-grade finishing and long-term durability.
             </p>
           </div>
         </div>
@@ -559,11 +605,11 @@
         <div class="micro-grid">
           <div class="card micro">
             <div class="badge-inline">Ideal For</div>
-            <p style="opacity:.88;margin:0;">Retail shops, clinics, restaurants, hotels, schools, NGOs, office buildings and institutions in Kampala.</p>
+            <p style="opacity:.88;margin:0;">Retail shops, clinics, restaurants, hotels, schools, NGOs, offices, campuses, and institutions in Uganda.</p>
           </div>
           <div class="card micro">
             <div class="badge-inline">Most Requested</div>
-            <p style="opacity:.88;margin:0;">Shop signboards, LED signs, indoor office signage, directional and safety signage.</p>
+            <p style="opacity:.88;margin:0;">3D signage, light box signage, shop-front signage, office door labels, wayfinding systems and LED sign boards.</p>
           </div>
           <div class="card micro">
             <div class="badge-inline">Result</div>
@@ -574,7 +620,7 @@
         <div class="cta-strip" style="margin-top:18px;">
           <div style="min-width:260px">
             <strong>Fast quote tip:</strong>
-            <div style="opacity:.86;margin-top:6px">Send location + sign type + approx size + “illuminated or not” + photos of frontage.</div>
+            <div style="opacity:.86;margin-top:6px">Send location + sign type + size estimate + “illuminated or not” + frontage photos.</div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <a class="btn-primary" href="/contact">Request Quote</a>
@@ -584,94 +630,118 @@
       </div>
     </section>
 
-    <!-- Cluster Bridge Section (12) -->
+    <!-- ✅ CLUSTER BRIDGE (UPDATED TO YOUR 12 CLUSTERS) -->
     <section class="section light animate" id="signage-clusters">
       <div class="content-wrap">
-        <h2>Comprehensive Signage Services in Kampala</h2>
+        <h2>Comprehensive Signage Fabrication Services in Uganda</h2>
         <p style="opacity:.9;max-width:980px;">
-          Explore specialised signage services below. Each cluster explains the best use-cases and what you receive so your quote is accurate.
+          Choose a specialised signage service below. Each cluster explains the best use-case, recommended materials, and what you receive—so quoting is accurate and delivery is clean.
         </p>
 
         <div class="grid" style="margin-top:18px;">
 
+          <!-- 1 -->
           <div class="card">
-            <h3><a href="/signage/3d-signage-kampala/">3D Signage Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Premium 3D letters and dimensional signage for corporate-looking storefronts and offices.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> 3D sign concept + material option + fabrication-ready output.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg" alt="3D signage fabrication example in Uganda by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/3d-signage-fabrication-uganda/">3D Signage Fabrication Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Dimensional letters and premium builds for storefronts, receptions and corporate offices—designed for real visibility.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> concept + sizing guidance + material/finish options.</p>
           </div>
 
+          <!-- 2 -->
           <div class="card">
-            <h3><a href="/signage/led-signboard-installation-kampala/">LED Signboard Installation Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Illuminated LED signboards for visibility at night and strong presence on busy roads.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> LED signboard design + lighting spec + installation coordination.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg" alt="Light box signage example in Uganda by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/light-box-signage-uganda/">Light Box Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Clean illuminated light boxes for shops, clinics and road-facing businesses that need strong night visibility.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> layout + illumination guidance + installation plan.</p>
           </div>
 
+          <!-- 3 -->
           <div class="card">
-            <h3><a href="/signage/outdoor-signage-kampala/">Outdoor Signage Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Durable outdoor signage designed to withstand weather while staying readable and clean.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> outdoor sign layout + material/finish recommendation.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/mobile-money-branding/IMG01.jpg" alt="Outdoor business signage example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/outdoor-business-signage-uganda/">Outdoor Business Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Weather-ready outdoor signs designed for clear readability from the road and heavy foot-traffic zones.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> outdoor layout + durable material/finish recommendation.</p>
           </div>
 
+          <!-- 4 -->
           <div class="card">
-            <h3><a href="/signage/indoor-office-signage-kampala/">Indoor Office Signage Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Reception, door signage, room labels and internal signage that makes your office feel organised.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> signage set design + production-ready artwork.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/sbl-intel-systems/IMG01.jpg" alt="Indoor branding signage example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/indoor-branding-signage-uganda/">Indoor Branding Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Reception branding, wall signs and internal brand visuals that make spaces feel organised and premium.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> signage set design + production-ready layouts.</p>
           </div>
 
+          <!-- 5 -->
           <div class="card">
-            <h3><a href="/signage/shop-signage-kampala/">Shop Signage Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Shop signboards built to attract walk-ins and make your business easy to locate.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> storefront sign design + size guidance + installation plan.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG02.jpg" alt="Shop-front signage example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/shop-front-signage-uganda/">Shop-front Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Front-facing signage that attracts walk-ins and makes your business instantly easy to locate.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> frontage layout + size guidance + mounting plan.</p>
           </div>
 
+          <!-- 6 -->
           <div class="card">
-            <h3><a href="/signage/acrylic-signage-kampala/">Acrylic Signage Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Clean, premium acrylic signs for offices, reception areas and indoor brand presentation.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> acrylic signage design + material thickness/finish options.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/modva-updf-spouses-desk/IMG01.jpg" alt="Office door label signage example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/office-door-label-signage-uganda/">Office Door Label Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Door labels and room identification signage that improves navigation and adds professionalism across offices and institutions.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> door label set + consistency rules + placement guidance.</p>
           </div>
 
+          <!-- 7 -->
           <div class="card">
-            <h3><a href="/signage/metal-sign-fabrication-kampala/">Metal Sign Fabrication Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Durable metal signs for long-term installations and a stronger corporate finish.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> fabrication-ready design + mounting/finish guidance.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg" alt="Pylon signage example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/pylon-signage-uganda/">Pylon Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">High-visibility pylons for complexes and roadside locations where distance readability is the priority.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> concept + size plan + fabrication guidance + installation planning.</p>
           </div>
 
+          <!-- 8 -->
           <div class="card">
-            <h3><a href="/signage/pylon-totem-signs-kampala/">Pylon &amp; Totem Signs Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">High-visibility pylon/totem signs ideal for complexes, institutions and roadside placement.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> sign concept + size/visibility plan + production guidance.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/birdc-photo-frames-kololo-nrm/IMG01.jpg" alt="Wayfinding and caution signage example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/wayfinding-caution-signage-uganda/">Wayfinding &amp; Caution Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Directional and safety signage systems that guide visitors clearly and reduce confusion in busy spaces.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> wayfinding plan + sign set + placement logic.</p>
           </div>
 
+          <!-- 9 -->
           <div class="card">
-            <h3><a href="/signage/directional-signage-kampala/">Directional Signage Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Directional signs that guide visitors clearly across premises, buildings and campuses.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> directional set design + arrows/icons + placement guidance.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg" alt="LED sign boards example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/led-sign-boards-uganda/">LED Sign Boards Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">LED sign boards for strong night visibility and modern storefront presence—built for readability and durability.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> LED-ready layout + visibility guidance + installation plan.</p>
           </div>
 
+          <!-- 10 -->
           <div class="card">
-            <h3><a href="/signage/safety-signage-kampala/">Safety Signage Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Safety signs for workplaces and sites—clear visuals that support compliance and safety awareness.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> safety sign set + production-ready layouts.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/sbl-intel-systems/IMG01.jpg" alt="Acrylic signage example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/acrylic-signage-uganda/">Acrylic Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Premium acrylic signs for reception areas, offices and indoor brand presentation with a clean corporate finish.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> acrylic design + thickness/finish options + mounting guidance.</p>
           </div>
 
+          <!-- 11 -->
           <div class="card">
-            <h3><a href="/signage/lightbox-signage-kampala/">Lightbox Signage Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Lightbox signage for strong illuminated presence—great for storefronts and key visibility points.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> lightbox layout + lighting guidance + fabrication plan.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg" alt="Metal sign fabrication example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/metal-sign-fabrication-uganda/">Metal Sign Fabrication Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Durable metal signage for long-term outdoor/industrial use and premium corporate environments.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> fabrication-ready design + finishing &amp; mounting guidance.</p>
           </div>
 
+          <!-- 12 -->
           <div class="card">
-            <h3><a href="/signage/wayfinding-systems-kampala/">Wayfinding Systems Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">Complete wayfinding systems: directional, room labels and location cues for buildings and institutions.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> wayfinding plan + full signage set + production-ready files.</p>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/modva-updf-spouses-desk/IMG01.jpg" alt="Hospital and school signage example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/signage/hospital-school-signage-uganda/">Hospital &amp; School Signage Uganda</a></h3>
+            <p style="opacity:.88;margin-top:10px;">Institutional signage systems where clarity matters: directional, identification and safety signage built for consistency.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> signage system plan + full sign set + placement guidance.</p>
           </div>
 
         </div>
 
         <div class="cta-strip" style="margin-top:18px;">
           <div style="min-width:260px">
-            <strong>Not sure which sign fits your location?</strong>
-            <div style="opacity:.86;margin-top:6px">Tell us your goal (visibility, wayfinding, premium look) and we’ll recommend options.</div>
+            <strong>Not sure what sign fits your location?</strong>
+            <div style="opacity:.86;margin-top:6px">Tell us your goal (visibility, premium look, wayfinding) and we’ll recommend options.</div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <a class="btn-primary" href="/contact">Request Guidance</a>
@@ -687,152 +757,45 @@
       <div class="content-wrap">
         <h2>Our Signage Process</h2>
         <p style="opacity:.9;max-width:980px;">
-          We keep signage projects predictable: clear design proofing before fabrication, correct material selection, and a clean installation plan.
+          We keep signage projects predictable: clear proofing before fabrication, correct materials, and clean installation planning.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
-            <h3>1) Site & Requirements Review</h3>
+            <h3>1) Location & Requirements Review</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We confirm location, viewing distance, sign purpose, size range and whether the sign should be illuminated.
+              We confirm viewing distance, sign purpose, size range, environment, and whether the sign should be illuminated.
             </p>
           </div>
-
           <div class="card">
             <h3>2) Concept & Layout Design</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We design for readability and brand consistency, then share a proof for review before any fabrication begins.
+              We design for readability and brand consistency, then share a proof before any fabrication begins.
             </p>
           </div>
-
           <div class="card">
-            <h3>3) Material & Build Specification</h3>
+            <h3>3) Materials & Build Specification</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We recommend materials based on environment (indoor/outdoor), durability needs, and budget—no guessing.
+              We recommend materials based on environment (indoor/outdoor), durability needs and budget.
             </p>
           </div>
-
           <div class="card">
             <h3>4) Fabrication & Finishing</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Sign is fabricated with clean finishing. If illuminated, lighting is integrated properly for neat appearance.
+              Clean finishing and correct build method. If illuminated, lighting is integrated neatly.
             </p>
           </div>
-
           <div class="card">
             <h3>5) Installation Coordination</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We plan mounting method, positioning and safety considerations, then coordinate installation on site.
+              We plan mounting and positioning for clean visibility and safety, then coordinate installation on-site.
             </p>
           </div>
-
           <div class="card">
             <h3>6) Final Check & Handover</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We confirm readability, finishing quality and overall presence so the sign looks correct in real conditions.
+              We confirm readability, finishing quality and overall presence in real conditions.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Industries -->
-    <section class="section light animate" id="industries">
-      <div class="content-wrap">
-        <h2>Industries We Serve With Signage in Kampala &amp; Uganda</h2>
-        <p style="opacity:.9;max-width:980px;">
-          We build signage for environments where visibility and trust matter. Here are common industries we support:
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card"><h3>Retail &amp; Shops</h3><p style="opacity:.88;margin-top:10px;">Shop signboards, lightboxes, directional signage and promos.</p></div>
-          <div class="card"><h3>Healthcare</h3><p style="opacity:.88;margin-top:10px;">Clinic signage, pharmacy branding, internal navigation and safety signs.</p></div>
-          <div class="card"><h3>Hospitality</h3><p style="opacity:.88;margin-top:10px;">Hotel and restaurant signage, indoor wayfinding and branded display signs.</p></div>
-          <div class="card"><h3>Education</h3><p style="opacity:.88;margin-top:10px;">Campus wayfinding, building labels, directional and safety signage.</p></div>
-          <div class="card"><h3>Corporate &amp; Offices</h3><p style="opacity:.88;margin-top:10px;">Reception signs, acrylic signage, door labels and office wayfinding.</p></div>
-          <div class="card"><h3>Real Estate &amp; Sites</h3><p style="opacity:.88;margin-top:10px;">Directional signage, safety signs and site visibility signage.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cost -->
-    <section class="section light animate" id="cost">
-      <div class="content-wrap">
-        <h2>How Much Does Signage Cost in Kampala?</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Signage pricing depends on size, materials, lighting and installation requirements—so we avoid fixed prices and quote based on specs.
-        </p>
-
-        <div class="card" style="margin-top:16px;">
-          <h3 style="margin-bottom:10px;">Main cost drivers</h3>
-          <ul class="list-clean" style="margin-top:0;">
-            <li><strong>Size & visibility needs:</strong> larger signs require more materials and stronger build.</li>
-            <li><strong>Material:</strong> acrylic, metal, composite builds differ in cost and durability.</li>
-            <li><strong>Illumination:</strong> LED/lightbox signs add electrical components and installation requirements.</li>
-            <li><strong>Mounting method:</strong> height, wall type and support structure affect installation work.</li>
-            <li><strong>Quantity:</strong> single sign vs a full signage system (office/wayfinding) changes scope.</li>
-          </ul>
-        </div>
-
-        <div class="cta-strip" style="margin-top:18px;">
-          <div style="min-width:260px">
-            <strong>Want an accurate quote?</strong>
-            <div style="opacity:.86;margin-top:6px">Send location, sign type, size estimate, and photos. We’ll propose options + quote.</div>
-          </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Request Signage Quote</a>
-            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust -->
-    <section class="section light animate" id="trust">
-      <div class="content-wrap">
-        <h2>Why Clients Choose Kamog for Signage</h2>
-        <p style="opacity:.9;max-width:980px;">
-          We design with production realities in mind—so your signage looks clean on screen and in real life, after fabrication and installation.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card"><h3>Production-Ready Design</h3><p style="opacity:.88;margin-top:10px;">We build signage layouts that fabricate cleanly and stay readable.</p></div>
-          <div class="card"><h3>Material Guidance</h3><p style="opacity:.88;margin-top:10px;">We recommend materials based on environment and durability needs.</p></div>
-          <div class="card"><h3>Clean Finishing</h3><p style="opacity:.88;margin-top:10px;">Neat edges, solid mounting and clean lighting integration.</p></div>
-          <div class="card"><h3>Verified Work</h3><p style="opacity:.88;margin-top:10px;">Explore our portfolio and testimonials to see real client feedback.</p></div>
-        </div>
-
-        <p style="opacity:.88;margin-top:14px;">
-          Read what clients say:
-          <a href="/testimonials">Testimonials →</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- FAQ (8) -->
-    <section class="section animate" id="faqs">
-      <div class="content-wrap">
-        <h2>Signage Kampala FAQs</h2>
-
-        <div class="grid faq-grid" style="margin-top:18px;">
-          <div class="card"><h3>What’s the difference between a signboard and signage?</h3><p style="opacity:.88;margin-top:10px;">A signboard is one type of signage. Signage includes all signs: indoor, outdoor, directional, safety, lightboxes and wayfinding systems.</p></div>
-          <div class="card"><h3>How long does signage fabrication take in Kampala?</h3><p style="opacity:.88;margin-top:10px;">Timeline depends on materials, size, lighting and installation needs. After confirming specs, we share a clear timeline.</p></div>
-          <div class="card"><h3>Do you handle design, fabrication and installation?</h3><p style="opacity:.88;margin-top:10px;">Yes. We can handle the full process end-to-end or support a specific stage depending on your needs.</p></div>
-          <div class="card"><h3>Can you do LED signboards and lightboxes?</h3><p style="opacity:.88;margin-top:10px;">Yes. We build illuminated options and advise on visibility, placement and durability for your location.</p></div>
-          <div class="card"><h3>Do you offer indoor office signage and wayfinding?</h3><p style="opacity:.88;margin-top:10px;">Yes. We produce office signage, door signs, directional signage and full wayfinding systems.</p></div>
-          <div class="card"><h3>What should I send to get a fast signage quote?</h3><p style="opacity:.88;margin-top:10px;">Location, sign type, approximate size, whether it’s illuminated, plus photos of your frontage.</p></div>
-          <div class="card"><h3>How do revisions work for signage design?</h3><p style="opacity:.88;margin-top:10px;">We revise in the design phase before fabrication. That’s the cost-effective stage to adjust wording, layout and sizing.</p></div>
-          <div class="card"><h3>How do we start a signage project?</h3><p style="opacity:.88;margin-top:10px;">Contact us with your goal and location. We confirm specs, propose options, quote, then proceed after approval.</p></div>
-        </div>
-
-        <div class="cta-strip" style="margin-top:18px;">
-          <div style="min-width:260px">
-            <strong>Ready to start?</strong>
-            <div style="opacity:.86;margin-top:6px">Send photos + location and we’ll recommend the best signage option.</div>
-          </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Request Signage Quote</a>
-            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </div>
@@ -850,11 +813,38 @@
       </div>
     </section>
 
+    <!-- FAQs -->
+    <section class="section light animate" id="faqs">
+      <div class="content-wrap">
+        <h2>Signage Fabrication Uganda — FAQs</h2>
+
+        <div class="grid faq-grid" style="margin-top:18px;">
+          <div class="card"><h3>What should I send for a fast quote?</h3><p style="opacity:.88;margin-top:10px;">Location, sign type, approximate size, illuminated or not, and frontage photos.</p></div>
+          <div class="card"><h3>Do you handle end-to-end?</h3><p style="opacity:.88;margin-top:10px;">Yes—design, materials, fabrication, finishing and installation coordination.</p></div>
+          <div class="card"><h3>How long does fabrication take?</h3><p style="opacity:.88;margin-top:10px;">Depends on size, materials and illumination. After confirming specs, we share a timeline.</p></div>
+          <div class="card"><h3>Which signage lasts longer outdoors?</h3><p style="opacity:.88;margin-top:10px;">It depends on material and finishing. We recommend weather-appropriate options for durability.</p></div>
+          <div class="card"><h3>Do you fabricate LED signs?</h3><p style="opacity:.88;margin-top:10px;">Yes—LED sign boards and illuminated signage with clean integration.</p></div>
+          <div class="card"><h3>Can you do wayfinding systems?</h3><p style="opacity:.88;margin-top:10px;">Yes—directional and wayfinding systems for offices, buildings and institutions.</p></div>
+        </div>
+
+        <div class="cta-strip" style="margin-top:18px;">
+          <div style="min-width:260px">
+            <strong>Ready to start?</strong>
+            <div style="opacity:.86;margin-top:6px">Send frontage photos + location and we’ll recommend the best signage option.</div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn-primary" href="/contact">Request Quote</a>
+            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="section light animate" style="padding-top:50px;">
       <div class="content-wrap">
         <div class="card">
-          <h2 style="margin-bottom:10px;">Need professional signage in Kampala?</h2>
+          <h2 style="margin-bottom:10px;">Need signage fabrication in Uganda?</h2>
           <p style="opacity:.88;margin-bottom:16px;">
             Tell us your location, sign type, approximate size and deadline. We respond quickly with options, timelines and a clear quote.
           </p>
@@ -877,7 +867,7 @@
 
   </main>
 
-  <!-- ✅ UNIVERSAL FOOTER — DO NOT MODIFY -->
+  <!-- ✅ UNIVERSAL FOOTER — DO NOT MODIFY (kept exact) -->
   <footer class="footer">
     <div class="footer-wrap">
       <div class="footer-col">
@@ -948,7 +938,6 @@
     </div>
   </footer>
 
-  <!-- Scripts (same as other hubs so .animate sections display consistently) -->
   <script src="assets/js/script.js" defer></script>
   <script src="assets/js/animations.js" defer></script>
 

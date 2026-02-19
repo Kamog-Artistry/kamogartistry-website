@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Vehicle Branding in Kampala | Car Stickers, Fleet Branding & Installation | Kamog Artistry (U) Ltd</title>
-  <meta name="description" content="Kamog Artistry (U) Ltd provides vehicle branding in Kampala: car stickers, van branding, fleet branding, reflective stickers and professional installation. Serving Kampala, Wakiso & Mukono." />
+  <title>Vehicle Branding in Kampala | Fleet Branding, Car Wraps, One Way Vision & Installation | Kamog Artistry (U) Ltd</title>
+  <meta name="description" content="Kamog Artistry (U) Ltd provides vehicle branding in Kampala: car branding, fleet branding, truck/van/bus branding, vehicle wraps (full/partial), one way vision on glass, vinyl graphics, reflective vehicle branding, magnets, and professional installation. Serving Kampala, Wakiso & Mukono." />
 
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b6fbf" />
@@ -17,19 +17,20 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
   <meta property="og:title" content="Vehicle Branding in Kampala | Kamog Artistry (U) Ltd" />
-  <meta property="og:description" content="Car branding, fleet branding, reflective stickers and professional installation in Kampala." />
+  <meta property="og:description" content="Fleet and auto branding in Kampala: one way vision, vinyl graphics, wraps, reflective stickers and clean installation." />
   <meta property="og:url" content="https://kamogartistry.com/vehicle-branding-kampala" />
-  <meta property="og:image" content="https://kamogartistry.com/assets/img/brand/logo-white.svg" />
+  <meta property="og:image" content="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg" />
+  <meta property="og:image:alt" content="Vehicle branding and rollout execution by Kamog Artistry (U) Ltd" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Vehicle Branding in Kampala | Kamog Artistry (U) Ltd" />
-  <meta name="twitter:description" content="Car stickers, van branding, fleet branding & installation in Kampala." />
-  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/brand/logo-white.svg" />
+  <meta name="twitter:description" content="Car branding, fleet branding, one way vision on glass, wraps and installation in Kampala." />
+  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- ✅ Safe overrides + maximum optimisation helpers (same pattern as the other money pages) -->
+  <!-- ✅ Safe overrides + optimisation helpers (page-only; NO global CSS changes) -->
   <style>
     :root{
       --km-blue:#0b6fbf;
@@ -38,6 +39,7 @@
     }
 
     html{ scroll-behavior:smooth; }
+    section[id], div[id]{ scroll-margin-top: 110px; }
 
     /* Skip link */
     .skip-link{
@@ -88,6 +90,18 @@
     .btn-primary, .btn-primary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
     .btn-secondary, .btn-secondary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
 
+    /* ✅ FIX: btn-secondary visibility on light sections */
+    .section.light .btn-secondary{
+      background: var(--km-blue) !important;
+      border-color: var(--km-blue) !important;
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+    }
+    .section.light .btn-secondary:hover{
+      background: var(--km-orange) !important;
+      border-color: var(--km-orange) !important;
+    }
+
     /* Light section links */
     .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link):not(.footer-cta):not(.social-btn){
       color: var(--km-blue);
@@ -115,7 +129,28 @@
       margin-top:16px;
     }
 
-    /* Proof cards visibility guard (prevents “blank card text” issues) */
+    /* Thumb images inside cluster cards */
+    .cluster-thumb{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius: 14px;
+      margin: 0 0 12px 0;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    }
+
+    /* Featured grid (12) */
+    .feat-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .feat figure{ margin:0; }
+    .feat img{ width:100%; height:auto; display:block; border-radius:14px; }
+    .feat figcaption{ opacity:.86; font-size:.95rem; margin-top:10px; line-height:1.55; }
+
+    /* Proof cards visibility guard */
     #proof .card,
     #proof .card *{
       color: var(--km-ink) !important;
@@ -150,7 +185,7 @@
   }
   </script>
 
-  <!-- ✅ Schema: LocalBusiness (authority + trust) -->
+  <!-- ✅ Schema: LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -169,7 +204,7 @@
   }
   </script>
 
-  <!-- ✅ Schema: Service (kept + expanded) -->
+  <!-- ✅ Schema: Service (expanded for fleet/auto branding scope) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -185,20 +220,28 @@
       "areaServed":["Kampala","Wakiso","Mukono","Uganda"]
     },
     "serviceType":[
-      "Car Branding",
-      "Van Branding",
-      "Fleet Branding",
-      "Vehicle Stickers",
-      "Reflective Stickers",
-      "Vehicle Wrap (Partial)",
-      "Vehicle Branding Installation"
+      "Car Branding Kampala",
+      "Fleet Branding Services Kampala",
+      "Truck Branding Kampala",
+      "Van Branding Kampala",
+      "Bus Branding Kampala",
+      "Vehicle Wraps Kampala",
+      "Partial Car Wraps Kampala",
+      "Reflective Vehicle Branding Kampala",
+      "Motorcycle Branding Kampala",
+      "Car Magnet Branding Kampala",
+      "Corporate Fleet Rebranding Kampala",
+      "Vehicle Graphics Design Kampala",
+      "One Way Vision Stickers on Glass",
+      "Vinyl Graphics on Vehicle Body",
+      "Plotted Vinyl Lettering"
     ],
     "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
     "url":"https://kamogartistry.com/vehicle-branding-kampala"
   }
   </script>
 
-  <!-- ✅ Schema: FAQ (expanded to match the on-page FAQ section) -->
+  <!-- ✅ Schema: FAQ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -206,34 +249,18 @@
     "mainEntity":[
       {
         "@type":"Question",
+        "name":"What is the best material for vehicle branding in Kampala?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Material depends on your goal. For glass, we often use one-way vision (perforated) films. For the body, we use quality vinyl graphics (stickers), plotted vinyl lettering or wraps. We recommend the best option based on exposure, budget and desired finish."
+        }
+      },
+      {
+        "@type":"Question",
         "name":"How much does vehicle branding cost in Kampala?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Cost depends on vehicle type (car/van/truck), coverage area (doors only vs full sides), material type (standard/reflective), design complexity and installation. Share your vehicle photos and branding scope and we’ll quote with options."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"How long does vehicle branding take?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Timeline depends on design approval and installation scope. Simple jobs can be done faster, while fleets or higher coverage work takes longer. We confirm timeline after reviewing your requirements and deadline."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Do you design the vehicle layout too?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes. We design vehicle branding layouts for readability and balance, then prepare production-ready files for clean installation."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Do you handle printing and installation?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes. We coordinate production of the graphics and professional installation so the final result is clean, aligned and corporate-looking."
+          "text":"Cost depends on vehicle type (car/van/truck/bus), coverage (doors only vs sides vs wrap), materials (standard vs reflective), design complexity and installation. Share photos and scope and we’ll quote with options."
         }
       },
       {
@@ -241,31 +268,31 @@
         "name":"Do you brand fleets and corporate vehicles?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Yes. We support fleet branding with consistent placement, coordinated production, and staged installation when needed."
+          "text":"Yes. We support fleet branding and corporate fleet rebranding with consistent placement, production coordination and staged installation."
         }
       },
       {
         "@type":"Question",
-        "name":"Can you help if we only have a logo (no full brand guidelines)?",
+        "name":"Can you do one way vision on vehicle glass?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Yes. We can refine the look for vehicle application, choose suitable colors/typography, and keep everything consistent across your vehicles and other touchpoints."
+          "text":"Yes. One-way vision is commonly used on rear/side glass for visibility outside while keeping some visibility from inside (depending on lighting). We advise on where it’s best applied."
         }
       },
       {
         "@type":"Question",
-        "name":"What materials do you recommend for durability?",
+        "name":"Do you offer full and partial vehicle wraps?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Material choice depends on exposure, usage and budget. We recommend suitable sticker types (including reflective where needed) and advise on care for better longevity."
+          "text":"Yes. We do vehicle wraps and partial wraps depending on impact, budget and brand goals. We design for readability and clean panel flow."
         }
       },
       {
         "@type":"Question",
-        "name":"How do we start vehicle branding with Kamog Artistry (U) Ltd?",
+        "name":"How do we start a vehicle branding job?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Send vehicle photos (both sides, front and back), the areas you want branded, and the contact details to appear. We’ll advise layout options, materials and share a quote."
+          "text":"Send vehicle photos (left/right/front/back), what areas you want branded, contact details to include, and your deadline. WhatsApp is the fastest."
         }
       }
     ]
@@ -277,7 +304,7 @@
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- ✅ HEADER (standard) -->
+  <!-- ✅ HEADER (UNIVERSAL — DO NOT MODIFY) -->
   <header class="header">
     <nav class="nav">
       <a aria-label="Go to homepage" href="/">
@@ -312,45 +339,48 @@
           <span style="opacity:.92;font-weight:900;color:#fff">Vehicle Branding Kampala</span>
         </div>
 
-        <div class="hero-badge">Kampala • Wakiso • Mukono • Central Uganda</div>
+        <div class="hero-badge">Own Commercial Fleet & Auto Branding • Kampala • Wakiso • Mukono</div>
 
-        <h1>Vehicle Branding in Kampala (Car Stickers + Fleet Branding + Installation)</h1>
+        <h1>Vehicle Branding in Kampala (Fleet Branding, Wraps, One Way Vision & Installation)</h1>
 
-        <p style="opacity:.92;margin-top:12px;max-width:950px;">
-          Turn every trip into marketing. Kamog Artistry (U) Ltd provides professional <strong>vehicle branding in Kampala</strong> including
-          car stickers, van branding and fleet branding—designed for <strong>visibility and readability</strong> and installed cleanly for a corporate finish.
+        <p style="opacity:.92;margin-top:12px;max-width:980px;">
+          If your goal is to build a <strong>commercial fleet</strong> and keep your vehicles looking consistent, vehicle branding must be done professionally.
+          Kamog Artistry (U) Ltd delivers <strong>fleet and auto branding in Kampala</strong> using methods that fit real use:
+          <strong>one-way vision stickers on glass</strong>, <strong>vinyl graphics on body panels</strong>, <strong>plotted vinyl lettering</strong>,
+          <strong>vehicle wraps</strong> (full/partial), <strong>reflective vehicle branding</strong>, and clean installation for a corporate finish.
         </p>
 
-        <p style="opacity:.9;margin-top:10px;max-width:950px;">
-          If you’re branding a single car or a full fleet, we keep placement consistent, typography clear, and finishing clean—so your business looks trustworthy on the road.
+        <p style="opacity:.9;margin-top:10px;max-width:980px;">
+          Whether you’re branding one car, a delivery fleet, vans, trucks, buses or motorcycles, we prioritise <strong>readability at speed</strong>,
+          <strong>clean spacing</strong>, and <strong>durable finishing</strong> so your branding looks premium for longer.
         </p>
 
         <div class="hero-actions" style="margin-top:18px;">
-          <!-- Keep header nav untouched; inside main we use clean, consistent internal links -->
           <a class="btn-primary" href="/contact">Request Vehicle Branding Quote</a>
-          <a class="btn-secondary" href="/portfolio">View Work Samples</a>
+          <a class="btn-secondary" href="/portfolio">View Portfolio</a>
         </div>
 
         <div class="mini-cta">
-          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">Send Vehicle Photos on WhatsApp</a>
+          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp Vehicle Photos (Fastest)</a>
           <a class="btn-secondary" href="/contact#free-consult">Free 10-Min Consultation</a>
-          <a class="btn-secondary" href="/contact#upload-artwork">Upload Logo/Brand Files</a>
+          <a class="btn-secondary" href="/contact#upload-artwork">Upload Brand Files</a>
         </div>
 
         <div class="pill-row">
-          <div class="pill">Car Stickers</div>
-          <div class="pill">Van Branding</div>
-          <div class="pill">Fleet Branding</div>
-          <div class="pill">Reflective Stickers</div>
-          <div class="pill">Partial Wrap</div>
-          <div class="pill">Installation</div>
+          <div class="pill">One Way Vision (Glass)</div>
+          <div class="pill">Vinyl Graphics (Body)</div>
+          <div class="pill">Plotted Vinyl Lettering</div>
+          <div class="pill">Vehicle Wraps</div>
+          <div class="pill">Reflective Branding</div>
+          <div class="pill">Fleet Rebranding</div>
         </div>
 
         <p class="note" style="margin-top:14px;">
-          Need large prints?
-          <a href="/large-format-printing-kampala" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Large Format Printing →</a>
+          Related hubs:
+          <a href="/branding-kampala" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Branding Kampala →</a>
           <span style="opacity:.7"> • </span>
-          Need signage?
+          <a href="/printing-services-kampala" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Printing Services →</a>
+          <span style="opacity:.7"> • </span>
           <a href="/signage-fabrication-uganda" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Signage Fabrication →</a>
         </p>
       </div>
@@ -363,602 +393,362 @@
           <div style="min-width:260px">
             <strong>Need a fast vehicle branding quote?</strong>
             <div style="opacity:.86;margin-top:6px">
-              Send: vehicle photos (both sides) + areas to brand + deadline. We’ll quote with options.
+              Send: vehicle photos (both sides) + scope (glass/body/wrap) + contact details + deadline.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Start Vehicle Branding</a>
+            <a class="btn-primary" href="/contact">Start Request</a>
             <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
 
         <p style="opacity:.88;margin-top:12px;">
-          Related pages:
-          <a href="/branding-kampala">Branding Company in Kampala</a> •
-          <a href="/printing-services-kampala">Printing Services in Kampala</a> •
-          <a href="/signage-fabrication-uganda">Signage Fabrication in Uganda</a>
+          For brand consistency across everything:
+          <a href="/branding-kampala">Branding</a> • <a href="/portfolio">Portfolio</a> • <a href="/testimonials">Testimonials</a>
         </p>
       </div>
     </section>
 
-    <!-- B) Authority Block (matches the Branding hub structure style) -->
+    <!-- ✅ Authority section -->
     <section class="section animate" id="authority">
       <div class="content-wrap">
-        <h2>What Professional Vehicle Branding Really Means</h2>
+        <h2>What Professional Fleet & Auto Branding Really Means</h2>
         <p style="opacity:.9;max-width:980px;">
-          Vehicle branding is not just “putting a sticker on a car”. Done professionally, it’s a mobile identity system:
-          the design must be readable at speed, balanced on curves and panels, and produced in the right material so it looks clean for months— not days.
-          At Kamog Artistry (U) Ltd we treat vehicle branding like a real brand touchpoint, not a quick patch.
+          Professional vehicle branding is a system: design that reads fast, materials chosen for real conditions, and installation that looks corporate.
+          We commonly use <strong>one-way vision</strong> for glass visibility, <strong>vinyl graphics</strong> for body panels,
+          and <strong>plotted vinyl</strong> for clean lettering—then we scale to wraps and reflective where the job demands it.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
-            <h3>Vehicle Branding vs. Wraps vs. Simple Stickers</h3>
+            <h3>One Way Vision on Glass (Fleet-Friendly)</h3>
             <p style="opacity:.88;margin-top:10px;">
-              <strong>Vehicle branding</strong> focuses on brand presence + contact details + clean hierarchy.
-              <strong>Wraps</strong> are higher coverage and more visual, but still require good layout.
-              <strong>Simple stickers</strong> are smaller, but must remain aligned, crisp and durable.
+              Great for rear/side glass branding when you want visibility outside. We advise on placement so it stays clean and functional.
             </p>
           </div>
 
           <div class="card">
-            <h3>Why Kampala Brands Need Clean Execution</h3>
+            <h3>Vinyl on Vehicle Body (Stickers/Graphics)</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Kampala roads are busy—people see your vehicle for seconds. That’s why contrast, spacing, font choice and correct positioning matter.
-              A clean finish increases trust (especially for corporates and institutions).
+              The most common fleet method: clear brand hierarchy, readable services, and strong contact details—without clutter.
             </p>
           </div>
 
           <div class="card">
-            <h3>Outcomes You Should Expect</h3>
-            <ul style="margin-top:10px;opacity:.9;line-height:1.85;">
-              <li><strong>More enquiries</strong> from people who spot your vehicle on the road</li>
-              <li><strong>Consistent corporate look</strong> across a fleet (no random placements)</li>
-              <li><strong>Better readability</strong> of phone/contact details</li>
-              <li><strong>Durable finish</strong> that stays neat after washing and exposure</li>
-            </ul>
+            <h3>Plotted Vinyl Lettering (Clean & Corporate)</h3>
+            <p style="opacity:.88;margin-top:10px;">
+              Ideal for minimal corporate fleets: neat typography, strong spacing and a premium look—especially on white vehicles.
+            </p>
           </div>
-        </div>
 
-        <div class="cta-strip" style="margin-top:18px;">
-          <div style="min-width:260px">
-            <strong>Not sure what coverage you need?</strong>
-            <div style="opacity:.86;margin-top:6px">
-              Share your vehicle type + where you want branding (doors/sides/full). We’ll recommend the best option for visibility and budget.
-            </div>
-          </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Request Recommendation</a>
-            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+          <div class="card">
+            <h3>Wraps, Partial Wraps & Reflective</h3>
+            <p style="opacity:.88;margin-top:10px;">
+              Wraps increase visual impact. Reflective improves low-light visibility. We recommend based on budget, usage and brand goals.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- C) Cluster Bridge Section (structured like branding hub; links can be built as cluster pages later) -->
-    <section class="section light animate" id="cluster-bridge">
+    <!-- ✅ Featured Work (12) -->
+    <section class="section light animate" id="featured">
+      <div class="content-wrap">
+        <h2>Featured Branding Work (Real Delivery)</h2>
+        <p style="opacity:.9;max-width:980px;">
+          These show real execution quality and consistency (useful for fleet-style branding standards). Each links to a case study.
+        </p>
+
+        <div class="feat-grid">
+          <a class="card card-link feat" href="/portfolio/voltech-branding" aria-label="Voltech Branding case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg" alt="Voltech branding rollout execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Voltech</strong><br/>Rollout consistency. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE – BIRDC (UMA 2025) case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg" alt="Exhibition branding and execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>UMA 2025</strong><br/>Clean delivery. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/ability-pharmacy" aria-label="Ability Pharmacy case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg" alt="Brand visibility execution for Ability Pharmacy by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Ability Pharmacy</strong><br/>Visibility & trust. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/mobile-money-branding" aria-label="Mobile Money Branding case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/mobile-money-branding/IMG01.jpg" alt="High visibility shop branding execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>High Visibility</strong><br/>Readable fast. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/modva-updf-spouses-desk" aria-label="MODVA UPDF Spouses Desk case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/modva-updf-spouses-desk/IMG01.jpg" alt="Institutional branding execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Institutional</strong><br/>Formal output. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/abundance-herbal-products" aria-label="Abundance Herbal Products case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/abundance-herbal-products/IMG01.jpg" alt="Packaging and label execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Packaging</strong><br/>Clean finishing. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/create-and-cook" aria-label="Create and Cook case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/create-and-cook/IMG01.jpg" alt="Brand execution for Create and Cook by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Create & Cook</strong><br/>Consistent brand. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/mountains-of-moon-tourism" aria-label="Mountains of the Moon Tourism case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/mountains-of-moon-tourism/IMG01.jpg" alt="Campaign visibility execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Campaign</strong><br/>Outdoor-ready. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/birdc-photo-frames-kololo-nrm" aria-label="BIRDC Photo Frames case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/birdc-photo-frames-kololo-nrm/IMG01.jpg" alt="Display and finishing execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Finishing</strong><br/>Neat output. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/exam-gifts-initiative" aria-label="Exam Gifts Initiative case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/exam-gifts-initiative/IMG01.jpg" alt="Promotional execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Promo</strong><br/>Clear message. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/kiosa-ramadan-2025" aria-label="KIOSA Ramadan 2025 case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/kiosa-ramadan-2025/IMG01.jpg" alt="Event campaign execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Event</strong><br/>Campaign-ready. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/sbl-intel-systems" aria-label="SBL Intel Systems case study">
+            <figure>
+              <img src="https://kamogartistry.com/assets/img/portfolio/sbl-intel-systems/IMG01.jpg" alt="Corporate brand execution by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+              <figcaption><strong>Corporate</strong><br/>Professional finish. <span style="opacity:.85"><strong>View →</strong></span></figcaption>
+            </figure>
+          </a>
+        </div>
+
+        <div style="text-align:center;margin-top:18px;">
+          <a class="btn-primary" href="/portfolio">Browse All Case Studies</a>
+          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener" style="margin-left:8px;">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ CLUSTER BRIDGE (YOUR EXACT 12 CLUSTERS) -->
+    <section class="section light animate" id="clusters">
       <div class="content-wrap">
         <h2>Comprehensive Vehicle Branding Services in Kampala</h2>
         <p style="opacity:.9;max-width:980px;">
-          This hub connects to specialised vehicle branding cluster pages. Each item below states what you typically receive so quoting is faster and clearer.
-          If a cluster page is not live yet, keep it in the plan (we’ll build them next).
+          Choose a specialised service below. Each cluster page is designed to make quoting faster by clarifying the scope,
+          recommended materials (glass vs body), and what you receive—especially for fleet consistency.
         </p>
 
         <div class="grid" style="margin-top:18px;">
+
           <div class="card">
-            <h3><a href="/vehicle-branding/car-stickers-kampala/">Car Stickers Kampala (Doors / Panels)</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg" alt="Car branding example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/car-branding-kampala/">Car Branding Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Clean branding for cars—designed for quick readability and a professional look, even in traffic.
+              Clean layouts for cars: readable logo + services + contact details. Ideal for SMEs, technicians and service teams.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> layout design + production-ready files + printed graphics (optional) + installation guidance.</p>
-            <!-- TODO: Create /vehicle-branding/car-stickers-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> vinyl stickers on body, plotted vinyl lettering (where needed).</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/van-branding-kampala/">Van Branding Kampala</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/sbl-intel-systems/IMG01.jpg" alt="Fleet branding services example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/fleet-branding-services-kampala/">Fleet Branding Services Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Larger surfaces need better hierarchy. We balance message, logo, services and contacts without clutter.
+              Fleet branding standards for multiple vehicles: consistent placement, spacing and uniform corporate presence.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> van layout + print-ready artwork + recommended materials + installation.</p>
-            <!-- TODO: Create /vehicle-branding/van-branding-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> vinyl on body + optional one-way vision on glass.</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/fleet-branding-kampala/">Fleet Branding Kampala (Consistent Placement)</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/mobile-money-branding/IMG01.jpg" alt="Truck branding example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/truck-branding-kampala/">Truck Branding Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              For companies with multiple vehicles—uniform placement, consistent colors and coordinated installation.
+              Branding scaled for large vehicles—designed for distance readability and strong visibility on highways and busy routes.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> fleet standard layout + placement rules + production coordination + staged installation.</p>
-            <!-- TODO: Create /vehicle-branding/fleet-branding-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> durable vinyl graphics, reflective where necessary.</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/reflective-stickers-kampala/">Reflective Stickers Kampala</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg" alt="Van branding example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/van-branding-kampala/">Van Branding Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Extra visibility for night driving or safety-driven use cases—selected based on your environment and budget.
+              Vans need structured hierarchy to avoid clutter—clean design that markets your service quickly.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> reflective material guidance + artwork setup + printing + installation.</p>
-            <!-- TODO: Create /vehicle-branding/reflective-stickers-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> vinyl body graphics, optional partial wraps.</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/partial-wrap-kampala/">Partial Wrap Kampala (High Impact)</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/modva-updf-spouses-desk/IMG01.jpg" alt="Bus branding example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/bus-branding-kampala/">Bus Branding Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Higher coverage branding that still stays clean and corporate—ideal for strong visibility without a full wrap.
+              Large-format branding for buses and shuttles—planned for panel flow, door areas and readable messaging.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> wrap-style layout + print-ready files + material guidance + installation.</p>
-            <!-- TODO: Create /vehicle-branding/partial-wrap-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> vinyl graphics, wrap/partial wrap options.</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/truck-branding-uganda/">Truck Branding Uganda</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg" alt="Vehicle wraps example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/vehicle-wraps-kampala/">Vehicle Wraps Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Branding for larger vehicles and long-distance visibility—designed for viewing distance, scale and durability.
+              Full wraps for higher impact—best for campaigns, premium look, or when you want stronger brand dominance.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> scaled layout + production-ready files + printing coordination + installation plan.</p>
-            <!-- TODO: Create /vehicle-branding/truck-branding-uganda/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> wrap vinyl + protective finishing guidance.</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/boda-branding-kampala/">Boda / Delivery Branding Kampala</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/create-and-cook/IMG01.jpg" alt="Partial car wraps example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/partial-car-wraps-kampala/">Partial Car Wraps Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Compact branding options for delivery teams—helmets, boxes, small panels, reflective add-ons where needed.
+              Higher coverage without full wrap cost—great for strong visibility while keeping a clean corporate feel.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> simplified layout + sticker set options + production + application guidance.</p>
-            <!-- TODO: Create /vehicle-branding/boda-branding-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> wrap vinyl + body graphics combination.</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/magnetic-signs-kampala/">Magnetic Vehicle Signs Kampala</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/mountains-of-moon-tourism/IMG01.jpg" alt="Reflective vehicle branding example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/reflective-vehicle-branding-kampala/">Reflective Vehicle Branding Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Removable branding for temporary campaigns or multi-use vehicles—clean, readable and reusable.
+              Night visibility and safety-driven branding—useful for fleets that operate at night or in low-light environments.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> magnetic sign design + print-ready output + production + care guidance.</p>
-            <!-- TODO: Create /vehicle-branding/magnetic-signs-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> reflective vinyl (selected by use-case).</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/vehicle-lettering-kampala/">Vehicle Lettering Kampala</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/exam-gifts-initiative/IMG01.jpg" alt="Motorcycle branding example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/motorcycle-branding-kampala/">Motorcycle Branding Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Clean typography-focused branding—ideal for corporate vehicles that need a neat, minimal look.
+              Branding for boda/delivery teams: compact layouts, helmet/box options, and visibility-focused placement.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> lettering layout + production + installation + spacing alignment.</p>
-            <!-- TODO: Create /vehicle-branding/vehicle-lettering-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Common materials:</strong> vinyl stickers, reflective add-ons (optional).</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/rebranding-removal-kampala/">Rebranding & Sticker Removal Kampala</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/birdc-photo-frames-kololo-nrm/IMG01.jpg" alt="Car magnet branding example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/car-magnet-branding-kampala/">Car Magnet Branding Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Updating an old look? We support rebranding by replacing outdated visuals with cleaner execution.
+              Removable branding for temporary campaigns or multi-use vehicles—clean and reusable when produced correctly.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> removal guidance/support + updated layout + printing + installation.</p>
-            <!-- TODO: Create /vehicle-branding/rebranding-removal-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverable focus:</strong> readable design + correct sizing + care guidance.</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/vehicle-branding-design-kampala/">Vehicle Branding Design Kampala (Artwork Setup)</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/kiosa-ramadan-2025/IMG01.jpg" alt="Corporate fleet rebranding example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/corporate-fleet-rebranding-kampala/">Corporate Fleet Rebranding Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Already have a printer/installer? We can deliver correct artwork files for clean production and fitting.
+              Updating an old look across multiple vehicles: standardised placement rules, clean replacement, and staged rollout planning.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> layout concept + print-ready exports + installer notes/measurements.</p>
-            <!-- TODO: Create /vehicle-branding/vehicle-branding-design-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Includes:</strong> fleet standard + replacement plan + consistent execution.</p>
           </div>
 
           <div class="card">
-            <h3><a href="/vehicle-branding/installation-kampala/">Vehicle Branding Installation Kampala</a></h3>
+            <img class="cluster-thumb" src="https://kamogartistry.com/assets/img/portfolio/abundance-herbal-products/IMG01.jpg" alt="Vehicle graphics design example by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/services/vehicle-branding/vehicle-graphics-design-kampala/">Vehicle Graphics Design Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Professional installation for alignment, clean edges and corporate finish—especially important for fleets.
+              Artwork setup for perfect production and fitting—ideal if you have installers but need correct design files and sizing.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> installation scheduling + surface prep guidance + clean application + finishing checks.</p>
-            <!-- TODO: Create /vehicle-branding/installation-kampala/ cluster page -->
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> print-ready exports + fitting notes + panel-safe layout.</p>
           </div>
+
         </div>
 
         <div class="cta-strip" style="margin-top:18px;">
           <div style="min-width:260px">
-            <strong>Want the right coverage for your budget?</strong>
+            <strong>Fleet-first approach:</strong>
             <div style="opacity:.86;margin-top:6px">
-              Send photos + preferred coverage (doors/sides/full). We’ll recommend the best option and quote accordingly.
+              If you plan to grow your fleet, we can create a standard placement system now—so every new vehicle matches.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Request Quote</a>
+            <a class="btn-primary" href="/contact">Request Fleet Standard</a>
             <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ✅ SERVICES (kept + enhanced wording) -->
-    <section class="section light animate" id="services">
-      <div class="content-wrap">
-        <h2>Vehicle Branding Services We Offer</h2>
-        <p style="opacity:.9;max-width:980px;">
-          We brand vehicles to look professional, balanced and readable—so your company looks serious on the road.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Standard Car Branding (Doors / Panels)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Clean branding on doors and key panels—perfect for SMEs, deliveries, technicians and service companies in Kampala.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Van & Pickup Branding</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Bigger surface needs structured layout. We design for readability and strong brand presence.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Fleet Branding (Consistency Across Vehicles)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Corporate fleet branding with uniform placement, consistent colors, and coordinated installation.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Reflective Stickers (Where Needed)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Useful for visibility in low light or safety-driven applications depending on your needs.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Partial Wrap / High Coverage Branding</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Higher-impact options for stronger visibility—balanced to avoid clutter and maintain a corporate look.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Removal + Rebranding (If Applicable)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Updating your old look? We can support rebranding by replacing outdated visuals with a cleaner brand execution.
-            </p>
-          </div>
-        </div>
-
-        <p style="opacity:.9;margin-top:16px;">
-          Need branding first? See: <a href="/branding-kampala">Branding Services in Kampala</a> •
-          Need printing too? <a href="/printing-services-kampala">Printing Services in Kampala</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- D) Gallery Section (aligned with Branding hub requirement) -->
-    <section class="section animate" id="gallery">
-      <div class="content-wrap">
-        <h2>Branding Work From Our Portfolio</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Vehicle branding works best when it matches a real identity system. Below are examples of branding and execution from our portfolio.
-          Where an exact vehicle-specific photo path is unknown, keep the TODO and replace with a real asset from your site.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <a class="card card-link" href="/portfolio/voltech-branding" aria-label="View Voltech Branding case study">
-            <img
-              src="assets/img/brand/logo-white.svg"
-              alt="Voltech branding execution example by Kamog Artistry (U) Ltd in Kampala"
-              loading="lazy"
-              decoding="async"
-              style="width:100%;height:auto;border-radius:14px;"
-            />
-            <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... (Voltech visuals) -->
-            <h3 style="margin-top:12px;">Voltech Branding</h3>
-            <p style="margin-top:8px;">Identity execution built for real-world visibility—clean hierarchy and consistent output.</p>
-            <p style="opacity:.78;margin-top:10px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/tooke-birdc-uma-2025" aria-label="View TOOKE – BIRDC (UMA 2025) case study">
-            <img
-              src="assets/img/brand/logo-white.svg"
-              alt="TOOKE – BIRDC (UMA 2025) branding execution by Kamog Artistry (U) Ltd"
-              loading="lazy"
-              decoding="async"
-              style="width:100%;height:auto;border-radius:14px;"
-            />
-            <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... (TOOKE visuals) -->
-            <h3 style="margin-top:12px;">TOOKE – BIRDC (UMA 2025)</h3>
-            <p style="margin-top:8px;">Large-scale brand execution with coordinated materials and clean presentation.</p>
-            <p style="opacity:.78;margin-top:10px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/mobile-money-branding" aria-label="View Mobile Money Branding case study">
-            <img
-              src="assets/img/brand/logo-white.svg"
-              alt="Mobile money branding example in Kampala by Kamog Artistry (U) Ltd"
-              loading="lazy"
-              decoding="async"
-              style="width:100%;height:auto;border-radius:14px;"
-            />
-            <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-            <h3 style="margin-top:12px;">Mobile Money Branding</h3>
-            <p style="margin-top:8px;">High-visibility execution—designed to be noticed fast and understood clearly.</p>
-            <p style="opacity:.78;margin-top:10px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/ability-pharmacy" aria-label="View Ability Pharmacy case study">
-            <img
-              src="assets/img/brand/logo-white.svg"
-              alt="Ability Pharmacy branding execution in Kampala by Kamog Artistry (U) Ltd"
-              loading="lazy"
-              decoding="async"
-              style="width:100%;height:auto;border-radius:14px;"
-            />
-            <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-            <h3 style="margin-top:12px;">Ability Pharmacy</h3>
-            <p style="margin-top:8px;">Trust-focused brand execution with clean hierarchy and professional finish.</p>
-            <p style="opacity:.78;margin-top:10px;"><strong>View Case Study →</strong></p>
-          </a>
-        </div>
-
-        <div class="cta-strip" style="margin-top:18px;">
-          <div style="min-width:260px">
-            <strong>Want to see more execution examples?</strong>
-            <div style="opacity:.86;margin-top:6px">
-              Browse the full portfolio and tell us which style you like—we’ll apply the same consistency to your vehicle branding.
-            </div>
-          </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/portfolio">View Portfolio</a>
-            <a class="btn-primary" href="/contact">Request Quote</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ✅ WHY IT WORKS -->
-    <section class="section animate" id="why">
-      <div class="content-wrap">
-        <h2>Why Vehicle Branding Works (When Done Right)</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Many vehicle stickers fail because they’re crowded, low contrast, or poorly installed. We focus on clear hierarchy, readable contact details,
-          and clean finishing—so your message is seen quickly even while moving.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Readability First</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Clear message + strong phone/contact + clean spacing—so it’s readable on the road.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Corporate Finish</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Clean edges and correct alignment improve trust—especially for corporate and institutional work.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Durable Materials</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We recommend sticker types suited to exposure and usage, and advise on care for longevity.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Consistency Across Fleet</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              For multiple vehicles, we keep placement consistent so your brand looks organized and professional.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ✅ PROCESS -->
+    <!-- ✅ Process -->
     <section class="section light animate" id="process">
       <div class="content-wrap">
-        <h2>Our Vehicle Branding Process (Design → Print → Installation)</h2>
+        <h2>Our Vehicle Branding Process (Design → Production → Installation)</h2>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
-            <h3>1) Vehicle Photos + Branding Scope</h3>
+            <h3>1) Vehicle Photos + Scope</h3>
             <p style="opacity:.88;margin-top:10px;">
-              You share vehicle photos (front/side/back) and what areas to brand (doors, sides, full panels). We confirm what’s realistic for your budget and timeline.
+              You send left/right/front/back photos, and specify what you want: glass branding (one way vision), body branding (vinyl), lettering (plotted), wrap (full/partial).
             </p>
           </div>
-
           <div class="card">
-            <h3>2) Layout Design for Readability</h3>
+            <h3>2) Layout for Readability</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We design a layout that reads fast. Contact details are prioritized, spacing is clean, and the design fits the panels correctly without awkward cropping.
+              We design for quick understanding: clear hierarchy, readable contacts, and clean spacing that fits panels and curves.
             </p>
           </div>
-
           <div class="card">
-            <h3>3) Material & Finishing Guidance</h3>
+            <h3>3) Material Recommendation</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We recommend suitable materials (standard or reflective where needed) and finishing options based on exposure, usage and longevity expectations.
+              We recommend what works best for your use-case: one-way vision for glass, vinyl graphics for body, reflective where needed, wrap options for impact.
             </p>
           </div>
-
           <div class="card">
-            <h3>4) Production (Print-Ready Output)</h3>
+            <h3>4) Production-Ready Output</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We prepare and produce production-ready graphics with correct sizing, neat trimming and finishing—reducing errors during fitting.
+              Correct sizing and print-ready files reduce fitting errors and keep finishing clean.
             </p>
           </div>
-
           <div class="card">
-            <h3>5) Professional Installation</h3>
+            <h3>5) Clean Installation</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Installation is handled with alignment, clean edges and a corporate finish in mind. We check placements so the final look remains consistent.
+              Alignment, neat edges, and consistent placement—especially important for fleets and corporates.
             </p>
           </div>
-
           <div class="card">
-            <h3>6) Finishing Checks & Care Tips</h3>
+            <h3>6) Final Checks + Care Tips</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We guide you on basic care (washing, exposure) and confirm that the brand remains readable and neat after installation.
+              We confirm readability, finish quality, and share basic care guidance to maintain the branding longer.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- F) Industries (aligned with Branding hub style) -->
-    <section class="section light animate" id="industries">
-      <div class="content-wrap">
-        <h2>Industries We Brand With Vehicle Graphics in Kampala & Uganda</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Vehicle branding is common across many sectors—especially where delivery, field teams, and visibility matter.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>NGOs & Programs</h3>
-            <p style="opacity:.88;margin-top:10px;">Consistent donor-facing and field visibility—clean, formal layouts that look credible.</p>
-          </div>
-          <div class="card">
-            <h3>Corporate & Institutional</h3>
-            <p style="opacity:.88;margin-top:10px;">Fleet consistency, corporate-grade finishing, and clear identification on the road.</p>
-          </div>
-          <div class="card">
-            <h3>SMEs & Service Companies</h3>
-            <p style="opacity:.88;margin-top:10px;">Technicians, installers and service teams—simple, readable, inquiry-driven layouts.</p>
-          </div>
-          <div class="card">
-            <h3>Hospitality & Delivery</h3>
-            <p style="opacity:.88;margin-top:10px;">Restaurants, cafés, delivery brands—visibility-focused branding with strong contact details.</p>
-          </div>
-          <div class="card">
-            <h3>Education & Training</h3>
-            <p style="opacity:.88;margin-top:10px;">School and institution vehicles—clean identity and formal presentation.</p>
-          </div>
-          <div class="card">
-            <h3>Retail / FMCG</h3>
-            <p style="opacity:.88;margin-top:10px;">Promo-driven visibility, campaign-based vehicle graphics, and consistent branding for distribution.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- G) Cost Section -->
-    <section class="section animate" id="cost">
-      <div class="content-wrap">
-        <h2>How Much Does Vehicle Branding Cost in Kampala?</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Vehicle branding cost depends on scope. A small door branding job is different from high coverage or a full fleet rollout.
-          We avoid one-size pricing because quality and durability depend on the right material and correct installation.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Main Cost Drivers</h3>
-            <ul style="margin-top:10px;opacity:.9;line-height:1.85;">
-              <li><strong>Vehicle type:</strong> car vs van vs truck</li>
-              <li><strong>Coverage area:</strong> doors only vs sides vs higher coverage</li>
-              <li><strong>Material choice:</strong> standard vs reflective or specialty finishes</li>
-              <li><strong>Design complexity:</strong> layout, imagery, and detailing</li>
-              <li><strong>Installation scope:</strong> single vehicle vs fleet scheduling</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Best Way to Get an Accurate Quote</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Send clear photos + what areas you want branded + your deadline. We’ll share options so you can choose the best fit for budget and visibility.
-            </p>
-            <p style="opacity:.88;margin-top:10px;">
-              If you’re also doing printing or signage, we can coordinate everything for a consistent brand rollout.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Tip:</strong> Fleets benefit from standard placement rules to avoid “different looks” across vehicles.</p>
-          </div>
-        </div>
-
-        <div class="cta-strip" style="margin-top:18px;">
-          <div style="min-width:260px">
-            <strong>Get a quote with options (not guesses).</strong>
-            <div style="opacity:.86;margin-top:6px">
-              Share vehicle photos + scope and we’ll respond with coverage options and timeline.
-            </div>
-          </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Request Vehicle Branding Quote</a>
-            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- H) Trust Signals (use full company name and match Branding structure) -->
-    <section class="section animate" id="trust">
-      <div class="content-wrap">
-        <h2>Why Clients Choose Kamog Artistry (U) Ltd</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Vehicle branding needs more than design. Clients choose Kamog Artistry (U) Ltd for production-ready artwork, clean finishing,
-          and consistency across print, signage and on-road branding.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Production-Ready Design</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We prepare correct formats, correct sizing and fitting notes—reducing printing mistakes and improving installation results.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Clean Finishing & Alignment</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              A corporate finish builds trust. We focus on alignment, clean edges and proper spacing (especially for fleet work).
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>End-to-End Coordination</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              From layout to production to installation—one standard, fewer delays, and consistent delivery.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Built for Kampala Visibility</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We design with real viewing distance in mind—so phone numbers and services remain readable in traffic and on busy streets.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Trusted Feedback</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              See what clients say about our delivery, quality and consistency.
-              <a href="/testimonials">Visit testimonials →</a>
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Brand Consistency Beyond Vehicles</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Need matching prints and signage? We coordinate the full rollout so your brand looks consistent everywhere.
-              <a href="/printing-services-kampala">Printing services →</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ✅ WHAT TO SEND -->
+    <!-- ✅ What to send -->
     <section class="section animate" id="quote">
       <div class="content-wrap">
         <h2>What to Send for a Fast Quote</h2>
         <p style="opacity:.9;">To quote accurately and avoid delays, send:</p>
 
         <ul class="list-clean">
-          <li><strong>Vehicle type:</strong> car / van / pickup / truck</li>
-          <li><strong>Branding scope:</strong> doors only / sides / full coverage</li>
-          <li><strong>Photos:</strong> clear side photos (left + right), front and back</li>
-          <li><strong>Brand files:</strong> logo + preferred colors (if available)</li>
-          <li><strong>Contact details:</strong> phone/email to include on the vehicle</li>
-          <li><strong>Timeline:</strong> when you need it done</li>
-          <li><strong>Fleet size:</strong> number of vehicles (if fleet branding)</li>
-          <li><strong>Location:</strong> Kampala / Wakiso / Mukono (so we plan installation logistics)</li>
+          <li><strong>Vehicle type:</strong> car / van / truck / bus / motorcycle</li>
+          <li><strong>Scope:</strong> glass (one way vision) / body vinyl / plotted lettering / full wrap / partial wrap</li>
+          <li><strong>Photos:</strong> left + right side, front and back</li>
+          <li><strong>Brand files:</strong> logo + preferred colours (if available)</li>
+          <li><strong>Contacts:</strong> phone/email/website to include</li>
+          <li><strong>Deadline:</strong> when you need installation done</li>
+          <li><strong>Fleet size:</strong> number of vehicles (if fleet)</li>
+          <li><strong>Location:</strong> Kampala / Wakiso / Mukono</li>
         </ul>
 
         <div style="text-align:center;margin-top:18px;">
@@ -968,139 +758,51 @@
       </div>
     </section>
 
-    <!-- ✅ PROOF -->
-    <section class="section light animate" id="proof">
-      <div class="content-wrap">
-        <h2>Proof of Work (Branding + Execution)</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Browse related projects. If you tell us your industry and fleet size, we’ll recommend the best approach for visibility and budget.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <a class="card card-link" href="/portfolio/voltech-branding">
-            <h3>Voltech Branding</h3>
-            <p style="margin-top:10px;">Brand identity and execution—consistent brand visibility.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/mobile-money-branding">
-            <h3>Mobile Money Branding</h3>
-            <p style="margin-top:10px;">Customer-facing branding execution with high visibility.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/ability-pharmacy">
-            <h3>Ability Pharmacy</h3>
-            <p style="margin-top:10px;">Brand visibility execution for a service business.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/tooke-birdc-uma-2025">
-            <h3>TOOKE – BIRDC (UMA 2025)</h3>
-            <p style="margin-top:10px;">Large-scale execution and coordinated branding.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>View Case Study →</strong></p>
-          </a>
-        </div>
-
-        <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/portfolio">Browse All Case Studies</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- J) Service Areas -->
-    <section class="section animate" id="service-areas">
-      <div class="content-wrap">
-        <h2>Vehicle Branding Service Areas</h2>
-        <p style="opacity:.9;max-width:980px;">
-          We serve clients across Kampala and nearby areas—plus we coordinate projects across Uganda depending on scope.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Ntinda, Nakawa, Kololo, Bugolobi, Nakasero, Kamwokya, Muyenga, Kabalagala, Makindye, Rubaga, Kawempe, Namirembe, Wandegeya and more.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Nearby Districts</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Wakiso, Mukono and surrounding areas—common for fleet and corporate installations.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Nationwide (Project-Based)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              For larger rollouts, we can coordinate production and planned installation across Uganda depending on timelines and logistics.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ✅ FAQ (kept + expanded cards to 8 questions, matching the hub pattern) -->
+    <!-- ✅ FAQs -->
     <section class="section animate" id="faqs">
       <div class="content-wrap">
         <h2>Vehicle Branding Kampala FAQs</h2>
 
         <div class="grid faq-grid" style="margin-top:18px;">
           <div class="card">
+            <h3>What is the best material for vehicle branding?</h3>
+            <p style="opacity:.88;margin-top:10px;">
+              For glass we often use <strong>one-way vision</strong>. For the body we use <strong>vinyl graphics</strong> or <strong>plotted vinyl lettering</strong>. Wraps and reflective are selected based on impact and conditions.
+            </p>
+          </div>
+
+          <div class="card">
             <h3>How much does vehicle branding cost in Kampala?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Cost depends on vehicle type, coverage area, materials (standard/reflective) and installation scope. Send photos and we’ll quote with options.
+              It depends on vehicle type, coverage, material choice (standard/reflective/wrap), design complexity and installation. Send photos and scope for a proper quote.
             </p>
           </div>
 
           <div class="card">
-            <h3>How long does vehicle branding take?</h3>
+            <h3>Do you brand fleets and corporate vehicles?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Timeline depends on design approval and scope. A simple job can be faster, while fleets or higher coverage projects take longer. We confirm after reviewing your deadline.
+              Yes. We create a consistent placement system so every vehicle matches—especially important for commercial fleets.
             </p>
           </div>
 
           <div class="card">
-            <h3>Do you design the vehicle layout?</h3>
+            <h3>Can you do one way vision on vehicle glass?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Yes. We design for readability and balance, then prepare production-ready artwork for clean installation.
+              Yes. We advise the best glass areas and ensure the layout remains readable from outside.
             </p>
           </div>
 
           <div class="card">
-            <h3>Can you handle printing and installation?</h3>
+            <h3>Do you offer wraps and partial wraps?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Yes. We coordinate production and installation so the final result is aligned, neat and corporate-looking.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Do you brand multiple vehicles (fleet branding)?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. We keep placement consistent across vehicles and coordinate staged installation if needed.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Do you use durable sticker materials?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. We recommend suitable materials depending on exposure and usage, and we advise on care for better durability.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What if we don’t have full brand guidelines?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              No problem. We can work from your logo, refine the look for vehicle application, and keep colors and typography consistent.
-              If you want a full system, see <a href="/branding-kampala">Branding in Kampala</a>.
+              Yes—wraps and partial wraps depending on budget and desired impact. We design to avoid awkward panel breaks.
             </p>
           </div>
 
           <div class="card">
             <h3>How do we start?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Send vehicle photos, branding scope, and the contact details you want to appear. We’ll advise the best layout and share a quote.
+              WhatsApp vehicle photos + scope + contacts + deadline. We respond with options and a clear quote.
             </p>
           </div>
         </div>
@@ -1116,22 +818,23 @@
     <section class="section light animate" style="padding-top:50px;" id="final-cta">
       <div class="content-wrap">
         <div class="card">
-          <h2 style="margin-bottom:10px;">Want your vehicle to market your business daily?</h2>
+          <h2 style="margin-bottom:10px;">Ready to brand your vehicle or fleet in Kampala?</h2>
           <p style="opacity:.88;margin-bottom:16px;">
-            Send your vehicle photos and branding scope. We’ll advise the best layout and material for visibility and a clean finish.
-            We respond fast—especially when you include photos and deadline.
+            Send your vehicle photos and scope (glass/body/wrap). We’ll recommend the best method and give you a clear quote.
+            For fleets, we can set a standard so every new vehicle matches the system.
           </p>
 
           <div class="hero-actions">
             <a class="btn-primary" href="/contact">Request Quote</a>
-            <a class="btn-secondary" href="/contact#upload-artwork" style="margin-left:8px;">Upload Brand Files</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener" style="margin-left:8px;">WhatsApp</a>
           </div>
 
           <p style="opacity:.82;margin-top:14px;">
             Next:
-            <a href="/branding-kampala">Branding in Kampala</a> •
-            <a href="/printing-services-kampala">Printing Services in Kampala</a> •
-            <a href="/signage-fabrication-uganda">Signage Fabrication</a>
+            <a href="/branding-kampala">Branding Kampala</a> •
+            <a href="/printing-services-kampala">Printing Services</a> •
+            <a href="/signage-fabrication-uganda">Signage Fabrication</a> •
+            <a href="/portfolio">Portfolio</a>
           </p>
         </div>
       </div>
@@ -1139,7 +842,7 @@
 
   </main>
 
-  <!-- ✅ FOOTER (standard) -->
+  <!-- ✅ FOOTER (UNIVERSAL — DO NOT MODIFY) -->
   <footer class="footer">
     <div class="footer-wrap">
       <div class="footer-col">

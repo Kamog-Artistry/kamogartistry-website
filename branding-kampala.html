@@ -6,7 +6,7 @@
 
   <title>Branding Company in Kampala | Logo Design & Corporate Branding | Kamog Artistry (U) Ltd</title>
 
-  <meta name="description" content="Kamog Artistry (U) Ltd is a branding company in Kampala providing logo design, brand identity systems, corporate stationery, company profiles, pitch decks and campaign creatives. Serving Kampala, Wakiso & Mukono." />
+  <meta name="description" content="Kamog Artistry (U) Ltd is a branding company in Kampala providing logo design, corporate brand identity design, brand guidelines, packaging and label design, rebranding, brand strategy consulting, and brand rollout support. Serving Kampala, Wakiso & Mukono." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b6fbf" />
   <link rel="canonical" href="https://kamogartistry.com/branding-kampala" />
@@ -19,9 +19,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
   <meta property="og:title" content="Branding Company in Kampala | Kamog Artistry (U) Ltd" />
-  <meta property="og:description" content="Logo design, brand identity systems, corporate stationery and institutional-level brand execution in Kampala, Uganda." />
+  <meta property="og:description" content="Logo design, corporate brand identity systems, guidelines, packaging and rollout support in Kampala, Uganda." />
   <meta property="og:url" content="https://kamogartistry.com/branding-kampala" />
-  <!-- Use a REAL project image for better previews (not an SVG logo) -->
   <meta property="og:image" content="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg" />
   <meta property="og:image:alt" content="Branding and identity execution work by Kamog Artistry (U) Ltd in Kampala, Uganda" />
 
@@ -43,10 +42,8 @@
 
     html{ scroll-behavior:smooth; }
 
-    /* ✅ NEW: prevent anchor sections hiding behind sticky header */
-    section[id], div[id]{
-      scroll-margin-top: 110px;
-    }
+    /* ✅ prevent anchor sections hiding behind sticky header */
+    section[id], div[id]{ scroll-margin-top: 110px; }
 
     /* Skip link */
     .skip-link{
@@ -62,7 +59,6 @@
     a.card-link, a.card-link * { text-decoration: none !important; color: inherit !important; }
     a.card-link:hover { transform: translateY(-2px); transition: transform .15s ease; }
 
-    /* Improve readability of long content without new CSS dependencies */
     .content-wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
 
     /* Breadcrumbs */
@@ -95,6 +91,19 @@
     .btn-primary, .btn-secondary{ text-decoration:none !important; }
     .btn-primary, .btn-primary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
     .btn-secondary, .btn-secondary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
+
+    /* ✅ Fix: secondary buttons on light/white sections (WhatsApp etc.) */
+    .section.light .btn-secondary{
+      background: var(--km-blue) !important;
+      border: 1px solid rgba(11,111,191,.25) !important;
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+      opacity: 1 !important;
+    }
+    .section.light .btn-secondary:hover{
+      background: var(--km-orange) !important;
+      border-color: rgba(242,140,40,.35) !important;
+    }
 
     /* Light section links */
     .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link){
@@ -133,11 +142,11 @@
       margin-top:16px;
     }
 
-    /* ✅ UPDATED: Micro cards (separate Ideal For / Most Requested / Result) */
+    /* Micro cards */
     .micro-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px; /* increased spacing */
+      gap: 18px;
       margin-top: 16px;
       align-items: stretch;
     }
@@ -158,14 +167,18 @@
       margin-bottom: 10px;
     }
 
-    /* Featured images */
+    /* Featured gallery (12 items) */
     .feat-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
+      gap: 14px;
       margin-top: 16px;
+      align-items: stretch;
     }
-    .feat{ overflow:hidden; }
+    .feat{
+      overflow:hidden;
+      border-radius: 18px;
+    }
     .feat figure{ margin:0; }
     .feat img{
       width:100%;
@@ -173,14 +186,24 @@
       display:block;
       border-radius: 14px;
     }
-    .feat figcaption{
-      opacity:.86;
-      font-size:.95rem;
+    .feat .cap{
       margin-top: 10px;
-      line-height: 1.55;
+      line-height: 1.45;
+      font-size: .98rem;
+      opacity: .92;
+      font-weight: 900;
     }
 
-    /* NEW: Packages */
+    /* Cluster cards: image */
+    .cluster-thumb{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius: 14px;
+      margin-bottom: 12px;
+    }
+
+    /* Packages */
     .package-title{ display:flex; align-items:center; justify-content:space-between; gap: 10px; flex-wrap:wrap; }
     .tag{
       display:inline-block;
@@ -219,7 +242,7 @@
   }
   </script>
 
-  <!-- Schema: Organization (NEW) -->
+  <!-- Schema: Organization -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -237,7 +260,7 @@
   }
   </script>
 
-  <!-- Schema: WebPage (NEW) -->
+  <!-- Schema: WebPage -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -253,7 +276,10 @@
       "Branding in Kampala",
       "Logo Design Kampala",
       "Corporate Identity Design",
-      "Brand Guidelines"
+      "Brand Guidelines",
+      "Packaging Design Kampala",
+      "Product Label Design Kampala",
+      "Rebranding Services Kampala"
     ]
   }
   </script>
@@ -293,116 +319,61 @@
       "areaServed":["Kampala","Wakiso","Mukono","Uganda"]
     },
     "serviceType":[
-      "Branding Company in Kampala",
       "Logo Design Kampala",
-      "Corporate Identity Design Kampala",
-      "Brand Guidelines Design",
-      "Corporate Stationery Design",
-      "Company Profile Design",
-      "Pitch Deck Design",
-      "Rebranding Services",
-      "Packaging & Label Design",
-      "Campaign & Marketing Design",
-      "Brand Implementation"
+      "Corporate Brand Identity Design Kampala",
+      "Brand Guidelines Design Kampala",
+      "Packaging Design Kampala",
+      "Product Label Design Kampala",
+      "Rebranding Services Kampala",
+      "Brand Strategy Consulting Kampala",
+      "Startup Branding Packages Kampala",
+      "SME Brand Development Kampala",
+      "Event Branding Design Kampala",
+      "Social Media Brand Design Kampala",
+      "Brand Rollout Management Kampala"
     ],
     "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
     "url":"https://kamogartistry.com/branding-kampala"
   }
   </script>
 
-  <!-- Schema: ItemList for Cluster Pages (UPDATED to /branding/...) -->
+  <!-- Schema: ItemList for Cluster Pages -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Comprehensive Branding Services in Kampala",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"url":"https://kamogartistry.com/branding/logo-design-kampala/","name":"Logo Design Kampala"},
-      {"@type":"ListItem","position":2,"url":"https://kamogartistry.com/branding/corporate-identity-design-kampala/","name":"Corporate Identity Design Kampala"},
-      {"@type":"ListItem","position":3,"url":"https://kamogartistry.com/branding/company-profile-design-kampala/","name":"Company Profile Design Kampala"},
-      {"@type":"ListItem","position":4,"url":"https://kamogartistry.com/branding/brand-guidelines-design-kampala/","name":"Brand Guidelines Design Kampala"},
-      {"@type":"ListItem","position":5,"url":"https://kamogartistry.com/branding/brand-strategy-kampala/","name":"Brand Strategy Kampala"},
-      {"@type":"ListItem","position":6,"url":"https://kamogartistry.com/branding/rebranding-services-kampala/","name":"Rebranding Services Kampala"},
-      {"@type":"ListItem","position":7,"url":"https://kamogartistry.com/branding/startup-branding-kampala/","name":"Startup Branding Kampala"},
-      {"@type":"ListItem","position":8,"url":"https://kamogartistry.com/branding/sme-branding-services-kampala/","name":"SME Branding Services Kampala"},
-      {"@type":"ListItem","position":9,"url":"https://kamogartistry.com/branding/packaging-design-kampala/","name":"Packaging Design Kampala"},
-      {"@type":"ListItem","position":10,"url":"https://kamogartistry.com/branding/event-branding-kampala/","name":"Event Branding Kampala"},
-      {"@type":"ListItem","position":11,"url":"https://kamogartistry.com/branding/corporate-stationery-design-kampala/","name":"Corporate Stationery Design Kampala"},
-      {"@type":"ListItem","position":12,"url":"https://kamogartistry.com/branding/brand-implementation-print-kampala/","name":"Brand Implementation (Print) Kampala"}
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Branding Services in Kampala — Cluster Pages",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"url":"https://kamogartistry.com/branding/logo-design-kampala/","name":"Logo Design Kampala"},
+    {"@type":"ListItem","position":2,"url":"https://kamogartistry.com/branding/corporate-brand-identity-design-kampala/","name":"Corporate Brand Identity Design Kampala"},
+    {"@type":"ListItem","position":3,"url":"https://kamogartistry.com/branding/brand-guidelines-design-kampala/","name":"Brand Guidelines Design Kampala"},
+    {"@type":"ListItem","position":4,"url":"https://kamogartistry.com/branding/packaging-design-kampala/","name":"Packaging Design Kampala"},
+    {"@type":"ListItem","position":5,"url":"https://kamogartistry.com/branding/product-label-design-kampala/","name":"Product Label Design Kampala"},
+    {"@type":"ListItem","position":6,"url":"https://kamogartistry.com/branding/rebranding-services-kampala/","name":"Rebranding Services Kampala"},
+    {"@type":"ListItem","position":7,"url":"https://kamogartistry.com/branding/brand-strategy-consulting-kampala/","name":"Brand Strategy Consulting Kampala"},
+    {"@type":"ListItem","position":8,"url":"https://kamogartistry.com/branding/startup-branding-packages-kampala/","name":"Startup Branding Packages Kampala"},
+    {"@type":"ListItem","position":9,"url":"https://kamogartistry.com/branding/sme-brand-development-kampala/","name":"SME Brand Development Kampala"},
+    {"@type":"ListItem","position":10,"url":"https://kamogartistry.com/branding/event-branding-design-kampala/","name":"Event Branding Design Kampala"},
+    {"@type":"ListItem","position":11,"url":"https://kamogartistry.com/branding/social-media-brand-design-kampala/","name":"Social Media Brand Design Kampala"},
+    {"@type":"ListItem","position":12,"url":"https://kamogartistry.com/branding/brand-rollout-management-kampala/","name":"Brand Rollout Management Kampala"}
+  ]
+}
   </script>
 
-  <!-- Schema: FAQPage (UPDATED to 8 questions) -->
+  <!-- Schema: FAQPage -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"What’s the difference between a logo and full branding?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"A logo is a single mark. Branding is the full system around it—colors, typography, messaging, layout rules and how everything looks across documents, signage, packaging and digital. A strong identity helps your business feel consistent and trustworthy."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"How much does branding cost in Kampala?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Branding cost depends on scope (logo only vs full identity), number of deliverables, revision rounds, urgency, and where the brand will be used (stationery, documents, packaging, signage). Share your brief and we’ll quote with options."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"How long does a logo or full corporate identity take?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Timeline depends on scope and feedback speed. A logo can be delivered faster; a full identity typically takes longer because it includes guidelines and multiple applications. We confirm timeline after reviewing your requirements."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"What deliverables do we receive after branding is complete?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"You receive print-ready and web-ready files for your logo and brand assets, plus brand colors, typography guidance, and (where included) stationery designs, templates and a simple brand guide so your team stays consistent."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Do you provide brand guidelines?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes. We can provide a practical brand guideline document that covers logo usage, colors, fonts, spacing rules and example applications to help keep your brand consistent across teams and vendors."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Can you handle printing, signage or vehicle branding as part of implementation?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes. We can implement the brand across printing and signage so everything remains consistent—from business cards and brochures to storefront signage, banners and vehicle branding."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Do you work with startups, SMEs and NGOs?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes. We support startups, SMEs, NGOs and corporates. We’ll recommend the right scope based on your stage, budget and where you need the brand to appear."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"How do we start a branding project with Kamog Artistry?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Start by sharing your business name, what you do, target audience, and what you need (logo, identity, stationery, profile, packaging, signage). We’ll advise the best package, timeline and next steps."
-        }
-      }
+      {"@type":"Question","name":"What’s the difference between a logo and full branding?","acceptedAnswer":{"@type":"Answer","text":"A logo is a single mark. Branding is the full system around it—colors, typography, messaging, layout rules and how everything looks across documents, signage, packaging and digital. A strong identity helps your business feel consistent and trustworthy."}},
+      {"@type":"Question","name":"How much does branding cost in Kampala?","acceptedAnswer":{"@type":"Answer","text":"Branding cost depends on scope (logo only vs full identity), number of deliverables, revision rounds, urgency, and where the brand will be used (stationery, documents, packaging, signage). Share your brief and we’ll quote with options."}},
+      {"@type":"Question","name":"How long does a logo or full corporate identity take?","acceptedAnswer":{"@type":"Answer","text":"Timeline depends on scope and feedback speed. A logo can be delivered faster; a full identity typically takes longer because it includes guidelines and multiple applications. We confirm timeline after reviewing your requirements."}},
+      {"@type":"Question","name":"What deliverables do we receive after branding is complete?","acceptedAnswer":{"@type":"Answer","text":"You receive print-ready and web-ready files for your logo and brand assets, plus brand colors, typography guidance, and (where included) stationery designs, templates and a simple brand guide so your team stays consistent."}},
+      {"@type":"Question","name":"Do you provide brand guidelines?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can provide a practical brand guideline document that covers logo usage, colors, fonts, spacing rules and example applications to help keep your brand consistent across teams and vendors."}},
+      {"@type":"Question","name":"Can you handle printing, signage or vehicle branding as part of implementation?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can implement the brand across printing and signage so everything remains consistent—from business cards and brochures to storefront signage, banners and vehicle branding."}},
+      {"@type":"Question","name":"Do you work with startups, SMEs and NGOs?","acceptedAnswer":{"@type":"Answer","text":"Yes. We support startups, SMEs, NGOs and corporates. We’ll recommend the right scope based on your stage, budget and where you need the brand to appear."}},
+      {"@type":"Question","name":"How do we start a branding project with Kamog Artistry?","acceptedAnswer":{"@type":"Answer","text":"Start by sharing your business name, what you do, target audience, and what you need (logo, identity, stationery, profile, packaging, signage). We’ll advise the best package, timeline and next steps."}}
     ]
   }
   </script>
@@ -450,16 +421,18 @@
 
         <div class="hero-badge">Kampala • Wakiso • Mukono • Central Uganda</div>
 
-        <h1>Branding Company in Kampala (Corporate Identity + Logo Design)</h1>
+        <h1>Branding Company in Kampala (Logo Design, Corporate Identity & Brand Rollout)</h1>
 
         <p style="opacity:.92;margin-top:12px;max-width:980px;">
-          Kamog Artistry (U) Ltd is a <strong>branding company in Kampala</strong> delivering <strong>branding strategy</strong>, identity systems,
-          and production-ready design—built for real-world execution across <strong>printing, signage, packaging, and digital</strong>.
+          If you’re building a serious business in Kampala, your brand has to look deliberate—consistent on documents, clear on signage,
+          and professional on every customer touchpoint. Kamog Artistry (U) Ltd provides <strong>branding services in Kampala</strong> that are built for real-world use:
+          <strong>logo design</strong>, <strong>corporate brand identity systems</strong>, <strong>brand guidelines</strong>, <strong>packaging and label design</strong>,
+          and <strong>rollout support</strong> so the brand stays consistent across print, digital and physical execution.
         </p>
 
         <p style="opacity:.9;margin-top:10px;max-width:980px;">
-          If you want your business to look credible to customers, partners and institutions, you need more than a “nice logo”.
-          You need a consistent identity that works on business cards, letterheads, social media, brochures, banners and storefront signage.
+          We regularly support businesses across Kampala (CBD, Nakasero, Kololo, Ntinda, Industrial Area, Mbuya) and also serve Wakiso and Mukono.
+          Whether you’re launching, upgrading, or expanding, the goal is the same: a brand that looks established and holds up everywhere.
         </p>
 
         <div class="hero-actions" style="margin-top:18px;">
@@ -475,10 +448,10 @@
 
         <div class="pill-row">
           <div class="pill">Logo + Identity</div>
-          <div class="pill">Corporate Stationery</div>
-          <div class="pill">Company Profiles</div>
-          <div class="pill">Pitch Decks</div>
-          <div class="pill">Brand Implementation</div>
+          <div class="pill">Brand Guidelines</div>
+          <div class="pill">Packaging & Labels</div>
+          <div class="pill">Social Media Templates</div>
+          <div class="pill">Brand Rollout</div>
         </div>
 
         <p class="note" style="margin-top:14px;">
@@ -487,8 +460,6 @@
           <span style="opacity:.7"> • </span>
           <a href="compliance" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Compliance →</a>
         </p>
-
-        <!-- ✅ TOC EXCLUDED ENTIRELY (per instruction) -->
 
       </div>
     </section>
@@ -500,12 +471,12 @@
           <div style="min-width:260px">
             <strong>Need branding in Kampala this week?</strong>
             <div style="opacity:.86;margin-top:6px">
-              Send your business name + what you do + what you need. We’ll advise the best package and timeline.
+              Send your business name + what you do + what you need (logo, identity, packaging, templates, rollout). We’ll advise the right scope and timeline.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <a class="btn-primary" href="/contact">Start Branding Project</a>
-            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
 
@@ -517,968 +488,496 @@
       </div>
     </section>
 
-    <!-- B) Authority Block: “What Professional Branding Really Means” -->
+    <!-- Authority Block -->
     <section class="section light animate" id="branding-meaning">
       <div class="content-wrap">
         <h2>What Professional Branding Really Means</h2>
         <p style="opacity:.9;max-width:980px;">
-          In Kampala, many businesses say “we need branding” but mean different things. Here’s the clear difference:
-          <strong>a logo is not the full brand</strong>. Branding is the system that makes your business look consistent and credible everywhere.
+          In Kampala, “branding” is often treated like a quick logo job. That’s where many businesses lose consistency.
+          A logo is one piece—branding is the system that keeps everything looking like one business across documents, packaging, signage and digital.
         </p>
 
         <div class="grid" style="margin-top:18px;">
           <div class="card">
             <h3>Brand Strategy</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Your positioning, audience, tone, and what you want your business to be known for.
-              Strategy guides the look and messaging so your identity isn’t random.
+              Clear positioning, audience, tone and messaging direction—so the visuals and content don’t feel random.
             </p>
           </div>
           <div class="card">
-            <h3>Logo</h3>
+            <h3>Logo Design</h3>
             <p style="opacity:.88;margin-top:10px;">
-              The mark people recognize. It must be clear, scalable, and usable on small prints and large signage.
-              But it’s only one part of the system.
+              A recognizable mark built to work on small prints (cards) and large outputs (signage, banners) without losing clarity.
             </p>
           </div>
           <div class="card">
-            <h3>Brand Identity</h3>
+            <h3>Corporate Brand Identity</h3>
             <p style="opacity:.88;margin-top:10px;">
-              The visual rules: colors, typography, layout, patterns, imagery style, and how everything looks across documents and marketing.
+              The visual rules: color system, typography, layout style, spacing and supporting elements that create a consistent look.
             </p>
           </div>
           <div class="card">
-            <h3>Branding (Implementation)</h3>
+            <h3>Brand Rollout</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Applying the identity across real touchpoints: stationery, profiles, packaging, social templates, signage, vehicles, uniforms, and more.
+              Implementing the identity across stationery, profiles, presentations, packaging/labels, templates, signage and more—so everything matches.
             </p>
           </div>
         </div>
 
+        <!-- NEW: Why branding fails (added, same styling, no CSS changes) -->
         <div class="card" style="margin-top:16px;">
-          <h3 style="margin-bottom:10px;">Outcomes you should expect from professional branding</h3>
+          <h3 style="margin-bottom:10px;">Why Most Branding in Kampala Fails (and how to avoid it)</h3>
           <ul class="list-clean" style="margin-top:0;">
-            <li><strong>Trust:</strong> customers and partners take you seriously.</li>
-            <li><strong>Consistency:</strong> everything looks like one brand (not mixed designs).</li>
-            <li><strong>Premium perception:</strong> your offer appears higher value and more professional.</li>
-            <li><strong>Easier marketing:</strong> you can publish faster because templates and rules exist.</li>
+            <li><strong>No system:</strong> different designers and printers interpret the brand differently.</li>
+            <li><strong>Wrong files:</strong> the logo looks okay online but breaks in print or on signage.</li>
+            <li><strong>Inconsistent layout:</strong> spacing, fonts and colors keep changing from one item to the next.</li>
+            <li><strong>Cluttered messaging:</strong> everything is pushed into one design and nothing reads clearly.</li>
+            <li><strong>No guidelines:</strong> staff and vendors “guess” and the brand slowly becomes mixed.</li>
           </ul>
+          <p style="opacity:.9;margin-top:10px;">
+            Our approach is simple: build a clean system, export it correctly, and make sure it’s usable across real production.
+          </p>
         </div>
+
       </div>
     </section>
 
-    <!-- ✅ Featured Work (images + trust) -->
+    <!-- ✅ Featured Branding Work (12 images) -->
     <section class="section light animate" id="featured-work">
       <div class="content-wrap">
         <h2>Featured Branding Work (Real Delivery)</h2>
         <p style="opacity:.9;max-width:980px;">
-          Branding is stronger when it’s visible in real environments. Below are a few examples of branding execution we’ve delivered
-          for clients—then you can explore the full case studies.
+          Branding becomes credible when it works in the real world—printed, installed, packaged, and used across teams. Below are selected case studies from our portfolio.
         </p>
 
         <div class="feat-grid">
-          <a class="card card-link feat" href="/portfolio/voltech-branding" aria-label="Voltech branding case study">
+          <a class="card card-link feat" href="/portfolio/voltech-branding" aria-label="Voltech Engineering — case study">
             <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg"
-                alt="Voltech Engineering branding rollout: signage design and installation mockup by Kamog Artistry in Kampala"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Voltech Engineering — Rebrand & Rollout</strong><br/>
-                A full refresh and rollout across signage and branded applications. <span style="opacity:.85"><strong>View case study →</strong></span>
-              </figcaption>
+              <img src="assets/img/portfolio/thumbnails/voltech-branding-thumb.jpg" alt="Voltech Engineering rebrand and office branding in Kampala" loading="lazy" decoding="async" />
+              <div class="cap">Voltech Engineering — Rebrand & Rollout</div>
             </figure>
           </a>
 
-          <a class="card card-link feat" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 case study">
+          <a class="card card-link feat" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE / BIRDC UMA 2025 — case study">
             <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg"
-                alt="TOOKE BIRDC UMA 2025 exhibition branding: banner and booth visuals designed by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>TOOKE – BIRDC (UMA 2025)</strong><br/>
-                Exhibition branding and print assets for a trade expo setup. <span style="opacity:.85"><strong>View case study →</strong></span>
-              </figcaption>
+              <img src="assets/img/portfolio/thumbnails/tooke-birdc-uma-2025-thumb.jpg" alt="TOOKE / BIRDC UMA 2025 exhibition branding in Kampala" loading="lazy" decoding="async" />
+              <div class="cap">TOOKE / BIRDC (UMA 2025) — Exhibition Branding</div>
             </figure>
           </a>
 
-          <a class="card card-link feat" href="/portfolio/ability-pharmacy" aria-label="Ability Pharmacy branding case study">
+          <a class="card card-link feat" href="/portfolio/abundance-herbal-products" aria-label="Abundance Herbal Products — case study">
             <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg"
-                alt="Ability Pharmacy branding in Kampala: storefront signage and visual identity by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Ability Pharmacy — Retail Branding</strong><br/>
-                Clean, readable branding designed for a pharmacy environment. <span style="opacity:.85"><strong>View case study →</strong></span>
-              </figcaption>
+              <img src="assets/img/portfolio/thumbnails/abundance-herbal-products-thumb.jpg" alt="Abundance Herbal Products label and packaging design in Kampala" loading="lazy" decoding="async" />
+              <div class="cap">Abundance Herbal Products — Labels & Packaging</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/ability-pharmacy" aria-label="Ability Pharmacy — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/ability-pharmacy-thumb.jpg" alt="Ability Pharmacy branding and signage execution" loading="lazy" decoding="async" />
+              <div class="cap">Ability Pharmacy — Branch Branding</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/sbl-intel-systems" aria-label="SBL Intel Systems — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/sbl-intel-systems-thumb.jpg" alt="SBL Intel Systems branding execution in Kampala" loading="lazy" decoding="async" />
+              <div class="cap">SBL Intel Systems — Branding Execution</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/modva-updf-spouses-desk" aria-label="MODVA UPDF Spouses Desk — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/modva-updf-spouses-desk-thumb.jpg" alt="MODVA UPDF spouses desk branding and labels in Mbuya Kampala" loading="lazy" decoding="async" />
+              <div class="cap">MODVA (UPDF) — Labels & Branding</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/create-and-cook-competition" aria-label="Create and Cook Competition — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/create-and-cook-competition-thumb.jpg" alt="Create and Cook competition event branding Kampala and Wakiso" loading="lazy" decoding="async" />
+              <div class="cap">Create & Cook — Event Branding</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/mountains-of-the-moon-tourism" aria-label="Mountains of the Moon Tourism — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/mountains-of-the-moon-tourism-thumb.jpg" alt="Mountains of the Moon tourism event branding in Munyonyo Kampala" loading="lazy" decoding="async" />
+              <div class="cap">Mountains of the Moon — Event Branding</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/mobile-money-branding" aria-label="Mobile Money Branding — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/mobile-money-branding-thumb.jpg" alt="Mobile Money storefront branding MTN Airtel in Central Uganda" loading="lazy" decoding="async" />
+              <div class="cap">Mobile Money — Storefront Branding</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/kiosa" aria-label="KIOSA — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/kiosa-thumb.jpg" alt="KIOSA campaign design printing gifts in Mukono" loading="lazy" decoding="async" />
+              <div class="cap">KIOSA — Campaign Design & Print</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/social-media-designs" aria-label="Social Media Designs — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/social-media-designs-thumb.jpg" alt="Social media branding and design templates by Kamog Artistry" loading="lazy" decoding="async" />
+              <div class="cap">Social Media — Branded Templates</div>
+            </figure>
+          </a>
+
+          <a class="card card-link feat" href="/portfolio/yabx-christmas-package" aria-label="YABX Christmas Package — case study">
+            <figure>
+              <img src="assets/img/portfolio/thumbnails/yabx-christmas-package-thumb.jpg" alt="YABX Christmas package design and branding" loading="lazy" decoding="async" />
+              <div class="cap">YABX — Christmas Package</div>
             </figure>
           </a>
         </div>
 
-        <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/portfolio">Browse All Case Studies</a>
-        </div>
+        <p style="opacity:.88;margin-top:14px;">
+          Explore more: <a href="/portfolio"><strong>View full portfolio →</strong></a>
+          <span style="opacity:.7"> • </span>
+          Want something similar? <a href="/contact"><strong>Request a branding quote →</strong></a>
+        </p>
       </div>
     </section>
 
-    <!-- WHAT YOU GET -->
-    <section class="section light animate" id="services">
+    <!-- Proof -->
+    <section class="section light animate" id="proof">
       <div class="content-wrap">
-        <h2>Branding Services We Offer in Kampala</h2>
+        <h2>Branding That Works in Real Business (Not Just Mockups)</h2>
         <p style="opacity:.9;max-width:980px;">
-          Whether you’re launching a new business or upgrading an existing brand, we deliver practical brand assets you can actually use.
-          Our branding in Kampala is built for production—so it still looks clean when printed, installed, and shared online.
+          Good branding is tested in the real world—on documents, print materials, signage, packaging and digital. We design with production in mind,
+          so quality doesn’t drop when the work moves from screen to print or installation.
         </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Logo Design (Professional + Scalable)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Clean logo design that stays sharp on small prints (business cards) and large applications (signage, banners, storefronts).
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Brand Identity System</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Colors, typography, spacing rules, icon style and usage guidelines—so your brand stays consistent across designers and printers.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Corporate Stationery & Documents</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Business cards, letterheads, envelopes, invoices/receipts templates, quotation templates and branded office documents.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Company Profile & Pitch Deck Design</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Corporate-ready profiles and presentations that communicate credibility—ideal for institutions, proposals and partnerships.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Marketing & Campaign Creatives</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Posters, banners, promo materials and social templates aligned to your brand rules for consistent visibility.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Brand Implementation (Print + Signage)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We don’t just design—we help you implement: printing, finishing, signage fabrication and installation when needed.
-            </p>
-          </div>
-        </div>
 
         <div class="micro-grid">
           <div class="card micro">
-            <div class="badge-inline">Ideal For</div>
-            <p style="opacity:.88;margin:0">
-              SMEs, retail shops, restaurants, clinics, SACCOs, schools, NGOs, corporate teams and institutions in Kampala.
+            <span class="badge-inline">Ideal For</span>
+            <p style="opacity:.88;margin:0;">
+              SMEs, startups, NGOs, schools, clinics, construction firms, suppliers and businesses competing for contracts and trust in Kampala.
             </p>
           </div>
 
           <div class="card micro">
-            <div class="badge-inline">Most Requested</div>
-            <p style="opacity:.88;margin:0">
-              Logo design, corporate identity, company profiles, brand guidelines, packaging and brand implementation.
+            <span class="badge-inline">Most Requested</span>
+            <p style="opacity:.88;margin:0;">
+              Logo + identity system, guidelines, stationery, company profile, pitch deck, social templates, packaging/labels and rollout across print + signage.
             </p>
           </div>
 
           <div class="card micro">
-            <div class="badge-inline">Result</div>
-            <p style="opacity:.88;margin:0">
-              Your business looks credible and consistent across printing, signage and digital—no random designs.
+            <span class="badge-inline">Result</span>
+            <p style="opacity:.88;margin:0;">
+              A consistent brand that looks corporate-grade everywhere—customers trust you faster, and your marketing becomes easier to run.
             </p>
           </div>
         </div>
 
         <div class="cta-strip" style="margin-top:18px;">
           <div style="min-width:260px">
-            <strong>Already have a logo but it looks outdated?</strong>
+            <strong>Have existing artwork but it looks inconsistent?</strong>
             <div style="opacity:.86;margin-top:6px">
-              We can refine it and build a clean identity system around it (colors, typography, stationery and templates).
+              Send files for review—we can recommend the fastest way to fix and standardize your brand.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <a class="btn-primary" href="/contact">Request Review</a>
-            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- C) “Comprehensive Branding Services in Kampala” (Cluster Bridge Section) -->
+    <!-- ✅ Cluster Bridge (RECTIFIED: Titles are the visible links) -->
     <section class="section light animate" id="cluster-bridge">
       <div class="content-wrap">
         <h2>Comprehensive Branding Services in Kampala</h2>
         <p style="opacity:.9;max-width:980px;">
-          This hub page connects to our specialised branding pages. Each service below includes what you’ll receive,
-          so you can choose the right scope—whether you need a logo, a full identity system, corporate documents, packaging, or implementation.
+          Choose a specialised service below. These cluster pages help you scope the right deliverables—so the brand stays consistent on print, signage,
+          packaging, and digital. If you’re not sure, start with <a href="/branding/brand-strategy-consulting-kampala/"><strong>brand strategy consulting</strong></a> and we’ll guide the rest.
         </p>
 
-        <div class="grid" style="margin-top:18px;">
+        <div class="grid" style="margin-top:18px; align-items:stretch;">
+
+          <!-- 1 -->
           <div class="card">
+            <img class="cluster-thumb" src="assets/img/clients/01_Voltech.png" alt="Logo and brand kit examples designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
             <h3><a href="/branding/logo-design-kampala/">Logo Design Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              You get professional logo concepts, refinement, and correct exports for print and web (PNG, JPG, PDF/SVG where applicable),
-              plus basic usage guidance so your logo stays consistent.
+              Professional logo design that stays clean on business cards, documents, social media and signage—built for real use, not just presentation.
             </p>
             <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> logo files + variants + export pack.</p>
           </div>
 
+          <!-- 2 -->
           <div class="card">
-            <h3><a href="/branding/corporate-identity-design-kampala/">Corporate Identity Design Kampala</a></h3>
+            <img class="cluster-thumb" src="assets/img/portfolio/voltech-branding/IMG07.jpg" alt="Corporate brand identity and rollout work by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/branding/corporate-brand-identity-design-kampala/">Corporate Brand Identity Design Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              A complete visual identity system: colors, typography, layout rules, and real applications so your brand looks corporate-grade
-              across documents, signage, and marketing.
+              A full identity system (colors, typography, layout style, supporting elements) for businesses that want a corporate, consistent look.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> identity system + templates + core applications.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> identity system + core brand assets.</p>
           </div>
 
+          <!-- 3 -->
           <div class="card">
-            <h3><a href="/branding/company-profile-design-kampala/">Company Profile Design Kampala</a></h3>
-            <p style="opacity:.88;margin-top:10px;">
-              A structured company profile that communicates credibility to institutions, partners and committees—designed for reading,
-              printing and sharing digitally.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> designed profile (print-ready + PDF share version).</p>
-          </div>
-
-          <div class="card">
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/sbl-intel-systems-thumb.jpg" alt="Brand system execution and consistency across applications" loading="lazy" decoding="async" />
             <h3><a href="/branding/brand-guidelines-design-kampala/">Brand Guidelines Design Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Clear brand rules so your team, printer or future designer keeps everything consistent—logo usage, colors, fonts, spacing,
-              and example applications.
+              Practical brand guidelines that stop inconsistency—logo usage, spacing, colors, fonts and examples your team can follow.
             </p>
             <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> brand guideline document + usage examples.</p>
           </div>
 
+          <!-- 4 -->
           <div class="card">
-            <h3><a href="/branding/brand-strategy-kampala/">Brand Strategy Kampala</a></h3>
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/abundance-herbal-products-thumb.jpg" alt="Packaging design and print-ready artwork by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+            <h3><a href="/branding/packaging-design-kampala/">Packaging Design Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Positioning, audience clarity, brand voice, and message direction. Strategy makes your identity and marketing feel intentional
-              (not just “nice design”).
+              Shelf-ready packaging designed for print production—clean hierarchy, brand consistency, and a premium finish customers trust.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> strategy summary + messaging direction.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> packaging artwork + print-ready files.</p>
           </div>
 
+          <!-- 5 -->
           <div class="card">
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/modva-updf-spouses-desk-thumb.jpg" alt="Labels and branding applications designed for real products" loading="lazy" decoding="async" />
+            <h3><a href="/branding/product-label-design-kampala/">Product Label Design Kampala</a></h3>
+            <p style="opacity:.88;margin-top:10px;">
+              Clear, compliant label design for food, cosmetics, supplements and more—built for readability, finishing and real packaging sizes.
+            </p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> label designs + print/export set.</p>
+          </div>
+
+          <!-- 6 -->
+          <div class="card">
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/voltech-branding-thumb.jpg" alt="Rebrand and rollout work by Kamog Artistry (U) Ltd in Kampala" loading="lazy" decoding="async" />
             <h3><a href="/branding/rebranding-services-kampala/">Rebranding Services Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Upgrade an outdated brand into a modern identity—refined logo, improved visuals, and a rollout plan so customers experience
-              the change smoothly.
+              Upgrade an outdated brand into a modern, consistent system—without losing recognition. Ideal for businesses growing or repositioning.
             </p>
             <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> updated identity + rollout-ready assets.</p>
           </div>
 
+          <!-- 7 -->
           <div class="card">
-            <h3><a href="/branding/startup-branding-kampala/">Startup Branding Kampala</a></h3>
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/mountains-of-the-moon-tourism-thumb.jpg" alt="Brand strategy and event brand direction example by Kamog Artistry" loading="lazy" decoding="async" />
+            <h3><a href="/branding/brand-strategy-consulting-kampala/">Brand Strategy Consulting Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              A practical brand kit for launching fast—logo, color direction, templates and the essentials to look credible from day one.
+              Clarify positioning, messaging and direction before design—so your brand feels intentional and competes strongly in Kampala.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> starter brand kit + basic templates.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> strategy summary + messaging direction.</p>
           </div>
 
+          <!-- 8 -->
           <div class="card">
-            <h3><a href="/branding/sme-branding-services-kampala/">SME Branding Services Kampala</a></h3>
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/sme-branding-showcase-thumb.jpg" alt="Startup-friendly logo and brand kit examples" loading="lazy" decoding="async" />
+            <h3><a href="/branding/startup-branding-packages-kampala/">Startup Branding Packages Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Branding built for growth—identity system, stationery, marketing templates and applications that help small businesses look
-              consistent and competitive.
+              Launch with a clean brand kit—logo, colors, templates and essentials that make you look credible from day one.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> identity + stationery + everyday marketing templates.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> startup brand kit + basic templates.</p>
           </div>
 
+          <!-- 9 -->
           <div class="card">
-            <h3><a href="/branding/packaging-design-kampala/">Packaging Design Kampala</a></h3>
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/ability-pharmacy-thumb.jpg" alt="SME brand development and real-world implementation example" loading="lazy" decoding="async" />
+            <h3><a href="/branding/sme-brand-development-kampala/">SME Brand Development Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Packaging and labels that look premium on shelves and print correctly—proper sizes, hierarchy, compliance-ready space,
-              and finishing guidance.
+              Practical brand development for SMEs—identity refinement, templates and consistent applications that support growth.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> print-ready packaging/label artwork + specs.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> identity refresh + marketing templates.</p>
           </div>
 
+          <!-- 10 -->
           <div class="card">
-            <h3><a href="/branding/event-branding-kampala/">Event Branding Kampala</a></h3>
+            <img class="cluster-thumb" src="assets/img/portfolio/tooke-birdc-uma-2025/img09.jpg" alt="Event branding and visuals designed for real setups" loading="lazy" decoding="async" />
+            <h3><a href="/branding/event-branding-design-kampala/">Event Branding Design Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Event visuals that feel organised and professional—banners, backdrops, badges, stage visuals, booth designs, and social promos
-              aligned to your brand.
+              Event visuals that read clearly in real setups—backdrops, banners, stage/booth assets and social promos for launches and expos.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> event design set + print-ready exports.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> event design pack + print/export set.</p>
           </div>
 
+          <!-- 11 -->
           <div class="card">
-            <h3><a href="/branding/corporate-stationery-design-kampala/">Corporate Stationery Design Kampala</a></h3>
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/social-media-designs-thumb.jpg" alt="Branded social media templates and content design examples" loading="lazy" decoding="async" />
+            <h3><a href="/branding/social-media-brand-design-kampala/">Social Media Brand Design Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Business cards, letterheads, envelopes, invoice/quotation templates—built for printing and daily use so your business stays consistent.
+              Branded social templates that keep your online presence consistent—posts, stories, covers and ad-ready layouts.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> stationery set + print-ready files.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> template kit + post formats.</p>
           </div>
 
+          <!-- 12 -->
           <div class="card">
-            <h3><a href="/branding/brand-implementation-print-kampala/">Brand Implementation & Print Kampala</a></h3>
+            <img class="cluster-thumb" src="assets/img/portfolio/thumbnails/mobile-money-branding-thumb.jpg" alt="Brand rollout example across storefront and physical touchpoints" loading="lazy" decoding="async" />
+            <h3><a href="/branding/brand-rollout-management-kampala/">Brand Rollout Management Kampala</a></h3>
             <p style="opacity:.88;margin-top:10px;">
-              Taking your brand into the real world: printing coordination, signage-ready files, production checks and finishing guidance so
-              the final output looks clean and professional.
+              Roll out the brand across print, signage and digital without inconsistencies—so every touchpoint looks like one business.
             </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> production-ready files + implementation support.</p>
-          </div>
-        </div>
-
-        <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/contact">Request a Branding Quote</a>
-          <a class="" href="#gallery" style="margin-left:8px;">See Portfolio Gallery</a>
-        </div>
-      </div>
-    </section>
-
-     <!-- D) Gallery Section (IMPORTANT) -->
-    <section class="section light animate" id="gallery">
-      <div class="content-wrap">
-        <h2>Branding Work From Our Portfolio</h2>
-        <p style="opacity:.9;max-width:980px;">
-          A quick view of branding-related work from our portfolio. Each item includes a short note on what was involved,
-          and links to the relevant case study where available.
-        </p>
-
-        <div class="feat-grid" style="margin-top:16px;">
-          <a class="card card-link feat" href="/portfolio/voltech-branding" aria-label="Voltech Branding portfolio case study">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg"
-                alt="Kampala corporate identity and signage rollout for Voltech Engineering by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Voltech Engineering — Corporate Identity Rollout</strong><br/>
-                Identity refresh applied across signage and production-ready brand assets. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link feat" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 portfolio case study">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg"
-                alt="Event branding and print assets for TOOKE BIRDC at UMA 2025, designed in Kampala by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>TOOKE – BIRDC (UMA 2025) — Event Branding</strong><br/>
-                Exhibition visuals designed for visibility, consistency and print accuracy. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-
-          <a class="card card-link feat" href="/portfolio/ability-pharmacy" aria-label="Ability Pharmacy portfolio case study">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg"
-                alt="Retail branding and storefront visibility for Ability Pharmacy in Kampala by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Ability Pharmacy — Retail Branding</strong><br/>
-                Clean identity and storefront visuals designed for readability and trust. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link feat" href="/portfolio/voltech-branding" aria-label="Additional Voltech branding image">
-            <figure>
-              <img
-                src="assets/img/portfolio/voltech-branding/IMG02.jpg"
-                alt="Kampala branding work: additional Voltech Engineering application by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Voltech — Additional Brand Application</strong><br/>
-                A supporting identity application prepared for production and consistent use. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link feat" href="/portfolio/tooke-birdc-uma-2025" aria-label="Additional TOOKE BIRDC UMA 2025 image">
-            <figure>
-              <img
-                src="assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg"
-                alt="Kampala event branding: additional UMA 2025 exhibition visual designed by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>TOOKE – BIRDC — Extra Event Visual</strong><br/>
-                Designed for real-world viewing distance and clean print output. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link feat" href="/portfolio/birdc-photo-frames-kololo-nrm" aria-label="BIRDC Photo Frames branding case study">
-            <figure>
-              <img
-                src="assets/img/portfolio/birdc-photo-frames-kololo-nrm/IMG01.jpg"
-                alt="Branding and printed photo frame concept delivered in Kololo Kampala by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>BIRDC Photo Frames (Kololo) — Branded Output</strong><br/>
-                Clean layout and finishing for a professional presentation. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link feat" href="/portfolio/voltech-branding" aria-label="Brand guideline / document example">
-            <figure>
-              <img
-                src="assets/img/portfolio/voltech-branding/IMG04.jpg"
-                alt="Corporate branding in Kampala: document and brand consistency example by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Corporate Consistency — Documents & Templates</strong><br/>
-                Identity applied across documents to keep a consistent corporate look. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-
-          <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-          <a class="card card-link feat" href="/portfolio/tooke-birdc-uma-2025" aria-label="Print-ready design example">
-            <figure>
-              <img
-                src="assets/img/portfolio/tooke-birdc-uma-2025/IMG03.jpg"
-                alt="Kampala branding: print-ready banner design example by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Print-Ready Design — Built for Execution</strong><br/>
-                Correct sizing, hierarchy and export preparation for clean printing. <span style="opacity:.85"><strong>View →</strong></span>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
-
-        <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/portfolio">View Full Portfolio</a>
-          <a class= href="/testimonials" style="margin-left:8px;">Read Client Testimonials</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEW: PACKAGES -->
-    <section class="section animate" id="packages">
-      <div class="content-wrap">
-        <h2>Branding Packages (Common Requests in Kampala)</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Below are common branding packages clients request. Final deliverables depend on your scope, industry, and where the brand will be used
-          (printing, signage, digital, documents).
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <div class="package-title">
-              <h3 style="margin:0">Starter Brand Kit</h3>
-              <span class="tag">Best for new businesses</span>
-            </div>
-            <p style="opacity:.88;margin-top:10px;">
-              Logo design + color direction + font guidance + essential exports for print and web (so your brand starts clean and consistent).
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Good for:</strong> SMEs, shops, side-hustles, startups.</p>
+            <p style="opacity:.78;margin-top:12px;"><strong>Deliverables:</strong> rollout checklist + production-ready assets.</p>
           </div>
 
-          <div class="card">
-            <div class="package-title">
-              <h3 style="margin:0">Growth Identity System</h3>
-              <span class="tag">Most requested</span>
-            </div>
-            <p style="opacity:.88;margin-top:10px;">
-              Logo + identity rules + stationery designs + templates (social or documents) for daily consistency across teams and vendors.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Good for:</strong> clinics, restaurants, SACCOs, retail brands.</p>
-          </div>
-
-          <div class="card">
-            <div class="package-title">
-              <h3 style="margin:0">Corporate / Institutional</h3>
-              <span class="tag">Procurement-ready</span>
-            </div>
-            <p style="opacity:.88;margin-top:10px;">
-              Identity system + company profile + pitch deck + branded documents and print-ready assets built for committees and decision-makers.
-            </p>
-            <p style="opacity:.78;margin-top:12px;"><strong>Good for:</strong> NGOs, schools, institutions, corporate teams.</p>
-          </div>
         </div>
 
         <div class="cta-strip" style="margin-top:18px;">
           <div style="min-width:260px">
-            <strong>Want the right package (without guessing)?</strong>
+            <strong>Not sure which service fits your needs?</strong>
             <div style="opacity:.86;margin-top:6px">
-              Send what you do + what you need + where you’ll use the brand (print/signage/digital). We’ll recommend the best scope.
-            </div>
-          </div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn-primary" href="/contact">Request Package Recommendation</a>
-            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHY US -->
-    <section class="section animate" id="trust">
-      <div class="content-wrap">
-        <h2>Why Clients Choose Kamog Artistry</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Many teams can “design”. What clients care about is consistency, clean output, and branding that looks corporate-ready in real life.
-          As a branding company in Kampala, we deliver practical systems you can apply across your brand touchpoints.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>End-to-End Delivery</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Strategy → design → production → installation (when needed). One standard, fewer delays, clean finishing.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Consistency (Not Random Designs)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We build brand rules that work across stationery, signage and digital—so your business looks serious everywhere.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Production-Ready Design</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We prepare correct formats, proper sizing and production-ready assets built for printing and signage in Uganda.
-              That means fewer printing mistakes and a cleaner final result.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Corporate & Institutional Readiness</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Structured documents and profiles for decision-makers: clean layout, strong hierarchy, and professional tone.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Trusted by Real Clients</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              See what clients say about our delivery, quality and consistency.
-              <a href="/testimonials">Visit testimonials →</a>
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Built for Visibility in Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Branding that holds up on busy streets, signboards, retail spaces, and event venues—designed for real viewing distance and real materials.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEW: INDUSTRIES -->
-    <section class="section light animate" id="industries">
-      <div class="content-wrap">
-        <h2>Industries We Brand in Kampala & Uganda</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Branding isn’t one-size-fits-all. Below are common categories we design for—each with different priorities (trust, clarity, premium feel, compliance, or visibility).
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>NGOs & Institutions</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Reports, proposals, events, documents, and consistent communication for donors and stakeholders.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Corporate Teams</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Corporate identity systems, stationery, profiles and presentation templates for professional communication.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>SMEs & Startups</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Practical branding that helps smaller businesses look credible and competitive in Kampala’s market.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Hospitality (Restaurants & Hotels)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Menus, signage, packaging and promo templates built for daily marketing and customer experience.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Education</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              School identity systems, event branding, documents, signage and branded materials for professional presentation.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Real Estate</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Project branding, signage layouts, brochures, and consistent marketing visuals for developments and agencies.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Retail & FMCG</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Packaging and label design plus shelf-ready visuals that print correctly and look premium.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Healthcare (Clinics & Pharmacies)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Clear hierarchy, readability, and trust-focused visuals that look professional in real environments.
-            </p>
-          </div>
-        </div>
-
-        <p style="opacity:.88;margin-top:16px;">
-          Need printing + signage execution too? See:
-          <a href="printing-services-kampala">Printing Services in Kampala</a> •
-          <a href="signage-fabrication-uganda">Signage Fabrication in Uganda</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- G) Branding Cost Section (Commercial intent) -->
-    <section class="section animate" id="branding-cost">
-      <div class="content-wrap">
-        <h2>How Much Does Branding Cost in Kampala?</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Branding cost varies because different businesses need different scope. Some clients need a logo and a clean starter kit.
-          Others need a full identity system with stationery, company profile, packaging, signage layouts, and implementation support.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>What drives cost</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Scope (logo vs full identity), number of assets, how many applications you need (stationery, templates, packaging),
-              and whether implementation is included (printing/signage coordination).
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What makes a quote accurate</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Your industry, target audience, where the brand will be used, and the number of deliverables you require.
-              A clear brief helps us quote quickly and correctly.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Best next step</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Share your business name, what you do, and what you need (logo/identity/stationery/profile/packaging/signage).
-              We’ll recommend the right scope and send a quote.
-            </p>
-          </div>
-        </div>
-
-        <div class="cta-strip" style="margin-top:18px;">
-          <div style="min-width:260px">
-            <strong>Request a quote (fast response)</strong>
-            <div style="opacity:.86;margin-top:6px">
-              We usually reply with follow-up questions or options so you can choose the best package confidently.
+              Tell us your goal (new brand vs refresh) + where the brand must appear (documents, packaging, signage, social). We’ll guide you.
             </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <a class="btn-primary" href="/contact">Request Branding Quote</a>
-            <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- SERVICE AREAS (expanded) -->
-    <section class="section light animate" id="service-areas">
+    <!-- Packages -->
+    <section class="section light animate" id="packages">
       <div class="content-wrap">
-        <h2>Branding Service Areas (Kampala & Beyond)</h2>
+        <h2>Branding Packages</h2>
         <p style="opacity:.9;max-width:980px;">
-          We primarily deliver branding services in Kampala, and we also support clients in Wakiso and Mukono—plus wider Uganda depending on project scope.
-          If your work requires printing or signage installation, we advise the best route for quality and delivery.
+          Branding cost depends on scope. A logo-only project is different from a full corporate identity with guidelines, templates, packaging or rollout support.
+          Below is a practical guide (not rigid pricing). We confirm exact cost after understanding your deliverables, deadlines and usage.
         </p>
 
-        <div class="grid" style="margin-top:18px;">
+        <div class="grid" style="margin-top:18px;align-items:stretch;">
           <div class="card">
-            <h3>Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Common service areas include: Ntinda, Nakawa, Kololo, Bugolobi, Nakasero, Kamwokya, Kisementi, Wandegeya, Makerere, Kabalagala,
-              Muyenga, Bukoto, Lubowa and the wider CBD.
+            <div class="package-title">
+              <h3 style="margin:0;">Logo-Only Package</h3>
+              <span class="tag">Best for: new small brands</span>
+            </div>
+            <p style="opacity:.88;margin-top:12px;">
+              Professional logo concepts + refinement + correct exports for print and web. Ideal if you’re starting and need a clean mark fast.
             </p>
-          </div>
-          <div class="card">
-            <h3>Wakiso</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Branding + implementation support for businesses around Wakiso—especially where printing and signage execution is needed.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Mukono</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Brand identity, stationery, print and signage support for organizations operating in Mukono and nearby districts.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Uganda Nationwide</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We serve clients across Uganda for branding design work. For production and installation-heavy work, we confirm logistics and timelines based on location.
-            </p>
-          </div>
-        </div>
-
-        <p style="opacity:.9;margin-top:16px;">
-          Doing procurement? <a href="corporate-profile">Corporate Profile</a> • <a href="compliance">Compliance</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- E) Process Section (expanded to 6 steps) -->
-    <section class="section animate" id="process">
-      <div class="content-wrap">
-        <h2>Our Branding Process</h2>
-        <p style="opacity:.9;max-width:980px;">
-          A clear process keeps branding projects moving and avoids “endless redesigns”. We align the direction early, then refine with purpose,
-          and deliver files that are ready for real-world use.
-        </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>1) Discovery & Brief</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We understand what you do, who you target, how you sell, and what you want your brand to communicate (premium, affordable, corporate, youthful).
-              We also confirm where the brand must work: documents, social, signage, packaging, vehicles.
+            <ul class="list-clean">
+              <li>Logo variants (primary, mono, icon)</li>
+              <li>Export pack for web + print</li>
+              <li>Basic usage guidance</li>
+            </ul>
+            <p style="opacity:.85;margin-top:12px;">
+              Start here: <a href="/branding/logo-design-kampala/"><strong>Logo Design Kampala →</strong></a>
             </p>
           </div>
 
           <div class="card">
-            <h3>2) Strategy Direction</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We define positioning and messaging direction (even if short). This step prevents “nice design” that doesn’t match your market.
-              It guides tone, layout style and how your brand should feel.
+            <div class="package-title">
+              <h3 style="margin:0;">Corporate Identity Package</h3>
+              <span class="tag">Best for: SMEs & institutions</span>
+            </div>
+            <p style="opacity:.88;margin-top:12px;">
+              A complete identity system (colors, fonts, layout rules) + practical applications so your business looks corporate-grade.
+            </p>
+            <ul class="list-clean">
+              <li>Identity system + style direction</li>
+              <li>Core brand assets for marketing</li>
+              <li>Optional guidelines & templates</li>
+            </ul>
+            <p style="opacity:.85;margin-top:12px;">
+              Next: <a href="/branding/corporate-brand-identity-design-kampala/"><strong>Corporate Brand Identity →</strong></a>
             </p>
           </div>
 
           <div class="card">
-            <h3>3) Concepts & Design System</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We develop logo/identity concepts, explore typography and color direction, then build a usable system that remains consistent across applications.
-              We keep scalability in mind (small prints to large signboards).
+            <div class="package-title">
+              <h3 style="margin:0;">Rebrand + Rollout Package</h3>
+              <span class="tag">Best for: upgrades + growth</span>
+            </div>
+            <p style="opacity:.88;margin-top:12px;">
+              For businesses that already exist but look outdated or inconsistent. We refresh the identity and support rollout across key touchpoints.
             </p>
-          </div>
-
-          <div class="card">
-            <h3>4) Refinement & Quality Checks</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We refine based on feedback, check legibility, spacing, and real-world use cases.
-              For print-sensitive work, we validate sizes, margins, and production readiness.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>5) Deliverables & Brand Kit</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              You receive final files in correct formats (print + web), a brand kit (colors, fonts, usage rules),
-              and (where included) stationery/templates so you can keep a consistent look internally.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>6) Implementation & Rollout Support</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Optional but powerful: we help implement the brand across printing, signage, banners, vehicle branding and branded items.
-              This ensures what you approved is what customers see in real life.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DELIVERABLES -->
-    <section class="section light animate" id="deliverables">
-      <div class="content-wrap">
-        <h2>What You Receive (Deliverables)</h2>
-        <p style="opacity:.9;">
-          Deliverables depend on your package, but typically include:
-        </p>
-
-        <ul class="list-clean">
-          <li><strong>Logo files:</strong> SVG/PDF (print), PNG (transparent), JPG (web), and variants (color/mono).</li>
-          <li><strong>Brand colors:</strong> CMYK/RGB/HEX values for printing and digital consistency.</li>
-          <li><strong>Typography guidance:</strong> recommended fonts and usage rules.</li>
-          <li><strong>Stationery designs:</strong> business card, letterhead, envelope, and document templates (optional).</li>
-          <li><strong>Social templates:</strong> optional branded templates for campaigns and daily posting.</li>
-          <li><strong>Print-ready setup:</strong> files prepared correctly for printing/signage production in Uganda.</li>
-        </ul>
-
-        <div class="grid" style="margin-top:16px;">
-          <div class="card">
-            <h3>Revisions (How it works)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We work in structured rounds so feedback stays clear. You review, we refine, and we keep consistency across the system.
-              Revision scope depends on the selected package and deliverables.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Timeline (What affects speed)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Timeline depends on scope and feedback turnaround. Fast projects require fast decisions.
-              After we review your brief, we confirm a realistic schedule and milestones.
+            <ul class="list-clean">
+              <li>Identity refresh + consistency</li>
+              <li>Rollout-ready assets for print + digital</li>
+              <li>Implementation guidance and support</li>
+            </ul>
+            <p style="opacity:.85;margin-top:12px;">
+              Start: <a href="/branding/rebranding-services-kampala/"><strong>Rebranding Services →</strong></a>
             </p>
           </div>
         </div>
 
         <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/contact">Request a Branding Quote</a>
-          <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener" style="margin-left:8px;">WhatsApp Us</a>
+          <a class="btn-primary" href="/contact">Request Branding Quote</a>
+          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener" style="margin-left:8px;">WhatsApp</a>
         </div>
       </div>
     </section>
 
-    <!-- PROOF -->
-    <section class="section animate" id="proof">
+    <!-- FAQs -->
+    <section class="section light animate" id="faqs">
       <div class="content-wrap">
-        <h2>Proof of Work (Branding + Execution)</h2>
+        <h2>Branding in Kampala — FAQs</h2>
         <p style="opacity:.9;max-width:980px;">
-          Branding is stronger when you can see real delivery. Browse related projects in our portfolio.
+          These answers help you choose the right scope and avoid common mistakes that make brands look mixed or unprofessional.
         </p>
-
-        <div class="grid" style="margin-top:18px;">
-          <a class="card card-link" href="/portfolio/voltech-branding">
-            <h3>Voltech Branding</h3>
-            <p style="opacity:.88;margin-top:10px;">Brand identity + production execution.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/tooke-birdc-uma-2025">
-            <h3>TOOKE – BIRDC (UMA 2025)</h3>
-            <p style="opacity:.88;margin-top:10px;">Event branding with consistent design → print execution.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/ability-pharmacy">
-            <h3>Ability Pharmacy</h3>
-            <p style="opacity:.88;margin-top:10px;">Branding execution for customer-facing visibility.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>View Case Study →</strong></p>
-          </a>
-
-          <a class="card card-link" href="/portfolio/birdc-photo-frames-kololo-nrm">
-            <h3>BIRDC Photo Frames (Kololo)</h3>
-            <p style="opacity:.88;margin-top:10px;">Creative branding output and finishing.</p>
-            <p style="opacity:.78;margin-top:12px;"><strong>View Case Study →</strong></p>
-          </a>
-        </div>
-
-        <div style="text-align:center;margin-top:18px;">
-          <a class="btn-secondary" href="/portfolio">Browse All Case Studies</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- I) FAQ Section (8 questions) -->
-    <section class="section animate" id="faqs">
-      <div class="content-wrap">
-        <h2>Branding Kampala FAQs</h2>
 
         <div class="grid faq-grid" style="margin-top:18px;">
           <div class="card">
             <h3>What’s the difference between a logo and full branding?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              A logo is one mark. Branding is the full system around it: colors, typography, layout, messaging and how the brand looks across documents,
-              signage, packaging and digital. Full branding makes your business look consistent everywhere.
+              A logo is a single mark. Branding is the entire system—colors, typography, layout rules and how your brand appears across documents, packaging,
+              signage and digital.
             </p>
           </div>
 
           <div class="card">
             <h3>How much does branding cost in Kampala?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Cost depends on scope (logo only vs full identity), number of deliverables, revisions and urgency.
-              Share your brief and we’ll quote with options.
+              Branding cost depends on scope (logo-only vs full identity), number of deliverables, urgency and where the brand will be applied.
+              Send your brief and we’ll quote with options.
             </p>
           </div>
 
           <div class="card">
             <h3>How long does branding take?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Timeline depends on scope and feedback speed. Logos can be delivered faster; full identity systems take longer because they include guidelines
-              and multiple applications. We confirm timeline after reviewing your brief.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What deliverables will I receive?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              You receive print-ready and web-ready files for your logo and identity assets, plus brand colors, typography guidance, and (where included)
-              stationery/templates and a brand guideline document.
+              A logo can be delivered faster. A full identity takes longer because it includes guidelines and multiple applications.
+              We confirm timeline after reviewing your needs and feedback speed.
             </p>
           </div>
 
           <div class="card">
             <h3>Do you provide brand guidelines?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Yes. We can provide practical guidelines covering logo usage, colors, fonts, spacing and example applications to keep your brand consistent.
+              Yes. Guidelines cover usage rules, spacing, colors, fonts and examples—so your brand stays consistent across teams and vendors.
             </p>
           </div>
 
           <div class="card">
-            <h3>Can you handle printing, signage and vehicle branding?</h3>
+            <h3>Can you do printing, signage or vehicle branding as part of rollout?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Yes. We can implement branding across printing and signage—business cards, brochures, banners, storefront signage, and vehicle branding—so the final
-              output remains consistent with your identity.
+              Yes. We can implement the brand across printing and signage so everything remains consistent—from business cards and brochures to banners and vehicles.
             </p>
           </div>
 
           <div class="card">
-            <h3>Do you work with startups, SMEs, NGOs and corporates?</h3>
+            <h3>Do you work with startups, SMEs and NGOs?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              Yes. We support startups, SMEs, NGOs and corporate teams. We recommend the right scope depending on your stage, budget and where the brand must be used.
+              Yes. We recommend the right scope based on your stage, budget and where the brand must appear (documents, marketing, packaging, signage).
             </p>
           </div>
 
           <div class="card">
-            <h3>How do revisions work—and how do we start?</h3>
+            <h3>What deliverables do we receive?</h3>
             <p style="opacity:.88;margin-top:10px;">
-              We work in structured rounds: you review, we refine, and we keep the system consistent across all deliverables.
-              To start, share your business name, what you do, what you need, and any references—then we recommend package + timeline.
+              Print-ready and web-ready files, plus identity specs (colors, fonts) and templates where included. You’re not left with “one PNG”.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>How do we start?</h3>
+            <p style="opacity:.88;margin-top:10px;">
+              Share your business name, what you do, what you need, and any references—then we recommend package + timeline.
             </p>
           </div>
         </div>
@@ -1581,6 +1080,7 @@
           </a>
         </div>
       </div>
+
     </div>
 
     <div class="footer-bottom">

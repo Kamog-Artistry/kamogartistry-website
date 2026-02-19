@@ -10,12 +10,10 @@
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b6fbf" />
 
-  <!-- Clean URL canonical (cluster page) -->
   <link rel="canonical" href="https://kamogartistry.com/branding/logo-design-kampala/" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kamogartistry.com/sitemap.xml" />
   <link rel="stylesheet" href="/assets/css/style.css" />
 
-  <!-- Tiny technical polish -->
   <link rel="preload" as="image" href="/assets/img/brand/logo-white.svg" />
 
   <!-- Open Graph -->
@@ -34,7 +32,7 @@
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg" />
   <meta name="twitter:image:alt" content="Voltech Engineering branding rollout in Kampala (project by Kamog Artistry)" />
 
-  <!-- Page-only upgrades (safe, local). NOTE: No TOC included (per instructions). -->
+  <!-- Page-only fixes (safe, local). No TOC. No global CSS edits. -->
   <style>
     :root{
       --km-blue:#0b6fbf;
@@ -55,7 +53,7 @@
       box-shadow:0 10px 22px rgba(0,0,0,.18);
     }
 
-    /* Breadcrumbs (hero sits on a dark background in your theme) */
+    /* Breadcrumbs (hero is dark) */
     .breadcrumbs {
       opacity: .92;
       font-size: .95rem;
@@ -73,12 +71,23 @@
     }
     .breadcrumbs .sep{ opacity:.65; user-select:none; color:#fff; }
 
-    /* Buttons safety on dark hero (prevent invisible text) */
+    /* Button text safety */
     .btn-primary, .btn-secondary{ text-decoration:none !important; }
     .btn-primary, .btn-primary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
     .btn-secondary, .btn-secondary *{ color:#fff !important; -webkit-text-fill-color:#fff !important; }
 
-    /* Global link polish in light sections */
+    /* FIX: WhatsApp / secondary buttons on LIGHT sections (so they don’t fade on white) */
+    .section.light .btn-secondary{
+      background: var(--km-blue) !important;
+      border: 1px solid rgba(11,111,191,.25) !important;
+      opacity: 1 !important;
+    }
+    .section.light .btn-secondary:hover{
+      background: var(--km-orange) !important;
+      border-color: rgba(242,140,40,.35) !important;
+    }
+
+    /* Links in LIGHT sections */
     .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link){
       color: var(--km-blue);
       -webkit-text-fill-color: var(--km-blue);
@@ -91,7 +100,21 @@
       -webkit-text-fill-color: var(--km-orange);
     }
 
-    /* Card link text visibility */
+    /* FIX: Links visible on DARK sections (blue links can vanish on dark teal) */
+    .section:not(.light) a:not(.btn-primary):not(.btn-secondary):not(.card-link){
+      color: rgba(255,255,255,.92) !important;
+      -webkit-text-fill-color: rgba(255,255,255,.92) !important;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: 900;
+    }
+    .section:not(.light) a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+      opacity:.95;
+    }
+
+    /* Card visibility */
     a.card-link { text-decoration:none !important; display:block; }
     a.card-link:hover { transform: translateY(-2px); transition: transform .15s ease; }
 
@@ -100,15 +123,6 @@
       -webkit-text-fill-color: var(--km-ink);
     }
     .card p{ color: var(--km-muted); -webkit-text-fill-color: var(--km-muted); }
-
-    .section:not(.light) .card, .section:not(.light) .card *{
-      color: var(--km-ink) !important;
-      -webkit-text-fill-color: var(--km-ink) !important;
-    }
-    .section:not(.light) .card p{
-      color: var(--km-muted) !important;
-      -webkit-text-fill-color: var(--km-muted) !important;
-    }
 
     /* CTA strip */
     .cta-strip{
@@ -126,6 +140,15 @@
 
     .pill-row { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:14px; }
     .pill { padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); color:#fff; font-weight: 800; font-size: .95rem; }
+
+    /* Simple two-column list blocks */
+    .list-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .list-clean { margin-top: 10px; opacity:.92; line-height: 1.85; }
 
     /* Featured logo cards */
     .logo-card{ display:flex; flex-direction:column; gap:12px; }
@@ -147,41 +170,64 @@
       display:block;
       object-fit:contain;
     }
-    .logo-card h3{ margin-top: 0; }
     .logo-card .meta{ font-size:.95rem; opacity:.9; line-height:1.6; }
 
-    /* Gallery grid (mandatory) */
-    .gallery-grid{
+    /* 12-Logo accomplished gallery (minimal captions) */
+    .logo-gallery{
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 12px;
       margin-top: 16px;
+      align-items: stretch;
     }
-    .gallery-item figure{ margin:0; }
-    .gallery-item img{
-      width:100%;
-      height:auto;
+    .logo-tile{
+      border: 1px solid rgba(11,111,191,.14);
+      background: #fff;
+      border-radius: 16px;
+      padding: 14px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      justify-content:space-between;
+      min-height: 170px;
+    }
+    .logo-box{
+      border-radius: 12px;
+      background: rgba(11,111,191,.04);
+      border: 1px solid rgba(11,111,191,.10);
+      padding: 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height: 110px;
+    }
+    .logo-box img{
+      max-width: 160px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
       display:block;
-      border-radius: 14px;
     }
-    .gallery-item figcaption{
-      opacity:.88;
-      font-size:.95rem;
-      margin-top: 10px;
-      line-height: 1.55;
+    .logo-cap{
+      font-size: .95rem;
+      line-height: 1.35;
+      color: var(--km-muted);
+      -webkit-text-fill-color: var(--km-muted);
+      margin: 0;
+    }
+    .logo-cap strong{
+      color: var(--km-ink);
+      -webkit-text-fill-color: var(--km-ink);
     }
 
-    /* Simple two-column list blocks */
-    .list-grid{
+    /* FAQ */
+    .faq-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 12px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
-    .list-clean { margin-top: 10px; opacity:.92; line-height: 1.85; }
-
-    /* FAQ */
-    .faq-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 18px; }
 
     /* Footer links: underline only on hover */
     .footer a, .footer a:visited{ color:#ffffff !important; }
@@ -196,7 +242,7 @@
     .footer a.footer-cta, .footer a.footer-cta:visited{ text-decoration:none !important; }
   </style>
 
-  <!-- Schema: Breadcrumb -->
+  <!-- Simplified Schema (high-signal only) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -209,7 +255,6 @@
   }
   </script>
 
-  <!-- Schema: Organization -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -218,45 +263,10 @@
     "url":"https://kamogartistry.com/",
     "logo":"https://kamogartistry.com/assets/img/brand/logo-white.svg",
     "email":"info@kamogartistry.com",
-    "telephone":"+256775251445",
-    "sameAs":[
-      "https://www.facebook.com/611977605339985",
-      "https://www.instagram.com/kamog_artistry_u_ltd",
-      "https://www.linkedin.com/company/kamog-artistry-u-ltd",
-      "https://x.com/kamogartistry",
-      "https://www.behance.net/kamogArtistry",
-      "https://www.threads.com/@kamog_artistry_u_ltd"
-    ]
+    "telephone":"+256775251445"
   }
   </script>
 
-  <!-- Schema: WebPage -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Logo Design Kampala | Professional Logo Designers | Kamog Artistry (U) Ltd",
-    "url":"https://kamogartistry.com/branding/logo-design-kampala/",
-    "isPartOf":{
-      "@type":"WebSite",
-      "name":"Kamog Artistry (U) Ltd",
-      "url":"https://kamogartistry.com/"
-    },
-    "about":[
-      "Logo Design Kampala",
-      "Brand Identity",
-      "Branding Kampala",
-      "Brand Guidelines",
-      "Corporate Identity Design"
-    ],
-    "primaryImageOfPage":{
-      "@type":"ImageObject",
-      "url":"https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg"
-    }
-  }
-  </script>
-
-  <!-- Schema: LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -266,22 +276,16 @@
     "email":"info@kamogartistry.com",
     "telephone":"+256775251445",
     "address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},
-    "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
-    "sameAs":[
-      "https://www.facebook.com/611977605339985",
-      "https://www.instagram.com/kamog_artistry_u_ltd",
-      "https://www.linkedin.com/company/kamog-artistry-u-ltd"
-    ]
+    "areaServed":["Kampala","Wakiso","Mukono","Uganda"]
   }
   </script>
 
-  <!-- Schema: Service -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Service",
-    "name":"Logo Design in Kampala",
-    "serviceType":["Logo Design","Brand Identity","Corporate Branding"],
+    "name":"Logo Design Kampala",
+    "serviceType":"Logo Design",
     "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
     "provider":{
       "@type":"LocalBusiness",
@@ -299,7 +303,7 @@
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- HEADER -->
+  <!-- HEADER (universal) -->
   <header class="header">
     <nav class="nav">
       <a aria-label="Go to homepage" href="/">
@@ -323,7 +327,7 @@
 
   <main id="main">
 
-    <!-- A) HERO (above the fold) -->
+    <!-- HERO -->
     <section class="hero">
       <div class="content-wrap">
 
@@ -341,11 +345,11 @@
 
         <p style="opacity:.92;margin-top:12px;max-width:980px;">
           Looking for <strong>logo design in Kampala</strong> that feels premium, prints clean, and stays readable on everything from receipts to storefront signage?
-          Kamog Artistry (U) Ltd designs logos that are made for real-world execution—<strong>printing, signage, packaging, company documents, and digital</strong>.
+          Kamog Artistry (U) Ltd designs logos built for execution—<strong>printing, signage, packaging, company documents, and digital</strong>.
         </p>
 
         <p style="opacity:.9;margin-top:10px;max-width:980px;">
-          We don’t just “make a symbol.” We shape a logo system that makes your business look organised, trustworthy, and easy to recognise—especially in Kampala’s competitive market.
+          We don’t just “make a symbol.” We build a logo system that makes your business look organised, trustworthy, and easy to recognise—especially in Kampala’s competitive market.
         </p>
 
         <div class="hero-actions" style="margin-top:18px;">
@@ -356,7 +360,7 @@
         <div class="pill-row">
           <div class="pill">Scalable Logo System</div>
           <div class="pill">Print + Signage Ready</div>
-          <div class="pill">Formats Delivered</div>
+          <div class="pill">Correct Formats Delivered</div>
           <div class="pill">Guidance Included</div>
           <div class="pill">Kampala-Focused</div>
         </div>
@@ -387,28 +391,28 @@
 
         <p style="opacity:.88;margin-top:12px;">
           Prefer a full identity system after the logo? Consider:
-          <a href="/branding/corporate-identity-design-kampala/">Corporate Identity Design in Kampala</a> •
+          <a href="/branding/corporate-brand-identity-design-kampala/">Corporate Brand Identity Design</a> •
           <a href="/branding/brand-guidelines-design-kampala/">Brand Guidelines Design</a>
         </p>
       </div>
     </section>
 
-    <!-- B) AUTHORITY EXPLANATION -->
+    <!-- AUTHORITY -->
     <section class="section light animate" id="authority">
       <div class="content-wrap">
         <h2>Logo Design in Kampala: What It Is, Who It’s For, and When to Choose It</h2>
 
         <p style="opacity:.9;max-width:980px;">
           A logo is your business shorthand—what customers remember after they pass your shop, see a social post, or receive a quotation.
-          But a professional logo is more than “nice artwork.” It’s a <strong>system</strong>: a primary mark, supporting versions, clear spacing,
-          and exports that work across <strong>print, signage, documents, and digital</strong>.
+          A professional logo is a <strong>system</strong>: primary mark, supporting versions, clear spacing, and exports that work across
+          <strong>print, signage, documents, and digital</strong>.
         </p>
 
         <div class="list-grid">
           <div class="card">
             <h3>Who this service is for</h3>
             <ul class="list-clean">
-              <li><strong>Startups</strong> that need a credible brand from day one.</li>
+              <li><strong>Startups</strong> that need credibility from day one.</li>
               <li><strong>SMEs</strong> that want consistency across quotations, invoices, and marketing.</li>
               <li><strong>NGOs & institutions</strong> that need a formal, governance-friendly identity.</li>
               <li><strong>Growing companies</strong> rolling out signage, uniforms, packaging, and branded items.</li>
@@ -419,30 +423,21 @@
           <div class="card">
             <h3>When to choose logo design (vs full branding)</h3>
             <ul class="list-clean">
-              <li>Choose <strong>logo design</strong> if the priority is the mark + usable file delivery.</li>
-              <li>Choose <strong>full branding</strong> if you also need templates, stationery, guidelines, and rollout planning.</li>
-              <li>If you’re unsure, start with the logo—then expand into identity after direction is approved.</li>
-              <li>For corporate consistency, pair logo design with <a href="/branding/brand-guidelines-design-kampala/">brand guidelines</a>.</li>
+              <li>Choose <strong>logo design</strong> when you need the mark + correct file delivery.</li>
+              <li>Choose <strong>full branding</strong> for templates, stationery, guidelines, and rollout planning.</li>
+              <li>Not sure? Start with the logo, then expand once direction is approved.</li>
+              <li>For team consistency, add <a href="/branding/brand-guidelines-design-kampala/">brand guidelines</a>.</li>
             </ul>
           </div>
         </div>
 
         <h3 style="margin-top:18px;">Common mistakes businesses make (and how we avoid them)</h3>
         <ul class="list-clean">
-          <li><strong>Using low-quality logo files</strong> that blur on banners, stickers, or shop signage.</li>
-          <li><strong>Choosing trends over clarity</strong>—a logo must stay strong for years, not months.</li>
-          <li><strong>Too many details</strong> (thin lines, tiny text) that disappear when printed small or viewed from a distance.</li>
-          <li><strong>No brand consistency</strong>—different colors/fonts every time a designer or printer touches the work.</li>
-          <li><strong>Skipping real-world testing</strong> (documents, signage, social avatars), then struggling during production.</li>
-        </ul>
-
-        <h3 style="margin-top:18px;">What success looks like</h3>
-        <ul class="list-clean">
-          <li><strong>Instant recognition</strong>—customers identify your brand quickly in Kampala’s busy environment.</li>
-          <li><strong>Clean printing results</strong>—sharp output on business cards, letterheads, stickers, and signage.</li>
-          <li><strong>Easy rollout</strong>—your team, printer, or future designer can apply the logo correctly.</li>
-          <li><strong>Professional perception</strong>—your brand feels established, not improvised.</li>
-          <li><strong>Consistency</strong>—one clear direction across documents, social media, and physical branding.</li>
+          <li><strong>Low-quality logo files</strong> that blur on banners, stickers, or shop signage.</li>
+          <li><strong>Trends over clarity</strong>—a logo must stay strong for years.</li>
+          <li><strong>Too many details</strong> that disappear when printed or seen from a distance.</li>
+          <li><strong>No consistency</strong>—different colors/fonts every time a designer or printer touches the work.</li>
+          <li><strong>Skipping real-world testing</strong> (documents, signage, social avatars) then struggling during production.</li>
         </ul>
 
         <div class="cta-strip">
@@ -460,13 +455,13 @@
       </div>
     </section>
 
-    <!-- C) DELIVERABLES -->
+    <!-- DELIVERABLES -->
     <section class="section animate" id="deliverables">
       <div class="content-wrap">
         <h2>Logo Design Deliverables (What You Receive)</h2>
         <p style="opacity:.9;max-width:980px;">
           We deliver logo files and supporting assets that are practical for everyday business use in Kampala—printing, signage, documents, and digital.
-          Your files are organised, labelled, and ready to share with printers or your internal team.
+          Your files are organised and ready to share with printers or your internal team.
         </p>
 
         <div class="grid" style="margin-top:18px;">
@@ -474,7 +469,7 @@
             <h3>Core logo system</h3>
             <ul class="list-clean">
               <li>Primary logo (main version)</li>
-              <li>Secondary variations (horizontal/stacked, depending on the design)</li>
+              <li>Secondary variations (horizontal/stacked where needed)</li>
               <li>Icon / mark version for social avatars and small placements</li>
               <li>Black/white versions for flexible usage</li>
             </ul>
@@ -483,44 +478,43 @@
           <div class="card">
             <h3>Print-ready + digital formats</h3>
             <ul class="list-clean">
-              <li><strong>SVG</strong> (scalable vector for modern workflows)</li>
+              <li><strong>SVG</strong> (scalable vector)</li>
               <li><strong>PDF</strong> (print-ready vector export)</li>
-              <li><strong>PNG</strong> (transparent background for digital)</li>
-              <li><strong>JPG</strong> (standard use where needed)</li>
-              <li>Color versions + monochrome versions</li>
+              <li><strong>PNG</strong> (transparent background)</li>
+              <li><strong>JPG</strong> (standard use)</li>
+              <li>Color + monochrome exports</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Production-readiness (important)</h3>
+            <h3>Production-readiness</h3>
             <ul class="list-clean">
               <li>Designed for visibility on signage and banners</li>
               <li>Legibility checks (small + large usage)</li>
-              <li>Color guidance for printing (practical palettes)</li>
-              <li>Basic spacing rules so the logo doesn’t look squeezed</li>
+              <li>Practical color guidance for printing</li>
+              <li>Basic spacing rules so the logo stays clean</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Optional add-ons (if you need them)</h3>
+            <h3>Optional add-ons (if needed)</h3>
             <ul class="list-clean">
               <li>Mini brand kit (colors + typography direction)</li>
-              <li>Social media profile/cover layout direction</li>
               <li>Business card + letterhead templates</li>
-              <li>Signage mockups / placement guidance</li>
+              <li>Social profile/cover direction</li>
               <li>Brand guidelines document (recommended for teams)</li>
             </ul>
           </div>
         </div>
 
         <p style="opacity:.88;margin-top:12px;">
-          If you want clear rules for future designers and printers, add:
+          For clean rules across printers/designers, add:
           <a href="/branding/brand-guidelines-design-kampala/">Brand Guidelines Design in Kampala →</a>
         </p>
       </div>
     </section>
 
-    <!-- D) PROCESS -->
+    <!-- PROCESS -->
     <section class="section light animate" id="process">
       <div class="content-wrap">
         <h2>Our Logo Design Process (Structured, Clear, and Fast to Execute)</h2>
@@ -531,43 +525,33 @@
         <div class="grid" style="margin-top:18px;">
           <div class="card">
             <h3>1) Discovery</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We understand what you do, your audience in Kampala, competitors, and where the logo will be used (signage, documents, packaging, social).
-            </p>
+            <p style="opacity:.88;margin-top:10px;">We understand what you do, your audience, competitors, and where the logo will be used (signage, documents, packaging, social).</p>
           </div>
 
           <div class="card">
             <h3>2) Direction</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We define a clear visual direction: style, tone, and how the logo should feel (corporate, premium, modern, friendly, etc.).
-            </p>
+            <p style="opacity:.88;margin-top:10px;">We define a clear visual direction: style, tone, and how the logo should feel (corporate, premium, modern, friendly, etc.).</p>
           </div>
 
           <div class="card">
             <h3>3) Design Concepts</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We develop strong logo concepts based on the approved direction—focused on clarity, uniqueness, and real-world readability.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">We develop strong concepts based on the approved direction—focused on clarity, uniqueness, and real-world readability.</p>
           </div>
 
           <div class="card">
             <h3>4) Refinement</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We refine the selected concept: balance, typography, spacing, and scalable details so it works on both small and large applications.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">We refine the selected concept: balance, typography, spacing, and scalability so it works everywhere.</p>
           </div>
 
           <div class="card">
             <h3>5) Delivery</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We export all required formats (print + digital) and organise files for easy use. You receive ready-to-share assets.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">We export all required formats and organise files for easy use. You receive ready-to-share assets.</p>
           </div>
 
           <div class="card">
             <h3>6) Optional implementation</h3>
             <p style="opacity:.88;margin-top:10px;">
-              If you need roll-out support (stationery, signage-ready files, print coordination), we can implement the identity across real materials.
+              Need roll-out support (stationery, print checks, signage-ready files)? We can implement the identity across real materials.
               See: <a href="/branding/brand-implementation-print-kampala/">Brand Implementation & Print in Kampala →</a>
             </p>
           </div>
@@ -575,48 +559,39 @@
       </div>
     </section>
 
-    <!-- E) REAL WORK EXAMPLES -->
+    <!-- REAL WORK EXAMPLES -->
     <section class="section light animate" id="proof">
       <div class="content-wrap">
         <h2>Real Work Examples (Logo-Driven Branding Projects)</h2>
         <p style="opacity:.9;max-width:980px;">
-          A logo is only successful when it holds up in real usage. Here are examples from our portfolio where logo direction supported rollout across branding materials.
+          A logo only succeeds when it holds up in real usage. Here are examples where logo direction supported rollout across branding materials.
         </p>
 
         <div class="grid" style="margin-top:18px;">
-          <a class="card card-link logo-card" href="/portfolio/voltech-branding" aria-label="Voltech Engineering branding rollout portfolio case study">
+          <a class="card card-link logo-card" href="/portfolio/voltech-branding" aria-label="Voltech Engineering branding rollout case study">
             <div class="logo-frame">
-              <img src="https://kamogartistry.com/assets/img/clients/01_Voltech.png" alt="Voltech Engineering logo designed by Kamog Artistry in Kampala" loading="lazy" decoding="async" />
+              <img src="/assets/img/clients/01_Voltech.png" alt="Voltech Engineering logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
             </div>
             <h3>Voltech Engineering — Corporate Identity + Production Rollout</h3>
-            <p class="meta">
-              Logo direction strengthened into an identity system that supports signage and professional corporate branding.
-              <strong>Result:</strong> a clean, consistent brand presence across practical applications.
-            </p>
+            <p class="meta">Logo direction strengthened into an identity system built for professional corporate use and production outcomes.</p>
             <p style="margin-top:10px;"><strong>View case study →</strong></p>
           </a>
 
-          <a class="card card-link logo-card" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 event branding portfolio case study">
+          <a class="card card-link logo-card" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 event branding case study">
             <div class="logo-frame">
-              <img src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg" alt="Event branding visuals for TOOKE BIRDC at UMA 2025 designed by Kamog Artistry" loading="lazy" decoding="async" />
+              <img src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/img09.jpg" alt="Event branding visuals for TOOKE BIRDC at UMA 2025 designed by Kamog Artistry" loading="lazy" decoding="async" />
             </div>
             <h3>TOOKE – BIRDC (UMA 2025) — Event Branding System</h3>
-            <p class="meta">
-              Event identity and print-ready visuals designed for fast visibility at the exhibition.
-              <strong>Result:</strong> consistent booth presence and professional print output.
-            </p>
+            <p class="meta">Clean exhibition identity and print-ready visuals designed for strong visibility and consistent presence.</p>
             <p style="margin-top:10px;"><strong>View case study →</strong></p>
           </a>
 
           <a class="card card-link logo-card" href="/portfolio" aria-label="Browse Kamog Artistry portfolio">
             <div class="logo-frame">
-              <img src="https://kamogartistry.com/assets/img/brand/logo-white.svg" alt="Kamog Artistry logo" loading="lazy" decoding="async" />
+              <img src="https://kamogartistry.com/assets/img/clients/05_EasyXport.png" alt="EasyXport logo" loading="lazy" decoding="async" />
             </div>
             <h3>More Logo & Branding Proof</h3>
-            <p class="meta">
-              Want examples closer to your industry (retail, construction, NGOs, events, hospitality)?
-              Browse our portfolio for real project work and execution outcomes.
-            </p>
+            <p class="meta">Browse real project work and execution outcomes across different industries.</p>
             <p style="margin-top:10px;"><strong>Browse portfolio →</strong></p>
           </a>
         </div>
@@ -628,197 +603,92 @@
       </div>
     </section>
 
-    <!-- F) GALLERY (MANDATORY) -->
+    <!-- 12 LOGO GALLERY (accomplished work) -->
     <section class="section light animate" id="gallery">
       <div class="content-wrap">
         <h2>Gallery: Logo Design Work From Our Portfolio</h2>
         <p style="opacity:.9;max-width:980px;">
-          Below is a portfolio-style gallery showing logo-led work and applications. Where we know the exact case study, items link directly.
-          For missing image paths, we’ve added safe TODO placeholders—swap them with the correct asset paths from your /assets/img/portfolio/ folders.
+          A clean snapshot of logos we’ve designed from scratch. Minimal captions—just proof. (No external links — this is purely an accomplished logo gallery.)
         </p>
 
-        <div class="gallery-grid">
-          <a class="card card-link gallery-item" href="/portfolio/voltech-branding" aria-label="Voltech branding case study">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG03.jpg"
-                alt="Voltech Engineering corporate identity rollout image showing branding execution in Kampala"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Voltech Engineering — Logo direction applied to identity</strong><br/>
-                Built for print and signage visibility, then rolled out with production-ready assets.
-              </figcaption>
-            </figure>
-          </a>
+        <div class="logo-gallery" aria-label="Logo design gallery (12 client logos)">
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/01_Voltech.png" alt="Voltech Engineering logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>Voltech Engineering</strong><br/>Corporate logo</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 case study">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG01.jpg"
-                alt="TOOKE BIRDC UMA 2025 event branding image designed in Kampala by Kamog Artistry"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>TOOKE – BIRDC (UMA 2025) — Event identity & print assets</strong><br/>
-                Clean, consistent visuals prepared for fast, high-impact visibility at the exhibition.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/02_Tooke.png" alt="TOOKE logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>TOOKE</strong><br/>Brand mark</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio/ability-pharmacy" aria-label="Ability Pharmacy case study">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/ability-pharmacy/IMG01.jpg"
-                alt="Ability Pharmacy branding and retail visibility image in Kampala"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Ability Pharmacy — Retail branding & storefront clarity</strong><br/>
-                Designed for trust, readability, and a clean professional presence for customers.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/03_MODVA.png" alt="UPDF Spouses Desk logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>UPDF Spouses Desk</strong><br/>Institutional</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio/voltech-branding" aria-label="Voltech branding additional image">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/voltech-branding/IMG01.jpg"
-                alt="Voltech branding portfolio image showing identity application"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Voltech Engineering — Identity application</strong><br/>
-                Logo system designed to remain sharp across documents and production outputs.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/04_SBL.png" alt="SBL Intel Systems logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>SBL Intel Systems</strong><br/>Tech logo</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio/tooke-birdc-uma-2025" aria-label="TOOKE BIRDC UMA 2025 additional image">
-            <figure>
-              <img
-                src="https://kamogartistry.com/assets/img/portfolio/tooke-birdc-uma-2025/IMG02.jpg"
-                alt="TOOKE BIRDC event branding second portfolio image"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>TOOKE – BIRDC — Consistent event graphics</strong><br/>
-                A system approach so every design piece feels like one organised brand presence.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/05_EasyXport.png" alt="EasyXport logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>EasyXport</strong><br/>Trade brand</p>
+          </div>
 
-          <!-- TODO placeholders (replace with real asset paths from /assets/img/portfolio/... ) -->
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Portfolio gallery placeholder 1">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="<!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->"
-                alt="Logo design project: concept-to-application preview from Kamog Artistry portfolio"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Logo concept refined for real-world use</strong><br/>
-                Clean shapes and spacing so the logo stays readable on both small and large placements.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/06_MOTMH.png" alt="Mountains of the Moon Hotel logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>MOTMH</strong><br/>Hospitality</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Portfolio gallery placeholder 2">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="<!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->"
-                alt="Logo design project: packaging-ready logo system from Kamog Artistry portfolio"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Packaging-ready logo exports</strong><br/>
-                Delivered in formats that printers can use easily, with clarity checks for labels and stickers.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/07_Abundance.png" alt="Abundance Herbal Products logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>Abundance Herbal</strong><br/>Product logo</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Portfolio gallery placeholder 3">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="<!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->"
-                alt="Logo design project: signage legibility test from Kamog Artistry portfolio"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Signage legibility test</strong><br/>
-                A logo should remain visible from a distance—especially on busy Kampala streets.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/08_LMN.png" alt="LMN logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>LMN</strong><br/>Minimal mark</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Portfolio gallery placeholder 4">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="<!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->"
-                alt="Logo design project: corporate document header/footer application from Kamog Artistry portfolio"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Corporate document application</strong><br/>
-                Applied to everyday templates so your quotations and invoices look consistent and professional.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/08_ROKASTARS.png" alt="Roka Stars logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>Roka Stars</strong><br/>Creative</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Portfolio gallery placeholder 5">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="<!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->"
-                alt="Logo design project: social media avatar and profile branding from Kamog Artistry portfolio"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Social-ready logo icon</strong><br/>
-                An icon version that reads clearly in small circles for WhatsApp, Instagram, and Facebook.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/09_YABX.png" alt="YABX logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>YABX</strong><br/>Fintech</p>
+          </div>
 
-          <a class="card card-link gallery-item" href="/portfolio" aria-label="Portfolio gallery placeholder 6">
-            <figure>
-              <!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->
-              <img
-                src="<!-- TODO: Replace src with real asset path from /assets/img/portfolio/... -->"
-                alt="Logo design project: brand consistency across multiple materials from Kamog Artistry portfolio"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <strong>Consistency across materials</strong><br/>
-                Same logo system used across print, signage, and digital so customers experience one clear brand.
-              </figcaption>
-            </figure>
-          </a>
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/10_CAPSADA.png" alt="CAPSADA logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>CAPSADA</strong><br/>Organisation</p>
+          </div>
+
+          <div class="logo-tile">
+            <div class="logo-box"><img src="/assets/img/clients/10_LEGACY_FASHIONS.png" alt="Legacy Fashions logo designed by Kamog Artistry (U) Ltd" loading="lazy" decoding="async" /></div>
+            <p class="logo-cap"><strong>Legacy Fashions</strong><br/>Retail</p>
+          </div>
         </div>
 
-        <div style="text-align:center;margin-top:18px;">
-          <a class="btn-primary" href="/portfolio">Browse Full Portfolio</a>
-          <a class="btn-primary" href="/contact" style="margin-left:8px;">Start a Logo Project</a>
+        <div class="cta-strip">
+          <div style="min-width:260px">
+            <strong>Want a logo that prints clean + looks premium?</strong>
+            <div style="opacity:.86;margin-top:6px">
+              Tell us what you do + where you’ll use it (signage, cards, packaging, documents, social). We’ll guide the right direction.
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn-primary" href="/contact">Request a Quote</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- G) RELATED BRANDING SERVICES (MANDATORY internal linking) -->
+    <!-- RELATED BRANDING SERVICES -->
     <section class="section animate" id="related">
       <div class="content-wrap">
         <h2>Related Branding Services in Kampala</h2>
@@ -830,49 +700,38 @@
         <div class="grid" style="margin-top:18px;">
           <a class="card card-link" href="/branding-kampala">
             <h3>Branding Services in Kampala (Hub)</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Explore the full branding hub with specialised cluster pages and service options.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">Explore the full branding hub with specialised cluster pages and service options.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Open hub →</strong></p>
           </a>
 
-          <a class="card card-link" href="/branding/corporate-identity-design-kampala/">
-            <h3>Corporate Identity Design Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Expand your logo into a full identity system: colors, typography, layout rules, and real applications.
-            </p>
+          <a class="card card-link" href="/branding/corporate-brand-identity-design-kampala/">
+            <h3>Corporate Brand Identity Design Kampala</h3>
+            <p style="opacity:.88;margin-top:10px;">Expand your logo into a full identity system: colors, typography, layout rules, and practical applications.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
           </a>
 
           <a class="card card-link" href="/branding/brand-guidelines-design-kampala/">
             <h3>Brand Guidelines Design Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Keep your logo consistent across printers and designers with clear rules and usage examples.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">Keep your logo consistent across printers and designers with clear rules and usage examples.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
           </a>
 
           <a class="card card-link" href="/branding/rebranding-services-kampala/">
             <h3>Rebranding Services Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If your logo feels outdated, we refine the direction and plan a smooth rollout that doesn’t confuse customers.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">Refine an outdated logo and plan a smooth rollout that doesn’t confuse customers.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
           </a>
 
-          <!-- Relevant money page (print/signage implementation) -->
           <a class="card card-link" href="/branding/brand-implementation-print-kampala/">
             <h3>Brand Implementation & Print Kampala</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Take your new logo into the real world: production checks, print coordination, and signage-ready files.
-            </p>
+            <p style="opacity:.88;margin-top:10px;">Take your new logo into the real world: production checks, print coordination, and signage-ready files.</p>
             <p style="opacity:.78;margin-top:12px;"><strong>Explore →</strong></p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- H) PRICING DRIVERS + TIMELINES (no fixed prices) -->
+    <!-- PRICING DRIVERS + TIMELINES -->
     <section class="section animate" id="pricing-timeline">
       <div class="content-wrap">
         <h2>Logo Design Pricing in Kampala: What Affects Cost + Typical Timelines</h2>
@@ -882,56 +741,18 @@
         </p>
 
         <div class="grid" style="margin-top:18px;">
-          <div class="card">
-            <h3>Scope of work</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Logo only vs logo + mini kit vs full identity system. More applications (stationery, templates, signage previews) increase scope.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>How many applications you need</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If you need business cards, letterheads, invoice/quotation templates, social templates, and brand mockups, it expands deliverables.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Revision structure</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              We keep refinements structured so the project moves forward and reaches a strong finish without endless back-and-forth.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Timeline expectations</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Tight deadlines may require prioritising the project schedule. Share your target date early so we advise a realistic plan.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Existing assets & clarity</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              If you already have a clear name, slogan, and business direction, the project moves faster than when everything is still being decided.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Typical timeline ranges</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Most logo projects take <strong>several working days to a couple of weeks</strong> depending on scope and feedback speed.
-              If implementation (templates/print/signage) is added, the timeline extends accordingly.
-            </p>
-          </div>
+          <div class="card"><h3>Scope of work</h3><p style="opacity:.88;margin-top:10px;">Logo only vs logo system + mini kit vs full identity. More applications increase scope.</p></div>
+          <div class="card"><h3>Applications needed</h3><p style="opacity:.88;margin-top:10px;">Business cards, letterheads, invoice/quotation templates, social templates, mockups—each adds work.</p></div>
+          <div class="card"><h3>Revision structure</h3><p style="opacity:.88;margin-top:10px;">We keep refinements structured so the project finishes strong without endless back-and-forth.</p></div>
+          <div class="card"><h3>Timeline expectations</h3><p style="opacity:.88;margin-top:10px;">If you have an urgent deadline, share it early so we plan a realistic delivery.</p></div>
+          <div class="card"><h3>Clarity of brief</h3><p style="opacity:.88;margin-top:10px;">A clear name, direction, and references moves faster than starting from zero decisions.</p></div>
+          <div class="card"><h3>Typical ranges</h3><p style="opacity:.88;margin-top:10px;">Most projects take <strong>several working days to a couple of weeks</strong> depending on scope and feedback speed.</p></div>
         </div>
 
         <div class="cta-strip">
           <div style="min-width:260px">
             <strong>Get a quick estimate</strong>
-            <div style="opacity:.86;margin-top:6px">
-              Send: business name + what you do + where you’ll use the logo + deadline (if any). We’ll advise scope and next steps.
-            </div>
+            <div style="opacity:.86;margin-top:6px">Send: business name + what you do + where you’ll use the logo + deadline (if any). We’ll advise scope and next steps.</div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
@@ -941,78 +762,22 @@
       </div>
     </section>
 
-    <!-- I) FAQ (6–10) + JSON-LD FAQPage schema -->
+    <!-- FAQ -->
     <section class="section light animate" id="faqs">
       <div class="content-wrap">
         <h2>Logo Design Kampala FAQs</h2>
-        <p style="opacity:.9;max-width:980px;">
-          Answers to common questions from Kampala businesses looking for logo design that works for printing, signage, and digital.
-        </p>
+        <p style="opacity:.9;max-width:980px;">Answers to common questions from Kampala businesses looking for logo design that works for printing, signage, and digital.</p>
 
         <div class="faq-grid">
-          <div class="card">
-            <h3>How much does logo design cost in Kampala?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Cost depends on scope: logo only vs a logo system + mini brand kit, number of applications, and how much rollout support you need.
-              Share your requirements and we’ll recommend a practical package.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Do you provide all logo formats for printing and online use?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. We deliver print-ready vector files (SVG/PDF) plus transparent PNGs and standard JPGs for digital use.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Will my logo work on signage and large banners?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              That’s a key focus. We design with readability in mind and export the correct formats so the logo stays sharp at any size.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Can you redesign or refine an existing logo?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. If your current logo looks outdated, inconsistent, or prints poorly, we can refine it into a cleaner, modern version that works across applications.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>How long does a logo take to complete?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Timelines vary by scope and feedback speed. Many projects land within a few working days to a couple of weeks, especially when direction is clear.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Do you help with stationery like business cards and letterheads?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. We can apply your new logo to stationery and corporate templates. For larger rollout, consider corporate identity design.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Do you design logos for startups and small businesses in Kampala?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. We support startups, SMEs, NGOs and corporate teams—then recommend scope based on your stage and where the brand needs to appear.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>What should I prepare before requesting a logo?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Your business name, what you do, your target customers, and style references (if you have them). Also mention where you’ll use the logo: signage, packaging, documents, or social.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Can you create brand guidelines after the logo is approved?</h3>
-            <p style="opacity:.88;margin-top:10px;">
-              Yes. Guidelines help your team and printers apply the logo consistently. See our <a href="/branding/brand-guidelines-design-kampala/">Brand Guidelines service</a>.
-            </p>
-          </div>
+          <div class="card"><h3>How much does logo design cost in Kampala?</h3><p style="opacity:.88;margin-top:10px;">Cost depends on scope: logo only vs a logo system + mini kit, number of applications, and rollout support. Share requirements and we’ll recommend a practical package.</p></div>
+          <div class="card"><h3>Do you provide all logo formats for printing and online use?</h3><p style="opacity:.88;margin-top:10px;">Yes. We deliver print-ready vector files (SVG/PDF) plus transparent PNGs and standard JPGs for digital use.</p></div>
+          <div class="card"><h3>Will my logo work on signage and large banners?</h3><p style="opacity:.88;margin-top:10px;">Yes. We design with readability in mind and export correct formats so the logo stays sharp at any size.</p></div>
+          <div class="card"><h3>Can you redesign or refine an existing logo?</h3><p style="opacity:.88;margin-top:10px;">Yes. If your current logo looks outdated or prints poorly, we can refine it into a cleaner version that works across applications.</p></div>
+          <div class="card"><h3>How long does a logo take to complete?</h3><p style="opacity:.88;margin-top:10px;">Timelines vary by scope and feedback speed. Many projects land within a few working days to a couple of weeks when direction is clear.</p></div>
+          <div class="card"><h3>Do you help with stationery like business cards and letterheads?</h3><p style="opacity:.88;margin-top:10px;">Yes. We can apply your new logo to stationery and templates. For bigger rollout, consider corporate brand identity + guidelines.</p></div>
+          <div class="card"><h3>Do you design logos for startups and SMEs in Kampala?</h3><p style="opacity:.88;margin-top:10px;">Yes. We support startups, SMEs, NGOs and corporate teams—then recommend scope based on stage and usage.</p></div>
+          <div class="card"><h3>What should I prepare before requesting a logo?</h3><p style="opacity:.88;margin-top:10px;">Business name, what you do, target customers, and where you’ll use the logo (signage, packaging, documents, social).</p></div>
+          <div class="card"><h3>Can you create brand guidelines after the logo is approved?</h3><p style="opacity:.88;margin-top:10px;">Yes. Guidelines keep the logo consistent across designers and printers. Add them after approval.</p></div>
         </div>
 
         <div style="text-align:center;margin-top:18px;">
@@ -1020,108 +785,43 @@
           <a class="btn-primary" href="/branding-kampala" style="margin-left:8px;">Back to Branding Hub</a>
         </div>
 
-        <!-- JSON-LD FAQPage (must match visible FAQs) -->
         <script type="application/ld+json">
         {
           "@context":"https://schema.org",
           "@type":"FAQPage",
           "mainEntity":[
-            {
-              "@type":"Question",
-              "name":"How much does logo design cost in Kampala?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Cost depends on scope: logo only vs a logo system + mini brand kit, number of applications, and rollout support needed. Share your requirements and we’ll recommend a practical package."
-              }
-            },
-            {
-              "@type":"Question",
-              "name":"Do you provide all logo formats for printing and online use?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Yes. We deliver print-ready vector files (SVG/PDF) plus transparent PNGs and standard JPGs for digital use."
-              }
-            },
-            {
-              "@type":"Question",
-              "name":"Will my logo work on signage and large banners?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Yes. We design with readability in mind and export the correct formats so the logo stays sharp at any size."
-              }
-            },
-            {
-              "@type":"Question",
-              "name":"Can you redesign or refine an existing logo?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Yes. If your current logo looks outdated, inconsistent, or prints poorly, we can refine it into a cleaner, modern version that works across applications."
-              }
-            },
-            {
-              "@type":"Question",
-              "name":"How long does a logo take to complete?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Timelines vary by scope and feedback speed. Many projects land within a few working days to a couple of weeks, especially when direction is clear."
-              }
-            },
-            {
-              "@type":"Question",
-              "name":"Do you help with stationery like business cards and letterheads?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Yes. We can apply your new logo to stationery and corporate templates. For larger rollout, consider corporate identity design."
-              }
-            },
-            {
-              "@type":"Question",
-              "name":"Do you design logos for startups and small businesses in Kampala?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Yes. We support startups, SMEs, NGOs and corporate teams—then recommend scope based on your stage and where the brand needs to appear."
-              }
-            },
-            {
-              "@type":"Question",
-              "name":"What should I prepare before requesting a logo?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Prepare your business name, what you do, your target customers, and any style references. Also mention where you’ll use the logo: signage, packaging, documents, or social."
-              }
-            },
-            {
-              "@type":"Question",
-              "name":"Can you create brand guidelines after the logo is approved?",
-              "acceptedAnswer":{
-                "@type":"Answer",
-                "text":"Yes. Guidelines help your team and printers apply the logo consistently. You can add brand guidelines after logo approval."
-              }
-            }
+            {"@type":"Question","name":"How much does logo design cost in Kampala?","acceptedAnswer":{"@type":"Answer","text":"Cost depends on scope: logo only vs a logo system + mini kit, number of applications, and rollout support. Share requirements and we’ll recommend a practical package."}},
+            {"@type":"Question","name":"Do you provide all logo formats for printing and online use?","acceptedAnswer":{"@type":"Answer","text":"Yes. We deliver print-ready vector files (SVG/PDF) plus transparent PNGs and standard JPGs for digital use."}},
+            {"@type":"Question","name":"Will my logo work on signage and large banners?","acceptedAnswer":{"@type":"Answer","text":"Yes. We design with readability in mind and export correct formats so the logo stays sharp at any size."}},
+            {"@type":"Question","name":"Can you redesign or refine an existing logo?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your current logo looks outdated or prints poorly, we can refine it into a cleaner version that works across applications."}},
+            {"@type":"Question","name":"How long does a logo take to complete?","acceptedAnswer":{"@type":"Answer","text":"Timelines vary by scope and feedback speed. Many projects land within a few working days to a couple of weeks when direction is clear."}},
+            {"@type":"Question","name":"Do you help with stationery like business cards and letterheads?","acceptedAnswer":{"@type":"Answer","text":"Yes. We can apply your new logo to stationery and templates. For bigger rollout, consider corporate brand identity + guidelines."}},
+            {"@type":"Question","name":"Do you design logos for startups and SMEs in Kampala?","acceptedAnswer":{"@type":"Answer","text":"Yes. We support startups, SMEs, NGOs and corporate teams—then recommend scope based on stage and usage."}},
+            {"@type":"Question","name":"What should I prepare before requesting a logo?","acceptedAnswer":{"@type":"Answer","text":"Business name, what you do, target customers, and where you’ll use the logo (signage, packaging, documents, social)."}},
+            {"@type":"Question","name":"Can you create brand guidelines after the logo is approved?","acceptedAnswer":{"@type":"Answer","text":"Yes. Guidelines keep the logo consistent across designers and printers. Add them after approval."}}
           ]
         }
         </script>
       </div>
     </section>
 
-    <!-- J) FINAL CTA -->
+    <!-- FINAL CTA -->
     <section class="section light animate" style="padding-top:50px;">
       <div class="content-wrap">
         <div class="card">
           <h2 style="margin-bottom:10px;">Ready for a logo that looks professional everywhere?</h2>
           <p style="opacity:.88;margin-bottom:16px;">
-            If you want a clean, scalable logo built for Kampala business reality—printing, signage, documents, and digital—send your brief and we’ll guide the next steps.
-            We reply as soon as possible with questions, scope options, and a practical plan.
+            If you want a clean, scalable logo built for Kampala business reality—printing, signage, documents, and digital—send your brief and we’ll guide next steps.
           </p>
 
           <div class="hero-actions">
             <a class="btn-primary" href="/contact">Start Logo Project</a>
-            <a class="btn-secondary" href="/portfolio" style="margin-left:8px;">See Portfolio Proof</a>
+            <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener" style="margin-left:8px;">WhatsApp</a>
           </div>
 
           <p style="opacity:.82;margin-top:14px;">
             Next:
-            <a href="/branding/corporate-identity-design-kampala/">Corporate Identity Design</a> •
+            <a href="/branding/corporate-brand-identity-design-kampala/">Corporate Brand Identity</a> •
             <a href="/branding/brand-guidelines-design-kampala/">Brand Guidelines</a> •
             <a href="/branding/brand-implementation-print-kampala/">Brand Implementation & Print</a>
           </p>
@@ -1131,7 +831,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (universal) -->
   <footer class="footer">
     <div class="footer-wrap">
       <div class="footer-col">
