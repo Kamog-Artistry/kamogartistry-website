@@ -60,6 +60,55 @@
   }
   </script>
 
+  <!-- ✅ Schema: ItemList for article cards (helps Google understand the listing) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"Kamog Artistry (U) Ltd — Insights Articles",
+    "itemListOrder":"https://schema.org/ItemListOrderDescending",
+    "numberOfItems":6,
+    "itemListElement":[
+      {
+        "@type":"ListItem",
+        "position":1,
+        "url":"https://kamogartistry.com/post?post=branding-printing-signage-guide-uganda",
+        "name":"Branding, Printing & Signage in Uganda: A Practical Guide"
+      },
+      {
+        "@type":"ListItem",
+        "position":2,
+        "url":"https://kamogartistry.com/post?post=fastercapital-press-release",
+        "name":"FasterCapital Partnership Announcement"
+      },
+      {
+        "@type":"ListItem",
+        "position":3,
+        "url":"https://kamogartistry.com/post?post=why-branding-matters",
+        "name":"Why Branding Matters"
+      },
+      {
+        "@type":"ListItem",
+        "position":4,
+        "url":"https://kamogartistry.com/post?post=creative-industry-trends",
+        "name":"Creative Industry Trends"
+      },
+      {
+        "@type":"ListItem",
+        "position":5,
+        "url":"https://kamogartistry.com/post?post=signage-cost-uganda",
+        "name":"How Much Does Signage Cost in Uganda? (A Simple Breakdown)"
+      },
+      {
+        "@type":"ListItem",
+        "position":6,
+        "url":"https://kamogartistry.com/post?post=best-file-formats-for-print-uganda",
+        "name":"Best File Formats for Printing in Uganda (PDF, AI, EPS, PNG)"
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
@@ -139,6 +188,9 @@
       opacity:.95;
     }
     .footer a.footer-cta, .footer a.footer-cta:visited{ text-decoration:none !important; }
+
+    /* Small utility: ensure hidden items don’t occupy space */
+    .blog-item[hidden]{ display:none !important; }
   </style>
 </head>
 
@@ -170,9 +222,16 @@
 <main id="main">
 
 <!-- HERO INTRO -->
-    <section class="section animate">
-      <div style="max-width:1000px;margin:auto;text-align:center">
-        <h1>Insights & Articles</h1>
+<section class="section animate">
+  <div style="max-width:1000px;margin:auto;text-align:center">
+    <!-- ✅ Visible breadcrumbs (UX + internal links) -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <span aria-current="page" style="font-weight:900;color:#fff">Insights</span>
+    </nav>
+
+    <h1>Insights & Articles</h1>
 
     <p style="opacity:.9;margin-top:12px">
       News, announcements, and practical insights on <strong>branding, printing and signage in Kampala, Uganda</strong>.
@@ -184,7 +243,8 @@
     </p>
 
     <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a class="btn-primary" href="contact">Submit a Story</a>
+      <!-- ✅ Conversion-first CTAs -->
+      <a class="btn-primary" href="contact">Request a Quote</a>
       <a class="btn-secondary" href="portfolio">View Portfolio</a>
       <a class="btn-secondary" href="services">Explore Services</a>
     </div>
@@ -197,201 +257,259 @@
       <a href="#cluster-signage" style="font-weight:900;text-decoration:underline;text-underline-offset:3px;color:#fff">Signage</a> •
       <a href="#cluster-case-studies" style="font-weight:900;text-decoration:underline;text-underline-offset:3px;color:#fff">Case Studies</a>
     </p>
-  </section>
+  </div>
+</section>
 
-  <section class="section light animate" style="padding-top:60px">
-    <div style="max-width:1000px;margin:0 auto">
-      <h2 style="text-align:center">Browse an Article</h2>
+<!-- ✅ NEW: Service hub launcher (internal linking power) -->
+<section class="section light animate" id="browse-hubs" style="padding-top:40px">
+  <div style="max-width:1000px;margin:0 auto">
+    <h2 style="text-align:center">Browse by Service Hub</h2>
+    <p style="opacity:.85;max-width:900px;margin:12px auto 0;text-align:center">
+      Use these hubs to explore pricing, timelines, materials, and real work examples—then jump into the most relevant cluster page for your project.
+    </p>
 
-      <div class="card" style="margin-top:18px">
-        <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <button class="pf-btn filter-btn is-active active" type="button" data-cat="all">All</button>
-            <button class="pf-btn filter-btn" type="button" data-cat="news">News</button>
-            <button class="pf-btn filter-btn" type="button" data-cat="branding">Branding</button>
-            <button class="pf-btn filter-btn" type="button" data-cat="printing">Printing</button>
-            <button class="pf-btn filter-btn" type="button" data-cat="signage">Signage</button>
-            <button class="pf-btn filter-btn" type="button" data-cat="creative">Creative</button>
-          </div>
-
-          <input
-            id="blogSearch"
-            type="search"
-            placeholder="Search articles…"
-            aria-label="Search articles"
-            style="width:min(360px,100%);padding:12px 14px;border-radius:12px;border:1px solid rgba(0,0,0,.12);background:#fff;color:#013144"
-          />
+    <div class="grid" style="margin-top:22px">
+      <!-- ⚠️ If any of these URLs differ on your site, just swap to your real hub slugs -->
+      <a class="card blog-item" href="services/branding/branding-kampala/">
+        <h3>Branding Kampala (Hub)</h3>
+        <p style="opacity:.85">Identity, strategy, guidelines, packaging, rebranding—built for Kampala businesses.</p>
+        <div style="margin-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <span style="opacity:.75">12 cluster pages</span>
+          <span class="read-more">Explore →</span>
         </div>
-      </div>
+      </a>
 
-      <div class="grid" id="blogGrid" style="margin-top:22px">
+      <a class="card blog-item" href="services/printing/printing-services-kampala/">
+        <h3>Printing Services Kampala (Hub)</h3>
+        <p style="opacity:.85">Business cards, flyers, posters, booklets, large format—clean output that matches your brand.</p>
+        <div style="margin-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <span style="opacity:.75">12 cluster pages</span>
+          <span class="read-more">Explore →</span>
+        </div>
+      </a>
 
-        <!-- ✅ FEATURED GUIDE (TOP) -->
-        <a
-          href="post?post=branding-printing-signage-guide-uganda"
-          class="card blog-item highlight"
-          data-slug="branding-printing-signage-guide-uganda"
-          data-title="Branding Printing Signage Uganda Guide Materials Costs Timelines"
-          data-cat="branding"
-          style="border:1px solid rgba(47,107,255,.35)"
-        >
-          <span class="badge" style="margin-bottom:10px;display:inline-block">Featured Guide</span>
-          <h3>Branding, Printing & Signage in Uganda: A Practical Guide</h3>
-          <p style="opacity:.9">
-            A complete, practical guide for businesses in Uganda covering branding, printing and signage—materials, costs, visibility, timelines, and common mistakes to avoid.
-          </p>
+      <a class="card blog-item" href="services/signage/signage-fabrication-uganda/">
+        <h3>Signage Fabrication Uganda (Hub)</h3>
+        <p style="opacity:.85">ACM, acrylic, 3D letters, lightboxes, installations—built to last and be seen.</p>
+        <div style="margin-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <span style="opacity:.75">12 cluster pages</span>
+          <span class="read-more">Explore →</span>
+        </div>
+      </a>
 
-          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-            <span class="disqus-comment-count"
-                  data-disqus-identifier="branding-printing-signage-guide-uganda"
-                  style="opacity:.75">0 Comments</span>
-            <span class="read-more">Read Full Guide →</span>
-          </div>
-        </a>
+      <a class="card blog-item" href="services/vehicle-branding/vehicle-branding-kampala/">
+        <h3>Vehicle Branding Kampala (Hub)</h3>
+        <p style="opacity:.85">Fleet branding, wraps, reflective vinyl, installation planning—done professionally.</p>
+        <div style="margin-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <span style="opacity:.75">12 cluster pages</span>
+          <span class="read-more">Explore →</span>
+        </div>
+      </a>
+    </div>
 
-        <!-- FasterCapital (News) -->
-        <a
-          href="post?post=fastercapital-press-release"
-          class="card highlight blog-item"
-          data-slug="fastercapital-press-release"
-          data-title="FasterCapital Partnership Announcement Kamog Artistry LaunchUp program press release"
-          data-cat="news"
-          style="border:1px solid rgba(47,107,255,.25)"
-        >
-          <h3>FasterCapital Partnership Announcement</h3>
-          <p style="opacity:.85">
-            Kamog Artistry (U) Ltd joins the FasterCapital LaunchUp program—what it means, what we’re building, and what’s next.
-          </p>
+    <div style="margin-top:14px;text-align:center">
+      <a class="btn-secondary" href="services">See all services</a>
+      <a class="btn-secondary" href="contact" style="margin-left:8px">Talk to our team</a>
+    </div>
+  </div>
+</section>
 
-          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-            <span class="disqus-comment-count" data-disqus-identifier="fastercapital-press-release" style="opacity:.75">0 Comments</span>
-            <span class="read-more">Read Press Release →</span>
-          </div>
-        </a>
+<section class="section light animate" style="padding-top:60px">
+  <div style="max-width:1000px;margin:0 auto">
+    <h2 style="text-align:center">Browse an Article</h2>
 
-        <!-- ✅ FIXED URL (no spaces) -->
-        <a
-          href="post?post=why-branding-matters"
-          class="card blog-item"
-          data-slug="why-branding-matters"
-          data-title="Why Branding Matters visual identity trust recognition business growth Kampala Uganda"
-          data-cat="branding"
-        >
-          <h3>Why Branding Matters</h3>
-          <p style="opacity:.85">Understanding how strong visual identity builds trust and grows business.</p>
+    <div class="card" style="margin-top:18px">
+      <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="pf-btn filter-btn is-active active" type="button" data-cat="all">All</button>
+          <button class="pf-btn filter-btn" type="button" data-cat="news">News</button>
+          <button class="pf-btn filter-btn" type="button" data-cat="branding">Branding</button>
+          <button class="pf-btn filter-btn" type="button" data-cat="printing">Printing</button>
+          <button class="pf-btn filter-btn" type="button" data-cat="signage">Signage</button>
+          <button class="pf-btn filter-btn" type="button" data-cat="creative">Creative</button>
+        </div>
 
-          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-            <span class="disqus-comment-count" data-disqus-identifier="why-branding-matters" style="opacity:.75">0 Comments</span>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </a>
-
-        <!-- Creative Industry Trends -->
-        <a
-          href="post?post=creative-industry-trends"
-          class="card blog-item"
-          data-slug="creative-industry-trends"
-          data-title="Creative Industry Trends design production modern brands marketing"
-          data-cat="creative"
-        >
-          <h3>Creative Industry Trends</h3>
-          <p style="opacity:.85">How design and production are shaping modern brands and marketing.</p>
-
-          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-            <span class="disqus-comment-count" data-disqus-identifier="creative-industry-trends" style="opacity:.75">0 Comments</span>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </a>
-
-        <!-- Signage cost -->
-        <a
-          href="post?post=signage-cost-uganda"
-          class="card blog-item"
-          data-slug="signage-cost-uganda"
-          data-title="How Much Does Signage Cost in Uganda Banner Lightbox 3D Letters Acrylic ACM Kampala"
-          data-cat="signage"
-        >
-          <h3>How Much Does Signage Cost in Uganda? (A Simple Breakdown)</h3>
-          <p style="opacity:.85">
-            A clear breakdown of banner, ACM, acrylic, lightbox and 3D signage costs—what affects price, durability and installation.
-          </p>
-
-          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-            <span class="disqus-comment-count" data-disqus-identifier="signage-cost-uganda" style="opacity:.75">0 Comments</span>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </a>
-
-        <!-- Print file formats -->
-        <a
-          href="post?post=best-file-formats-for-print-uganda"
-          class="card blog-item"
-          data-slug="best-file-formats-for-print-uganda"
-          data-title="Best File Formats for Printing Uganda PDF AI EPS PNG JPG bleed CMYK"
-          data-cat="printing"
-        >
-          <h3>Best File Formats for Printing in Uganda (PDF, AI, EPS, PNG)</h3>
-          <p style="opacity:.85">
-            Avoid blurry prints. Learn the best export settings, bleed, color mode (CMYK), and what files to send for professional output.
-          </p>
-
-          <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-            <span class="disqus-comment-count" data-disqus-identifier="best-file-formats-for-print-uganda" style="opacity:.75">0 Comments</span>
-            <span class="read-more">Read Article →</span>
-          </div>
-        </a>
-
+        <input
+          id="blogSearch"
+          type="search"
+          placeholder="Search articles…"
+          aria-label="Search articles"
+          style="width:min(360px,100%);padding:12px 14px;border-radius:12px;border:1px solid rgba(0,0,0,.12);background:#fff;color:#013144"
+        />
       </div>
     </div>
-  </section>
 
-  <!-- ✅ Topic clusters (internal linking for dominance) -->
-  <section class="section animate" id="cluster-branding">
-    <h2>Branding Topics</h2>
-    <p style="opacity:.88;max-width:980px;margin:0 auto;text-align:center">
-      Learn how branding builds trust, improves recognition, and makes your business look established in Kampala and Uganda.
+    <div class="grid" id="blogGrid" style="margin-top:22px">
+
+      <!-- ✅ FEATURED GUIDE (TOP) -->
+      <a
+        href="post?post=branding-printing-signage-guide-uganda"
+        class="card blog-item highlight"
+        data-slug="branding-printing-signage-guide-uganda"
+        data-title="Branding Printing Signage Uganda Guide Materials Costs Timelines"
+        data-cat="branding"
+        style="border:1px solid rgba(47,107,255,.35)"
+      >
+        <span class="badge" style="margin-bottom:10px;display:inline-block">Featured Guide</span>
+        <h3>Branding, Printing & Signage in Uganda: A Practical Guide</h3>
+        <p style="opacity:.9">
+          A complete, practical guide for businesses in Uganda covering branding, printing and signage—materials, costs, visibility, timelines, and common mistakes to avoid.
+        </p>
+
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <span class="disqus-comment-count"
+                data-disqus-identifier="branding-printing-signage-guide-uganda"
+                style="opacity:.75">0 Comments</span>
+          <span class="read-more">Read Full Guide →</span>
+        </div>
+      </a>
+
+      <!-- FasterCapital (News) -->
+      <a
+        href="post?post=fastercapital-press-release"
+        class="card highlight blog-item"
+        data-slug="fastercapital-press-release"
+        data-title="FasterCapital Partnership Announcement Kamog Artistry LaunchUp program press release"
+        data-cat="news"
+        style="border:1px solid rgba(47,107,255,.25)"
+      >
+        <h3>FasterCapital Partnership Announcement</h3>
+        <p style="opacity:.85">
+          Kamog Artistry (U) Ltd joins the FasterCapital LaunchUp program—what it means, what we’re building, and what’s next.
+        </p>
+
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <span class="disqus-comment-count" data-disqus-identifier="fastercapital-press-release" style="opacity:.75">0 Comments</span>
+          <span class="read-more">Read Press Release →</span>
+        </div>
+      </a>
+
+      <!-- ✅ FIXED URL (no spaces) -->
+      <a
+        href="post?post=why-branding-matters"
+        class="card blog-item"
+        data-slug="why-branding-matters"
+        data-title="Why Branding Matters visual identity trust recognition business growth Kampala Uganda"
+        data-cat="branding"
+      >
+        <h3>Why Branding Matters</h3>
+        <p style="opacity:.85">Understanding how strong visual identity builds trust and grows business.</p>
+
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <span class="disqus-comment-count" data-disqus-identifier="why-branding-matters" style="opacity:.75">0 Comments</span>
+          <span class="read-more">Read Article →</span>
+        </div>
+      </a>
+
+      <!-- Creative Industry Trends -->
+      <a
+        href="post?post=creative-industry-trends"
+        class="card blog-item"
+        data-slug="creative-industry-trends"
+        data-title="Creative Industry Trends design production modern brands marketing"
+        data-cat="creative"
+      >
+        <h3>Creative Industry Trends</h3>
+        <p style="opacity:.85">How design and production are shaping modern brands and marketing.</p>
+
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <span class="disqus-comment-count" data-disqus-identifier="creative-industry-trends" style="opacity:.75">0 Comments</span>
+          <span class="read-more">Read Article →</span>
+        </div>
+      </a>
+
+      <!-- Signage cost -->
+      <a
+        href="post?post=signage-cost-uganda"
+        class="card blog-item"
+        data-slug="signage-cost-uganda"
+        data-title="How Much Does Signage Cost in Uganda Banner Lightbox 3D Letters Acrylic ACM Kampala"
+        data-cat="signage"
+      >
+        <h3>How Much Does Signage Cost in Uganda? (A Simple Breakdown)</h3>
+        <p style="opacity:.85">
+          A clear breakdown of banner, ACM, acrylic, lightbox and 3D signage costs—what affects price, durability and installation.
+        </p>
+
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <span class="disqus-comment-count" data-disqus-identifier="signage-cost-uganda" style="opacity:.75">0 Comments</span>
+          <span class="read-more">Read Article →</span>
+        </div>
+      </a>
+
+      <!-- Print file formats -->
+      <a
+        href="post?post=best-file-formats-for-print-uganda"
+        class="card blog-item"
+        data-slug="best-file-formats-for-print-uganda"
+        data-title="Best File Formats for Printing Uganda PDF AI EPS PNG JPG bleed CMYK"
+        data-cat="printing"
+      >
+        <h3>Best File Formats for Printing in Uganda (PDF, AI, EPS, PNG)</h3>
+        <p style="opacity:.85">
+          Avoid blurry prints. Learn the best export settings, bleed, color mode (CMYK), and what files to send for professional output.
+        </p>
+
+        <div style="margin-top:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <span class="disqus-comment-count" data-disqus-identifier="best-file-formats-for-print-uganda" style="opacity:.75">0 Comments</span>
+          <span class="read-more">Read Article →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Topic clusters (internal linking for dominance) -->
+<section class="section animate" id="cluster-branding">
+  <h2>Branding Topics</h2>
+  <p style="opacity:.88;max-width:980px;margin:0 auto;text-align:center">
+    Learn how branding builds trust, improves recognition, and makes your business look established in Kampala and Uganda.
+  </p>
+  <div style="margin-top:14px;text-align:center">
+    <a class="btn-secondary" href="services#branding">Branding Services</a>
+    <a class="btn-secondary" href="services/branding/branding-kampala/" style="margin-left:8px">Branding Kampala Hub</a>
+    <a class="btn-secondary" href="portfolio" style="margin-left:8px">See Branding Work</a>
+  </div>
+</section>
+
+<section class="section animate" id="cluster-printing">
+  <h2>Printing Topics</h2>
+  <p style="opacity:.88;max-width:980px;margin:0 auto;text-align:center">
+    Practical printing tips: files, finishing, common mistakes, and how to get clean output that matches your brand.
+  </p>
+  <div style="margin-top:14px;text-align:center">
+    <a class="btn-secondary" href="services#printing">Printing Services</a>
+    <a class="btn-secondary" href="services/printing/printing-services-kampala/" style="margin-left:8px">Printing Hub</a>
+    <a class="btn-secondary" href="contact" style="margin-left:8px">Request Print Quote</a>
+  </div>
+</section>
+
+<section class="section animate" id="cluster-signage">
+  <h2>Signage Topics</h2>
+  <p style="opacity:.88;max-width:980px;margin:0 auto;text-align:center">
+    Signage helps businesses get seen. Learn about materials (ACM, acrylic, lightboxes), durability, costs, and installation planning.
+  </p>
+  <div style="margin-top:14px;text-align:center">
+    <a class="btn-secondary" href="services#signage">Signage Services</a>
+    <a class="btn-secondary" href="services/signage/signage-fabrication-uganda/" style="margin-left:8px">Signage Hub</a>
+    <a class="btn-secondary" href="contact#quote" style="margin-left:8px">Request Signage Quote</a>
+  </div>
+</section>
+
+<section class="section animate" id="cluster-case-studies">
+  <div class="card cta-card">
+    <h2 style="margin-bottom:10px">Want us to write about your project?</h2>
+    <p style="opacity:.85;margin-bottom:18px">
+      We can document your branding process—from design to production and installation—into a clean case-study article for credibility and SEO.
     </p>
-    <div style="margin-top:14px;text-align:center">
-      <a class="btn-secondary" href="services#branding">Branding Services</a>
-      <a class="btn-secondary" href="portfolio" style="margin-left:8px">See Branding Work</a>
-    </div>
-  </section>
 
-  <section class="section animate" id="cluster-printing">
-    <h2>Printing Topics</h2>
-    <p style="opacity:.88;max-width:980px;margin:0 auto;text-align:center">
-      Practical printing tips: files, finishing, common mistakes, and how to get clean output that matches your brand.
-    </p>
-    <div style="margin-top:14px;text-align:center">
-      <a class="btn-secondary" href="services#printing">Printing Services</a>
-      <a class="btn-secondary" href="contact" style="margin-left:8px">Request Print Quote</a>
+    <div class="hero-actions">
+      <a href="contact" class="btn-primary">Send Us a Message</a>
+      <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
     </div>
-  </section>
-
-  <section class="section animate" id="cluster-signage">
-    <h2>Signage Topics</h2>
-    <p style="opacity:.88;max-width:980px;margin:0 auto;text-align:center">
-      Signage helps businesses get seen. Learn about materials (ACM, acrylic, lightboxes), durability, costs, and installation planning.
-    </p>
-    <div style="margin-top:14px;text-align:center">
-      <a class="btn-secondary" href="services#signage">Signage Services</a>
-      <a class="btn-secondary" href="contact#quote" style="margin-left:8px">Request Signage Quote</a>
-    </div>
-  </section>
-
-  <section class="section animate" id="cluster-case-studies">
-    <div class="card cta-card">
-      <h2 style="margin-bottom:10px">Want us to write about your project?</h2>
-      <p style="opacity:.85;margin-bottom:18px">
-        We can document your branding process—from design to production and installation—into a clean case-study article for credibility and SEO.
-      </p>
-
-      <div class="hero-actions">
-        <a href="contact" class="btn-primary">Send Us a Message</a>
-        <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
@@ -484,7 +602,7 @@
 <script src="assets/js/script.js" defer></script>
 <script src="assets/js/animations.js" defer></script>
 
-<!-- ✅ FIXED: Disqus count script (your old one had https://https...) -->
+<!-- ✅ Disqus count script -->
 <script id="dsq-count-scr" src="https://https-kamogartistry-com.disqus.com/count.js" async></script>
 
 <script>
@@ -502,12 +620,15 @@
 
     function applyFilters() {
       const term = (search && search.value ? search.value : "").trim().toLowerCase();
+
       items.forEach(item => {
         const title = (item.getAttribute("data-title") || "").toLowerCase();
         const cat = item.getAttribute("data-cat") || "all";
         const catOk = (activeCat === "all" || cat === activeCat);
         const termOk = (!term || title.includes(term));
-        item.style.display = (catOk && termOk) ? "block" : "none";
+
+        // ✅ Do NOT force display:block (can break grid spacing). Use hidden instead.
+        item.hidden = !(catOk && termOk);
       });
     }
 

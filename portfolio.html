@@ -11,7 +11,7 @@
   <meta name="description"
     content="Explore real branding, printing and signage projects delivered by Kamog Artistry (U) Ltd in Kampala, Wakiso, Mukono and across Uganda—case studies with scope, process, gallery and results." />
 
-  <!-- ✅ Canonical: prefer clean URL (keep your  file if needed; canonical points to clean route) -->
+  <!-- ✅ Canonical -->
   <link rel="canonical" href="https://kamogartistry.com/portfolio" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kamogartistry.com/sitemap.xml" />
 
@@ -30,7 +30,7 @@
     content="Explore real branding, printing and signage projects delivered by Kamog Artistry (U) Ltd in Kampala, Wakiso, Mukono and across Uganda—case studies with scope, process, gallery and results." />
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/hero/portfolio-cover.jpg" />
 
-  <!-- ✅ Schema: CollectionPage + ItemList (kept from your file; URLs updated to clean where reasonable) -->
+  <!-- ✅ Schema: CollectionPage + ItemList -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -77,9 +77,99 @@
   }
   </script>
 
+  <!-- ✅ FAQPage schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Do you handle design, printing and installation?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We can manage the full workflow from design to production, then delivery or installation (especially for signage and office branding)."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Which areas do you serve most?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Mostly Kampala and Wakiso, plus Mukono and central Uganda. For larger projects, we also support nationwide execution."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"How do I get a quote?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Share your project type, size, location and deadline via our Contact page (or WhatsApp). We’ll advise the best approach and pricing."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Can you match an existing brand or improve what we already have?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We can follow an existing brand guide, refine inconsistent files, and standardize print-ready assets for clean production and consistent rollout."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ✅ Additional schema: Organization (entity trust) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Kamog Artistry (U) Ltd",
+    "url":"https://kamogartistry.com/",
+    "email":"info@kamogartistry.com",
+    "telephone":"+256775251445",
+    "sameAs":[
+      "https://www.facebook.com/611977605339985",
+      "https://www.instagram.com/kamog_artistry_u_ltd",
+      "https://www.linkedin.com/company/kamog-artistry-u-ltd",
+      "https://x.com/kamogartistry",
+      "https://www.tiktok.com/@kamogartistry",
+      "https://www.behance.net/kamogArtistry",
+      "https://www.threads.com/@kamog_artistry_u_ltd"
+    ]
+  }
+  </script>
+
+  <!-- ✅ Extra credibility schema (safe add-on) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Kamog Artistry (U) Ltd",
+    "url":"https://kamogartistry.com/",
+    "telephone":"+256775251445",
+    "email":"info@kamogartistry.com",
+    "areaServed":[
+      {"@type":"City","name":"Kampala"},
+      {"@type":"AdministrativeArea","name":"Wakiso"},
+      {"@type":"AdministrativeArea","name":"Mukono"},
+      {"@type":"Country","name":"Uganda"}
+    ],
+    "serviceType":[
+      "Branding",
+      "Printing",
+      "Signage Fabrication",
+      "Vehicle Branding",
+      "Large Format Printing",
+      "Corporate Stationery",
+      "Custom Merchandise"
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- ✅ Style fixes: header/footer consistency, no underline on cards, visible buttons, clean filters -->
+  <!-- ✅ Page-only fixes (safe; no global CSS touch) -->
   <style>
     :root{
       --km-blue:#0b6fbf;
@@ -97,7 +187,7 @@
       box-shadow:0 10px 22px rgba(0,0,0,.18);
     }
 
-    /* Ensure hero links visible, no underline */
+    /* Avoid link underline noise in hero */
     .portfolio-hero a,
     .portfolio-hero a:visited {
       color: rgba(255,255,255,0.92) !important;
@@ -115,31 +205,47 @@
     .btn-secondary, .btn-secondary *{
       color:#ffffff !important;
       text-decoration:none !important;
+      -webkit-text-fill-color:#ffffff !important;
     }
 
-    /* Light sections button visibility safety (secondary btn) */
+    /* On LIGHT sections, ensure secondary is blue (not transparent) */
     .section.light .btn-secondary{
       background: var(--km-blue) !important;
       border: 1px solid var(--km-blue) !important;
     }
 
-    /* Portfolio cards: remove underlines everywhere */
+    /* Portfolio cards: remove underlines */
     .portfolio-item{
-      display:block;
       text-decoration:none !important;
       color:inherit !important;
     }
-    .portfolio-item *{
-      text-decoration:none !important;
+    .portfolio-item *{ text-decoration:none !important; }
+
+    /* ✅ Desktop-safe grid fallback (prevents “invisible grid” issues) */
+    #portfolioGrid{
+      max-width:1100px;
+      margin:22px auto 0;
+      display:grid;
+      gap:18px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    /* Nice hover */
+    /* Ensure cards remain visible */
+    .portfolio-item.card{
+      background:#fff !important;
+      border-radius: 16px;
+    }
+
+    /* Hide with [hidden] (used by JS) */
+    [hidden]{ display:none !important; }
+
+    /* Hover */
     .portfolio-item.card:hover{
       transform: translateY(-2px);
       transition: transform .2s ease;
     }
 
-    /* Filters layout stability */
+    /* Filters layout */
     .portfolio-filters{
       display:flex;
       gap:10px;
@@ -163,7 +269,6 @@
       color:#fff;
     }
 
-    /* Small label inside cards */
     .mini-link{
       display:inline-block;
       margin-top:10px;
@@ -171,7 +276,37 @@
       opacity:.9;
     }
 
-    /* Footer link behavior */
+    /* Proof strip */
+    .proof-strip{
+      max-width:1100px;
+      margin:18px auto 0;
+      display:grid;
+      gap:12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .proof-pill{
+      background:#fff;
+      border:1px solid rgba(1,49,68,.10);
+      border-radius:14px;
+      padding:14px 14px;
+    }
+    .proof-pill strong{ display:block; margin-bottom:6px; color:#013144; }
+    .proof-pill span{ opacity:.85; }
+
+    /* Trusted-by logo cards (matches your testimonials style) */
+    .client-logo-card{
+      display:flex; align-items:center; justify-content:center;
+      min-height:88px;
+      background:#fff;
+      border: 1px solid rgba(1,49,68,.10);
+      border-radius: 14px;
+    }
+    .client-logo-card img{
+      max-width:150px; max-height:64px; object-fit:contain;
+      filter:saturate(1.05);
+    }
+
+    /* Footer links */
     .footer a, .footer a:visited{ color:#ffffff !important; }
     .footer a:not(.footer-cta):not(.social-btn),
     .footer a:not(.footer-cta):not(.social-btn):visited{ text-decoration:none !important; opacity:.95; }
@@ -182,14 +317,23 @@
       opacity:.95;
     }
     .footer a.footer-cta, .footer a.footer-cta:visited{ text-decoration:none !important; }
-  </style>
 
+    /* ✅ FIX: force-reveal the portfolio browse section even if animations.js fails on desktop */
+    #portfolio-browse{
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
+    #portfolio-browse *{
+      visibility: visible !important;
+    }
+  </style>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- ✅ HEADER (matches your main header standard: adds Corporate) -->
+  <!-- ✅ HEADER (UNCHANGED) -->
   <header class="header">
     <nav class="nav">
       <a href="/" aria-label="Go to homepage">
@@ -219,13 +363,13 @@
         <h1>Branding, Printing &amp; Signage Projects in Kampala, Uganda</h1>
 
         <p style="opacity:.9;margin-top:14px">
-          A curated selection of commissioned work across branding, printing, signage, fine art, motion graphics, packaging and creative production.
-          Each project links to a dedicated case study page with scope, process gallery, and media.
+          A curated selection of commissioned work across branding, printing, signage, packaging, promotional items, fine art and motion graphics.
+          Every project below links to a dedicated case study with scope, workflow, visuals and execution notes—showing the real production quality behind the final output.
         </p>
 
         <p style="opacity:.9;margin-top:14px">
-          We execute most projects in <strong>Kampala</strong> and <strong>Wakiso</strong>, with delivery and project support across Mukono and greater Uganda.
-          This page shows real work done on the ground—production, finishing and installation.
+          We execute most projects in <strong>Kampala</strong> and <strong>Wakiso</strong>, with delivery and project support across <strong>Mukono</strong> and greater Uganda.
+          Many projects are completed around key areas like <strong>Kololo</strong>, <strong>Najjera</strong>, <strong>Ntinda</strong>, <strong>Lugogo</strong>, <strong>Munyonyo</strong> and other business zones.
         </p>
 
         <p style="opacity:.85;margin-top:10px">
@@ -239,22 +383,208 @@
           <a class="btn-secondary" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry">View Behance</a>
         </div>
 
-        <p style="opacity:.88;margin-top:12px">
-          Want similar results? Share your project location + deadline — we’ll advise the best approach and send a quote.
-        </p>
-
         <p style="opacity:.92;margin-top:14px">
           Quick links:
           <a href="services">Services</a> •
-          <a href="testimonials">Testimonials</a> •
-          <a href="blog">Insights</a> •
-          <a href="contact">Contact</a>
+          <a href="branding-kampala">Branding Kampala</a> •
+          <a href="printing-services-kampala">Printing Services Kampala</a> •
+          <a href="signage-fabrication-uganda">Signage Fabrication Uganda</a> •
+          <a href="vehicle-branding-kampala">Vehicle Branding Kampala</a> •
+          <a href="large-format-printing-kampala">Large Format Printing</a> •
+          <a href="custom-merchandise-uganda">Custom Merchandise</a> •
+          <a href="branded-stationery-uganda">Branded Stationery</a>
         </p>
       </div>
     </section>
 
-    <!-- FILTERS + SEARCH -->
+    <!-- SERVICE REINFORCEMENT + DEEP LINKING -->
     <section class="section light animate" style="padding-top:60px">
+      <div style="max-width:1100px;margin:0 auto">
+        <h2>Explore Portfolio by Service </h2>
+        <p style="opacity:.88;max-width:980px;margin:10px auto 0">
+          Use this page to verify capability, then jump directly to the service page you need. If you’re not sure which service fits,
+          start with <a href="services"><strong>Services</strong></a> and we’ll guide you.
+        </p>
+
+        <div class="grid" style="margin-top:18px">
+          <div class="card">
+            <h3>Branding Kampala</h3>
+            <p style="opacity:.88;margin-top:10px">
+              Strategy-led branding built for real production—logos, corporate identity, brand guidelines, packaging and rollout support.
+            </p>
+            <p style="opacity:.9;margin-top:10px">
+              Hub:
+              <a href="branding-kampala"><strong>Branding Kampala</strong></a>
+            </p>
+            <p style="opacity:.9;margin-top:10px">
+              Popular cluster pages:
+              <a href="/services/branding/logo-design-kampala/">Logo Design</a> •
+              <a href="/services/branding/corporate-brand-identity-design-kampala/">Corporate Brand Identity</a> •
+              <a href="/services/branding/packaging-design-kampala/">Packaging Design</a> •
+              <a href="/services/branding/product-label-design-kampala/">Product Label Design</a>
+            </p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn-primary" href="branding-kampala">Go to Branding Hub</a>
+              <a class="btn-secondary" href="contact">Request Branding Quote</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Printing Services Kampala</h3>
+            <p style="opacity:.88;margin-top:10px">
+              Clean commercial printing for businesses and campaigns—designed for readability, brand consistency and finishing quality.
+            </p>
+            <p style="opacity:.9;margin-top:10px">
+              Hub:
+              <a href="printing-services-kampala"><strong>Printing Services Kampala</strong></a>
+            </p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn-primary" href="printing-services-kampala">Go to Printing Hub</a>
+              <a class="btn-secondary" href="contact">Request Print Quote</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Signage Fabrication Uganda</h3>
+            <p style="opacity:.88;margin-top:10px">
+              Visibility-first signage for shops, offices and events—planning, production and installation where required.
+            </p>
+            <p style="opacity:.9;margin-top:10px">
+              Hub:
+              <a href="signage-fabrication-uganda"><strong>Signage Fabrication Uganda</strong></a>
+            </p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn-primary" href="signage-fabrication-uganda">Go to Signage Hub</a>
+              <a class="btn-secondary" href="contact">Request Signage Quote</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Vehicle Branding Kampala</h3>
+            <p style="opacity:.88;margin-top:10px">
+              Corporate vehicle branding and fleet consistency—durable materials, clean application and proper finishing.
+            </p>
+            <p style="opacity:.9;margin-top:10px">
+              Hub:
+              <a href="vehicle-branding-kampala"><strong>Vehicle Branding Kampala</strong></a>
+            </p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn-primary" href="vehicle-branding-kampala">Go to Vehicle Branding Hub</a>
+              <a class="btn-secondary" href="contact">Request Quote</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Large Format Printing Kampala</h3>
+            <p style="opacity:.88;margin-top:10px">
+              Banners, backdrops, event displays and high-visibility large format output—designed for distance readability and strong finishing.
+            </p>
+            <p style="opacity:.9;margin-top:10px">
+              Hub:
+              <a href="large-format-printing-kampala"><strong>Large Format Printing Kampala</strong></a>
+            </p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn-primary" href="large-format-printing-kampala">Go to Large Format Hub</a>
+              <a class="btn-secondary" href="contact">Request Quote</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Custom Merchandise &amp; Branded Stationery</h3>
+            <p style="opacity:.88;margin-top:10px">
+              Promotional items, corporate gifts and stationery—ideal for campaigns, events, onboarding and client appreciation.
+            </p>
+            <p style="opacity:.9;margin-top:10px">
+              Hubs:
+              <a href="custom-merchandise-uganda"><strong>Custom Merchandise</strong></a> •
+              <a href="branded-stationery-uganda"><strong>Branded Stationery</strong></a>
+            </p>
+            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn-primary" href="custom-merchandise-uganda">Merchandise Hub</a>
+              <a class="btn-secondary" href="branded-stationery-uganda">Stationery Hub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="max-width:1100px;margin:18px auto 0">
+          <h3 style="margin-bottom:10px">Featured Projects (Fast Proof)</h3>
+          <p style="opacity:.88;margin:0 0 10px">
+            If you’re short on time, start with these—each shows practical execution, finishing and real-world delivery.
+          </p>
+          <p style="opacity:.9;margin:0">
+            <a href="portfolio/tooke-birdc-uma-2025"><strong>UMA 2025 Exhibition Branding</strong></a> •
+            <a href="portfolio/voltech-branding"><strong>Voltech Rebrand &amp; Office Branding</strong></a> •
+            <a href="portfolio/ability-pharmacy"><strong>Ability Pharmacy Branch Branding</strong></a> •
+            <a href="portfolio/kiosa"><strong>KIOSA Campaign Print &amp; Gifts</strong></a> •
+            <a href="portfolio/mountains-of-the-moon-tourism"><strong>Tourism Event Branding</strong></a> •
+            <a href="portfolio/abundance-herbal-products"><strong>Labels &amp; Packaging</strong></a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio-browse" class="section light animate" style="padding-top:60px">
+      
+      <!-- ✅ SUPPLEMENTS (Credibility Before Grid) -->
+      <div class="proof-strip" aria-label="Proof and trust signals">
+        <div class="proof-pill">
+          <strong>Registered Business</strong>
+          <span>Kamog Artistry (U) Ltd — professional branding, printing &amp; signage execution.</span>
+        </div>
+        <div class="proof-pill">
+          <strong>Coverage</strong>
+          <span>Kampala • Wakiso • Mukono • Central Uganda (nationwide support for larger rollouts).</span>
+        </div>
+        <div class="proof-pill">
+          <strong>End-to-End Delivery</strong>
+          <span>Design → production → delivery / installation (where required).</span>
+        </div>
+        <div class="proof-pill">
+          <strong>Quality Control</strong>
+          <span>Proofing, print-ready checks, finishing supervision and brand consistency.</span>
+        </div>
+        <div class="proof-pill">
+          <strong>Client Support</strong>
+          <span>Clear communication, realistic timelines, and guidance on best materials.</span>
+        </div>
+      </div>
+
+      <div class="card" style="max-width:1100px;margin:14px auto 0">
+        <h3 style="margin:0 0 10px">How We Run Projects (Simple, Professional Process)</h3>
+        <ol style="margin:0;opacity:.88;line-height:1.8;padding-left:18px">
+          <li><strong>Brief + measurements:</strong> confirm scope, sizes, location and deadline.</li>
+          <li><strong>Design + proof approval:</strong> send mockups and finalize files for production.</li>
+          <li><strong>Production + finishing:</strong> print/fabricate with the right materials and finishing.</li>
+          <li><strong>Delivery / installation:</strong> fitment, alignment, and clean presentation.</li>
+          <li><strong>Aftercare:</strong> guidance for maintenance and future rollouts.</li>
+        </ol>
+      </div>
+
+      <div class="card" style="max-width:1100px;margin:14px auto 0">
+        <h3 style="margin:0 0 10px">Trusted by (Selected Clients)</h3>
+        <p style="opacity:.85;margin:0 0 14px">
+          A small selection from our client logos shown on the Testimonials page.
+          <a href="testimonials"><strong>See all testimonials &amp; logos →</strong></a>
+        </p>
+
+        <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+          <div class="client-logo-card"><img src="assets/img/clients/01_Voltech.png" alt="Voltech" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="client-logo-card"><img src="assets/img/clients/02_Tooke.png" alt="Tooke" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="client-logo-card"><img src="assets/img/clients/03_MODVA.png" alt="MODVA" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="client-logo-card"><img src="assets/img/clients/04_SBL.png" alt="SBL" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="client-logo-card"><img src="assets/img/clients/06_MOTMH.png" alt="MOTMH" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="client-logo-card"><img src="assets/img/clients/07_Abundance.png" alt="Abundance" width="150" height="64" loading="lazy" decoding="async"></div>
+        </div>
+
+        <p style="opacity:.72;margin:14px 0 0">
+          Note: Some work may be represented without naming due to confidentiality.
+        </p>
+      </div>
+
+       <!-- FILTERS + SEARCH + GRID -->
+    <!-- ✅ FIX: keep your exact section, but now it has an ID we force visible if animations fail -->
+   
+
       <h2>Browse by Service</h2>
 
       <div class="portfolio-filters" role="tablist" aria-label="Portfolio filters">
@@ -272,7 +602,6 @@
         <button type="button" class="filter-btn" data-filter="gifts">Success Cards &amp; Gifts</button>
       </div>
 
-      <!-- Location Filters -->
       <div class="portfolio-filters" role="tablist" aria-label="Location filters" style="margin-top:14px">
         <button type="button" class="filter-btn active" data-loc="all">All Locations</button>
         <button type="button" class="filter-btn" data-loc="kampala">Kampala</button>
@@ -299,18 +628,18 @@
         </div>
       </div>
 
-      <!-- PROJECTS GRID (your original content kept; links preserved) -->
-      <div class="grid" id="portfolioGrid" style="margin-top:22px">
+
+      <!-- ✅ GRID -->
+      <div id="portfolioGrid" style="margin-top:22px">
 
         <!-- 1) TOOKE / BIRDC (UMA 2025) -->
         <a class="portfolio-item event branding printing signage card"
            href="portfolio/tooke-birdc-uma-2025"
            data-title="tooke birdc uma 2025 exhibition branding backdrops photobooths tent branding fabrication installation kampala lugogo"
            data-location="Lugogo (UMA Show Grounds), Kampala"
-           data-locationgroup="kampala"
-           style="cursor:pointer;">
+           data-locationgroup="kampala">
           <img src="assets/img/portfolio/thumbnails/tooke-birdc-uma-2025-thumb.jpg"
-               alt="TOOKE / BIRDC UMA 2025 exhibition branding in Kampala"
+               alt="TOOKE / BIRDC UMA 2025 exhibition branding in Kampala (backdrops, tent branding, stands and installation)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
@@ -327,10 +656,9 @@
            href="portfolio/voltech-branding"
            data-title="voltech engineering rebrand logo redesign office branding glass vinyl signage installation car branding safety signs apparel print kampala najjera"
            data-location="Najjera (Bulabira Ring), Kampala"
-           data-locationgroup="kampala"
-           style="cursor:pointer;">
+           data-locationgroup="kampala">
           <img src="assets/img/portfolio/thumbnails/voltech-branding-thumb.jpg"
-               alt="Voltech Engineering rebrand and office branding in Kampala Najjera"
+               alt="Voltech Engineering rebrand and office branding in Kampala Najjera (logo, signage, glass branding and vehicle branding)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
@@ -347,10 +675,9 @@
            href="portfolio/modva-updf-spouses-desk"
            data-title="modva updf spouses desk labels mockups printing branding mbuya kampala"
            data-location="Mbuya, Kampala"
-           data-locationgroup="kampala"
-           style="cursor:pointer;">
+           data-locationgroup="kampala">
           <img src="assets/img/portfolio/thumbnails/modva-updf-spouses-desk-thumb.jpg"
-               alt="MODVA UPDF spouses desk branding and labels in Mbuya Kampala"
+               alt="MODVA UPDF spouses desk branding and labels in Mbuya Kampala (labels, awards and branded items)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
@@ -367,10 +694,9 @@
            href="portfolio/create-and-cook-competition"
            data-title="create and cook competition event branding booklets mockups production delivery kampala wakiso masulita buganda road"
            data-location="Buganda Road (Kampala) &amp; Wakiso (Masulita Road)"
-           data-locationgroup="wakiso"
-           style="cursor:pointer;">
+           data-locationgroup="wakiso">
           <img src="assets/img/portfolio/thumbnails/create-and-cook-competition-thumb.jpg"
-               alt="Create and Cook competition event branding Kampala and Wakiso"
+               alt="Create and Cook competition event branding, printing and production for Kampala and Wakiso"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
@@ -387,10 +713,9 @@
            href="portfolio/mountains-of-the-moon-tourism"
            data-title="mountains of the moon tourism event pullups teardrops mockups printing installation munyo nyo kampala"
            data-location="Munyonyo, Kampala (event venue)"
-           data-locationgroup="kampala"
-           style="cursor:pointer;">
+           data-locationgroup="kampala">
           <img src="assets/img/portfolio/thumbnails/mountains-of-the-moon-tourism-thumb.jpg"
-               alt="Mountains of the Moon tourism event branding in Munyonyo Kampala"
+               alt="Mountains of the Moon tourism event branding in Munyonyo Kampala (pull-ups, tear drops and installation)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
@@ -407,10 +732,9 @@
            href="portfolio/sbl-intel-systems"
            data-title="sbl intel systems branding office glass stickers car vinyl yard signage apparel kampala"
            data-location="Kampala"
-           data-locationgroup="kampala"
-           style="cursor:pointer;">
+           data-locationgroup="kampala">
           <img src="assets/img/portfolio/thumbnails/sbl-intel-systems-thumb.jpg"
-               alt="SBL Intel Systems branding execution in Kampala"
+               alt="SBL Intel Systems branding execution in Kampala (office branding, glass stickers and vehicle branding)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
@@ -427,17 +751,16 @@
            href="portfolio/rokastars-film-productions"
            data-title="rokastars film productions branding motion graphics event backdrops apparel printing kampala bat valley theatre bukesa club ambiance"
            data-location="Kampala (Bat Valley Theatre &amp; Bukesa)"
-           data-locationgroup="kampala"
-           style="cursor:pointer;">
+           data-locationgroup="kampala">
           <img src="assets/img/portfolio/thumbnails/rokastars-film-productions-thumb.jpg"
-               alt="Rokastars film productions branding and motion work in Kampala"
+               alt="Rokastars film productions branding and motion work in Kampala (motion design, backdrops and production)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>Rokastars Film Productions — Branding &amp; Motion</h3>
             <p style="opacity:.85;margin-top:6px">Brand identity + motion intro + event production for premieres and campaigns.</p>
             <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> motion design, backdrops, apparel, production.</p>
-            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Kampala (Bat Valley Theatre &amp; Bukesa)</p>
+            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Kampala</p>
             <span class="mini-link">Open case study →</span>
           </div>
         </a>
@@ -447,10 +770,9 @@
            href="portfolio/ability-pharmacy"
            data-title="ability pharmacy branches signage lightbox glass branding installation kasubi hoima road gayaza road manyangwa central kampala"
            data-location="Kasubi (Kampala) &amp; Gayaza Road (Central)"
-           data-locationgroup="central"
-           style="cursor:pointer;">
+           data-locationgroup="central">
           <img src="assets/img/portfolio/thumbnails/ability-pharmacy-thumb.jpg"
-               alt="Ability Pharmacy branch branding signage and installation"
+               alt="Ability Pharmacy branch branding signage and installation (multi-branch consistency for visibility and navigation)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
@@ -466,18 +788,17 @@
         <a class="portfolio-item design printing promo gifts branding card"
            href="portfolio/kiosa"
            data-title="kiosa campaign design print gifts certificates calendars success cards mukono kasao islamic secondary school"
-           data-location="Mukono (Kasao Islamic Secondary School)"
-           data-locationgroup="mukono"
-           style="cursor:pointer;">
+           data-location="Mukono (Kasawo Islamic Secondary School)"
+           data-locationgroup="mukono">
           <img src="assets/img/portfolio/thumbnails/kiosa-thumb.jpg"
-               alt="KIOSA campaign design printing gifts in Mukono"
+               alt="KIOSA campaign design, printing and gifts in Mukono (certificates, calendars, gift bags and success cards)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>KIOSA — Campaign Design, Print &amp; Gifts</h3>
             <p style="opacity:.85;margin-top:6px">Social creatives + garments + certificates + success cards and custom gifts.</p>
             <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> screen printing, certificates, calendars, gift bags, success cards.</p>
-            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Mukono (Kasao Islamic Secondary School)</p>
+            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Mukono</p>
             <span class="mini-link">Open case study →</span>
           </div>
         </a>
@@ -487,16 +808,15 @@
            href="portfolio/mobile-money-branding"
            data-title="mobile money branding mtn airtel painting weather guard dry vinyl silk storefront central uganda"
            data-location="Central Uganda"
-           data-locationgroup="central"
-           style="cursor:pointer;">
+           data-locationgroup="central">
           <img src="assets/img/portfolio/thumbnails/mobile-money-branding-thumb.jpg"
-               alt="Mobile Money storefront branding MTN Airtel in Central Uganda"
+               alt="Mobile Money storefront branding in Central Uganda (MTN and Airtel painting workflow and protective finishing)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>Mobile Money Branding — MTN &amp; Airtel</h3>
             <p style="opacity:.85;margin-top:6px">Storefront and wall branding using paint workflow + protective finishing, with vinyl/silk where required.</p>
-            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> layout planning, painting, drying, weather-guard finish, on-site branding.</p>
+            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> layout planning, painting, drying, weather-guard finish.</p>
             <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Central Uganda</p>
             <span class="mini-link">Open case study →</span>
           </div>
@@ -507,16 +827,15 @@
            href="portfolio/traditional-painting"
            data-title="traditional painting fine arts thin brushes drying weather guard finish central uganda"
            data-location="Central Uganda"
-           data-locationgroup="central"
-           style="cursor:pointer;">
+           data-locationgroup="central">
           <img src="assets/img/portfolio/thumbnails/traditional-painting-thumb.jpg"
-               alt="Traditional fine art painting process in Central Uganda"
+               alt="Traditional fine art painting process in Central Uganda (controlled layering and protective finishing)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>Traditional Painting — Fine Arts</h3>
             <p style="opacity:.85;margin-top:6px">Hand-painted work using fine brushes, controlled layering, and protective finishing for durability.</p>
-            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> prep, sketch, paint process, drying, weather-guard finishing.</p>
+            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> prep, sketch, paint, drying, weather-guard finishing.</p>
             <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Central Uganda</p>
             <span class="mini-link">Open case study →</span>
           </div>
@@ -527,16 +846,15 @@
            href="portfolio/motion-graphics"
            data-title="motion graphics after effects photoshop illustrator promotions greetings uganda nationwide"
            data-location="Uganda (Nationwide)"
-           data-locationgroup="uganda"
-           style="cursor:pointer;">
+           data-locationgroup="uganda">
           <img src="assets/img/portfolio/thumbnails/motion-graphics-thumb.jpg"
-               alt="Motion graphics campaigns and greetings in Uganda"
+               alt="Motion graphics campaigns and greetings in Uganda (After Effects, Photoshop and Illustrator)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>Motion Graphics — Client Greetings &amp; Campaigns</h3>
             <p style="opacity:.85;margin-top:6px">Animated greetings and promo visuals created using After Effects, Photoshop, and Illustrator.</p>
-            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> anniversaries, New Year, seasonal greetings, birthdays, promos.</p>
+            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> seasonal greetings, promos, announcements.</p>
             <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Uganda (Nationwide)</p>
             <span class="mini-link">Open case study →</span>
           </div>
@@ -547,17 +865,16 @@
            href="portfolio/exam-gifts"
            data-title="success exam gifts mugs shirts jumpers pillows exam cards uv printing laser engraving uganda"
            data-location="Uganda (Central &amp; Nationwide)"
-           data-locationgroup="uganda"
-           style="cursor:pointer;">
+           data-locationgroup="uganda">
           <img src="assets/img/portfolio/thumbnails/exam-gifts-thumb.jpg"
-               alt="Success cards and exam gifts customized in Uganda"
+               alt="Success cards and exam gifts customized in Uganda (mugs, shirts, jumpers, pillows and exam cards)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>Success Cards &amp; Exam Gifts — Custom Items</h3>
             <p style="opacity:.85;margin-top:6px">Personalized gifts and success cards—durable, clean finishing for real use.</p>
-            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> mugs, shirts, jumpers, pillows, exam cards (UV print / laser engraving as needed).</p>
-            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Uganda (Central &amp; Nationwide)</p>
+            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> mugs, shirts, jumpers, pillows, exam cards.</p>
+            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Uganda</p>
             <span class="mini-link">Open case study →</span>
           </div>
         </a>
@@ -567,17 +884,16 @@
            href="portfolio/abundance-herbal-products"
            data-title="abundance herbal products label design mockups final labels oils ointments jelly flyers wakiso"
            data-location="Wakiso District"
-           data-locationgroup="wakiso"
-           style="cursor:pointer;">
+           data-locationgroup="wakiso">
           <img src="assets/img/portfolio/thumbnails/abundance-herbal-products-thumb.jpg"
-               alt="Abundance herbal products labels and packaging in Wakiso"
+               alt="Abundance herbal products labels and packaging in Wakiso (label system and production-ready files)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>Abundance Herbal Products — Labels &amp; Packaging</h3>
             <p style="opacity:.85;margin-top:6px">Label system design with mockups and production-ready files for multiple product types.</p>
             <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> jelly, ointments, oils, herbal products + supporting flyers.</p>
-            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Wakiso District</p>
+            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Wakiso</p>
             <span class="mini-link">Open case study →</span>
           </div>
         </a>
@@ -587,17 +903,16 @@
            href="portfolio/social-media-designs"
            data-title="social media designs posters flyers banners instagram facebook tiktok creatives uganda"
            data-location="Uganda (Nationwide)"
-           data-locationgroup="uganda"
-           style="cursor:pointer;">
+           data-locationgroup="uganda">
           <img src="assets/img/portfolio/thumbnails/social-media-designs-thumb.jpg"
-               alt="Social media design creatives for various clients in Uganda"
+               alt="Social media design creatives for various clients in Uganda (posts, banners, promo flyers and posters)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>Social Media Designs — Various Clients</h3>
             <p style="opacity:.85;margin-top:6px">Clean, readable, brand-aligned social creatives for promos, campaigns, and announcements.</p>
             <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> posts, banners, promo flyers, event posters.</p>
-            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Uganda (Nationwide)</p>
+            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Uganda</p>
             <span class="mini-link">Open case study →</span>
           </div>
         </a>
@@ -607,16 +922,15 @@
            href="portfolio/sme-branding-showcase"
            data-title="sme branding showcase logos brand kits business cards letterheads central uganda"
            data-location="Central Uganda"
-           data-locationgroup="central"
-           style="cursor:pointer;">
+           data-locationgroup="central">
           <img src="assets/img/portfolio/thumbnails/sme-branding-showcase-thumb.jpg"
-               alt="SME branding showcase logos and brand kits in Central Uganda"
+               alt="SME branding showcase in Central Uganda (logos, brand kits and essential collateral)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>SME Branding — Mini Showcase</h3>
             <p style="opacity:.85;margin-top:6px">A compact gallery of branding work for SMEs—logo direction, brand kits, and essential collateral.</p>
-            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> logos, brand kit snippets, business cards, letterheads, social kit samples.</p>
+            <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> logos, brand kit snippets, business cards, letterheads.</p>
             <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Central Uganda</p>
             <span class="mini-link">Open case study →</span>
           </div>
@@ -627,10 +941,9 @@
            href="portfolio/yabx-christmas-package"
            data-title="yabx christmas package bottle notebook pen greeting card promotional items kampala"
            data-location="Kampala"
-           data-locationgroup="kampala"
-           style="cursor:pointer;">
+           data-locationgroup="kampala">
           <img src="assets/img/portfolio/thumbnails/yabx-christmas-package-thumb.jpg"
-               alt="YABX Christmas promotional package design in Kampala"
+               alt="YABX Christmas promotional package design in Kampala (packaging concept with branded items)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
@@ -647,23 +960,64 @@
            href="portfolio/birdc-photo-frames-kololo-nrm"
            data-title="birdc photo frames kololo nrm campaign foam board vinyl application cutting finishing kampala"
            data-location="Kololo Airstrip, Kampala"
-           data-locationgroup="kampala"
-           style="cursor:pointer;">
+           data-locationgroup="kampala">
           <img src="assets/img/portfolio/thumbnails/birdc-photo-frames-kololo-nrm-thumb.jpg"
-               alt="BIRDC photo frames production process at Kololo Kampala"
+               alt="BIRDC photo frames production process at Kololo Kampala (vinyl application, cutting and finishing)"
                loading="lazy" decoding="async"
                onerror="this.closest('.portfolio-item').classList.add('no-image');this.remove();" />
           <div>
             <h3>BIRDC — Photo Frames (Kololo NRM Campaign)</h3>
             <p style="opacity:.85;margin-top:6px">Production workflow: vinyl applied on foam board, cutting, finishing and final presentation.</p>
             <p style="margin-top:10px;opacity:.85"><strong>Includes:</strong> process video + end-result images.</p>
-            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Kololo Airstrip, Kampala</p>
+            <p style="margin-top:10px;opacity:.8"><strong>Location:</strong> Kololo, Kampala</p>
             <span class="mini-link">Open case study →</span>
           </div>
         </a>
 
       </div>
     </section>
+
+    <!-- ✅ SUPPLEMENT BELOW GRID: Review snippets for conversion -->
+    <section class="section light animate" style="padding-top:10px">
+      <div style="max-width:1100px;margin:0 auto">
+        <div class="card">
+          <h2 style="margin:0 0 10px">What Clients Say</h2>
+          <p style="opacity:.85;margin:0 0 14px">
+            Read more on our <a href="testimonials"><strong>Testimonials</strong></a> page.
+          </p>
+
+          <div class="grid" style="margin-top:10px">
+            <div class="card" style="background:#fff">
+              <p style="opacity:.9;line-height:1.7;margin:0">
+                “Their creativity and professionalism stand out. Clean finishing and strong brand consistency.”
+              </p>
+              <p style="opacity:.8;margin-top:10px"><strong>Voltech Engineering Services</strong></p>
+            </div>
+
+            <div class="card" style="background:#fff">
+              <p style="opacity:.9;line-height:1.7;margin:0">
+                “Excellent execution from design to installation. Timelines were respected and the outcome was impressive.”
+              </p>
+              <p style="opacity:.8;margin-top:10px"><strong>BIRDC / Exhibition Branding</strong></p>
+            </div>
+
+            <div class="card" style="background:#fff">
+              <p style="opacity:.9;line-height:1.7;margin:0">
+                “High-quality print and branding work. Professional communication and reliable delivery.”
+              </p>
+              <p style="opacity:.8;margin-top:10px"><strong>Ability Pharmacy</strong></p>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn-primary" href="contact">Request a Quote</a>
+            <a class="btn-secondary" href="testimonials">Read More Testimonials</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
 
     <!-- AUTHORITY BLOCK -->
     <section class="section animate">
@@ -681,35 +1035,86 @@
     </section>
 
     <!-- FAQ -->
-    <section class="section light animate">
-      <h2>Portfolio FAQs</h2>
-      <div class="grid" style="max-width:1100px;margin:0 auto">
-        <div class="card">
-          <h3>Do you handle design, printing and installation?</h3>
-          <p style="opacity:.88;margin-top:10px">
-            Yes. We can manage the full workflow from design to production, then delivery or installation (especially for signage and office branding).
-          </p>
-        </div>
-        <div class="card">
-          <h3>Which areas do you serve most?</h3>
-          <p style="opacity:.88;margin-top:10px">
-            Mostly Kampala and Wakiso, plus Mukono and central Uganda. For larger projects, we also support nationwide execution.
-          </p>
-        </div>
-        <div class="card">
-          <h3>How do I get a quote?</h3>
-          <p style="opacity:.88;margin-top:10px">
-            Share your project type, size, location and deadline via <a href="contact">Contact</a> (or WhatsApp). We’ll advise the best approach and pricing.
-          </p>
-        </div>
-      </div>
-    </section>
+<section class="section light animate" id="faq">
+  <h2 style="text-align:center">Portfolio FAQ</h2>
+  <p style="opacity:.88;text-align:center;max-width:900px;margin:0 auto 16px">
+    Answers to common questions clients ask after reviewing our real branding,
+    printing and signage case studies.
+  </p>
+
+  <div class="grid" style="max-width:1000px;margin:auto">
+
+    <div class="card">
+      <h3>What services are shown in your portfolio projects?</h3>
+      <p style="opacity:.88;margin-top:10px">
+        Our portfolio includes real execution across
+        <a href="branding-kampala"><strong>Branding Kampala</strong></a>,
+        <a href="printing-services-kampala"><strong>Printing Services Kampala</strong></a>,
+        <a href="signage-fabrication-uganda"><strong>Signage Fabrication Uganda</strong></a>,
+        <a href="vehicle-branding-kampala"><strong>Vehicle Branding Kampala</strong></a>,
+        packaging, promotional items and installation projects.
+        Each case study shows scope, workflow and final output.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Do you handle complete branding rollouts from design to installation?</h3>
+      <p style="opacity:.88;margin-top:10px">
+        Yes. We manage logo design, brand identity development, print-ready files,
+        production supervision and installation where required.
+        Start with <a href="/services/branding/logo-design-kampala/"><strong>Logo Design Kampala</strong></a>
+        or explore <a href="/services/branding/brand-rollout-management-kampala/"><strong>Brand Rollout Management</strong></a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Can you print and fabricate signage for offices and branches?</h3>
+      <p style="opacity:.88;margin-top:10px">
+        Yes. We produce and install indoor and outdoor signage including lightboxes,
+        glass branding, wall graphics and storefront visibility systems.
+        See <a href="signage-fabrication-uganda"><strong>Signage Fabrication Uganda</strong></a>
+        and <a href="large-format-printing-kampala"><strong>Large Format Printing Kampala</strong></a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Do you support corporate bulk orders and repeat printing?</h3>
+      <p style="opacity:.88;margin-top:10px">
+        Yes. We handle corporate stationery, event materials,
+        promotional merchandise and recurring production while maintaining brand consistency.
+        Visit <a href="branded-stationery-uganda"><strong>Branded Stationery Uganda</strong></a>
+        or <a href="custom-merchandise-uganda"><strong>Custom Merchandise Uganda</strong></a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Which locations do you primarily serve?</h3>
+      <p style="opacity:.88;margin-top:10px">
+        Most portfolio projects are executed in Kampala, Wakiso and Mukono,
+        with support across central Uganda and nationwide depending on scale.
+        Learn more under <a href="services"><strong>Our Services Coverage</strong></a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>How can I get a quote similar to a portfolio project?</h3>
+      <p style="opacity:.88;margin-top:10px">
+        Share your project size, materials required, quantities and deadline through
+        our <a href="contact"><strong>Contact Page</strong></a> or WhatsApp.
+        If you already know your service category, visit the specific hub page first for guidance.
+      </p>
+    </div>
+
+  </div>
+</section>
 
     <!-- FINAL CTA -->
     <section class="section light animate">
       <div class="card cta-card">
         <h2 style="margin-bottom:10px">Want work like this?</h2>
-        <p style="opacity:.85;margin-bottom:18px">Tell us your goal, timeline, and budget range—we’ll recommend the best approach.</p>
+        <p style="opacity:.85;margin-bottom:18px">
+          Tell us your goal, timeline, and budget range—we’ll recommend the best approach for clean execution and strong finishing.
+        </p>
         <div class="hero-actions">
           <a href="contact" class="btn-primary">Send Inquiry</a>
           <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
@@ -719,7 +1124,7 @@
 
   </main>
 
-  <!-- ✅ FOOTER (matches your main footer standard: includes Corporate + Compliance) -->
+  <!-- ✅ FOOTER (UNCHANGED) -->
   <footer class="footer">
     <div class="footer-wrap">
       <div class="footer-col">
@@ -793,7 +1198,7 @@
   <script src="assets/js/script.js" defer></script>
   <script src="assets/js/animations.js" defer></script>
 
-  <!-- ✅ Portfolio filters + search + location filter + results count -->
+  <!-- ✅ Portfolio filters + search + location filter + results count (uses hidden) -->
   <script>
     (function () {
       const categoryBtns = Array.from(document.querySelectorAll('.portfolio-filters .filter-btn[data-filter]'));
@@ -825,13 +1230,12 @@
           const bySearch = (!term || title.includes(term) || loc.includes(term));
 
           const visible = (byCategory && byLoc && bySearch);
-          item.style.display = visible ? 'block' : 'none';
+
+          item.hidden = !visible;
           if (visible) shown++;
         });
 
-        if (countEl) {
-          countEl.textContent = `• Showing ${shown} of ${items.length}`;
-        }
+        if (countEl) countEl.textContent = `• Showing ${shown} of ${items.length}`;
       }
 
       categoryBtns.forEach(btn => {
@@ -852,11 +1256,32 @@
 
       if (search) search.addEventListener('input', applyAll);
 
-      // init
       setActive(categoryBtns, 'data-filter', 'all');
       setActive(locBtns, 'data-loc', 'all');
       applyAll();
     })();
+  </script>
+
+  <!-- ✅ FIX: If animations.js fails to reveal a section on desktop, force visibility after load -->
+  <script>
+    window.addEventListener('load', function () {
+      const browse = document.getElementById('portfolio-browse');
+      if (browse) {
+        browse.style.opacity = '1';
+        browse.style.visibility = 'visible';
+        browse.style.transform = 'none';
+      }
+
+      // Safety: if any animate blocks are still hidden after load, reveal them.
+      document.querySelectorAll('.animate').forEach(el => {
+        const cs = window.getComputedStyle(el);
+        if (cs.opacity === '0' || cs.visibility === 'hidden') {
+          el.style.opacity = '1';
+          el.style.visibility = 'visible';
+          el.style.transform = 'none';
+        }
+      });
+    });
   </script>
 
 </body>
