@@ -684,3 +684,23 @@ html, body { overflow-x: hidden; }
     line-height: 1.08;
   }
 }
+
+/* ===== Mobile/Global overflow safety (fix hero cut-off) ===== */
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* Prevent wide elements from causing horizontal scroll */
+html, body{
+  overflow-x:hidden;
+}
+
+/* Make hero media always fit */
+.hero figure{ max-width:100%; }
+.hero figure img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
