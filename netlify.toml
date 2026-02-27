@@ -15,19 +15,17 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-    # Permissions
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-
-    # IMPORTANT: Google-friendly CSP
+    # Basic CSP (keep aligned with your assets/embeds)
     Content-Security-Policy = """
       default-src 'self' https:;
-      img-src 'self' data: https:;
-      style-src 'self' 'unsafe-inline' https:;
-      script-src 'self' 'unsafe-inline' https:;
-      connect-src 'self' https:;
-      frame-src https:;
+      img-src 'self' https: data:;
+      style-src 'self' https: 'unsafe-inline';
+      script-src 'self' https: 'unsafe-inline';
       font-src 'self' https: data:;
+      connect-src 'self' https:;
+      object-src 'none';
       base-uri 'self';
       form-action 'self' https:;
       frame-ancestors 'none';
@@ -46,6 +44,58 @@
 [[redirects]]
   from = "/services.html"
   to = "/services"
+  status = 301
+  force = true
+
+
+# ------------------------------------
+# Legacy service URL redirects (indexed)
+# ------------------------------------
+[[redirects]]
+  from = "/printing-services-kampala"
+  to = "/services/printing-services-kampala/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/signage-fabrication-uganda"
+  to = "/services/signage-and-branding-kampala/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vehicle-branding-kampala"
+  to = "/services/vehicle-branding-kampala/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/corporate-identity-design-kampala"
+  to = "/services/branding-kampala/corporate-brand-identity-design-kampala/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/large-format-printing-kampala"
+  to = "/services/printing-services-kampala/large-format-printing-kampala/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/signage-fabrication"
+  to = "/services/signage-and-branding-kampala/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/custom-merchandise-uganda"
+  to = "/services/custom-merchandise-uganda/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/branded-stationery-uganda"
+  to = "/services/branded-stationery-uganda/"
   status = 301
   force = true
 
