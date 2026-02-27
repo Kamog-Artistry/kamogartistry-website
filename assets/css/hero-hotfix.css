@@ -1,0 +1,108 @@
+/* HERO HOTFIX — load this LAST */
+
+/* A) Stop the “cut off left side” bug (negative calc / bad container math) */
+@media (max-width: 900px){
+  html body .content-wrap,
+  html body .container,
+  html body .wrap{
+    max-width: 1120px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: clamp(16px, 4vw, 26px) !important;
+    padding-right: clamp(16px, 4vw, 26px) !important;
+  }
+}
+
+/* B) Force ALL hero variants to be mobile-safe */
+@media (max-width: 900px){
+  html body .hero,
+  html body .page-hero,
+  html body .service-hero,
+  html body header.hero,
+  html body section.hero,
+  html body [class*="hero"]{
+    overflow: hidden !important;
+  }
+
+  /* Any hero inner wrapper should not be pushed off-screen */
+  html body .hero .content-wrap,
+  html body .page-hero .content-wrap,
+  html body .service-hero .content-wrap,
+  html body [class*="hero"] .content-wrap{
+    position: relative !important;
+    z-index: 2 !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 1120px !important;
+  }
+
+  /* C) Kill the “desktop split background” that stays on mobile */
+  html body .hero::before,
+  html body .hero::after,
+  html body .page-hero::before,
+  html body .page-hero::after,
+  html body .service-hero::before,
+  html body .service-hero::after,
+  html body [class*="hero"]::before,
+  html body [class*="hero"]::after{
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  /* D) Typography + CTA layout so it looks premium on mobile */
+  html body .hero h1,
+  html body .page-hero h1,
+  html body .service-hero h1,
+  html body [class*="hero"] h1{
+    font-size: clamp(30px, 7vw, 46px) !important;
+    line-height: 1.08 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 22ch !important;
+  }
+
+  html body .hero p,
+  html body .page-hero p,
+  html body .service-hero p,
+  html body [class*="hero"] p{
+    font-size: clamp(15px, 3.7vw, 18px) !important;
+    line-height: 1.6 !important;
+    max-width: 60ch !important;
+  }
+
+  html body .hero .hero-cta,
+  html body .page-hero .hero-cta,
+  html body .service-hero .hero-cta,
+  html body [class*="hero"] .hero-cta,
+  html body .hero .cta-row,
+  html body .page-hero .cta-row,
+  html body .service-hero .cta-row,
+  html body [class*="hero"] .cta-row{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  html body .hero .hero-cta a,
+  html body .page-hero .hero-cta a,
+  html body .service-hero .hero-cta a,
+  html body [class*="hero"] .hero-cta a,
+  html body .hero .cta-row a,
+  html body .page-hero .cta-row a,
+  html body .service-hero .cta-row a,
+  html body [class*="hero"] .cta-row a{
+    flex: 1 1 220px !important;
+    min-width: 0 !important;
+  }
+}
+
+/* E) Prevent horizontal scrolling (often caused by 100vw elements) */
+html, body{
+  overflow-x: hidden;
+}
