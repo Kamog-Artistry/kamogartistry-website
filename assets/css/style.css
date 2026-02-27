@@ -631,3 +631,56 @@ a.portfolio-item.no-image{
   border: 0;
 }
 
+/* =========================================================
+   HERO MOBILE FIX (GLOBAL) — fixes cut-off text + split bg
+   Paste at END of /assets/css/style.css
+========================================================= */
+
+/* 1) Prevent any horizontal clipping caused by 100vw/negative math */
+html, body { overflow-x: hidden; }
+
+/* 2) Force hero to use safe padding (NO calc centering) */
+.hero{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* 3) Ensure inner content is always centered + padded safely */
+.hero .content-wrap,
+.hero .container,
+.hero .wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+/* 4) Kill transforms/offsets that push content off screen */
+.hero,
+.hero *{
+  transform: none !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+/* 5) Mobile: remove “vertical split” hero background/overlay */
+@media (max-width: 900px){
+  .hero{
+    background: linear-gradient(180deg, rgba(6,43,58,1) 0%, rgba(11,111,191,1) 100%) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    overflow: hidden !important;
+  }
+
+  .hero::before,
+  .hero::after{
+    left: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  .hero h1{
+    font-size: clamp(30px, 7vw, 46px);
+    line-height: 1.08;
+  }
+}
