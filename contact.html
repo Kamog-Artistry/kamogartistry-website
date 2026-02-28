@@ -93,6 +93,21 @@
 
   <!-- ✅ Conversion + visibility + consistency fixes -->
   <style>
+
+    /* ✅ CONTACT PAGE FOOTER: force all link text to white (including footer-cta) */
+.footer a,
+.footer a:visited {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* ✅ Ensure "Contact Us" button text is white */
+.footer a.footer-cta,
+.footer a.footer-cta:visited {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-decoration: none !important;
+} 
     :root{
       --km-blue:#0b6fbf;
       --km-orange:#f28c28;
@@ -330,14 +345,13 @@
 
         <!-- ✅ Quick service links (SEO + conversion) -->
         <div class="chip-links" style="justify-content:center;max-width:980px;margin-left:auto;margin-right:auto">
-          <a href="branding-kampala">Branding</a>
-          <a href="printing-services-kampala">Printing</a>
-          <a href="large-format-printing-kampala">Large Format</a>
-          <a href="signage-fabrication-uganda">Signage</a>
-          <a href="vehicle-branding-kampala">Vehicle Branding</a>
+          <a href="/services/branding-kampala/">Branding</a>
+          <a href="/services/printing-services-kampala/">Printing</a>
+          <a href="/services/signage-and-branding-kampala/">Signage</a>
+          <a href="/services/vehicle-branding-kampala/">Vehicle Branding</a>
           <!-- ✅ FIXED link (was custom-merchandise) -->
-          <a href="custom-merchandise-uganda">Custom Merchandise</a>
-          <a href="branded-stationery-uganda">Branded Stationery</a>
+          <a href="/services/custom-merchandise-uganda/">Custom Merchandise</a>
+          <a href="/services/branded-stationery-uganda/">Branded Stationery</a>
         </div>
       </div>
 
@@ -558,12 +572,11 @@
             <strong>Popular service pages</strong>
             <p class="hint">For fast navigation, use the pages below:</p>
             <div class="req-actions">
-              <a class="btn-secondary" href="branding-kampala">Branding</a>
-              <a class="btn-secondary" href="printing-services-kampala">Printing</a>
-              <a class="btn-secondary" href="signage-fabrication-uganda">Signage</a>
-              <a class="btn-secondary" href="vehicle-branding-kampala">Vehicle Branding</a>
-              <a class="btn-secondary" href="large-format-printing-kampala">Large Format</a>
-            </div>
+              <a class="btn-secondary" href="/services/branding-kampala/">Branding</a>
+              <a class="btn-secondary" href="/services/printing-services-kampala/">Printing</a>
+              <a class="btn-secondary" href="/services/signage-and-branding-kampala/">Signage</a>
+              <a class="btn-secondary" href="/services/vehicle-branding-kampala/">Vehicle Branding</a>
+              </div>
           </div>
         </div>
 

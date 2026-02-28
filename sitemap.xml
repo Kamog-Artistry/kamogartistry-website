@@ -45,12 +45,6 @@
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/post</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
     <loc>https://kamogartistry.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
@@ -74,134 +68,6 @@
     <loc>https://kamogartistry.com/thank-you</loc>
     <changefreq>yearly</changefreq>
     <priority>0.10</priority>
-  </url>
-
-  <!-- SERVICES (SEO / LOCATION PAGES) -->
-  <url>
-    <loc>https://kamogartistry.com/branding-kampala</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- BRANDING KAMPALA CLUSTERS (CLEAN URLS) -->
-  <url>
-    <loc>https://kamogartistry.com/services/branding/logo-design-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/corporate-brand-identity-design-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/brand-guidelines-design-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/packaging-design-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/product-label-design-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/rebranding-services-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/brand-strategy-consulting-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/startup-branding-packages-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/sme-brand-development-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/event-branding-design-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/social-media-brand-design-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/services/branding/brand-rollout-management-kampala/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/printing-services-kampala</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/signage-fabrication-uganda</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/vehicle-branding-kampala</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/corporate-identity-design-kampala</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/large-format-printing-kampala</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/signage-fabrication</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/custom-merchandise-uganda</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-
-  <url>
-    <loc>https://kamogartistry.com/branded-stationery-uganda</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
   </url>
 
   <!-- PORTFOLIO CASE STUDIES -->
@@ -311,6 +177,161 @@
     <loc>https://kamogartistry.com/portfolio/yabx-christmas-package</loc>
     <changefreq>yearly</changefreq>
     <priority>0.80</priority>
+  </url>
+
+  <!-- SERVICES: KEEP ONLY HUB INDEX PAGES FROM YOUR /services FOLDER -->
+
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/graphic-design-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/printing-services-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/branded-stationery-uganda/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/custom-merchandise-uganda/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/event-branding-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/outdoor-advertising-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/signage-and-branding-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/vehicle-branding-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- PRICING PAGES: KEEP ONLY THESE -->
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/printing-services-kampala/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/branded-stationery-uganda/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/custom-merchandise-uganda/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/event-branding-kampala/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services/graphic-design-kampala/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- BRANDING KAMPALA: KEEP ALL 12 CLUSTERS -->
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/brand-guidelines-design-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/brand-rollout-management-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/brand-strategy-consulting-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/corporate-brand-identity-design-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/event-branding-design-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/logo-design-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/packaging-design-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/product-label-design-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/rebranding-services-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/sme-brand-development-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/social-media-brand-design-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://kamogartistry.com/services/branding-kampala/startup-branding-packages-kampala/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 
 </urlset>
