@@ -1,6 +1,8 @@
 :root{
---blue:#2f6bff;--orange:#FF8500;--saffron:#f4c430;
---dark:#013144;--light:#f8f8ff;
+--blue:#04689A;--orange:#F68521;--saffron:#f4c430;
+--charcoal:#323233;--soft:#97D9EF;
+--deep:#033F5E; /* derived from brand blue for dark UI panels */
+--dark:var(--deep);--light:#F8FCFF;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial,sans-serif}
@@ -18,93 +20,121 @@ body{background:var(--dark);color:#fffefd;line-height:1.6}
   padding-inline: clamp(16px, 4vw, 28px);
 }
 
-/* 2) FIX: hero content clipping + overflow */
-.hero,
-.hero-section,
-.page-hero {
-  overflow: hidden; /* prevents weird horizontal scroll */
-}
+/* REMOVE these older patterns if present anywhere:
+   padding-left: calc((100vw - 1120px)/2);
+   padding-right: calc((100vw - 1120px)/2);
+*/
 
-.hero .content-wrap,
-.hero-section .content-wrap,
-.page-hero .content-wrap{
-  position: relative;
-  z-index: 2;
-}
-
-/* 3) FIX: remove the “split background” on mobile */
-@media (max-width: 820px){
-  /* If your hero uses a split overlay/pseudo element */
-  .hero::before,
-  .hero::after,
-  .hero-section::before,
-  .hero-section::after,
-  .page-hero::before,
-  .page-hero::after{
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    transform: none !important;
-  }
-
-  /* If your hero is a 2-column grid/flex on desktop */
-  .hero-grid,
-  .hero-row,
-  .hero-inner{
-    display: block !important;
-  }
-
-  /* Better mobile typography so headings don’t blow out */
-  .hero h1{
-    font-size: clamp(30px, 7vw, 44px) !important;
-    line-height: 1.08 !important;
-    letter-spacing: -0.02em;
-    margin-inline: 0 !important;
-  }
-
-  /* Make CTA buttons wrap cleanly */
-  .hero-cta,
-  .cta-row{
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 12px !important;
-  }
-
-  .hero-cta a,
-  .cta-row a,
-  .hero-cta button{
-    flex: 1 1 220px !important;
-    min-width: 0 !important;
-  }
-}
-/* LOADER */
-#loader{position:fixed;inset:0;background:#016698;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999}
-#loader img{width:120px;margin-bottom:20px}
-.loader-bar{width:120px;height:4px;background:linear-gradient(90deg,var(--blue),var(--orange));animation:load 1.2s infinite}
-@keyframes load{0%{width:0}100%{width:120px}}
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:999;background:var(--blue);padding:18px 0}
+.site-header .content-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
 
 /* NAV */
-.header{position:fixed;top:0;width:100%;background:#016698;z-index:1000}
-.nav{max-width:1200px;margin:auto;padding:15px;display:flex;justify-content:space-between;align-items:center}
-.logo{height:40px}
-.nav-links{display:flex;gap:25px;list-style:none}
-.nav-links a{color:white;text-decoration:none;font-weight:500}
-.nav-links a:hover{color:var(--orange)}
-.menu-btn{display:none;font-size:26px;background:none;border:none;color:white}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{color:#fff;text-decoration:none;font-weight:500;opacity:.95}
+.nav-links a:hover{opacity:1}
+
+/* MOBILE NAV TOGGLE */
+.nav-toggle{display:none;background:transparent;border:none;cursor:pointer}
+.nav-toggle span{display:block;width:28px;height:3px;margin:6px 0;background:var(--orange);border-radius:2px}
+
+/* MOBILE MENU PANEL */
+.mobile-nav{display:none;position:fixed;inset:0;z-index:9999;background:var(--deep);padding:26px 22px}
+.mobile-nav a{display:block;color:#fff;text-decoration:none;font-size:20px;padding:14px 6px;border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-nav a:hover{background:rgba(151,217,239,.12)}
+.mobile-nav .close{position:absolute;top:16px;right:18px;font-size:34px;line-height:1;color:var(--orange);cursor:pointer}
 
 /* HERO */
 .hero{
-  min-height:100vh;
+  padding:64px 0 44px;
   background:
-    radial-gradient(900px 500px at 20% 30%, rgba(47,107,255,.35), transparent 60%),
-    radial-gradient(700px 450px at 80% 20%, rgba(243,107,33,.28), transparent 55%),
-    linear-gradient(to right, #013144, #0b0f1a);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:110px 20px 60px; /* leave space for fixed header */
+    radial-gradient(circle at 20% 30%, rgba(4,104,154,.35) 0%, transparent 55%),
+    radial-gradient(circle at 80% 60%, rgba(246,133,33,.28) 0%, transparent 55%),
+    linear-gradient(180deg, rgba(0,0,0,.0) 0%, var(--deep) 100%);
 }
+.hero h1{color:#fff;font-size:clamp(30px,5vw,54px);line-height:1.05;margin-bottom:16px}
+.hero p{color:#fff;opacity:.92;max-width:760px}
+
+/* BUTTONS */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 20px;border-radius:999px;border:none;cursor:pointer;
+  text-decoration:none;font-weight:600;
+}
+.btn-primary{
+  color:#fff;
+  background:linear-gradient(90deg,var(--blue) 0%,var(--orange) 100%);
+  box-shadow:0 10px 24px rgba(0,0,0,.25);
+}
+.btn-primary:hover{filter:brightness(1.03)}
+.btn-secondary{
+  color:#fff;background:rgba(255,255,255,.08);
+  border:1px solid rgba(151,217,239,.35);
+}
+.btn-secondary:hover{background:rgba(151,217,239,.14)}
+
+/* PILLS / TAGS */
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;
+  background:rgba(151,217,239,.14);border:1px solid rgba(151,217,239,.28);color:#fff;font-weight:600
+}
+
+/* SECTIONS */
+.section{padding:56px 0}
+.section.light{background:var(--light);color:var(--charcoal)}
+.section.light h2,.section.light h3{color:var(--charcoal)}
+.section.light p{color:rgba(50,50,51,.88)}
+
+/* CARDS */
+.card{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 14px 30px rgba(0,0,0,.22);
+}
+.section.light .card{
+  background:#ffffff;border:1px solid rgba(4,104,154,.10);
+  box-shadow:0 12px 26px rgba(0,0,0,.06);
+}
+
+/* FILTER BUTTONS */
+.filter-btn{
+  background:var(--blue);
+  color:#fff;border:1px solid rgba(255,255,255,.18);
+  padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:600
+}
+.filter-btn:hover{filter:brightness(1.03)}
+.filter-btn.active{
+  background:var(--deep);
+  border-color:rgba(246,133,33,.65);
+}
+
+/* LINKS */
+a{color:var(--soft)}
+a:hover{color:var(--orange)}
+
+/* POST HERO FALLBACK */
+.post-hero{background:var(--blue);color:#fff;padding:52px 0}
+
+/* LOADER */
+.loader-bar{height:3px;background:var(--blue)}
+
+/* FOOTER */
+.site-footer{background:var(--blue);padding:44px 0 22px;color:#fff}
+.site-footer a{color:#fff;text-decoration:none;opacity:.92}
+.site-footer a:hover{opacity:1}
+.site-footer .social a{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10)
+}
+.site-footer .social a:hover{background:rgba(246,133,33,.16);border-color:rgba(246,133,33,.35)}
+.copyright{opacity:.85;margin-top:22px}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .mobile-nav.is-open{display:block}
+}}
 
 .hero-inner{max-width:900px;margin:auto}
 .hero-badge{
@@ -642,3 +672,4 @@ img{
   height:auto;
   display:block;
 }
+
