@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://kamogartistry.com/</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+  <!-- CORE PAGES -->
+  <url>
+    <loc>https://kamogartistry.com/about</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/services</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/portfolio</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/testimonials</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/blog</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/contact</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+  <!-- CORPORATE / COMPLIANCE -->
+  <url>
+    <loc>https://kamogartistry.com/corporate-profile</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/compliance</loc>
+    <lastmod>2026-03-01</lastmod>
+  </url>
+
+</urlset>

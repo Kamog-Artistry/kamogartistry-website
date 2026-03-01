@@ -35,7 +35,7 @@
 
   <meta name="author" content="Kamog Artistry (U) Ltd" />
 
-  <!-- ✅ Schema (Master Services Directory) -->
+  <!-- ✅ Schema (Master Services Directory + Top-level Service for Authority) -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,12 +45,16 @@
       "@id": "https://kamogartistry.com/services",
       "url": "https://kamogartistry.com/services",
       "name": "Creative Services in Kampala — Kamog Artistry (U) Ltd",
+      "description": "End-to-end creative services in Kampala: branding, design, printing, signage fabrication & installation, vehicle branding, stationery, packaging, websites, motion graphics and custom merchandise.",
+      "inLanguage": "en",
       "isPartOf": { "@id": "https://kamogartistry.com/#website" },
       "about": { "@id": "https://kamogartistry.com/#business" },
       "primaryImageOfPage": {
         "@type": "ImageObject",
+        "@id": "https://kamogartistry.com/services#primaryimage",
         "url": "https://kamogartistry.com/assets/img/services/services-cover.webp"
-      }
+      },
+      "mainEntity": { "@id": "https://kamogartistry.com/services#creative-services" }
     },
     {
       "@type": "LocalBusiness",
@@ -58,6 +62,7 @@
       "name": "Kamog Artistry (U) Ltd",
       "url": "https://kamogartistry.com/",
       "image": "https://kamogartistry.com/assets/img/brand/logo-white.svg",
+      "logo": "https://kamogartistry.com/assets/img/brand/logo-white.svg",
       "description": "Creative branding and production company delivering design, printing, signage, stationery, packaging, promotional items, motion graphics and fine art.",
       "address": {
         "@type": "PostalAddress",
@@ -67,6 +72,16 @@
       "areaServed": ["Kampala", "Wakiso", "Mukono", "Entebbe", "Uganda"],
       "email": "info@kamogartistry.com",
       "telephone": "+256775251445",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+256775251445",
+          "email": "info@kamogartistry.com",
+          "areaServed": "UG",
+          "availableLanguage": ["en"]
+        }
+      ],
       "sameAs": [
         "https://www.linkedin.com/company/kamog-artistry-u-ltd",
         "https://x.com/kamogartistry",
@@ -82,8 +97,8 @@
       "@id": "https://kamogartistry.com/#website",
       "url": "https://kamogartistry.com/",
       "name": "Kamog Artistry (U) Ltd",
-      "publisher": { "@id": "https://kamogartistry.com/#business" }
-    },
+      "publisher": { "@id": "https://kamogartistry.com/#business" },
+      },
     {
       "@type": "CollectionPage",
       "@id": "https://kamogartistry.com/services#page",
@@ -118,6 +133,73 @@
         { "@type": "ListItem", "position": 8, "name": "Signage and Branding Kampala", "url": "https://kamogartistry.com/services/signage-and-branding-kampala/" },
         { "@type": "ListItem", "position": 9, "name": "Vehicle Branding Kampala", "url": "https://kamogartistry.com/services/vehicle-branding-kampala/" }
       ]
+    },
+
+    /* ✅ NEW: Top-level Service schema for stronger commercial intent + authority */
+    {
+      "@type": "Service",
+      "@id": "https://kamogartistry.com/services#creative-services",
+      "name": "Creative Branding, Printing and Signage Services in Kampala",
+      "serviceType": "Branding, Graphic Design, Printing, Signage Fabrication & Installation, Vehicle Branding, Branded Stationery, Packaging, Websites, Motion Graphics and Custom Merchandise",
+      "provider": { "@id": "https://kamogartistry.com/#business" },
+      "areaServed": [
+        "Kampala",
+        "Wakiso",
+        "Mukono",
+        "Entebbe",
+        "Uganda"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Creative Service Categories",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/branding-kampala/",
+            "itemOffered": { "@type": "Service", "name": "Branding Services" }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/graphic-design-kampala/",
+            "itemOffered": { "@type": "Service", "name": "Graphic Design Services" }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/printing-services-kampala/",
+            "itemOffered": { "@type": "Service", "name": "Printing Services" }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/signage-and-branding-kampala/",
+            "itemOffered": { "@type": "Service", "name": "Signage Fabrication and Installation" }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/vehicle-branding-kampala/",
+            "itemOffered": { "@type": "Service", "name": "Vehicle Branding" }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/event-branding-kampala/",
+            "itemOffered": { "@type": "Service", "name": "Event Branding" }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/branded-stationery-uganda/",
+            "itemOffered": { "@type": "Service", "name": "Branded Stationery" }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/custom-merchandise-uganda/",
+            "itemOffered": { "@type": "Service", "name": "Custom Merchandise" }
+          },
+          {
+            "@type": "Offer",
+            "url": "https://kamogartistry.com/services/outdoor-advertising-kampala/",
+            "itemOffered": { "@type": "Service", "name": "Outdoor Advertising" }
+          }
+        ]
+      }
     }
   ]
 }
@@ -313,8 +395,9 @@
   </style>
 
 </head>
-<body>
 
+
+<body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <div id="loader" style="display:none" class="hidden">
@@ -1054,6 +1137,7 @@
 </section>
 
 
+
 <!-- FAQ (Visible FAQ matches the JSON-LD FAQ schema) -->
 <section class="section light animate" id="faq">
   <div class="wrap-wide">
@@ -1122,6 +1206,70 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- WHAT MAKES US DIFFERENT -->
+<section class="section light animate" id="why-choose-us" style="padding-top:60px;">
+  <div class="wrap-med">
+
+    <h2 class="section-title-center">
+      Creative Services in Kampala — What Makes Us Different
+    </h2>
+
+    <p style="margin-top:18px;">
+      Choosing a creative partner in Kampala goes beyond comparing prices. It is about reliability, execution quality, and long-term brand consistency. At Kamog Artistry (U) Ltd, we deliver end-to-end creative services with structured workflows, production control, and installation expertise that ensure your brand looks consistent across every touchpoint — from logo design and print materials to signage fabrication and event branding.
+    </p>
+
+    <div class="checklist" style="margin-top:28px;">
+
+      <div class="card">
+        <h3>Proof-First Workflow</h3>
+        <p style="opacity:.88;margin-top:10px;">
+          Before any production begins, we provide visual proofs for approval. This eliminates costly errors, protects your investment, and ensures accuracy in layout, color usage, and specifications. Whether printing corporate stationery, fabricating signage, or producing branded merchandise, nothing goes into production without your sign-off. This structured workflow keeps projects efficient and reduces unexpected delays.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Installation Expertise</h3>
+        <p style="opacity:.88;margin-top:10px;">
+          Design and production are only part of the process. Professional installation is critical for signage, vehicle branding, window graphics, and outdoor advertising. Our team evaluates site conditions, height requirements, surface preparation, and durability factors before installation. This ensures secure mounting, alignment precision, and long-term structural integrity — especially important in Kampala’s weather conditions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Print Quality Standards</h3>
+        <p style="opacity:.88;margin-top:10px;">
+          We maintain controlled print standards across digital, large format, and specialty printing. Color accuracy, material compatibility, finishing precision, and bleed-safe artwork preparation are strictly managed. From brochures and company profiles to banners and packaging, we prioritise sharp detail, proper trimming, and clean finishing so your brand reflects professionalism at every scale.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Material Durability</h3>
+        <p style="opacity:.88;margin-top:10px;">
+          Not all materials perform equally under exposure. We carefully advise on substrates, laminations, UV protection, adhesive grades, acrylic thickness, LED components, and structural supports. Our recommendations are based on durability, longevity, and suitability for indoor or outdoor use. This protects your brand assets from premature wear, fading, or structural damage.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="margin-top:28px;">
+      <h3>Consistent Brand Execution Across Every Service</h3>
+      <p style="opacity:.9;margin-top:10px;">
+        Many businesses struggle when branding, printing, and signage are handled by different vendors. Inconsistencies in colors, typography, scale ratios, or logo placement can weaken brand recognition. Because we provide integrated creative services in Kampala, we maintain design consistency across print materials, packaging, merchandise, storefront signage, event setups, and vehicle branding. 
+      </p>
+      <p style="opacity:.9;margin-top:12px;">
+        Our approach supports SMEs, corporate organisations, NGOs, and startups who require reliable long-term execution — not just one-off design jobs. We align brand guidelines with production realities, ensuring that what looks good on screen translates effectively into physical materials and real-world installations.
+      </p>
+    </div>
+
+    <div class="note-box" style="margin-top:32px;">
+      <strong>Why this matters for your business in Kampala:</strong>
+      <p style="margin-top:8px; opacity:.9;">
+        When your brand assets are produced accurately, installed correctly, and built to last, you avoid reprints, repairs, and redesign costs. More importantly, your audience experiences a unified, professional identity that builds trust and credibility. That is the difference between short-term design output and structured creative execution.
+      </p>
+    </div>
+
   </div>
 </section>
 
