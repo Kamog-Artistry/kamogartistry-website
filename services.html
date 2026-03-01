@@ -19,6 +19,8 @@
   <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
 
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
+  <meta property="og:locale" content="en_UG" />
   <meta property="og:title" content="Creative Services in Kampala | Branding, Printing, Signage, Web & Marketing — Kamog Artistry" />
   <meta property="og:description"
     content="Explore branding, printing, signage, vehicle branding, stationery, packaging, websites, motion graphics and merchandise—delivered end-to-end with proof-first approvals across Kampala, Wakiso, Mukono and Entebbe." />
@@ -31,11 +33,26 @@
     content="Branding, graphic design, print production, signage & installation, vehicle branding, stationery, packaging and websites in Kampala and nearby areas." />
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/services/services-cover.webp" />
 
+  <meta name="author" content="Kamog Artistry (U) Ltd" />
+
   <!-- ✅ Schema (Master Services Directory) -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
+
+  {
+  "@type": "WebPage",
+  "@id": "https://kamogartistry.com/services",
+  "url": "https://kamogartistry.com/services",
+  "name": "Creative Services in Kampala — Kamog Artistry (U) Ltd",
+  "isPartOf": { "@id": "https://kamogartistry.com/#website" },
+  "about": { "@id": "https://kamogartistry.com/#business" },
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://kamogartistry.com/assets/img/services/services-cover.webp"
+  }
+} 
     {
       "@type": "LocalBusiness",
       "@id": "https://kamogartistry.com/#business",
@@ -62,11 +79,18 @@
       ]
     },
     {
+      "@type": "WebSite",
+      "@id": "https://kamogartistry.com/#website",
+      "url": "https://kamogartistry.com/",
+      "name": "Kamog Artistry (U) Ltd",
+      "publisher": { "@id": "https://kamogartistry.com/#business" }
+    },
+    {
       "@type": "CollectionPage",
       "@id": "https://kamogartistry.com/services#page",
       "url": "https://kamogartistry.com/services",
       "name": "Services Directory — Kamog Artistry (U) Ltd",
-      "description": "Browse creative services in Kampala: branding, printing, signage, vehicle branding, stationery, packaging, websites, motion graphics and custom merchandise.",
+      "description": "Browse creative services in Kampala: branding, graphic design, printing, stationery, custom merchandise, event branding, outdoor advertising, signage and vehicle branding.",
       "isPartOf": { "@id": "https://kamogartistry.com/#website" },
       "about": { "@id": "https://kamogartistry.com/#business" }
     },
@@ -82,79 +106,18 @@
       "@type": "ItemList",
       "@id": "https://kamogartistry.com/services#services-list",
       "name": "Service Categories",
-      "itemListOrder": "http://schema.org/ItemListOrderAscending",
-      "numberOfItems": 0,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 9,
       "itemListElement": [
-        /*
-          <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"LocalBusiness",
-      "@id":"https://kamogartistry.com/#business",
-      "name":"Kamog Artistry (U) Ltd",
-      "url":"https://kamogartistry.com/",
-      "image":"https://kamogartistry.com/assets/img/brand/logo-white.svg",
-      "description":"Creative branding and production company delivering design, printing, signage, stationery, packaging, promotional items, motion graphics and fine art.",
-      "address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},
-      "areaServed":["Kampala","Wakiso","Mukono","Entebbe","Uganda"],
-      "email":"info@kamogartistry.com",
-      "telephone":"+256775251445",
-      "sameAs":[
-        "https://www.linkedin.com/company/kamog-artistry-u-ltd",
-        "https://x.com/kamogartistry",
-        "https://www.facebook.com/611977605339985",
-        "https://www.behance.net/kamogArtistry",
-        "https://www.tiktok.com/@kamogartistry?_r=1&_t=ZT-93C8X0CPXUt",
-        "https://www.threads.com/@kamog_artistry_u_ltd",
-        "https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg=="
-      ]
-    },
-    {
-      "@type":"WebSite",
-      "@id":"https://kamogartistry.com/#website",
-      "url":"https://kamogartistry.com/",
-      "name":"Kamog Artistry (U) Ltd",
-      "publisher":{"@id":"https://kamogartistry.com/#business"}
-    },
-    {
-      "@type":"CollectionPage",
-      "@id":"https://kamogartistry.com/services#page",
-      "url":"https://kamogartistry.com/services",
-      "name":"Creative Services in Kampala — Kamog Artistry (U) Ltd",
-      "description":"Browse creative services in Kampala: branding, printing, signage, vehicle branding, stationery, outdoor advertising, event branding and merchandise.",
-      "isPartOf":{"@id":"https://kamogartistry.com/#website"},
-      "about":{"@id":"https://kamogartistry.com/#business"}
-    },
-    {
-      "@type":"BreadcrumbList",
-      "@id":"https://kamogartistry.com/services#breadcrumb",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Home","item":"https://kamogartistry.com/"},
-        {"@type":"ListItem","position":2,"name":"Services","item":"https://kamogartistry.com/services"}
-      ]
-    },
-    {
-      "@type":"ItemList",
-      "@id":"https://kamogartistry.com/services#services-list",
-      "name":"Service Categories",
-      "itemListOrder":"http://schema.org/ItemListOrderAscending",
-      "numberOfItems":8,
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Branding Kampala","url":"https://kamogartistry.com/services/branding-kampala/"},
-        {"@type":"ListItem","position":2,"name":"Printing Services Kampala","url":"https://kamogartistry.com/services/printing-services-kampala/"},
-        {"@type":"ListItem","position":3,"name":"Signage & Branding Kampala","url":"https://kamogartistry.com/services/signage-and-branding-kampala/"},
-        {"@type":"ListItem","position":4,"name":"Vehicle Branding Kampala","url":"https://kamogartistry.com/services/vehicle-branding-kampala/"},
-        {"@type":"ListItem","position":5,"name":"Corporate Stationery","url":"https://kamogartistry.com/services/branded-stationery-uganda/"},
-        {"@type":"ListItem","position":6,"name":"Custom Merchandise","url":"https://kamogartistry.com/services/custom-merchandise-uganda/"},
-        {"@type":"ListItem","position":7,"name":"Event Branding Kampala","url":"https://kamogartistry.com/services/event-branding-kampala/"},
-        {"@type":"ListItem","position":8,"name":"Outdoor Advertising Kampala","url":"https://kamogartistry.com/services/outdoor-advertising-kampala/"}
-      ]
-    }
-  ]
-}
-</script>*/
+        { "@type": "ListItem", "position": 1, "name": "Branding Kampala", "url": "https://kamogartistry.com/services/branding-kampala/" },
+        { "@type": "ListItem", "position": 2, "name": "Graphic Design Kampala", "url": "https://kamogartistry.com/services/graphic-design-kampala/" },
+        { "@type": "ListItem", "position": 3, "name": "Printing Services Kampala", "url": "https://kamogartistry.com/services/printing-services-kampala/" },
+        { "@type": "ListItem", "position": 4, "name": "Branded Stationery Uganda", "url": "https://kamogartistry.com/services/branded-stationery-uganda/" },
+        { "@type": "ListItem", "position": 5, "name": "Custom Merchandise Uganda", "url": "https://kamogartistry.com/services/custom-merchandise-uganda/" },
+        { "@type": "ListItem", "position": 6, "name": "Event Branding Kampala", "url": "https://kamogartistry.com/services/event-branding-kampala/" },
+        { "@type": "ListItem", "position": 7, "name": "Outdoor Advertising Kampala", "url": "https://kamogartistry.com/services/outdoor-advertising-kampala/" },
+        { "@type": "ListItem", "position": 8, "name": "Signage and Branding Kampala", "url": "https://kamogartistry.com/services/signage-and-branding-kampala/" },
+        { "@type": "ListItem", "position": 9, "name": "Vehicle Branding Kampala", "url": "https://kamogartistry.com/services/vehicle-branding-kampala/" }
       ]
     }
   ]
@@ -197,7 +160,7 @@
   </script>
 
   <!-- ✅ Keep your existing stylesheet links (do not change) -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
   <style>
     /* ===========================
@@ -351,7 +314,6 @@
   </style>
 
 </head>
-
 <body>
 
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -370,22 +332,21 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="/">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a aria-current="page" href="services">Services</a></li>
-        <li><a href="portfolio">Portfolio</a></li>
-        <li><a href="blog">Insights</a></li>
-        <li><a href="testimonials">Testimonials</a></li>
-        <li><a href="corporate-profile">Corporate</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a aria-current="page" href="/services">Services</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/blog">Insights</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+        <li><a href="/corporate-profile">Corporate</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
 
-      <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+      <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">☰</button>
     </nav>
   </header>
 
 
   <main id="main">
-
 <!-- HERO -->
 <section class="section animate">
   <div class="wrap-med" style="text-align:center">
@@ -395,20 +356,21 @@
     <p style="opacity:.9;margin-top:14px">
       Kamog Artistry (U) Ltd delivers end-to-end execution—<strong>brand identity</strong>, <strong>graphic design</strong>, <strong>print production</strong>,
       <strong>signage fabrication &amp; installation</strong>, <strong>vehicle branding</strong>, <strong>branded stationery</strong>,
-      <strong>packaging</strong>, <strong>websites</strong> and <strong>custom merchandise</strong>—so your business looks consistent everywhere.
+      <strong>custom merchandise</strong>, <strong>event branding</strong> and <strong>outdoor advertising</strong>—so your business looks consistent everywhere.
     </p>
 
     <p style="opacity:.86;margin-top:10px">
-      Proof-first workflow: we check files, share a clear proof for approval, then produce with clean finishing—so you avoid costly reprints and delays.
+      Proof-first workflow: we check files, confirm sizes and finishing, share a clear proof for approval, then produce with clean finishing—so you avoid costly reprints and delays.
     </p>
 
     <p style="opacity:.85;margin-top:10px">
       Serving <strong>Kampala</strong> and nearby areas (<strong>Wakiso</strong>, <strong>Mukono</strong>, <strong>Entebbe</strong>)—and supporting projects across <strong>Uganda</strong>.
+      For specialised needs like <strong>packaging layouts</strong> or <strong>website builds</strong>, we advise and quote based on scope.
     </p>
 
     <div style="margin-top:20px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="/contact" class="btn-primary">Request a Quote</a>
-      <a href="/portfolio" class="btn-secondary">See Proof</a>
+      <a href="/portfolio" class="btn-secondary">View Portfolio</a>
       <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">WhatsApp</a>
       <a href="#service-hubs" class="btn-secondary">Browse Services</a>
     </div>
@@ -428,6 +390,7 @@
 
   </div>
 </section>
+
 <!-- ✅ MASTER HUBS (high internal linking) -->
 <section class="section light animate" id="service-hubs">
   <div class="wrap-wide">
@@ -435,8 +398,11 @@
       <div class="section-title-center">
         <h2>Explore Our Services</h2>
         <p style="opacity:.88;margin-top:10px">
-          Choose a service category below to see details and pricing. Every service is supported by real
+          Choose a service category below to see details and pricing where available. Every service is supported by real
           <a href="/portfolio">portfolio case studies</a> for proof and trust.
+        </p>
+        <p style="opacity:.84;margin-top:8px">
+          We follow a proof-first process: file check → approval → production → clean finishing → delivery/installation (when needed).
         </p>
       </div>
 
@@ -446,7 +412,7 @@
         <div class="card hub-card">
           <h3><a href="/services/branding-kampala/">Branding Kampala</a></h3>
           <p style="opacity:.86;margin-top:6px">
-            Logos, corporate identity systems, brand guidelines, packaging and rollout support—built for long-term consistency.
+            Logos, corporate identity systems, brand guidelines, packaging layouts and rollout support—built for long-term consistency.
           </p>
           <div class="hub-mini">
             <a href="/services/branding-kampala/">Explore</a>
@@ -521,7 +487,7 @@
           </div>
         </div>
 
-        <!-- Outdoor Advertising (hub + pricing linked; clusters listed max 6, NOT linked) -->
+        <!-- Outdoor Advertising (hub ONLY linked; pricing removed until it’s confirmed live in sitemap) -->
         <div class="card hub-card">
           <h3><a href="/services/outdoor-advertising-kampala/">Outdoor Advertising Kampala</a></h3>
           <p style="opacity:.86;margin-top:6px">
@@ -529,7 +495,6 @@
           </p>
           <div class="hub-mini">
             <a href="/services/outdoor-advertising-kampala/">Explore</a>
-            <a href="/services/outdoor-advertising-kampala/pricing/">Pricing</a>
             <span>Billboard Design</span>
             <span>Billboard Printing</span>
             <span>Construction Site Hoardings</span>
@@ -622,7 +587,7 @@
   </div>
 </section>
 
-   <!-- BRANDING SECTION -->
+<!-- BRANDING SECTION -->
 <section class="section light animate" id="branding-kampala">
   <div class="wrap-wide">
     <div class="card">
@@ -705,13 +670,9 @@
     </div>
   </div>
 </section>
-    <!-- =========================================
+
+<!-- =========================================
      FEATURED WORK (Premium Layout + Real Images)
-     Updates:
-     - "Relevant Page"
-     - Relevant Page link is blue
-     - Button centered
-     - Maximum rounded corners
 ========================================= -->
 <section class="section light animate" id="featured-work">
   <div class="wrap-wide">
@@ -720,17 +681,17 @@
       <div class="section-title-center">
         <h2>Featured Work (Real Projects You Can Verify)</h2>
         <p style="opacity:.9;margin-top:10px;max-width:980px;margin-left:auto;margin-right:auto">
-          A quick selection of projects that match our core service hubs. Each case study links to a relevant service page
-          so you can see the exact scope that produced the result.
+          A quick selection of projects that match our core service categories. Each case study links to a relevant service page
+          so you can see the scope that produced the result.
         </p>
       </div>
 
       <!-- Page-local styling (does not touch global CSS) -->
       <style>
-
         .section a.hero-link,
-.section a.hero-link:visited { color:#fff !important; opacity:.95; text-decoration:underline; text-underline-offset:3px; font-weight:600; }
-.section a.hero-link:hover { opacity:1; }
+        .section a.hero-link:visited { color:#fff !important; opacity:.95; text-decoration:underline; text-underline-offset:3px; font-weight:600; }
+        .section a.hero-link:hover { opacity:1; }
+
         .fw-grid{
           max-width: 1200px;
           margin: 18px auto 0;
@@ -743,7 +704,7 @@
 
         /* MAXIMUM ROUNDING */
         .fw-card{
-          border-radius: 0px;
+          border-radius: 22px;
           overflow:hidden;
           border: 1px solid rgba(0,0,0,.08);
           background: rgba(255,255,255,.92);
@@ -810,7 +771,7 @@
           padding-top: 6px;
           display:flex;
           align-items:center;
-          justify-content:center; /* CENTER */
+          justify-content:center;
         }
 
         /* ONLY BLUE BUTTON */
@@ -819,7 +780,7 @@
           align-items:center;
           justify-content:center;
           padding: 12px 18px;
-          border-radius: 999px; /* MAX ROUND */
+          border-radius: 999px;
           background: #0b6fbf;
           color: #fff !important;
           text-decoration: none !important;
@@ -850,7 +811,7 @@
             </p>
             <p class="fw-meta">
               Relevant Page:
-              <a href="/services/branding/corporate-brand-identity-design-kampala/">
+              <a href="/services/branding-kampala/corporate-brand-identity-design-kampala/">
                 Corporate Brand Identity Design Kampala
               </a>
             </p>
@@ -874,8 +835,8 @@
             </p>
             <p class="fw-meta">
               Relevant Page:
-              <a href="/services/printing/flyer-printing-kampala/">
-                Flyer Printing Kampala
+              <a href="/services/printing-services-kampala/">
+                Printing Services Kampala
               </a>
             </p>
             <div class="fw-bottom">
@@ -898,8 +859,8 @@
             </p>
             <p class="fw-meta">
               Relevant Page:
-              <a href="/services/large-format/backdrops-printing-kampala/">
-                Backdrops Printing Kampala
+              <a href="/services/event-branding-kampala/">
+                Event Branding Kampala
               </a>
             </p>
             <div class="fw-bottom">
@@ -922,8 +883,8 @@
             </p>
             <p class="fw-meta">
               Relevant Page:
-              <a href="/services/signage/3d-signage-fabrication-uganda/">
-                3D Signage Fabrication Uganda
+              <a href="/services/signage-and-branding-kampala/">
+                Signage &amp; Branding Kampala
               </a>
             </p>
             <div class="fw-bottom">
@@ -946,8 +907,8 @@
             </p>
             <p class="fw-meta">
               Relevant Page:
-              <a href="/services/vehicle/car-branding-kampala/">
-                Car Branding Kampala
+              <a href="/services/vehicle-branding-kampala/">
+                Vehicle Branding Kampala
               </a>
             </p>
             <div class="fw-bottom">
@@ -970,8 +931,8 @@
             </p>
             <p class="fw-meta">
               Relevant Page:
-              <a href="/services/stationery/letterhead-printing-uganda/">
-                Letterhead Printing Uganda
+              <a href="/services/branded-stationery-uganda/">
+                Corporate Stationery Uganda
               </a>
             </p>
             <div class="fw-bottom">
@@ -990,109 +951,108 @@
   </div>
 </section>
 
-    <!-- QUALITY CONTROL (What we check before delivery) -->
-    <section class="section light animate" id="quality-control">
-      <div class="wrap-wide">
+<!-- QUALITY CONTROL (What we check before delivery) -->
+<section class="section light animate" id="quality-control">
+  <div class="wrap-wide">
+    <div class="card">
+      <div class="section-title-center">
+        <h2>Quality Control</h2>
+        <p style="opacity:.88;margin-top:10px">
+          Quality is not luck. We reduce reprints and installation issues by checking the key items below before we hand over work to a client.
+        </p>
+      </div>
+
+      <div class="grid" style="margin-top:14px">
         <div class="card">
-          <div class="section-title-center">
-            <h2>Quality Control</h2>
-            <p style="opacity:.88;margin-top:10px">
-              Quality is not luck. We reduce reprints and installation issues by checking the key items below before we hand over work to a client.
-            </p>
-          </div>
+          <h3>Design &amp; Proof Checks</h3>
+          <ul class="service-bullets">
+            <li>Correct sizes and layout balance</li>
+            <li>Spell-check and content review</li>
+            <li>Bleed + safe margins confirmed</li>
+            <li>Brand consistency (colors, logo usage)</li>
+          </ul>
+        </div>
 
-          <div class="grid" style="margin-top:14px">
-            <div class="card">
-              <h3>Design &amp; Proof Checks</h3>
-              <ul class="service-bullets">
-                <li>Correct sizes and layout balance</li>
-                <li>Spell-check and content review</li>
-                <li>Bleed + safe margins confirmed</li>
-                <li>Brand consistency (colors, logo usage)</li>
-              </ul>
-            </div>
+        <div class="card">
+          <h3>Print Production Checks</h3>
+          <ul class="service-bullets">
+            <li>Correct paper/material selection</li>
+            <li>Finishing quality (lamination, UV, binding)</li>
+            <li>Clean trimming and alignment</li>
+            <li>Packaging for safe delivery</li>
+          </ul>
+        </div>
 
-            <div class="card">
-              <h3>Print Production Checks</h3>
-              <ul class="service-bullets">
-                <li>Correct paper/material selection</li>
-                <li>Finishing quality (lamination, UV, binding)</li>
-                <li>Clean trimming and alignment</li>
-                <li>Packaging for safe delivery</li>
-              </ul>
-            </div>
+        <div class="card">
+          <h3>Signage &amp; Installation Checks</h3>
+          <ul class="service-bullets">
+            <li>Material choice for indoor/outdoor conditions</li>
+            <li>Strength and mounting approach</li>
+            <li>Visibility distance and readability</li>
+            <li>Safe installation planning</li>
+          </ul>
+        </div>
+      </div>
 
-            <div class="card">
-              <h3>Signage &amp; Installation Checks</h3>
-              <ul class="service-bullets">
-                <li>Material choice for indoor/outdoor conditions</li>
-                <li>Strength and mounting approach</li>
-                <li>Visibility distance and readability</li>
-                <li>Safe installation planning</li>
-              </ul>
-            </div>
-          </div>
+      <div class="card" style="max-width:1100px;margin:18px auto 0">
+        <strong>Result:</strong> Fewer mistakes, fewer delays, stronger output—and your brand looks more professional.
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div class="card" style="max-width:1100px;margin:18px auto 0">
-            <strong>Result:</strong> Fewer mistakes, fewer delays, stronger output—and your brand looks more professional.
+<!-- TRUST & CORPORATE READINESS -->
+<section class="section light animate" id="trust">
+  <div class="wrap-wide">
+    <div class="card">
+      <div class="section-title-center">
+        <h2>Trust &amp; Corporate Readiness</h2>
+        <p style="opacity:.88;margin-top:10px">
+          We work with businesses, institutions and corporate teams that need professional communication and consistent delivery.
+          You can also review our <a href="/corporate-profile">Corporate Profile</a> and <a href="/compliance">Compliance</a> pages.
+        </p>
+      </div>
+
+      <div class="grid" style="margin-top:14px">
+        <div class="card">
+          <h3>Clear documentation</h3>
+          <ul class="service-bullets">
+            <li>Quotations and invoices</li>
+            <li>Proof approvals before production</li>
+            <li>Repeat-order support for consistent output</li>
+            <li>Procurement-friendly communication</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>One team, full execution</h3>
+          <ul class="service-bullets">
+            <li>Branding → print → signage under one roof</li>
+            <li>Consistency across all customer touchpoints</li>
+            <li>Less coordination stress</li>
+            <li>Better timelines and accountability</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Work proof</h3>
+          <p style="opacity:.86;margin-top:10px">
+            See what we’ve delivered for clients:
+            <a href="/portfolio">Portfolio</a> + <a href="/testimonials">Testimonials</a>.
+          </p>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <a href="/portfolio" class="btn-secondary">View Portfolio</a>
+            <a href="/testimonials" class="btn-secondary">Read Testimonials</a>
           </div>
         </div>
       </div>
-    </section>
 
-
-    <!-- TRUST & CORPORATE READINESS -->
-    <section class="section light animate" id="trust">
-      <div class="wrap-wide">
-        <div class="card">
-          <div class="section-title-center">
-            <h2>Trust &amp; Corporate Readiness</h2>
-            <p style="opacity:.88;margin-top:10px">
-              We work with businesses, institutions and corporate teams that need professional communication and consistent delivery.
-              You can also review our <a href="corporate-profile">Corporate Profile</a> and <a href="compliance">Compliance</a> pages.
-            </p>
-          </div>
-
-          <div class="grid" style="margin-top:14px">
-            <div class="card">
-              <h3>Clear documentation</h3>
-              <ul class="service-bullets">
-                <li>Quotations and invoices</li>
-                <li>Proof approvals before production</li>
-                <li>Repeat-order support for consistent output</li>
-                <li>Procurement-friendly communication</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h3>One team, full execution</h3>
-              <ul class="service-bullets">
-                <li>Branding → print → signage under one roof</li>
-                <li>Consistency across all customer touchpoints</li>
-                <li>Less coordination stress</li>
-                <li>Better timelines and accountability</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h3>Work proof</h3>
-              <p style="opacity:.86;margin-top:10px">
-                See what we’ve delivered for clients and how it connects to each hub:
-                <a href="portfolio">Portfolio</a> + <a href="testimonials">Testimonials</a>.
-              </p>
-              <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-                <a href="portfolio" class="btn-secondary">View Portfolio</a>
-                <a href="testimonials" class="btn-secondary">Read Testimonials</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="max-width:1100px;margin:18px auto 0">
-            <strong>Long-term SEO strength:</strong> This services page is designed to stay stable while your hub and cluster pages keep expanding topical authority.
-          </div>
-        </div>
+      <div class="card" style="max-width:1100px;margin:18px auto 0">
+        <strong>Long-term SEO strength:</strong> This services page is designed to stay stable while your hub and cluster pages keep expanding topical authority.
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
 
 <!-- FAQ (Visible FAQ matches the JSON-LD FAQ schema) -->
@@ -1121,7 +1081,7 @@
           <h3>How long does printing take in Kampala?</h3>
           <p style="opacity:.88;margin-top:10px">
             Most standard printing takes 1–3 working days depending on quantity and finishing (lamination, binding, UV and more).
-            Timelines are confirmed after file checks and approval.
+            Timelines are confirmed after file checks and proof approval.
             See <a href="/services/printing-services-kampala/">Printing Services Kampala</a> and review
             <a href="/services/printing-services-kampala/pricing/">printing pricing</a> for common items.
           </p>
@@ -1159,36 +1119,34 @@
 
       <div class="note-box" style="max-width:1000px;margin:18px auto 0">
         <strong>Fastest way to get a quote:</strong> send the item type, size, quantity, finishing, deadline, and your location (if installation is needed).
-        You can also reach us via the <a href="/contact">contact page</a>.
+        If you have artwork or a reference photo, attach it for faster turnaround. You can also reach us via the <a href="/contact">contact page</a>.
       </div>
 
     </div>
   </div>
 </section>
 
-    <!-- FINAL CTA -->
-    <section class="section light animate" style="padding-top:50px">
-      <div class="wrap-med">
-        <div class="card cta-card">
-          <h2 style="margin-bottom:10px">Not sure what you need?</h2>
-          <p style="opacity:.85;margin-bottom:18px">
-            Send your idea and budget range—we’ll recommend the best option for your goal.
-          </p>
-          <p style="opacity:.85;margin-bottom:18px">
-            For a faster start, share: sizes, quantities, deadline, location (if installation is required), and any existing logo or brand colors.
-          </p>
+<!-- FINAL CTA -->
+<section class="section light animate" style="padding-top:50px">
+  <div class="wrap-med">
+    <div class="card cta-card">
+      <h2 style="margin-bottom:10px">Not sure what you need?</h2>
+      <p style="opacity:.85;margin-bottom:18px">
+        Send your idea and budget range—we’ll recommend the best option for your goal.
+      </p>
+      <p style="opacity:.85;margin-bottom:18px">
+        For a faster start, share: sizes, quantities, deadline, location (if installation is required), and any existing logo or brand colors.
+      </p>
 
-          <div class="hero-actions">
-            <a href="contact" class="btn-primary">Send Inquiry</a>
-            <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
-          </div>
-        </div>
+      <div class="hero-actions">
+        <a href="/contact" class="btn-primary">Send Inquiry</a>
+        <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-  </main>
-
-
+</main>
   <!-- ✅ FOOTER (same as your approved index footer) -->
   <footer class="footer">
     <div class="footer-wrap">
@@ -1208,9 +1166,9 @@
         </p>
 
         <p style="opacity:.8;margin-top:10px">
-          <a href="corporate-profile">Corporate Profile</a>
+          <a href="/corporate-profile">Corporate Profile</a>
           <span style="opacity:.6"> • </span>
-          <a href="compliance">Compliance</a>
+          <a href="/compliance">Compliance</a>
         </p>
       </div>
 
@@ -1221,7 +1179,7 @@
           <li><a href="tel:+256775251445">+256 775 251 445</a></li>
           <li>P.O. Box 201929, Kampala - Uganda</li>
         </ul>
-        <a class="footer-cta" href="contact">Contact Us</a>
+        <a class="footer-cta" href="/contact">Contact Us</a>
       </div>
 
       <div class="footer-col">
