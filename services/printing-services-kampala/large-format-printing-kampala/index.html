@@ -6,11 +6,15 @@
 
   <title>Large Format Printing Kampala — Banners, Backdrops, Posters & Roll-Ups | Kamog Artistry (U) Ltd</title>
 
-  <meta name="description" content="Large format printing in Kampala, Uganda — clean, correctly set-up banners, posters, roll-ups, backdrops, wall graphics and signage-ready prints. Share size, quantity and deadline for a quote." />
+  <meta name="description" content="Large format printing in Kampala, Uganda — banners (PVC/mesh), panaflex banners, event backdrops, roll-up banners, posters, wall graphics and signage-ready prints with clean finishing (hemming & eyelets). Proof-first workflow, correct DPI, correct bleed, and fast turnaround. Request a quote." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0b6fbf" />
   <link rel="canonical" href="https://kamogartistry.com/services/printing-services-kampala/large-format-printing-kampala/" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kamogartistry.com/sitemap.xml" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://wa.me" crossorigin />
+  <link rel="preconnect" href="https://www.linkedin.com" crossorigin />
 
   <!-- Preload key brand asset -->
   <link rel="preload" as="image" href="/assets/img/brand/logo-white.svg" />
@@ -20,16 +24,17 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
-  <meta property="og:title" content="Large Format Printing Kampala — Kamog Artistry (U) Ltd" />
-  <meta property="og:description" content="Banners, backdrops, roll-ups, posters and wall graphics printed cleanly and prepared for installation in Kampala." />
+  <meta property="og:locale" content="en_UG" />
+  <meta property="og:title" content="Large Format Printing Kampala — Banners, Backdrops, Posters & Roll-Ups" />
+  <meta property="og:description" content="Large format printing in Kampala: PVC/mesh banners, panaflex banners, event backdrops, roll-ups, posters, wall graphics and signage-ready prints. Clean finishing and proof-first workflow." />
   <meta property="og:url" content="https://kamogartistry.com/services/printing-services-kampala/large-format-printing-kampala/" />
   <meta property="og:image" content="https://kamogartistry.com/assets/img/services/printing-services-kampala/large-format-printing-kampala/hero.webp" />
-  <meta property="og:image:alt" content="Large format printing work by Kamog Artistry (U) Ltd in Kampala, Uganda" />
+  <meta property="og:image:alt" content="Large format printing by Kamog Artistry (U) Ltd in Kampala, Uganda" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Large Format Printing Kampala — Kamog Artistry (U) Ltd" />
-  <meta name="twitter:description" content="Professional large format printing in Kampala: banners, roll-ups, posters, backdrops and signage-ready prints." />
+  <meta name="twitter:description" content="Professional large format printing in Kampala: banners, roll-ups, posters, backdrops, wall graphics and signage-ready prints with clean finishing." />
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/services/printing-services-kampala/large-format-printing-kampala/hero.webp" />
 
   <link rel="stylesheet" href="/assets/css/style.css" />
@@ -42,6 +47,7 @@
       --km-ink:#08354a;
     }
 
+    *{ box-sizing:border-box; }
     html{ scroll-behavior:smooth; }
     section[id], div[id]{ scroll-margin-top: 110px; }
 
@@ -73,9 +79,44 @@
     }
     .breadcrumbs .sep{ opacity:.65; user-select:none; color:#fff; }
 
-    .pill-row { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:14px; }
-    .pill { padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); color:#fff; font-weight: 800; font-size: .95rem; }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:flex-start;
+      margin-top:14px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.22);
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+      font-weight: 900;
+      font-size: .95rem;
+      line-height: 1;
+      text-decoration:none !important;
+      box-shadow: 0 10px 22px rgba(0,0,0,.10);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
+    }
+    .pill:hover{
+      background: rgba(255,255,255,.20);
+      border-color: rgba(255,255,255,.35);
+      transform: translateY(-1px);
+    }
+    .pill:active{ transform: translateY(0); }
+    .pill:focus-visible{
+      outline: 3px solid rgba(242,140,40,.55);
+      outline-offset: 3px;
+    }
+
     .mini-cta { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top: 14px; }
+
     .note { opacity:.9; }
     .list-clean { margin-top: 10px; opacity:.92; line-height: 1.85; }
     .faq-grid .card h3 { font-size: 1.02rem; }
@@ -106,29 +147,6 @@
     .section.light a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
       color: var(--km-orange);
       -webkit-text-fill-color: var(--km-orange);
-    }
-
-    /* Trust/proof cards keep ink color */
-    #proof .card,
-    #proof .card *{
-      color: var(--km-ink) !important;
-      -webkit-text-fill-color: var(--km-ink) !important;
-      opacity: 1 !important;
-    }
-    #proof .card p{ opacity:.88 !important; }
-    #proof .card strong{ opacity:1 !important; }
-
-    /* ✅ FIX: keep #proof text ink, but make links blue like other sections */
-    #proof a:not(.btn-primary):not(.btn-secondary):not(.card-link){
-      color: var(--km-blue) !important;
-      -webkit-text-fill-color: var(--km-blue) !important;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      font-weight: 900;
-    }
-    #proof a:not(.btn-primary):not(.btn-secondary):not(.card-link):hover{
-      color: var(--km-orange) !important;
-      -webkit-text-fill-color: var(--km-orange) !important;
     }
 
     .cta-strip{
@@ -168,7 +186,14 @@
       margin-bottom: 10px;
     }
 
-    /* Gallery (6 images, no captions) */
+    .spec-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+      align-items: stretch;
+    }
+
     .gallery-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -182,55 +207,45 @@
       border-radius: 16px;
     }
 
-    /* Simple spec blocks */
-    .spec-grid{
+    .cluster-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 16px;
       margin-top: 16px;
       align-items: stretch;
     }
-
-    /* ✅ Relevant Case Study: hub-style portfolio card (single item) */
-    .portfolio-grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 18px;
-      align-items: stretch;
-    }
-    .portfolio-card{
+    .cluster-card{
       border: 1px solid rgba(0,0,0,.08);
       background:#fff;
       border-radius: 18px;
-      padding: 14px;
+      padding: 16px;
       box-shadow: 0 10px 22px rgba(0,0,0,.06);
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
     }
-    .portfolio-card figure{ margin:0; }
-    .portfolio-card img{
+    .cluster-card h3{ margin:0 0 8px; font-size:1.02rem; }
+    .cluster-card p{ margin:0; opacity:.88; }
+
+    .table-wrap{
+      overflow:auto;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius: 18px;
+      background:#fff;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      margin-top: 16px;
+    }
+    table{
       width:100%;
-      height:auto;
-      display:block;
-      border-radius: 14px;
+      border-collapse: collapse;
+      min-width: 860px;
     }
-    .portfolio-card h3{
-      margin: 2px 0 0;
-      font-size: 1.05rem;
+    th, td{
+      text-align:left;
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(0,0,0,.06);
+      vertical-align: top;
     }
-    .portfolio-meta{
-      opacity:.88;
-      margin:0;
-      line-height: 1.55;
-    }
-    .portfolio-links{
-      margin-top:auto;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      align-items:center;
+    th{
+      background: rgba(11,111,191,.06);
+      font-weight: 1000;
     }
 
     .footer a, .footer a:visited{ color:#ffffff !important; }
@@ -244,12 +259,6 @@
     }
     .footer a.footer-cta, .footer a.footer-cta:visited{ text-decoration:none !important; }
   </style>
-
-  <!-- Schema placeholders (kept consistent with hub page approach) -->
-  <!-- Schema: BreadcrumbList -->
-  <!-- Schema: LocalBusiness -->
-  <!-- Schema: Service -->
-  <!-- Schema: FAQPage -->
 </head>
 
 <body>
@@ -259,7 +268,7 @@
 <header class="header">
   <nav class="nav">
     <a aria-label="Go to homepage" href="/">
-      <img src="/assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" loading="lazy" decoding="async" />
+      <img src="/assets/img/brand/logo-white.svg" class="logo" alt="Kamog Artistry (U) Ltd" decoding="async" />
     </a>
 
     <ul class="nav-links" id="navLinks">
@@ -295,16 +304,17 @@
 
       <div class="hero-badge">Kampala • Wakiso • Mukono • Central Uganda</div>
 
-      <h1>Large Format Printing Services in Kampala, Uganda</h1>
+      <h1>Large Format Printing in Kampala, Uganda</h1>
 
       <p style="opacity:.92;margin-top:12px;max-width:980px;">
-        When your message must be seen from a distance—outside a shop, at an event, on a wall, or across a busy road—large format is the difference.
-        We produce clean, correctly set-up prints for <strong>banners, posters, backdrops, roll-ups, wall graphics</strong> and signage-ready applications—built for Kampala’s real conditions.
+        We produce <strong>high-impact large format prints</strong> for visibility and events — <strong>PVC banners</strong>, <strong>mesh banners</strong>,
+        <strong>panaflex event backdrops</strong>, <strong>roll-up banners</strong>, <strong>posters</strong>, <strong>wall graphics</strong> and <strong>signage-ready prints</strong>.
+        Clean finishing (hemming + eyelets), correct scaling, correct bleed and a proof-first workflow so your output installs clean and reads clearly.
       </p>
 
       <p style="opacity:.9;margin-top:10px;max-width:980px;">
-        The biggest failures we see are not “printing problems”—they’re <strong>wrong file setup</strong>: low resolution artwork, missing bleed, incorrect scaling, weak finishing, or the wrong material for indoor/outdoor use.
-        We guide you on the right specs and finishing so your print looks sharp, installs cleanly, and lasts longer.
+        Most “bad prints” in Kampala are not printer problems — they’re <strong>file setup problems</strong> (wrong size, weak resolution, missing bleed, poor hierarchy)
+        or <strong>wrong material/finishing</strong> for the environment. We guide you to the right specs so you don’t waste money.
       </p>
 
       <div class="hero-actions" style="margin-top:18px;">
@@ -314,8 +324,8 @@
 
       <div class="mini-cta">
         <a class="btn-secondary" href="/services/printing-services-kampala/">Back to Printing Hub</a>
-        <a class="btn-secondary" href="/services/printing-services-kampala/pricing/">View Printing Pricing</a>
-        <a class="btn-secondary" href="/contact#free-consult">Free 10-Min Consultation</a>
+        <a class="btn-secondary" href="/services/printing-services-kampala/pricing/">Printing Pricing</a>
+        <a class="btn-secondary" href="/services/event-branding-kampala/">Event Branding</a>
       </div>
 
       <figure style="margin:18px auto 0;max-width:980px;">
@@ -331,45 +341,112 @@
         <a href="/compliance" style="color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:900;">Compliance →</a>
       </p>
 
-      <div class="pill-row" style="justify-content:flex-start;margin-top:16px;">
-        <a class="pill" href="#overview">Overview</a>
-        <a class="pill" href="#deliverables">Deliverables</a>
-        <a class="pill" href="#process">Process</a>
+      <div class="pill-row">
+        <a class="pill" href="#deliverables">What We Print</a>
+        <a class="pill" href="#materials">Materials</a>
         <a class="pill" href="#specs">Specs</a>
-        <a class="pill" href="#mistakes">Common Mistakes</a>
+        <a class="pill" href="#process">Process</a>
+        <a class="pill" href="#sizes">Common Sizes</a>
+        <a class="pill" href="#pricing">Pricing Guide</a>
         <a class="pill" href="#gallery">Gallery</a>
-        <a class="pill" href="#case-study">Case Study</a>
-        <a class="pill" href="#pricing">Pricing</a>
+        <a class="pill" href="#clusters">Related Print Pages</a>
         <a class="pill" href="#faqs">FAQs</a>
       </div>
 
     </div>
   </section>
 
-  <!-- OVERVIEW -->
-  <section class="section light animate" id="overview" style="padding-top:52px;">
+  <!-- DELIVERABLES -->
+  <section class="section light animate" id="deliverables" style="padding-top:52px;">
     <div class="content-wrap">
-      <h2>Large Format Printing That Installs Clean and Reads Clearly</h2>
-
+      <h2>What We Print (Large Format Deliverables)</h2>
       <p style="opacity:.9;max-width:980px;">
-        Large format is not “just printing big.” It’s a production workflow: the right file setup, correct scaling, appropriate resolution, and finishing that matches how the print will be used.
-        In Kampala, large format is commonly used for shop visibility, event branding, promotions, directional signage, office wall graphics, and product campaigns.
+        Choose your output based on <strong>viewing distance</strong>, <strong>placement</strong> (indoor/outdoor), and <strong>how long you need it to last</strong>.
+        We help you pick the right material + finishing so your print survives handling, wind, sun and repeated transport.
+        If you’re specifically ordering banners, see <a href="/services/printing-services-kampala/banner-printing-kampala/"><strong>Banner Printing Kampala</strong></a>.
       </p>
 
-      <p style="opacity:.88;max-width:980px;">
-        If you also need fabrication/installation for outdoor signage, explore
-        <a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication Uganda</strong></a>.
-        For full event execution (backdrops, branding, and on-site setup), use
-        <a href="/services/event-branding-kampala/"><strong>Event Branding Kampala</strong></a>.
-        For visibility campaigns on the road, see
-        <a href="/services/vehicle-branding-kampala/"><strong>Vehicle Branding Kampala</strong></a>.
-      </p>
+      <div class="grid" style="margin-top:18px; align-items:stretch;">
+        <div class="card">
+          <h3>PVC & Mesh Banners (Outdoor Visibility)</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Best for shop fronts, promotions, fences, road-side visibility, campaigns and announcements.
+          </p>
+          <ul class="list-clean">
+            <li><strong>Finishing:</strong> reinforced hemming + eyelets for mounting</li>
+            <li><strong>Options:</strong> standard PVC, stronger PVC, mesh (wind-friendly)</li>
+            <li><strong>Use-case:</strong> outdoor + high visibility</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Event Backdrops (Panaflex / Photo Walls)</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Step-and-repeat walls, stage backdrops, conference branding, launches and media walls.
+          </p>
+          <ul class="list-clean">
+            <li><strong>Priority:</strong> clean layout + correct scaling for cameras</li>
+            <li><strong>Add-ons:</strong> stands/frames on request</li>
+            <li><strong>Best for:</strong> photography + branding consistency</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Roll-Up Banners (Portable Indoor Marketing)</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Ideal for receptions, exhibitions, activations, in-store promotions and corporate presentations.
+            For dedicated roll-up jobs, see <strong>Roll-Up Banner Printing</strong></a>.
+          </p>
+          <ul class="list-clean">
+            <li><strong>Common sizes:</strong> 85×200cm and 100×200cm</li>
+            <li><strong>What matters:</strong> hierarchy + readable text at a distance</li>
+            <li><strong>Includes:</strong> stand + carry bag (scope-based)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Posters & Campaign Prints</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Campaign posters for shops, schools, churches, malls, notice boards and promotions.
+            For poster-specific materials and finishing, see <a href="/services/printing-services-kampala/poster-printing-kampala/"><strong>Poster Printing Kampala</strong></a>.
+          </p>
+          <ul class="list-clean">
+            <li><strong>Best practice:</strong> correct bleed + safe margins</li>
+            <li><strong>Optional:</strong> lamination for handling/durability</li>
+            <li><strong>Great for:</strong> short-term promotions and announcements</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Wall Graphics & Indoor Branding</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Office branding, reception graphics, retail walls, directional messaging and interior campaigns.
+          </p>
+          <ul class="list-clean">
+            <li><strong>Focus:</strong> clean installs + correct alignment</li>
+            <li><strong>Optional:</strong> matte finish to reduce glare</li>
+            <li><strong>Pair with:</strong> <a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication</strong></a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Signage-Ready Prints (For Fabrication)</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Large prints prepared for mounting on boards, frames, and fabricated signage.
+          </p>
+          <ul class="list-clean">
+            <li><strong>Use-case:</strong> shop signage workflows</li>
+            <li><strong>Optional:</strong> mounting/installation coordination</li>
+            <li><strong>Explore:</strong> <a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication Uganda</strong></a></li>
+          </ul>
+        </div>
+      </div>
 
       <div class="cta-strip">
         <div style="min-width:260px">
-          <strong>Need banners or event backdrops urgently?</strong>
+          <strong>Not sure which output fits your project?</strong>
           <div style="opacity:.86;margin-top:6px">
-            Share size, quantity, deadline, and where it will be used (indoor/outdoor). We’ll recommend the best material and finishing.
+            Send size, where it will be used (indoor/outdoor), and your deadline. We’ll recommend the best material and finishing.
           </div>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -380,395 +457,429 @@
     </div>
   </section>
 
-  <!-- DELIVERABLES -->
-  <section class="section light animate" id="deliverables">
+  <!-- MATERIALS -->
+  <section class="section light animate" id="materials" style="padding-top:50px;">
     <div class="content-wrap">
-      <h2>What We Print (Common Large Format Deliverables)</h2>
+      <h2>Materials We Recommend (Based on Real Use in Kampala)</h2>
       <p style="opacity:.9;max-width:980px;">
-        Choose the output based on placement, viewing distance, and duration. We help you select the right material and finishing so your print looks premium and survives handling, wind, sun, and frequent transport.
+        Material choice decides durability. Kampala conditions (sun, rain, dust, wind, frequent transport) require the right substrate and finishing.
+        We recommend options based on <strong>location</strong>, <strong>duration</strong> and <strong>mounting method</strong>.
+        For wind-exposed areas, see <strong>Mesh Banner Printing</strong></a>.
       </p>
 
-      <div class="grid" style="margin-top:18px; align-items:stretch;">
-        <div class="card">
-          <h3>Banners & Outdoor Advertising</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Heavy-duty banners for shop fronts, promotions, fences, road-side visibility, and campaign advertising.
+      <div class="micro-grid">
+        <div class="card micro">
+          <span class="badge-inline">PVC Banner (Standard)</span>
+          <p style="opacity:.88;margin:0;">
+            A reliable option for outdoor promotions. Usually finished with <strong>hemming + metal eyelets</strong> for strong mounting.
           </p>
-          <ul class="list-clean">
-            <li>Hemmed edges for strength</li>
-            <li>Eyelets/grommets for mounting</li>
-            <li>Outdoor-safe inks and material options</li>
-          </ul>
         </div>
 
-        <div class="card">
-          <h3>Event Backdrops & Step-and-Repeat</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Branded backdrops for launches, press walls, conferences, activations, weddings, and photo moments.
+        <div class="card micro">
+          <span class="badge-inline">PVC Banner (Stronger / Heavy Duty)</span>
+          <p style="opacity:.88;margin:0;">
+            Better for repeated use, frequent transport, high wind exposure or long-term placements (scope-based recommendations).
           </p>
-          <ul class="list-clean">
-            <li>Clean seams and correct scaling</li>
-            <li>Options for frames/stands (on request)</li>
-            <li>Design alignment for cameras and lighting</li>
-          </ul>
         </div>
 
-        <div class="card">
-          <h3>Roll-Ups, Posters & Wall Graphics</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Portable roll-ups for indoor marketing, posters for campaigns, and wall graphics for office/retail branding.
+        <div class="card micro">
+          <span class="badge-inline">Mesh Banner</span>
+          <p style="opacity:.88;margin:0;">
+            Wind-friendly banner option for exposed areas. Small perforations reduce sail-effect and tearing risk.
           </p>
-          <ul class="list-clean">
-            <li>Sharp text + readable hierarchy</li>
-            <li>Correct bleed and trim safe zones</li>
-            <li>Matte/gloss options depending on glare</li>
-          </ul>
+        </div>
+
+        <div class="card micro">
+          <span class="badge-inline">Panaflex / Backdrop Material</span>
+          <p style="opacity:.88;margin:0;">
+            Ideal for event backdrops and photo walls where branding must read cleanly on camera.
+          </p>
         </div>
       </div>
 
       <div class="card" style="margin-top:16px;">
-        <h3 style="margin-bottom:6px;">Optional Add-ons (Recommended)</h3>
-        <p style="opacity:.88;margin:0;">
-          If you need design before printing, add
-          <a href="/services/graphic-design-kampala/"><strong>Graphic Design Kampala</strong></a>.
-          If you need installation support, pair with
-          <a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication</strong></a>
-          or
-          <a href="/services/event-branding-kampala/"><strong>Event Branding</strong></a>.
-        </p>
+        <h3 style="margin-bottom:6px;">Finishing That Prevents Failures</h3>
+        <ul class="list-clean" style="margin-top:0;">
+          <li><strong>Hemming:</strong> reinforces edges so banners don’t tear under tension</li>
+          <li><strong>Eyelets (grommets):</strong> stronger hanging points for ropes/zip ties/hooks</li>
+          <li><strong>Lamination (optional):</strong> improves scratch resistance and handling durability for posters</li>
+          <li><strong>Mounting (optional):</strong> for signage workflows and clean indoor wall installs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS -->
+  <section class="section light animate" id="specs" style="padding-top:50px;">
+    <div class="content-wrap">
+      <h2>Technical Specs That Protect Print Quality</h2>
+      <p style="opacity:.9;max-width:980px;">
+        Large format quality is decided before printing: correct scale, correct DPI for viewing distance, correct bleed, and clean export settings.
+        If you’re unsure, send your artwork — we’ll check it before production.
+        If you need artwork creation, use <strong>Print-Ready Artwork Setup</strong></a>.
+      </p>
+
+      <div class="spec-grid">
+        <div class="card">
+          <h3>1) DPI by Viewing Distance</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Close-view prints (posters, indoor branding) need higher DPI than far-view prints (shopfronts, very large signs).
+            We guide the safest DPI target based on where people will stand.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>2) Correct Scale (Avoid Wrong Size)</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            We confirm exact W×H dimensions so roll-ups don’t crop, backdrops don’t stretch, and banner text remains readable.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>3) Bleed + Safe Margins</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Bleed prevents white edges after trimming. Safe margins keep logos/text away from edges — critical for posters and mounted outputs.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>4) Clean Export</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            We check fonts, outlines, color consistency and correct file formats so production is stable and repeatable.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-strip" style="margin-top:18px;">
+        <div style="min-width:260px">
+          <strong>Want us to check your artwork first?</strong>
+          <div style="opacity:.86;margin-top:6px">
+            Upload your file and we’ll advise resolution, bleed and finishing so you don’t reprint.
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn-primary" href="/contact#upload-artwork">Upload Artwork</a>
+          <a class="btn-secondary" href="/contact#free-consult">Free 10-Min Consult</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PROCESS -->
-  <section class="section light animate" id="process">
+  <section class="section light animate" id="process" style="padding-top:50px;">
     <div class="content-wrap">
-      <h2>Our Large Format Printing Process</h2>
+      <h2>Proof-First Workflow (How We Prevent Waste)</h2>
       <p style="opacity:.9;max-width:980px;">
-        To avoid waste and reprints, we follow a proof-first workflow: confirm specs, correct the artwork, approve a proof, then produce and finish for installation.
+        Our workflow is built to reduce costly mistakes: confirm specs → artwork check → proof approval → print → finishing → delivery.
+        This is how you protect your budget on large jobs. For finishing options, see <a href="/services/printing-services-kampala/print-finishing-services-kampala/"><strong>Print Finishing Services</strong></a>.
       </p>
 
       <div class="grid" style="margin-top:18px;">
         <div class="card">
           <h3>1) Specs & Use-Case</h3>
           <p style="opacity:.88;margin-top:10px;">
-            You share size, quantity, placement (indoor/outdoor), deadline, and where it will be installed. We advise material + finishing.
+            You share size, quantity, usage (indoor/outdoor), mounting plan and deadline. We recommend the right material + finishing.
           </p>
         </div>
         <div class="card">
           <h3>2) Artwork Check</h3>
           <p style="opacity:.88;margin-top:10px;">
-            We check resolution, bleed, scaling, and color. If the file is weak, we fix setup to prevent pixelation and cropping.
+            We check DPI, scale, bleed, safe margins, and layout hierarchy (so text reads from distance).
           </p>
         </div>
         <div class="card">
-          <h3>3) Proof & Approval</h3>
+          <h3>3) Proof Approval</h3>
           <p style="opacity:.88;margin-top:10px;">
-            You approve the final proof (layout, spelling, sizing notes). This step is what protects you from expensive mistakes.
+            You approve the proof (spelling, dimensions, layout notes). This step prevents “expensive surprises”.
           </p>
         </div>
         <div class="card">
-          <h3>4) Print, Finish & Delivery</h3>
+          <h3>4) Print + Finishing</h3>
           <p style="opacity:.88;margin-top:10px;">
-            We print, finish (hemming/eyelets/lamination where required) and prepare it for clean mounting or transport.
+            We print and finish based on use — hemming, eyelets, lamination or mounting — then prepare for delivery/installation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMON SIZES -->
+  <section class="section light animate" id="sizes" style="padding-top:50px;">
+    <div class="content-wrap">
+      <h2>Common Large Format Sizes We Handle</h2>
+      <p style="opacity:.9;max-width:980px;">
+        These are common requests — we also print custom sizes. Share your exact measurements for an accurate quote.
+      </p>
+
+      <div class="table-wrap">
+        <table aria-label="Common large format sizes in Kampala">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Common sizes</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Roll-Up Banner</strong></td>
+              <td>85×200cm, 100×200cm</td>
+              <td>Portable indoor marketing; needs clean hierarchy and readable type.</td>
+            </tr>
+            <tr>
+              <td><strong>Posters</strong></td>
+              <td>A2, A1, A0 (and custom)</td>
+              <td>Bleed + safe margins reduce trimming issues; optional lamination for handling.</td>
+            </tr>
+            <tr>
+              <td><strong>PVC Banners</strong></td>
+              <td>Custom (by width × height)</td>
+              <td>Outdoor-ready; hemming + eyelets recommended for strength.</td>
+            </tr>
+            <tr>
+              <td><strong>Backdrops / Photo Walls</strong></td>
+              <td>Custom</td>
+              <td>Correct scaling matters for cameras; align logos for visibility.</td>
+            </tr>
+            <tr>
+              <td><strong>Wall Graphics</strong></td>
+              <td>Custom</td>
+              <td>Best paired with installation planning; matte option reduces glare.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <h3 style="margin-bottom:6px;">Fast Quote Checklist (Copy & Send)</h3>
+        <ul class="list-clean" style="margin-top:0;">
+          <li><strong>Item:</strong> banner / roll-up / backdrop / poster / wall graphic</li>
+          <li><strong>Size:</strong> W×H (cm or meters)</li>
+          <li><strong>Quantity:</strong> how many pieces</li>
+          <li><strong>Usage:</strong> indoor or outdoor + mounting method</li>
+          <li><strong>Finishing:</strong> hemming / eyelets / lamination / mounting</li>
+          <li><strong>Deadline:</strong> date + urgency</li>
+          <li><strong>Artwork:</strong> ready file or design needed</li>
+        </ul>
+
+        <div class="hero-actions" style="margin-top:10px;">
+          <a class="btn-primary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp Now</a>
+          <a class="btn-secondary" href="/contact">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING GUIDE -->
+  <section class="section light animate" id="pricing" style="padding-top:50px;">
+    <div class="content-wrap">
+      <h2>Large Format Printing Pricing in Kampala (Budget Guidance)</h2>
+      <p style="opacity:.9;max-width:980px;">
+        Large format is typically priced by <strong>material + square meter</strong> plus finishing and complexity.
+        For transparent budgeting, here are the factors that most change price — then you can get exact pricing from our
+        <a href="/services/printing-services-kampala/pricing/"><strong>Printing Pricing</strong></a> page or request a quote.
+      </p>
+
+      <div class="grid" style="margin-top:18px;">
+        <div class="card">
+          <h3>1) Size (m²) + Quantity</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Bigger prints use more material. Quantity can reduce unit cost when running multiple identical pieces.
+          </p>
+        </div>
+        <div class="card">
+          <h3>2) Material Type</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Standard PVC vs heavy-duty vs mesh, and pano/backdrop materials. Outdoor durability needs the right substrate.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3) Finishing</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Hemming, eyelets, lamination, mounting, stand/frame requirements — finishing is where many cheap prints fail.
+          </p>
+        </div>
+        <div class="card">
+          <h3>4) Artwork Readiness</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Ready-to-print files are fastest. If scaling/DPI/bleed fixes or design is needed, it’s quoted clearly.
+          </p>
+        </div>
+        <div class="card">
+          <h3>5) Turnaround</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Rush jobs may require priority scheduling. Quick proof approvals keep costs stable and delivery reliable.
+          </p>
+        </div>
+        <div class="card">
+          <h3>6) Delivery / Setup</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Delivery within Kampala/Wakiso/Mukono and handling for large jobs can be included (scope-based).
           </p>
         </div>
       </div>
 
       <div class="cta-strip" style="margin-top:18px;">
         <div style="min-width:260px">
-          <strong>Not sure about materials?</strong>
+          <strong>Get exact large format pricing fast</strong>
           <div style="opacity:.86;margin-top:6px">
-            Tell us where the print will live (sun/rain/indoor) and how long you need it to last—we’ll recommend the right option.
+            Send W×H, quantity, indoor/outdoor use, finishing, and deadline. Attach artwork if available.
           </div>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <a class="btn-primary" href="/contact">Request Quote</a>
-          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn-secondary" href="/services/printing-services-kampala/pricing/">View Pricing</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- WHO IT'S FOR / NOT FOR -->
-  <section class="section light animate" id="fit">
-    <div class="content-wrap">
-      <h2>Who This Service Is For (And Who It’s Not For)</h2>
-
-      <div class="grid" style="margin-top:18px;">
-        <div class="card">
-          <h3>Ideal For</h3>
-          <ul class="list-clean">
-            <li><strong>Businesses</strong> promoting offers, openings, and visibility campaigns</li>
-            <li><strong>Events</strong> needing backdrops, roll-ups, stage branding and photo walls</li>
-            <li><strong>NGOs & projects</strong> running activations and community campaigns</li>
-            <li><strong>Retail</strong> needing wall graphics, posters, in-store promotions</li>
-            <li><strong>Corporate teams</strong> requiring clean branded outputs and consistent roll-out</li>
-            <li><strong>Schools & institutions</strong> needing notice boards, directional signage prints and event materials</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Not For</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            This service may not fit if you want:
-          </p>
-          <ul class="list-clean">
-            <li>Printing without confirming size, usage, or installation plan</li>
-            <li>To use low-res WhatsApp images for huge banners (results will be blurry)</li>
-            <li>To skip proof approval (spelling and scaling errors become expensive)</li>
-            <li>Outdoor use with “indoor-only” materials (it will fade/tear faster)</li>
-          </ul>
-          <p style="opacity:.88;margin-top:10px;">
-            If you need a full build (frames, lightboxes, 3D letters), use
-            <a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication</strong></a>.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TECHNICAL SPECS -->
-  <section class="section light animate" id="specs">
-    <div class="content-wrap">
-      <h2>Technical Specs We Print For</h2>
-      <p style="opacity:.9;max-width:980px;">
-        Large format quality is decided before the printer starts: correct resolution, correct scale, correct bleed, and the right finishing for installation.
-        If you’re not sure, send what you have—we’ll guide the right setup.
+      <p style="opacity:.85;margin-top:12px;max-width:980px;">
+        <strong>Note:</strong> Budget ranges vary by material and finishing. For roll-ups, price often includes the stand and carry bag (scope-based). For PVC banners,
+        finishing like hemming and eyelets is commonly recommended for durability.
       </p>
-
-      <div class="spec-grid">
-        <div class="card">
-          <h3>Resolution & Scale</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            We advise the right resolution for the viewing distance and ensure artwork is scaled correctly (so text stays crisp and images don’t pixelate).
-          </p>
-        </div>
-        <div class="card">
-          <h3>Bleed & Safe Margins</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            We add/confirm bleed for trims and keep key text/logos within safe zones—especially for posters, frames and mounted graphics.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Materials & Finishing</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Indoor vs outdoor material choices matter. We recommend finishing like hemming, eyelets, lamination or mounting based on use.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Color Consistency</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            We aim for consistent outputs across reprints by keeping your files clean, aligned and properly exported for large format production.
-          </p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:16px;">
-        <h3 style="margin-bottom:6px;">Quick Checklist Before You Contact Us</h3>
-        <ul class="list-clean" style="margin-top:0;">
-          <li>Exact size (width × height) and quantity</li>
-          <li>Where it will be used (indoor/outdoor) + mounting method</li>
-          <li>Deadline and delivery location</li>
-          <li>Artwork status (ready file vs needs design/setup)</li>
-          <li>Finishing needs: eyelets, hemming, lamination, mounting, stand/frame</li>
-        </ul>
-      </div>
     </div>
   </section>
 
-  <!-- COMMON MISTAKES -->
-  <section class="section light animate" id="mistakes">
+  <!-- MISTAKES -->
+  <section class="section light animate" id="mistakes" style="padding-top:50px;">
     <div class="content-wrap">
       <h2>Common Large Format Mistakes We Prevent</h2>
       <p style="opacity:.9;max-width:980px;">
-        Most printing disappointments come from file setup and finishing choices—not the printer.
-        These are the common issues we fix before production so you don’t waste money.
+        These are the reasons people reprint: wrong file setup or weak finishing. We fix them before production.
       </p>
 
-      <div class="micro-grid" style="margin-top:16px;">
+      <div class="micro-grid">
         <div class="card micro">
           <span class="badge-inline">Pixelation</span>
-          <p style="opacity:.88;margin:0;">Low-res images stretched to banner size, resulting in blurry faces, logos and text.</p>
+          <p style="opacity:.88;margin:0;">Low-res images stretched to banner size → blurry faces, logos, and text.</p>
         </div>
-
         <div class="card micro">
-          <span class="badge-inline">Wrong Size</span>
-          <p style="opacity:.88;margin:0;">Artwork not scaled correctly (e.g., roll-up content cropped or backdrop logos too small).</p>
+          <span class="badge-inline">Cropping</span>
+          <p style="opacity:.88;margin:0;">Wrong size or missing safe margins → important content gets trimmed off.</p>
         </div>
-
         <div class="card micro">
           <span class="badge-inline">No Bleed</span>
-          <p style="opacity:.88;margin:0;">Posters trimmed without bleed, causing white edges or cutting into text.</p>
+          <p style="opacity:.88;margin:0;">Posters trimmed without bleed → white edges or cutting into artwork.</p>
         </div>
-
         <div class="card micro">
           <span class="badge-inline">Weak Finishing</span>
-          <p style="opacity:.88;margin:0;">Outdoor banners without proper hemming/eyelets tear quickly in wind and handling.</p>
-        </div>
-      </div>
-
-      <div class="cta-strip" style="margin-top:18px;">
-        <div style="min-width:260px">
-          <strong>Need design help before printing?</strong>
-          <div style="opacity:.86;margin-top:6px">
-            We can design or re-set your artwork to match large format specs and installation needs.
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn-primary" href="/contact">Request Design + Print</a>
-          <a class="btn-secondary" href="/services/graphic-design-kampala/">Graphic Design</a>
+          <p style="opacity:.88;margin:0;">Outdoor banners without proper hemming/eyelets tear faster in wind and handling.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- GALLERY -->
-  <section class="section light animate" id="gallery">
+  <section class="section light animate" id="gallery" style="padding-top:50px;">
     <div class="content-wrap">
       <h2>Large Format Printing Gallery</h2>
       <p style="opacity:.9;max-width:980px;margin-top:8px;">
-        A quick snapshot of large format outputs prepared for real use (events, shops, offices and outdoor visibility).
+        Real-world outputs prepared for events, shops, offices and outdoor visibility.
       </p>
 
       <div class="gallery-grid">
-        <img src="/assets/img/services/printing-services-kampala/large-format-printing-kampala/01_large-format-printing-kampala_kamog_artistry_u_ltd.webp" alt="Outdoor promotional banner printing in Kampala with eyelets for mounting." loading="lazy" decoding="async" />
+        <img src="/assets/img/services/printing-services-kampala/large-format-printing-kampala/01_large-format-printing-kampala_kamog_artistry_u_ltd.webp" alt="Outdoor PVC banner printing in Kampala finished with eyelets for mounting." loading="lazy" decoding="async" />
         <img src="/assets/img/services/printing-services-kampala/large-format-printing-kampala/02_large-format-printing-kampala_kamog_artistry_u_ltd.webp" alt="Event backdrop printing in Kampala prepared for clean stage and photo-wall setup." loading="lazy" decoding="async" />
         <img src="/assets/img/services/printing-services-kampala/large-format-printing-kampala/03_large-format-printing-kampala_kamog_artistry_u_ltd.webp" alt="Roll-up banner printing for corporate presentations and activations in Kampala." loading="lazy" decoding="async" />
-        <img src="/assets/img/services/printing-services-kampala/large-format-printing-kampala/04_large-format-printing-kampala_kamog_artistry_u_ltd.webp" alt="Large poster printing in Kampala with correct bleed and sharp text for campaigns." loading="lazy" decoding="async" />
+        <img src="/assets/img/services/printing-services-kampala/large-format-printing-kampala/04_large-format-printing-kampala_kamog_artistry_u_ltd.webp" alt="Large poster printing in Kampala with correct bleed and sharp typography for campaigns." loading="lazy" decoding="async" />
         <img src="/assets/img/services/printing-services-kampala/large-format-printing-kampala/05_large-format-printing-kampala_kamog_artistry_u_ltd.webp" alt="Wall graphics printing for office or retail branding in Kampala." loading="lazy" decoding="async" />
         <img src="/assets/img/services/printing-services-kampala/large-format-printing-kampala/06_large-format-printing-kampala_kamog_artistry_u_ltd.webp" alt="Signage-ready large format prints prepared for mounting and fabrication workflows." loading="lazy" decoding="async" />
       </div>
     </div>
   </section>
 
-  <!-- ✅ RELEVANT CASE STUDY (hub-style portfolio layout, single item) -->
-  <section class="section light animate" id="case-study">
+  <!-- RELATED CLUSTERS (YOUR REAL EXISTING PRINTING CLUSTERS) -->
+  <section class="section light animate" id="clusters" style="padding-top:50px;">
     <div class="content-wrap">
-      <h2>Relevant Case Study</h2>
-      <p style="opacity:.9;max-width:980px;margin-top:8px;">
-        A practical example where large format outputs support visibility and customer guidance on-site.
+      <h2>Related Printing Pages (Explore More Print Services)</h2>
+      <p style="opacity:.9;max-width:980px;">
+        These are the real cluster pages inside your <strong>Printing Services Kampala</strong> hub. Use them to match the exact print product you need.
       </p>
 
-      <div class="portfolio-grid">
-        <article class="portfolio-card">
-          <figure>
-            <a class="card-link" href="/portfolio/ability-pharmacy">
-              <img src="/assets/img/portfolio/thumbnails/ability-pharmacy-thumb.jpg"
-                   alt="Ability Pharmacy — Branding and visibility case study"
-                   width="980" height="560" loading="lazy" decoding="async" />
-            </a>
-          </figure>
+      <div class="cluster-grid">
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/banner-printing-kampala/"><strong>Banner Printing Kampala</strong></a></h3>
+          <p>PVC/mesh banners, finishing and mounting guidance for outdoor visibility.</p>
+        </div>
 
-          <h3><a href="/portfolio/ability-pharmacy">Ability Pharmacy — Branding &amp; Visibility</a></h3>
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/poster-printing-kampala/"><strong>Poster Printing Kampala</strong></a></h3>
+          <p>Campaign posters with correct bleed, paper recommendations and optional lamination.</p>
+        </div>
 
-          <p class="portfolio-meta">
-            A visibility-focused rollout showing how print, signage-ready outputs and consistent branding improve recognition and customer navigation.
-          </p>
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/sticker-printing-kampala/"><strong>Sticker Printing Kampala</strong></a></h3>
+          <p>Labels and stickers for packaging, branding and retail use.</p>
+        </div>
 
-          <div class="portfolio-links">
-            <a class="btn-secondary" href="/services/signage-and-branding-kampala/">Relevant: Signage</a>
-            <a class="btn-secondary" href="/services/printing-services-kampala/">Relevant: Printing Hub</a>
-          </div>
-        </article>
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/flyer-printing-kampala/"><strong>Flyer Printing Kampala</strong></a></h3>
+          <p>Mass flyers for promotions, activations and distribution.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/brochure-printing-kampala/"><strong>Brochure Printing Kampala</strong></a></h3>
+          <p>Folded brochures for corporate marketing and product/service details.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/business-card-printing-kampala/"><strong>Business Card Printing Kampala</strong></a></h3>
+          <p>Business cards with premium paper options and finishing.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/book-printing-kampala/"><strong>Book Printing Kampala</strong></a></h3>
+          <p>Manuals, booklets and bound books for institutions and authors.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/catalog-printing-kampala/"><strong>Catalog Printing Kampala</strong></a></h3>
+          <p>Catalogues and multi-page product documents for sales and procurement.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/magazine-printing-kampala/"><strong>Magazine Printing Kampala</strong></a></h3>
+          <p>Magazines and publication printing with clean finishing.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/digital-printing-kampala/"><strong>Digital Printing Kampala</strong></a></h3>
+          <p>Fast digital print production for short runs and urgent jobs.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/offset-printing-kampala/"><strong>Offset Printing Kampala</strong></a></h3>
+          <p>Cost-efficient printing for high quantities and consistent output.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/print-finishing-services-kampala/"><strong>Print Finishing Services</strong></a></h3>
+          <p>Lamination, binding, folding, trimming and production finishing.</p>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/services/printing-services-kampala/pricing/"><strong>Printing Services Pricing</strong></a></h3>
+          <p>Pricing ranges, what affects cost, and fast quote guidance.</p>
+        </div>
       </div>
 
       <div class="cta-strip" style="margin-top:18px;">
         <div style="min-width:260px">
           <strong>Need a complete visibility rollout?</strong>
           <div style="opacity:.86;margin-top:6px">
-            We can handle design, printing, and implementation across banners, posters, shop branding and signage workflows.
+            Pair large format prints with full execution via <a href="/services/event-branding-kampala/"><strong>Event Branding</strong></a> or
+            signage builds via <a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication</strong></a>.
           </div>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <a class="btn-primary" href="/contact">Request Quote</a>
-          <a class="btn-secondary" href="/services/signage-and-branding-kampala/">Signage Fabrication</a>
+          <a class="btn-secondary" href="/services/printing-services-kampala/">Back to Hub</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING SIGNAL -->
-  <section class="section light animate" id="pricing">
-    <div class="content-wrap">
-      <h2>Large Format Printing Pricing in Kampala (What Affects Cost)</h2>
-
-      <div class="grid" style="margin-top:18px;">
-        <div class="card">
-          <h3>Size & Quantity</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Larger sizes and higher quantities affect material usage and production time.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Material & Finishing</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Indoor vs outdoor materials, lamination, hemming, eyelets, mounting, frames/stands all affect the final price.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Artwork Setup</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Ready-to-print files are fastest. If design or file correction is needed (bleed, scaling, resolution), we quote it clearly.
-          </p>
-        </div>
-      </div>
-
-      <div class="cta-strip" style="margin-top:18px;">
-        <div style="min-width:260px">
-          <strong>Want an accurate quote fast?</strong>
-          <div style="opacity:.86;margin-top:6px">
-            Send size, quantity, deadline, and usage (indoor/outdoor). Attach artwork if available.
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn-primary" href="/contact">Request Quote</a>
-          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp Specs</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✅ PROOF (links now blue in this section) -->
-  <section class="section light animate" id="proof">
-    <div class="content-wrap">
-      <h2>Why Businesses Choose Kamog Artistry for Large Format Printing</h2>
-
-      <div class="micro-grid" style="margin-top:16px;">
-        <div class="card micro">
-          <span class="badge-inline">Proof-First</span>
-          <p style="opacity:.88;margin:0;">We confirm specs and layout before production to reduce costly mistakes.</p>
-        </div>
-
-        <div class="card micro">
-          <span class="badge-inline">Clean Finishing</span>
-          <p style="opacity:.88;margin:0;">Hemming, eyelets, mounting and handling considerations for real installation.</p>
-        </div>
-
-        <div class="card micro">
-          <span class="badge-inline">Practical Guidance</span>
-          <p style="opacity:.88;margin:0;">We help you select the right material for indoor/outdoor durability in Kampala.</p>
-        </div>
-
-        <div class="card micro">
-          <span class="badge-inline">One Team</span>
-          <p style="opacity:.88;margin:0;">Design + print + signage workflows available for complete brand rollout.</p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:16px;">
-        <p style="opacity:.88;margin:0;">
-          Need a complete implementation? Explore
-          <a href="/services/event-branding-kampala/"><strong>Event Branding Kampala</strong></a>,
-          <a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication Uganda</strong></a>, and
-          <a href="/services/vehicle-branding-kampala/"><strong>Vehicle Branding Kampala</strong></a>.
-        </p>
       </div>
     </div>
   </section>
 
   <!-- FAQs -->
-  <section class="section light animate" id="faqs">
+  <section class="section light animate" id="faqs" style="padding-top:50px;">
     <div class="content-wrap">
       <h2>Large Format Printing Kampala — FAQs</h2>
 
@@ -776,61 +887,62 @@
         <div class="card">
           <h3>What do you need to quote large format printing accurately?</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Size (W×H), quantity, usage (indoor/outdoor), finishing (eyelets/hemming/lamination/mounting), deadline, and delivery location.
-            If you have artwork, share it—if not, we can design or fix setup.
+            Size (W×H), quantity, usage (indoor/outdoor), finishing (hemming/eyelets/lamination/mounting), deadline, and delivery location.
+            If you have artwork, share it. For budget guidance first, see <a href="/services/printing-services-kampala/pricing/"><strong>Printing Pricing</strong></a>.
           </p>
         </div>
 
         <div class="card">
-          <h3>Can you print urgent banners and event backdrops?</h3>
+          <h3>Do you finish banners with hemming and eyelets?</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Yes — for outdoor and high-handling use we recommend reinforced hemming and metal eyelets for strong mounting.
+            For banner-specific details, visit <a href="/services/printing-services-kampala/banner-printing-kampala/"><strong>Banner Printing Kampala</strong></a>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Can you print urgent banners, roll-ups or backdrops?</h3>
           <p style="opacity:.88;margin-top:10px;">
             Yes, depending on size, quantity and workload. The fastest jobs are those with clear specs and quick proof approval.
-            For full event support, use <a href="/services/event-branding-kampala/"><strong>Event Branding</strong></a>.
           </p>
         </div>
 
         <div class="card">
-          <h3>My artwork is low quality—can you still print?</h3>
+          <h3>What are common roll-up banner sizes?</h3>
           <p style="opacity:.88;margin-top:10px;">
-            We’ll first check the file. If it’s too low-res for the size, we’ll recommend redesign, re-setting, or using suitable alternatives to avoid blurry output.
+            Common sizes are 85×200cm and 100×200cm (custom sizes can be done on request). If you want a roll-up-specific page, see
+            <strong>Roll-Up Banner Printing</strong></a>.
           </p>
         </div>
 
         <div class="card">
-          <h3>Do you help with installation or mounting?</h3>
+          <h3>My artwork is low quality — can you still print?</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Yes—finishing and preparation depend on where it will be installed. For signage builds and fabrication, see
-            <a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication</strong></a>.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Which is better: roll-ups or banners?</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Roll-ups are ideal for indoor portable marketing and repeated setups. Banners are better for outdoor visibility and larger coverage.
-            Tell us the use-case and we’ll advise the best option.
+            We check the file first. If it’s too low-res for the size, we’ll recommend redesign, correct setup, or alternatives to avoid blurry output.
+            If you need help preparing files, see <strong>Print-Ready Artwork</strong></a>.
           </p>
         </div>
 
         <div class="card">
           <h3>Do you deliver around Kampala and nearby areas?</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Yes—Kampala, Wakiso, Mukono and nearby areas. Share your location and deadline for delivery planning.
+            Yes — Kampala, Wakiso, Mukono and nearby areas. Share your location and deadline for delivery planning.
           </p>
         </div>
 
         <div class="card">
-          <h3>Can you handle design and printing together?</h3>
+          <h3>Do you handle design and printing together?</h3>
           <p style="opacity:.88;margin-top:10px;">
             Yes. If you need artwork created or corrected for large format specs, we can handle it end-to-end.
-            See <a href="/services/graphic-design-kampala/"><strong>Graphic Design Kampala</strong></a>.
+            Start via <a href="/contact"><strong>Contact</strong></a>.
           </p>
         </div>
 
         <div class="card">
           <h3>How do we start?</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Send your specs and deadline via <a href="/contact"><strong>Contact</strong></a> or WhatsApp. We’ll recommend the right material, finishing, and next steps.
+            Send your specs and deadline via <a href="/contact"><strong>Contact</strong></a> or WhatsApp.
+            We’ll recommend the right material, finishing and next steps.
           </p>
         </div>
       </div>
@@ -842,37 +954,18 @@
     </div>
   </section>
 
-  <!-- RELATED SERVICES -->
-  <section class="section light animate" id="related" style="padding-top:50px;">
-    <div class="content-wrap">
-      <h2>Related Services</h2>
-
-      <div class="card" style="margin-top:16px;">
-        <ul class="list-clean" style="margin-top:0;">
-          <li><a href="/services/printing-services-kampala/"><strong>Printing Services Kampala (Hub)</strong></a> — Explore all print services and production options.</li>
-          <li><a href="/services/printing-services-kampala/pricing/"><strong>Printing Pricing</strong></a> — Common scopes, ranges, and quote guidance.</li>
-          <li><a href="/services/event-branding-kampala/"><strong>Event Branding Kampala</strong></a> — Backdrops, stage branding, roll-ups and on-site execution.</li>
-          <li><a href="/services/signage-and-branding-kampala/"><strong>Signage Fabrication Uganda</strong></a> — Fabrication and signage builds beyond printed output.</li>
-          <li><a href="/services/vehicle-branding-kampala/"><strong>Vehicle Branding Kampala</strong></a> — Branding for fleets, vans and promotional visibility.</li>
-          <li><a href="/services/graphic-design-kampala/"><strong>Graphic Design Kampala</strong></a> — Artwork setup, layouts and campaign design before production.</li>
-          <li><a href="/services/branding-kampala/"><strong>Branding Kampala</strong></a> — Identity and brand rollout support across print and signage.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
   <!-- FINAL CTA -->
   <section class="section light animate" style="padding-top:50px;">
     <div class="content-wrap">
       <div class="card">
         <h2 style="margin-bottom:10px;">Ready to print large format that looks sharp?</h2>
         <p style="opacity:.88;margin-bottom:16px;">
-          Send size, quantity, deadline and where it will be installed. We’ll advise the right material and finishing—then deliver clean prints that mount well and read clearly.
+          Send size, quantity, deadline and where it will be installed. We’ll advise the right material and finishing — then deliver clean prints that mount well and read clearly.
         </p>
 
         <div class="hero-actions">
           <a class="btn-primary" href="/contact">Start Large Format Order</a>
-          <a class="btn-secondary" href="/contact#free-consult" style="margin-left:8px;">Free 10-Min Consultation</a>
+          <a class="btn-secondary" href="/services/printing-services-kampala/" style="margin-left:8px;">Back to Printing Hub</a>
         </div>
 
         <p style="opacity:.82;margin-top:14px;">
@@ -884,11 +977,12 @@
 
 </main>
 
-<!-- JSON-LD (required) -->
+<!-- JSON-LD: LocalBusiness -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://kamogartistry.com/#localbusiness",
   "name": "Kamog Artistry (U) Ltd",
   "url": "https://kamogartistry.com/",
   "email": "info@kamogartistry.com",
@@ -898,12 +992,7 @@
     "addressLocality": "Kampala",
     "addressCountry": "UG"
   },
-  "areaServed": [
-    "Kampala",
-    "Wakiso",
-    "Mukono",
-    "Uganda"
-  ],
+  "areaServed": ["Kampala","Wakiso","Mukono","Uganda"],
   "sameAs": [
     "https://www.facebook.com/611977605339985",
     "https://www.instagram.com/kamog_artistry_u_ltd",
@@ -912,35 +1001,68 @@
 }
 </script>
 
+<!-- JSON-LD: ImageObject (hero) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ImageObject",
+  "contentUrl":"https://kamogartistry.com/assets/img/services/printing-services-kampala/large-format-printing-kampala/hero.webp",
+  "url":"https://kamogartistry.com/services/printing-services-kampala/large-format-printing-kampala/",
+  "caption":"Large format printing in Kampala: banners, posters and event backdrops",
+  "creator":{
+    "@type":"Organization",
+    "name":"Kamog Artistry (U) Ltd",
+    "url":"https://kamogartistry.com/"
+  }
+}
+</script>
+
+<!-- JSON-LD: Service + OfferCatalog -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://kamogartistry.com/services/printing-services-kampala/large-format-printing-kampala/#service",
   "name": "Large Format Printing Kampala",
   "serviceType": "Large Format Printing",
-  "areaServed": [
-    "Kampala",
-    "Wakiso",
-    "Mukono",
-    "Uganda"
-  ],
+  "description": "Large format printing in Kampala, Uganda: PVC/mesh banners, panaflex banners, event backdrops, roll-up banners, posters, wall graphics and signage-ready prints with clean finishing and a proof-first workflow.",
   "url": "https://kamogartistry.com/services/printing-services-kampala/large-format-printing-kampala/",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Kamog Artistry (U) Ltd",
-    "url": "https://kamogartistry.com/",
-    "telephone": "+256775251445",
-    "email": "info@kamogartistry.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kampala",
-      "addressCountry": "UG"
-    },
-    "areaServed": [
-      "Kampala",
-      "Wakiso",
-      "Mukono",
-      "Uganda"
+  "areaServed": ["Kampala","Wakiso","Mukono","Uganda"],
+  "provider": { "@id": "https://kamogartistry.com/#localbusiness" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Large Format Printing Deliverables",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "PVC & Mesh Banner Printing" },
+        "priceCurrency": "UGX",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Event Backdrop / Panaflex Printing" },
+        "priceCurrency": "UGX",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Roll-Up Banner Printing" },
+        "priceCurrency": "UGX",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Poster Printing (A2/A1/A0 & Custom)" },
+        "priceCurrency": "UGX",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Wall Graphics & Signage-Ready Prints" },
+        "priceCurrency": "UGX",
+        "availability": "https://schema.org/InStock"
+      }
     ]
   },
   "offers": {
@@ -952,39 +1074,21 @@
 }
 </script>
 
+<!-- JSON-LD: Breadcrumb -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://kamogartistry.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://kamogartistry.com/services/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Printing Services Kampala",
-      "item": "https://kamogartistry.com/services/printing-services-kampala/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Large Format Printing Kampala",
-      "item": "https://kamogartistry.com/services/printing-services-kampala/large-format-printing-kampala/"
-    }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kamogartistry.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://kamogartistry.com/services/" },
+    { "@type": "ListItem", "position": 3, "name": "Printing Services Kampala", "item": "https://kamogartistry.com/services/printing-services-kampala/" },
+    { "@type": "ListItem", "position": 4, "name": "Large Format Printing Kampala", "item": "https://kamogartistry.com/services/printing-services-kampala/large-format-printing-kampala/" }
   ]
 }
 </script>
 
+<!-- JSON-LD: FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -995,39 +1099,39 @@
       "name": "What do you need to quote large format printing accurately?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We need size (W×H), quantity, usage (indoor/outdoor), finishing (eyelets/hemming/lamination/mounting), deadline, and delivery location. If you have artwork, share it—if not, we can design or fix setup."
+        "text": "We need size (W×H), quantity, usage (indoor/outdoor), finishing (hemming/eyelets/lamination/mounting), deadline, and delivery location. If you have artwork, share it. For budget guidance, see the Printing Pricing page."
       }
     },
     {
       "@type": "Question",
-      "name": "Can you print urgent banners and event backdrops?",
+      "name": "Do you finish banners with hemming and eyelets?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, depending on size, quantity and workload. The fastest jobs are those with clear specs and quick proof approval. For full event support, use Event Branding."
+        "text": "Yes. For outdoor and high-handling use, we recommend reinforced hemming and metal eyelets for strong mounting. For banner-specific details, visit the Banner Printing Kampala page."
       }
     },
     {
       "@type": "Question",
-      "name": "My artwork is low quality—can you still print?",
+      "name": "Can you print urgent banners, roll-ups or backdrops?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We’ll check the file first. If it’s too low-res for the size, we’ll recommend redesign, re-setting, or alternatives to avoid blurry output."
+        "text": "Yes, depending on size, quantity and workload. The fastest jobs are those with clear specs and quick proof approval."
       }
     },
     {
       "@type": "Question",
-      "name": "Do you help with installation or mounting?",
+      "name": "What are common roll-up banner sizes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes—finishing and preparation depend on where it will be installed. For signage builds and fabrication, see Signage Fabrication."
+        "text": "Common sizes are 85×200cm and 100×200cm. Custom sizes can be done on request."
       }
     },
     {
       "@type": "Question",
-      "name": "Which is better: roll-ups or banners?",
+      "name": "My artwork is low quality — can you still print?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Roll-ups are ideal for indoor portable marketing and repeated setups. Banners are better for outdoor visibility and larger coverage. Tell us the use-case and we’ll advise the best option."
+        "text": "We check the file first. If it’s too low-res for the size, we’ll recommend redesign, correct setup, or suitable alternatives to avoid blurry output."
       }
     },
     {
@@ -1035,15 +1139,15 @@
       "name": "Do you deliver around Kampala and nearby areas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes—Kampala, Wakiso, Mukono and nearby areas. Share your location and deadline for delivery planning."
+        "text": "Yes — Kampala, Wakiso, Mukono and nearby areas. Share your location and deadline for delivery planning."
       }
     },
     {
       "@type": "Question",
-      "name": "Can you handle design and printing together?",
+      "name": "Do you handle design and printing together?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. If you need artwork created or corrected for large format specs, we can handle it end-to-end. See Graphic Design Kampala."
+        "text": "Yes. If you need artwork created or corrected for large format specs, we can handle it end-to-end via the Contact page."
       }
     },
     {
@@ -1051,7 +1155,7 @@
       "name": "How do we start?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Send your specs and deadline via the Contact page or WhatsApp. We’ll recommend the right material, finishing, and next steps."
+        "text": "Send your specs and deadline via the Contact page or WhatsApp. We’ll recommend the right material, finishing and next steps."
       }
     }
   ]
