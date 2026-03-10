@@ -41,14 +41,14 @@
 
   <url>
     <loc>https://kamogartistry.com/blog</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://kamogartistry.com/contact</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -57,16 +57,23 @@
 
   <url>
     <loc>https://kamogartistry.com/corporate-profile</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://kamogartistry.com/compliance</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
+
+  <url>
+  <loc>https://kamogartistry.com/site-index/</loc>
+  <lastmod>2026-03-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
 
 </urlset>
