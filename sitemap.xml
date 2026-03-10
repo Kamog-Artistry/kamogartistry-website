@@ -3,22 +3,27 @@
 
   <sitemap>
     <loc>https://kamogartistry.com/sitemap-core.xml</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </sitemap>
 
   <sitemap>
     <loc>https://kamogartistry.com/sitemap-services.xml</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </sitemap>
 
   <sitemap>
     <loc>https://kamogartistry.com/sitemap-portfolio.xml</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
   </sitemap>
 
   <sitemap>
     <loc>https://kamogartistry.com/sitemap-blog.xml</loc>
     <lastmod>2026-03-01</lastmod>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://kamogartistry.com/sitemap-images-graphic-design.xml</loc>
+    <lastmod>2026-03-10</lastmod>
   </sitemap>
 
 </sitemapindex>
