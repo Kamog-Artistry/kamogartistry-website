@@ -1,196 +1,117 @@
 [build]
-command = "npm run build"
-publish = "."
+  command = "npm run build"
+  publish = "."
 
 # ------------------------------------
 # Global security headers
 # ------------------------------------
 [[headers]]
-for = "/*"
-[headers.values]
+  for = "/*"
+  [headers.values]
+    # Enforce HTTPS
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
-Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-X-Frame-Options = "DENY"
-X-Content-Type-Options = "nosniff"
-Referrer-Policy = "strict-origin-when-cross-origin"
-Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-Content-Security-Policy = """
-default-src 'self' https:;
-img-src 'self' https: data:;
-style-src 'self' https: 'unsafe-inline';
-script-src 'self' https: 'unsafe-inline';
-font-src 'self' https: data:;
-connect-src 'self' https:;
-object-src 'none';
-base-uri 'self';
-form-action 'self' https:;
-frame-ancestors 'none';
-"""
+    # Basic CSP (keep aligned with your assets/embeds)
+    Content-Security-Policy = """
+      default-src 'self' https:;
+      img-src 'self' https: data:;
+      style-src 'self' https: 'unsafe-inline';
+      script-src 'self' https: 'unsafe-inline';
+      font-src 'self' https: data:;
+      connect-src 'self' https:;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self' https:;
+      frame-ancestors 'none';
+    """
 
 # ------------------------------------
 # Pretty URL for Services
+# 1) /services loads services.html (rewrite)
+# 2) /services.html permanently redirects to /services
 # ------------------------------------
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
 
 [[redirects]]
-from = "/services"
-to = "/services.html"
-status = 200
-
-[[redirects]]
-from = "/services.html"
-to = "/services"
-status = 301
-force = true
-
-
-# ------------------------------------
-# ROOT SERVICE PAGE MIGRATIONS
-# (Old root URLs → new /services structure)
-# ------------------------------------
-
-[[redirects]]
-from = "/printing-services-kampala"
-to = "/services/printing-services-kampala/"
-status = 301
-force = true
-
-[[redirects]]
-from = "/printing-services-kampala.html"
-to = "/services/printing-services-kampala/"
-status = 301
-force = true
-
-
-[[redirects]]
-from = "/branding-kampala"
-to = "/services/branding-kampala/"
-status = 301
-force = true
-
-[[redirects]]
-from = "/branding-kampala.html"
-to = "/services/branding-kampala/"
-status = 301
-force = true
-
-
-[[redirects]]
-from = "/large-format-printing-kampala"
-to = "/services/printing-services-kampala/large-format-printing-kampala/"
-status = 301
-force = true
-
-[[redirects]]
-from = "/large-format-printing-kampala.html"
-to = "/services/printing-services-kampala/large-format-printing-kampala/"
-status = 301
-force = true
-
-
-[[redirects]]
-from = "/vehicle-branding-kampala"
-to = "/services/vehicle-branding-kampala/"
-status = 301
-force = true
-
-[[redirects]]
-from = "/vehicle-branding-kampala.html"
-to = "/services/vehicle-branding-kampala/"
-status = 301
-force = true
-
-
-[[redirects]]
-from = "/signage-fabrication-uganda"
-to = "/services/signage-and-branding-kampala/"
-status = 301
-force = true
-
-[[redirects]]
-from = "/signage-fabrication-uganda.html"
-to = "/services/signage-and-branding-kampala/"
-status = 301
-force = true
-
-
-[[redirects]]
-from = "/custom-merchandise-uganda"
-to = "/services/custom-merchandise-uganda/"
-status = 301
-force = true
-
-[[redirects]]
-from = "/custom-merchandise-uganda.html"
-to = "/services/custom-merchandise-uganda/"
-status = 301
-force = true
-
-
-[[redirects]]
-from = "/branded-stationery-uganda"
-to = "/services/branded-stationery-uganda/"
-status = 301
-force = true
-
-[[redirects]]
-from = "/branded-stationery-uganda.html"
-to = "/services/branded-stationery-uganda/"
-status = 301
-force = true
+  from = "/services.html"
+  to = "/services"
+  status = 301
+  force = true
 
 
 # ------------------------------------
-# Additional legacy redirects already indexed
+# Legacy service URL redirects (indexed)
 # ------------------------------------
+[[redirects]]
+  from = "/printing-services-kampala"
+  to = "/services/printing-services-kampala/"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "/corporate-identity-design-kampala"
-to = "/services/branding-kampala/corporate-brand-identity-design-kampala/"
-status = 301
-force = true
+  from = "/signage-fabrication-uganda"
+  to = "/services/signage-and-branding-kampala/"
+  status = 301
+  force = true
 
-
-[[redirects]]
-from = "/signage-fabrication"
-to = "/services/signage-and-branding-kampala/"
-status = 301
-force = true
-
-
-# ------------------------------------
-# Blog cleanup
-# ------------------------------------
+  [[redirects]]
+  from = "/portfolio/seeta-high-school-receipt-book-printing-workshop"
+  to = "/portfolio/"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "/blog.html"
-to = "/blog"
-status = 301
-force = true
-
-
-# ------------------------------------
-# Old CMS query URLs
-# ------------------------------------
+  from = "/vehicle-branding-kampala"
+  to = "/services/vehicle-branding-kampala/"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "/post"
-to = "/blog"
-status = 301
-force = true
+  from = "/corporate-identity-design-kampala"
+  to = "/services/branding-kampala/corporate-brand-identity-design-kampala/"
+  status = 301
+  force = true
 
+[[redirects]]
+  from = "/large-format-printing-kampala"
+  to = "/services/printing-services-kampala/large-format-printing-kampala/"
+  status = 301
+  force = true
 
-# ------------------------------------
-# Asset caching
-# ------------------------------------
+[[redirects]]
+  from = "/signage-fabrication"
+  to = "/services/signage-and-branding-kampala/"
+  status = 301
+  force = true
 
-[[headers]]
-for = "/assets/img/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+  from = "/custom-merchandise-uganda"
+  to = "/services/custom-merchandise-uganda/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/branded-stationery-uganda"
+  to = "/services/branded-stationery-uganda/"
+  status = 301
+  force = true
 
 
 [[headers]]
-for = "/assets/img/icons/*"
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
