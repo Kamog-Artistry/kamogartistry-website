@@ -32,6 +32,39 @@
     """
 
 # ------------------------------------
+# Canonical host redirects
+# ------------------------------------
+[[redirects]]
+  from = "https://www.kamogartistry.com/*"
+  to = "https://kamogartistry.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.kamogartistry.com/*"
+  to = "https://kamogartistry.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://kamogartistry.com/*"
+  to = "https://kamogartistry.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+# ------------------------------------
 # Pretty URL for Services
 # 1) /services loads services.html (rewrite)
 # 2) /services.html permanently redirects to /services
@@ -47,6 +80,33 @@
   status = 301
   force = true
 
+# ------------------------------------
+# Pretty URL rewrites for key section index pages
+# ------------------------------------
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/portfolio.html"
+  status = 200
+
+# ------------------------------------
+# Legacy / query-string redirect
+# ------------------------------------
+[[redirects]]
+  from = "/post"
+  to = "/blog/branding-checklist-for-kampala-businesses/"
+  status = 301
+  force = true
+  query = { post = "branding-checklist-for-kampala-businesses" }
 
 # ------------------------------------
 # Legacy service URL redirects (indexed)
@@ -63,7 +123,7 @@
   status = 301
   force = true
 
-  [[redirects]]
+[[redirects]]
   from = "/portfolio/seeta-high-school-receipt-book-printing-workshop"
   to = "/portfolio/"
   status = 301
@@ -105,6 +165,83 @@
   status = 301
   force = true
 
+# ------------------------------------
+# Specific clean URL redirects requested
+# ------------------------------------
+[[redirects]]
+  from = "/portfolio/tooke-birdc-uma-2025.html"
+  to = "/portfolio/tooke-birdc-uma-2025"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/portfolio/ability-pharmacy.html"
+  to = "/portfolio/ability-pharmacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/portfolio/rokastars-film-productions.html"
+  to = "/portfolio/rokastars-film-productions"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/portfolio/sbl-intel-systems.html"
+  to = "/portfolio/sbl-intel-systems"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.htmlv"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/portfolio.html"
+  to = "/portfolio"
+  status = 301
+  force = true
+
+# ------------------------------------
+# Generic .html to clean URL redirects
+# ------------------------------------
+[[redirects]]
+  from = "/portfolio/:slug.html"
+  to = "/portfolio/:slug"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/:slug.html"
+  to = "/blog/:slug"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/:slug.html"
+  to = "/services/:slug"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:slug.html"
+  to = "/:slug"
+  status = 301
+  force = true
 
 [[headers]]
   for = "/assets/img/*"
