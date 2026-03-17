@@ -47,12 +47,6 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/blog"
-  to = "/blog/"
-  status = 301
-  force = true
-
 # ------------------------------------
 # Legacy service URL redirects (indexed)
 # ------------------------------------
