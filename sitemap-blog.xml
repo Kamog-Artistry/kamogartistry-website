@@ -1,25 +1,42 @@
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://kamogartistry.com/blog</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-28</lastmod>
   </url>
 
   <!-- BLOG POSTS -->
   <url>
-    <loc>https://kamogartistry.com/post?post=branding-printing-signage-guide-uganda</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://kamogartistry.com/blog/3d-signage-vs-light-boxes-uganda/</loc>
+    <lastmod>2026-03-28</lastmod>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/post?post=branding-checklist-for-kampala-businesses</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://kamogartistry.com/blog/branding-checklist-for-kampala-businesses/</loc>
+    <lastmod>2026-03-28</lastmod>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/post?post=best-file-formats-for-print-uganda</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://kamogartistry.com/blog/branding-printing-signage-in-uganda-practical-guide/</loc>
+    <lastmod>2026-03-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/blog/flyer-vs-brochure-printing-kampala/</loc>
+    <lastmod>2026-03-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/blog/print-file-formats-uganda/</loc>
+    <lastmod>2026-03-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/blog/signage-cost-uganda/</loc>
+    <lastmod>2026-03-28</lastmod>
   </url>
 
 </urlset>
+```
