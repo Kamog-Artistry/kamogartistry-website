@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en-UG">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="p:domain_verify" content="1ee9fc8da9fbce0e718b0db7c457fd31" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#04689A" />
+  <meta name="author" content="Kamog Artistry (U) Ltd" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <title>Shopping Cart | Marketplace | Kamog Artistry (U) Ltd</title>
+  <meta
+    name="description"
+    content="Review your selected marketplace products, update quantities and options, then continue to checkout with Kamog Artistry (U) Ltd."
+  />
+  <link rel="canonical" href="https://kamogartistry.com/marketplace/cart/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
+  <meta property="og:locale" content="en_UG" />
+  <meta property="og:title" content="Shopping Cart | Marketplace | Kamog Artistry (U) Ltd" />
+  <meta property="og:description" content="Review quantities, adjust item options and proceed to checkout." />
+  <meta property="og:url" content="https://kamogartistry.com/marketplace/cart/" />
+  <meta property="og:image" content="https://kamogartistry.com/assets/img/og/home-og.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shopping Cart | Marketplace | Kamog Artistry (U) Ltd" />
+  <meta name="twitter:description" content="Review quantities, adjust item options and proceed to checkout." />
+  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/og/home-og.jpg" />
+
+  <link rel="preconnect" href="https://kamogartistry.com" crossorigin />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/marketplace.css" />
+
+  <style>
+    :root{
+      --km-blue:#0b6fbf;
+      --km-blue-deep:#08354a;
+      --km-orange:#f28c28;
+      --km-ink:#08354a;
+      --km-bg:#edf3f7;
+      --km-card:#ffffff;
+      --km-border:rgba(0,0,0,.08);
+      --km-shadow:0 10px 24px rgba(0,0,0,.08);
+      --km-soft:#f7fbff;
+      --km-muted:#667a84;
+      --km-danger:#c43b3b;
+      --km-success:#1aa64a;
+      --km-max:1280px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body.marketplace-body{
+      margin:0;
+      background:var(--km-bg);
+      color:var(--km-ink);
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    img{max-width:100%;height:auto;display:block}
+    input,select,textarea,button{font:inherit}
+    a{text-underline-offset:3px}
+
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:12px;
+      top:12px;
+      width:auto;
+      height:auto;
+      padding:10px 12px;
+      background:#fff;
+      color:var(--km-ink);
+      border-radius:12px;
+      z-index:9999;
+    }
+
+    .marketplace-main{padding-top:84px}
+    .cart-wrap{max-width:var(--km-max);margin:0 auto;padding:16px 20px 80px}
+
+    .breadcrumbs{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 14px;
+      color:#6b7e88;
+      font-size:.94rem;
+    }
+    .breadcrumbs a{
+      color:var(--km-blue);
+      text-decoration:none;
+      font-weight:700;
+    }
+    .breadcrumbs span[aria-hidden="true"]{color:#91a0a8}
+
+    .cart-utility{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+    .utility-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 18px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--km-border);
+      box-shadow:var(--km-shadow);
+      color:var(--km-ink);
+      font-weight:800;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .utility-link.is-accent{
+      background:var(--km-orange);
+      border-color:var(--km-orange);
+      color:#fff;
+    }
+    .utility-link .count{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:26px;
+      height:26px;
+      border-radius:999px;
+      background:rgba(11,111,191,.09);
+      color:var(--km-blue);
+      padding:0 8px;
+      font-size:.82rem;
+      margin-left:8px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .hero-card,
+    .hero-side,
+    .section-card,
+    .cart-item,
+    .related-card{
+      background:#fff;
+      border:1px solid var(--km-border);
+      border-radius:20px;
+      box-shadow:var(--km-shadow);
+    }
+    .hero-card{
+      background:linear-gradient(135deg,#0a4a68 0%,#0b6fbf 100%);
+      color:#fff;
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      right:-70px;
+      top:-70px;
+      width:210px;
+      height:210px;
+      border-radius:50%;
+      background:rgba(255,255,255,.08);
+      pointer-events:none;
+    }
+    .hero-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      min-height:32px;
+      padding:0 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.14);
+      color:#fff;
+      font-weight:800;
+      font-size:.82rem;
+      letter-spacing:.02em;
+      margin-bottom:12px;
+    }
+    .hero-card h1{margin:0;font-size:clamp(1.9rem,3vw,2.7rem);line-height:1.04}
+    .hero-card p{margin:10px 0 0;color:rgba(255,255,255,.94);line-height:1.6;max-width:640px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .hero-actions a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 16px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      border:1px solid transparent;
+    }
+    .hero-actions .primary{background:#fff;color:var(--km-blue)}
+    .hero-actions .secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.18)}
+
+    .hero-side{padding:18px;display:grid;gap:14px}
+    .hero-stat{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:14px 16px;border-radius:16px;background:var(--km-soft);border:1px solid rgba(0,0,0,.05)
+    }
+    .hero-stat strong{display:block;font-size:1.1rem;color:var(--km-ink)}
+    .hero-stat span{color:var(--km-muted);font-size:.92rem;line-height:1.45}
+    .hero-stat .value{font-weight:900;color:var(--km-orange);white-space:nowrap}
+
+    .cart-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.85fr);gap:18px;align-items:start}
+    .cart-main,.cart-side{display:grid;gap:18px}
+
+    .section-card{overflow:hidden}
+    .section-head{padding:18px 18px 12px;border-bottom:1px solid rgba(0,0,0,.05)}
+    .section-head h2,.section-head h3{margin:0;color:var(--km-ink);line-height:1.2}
+    .section-head p{margin:6px 0 0;color:var(--km-muted);line-height:1.55;font-size:.93rem}
+    .section-body{padding:18px}
+
+    .cart-items{display:grid;gap:14px;padding:18px}
+    .cart-item{padding:16px;display:grid;grid-template-columns:124px minmax(0,1fr);gap:16px}
+    .item-media{
+      width:100%;aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#eef5fb;border:1px solid rgba(0,0,0,.05)
+    }
+    .item-media img{width:100%;height:100%;object-fit:cover}
+    .item-body{display:grid;gap:12px;min-width:0}
+    .item-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .item-title{margin:0;font-size:1.04rem;line-height:1.35}
+    .item-title a{text-decoration:none;color:var(--km-ink)}
+    .item-title a:hover{color:var(--km-blue)}
+
+    .product-card{
+      display:flex;
+      flex-direction:column;
+      background:#fff;
+      border:1px solid var(--km-border);
+      border-radius:18px;
+      box-shadow:var(--km-shadow);
+      overflow:hidden;
+      text-decoration:none;
+      color:inherit;
+      transition:transform .18s ease, box-shadow .18s ease;
+      min-width:0;
+    }
+    .product-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 16px 34px rgba(0,0,0,.10);
+    }
+    .product-card img{
+      width:100%;
+      aspect-ratio:4/3;
+      object-fit:cover;
+      background:#eef5fb;
+    }
+    .product-card-body{
+      padding:14px 14px 16px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      flex:1;
+    }
+    .product-card-title{
+      margin:0;
+      color:var(--km-ink);
+      font-size:1rem;
+      line-height:1.35;
+    }
+    .product-card-text{
+      margin:0;
+      color:#667a84;
+      line-height:1.5;
+      font-size:.92rem;
+    }
+    .product-meta{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .price-tag{
+      color:var(--km-orange);
+      font-weight:900;
+      font-size:1.08rem;
+      line-height:1.2;
+    }
+    .price-tag small{
+      display:block;
+      color:#6d7f89;
+      font-weight:700;
+      font-size:.8rem;
+      margin-top:3px;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:0 10px;
+      border-radius:999px;
+      background:rgba(11,111,191,.08);
+      color:var(--km-blue);
+      font-weight:800;
+      font-size:.82rem;
+      text-align:center;
+      white-space:nowrap;
+    }
+    .product-actions{
+      display:flex;
+      gap:10px;
+      margin-top:auto;
+    }
+    .product-link-btn,
+    .product-cart-btn{
+      flex:1;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:0 14px;
+      border-radius:999px;
+      font-weight:800;
+      text-decoration:none;
+      cursor:pointer;
+      transition:transform .16s ease, background .16s ease, border-color .16s ease, opacity .16s ease;
+      font:inherit;
+    }
+    .product-link-btn{
+      background:#f6f9fc;
+      color:var(--km-blue);
+      border:1px solid rgba(11,111,191,.12);
+    }
+    .product-cart-btn{
+      background:var(--km-orange);
+      color:#fff;
+      border:1px solid var(--km-orange);
+    }
+    .product-link-btn:hover,
+    .product-cart-btn:hover{
+      transform:translateY(-1px);
+    }
+    .product-cart-btn.is-added{
+      background:var(--km-success);
+      border-color:var(--km-success);
+    }
+    .item-desc{margin:0;color:var(--km-muted);line-height:1.55;font-size:.92rem}
+    .item-price{text-align:right;font-weight:900;color:var(--km-orange);white-space:nowrap}
+    .item-price small{display:block;color:#6d7f89;font-weight:700;font-size:.78rem;margin-top:3px}
+
+    .item-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .field{display:grid;gap:7px}
+    .field label{font-size:.82rem;font-weight:800;color:var(--km-muted)}
+    .field input,.field select,.field textarea{
+      width:100%;min-height:44px;border:1px solid rgba(0,0,0,.1);border-radius:12px;padding:10px 12px;background:#fff;color:var(--km-ink);outline:none
+    }
+    .field textarea{min-height:88px;resize:vertical}
+
+    .item-footer{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+    .qty-box{display:inline-flex;align-items:center;gap:10px;background:#f9fcff;border:1px solid rgba(0,0,0,.08);border-radius:999px;padding:6px}
+    .qty-btn{
+      width:38px;height:38px;border:none;border-radius:50%;background:#fff;color:var(--km-ink);font-size:1.15rem;font-weight:900;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.06)
+    }
+    .qty-btn:hover{background:#f3f8fc}
+    .qty-input{
+      width:54px;min-height:38px;border:none;background:transparent;text-align:center;font-weight:900;color:var(--km-ink);outline:none
+    }
+    .item-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .text-btn{border:none;background:transparent;padding:0;color:var(--km-blue);font-weight:800;cursor:pointer}
+    .text-btn.danger{color:var(--km-danger)}
+
+    .summary-list{display:grid;gap:14px}
+    .summary-line{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;font-size:.97rem}
+    .summary-line span:last-child{font-weight:800;text-align:right}
+    .summary-line.total{padding-top:14px;border-top:1px solid rgba(0,0,0,.08);font-size:1.08rem;font-weight:900}
+    .summary-note{padding:14px;border-radius:14px;background:#f8fbfd;border:1px solid rgba(0,0,0,.06);color:#5d7480;font-size:.92rem;line-height:1.55}
+    .summary-actions{display:grid;gap:10px;margin-top:2px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid transparent;cursor:pointer
+    }
+    .btn-primary{background:var(--km-orange);color:#fff}
+    .btn-secondary{background:#fff;color:var(--km-blue);border-color:rgba(11,111,191,.18)}
+    .btn-dark{background:var(--km-blue-deep);color:#fff}
+    .btn-danger{background:#fff5f5;color:var(--km-danger);border-color:rgba(196,59,59,.15)}
+    .btn[disabled]{opacity:.55;pointer-events:none}
+
+    .prefs-grid{display:grid;gap:12px}
+
+    .browse-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .category-tile,.related-card{display:block;text-decoration:none;color:inherit}
+    .category-tile{
+      padding:14px;border-radius:16px;background:#f9fcff;border:1px solid rgba(0,0,0,.06)
+    }
+    .category-tile strong{display:block;color:var(--km-ink)}
+    .category-tile span{display:block;margin-top:6px;color:var(--km-muted);font-size:.89rem;line-height:1.45}
+
+    .related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .related-card{overflow:hidden}
+    .related-card img{width:100%;aspect-ratio:16/11;object-fit:cover;background:#eef5fb}
+    .related-card-body{padding:12px}
+    .related-card-body h3{margin:0;color:var(--km-ink);font-size:.98rem;line-height:1.35}
+    .related-card-body p{margin:6px 0 0;color:var(--km-muted);font-size:.88rem;line-height:1.48}
+    .related-card-body .price{margin-top:8px;color:var(--km-orange);font-weight:900;font-size:.9rem}
+
+    .empty-state{padding:34px 20px;text-align:center;display:grid;justify-items:center;gap:14px}
+    .empty-icon{width:76px;height:76px;border-radius:50%;background:#eef5fb;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:var(--km-blue)}
+    .empty-state h3{margin:0;color:var(--km-ink)}
+    .empty-state p{margin:0;max-width:560px;color:var(--km-muted);line-height:1.6}
+
+    .save-status{font-size:.86rem;color:var(--km-muted)}
+
+    .footer a,.footer a:visited{color:#ffffff!important}
+    .footer a:not(.footer-cta):not(.social-btn),
+    .footer a:not(.footer-cta):not(.social-btn):visited{
+      text-decoration:none!important;
+      opacity:.95;
+    }
+    .footer a:not(.footer-cta):not(.social-btn):hover{
+      text-decoration:underline!important;
+      text-underline-offset:3px;
+      text-decoration-thickness:1px;
+    }
+
+    @media (max-width:1080px){
+      .hero,.cart-layout{grid-template-columns:1fr}
+    }
+    @media (max-width:1080px){
+      .browse-grid,.related-grid,.item-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){
+      .marketplace-main{padding-top:78px}
+      .cart-wrap{padding:12px 16px 92px}
+      .cart-item{grid-template-columns:1fr}
+      .item-media{max-width:180px}
+      .item-top{flex-direction:column}
+      .item-price{text-align:left}
+      .hero-actions,.summary-actions{grid-template-columns:1fr}
+      .hero-actions a,.summary-actions .btn,.utility-link{width:100%}
+      .cart-utility{flex-direction:column;align-items:stretch}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://kamogartistry.com/#organization",
+        "name":"Kamog Artistry (U) Ltd",
+        "legalName":"KAMOG ARTISTRY (U) LTD",
+        "url":"https://kamogartistry.com/",
+        "logo":"https://kamogartistry.com/assets/img/brand/logo-white.svg",
+        "email":"info@kamogartistry.com",
+        "telephone":"+256775251445"
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://kamogartistry.com/#website",
+        "url":"https://kamogartistry.com/",
+        "name":"Kamog Artistry (U) Ltd",
+        "publisher":{"@id":"https://kamogartistry.com/#organization"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://kamogartistry.com/marketplace/cart/#webpage",
+        "url":"https://kamogartistry.com/marketplace/cart/",
+        "name":"Shopping Cart",
+        "isPartOf":{"@id":"https://kamogartistry.com/#website"},
+        "publisher":{"@id":"https://kamogartistry.com/#organization"},
+        "description":"Responsive marketplace cart for products across apparels, merchandise, banners, stationery and signage."
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://kamogartistry.com/marketplace/cart/#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://kamogartistry.com/"},
+          {"@type":"ListItem","position":2,"name":"Marketplace","item":"https://kamogartistry.com/marketplace/"},
+          {"@type":"ListItem","position":3,"name":"Cart","item":"https://kamogartistry.com/marketplace/cart/"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg">
+</head>
+
+<body class="marketplace-body">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="loader" style="display:none" class="hidden" aria-hidden="true">
+    <img loading="lazy" src="/assets/img/brand/loader-logo.png" alt="" decoding="async" width="120" height="120" />
+    <div class="loader-bar"></div>
+  </div>
+
+  <header class="header header--mvp">
+    <nav class="nav" aria-label="Primary navigation">
+      <a aria-label="Go to homepage" href="/">
+        <img
+          src="/assets/img/brand/logo-white.svg"
+          class="logo"
+          alt="Kamog Artistry (U) Ltd"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="/about" aria-haspopup="true" aria-expanded="false">
+            About <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+          <ul class="dropdown" aria-label="About submenu">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about#our-process">Our Process</a></li>
+            <li><a href="/about#service-areas">Service Areas</a></li>
+            <li><a href="/about#faqs">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="/services" aria-haspopup="true" aria-expanded="false">
+            Services <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+          <ul class="dropdown" aria-label="Services submenu">
+            <li><a href="/services/branding-kampala/">Branding</a></li>
+            <li><a href="/services/graphic-design-kampala/">Graphic Design</a></li>
+            <li><a href="/services/printing-services-kampala/">Printing</a></li>
+            <li><a href="/services/signage-and-branding-kampala/">Signage &amp; Branding</a></li>
+            <li><a href="/services/branded-stationery-uganda/">Branded Stationery</a></li>
+            <li><a href="/services/custom-merchandise-uganda/">Custom Merchandise</a></li>
+            <li><a href="/services/event-branding-kampala/">Event Branding</a></li>
+            <li><a href="/services/outdoor-advertising-kampala/">Outdoor Advertising</a></li>
+            <li><a href="/services/vehicle-branding-kampala/">Vehicle Branding</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="/marketplace/" aria-current="page" aria-haspopup="true" aria-expanded="false">
+            Marketplace <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+          <ul class="dropdown" aria-label="Marketplace submenu">
+            <li><a href="/marketplace/">Shop</a></li>
+            <li><a href="/marketplace/category/apparels/">Apparels</a></li>
+            <li><a href="/marketplace/category/branded-merchandise/">Branded Merchandise</a></li>
+            <li><a href="/marketplace/category/banners/">Banners &amp; Event Displays</a></li>
+            <li><a href="/marketplace/category/stationery/">Branded Stationery</a></li>
+            <li><a href="/marketplace/category/signage/">Signage</a></li>
+            <li><a href="/marketplace/products/">View All Products</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/blog">Insights</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+
+        <li class="has-dropdown">
+          <a href="/corporate-profile" aria-haspopup="true" aria-expanded="false">
+            Corporate <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
+          <ul class="dropdown" aria-label="Corporate submenu">
+            <li><a href="/corporate-profile">Corporate Profile</a></li>
+            <li><a href="/corporate-profile#compliance">Compliance</a></li>
+            <li><a href="/corporate-profile#procurement">Procurement Support</a></li>
+            <li><a href="/contact">Request a Quote</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+
+      <button
+        id="menuBtn"
+        class="menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="navLinks"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <main class="marketplace-main" id="main">
+    <div class="cart-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumbs">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="/marketplace/">Marketplace</a>
+        <span aria-hidden="true">/</span>
+        <span>Cart</span>
+      </nav>
+
+      <section class="cart-utility" aria-label="Cart tools">
+        <a class="utility-link" href="/marketplace/categories/">Browse Categories</a>
+        <a class="utility-link" href="/marketplace/products/">View All Products</a>
+        <a class="utility-link" href="/marketplace/cart/">Cart <span class="count" data-cart-count>0</span></a>
+        <a class="utility-link is-accent" href="/marketplace/quote-request/">Request Quote</a>
+      </section>
+
+      <section class="hero" aria-labelledby="cart-title">
+        <div class="hero-card">
+          <span class="hero-eyebrow">Marketplace Cart</span>
+          <h1 id="cart-title">Shopping cart</h1>
+          <p>Review products from apparels, branded merchandise, banners, stationery and signage in one place.</p>
+          <p>Adjust quantities, update saved options, add order notes, then continue to checkout when ready.</p>
+          <div class="hero-actions">
+            <a class="primary" href="/marketplace/checkout/" id="heroCheckoutBtn">Proceed to Checkout</a>
+            <a class="secondary" href="/marketplace/categories/">Continue Shopping</a>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <div class="hero-stat">
+            <div>
+              <strong>Items in cart</strong>
+              <span>Live count across all selected products.</span>
+            </div>
+            <div class="value" id="heroItemCount">0</div>
+          </div>
+          <div class="hero-stat">
+            <div>
+              <strong>Estimated subtotal</strong>
+              <span>Before delivery and artwork support review.</span>
+            </div>
+            <div class="value" id="heroSubtotal">UGX 0</div>
+          </div>
+          <div class="hero-stat">
+            <div>
+              <strong>Saved automatically</strong>
+              <span>Your cart stays in the browser until cleared.</span>
+            </div>
+            <div class="value">Local</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="cart-layout">
+        <section class="cart-main">
+          <article class="section-card" aria-labelledby="cart-items-title">
+            <div class="section-head">
+              <h2 id="cart-items-title">Cart items</h2>
+              <p>Change quantity, edit saved options or remove items before checkout.</p>
+            </div>
+            <div class="cart-items" id="cartItemsContainer"></div>
+          </article>
+
+          <article class="section-card" aria-labelledby="cart-prefs-title">
+            <div class="section-head">
+              <h2 id="cart-prefs-title">Order notes</h2>
+              <p>Keep it short. These details save automatically.</p>
+            </div>
+            <div class="section-body">
+              <div class="prefs-grid">
+                <div class="field">
+                  <label for="order-notes">Order notes</label>
+                  <textarea id="order-notes" placeholder="Delivery notes, deadline, branch, brand instructions or any important request."></textarea>
+                </div>
+                <div class="field">
+                  <label for="artwork-status">Artwork status</label>
+                  <select id="artwork-status">
+                    <option value="">Select artwork status</option>
+                    <option value="Artwork ready and upload available">Artwork ready and upload available</option>
+                    <option value="Need minor artwork cleanup">Need minor artwork cleanup</option>
+                    <option value="Need full design support">Need full design support</option>
+                    <option value="Will send artwork after checkout">Will send artwork after checkout</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="delivery-choice">Delivery or pickup</label>
+                  <select id="delivery-choice">
+                    <option value="pickup">Pickup from office</option>
+                    <option value="kampala">Delivery within Kampala</option>
+                    <option value="outside-kampala">Delivery outside Kampala</option>
+                    <option value="installation">Installation / setup needed</option>
+                  </select>
+                </div>
+                <div class="save-status" id="saveStatus">Preferences save automatically.</div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <aside class="cart-side">
+          <section class="section-card" aria-labelledby="summary-title">
+            <div class="section-head">
+              <h3 id="summary-title">Order summary</h3>
+              <p>Estimated totals before final confirmation.</p>
+            </div>
+            <div class="section-body">
+              <div class="summary-list">
+                <div class="summary-line"><span>Items</span><span id="summaryItemCount">0</span></div>
+                <div class="summary-line"><span>Subtotal</span><span id="summarySubtotal">UGX 0</span></div>
+                <div class="summary-line"><span>Estimated delivery</span><span id="summaryDelivery">UGX 0</span></div>
+                <div class="summary-line"><span>Artwork support</span><span id="summaryArtwork">To be confirmed</span></div>
+                <div class="summary-line total"><span>Estimated total</span><span id="summaryTotal">UGX 0</span></div>
+              </div>
+              <div class="summary-note" style="margin-top:16px">
+                Final price can still change for quantity breaks, size mix, design work, delivery distance, installation or custom production details.
+              </div>
+              <div class="summary-actions" style="margin-top:16px">
+                <a class="btn btn-primary" href="/marketplace/checkout/" id="proceedCheckoutBtn">Proceed to Checkout</a>
+                <a class="btn btn-secondary" href="/marketplace/categories/">Continue Shopping</a>
+                <a class="btn btn-dark" href="/marketplace/quote-request/">Request Formal Quote</a>
+                <button class="btn btn-danger" type="button" id="clearCartBtn">Clear Cart</button>
+              </div>
+            </div>
+          </section>
+
+                
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-col">
+        <h4>Kamog Artistry (U) Ltd</h4>
+        <p>
+          Branding, design, print and signage solutions for businesses,
+          institutions and events across Uganda.
+        </p>
+        <div class="footer-badges">
+          <a class="badge" href="/services/branding-kampala/">Branding</a>
+          <a class="badge" href="/services/graphic-design-kampala/">Design</a>
+          <a class="badge" href="/services/printing-services-kampala/">Printing</a>
+          <a class="badge" href="/services/signage-and-branding-kampala/">Signage</a>
+          <a class="badge" href="/services/branded-stationery-uganda/">Stationery</a>
+          <a class="badge" href="/services/custom-merchandise-uganda/">Merch</a>
+          <a class="badge" href="/services/event-branding-kampala/">Events</a>
+          <a class="badge" href="/services/vehicle-branding-kampala/">Vehicles</a>
+        </div>
+        <p style="opacity:.8;margin-top:12px">
+          Serving Kampala, Wakiso, Mukono, Uganda nationwide and selected neighbouring East African markets.
+        </p>
+        <p style="opacity:.8;margin-top:10px">
+          <a href="/corporate-profile">Corporate Profile</a>
+          <span style="opacity:.6"> • </span>
+          <a href="/compliance">Compliance</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Marketplace</h4>
+        <ul class="footer-list">
+          <li><a href="/marketplace/category/apparels/">Apparels</a></li>
+          <li><a href="/marketplace/category/branded-merchandise/">Branded Merchandise</a></li>
+          <li><a href="/marketplace/category/banners/">Banners</a></li>
+          <li><a href="/marketplace/category/signage/">Signage</a></li>
+          <li><a href="/marketplace/products/">View All Products</a></li>
+        </ul>
+        <p style="opacity:.8;margin-top:14px;line-height:1.7">
+          Explore branded apparel, merchandise, banners and signage for businesses,
+          institutions and events across Uganda.
+        </p>
+        <p style="opacity:.8;margin-top:12px">
+          <a href="/marketplace/products/">All Products</a>
+          <span style="opacity:.6"> • </span>
+          <a href="/contact">Request a Quote</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <a class="footer-cta" href="/contact">Contact Us</a>
+        <ul class="footer-list" style="margin-top:16px">
+          <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
+          <li><a href="tel:+256775251445">+256 775 251 445</a></li>
+          <li>P.O. Box 201929, Kampala - Uganda</li>
+        </ul>
+        <h4 style="margin-top:22px">Follow Us</h4>
+        <div class="social" style="margin-top:16px">
+          <a aria-label="WhatsApp" class="social-btn" href="https://wa.me/256775251445" rel="noopener" target="_blank" title="WhatsApp"><img alt="" decoding="async" height="22" loading="lazy" src="/assets/img/icons/whatsapp.svg" width="22"/></a>
+          <a aria-label="LinkedIn" class="social-btn" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" rel="noopener" target="_blank" title="LinkedIn"><img alt="" decoding="async" height="22" loading="lazy" src="/assets/img/icons/linkedin.svg" width="22"/></a>
+          <a aria-label="TikTok" class="social-btn" href="https://www.tiktok.com/@kamogartistry?_r=1&amp;_t=ZT-93C8X0CPXUt" rel="noopener" target="_blank" title="TikTok"><img alt="" decoding="async" height="22" loading="lazy" src="/assets/img/icons/tiktok.svg" width="22"/></a>
+          <a aria-label="Instagram" class="social-btn" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" rel="noopener" target="_blank" title="Instagram"><img alt="" decoding="async" height="22" loading="lazy" src="/assets/img/icons/instagram.svg" width="22"/></a>
+          <a aria-label="X" class="social-btn" href="https://x.com/kamogartistry" rel="noopener" target="_blank" title="X"><img alt="" decoding="async" height="22" loading="lazy" src="/assets/img/icons/x.svg" width="22"/></a>
+          <a aria-label="Facebook" class="social-btn" href="https://www.facebook.com/611977605339985" rel="noopener" target="_blank" title="Facebook"><img alt="" decoding="async" height="22" loading="lazy" src="/assets/img/icons/facebook.svg" width="22"/></a>
+          <a aria-label="Behance" class="social-btn" href="https://www.behance.net/kamogArtistry" rel="noopener" target="_blank" title="Behance"><img alt="" decoding="async" height="22" loading="lazy" src="/assets/img/icons/behance.svg" width="22"/></a>
+          <a aria-label="Threads" class="social-btn" href="https://www.threads.com/@kamog_artistry_u_ltd" rel="noopener" target="_blank" title="Threads"><img alt="" decoding="async" height="22" loading="lazy" src="/assets/img/icons/threads.svg" width="22"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p></div>
+  </footer>
+
+  <script src="/assets/js/script.js" defer></script>
+  <script src="/assets/js/animations.js" defer></script>
+
+  <script>
+    (() => {
+      const btn = document.querySelector('.menu-btn');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        btn.setAttribute('aria-label', expanded ? 'Open menu' : 'Close menu');
+      });
+    })();
+  </script>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const CART_KEY = 'kamog_cart';
+      const PREFS_KEY = 'kamog_cart_preferences';
+      const DEFAULT_IMAGE = '/assets/img/og/home-og.jpg';
+
+      const els = {
+        cartItemsContainer: document.getElementById('cartItemsContainer'),
+        summaryItemCount: document.getElementById('summaryItemCount'),
+        summarySubtotal: document.getElementById('summarySubtotal'),
+        summaryDelivery: document.getElementById('summaryDelivery'),
+        summaryArtwork: document.getElementById('summaryArtwork'),
+        summaryTotal: document.getElementById('summaryTotal'),
+        heroItemCount: document.getElementById('heroItemCount'),
+        heroSubtotal: document.getElementById('heroSubtotal'),
+        orderNotes: document.getElementById('order-notes'),
+        artworkStatus: document.getElementById('artwork-status'),
+        deliveryChoice: document.getElementById('delivery-choice'),
+        saveStatus: document.getElementById('saveStatus'),
+        clearCartBtn: document.getElementById('clearCartBtn'),
+        heroCheckoutBtn: document.getElementById('heroCheckoutBtn'),
+        proceedCheckoutBtn: document.getElementById('proceedCheckoutBtn')
+      };
+
+      function safeJsonParse(value, fallback) {
+        try { return JSON.parse(value); } catch (error) { return fallback; }
+      }
+
+      function getCart() {
+        const parsed = safeJsonParse(localStorage.getItem(CART_KEY), []);
+        return Array.isArray(parsed) ? parsed : [];
+      }
+
+      function saveCart(cart) {
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+        updateCartCountBadges();
+      }
+
+      function getPrefs() {
+        return safeJsonParse(localStorage.getItem(PREFS_KEY), {
+          orderNotes: '',
+          artworkStatus: '',
+          deliveryChoice: 'pickup'
+        });
+      }
+
+      function savePrefs(prefs) {
+        localStorage.setItem(PREFS_KEY, JSON.stringify({ ...getPrefs(), ...prefs }));
+        if (els.saveStatus) {
+          els.saveStatus.textContent = 'Preferences saved.';
+          clearTimeout(savePrefs._timer);
+          savePrefs._timer = setTimeout(() => {
+            els.saveStatus.textContent = 'Preferences save automatically.';
+          }, 1500);
+        }
+      }
+
+      function formatUGX(amount) {
+        return 'UGX ' + (Number(amount) || 0).toLocaleString('en-UG');
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      function currencyToNumber(value) {
+        if (typeof value === 'number') return value;
+        const cleaned = String(value || '').replace(/,/g, '').replace(/[^\d.]/g, '');
+        const parsed = Number(cleaned);
+        return Number.isFinite(parsed) ? parsed : 0;
+      }
+
+      function getPathname(value) {
+        try {
+          return new URL(value, window.location.origin).pathname;
+        } catch (error) {
+          return String(value || '');
+        }
+      }
+
+      function normalizeAssetPath(value) {
+        if (!value) return '';
+        const path = getPathname(value);
+        if (!path) return '';
+        if (/\.(webp|png|jpe?g|gif|svg|avif)$/i.test(path)) return path;
+        return '';
+      }
+
+      function deriveImageFromProductUrl(url) {
+        const pathname = getPathname(url);
+        const match = pathname.match(/^\/marketplace\/products\/([^\/]+)\/([^\/]+)\/?$/i);
+        if (!match) return '';
+        const category = match[1];
+        const slug = match[2];
+        return `/assets/img/products/${category}/${slug}/cover.webp`;
+      }
+
+      function deriveImageFromItem(item) {
+        const explicitImage = normalizeAssetPath(item.image || item.cover || item.thumbnail || '');
+        if (explicitImage) return explicitImage;
+
+        const derivedFromUrl = deriveImageFromProductUrl(item.url || item.productUrl || '');
+        if (derivedFromUrl) return derivedFromUrl;
+
+        const category = String(item.category || item.group || '').trim().replace(/^\/+|\/+$/g, '');
+        const slug = String(item.slug || item.id || item.sku || '').trim().replace(/^\/+|\/+$/g, '');
+        if (category && slug) {
+          return `/assets/img/products/${category}/${slug}/cover.webp`;
+        }
+
+        return DEFAULT_IMAGE;
+      }
+
+      function normalizeItem(item, index) {
+        const qty = Math.max(1, Number(item.qty || item.quantity || 1) || 1);
+        const price = currencyToNumber(item.price || item.unitPrice || 0);
+        const url = item.url || item.productUrl || '/marketplace/';
+        return {
+          id: item.id || item.sku || item.slug || ('item-' + (index + 1)),
+          sku: item.sku || item.id || '',
+          slug: item.slug || item.id || item.sku || '',
+          name: item.name || 'Marketplace Product',
+          price,
+          qty,
+          image: deriveImageFromItem(item),
+          url,
+          description: item.description || '',
+          notes: item.notes || '',
+          options: item.options && typeof item.options === 'object' ? item.options : {},
+          currency: item.currency || 'UGX'
+        };
+      }
+
+      function getNormalizedCart() {
+        return getCart().map(normalizeItem);
+      }
+
+      function updateCartCountBadges() {
+        const count = getNormalizedCart().reduce((sum, item) => sum + item.qty, 0);
+        document.querySelectorAll('[data-cart-count], .cart-count, .cart-badge, #cartCount, #heroCartCount').forEach((node) => {
+          node.textContent = String(count);
+        });
+      }
+
+      function getDeliveryCost(choice) {
+        switch (choice) {
+          case 'kampala': return 15000;
+          case 'outside-kampala': return 30000;
+          case 'installation': return 50000;
+          default: return 0;
+        }
+      }
+
+      function getArtworkSummary(status) {
+        if (!status) return 'To be confirmed';
+        if (status === 'Artwork ready and upload available') return 'No design support assumed';
+        if (status === 'Need minor artwork cleanup') return 'May attract minor charge';
+        if (status === 'Need full design support') return 'Design charges may apply';
+        if (status === 'Will send artwork after checkout') return 'Pending artwork submission';
+        return 'To be confirmed';
+      }
+
+      function getItemCount(cart) {
+        return cart.reduce((sum, item) => sum + item.qty, 0);
+      }
+
+      function getSubtotal(cart) {
+        return cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      }
+
+      function renderOptionFields(item) {
+        const entries = Object.entries(item.options || {});
+        if (!entries.length) {
+          return '<div class="field"><label>Saved options</label><input type="text" value="No saved options yet" disabled></div>';
+        }
+
+        return entries.map(([key, value]) => `
+          <div class="field">
+            <label>${escapeHtml(key)}</label>
+            <input type="text" value="${escapeHtml(value)}" data-action="option-change" data-id="${escapeHtml(item.id)}" data-option-key="${escapeHtml(key)}">
+          </div>
+        `).join('');
+      }
+
+      function renderEmptyState() {
+        els.cartItemsContainer.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">🛒</div>
+            <h3>Your cart is empty</h3>
+            <p>Browse apparels, merchandise, banners, stationery and signage, then add products here to review before checkout.</p>
+            <a class="btn btn-primary" href="/marketplace/categories/">Browse Products</a>
+          </div>
+        `;
+      }
+
+      function renderCartItems() {
+        const cart = getNormalizedCart();
+        if (!cart.length) {
+          renderEmptyState();
+          return;
+        }
+
+        els.cartItemsContainer.innerHTML = cart.map((item) => {
+          const lineTotal = item.price * item.qty;
+          return `
+            <article class="cart-item">
+              <div class="item-media">
+                <img loading="lazy" decoding="async" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" width="900" height="900" onerror="this.onerror=null;this.src='${DEFAULT_IMAGE}';">
+              </div>
+              <div class="item-body">
+                <div class="item-top">
+                  <div>
+                    <h3 class="item-title"><a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a></h3>
+                    <p class="item-desc">${escapeHtml(item.description || 'Selected marketplace product.')}</p>
+                  </div>
+                  <div class="item-price">${formatUGX(lineTotal)}<small>${formatUGX(item.price)} each</small></div>
+                </div>
+
+                <div class="item-grid">
+                  ${renderOptionFields(item)}
+                  <div class="field" style="grid-column:1 / -1;">
+                    <label>Item notes</label>
+                    <textarea data-action="notes-change" data-id="${escapeHtml(item.id)}" placeholder="Color, size mix, print placement, delivery note or any special instruction.">${escapeHtml(item.notes || '')}</textarea>
+                  </div>
+                </div>
+
+                <div class="item-footer">
+                  <div class="qty-box" aria-label="Quantity selector">
+                    <button class="qty-btn" type="button" data-action="decrease" data-id="${escapeHtml(item.id)}" aria-label="Reduce quantity">−</button>
+                    <input class="qty-input" type="number" min="1" value="${item.qty}" data-action="qty-input" data-id="${escapeHtml(item.id)}" aria-label="Quantity">
+                    <button class="qty-btn" type="button" data-action="increase" data-id="${escapeHtml(item.id)}" aria-label="Increase quantity">+</button>
+                  </div>
+                  <div class="item-actions">
+                    <a class="text-btn" href="${escapeHtml(item.url)}">Open product</a>
+                    <button class="text-btn danger" type="button" data-action="remove" data-id="${escapeHtml(item.id)}">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      function renderSummary() {
+        const cart = getNormalizedCart();
+        const prefs = getPrefs();
+        const count = getItemCount(cart);
+        const subtotal = getSubtotal(cart);
+        const delivery = getDeliveryCost(prefs.deliveryChoice);
+        const total = subtotal + delivery;
+
+        els.summaryItemCount.textContent = String(count);
+        els.summarySubtotal.textContent = formatUGX(subtotal);
+        els.summaryDelivery.textContent = formatUGX(delivery);
+        els.summaryArtwork.textContent = getArtworkSummary(prefs.artworkStatus);
+        els.summaryTotal.textContent = formatUGX(total);
+        els.heroItemCount.textContent = String(count);
+        els.heroSubtotal.textContent = formatUGX(subtotal);
+
+        const empty = count === 0;
+        els.proceedCheckoutBtn.toggleAttribute('disabled', empty);
+        els.heroCheckoutBtn.toggleAttribute('disabled', empty);
+        els.clearCartBtn.disabled = empty;
+      }
+
+      function renderPrefs() {
+        const prefs = getPrefs();
+        els.orderNotes.value = prefs.orderNotes || '';
+        els.artworkStatus.value = prefs.artworkStatus || '';
+        els.deliveryChoice.value = prefs.deliveryChoice || 'pickup';
+      }
+
+      function rerender() {
+        renderCartItems();
+        renderSummary();
+        updateCartCountBadges();
+      }
+
+      function updateItem(itemId, mutator) {
+        const cart = getNormalizedCart();
+        const updated = cart.map((item) => item.id === itemId ? mutator({ ...item, options: { ...item.options } }) : item);
+        saveCart(updated);
+        rerender();
+      }
+
+      function removeItem(itemId) {
+        const updated = getNormalizedCart().filter((item) => item.id !== itemId);
+        saveCart(updated);
+        rerender();
+      }
+
+      function clearCart() {
+        if (!window.confirm('Are you sure you want to clear all items from the cart?')) return;
+        saveCart([]);
+        rerender();
+      }
+
+      function bindEvents() {
+        els.cartItemsContainer.addEventListener('click', (event) => {
+          const trigger = event.target.closest('[data-action]');
+          if (!trigger) return;
+          const action = trigger.getAttribute('data-action');
+          const id = trigger.getAttribute('data-id');
+          if (!id) return;
+
+          if (action === 'increase') updateItem(id, (item) => ({ ...item, qty: item.qty + 1 }));
+          if (action === 'decrease') updateItem(id, (item) => ({ ...item, qty: Math.max(1, item.qty - 1) }));
+          if (action === 'remove') removeItem(id);
+        });
+
+        els.cartItemsContainer.addEventListener('input', (event) => {
+          const target = event.target;
+          const action = target.getAttribute('data-action');
+          const id = target.getAttribute('data-id');
+          if (!action || !id) return;
+
+          if (action === 'qty-input') {
+            const qty = Math.max(1, Number(target.value) || 1);
+            updateItem(id, (item) => ({ ...item, qty }));
+            return;
+          }
+
+          if (action === 'notes-change') {
+            updateItem(id, (item) => ({ ...item, notes: target.value.trim() }));
+            return;
+          }
+
+          if (action === 'option-change') {
+            const key = target.getAttribute('data-option-key');
+            if (!key) return;
+            updateItem(id, (item) => {
+              item.options[key] = target.value.trim();
+              return item;
+            });
+          }
+        });
+
+        const persistPrefs = () => {
+          savePrefs({
+            orderNotes: els.orderNotes.value.trim(),
+            artworkStatus: els.artworkStatus.value,
+            deliveryChoice: els.deliveryChoice.value
+          });
+          renderSummary();
+        };
+
+        els.orderNotes.addEventListener('input', persistPrefs);
+        els.artworkStatus.addEventListener('change', persistPrefs);
+        els.deliveryChoice.addEventListener('change', persistPrefs);
+        els.clearCartBtn.addEventListener('click', clearCart);
+      }
+
+      window.KamogCart = {
+        getCart,
+        saveCart,
+        getPrefs,
+        savePrefs,
+        count: () => getItemCount(getNormalizedCart()),
+        total: () => getSubtotal(getNormalizedCart()),
+        formatUGX,
+        clear: clearCart
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          renderPrefs();
+          rerender();
+          bindEvents();
+        });
+      } else {
+        renderPrefs();
+        rerender();
+        bindEvents();
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const CART_KEY = 'kamog_cart';
+      const toastStack = document.getElementById('toastStack');
+
+      function safeJsonParse(value, fallback) {
+        try { return JSON.parse(value); } catch (error) { return fallback; }
+      }
+
+      function getCart() {
+        const parsed = safeJsonParse(localStorage.getItem(CART_KEY), []);
+        return Array.isArray(parsed) ? parsed : [];
+      }
+
+      function setCart(cart) {
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+        if (window.KamogCart && typeof window.KamogCart.saveCart === 'function') {
+          window.KamogCart.saveCart(cart);
+        }
+      }
+
+      function updateBadges() {
+        const cart = getCart();
+        const count = cart.reduce((sum, item) => sum + Math.max(1, Number(item.qty || item.quantity || 1) || 1), 0);
+        document.querySelectorAll('[data-cart-count], .cart-count, .cart-badge, #cartCount, #heroCartCount, .count').forEach((node) => {
+          node.textContent = String(count);
+        });
+      }
+
+      function createToast(name) {
+        if (!toastStack) return;
+        const toast = document.createElement('div');
+        toast.className = 'cart-toast';
+        toast.innerHTML = `
+          <strong>Added to cart</strong>
+          <p>${name} has been added to your cart.</p>
+          <div class="toast-actions">
+            <a class="toast-primary" href="/marketplace/cart/">Open cart</a>
+            <a href="/marketplace/checkout/">Checkout</a>
+          </div>
+        `;
+        toastStack.appendChild(toast);
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateY(8px)';
+          setTimeout(() => toast.remove(), 220);
+        }, 2800);
+      }
+
+      function normalizeButtonItem(button) {
+        return {
+          id: button.dataset.productId || button.dataset.productSku || button.dataset.productName || ('product-' + Date.now()),
+          sku: button.dataset.productSku || button.dataset.productId || '',
+          slug: button.dataset.productId || button.dataset.productSku || '',
+          name: button.dataset.productName || 'Marketplace Product',
+          price: Number(button.dataset.productPrice || 0) || 0,
+          qty: 1,
+          image: button.dataset.productImage || '',
+          url: button.dataset.productUrl || '/marketplace/',
+          description: button.dataset.productDescription || '',
+          category: button.dataset.productCategory || '',
+          currency: 'UGX',
+          options: {}
+        };
+      }
+
+      function addToCart(button) {
+        const item = normalizeButtonItem(button);
+        const cart = getCart();
+        const existingIndex = cart.findIndex((entry) => {
+          const entryId = entry.id || entry.sku || entry.slug;
+          return entryId === item.id;
+        });
+
+        if (existingIndex >= 0) {
+          const existingQty = Math.max(1, Number(cart[existingIndex].qty || cart[existingIndex].quantity || 1) || 1);
+          cart[existingIndex].qty = existingQty + 1;
+        } else {
+          cart.push(item);
+        }
+
+        setCart(cart);
+        updateBadges();
+
+        const originalText = button.textContent.trim();
+        button.textContent = 'Added';
+        button.classList.add('is-added');
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.classList.remove('is-added');
+        }, 1400);
+
+        if (window.KamogCart && typeof window.KamogCart.getCart === 'function' && typeof window.KamogCart.saveCart === 'function') {
+          try {
+            const liveCart = window.KamogCart.getCart();
+            if (Array.isArray(liveCart)) {
+              // force the cart page sections to rerender by dispatching a storage event fallback and calling helpers
+              window.dispatchEvent(new Event('storage'));
+            }
+          } catch (error) {
+            // no-op
+          }
+        }
+
+        createToast(item.name);
+      }
+
+      document.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-home-add-to-cart]');
+        if (!button) return;
+        addToCart(button);
+      });
+
+      window.addEventListener('storage', updateBadges);
+      updateBadges();
+    })();
+  </script>
+
+</body>
+</html>
+

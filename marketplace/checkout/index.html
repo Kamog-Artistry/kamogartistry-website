@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en-UG">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="p:domain_verify" content="1ee9fc8da9fbce0e718b0db7c457fd31" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#04689A" />
+  <meta name="author" content="Kamog Artistry (U) Ltd" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+  <title>Checkout | Marketplace | Kamog Artistry (U) Ltd</title>
+  <meta
+    name="description"
+    content="Complete your marketplace checkout with Kamog Artistry (U) Ltd. Review final items, submit customer details and send your order by WhatsApp or email with an invoice PDF."
+  />
+  <link rel="canonical" href="https://kamogartistry.com/marketplace/checkout/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
+  <meta property="og:locale" content="en_UG" />
+  <meta property="og:title" content="Checkout | Marketplace | Kamog Artistry (U) Ltd" />
+  <meta property="og:description" content="Send your final marketplace order by WhatsApp or email with a generated invoice PDF." />
+  <meta property="og:url" content="https://kamogartistry.com/marketplace/checkout/" />
+  <meta property="og:image" content="https://kamogartistry.com/assets/img/og/home-og.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Checkout | Marketplace | Kamog Artistry (U) Ltd" />
+  <meta name="twitter:description" content="Send your final marketplace order by WhatsApp or email with a generated invoice PDF." />
+  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/og/home-og.jpg" />
+
+  <link rel="preconnect" href="https://kamogartistry.com" crossorigin />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/marketplace.css" />
+
+  <style>
+    :root{
+      --km-blue:#0b6fbf;
+      --km-blue-deep:#08354a;
+      --km-orange:#f28c28;
+      --km-ink:#08354a;
+      --km-bg:#edf3f7;
+      --km-card:#ffffff;
+      --km-border:rgba(0,0,0,.08);
+      --km-shadow:0 10px 24px rgba(0,0,0,.08);
+      --km-soft:#f7fbff;
+      --km-muted:#667a84;
+      --km-green:#1aa64a;
+      --km-max:1280px;
+      --km-danger:#c43b3b;
+      --km-yellow:#f2d64b;
+      --km-invoice-blue:#0b70a5;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body.marketplace-body{
+      margin:0;
+      background:var(--km-bg);
+      color:var(--km-ink);
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    img{max-width:100%;height:auto;display:block}
+    input,select,textarea,button{font:inherit}
+    a{text-underline-offset:3px}
+
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:12px;
+      top:12px;
+      width:auto;
+      height:auto;
+      padding:10px 12px;
+      background:#fff;
+      color:var(--km-ink);
+      border-radius:12px;
+      z-index:9999;
+    }
+
+    .marketplace-main{padding-top:84px}
+    .checkout-wrap{max-width:var(--km-max);margin:0 auto;padding:16px 20px 90px}
+
+    .breadcrumbs{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 14px;
+      color:#6b7e88;
+      font-size:.94rem;
+    }
+    .breadcrumbs a{color:var(--km-blue);text-decoration:none;font-weight:700}
+    .breadcrumbs span[aria-hidden="true"]{color:#91a0a8}
+
+    .checkout-utility{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+    .utility-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:0 18px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--km-border);
+      box-shadow:var(--km-shadow);
+      color:var(--km-ink);
+      font-weight:800;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .utility-link.is-accent{background:var(--km-orange);border-color:var(--km-orange);color:#fff}
+    .utility-link .count{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-width:26px;height:26px;border-radius:999px;
+      background:rgba(11,111,191,.09);color:var(--km-blue);padding:0 8px;
+      font-size:.82rem;margin-left:8px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .hero-card,
+    .hero-side,
+    .section-card,
+    .checkout-item,
+    .mini-card{
+      background:#fff;
+      border:1px solid var(--km-border);
+      border-radius:20px;
+      box-shadow:var(--km-shadow);
+    }
+    .hero-card{
+      background:linear-gradient(135deg,#0a4a68 0%,#0b6fbf 100%);
+      color:#fff;
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card::after{
+      content:"";
+      position:absolute;
+      right:-70px;
+      top:-70px;
+      width:210px;
+      height:210px;
+      border-radius:50%;
+      background:rgba(255,255,255,.08);
+      pointer-events:none;
+    }
+    .hero-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      min-height:32px;
+      padding:0 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.14);
+      color:#fff;
+      font-weight:800;
+      font-size:.82rem;
+      letter-spacing:.02em;
+      margin-bottom:12px;
+    }
+    .hero-card h1{margin:0;font-size:clamp(1.9rem,3vw,2.7rem);line-height:1.04}
+    .hero-card p{margin:10px 0 0;color:rgba(255,255,255,.94);line-height:1.6;max-width:640px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .hero-actions a{
+      display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 16px;border-radius:999px;
+      text-decoration:none;font-weight:800;border:1px solid transparent;
+    }
+    .hero-actions .primary{background:#fff;color:var(--km-blue)}
+    .hero-actions .secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.18)}
+
+    .hero-side{padding:18px;display:grid;gap:14px}
+    .hero-stat{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:16px;background:var(--km-soft);border:1px solid rgba(0,0,0,.05)}
+    .hero-stat strong{display:block;font-size:1.08rem;color:var(--km-ink)}
+    .hero-stat span{color:var(--km-muted);font-size:.92rem;line-height:1.45}
+    .hero-stat .value{font-weight:900;color:var(--km-orange);white-space:nowrap}
+
+    .checkout-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(340px,.8fr);gap:18px;align-items:start}
+    .checkout-main,.checkout-side{display:grid;gap:18px}
+
+    .section-card{padding:18px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px}
+    .section-head-copy{display:flex;flex-direction:column}
+    .section-head h2,.section-head h3{margin:0;color:var(--km-ink);font-size:1.35rem;line-height:1.2}
+    .section-head p{margin:6px 0 0;color:var(--km-muted);line-height:1.5;font-size:.93rem}
+
+    .notice{display:flex;gap:12px;align-items:flex-start;background:#fff7eb;border:1px solid rgba(242,140,40,.2);border-radius:16px;padding:14px 16px;margin-bottom:16px}
+    .notice strong{color:#9a5206}
+    .notice p{margin:0;color:#7b5d3d;line-height:1.55;font-size:.93rem}
+
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .field{display:grid;gap:8px}
+    .field.is-full{grid-column:1/-1}
+    .field label{font-weight:800;color:var(--km-ink);font-size:.93rem}
+    .field input,.field select,.field textarea{
+      width:100%;min-height:52px;padding:12px 14px;border-radius:14px;border:1px solid rgba(0,0,0,.1);background:#fff;color:var(--km-ink);outline:none;
+    }
+    .field textarea{min-height:122px;resize:vertical}
+    .field small{color:var(--km-muted);font-size:.84rem;line-height:1.45}
+
+    .checkout-list{display:grid;gap:14px}
+    .checkout-item{padding:14px;display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;align-items:start}
+    .checkout-item-media{width:100%;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:#eef5fb;border:1px solid rgba(0,0,0,.05)}
+    .checkout-item-media img{width:100%;height:100%;object-fit:cover}
+    .checkout-item-body{display:grid;gap:8px;min-width:0}
+    .checkout-item-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .checkout-item-top h3{margin:0;font-size:1rem;line-height:1.35}
+    .checkout-item-top h3 a{text-decoration:none;color:var(--km-ink)}
+    .checkout-price{font-weight:900;color:var(--km-orange);white-space:nowrap;text-align:right}
+    .checkout-sub{color:var(--km-muted);font-size:.9rem;line-height:1.55}
+    .chip-row{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:0 10px;border-radius:999px;background:#f4f8fb;border:1px solid rgba(0,0,0,.05);color:var(--km-blue);font-size:.8rem;font-weight:800}
+    .option-list{display:grid;gap:6px}
+    .option-line{color:var(--km-muted);font-size:.88rem;line-height:1.5}
+
+    .summary-card{padding:18px;position:sticky;top:100px}
+    .summary-lines{display:grid;gap:14px}
+    .summary-line{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;color:var(--km-ink);font-size:.97rem}
+    .summary-line span:last-child{font-weight:800;text-align:right}
+    .summary-line.total{border-top:1px solid rgba(0,0,0,.08);padding-top:14px;font-size:1.08rem}
+    .summary-muted{color:var(--km-muted);font-size:.9rem;line-height:1.55}
+    .summary-actions{display:grid;gap:10px;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 18px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid transparent;cursor:pointer}
+    .btn-primary{background:var(--km-orange);border-color:var(--km-orange);color:#fff}
+    .btn-secondary{background:#fff;border-color:rgba(11,111,191,.16);color:var(--km-blue)}
+    .btn-dark{background:var(--km-blue-deep);border-color:var(--km-blue-deep);color:#fff}
+    .btn[disabled]{opacity:.55;cursor:not-allowed;pointer-events:none}
+
+    .mini-grid{display:grid;gap:14px}
+    .mini-card{padding:16px}
+    .mini-card h3{margin:0 0 8px;color:var(--km-ink);font-size:1rem}
+    .mini-card p,.mini-card li{margin:0;color:var(--km-muted);font-size:.92rem;line-height:1.55}
+    .mini-card ul{margin:0;padding-left:18px}
+    .shortcut-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+    .shortcut-grid a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 12px;border-radius:999px;background:var(--km-soft);border:1px solid rgba(11,111,191,.12);color:var(--km-blue);text-decoration:none;font-weight:800;font-size:.88rem;text-align:center}
+
+    .empty-state{display:grid;justify-items:center;gap:14px;padding:28px;text-align:center;background:#fff;border:1px dashed rgba(11,111,191,.18);border-radius:18px}
+    .empty-state h3{margin:0;color:var(--km-ink)}
+    .empty-state p{margin:0;max-width:540px;color:var(--km-muted);line-height:1.6}
+
+    .checkout-toast{
+      position:fixed;right:18px;bottom:18px;width:min(360px,calc(100vw - 24px));background:#ffffff;border:1px solid var(--km-border);border-radius:18px;
+      box-shadow:0 20px 44px rgba(0,0,0,.14);padding:14px;z-index:1200;transform:translateY(18px);opacity:0;pointer-events:none;
+      transition:opacity .22s ease, transform .22s ease;
+    }
+    .checkout-toast.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}
+    .checkout-toast-title{margin:0 0 4px;font-size:1rem;color:var(--km-ink)}
+    .checkout-toast-text{margin:0;color:var(--km-muted);line-height:1.5;font-size:.92rem}
+
+    .footer a,.footer a:visited{color:#ffffff!important}
+    .footer a:not(.footer-cta):not(.social-btn),
+    .footer a:not(.footer-cta):not(.social-btn):visited{text-decoration:none!important;opacity:.95}
+    .footer a:not(.footer-cta):not(.social-btn):hover{text-decoration:underline!important;text-underline-offset:3px;text-decoration-thickness:1px}
+    .menu-btn[aria-expanded="true"]{opacity:.96}
+
+    @media (max-width:1080px){
+      .checkout-layout{grid-template-columns:1fr}
+      .summary-card{position:static}
+    }
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){
+      .checkout-wrap{padding:12px 16px 92px}
+      .marketplace-main{padding-top:78px}
+      .checkout-item{grid-template-columns:1fr}
+      .checkout-item-media{max-width:160px}
+      .checkout-item-top{flex-direction:column}
+      .checkout-price{text-align:left}
+      .hero-actions,.checkout-utility{flex-direction:column}
+      .hero-actions a,.utility-link,.summary-actions .btn{width:100%}
+      .shortcut-grid{grid-template-columns:1fr}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://kamogartistry.com/#organization",
+        "name":"Kamog Artistry (U) Ltd",
+        "legalName":"KAMOG ARTISTRY (U) LTD",
+        "url":"https://kamogartistry.com/",
+        "logo":"https://kamogartistry.com/assets/img/brand/logo.svg",
+        "email":"info@kamogartistry.com",
+        "telephone":"+256775251445"
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://kamogartistry.com/#website",
+        "url":"https://kamogartistry.com/",
+        "name":"Kamog Artistry (U) Ltd",
+        "publisher":{"@id":"https://kamogartistry.com/#organization"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://kamogartistry.com/marketplace/checkout/#webpage",
+        "url":"https://kamogartistry.com/marketplace/checkout/",
+        "name":"Marketplace Checkout",
+        "isPartOf":{"@id":"https://kamogartistry.com/#website"},
+        "description":"Final checkout page for Kamog Artistry marketplace orders sent by WhatsApp or email."
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg">
+</head>
+
+<body class="marketplace-body">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="loader" style="display:none" class="hidden" aria-hidden="true">
+    <img src="/assets/img/brand/loader-logo.png" alt="" decoding="async" width="120" height="120" />
+    <div class="loader-bar"></div>
+  </div>
+
+  <header class="header header--mvp">
+    <nav class="nav" aria-label="Primary navigation">
+      <a aria-label="Go to homepage" href="/">
+        <img
+          src="/assets/img/brand/logo-white.svg"
+          class="logo"
+          alt="Kamog Artistry (U) Ltd"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+
+        <li class="has-dropdown">
+          <a href="/about" aria-haspopup="true" aria-expanded="false">About</a>
+          <ul class="dropdown" aria-label="About submenu">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about#our-process">Our Process</a></li>
+            <li><a href="/about#service-areas">Service Areas</a></li>
+            <li><a href="/about#faqs">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="/services" aria-haspopup="true" aria-expanded="false">Services</a>
+          <ul class="dropdown" aria-label="Services submenu">
+            <li><a href="/services/branding-kampala/">Branding</a></li>
+            <li><a href="/services/graphic-design-kampala/">Graphic Design</a></li>
+            <li><a href="/services/printing-services-kampala/">Printing</a></li>
+            <li><a href="/services/signage-and-branding-kampala/">Signage &amp; Branding</a></li>
+            <li><a href="/services/branded-stationery-uganda/">Branded Stationery</a></li>
+            <li><a href="/services/custom-merchandise-uganda/">Custom Merchandise</a></li>
+            <li><a href="/services/event-branding-kampala/">Event Branding</a></li>
+            <li><a href="/services/outdoor-advertising-kampala/">Outdoor Advertising</a></li>
+            <li><a href="/services/vehicle-branding-kampala/">Vehicle Branding</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="/marketplace/" aria-current="page" aria-haspopup="true" aria-expanded="false">Marketplace <span class="nav-caret" aria-hidden="true">▾</span></a>
+          <ul class="dropdown" aria-label="Marketplace submenu">
+            <li><a href="/marketplace/">Shop</a></li>
+            <li><a href="/marketplace/category/apparels/">Apparels</a></li>
+            <li><a href="/marketplace/category/branded-merchandise/">Branded Merchandise</a></li>
+            <li><a href="/marketplace/category/banners/">Banners &amp; Event Displays</a></li>
+            <li><a href="/marketplace/category/stationery/">Branded Stationery</a></li>
+            <li><a href="/marketplace/category/signage/">Signage</a></li>
+            <li><a href="/marketplace/products/">View All Products</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/blog">Insights</a></li>
+        <li><a href="/testimonials">Testimonials</a></li>
+
+        <li class="has-dropdown">
+          <a href="/corporate-profile" aria-haspopup="true" aria-expanded="false">Corporate</a>
+          <ul class="dropdown" aria-label="Corporate submenu">
+            <li><a href="/corporate-profile">Corporate Profile</a></li>
+            <li><a href="/corporate-profile#compliance">Compliance</a></li>
+            <li><a href="/corporate-profile#procurement">Procurement Support</a></li>
+            <li><a href="/contact">Request a Quote</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+
+      <button
+        id="menuBtn"
+        class="menu-btn"
+        type="button"
+        aria-label="Open menu"
+        aria-controls="navLinks"
+        aria-expanded="false"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" class="marketplace-main">
+    <div class="checkout-wrap">
+
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="/marketplace/">Marketplace</a>
+        <span aria-hidden="true">/</span>
+        <a href="/marketplace/cart/">Cart</a>
+        <span aria-hidden="true">/</span>
+        <span>Checkout</span>
+      </nav>
+
+      <section class="checkout-utility" aria-label="Checkout tools">
+        <a class="utility-link" href="/marketplace/categories/">Categories</a>
+        <a class="utility-link" href="/marketplace/products/">All Products</a>
+        <a class="utility-link" href="/marketplace/cart/">Cart <span class="count" data-cart-count>0</span></a>
+        <a class="utility-link is-accent" href="/marketplace/quote-request/">Request Quote</a>
+      </section>
+
+      <section class="hero" aria-labelledby="checkout-title">
+        <div class="hero-card">
+          <span class="hero-eyebrow">Marketplace Checkout</span>
+          <h1 id="checkout-title">Complete your order</h1>
+          <p>
+            Review your final cart items, fill in customer details, then send the full order to Kamog Artistry by WhatsApp or email.
+          </p>
+          <p>
+            A branded invoice PDF is generated first, then your order summary opens with the same order reference.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary" href="#checkoutFormWrap">Enter Details</a>
+            <a class="secondary" href="/marketplace/cart/">Edit Cart First</a>
+          </div>
+        </div>
+
+        <div class="hero-side">
+          <div class="hero-stat">
+            <div>
+              <strong>Items ready</strong>
+              <span>Final quantity from your shopping cart</span>
+            </div>
+            <div class="value" id="heroItemCount">0</div>
+          </div>
+          <div class="hero-stat">
+            <div>
+              <strong>Estimated total</strong>
+              <span>Reflects saved cart delivery option immediately</span>
+            </div>
+            <div class="value" id="heroEstimatedTotal">UGX 0</div>
+          </div>
+          <div class="hero-stat">
+            <div>
+              <strong>Order reference</strong>
+              <span>Generated automatically for invoice and checkout</span>
+            </div>
+            <div class="value" id="heroOrderRef">KA-ORDER-00000000-0100</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="checkout-layout">
+        <section class="checkout-main">
+          <section class="section-card" id="checkoutFormWrap" aria-labelledby="customer-details-title">
+            <div class="section-head">
+              <div class="section-head-copy">
+                <h2 id="customer-details-title">Customer details</h2>
+                <p>These details are added to the invoice and final order message sent to our team.</p>
+              </div>
+            </div>
+
+            <div class="notice" role="note" aria-label="Checkout note">
+              <div aria-hidden="true">📝</div>
+              <p>
+                <strong>Please note:</strong> clicking WhatsApp or Email checkout first generates and downloads your invoice PDF, then opens the order message with the same reference.
+              </p>
+            </div>
+
+            <form class="form-grid" id="checkoutForm" novalidate>
+              <div class="field">
+                <label for="customerName">Full name</label>
+                <input id="customerName" name="customerName" type="text" placeholder="Your full name" required />
+              </div>
+
+              <div class="field">
+                <label for="customerPhone">Phone number</label>
+                <input id="customerPhone" name="customerPhone" type="tel" placeholder="e.g. +2567..." required />
+              </div>
+
+              <div class="field">
+                <label for="customerEmail">Email address</label>
+                <input id="customerEmail" name="customerEmail" type="email" placeholder="you@example.com" />
+              </div>
+
+              <div class="field">
+                <label for="companyName">Company / organization</label>
+                <input id="companyName" name="companyName" type="text" placeholder="Company or organization name" />
+              </div>
+
+              <div class="field">
+                <label for="customerLocation">Location</label>
+                <input id="customerLocation" name="customerLocation" type="text" placeholder="Town, branch or delivery area" required />
+              </div>
+
+              <div class="field">
+                <label for="preferredContact">Preferred contact</label>
+                <select id="preferredContact" name="preferredContact">
+                  <option value="WhatsApp">WhatsApp</option>
+                  <option value="Phone Call">Phone Call</option>
+                  <option value="Email">Email</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="neededBy">Needed by</label>
+                <input id="neededBy" name="neededBy" type="date" />
+              </div>
+
+              <div class="field">
+                <label for="deliveryMethod">Delivery method</label>
+                <select id="deliveryMethod" name="deliveryMethod">
+                  <option value="pickup">Pickup from office</option>
+                  <option value="kampala">Delivery within Kampala</option>
+                  <option value="outside-kampala">Delivery outside Kampala</option>
+                  <option value="installation">Delivery with installation / setup</option>
+                </select>
+              </div>
+
+              <div class="field is-full">
+                <label for="deliveryAddress">Delivery address / instructions</label>
+                <textarea id="deliveryAddress" name="deliveryAddress" placeholder="Add address, landmark, branch contact, or receiving instructions."></textarea>
+              </div>
+
+              <div class="field is-full">
+                <label for="checkoutNotes">Final checkout notes</label>
+                <textarea id="checkoutNotes" name="checkoutNotes" placeholder="Any final message, branding direction, procurement note or approval reference."></textarea>
+                <small>This is separate from saved cart notes and will be added to the final checkout message and invoice note section.</small>
+              </div>
+            </form>
+          </section>
+
+          <section class="section-card" aria-labelledby="final-items-title">
+            <div class="section-head">
+              <div class="section-head-copy">
+                <h2 id="final-items-title">Final items</h2>
+                <p>Review the exact products and quantities that will be sent in your order message.</p>
+              </div>
+              <a class="utility-link" href="/marketplace/cart/">Edit Items in Cart</a>
+            </div>
+
+            <div id="checkoutItemsContainer" class="checkout-list"></div>
+          </section>
+        </section>
+
+        <aside class="checkout-side">
+          <section class="section-card summary-card" aria-labelledby="summary-title">
+            <div class="section-head">
+              <div class="section-head-copy">
+                <h3 id="summary-title">Checkout summary</h3>
+                <p>Final order values sent with your details.</p>
+              </div>
+            </div>
+
+            <div class="summary-lines">
+              <div class="summary-line">
+                <span>Order reference</span>
+                <span id="summaryOrderRef">KA-ORDER-00000000-0100</span>
+              </div>
+              <div class="summary-line">
+                <span>Items</span>
+                <span id="summaryItemCount">0</span>
+              </div>
+              <div class="summary-line">
+                <span>Subtotal</span>
+                <span id="summarySubtotal">UGX 0</span>
+              </div>
+              <div class="summary-line">
+                <span>Estimated delivery</span>
+                <span id="summaryDelivery">UGX 0</span>
+              </div>
+              <div class="summary-line">
+                <span>Validity</span>
+                <span id="summaryValidity">14 Days</span>
+              </div>
+              <div class="summary-line total">
+                <span>Estimated total</span>
+                <span id="summaryTotal">UGX 0</span>
+              </div>
+            </div>
+
+            <p class="summary-muted" id="summaryPrefsText">
+              Artwork and delivery preferences saved in cart are included automatically.
+            </p>
+
+            <div class="summary-actions">
+              <button class="btn btn-primary" id="completeCheckoutBtn" type="button">Complete Checkout</button>
+              <button class="btn btn-secondary" id="emailCheckoutBtn" type="button">Checkout by Email</button>
+              <a class="btn btn-dark" href="/marketplace/cart/">Back to Cart</a>
+            </div>
+          </section>
+
+          <section class="mini-grid">
+            <article class="mini-card">
+              <h3>Saved cart preferences</h3>
+              <p id="savedPrefsCard">No saved preferences yet.</p>
+            </article>
+
+            <article class="mini-card">
+              <h3>Estimated turnaround</h3>
+              <ul>
+                <li>Simple print items: 1–2 working days</li>
+                <li>Apparels and merchandise: 2–4 working days</li>
+                <li>Large signage and installations: 4–6 working days</li>
+                <li>Urgent jobs are reviewed separately</li>
+              </ul>
+            </article>
+
+            <article class="mini-card">
+              <h3>Payment details</h3>
+              <p>MTN Mobile Money<br>0775 251 445<br>In the name of Etyang Benard</p>
+            </article>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  
+  
+  <footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-col">
+      <h4>Kamog Artistry (U) Ltd</h4>
+
+      <p>
+        Branding, design, print and signage solutions for businesses,
+        institutions and events across Uganda.
+      </p>
+
+      <div class="footer-badges">
+        <a class="badge" href="/services/branding-kampala/">Branding</a>
+        <a class="badge" href="/services/graphic-design-kampala/">Design</a>
+        <a class="badge" href="/services/printing-services-kampala/">Printing</a>
+        <a class="badge" href="/services/signage-and-branding-kampala/">Signage</a>
+        <a class="badge" href="/services/branded-stationery-uganda/">Stationery</a>
+        <a class="badge" href="/services/custom-merchandise-uganda/">Merch</a>
+        <a class="badge" href="/services/event-branding-kampala/">Events</a>
+        <a class="badge" href="/services/vehicle-branding-kampala/">Vehicles</a>
+      </div>
+
+      <p style="opacity:.8;margin-top:12px">
+        Serving Kampala, Wakiso, Mukono, Uganda nationwide and selected neighbouring East African markets.
+      </p>
+
+      <p style="opacity:.8;margin-top:10px">
+        <a href="/corporate-profile">Corporate Profile</a>
+        <span style="opacity:.6"> • </span>
+        <a href="/compliance">Compliance</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Marketplace</h4>
+
+      <ul class="footer-list">
+ <ul class="footer-list">
+          <li><a href="/marketplace/">Shop</a></li>
+          <li><a href="/marketplace/category/apparels/">Apparels</a></li>
+          <li><a href="/marketplace/category/branded-merchandise/">Branded Merchandise</a></li>
+          <li><a href="/marketplace/category/banners/">Banners &amp; Event Displays</a></li>
+          <li><a href="/marketplace/category/stationery/">Branded Stationery</a></li>
+          <li><a href="/marketplace/category/signage/">Signage</a></li>
+          
+      </ul>
+
+      <p style="opacity:.8;margin-top:14px;line-height:1.7">
+        Explore branded apparel, merchandise, banners and signage for businesses,
+        institutions and events across Uganda.
+      </p>
+
+      <p style="opacity:.8;margin-top:12px">
+        <a href="/marketplace/products/">View All Products</a>
+        <span style="opacity:.6"> • </span>
+        <a href="/contact">Request a Quote</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <a class="footer-cta" href="/contact">Contact Us</a>
+
+      <ul class="footer-list" style="margin-top:16px">
+        <li><a href="mailto:info@kamogartistry.com">info@kamogartistry.com</a></li>
+        <li><a href="tel:+256775251445">+256 775 251 445</a></li>
+        <li>P.O. Box 201929, Kampala - Uganda</li>
+      </ul>
+
+      <h4 style="margin-top:22px">Follow Us</h4>
+
+      <div class="social" style="margin-top:16px">
+        <a class="social-btn" title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/256775251445" aria-label="WhatsApp">
+          <img src="/assets/img/icons/whatsapp.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
+        </a>
+
+        <a class="social-btn" title="LinkedIn" target="_blank" rel="noopener" href="https://www.linkedin.com/company/kamog-artistry-u-ltd" aria-label="LinkedIn">
+          <img src="/assets/img/icons/linkedin.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
+        </a>
+
+        <a class="social-btn" title="TikTok" target="_blank" rel="noopener" href="https://www.tiktok.com/@kamogartistry?_r=1&amp;_t=ZT-93C8X0CPXUt" aria-label="TikTok">
+          <img src="/assets/img/icons/tiktok.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
+        </a>
+
+        <a class="social-btn" title="Instagram" target="_blank" rel="noopener" href="https://www.instagram.com/kamog_artistry_u_ltd?igsh=MWhtNmw4MzdhZno0Mg==" aria-label="Instagram">
+          <img src="/assets/img/icons/instagram.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
+        </a>
+
+        <a class="social-btn" title="X" target="_blank" rel="noopener" href="https://x.com/kamogartistry" aria-label="X">
+          <img src="/assets/img/icons/x.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
+        </a>
+
+        <a class="social-btn" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/611977605339985" aria-label="Facebook">
+          <img src="/assets/img/icons/facebook.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
+        </a>
+
+        <a class="social-btn" title="Behance" target="_blank" rel="noopener" href="https://www.behance.net/kamogArtistry" aria-label="Behance">
+          <img src="/assets/img/icons/behance.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
+        </a>
+
+        <a class="social-btn" title="Threads" target="_blank" rel="noopener" href="https://www.threads.com/@kamog_artistry_u_ltd" aria-label="Threads">
+          <img src="/assets/img/icons/threads.svg" alt="" width="22" height="22" loading="lazy" decoding="async" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Kamog Artistry (U) Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+  <div class="checkout-toast" id="checkoutToast" role="status" aria-live="polite">
+    <h2 class="checkout-toast-title" id="checkoutToastTitle">Ready</h2>
+    <p class="checkout-toast-text" id="checkoutToastText">Your checkout details are ready.</p>
+  </div>
+
+  <script src="/assets/js/script.js" defer></script>
+  <script src="/assets/js/animations.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const CART_KEY = "kamog_cart";
+      const PREFS_KEY = "kamog_cart_preferences";
+      const CHECKOUT_DETAILS_KEY = "kamog_checkout_details";
+      const ORDER_REF_KEY = "kamog_order_reference";
+      const ORDER_COUNTER_KEY = "kamog_order_counter_by_day";
+      const DEFAULT_IMAGE = "/assets/img/og/home-og.jpg";
+      const LOGO_PATH = "/assets/img/brand/logo.svg";
+      const WHATSAPP_NUMBER = "256775251445";
+      const SALES_EMAIL = "info@kamogartistry.com";
+      const SITE_URL = "https://kamogartistry.com";
+      const VALIDITY_STANDARD = "14 Days";
+      const VALIDITY_LARGE = "30 Days";
+
+      const els = {
+        checkoutItemsContainer: document.getElementById("checkoutItemsContainer"),
+        heroItemCount: document.getElementById("heroItemCount"),
+        heroEstimatedTotal: document.getElementById("heroEstimatedTotal"),
+        heroOrderRef: document.getElementById("heroOrderRef"),
+        summaryOrderRef: document.getElementById("summaryOrderRef"),
+        summaryItemCount: document.getElementById("summaryItemCount"),
+        summarySubtotal: document.getElementById("summarySubtotal"),
+        summaryDelivery: document.getElementById("summaryDelivery"),
+        summaryTotal: document.getElementById("summaryTotal"),
+        summaryValidity: document.getElementById("summaryValidity"),
+        summaryPrefsText: document.getElementById("summaryPrefsText"),
+        savedPrefsCard: document.getElementById("savedPrefsCard"),
+        completeCheckoutBtn: document.getElementById("completeCheckoutBtn"),
+        emailCheckoutBtn: document.getElementById("emailCheckoutBtn"),
+        customerName: document.getElementById("customerName"),
+        customerPhone: document.getElementById("customerPhone"),
+        customerEmail: document.getElementById("customerEmail"),
+        companyName: document.getElementById("companyName"),
+        customerLocation: document.getElementById("customerLocation"),
+        preferredContact: document.getElementById("preferredContact"),
+        neededBy: document.getElementById("neededBy"),
+        deliveryMethod: document.getElementById("deliveryMethod"),
+        deliveryAddress: document.getElementById("deliveryAddress"),
+        checkoutNotes: document.getElementById("checkoutNotes"),
+        checkoutToast: document.getElementById("checkoutToast"),
+        checkoutToastTitle: document.getElementById("checkoutToastTitle"),
+        checkoutToastText: document.getElementById("checkoutToastText")
+      };
+
+      function safeJsonParse(value, fallback) {
+        try { return JSON.parse(value); } catch (error) { return fallback; }
+      }
+
+      function getCart() {
+        const parsed = safeJsonParse(localStorage.getItem(CART_KEY), []);
+        return Array.isArray(parsed) ? parsed : [];
+      }
+
+      function getPrefs() {
+        return safeJsonParse(localStorage.getItem(PREFS_KEY), {
+          orderNotes: "",
+          artworkStatus: "",
+          deliveryChoice: "pickup"
+        }) || {
+          orderNotes: "",
+          artworkStatus: "",
+          deliveryChoice: "pickup"
+        };
+      }
+
+      function getCheckoutDetails() {
+        return safeJsonParse(localStorage.getItem(CHECKOUT_DETAILS_KEY), {
+          customerName: "",
+          customerPhone: "",
+          customerEmail: "",
+          companyName: "",
+          customerLocation: "",
+          preferredContact: "WhatsApp",
+          neededBy: "",
+          deliveryMethod: "",
+          deliveryAddress: "",
+          checkoutNotes: ""
+        }) || {};
+      }
+
+      function saveCheckoutDetails() {
+        localStorage.setItem(CHECKOUT_DETAILS_KEY, JSON.stringify(readCheckoutDetails()));
+      }
+
+      function currencyToNumber(value) {
+        if (typeof value === "number") return value;
+        const cleaned = String(value || "").replace(/,/g, "").replace(/[^\d.]/g, "");
+        const parsed = Number(cleaned);
+        return Number.isFinite(parsed) ? parsed : 0;
+      }
+
+      function formatUGX(amount) {
+        return "UGX " + (Number(amount) || 0).toLocaleString("en-UG");
+      }
+
+      function onlyDigits(value) {
+        return String(value || "").replace(/\D/g, "");
+      }
+
+      function escapeHtml(value) {
+        return String(value ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/\"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      function normalizePath(path) {
+        if (!path) return "";
+        try {
+          const url = new URL(path, window.location.origin);
+          return url.pathname.endsWith("/") ? url.pathname : url.pathname + "/";
+        } catch (error) {
+          return path;
+        }
+      }
+
+      function deriveImageFromUrl(url) {
+        const path = normalizePath(url);
+        const match = path.match(/^\/marketplace\/products\/([^/]+)\/([^/]+)\/$/);
+        if (!match) return DEFAULT_IMAGE;
+        return `/assets/img/products/${match[1]}/${match[2]}/cover.webp`;
+      }
+
+      function prettifyCategory(url) {
+        const path = normalizePath(url);
+        const match = path.match(/^\/marketplace\/products\/([^/]+)\/([^/]+)\/$/);
+        if (!match) return "Marketplace";
+        return match[1].replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
+      }
+
+      function normalizeCartItem(item, index) {
+        const qty = Math.max(1, Number(item.qty || item.quantity || 1));
+        const price = currencyToNumber(item.price || item.unitPrice || 0);
+        const url = item.url || "/marketplace/";
+        return {
+          id: item.id || item.slug || `item-${index + 1}`,
+          name: item.name || "Marketplace Product",
+          url,
+          image: item.image || deriveImageFromUrl(url),
+          price,
+          qty,
+          description: item.description || "",
+          options: item.options && typeof item.options === "object" ? item.options : {},
+          notes: item.notes || "",
+          currency: item.currency || "UGX",
+          category: prettifyCategory(url)
+        };
+      }
+
+      function getNormalizedCart() {
+        return getCart().map(normalizeCartItem);
+      }
+
+      function getCartCount(cart) {
+        return cart.reduce((sum, item) => sum + item.qty, 0);
+      }
+
+      function getCartSubtotal(cart) {
+        return cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      }
+
+      function getDeliveryCost(choice) {
+        switch (choice) {
+          case "pickup": return 0;
+          case "kampala": return 15000;
+          case "outside-kampala": return 30000;
+          case "installation": return 50000;
+          default: return 0;
+        }
+      }
+
+      function formatDeliveryChoice(choice) {
+        switch (choice) {
+          case "pickup": return "Pickup from office";
+          case "kampala": return "Delivery within Kampala";
+          case "outside-kampala": return "Delivery outside Kampala";
+          case "installation": return "Delivery with installation / setup";
+          default: return "Not specified";
+        }
+      }
+
+      function renderOptionLines(options) {
+        const entries = Object.entries(options || {}).filter(([, value]) => String(value).trim());
+        if (!entries.length) return "";
+        return `
+          <div class="option-list">
+            ${entries.map(([key, value]) => `<div class="option-line"><strong>${escapeHtml(key)}:</strong> ${escapeHtml(value)}</div>`).join("")}
+          </div>
+        `;
+      }
+
+      function getDateToken(date = new Date()) {
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, "0");
+        const d = String(date.getDate()).padStart(2, "0");
+        return `${y}${m}${d}`;
+      }
+
+      function getLargeOrderValidity(cart) {
+        const total = getCartSubtotal(cart);
+        const qty = getCartCount(cart);
+        return (total >= 1000000 || qty >= 50) ? VALIDITY_LARGE : VALIDITY_STANDARD;
+      }
+
+      function getOrCreateOrderReference() {
+        const today = getDateToken();
+        const cart = getNormalizedCart();
+        const saved = safeJsonParse(localStorage.getItem(ORDER_REF_KEY), null);
+
+        if (saved && saved.dateToken === today && saved.reference) {
+          return saved.reference;
+        }
+
+        const counters = safeJsonParse(localStorage.getItem(ORDER_COUNTER_KEY), {}) || {};
+        const lastForToday = Number(counters[today] || 99);
+        const nextForToday = lastForToday + 1;
+        counters[today] = nextForToday;
+        localStorage.setItem(ORDER_COUNTER_KEY, JSON.stringify(counters));
+
+        const padded = String(nextForToday).padStart(4, "0");
+        const reference = `KA-ORDER-${today}-${padded}`;
+        localStorage.setItem(ORDER_REF_KEY, JSON.stringify({
+          dateToken: today,
+          reference,
+          createdAt: new Date().toISOString(),
+          cartCount: getCartCount(cart)
+        }));
+        return reference;
+      }
+
+      function renderEmptyState() {
+        els.checkoutItemsContainer.innerHTML = `
+          <div class="empty-state">
+            <h3>Your cart is empty</h3>
+            <p>Add products from apparels, merchandise, banners, stationery or signage first, then return here to complete checkout.</p>
+            <a class="btn btn-primary" href="/marketplace/categories/">Browse Marketplace</a>
+          </div>
+        `;
+        els.completeCheckoutBtn.disabled = true;
+        els.emailCheckoutBtn.disabled = true;
+      }
+
+      function renderItems() {
+        const cart = getNormalizedCart();
+        if (!cart.length) {
+          renderEmptyState();
+          return;
+        }
+
+        els.checkoutItemsContainer.innerHTML = cart.map((item) => {
+          const lineTotal = item.price * item.qty;
+          return `
+            <article class="checkout-item">
+              <div class="checkout-item-media">
+                <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" width="900" height="900" onerror="this.onerror=null;this.src='${DEFAULT_IMAGE}';" />
+              </div>
+              <div class="checkout-item-body">
+                <div class="checkout-item-top">
+                  <div>
+                    <h3><a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a></h3>
+                    <div class="checkout-sub">${escapeHtml(item.description || "Selected marketplace product.")}</div>
+                  </div>
+                  <div class="checkout-price">${formatUGX(lineTotal)}</div>
+                </div>
+                <div class="chip-row">
+                  <span class="chip">${escapeHtml(item.category)}</span>
+                  <span class="chip">Qty: ${item.qty}</span>
+                  <span class="chip">${formatUGX(item.price)} each</span>
+                </div>
+                ${renderOptionLines(item.options)}
+                ${item.notes ? `<div class="option-line"><strong>Item note:</strong> ${escapeHtml(item.notes)}</div>` : ""}
+              </div>
+            </article>
+          `;
+        }).join("");
+
+        els.completeCheckoutBtn.disabled = false;
+        els.emailCheckoutBtn.disabled = false;
+      }
+
+      function readCheckoutDetails() {
+        return {
+          customerName: els.customerName.value.trim(),
+          customerPhone: els.customerPhone.value.trim(),
+          customerEmail: els.customerEmail.value.trim(),
+          companyName: els.companyName.value.trim(),
+          customerLocation: els.customerLocation.value.trim(),
+          preferredContact: els.preferredContact.value,
+          neededBy: els.neededBy.value,
+          deliveryMethod: els.deliveryMethod.value,
+          deliveryAddress: els.deliveryAddress.value.trim(),
+          checkoutNotes: els.checkoutNotes.value.trim()
+        };
+      }
+
+      function hydrateCheckoutDetails() {
+        const details = getCheckoutDetails();
+        const prefs = getPrefs();
+        const inheritedDelivery = (prefs.deliveryChoice && prefs.deliveryChoice.trim()) || details.deliveryMethod || "pickup";
+        els.customerName.value = details.customerName || "";
+        els.customerPhone.value = details.customerPhone || "";
+        els.customerEmail.value = details.customerEmail || "";
+        els.companyName.value = details.companyName || "";
+        els.customerLocation.value = details.customerLocation || "";
+        els.preferredContact.value = details.preferredContact || "WhatsApp";
+        els.neededBy.value = details.neededBy || "";
+        els.deliveryMethod.value = inheritedDelivery;
+        els.deliveryAddress.value = details.deliveryAddress || "";
+        els.checkoutNotes.value = details.checkoutNotes || "";
+        saveCheckoutDetails();
+      }
+
+      function getEffectiveDeliveryChoice() {
+        const prefs = getPrefs();
+        const details = readCheckoutDetails();
+        return (prefs.deliveryChoice && prefs.deliveryChoice.trim()) || (details.deliveryMethod && details.deliveryMethod.trim()) || "pickup";
+      }
+
+      function updateSummary() {
+        const cart = getNormalizedCart();
+        const prefs = getPrefs();
+        const itemCount = getCartCount(cart);
+        const subtotal = getCartSubtotal(cart);
+        const chosenDelivery = getEffectiveDeliveryChoice();
+        const delivery = getDeliveryCost(chosenDelivery);
+        const total = subtotal + delivery;
+        const orderRef = getOrCreateOrderReference();
+        const validity = getLargeOrderValidity(cart);
+
+        document.querySelectorAll("[data-cart-count]").forEach((node) => node.textContent = String(itemCount));
+        els.heroItemCount.textContent = String(itemCount);
+        els.heroEstimatedTotal.textContent = formatUGX(total);
+        els.heroOrderRef.textContent = orderRef;
+        els.summaryOrderRef.textContent = orderRef;
+        els.summaryItemCount.textContent = String(itemCount);
+        els.summarySubtotal.textContent = formatUGX(subtotal);
+        els.summaryDelivery.textContent = formatUGX(delivery);
+        els.summaryTotal.textContent = formatUGX(total);
+        els.summaryValidity.textContent = validity;
+        els.summaryPrefsText.textContent = [
+          prefs.orderNotes ? `Cart notes saved.` : `No cart notes saved yet.`,
+          prefs.artworkStatus ? `Artwork: ${prefs.artworkStatus}.` : `Artwork status not selected.`,
+          `Delivery: ${formatDeliveryChoice(chosenDelivery)}.`
+        ].join(" ");
+        els.savedPrefsCard.textContent = [
+          prefs.orderNotes ? `Order notes: ${prefs.orderNotes}` : `Order notes: none yet.`,
+          prefs.artworkStatus ? `Artwork: ${prefs.artworkStatus}` : `Artwork: not selected.`,
+          `Delivery: ${formatDeliveryChoice(chosenDelivery)}`,
+          `Validity: ${validity}`
+        ].join(" ");
+      }
+
+      function validateForm() {
+        const details = readCheckoutDetails();
+        const missing = [];
+        if (!details.customerName) missing.push("full name");
+        if (!details.customerPhone) missing.push("phone number");
+        if (!details.customerLocation) missing.push("location");
+
+        if (missing.length) {
+          showToast("Incomplete checkout", `Please fill in: ${missing.join(", ")}.`);
+          return false;
+        }
+        return true;
+      }
+
+      function buildOrderMessage() {
+        const cart = getNormalizedCart();
+        const prefs = getPrefs();
+        const details = readCheckoutDetails();
+        const subtotal = getCartSubtotal(cart);
+        const chosenDelivery = getEffectiveDeliveryChoice();
+        const delivery = getDeliveryCost(chosenDelivery);
+        const total = subtotal + delivery;
+        const orderRef = getOrCreateOrderReference();
+        const validity = getLargeOrderValidity(cart);
+
+        const lines = [];
+        lines.push("Hello Kamog Artistry, I would like to complete this marketplace order:");
+        lines.push("");
+        lines.push(`ORDER REFERENCE: ${orderRef}`);
+        lines.push(`VALIDITY: ${validity}`);
+        lines.push("");
+        lines.push("CUSTOMER DETAILS");
+        lines.push(`Name: ${details.customerName || "-"}`);
+        lines.push(`Phone: ${details.customerPhone || "-"}`);
+        lines.push(`Email: ${details.customerEmail || "-"}`);
+        lines.push(`Company: ${details.companyName || "-"}`);
+        lines.push(`Location: ${details.customerLocation || "-"}`);
+        lines.push(`Preferred contact: ${details.preferredContact || "-"}`);
+        lines.push(`Needed by: ${details.neededBy || "-"}`);
+        lines.push(`Delivery method: ${formatDeliveryChoice(chosenDelivery)}`);
+        lines.push(`Delivery address: ${details.deliveryAddress || "-"}`);
+        lines.push("");
+        lines.push("ORDER ITEMS");
+
+        cart.forEach((item, index) => {
+          lines.push(`${index + 1}. ${item.name}`);
+          lines.push(`   Category: ${item.category}`);
+          lines.push(`   Qty: ${item.qty}`);
+          lines.push(`   Unit Price: ${formatUGX(item.price)}`);
+          lines.push(`   Line Total: ${formatUGX(item.price * item.qty)}`);
+          if (item.url) lines.push(`   Product Link: ${SITE_URL}${normalizePath(item.url).replace(/\/$/, "/")}`);
+          const optionEntries = Object.entries(item.options || {}).filter(([, value]) => String(value).trim());
+          optionEntries.forEach(([key, value]) => lines.push(`   ${key}: ${value}`));
+          if (item.notes) lines.push(`   Item Note: ${item.notes}`);
+        });
+
+        lines.push("");
+        lines.push("CART PREFERENCES");
+        lines.push(`Artwork status: ${prefs.artworkStatus || "Not selected"}`);
+        lines.push(`Saved cart notes: ${prefs.orderNotes || "None"}`);
+        lines.push("");
+        lines.push("CHECKOUT NOTES");
+        lines.push(details.checkoutNotes || "None");
+        lines.push("");
+        lines.push("PAYMENT DETAILS");
+        lines.push("MTN Mobile Money: 0775 251 445");
+        lines.push("Name: Etyang Benard");
+        lines.push("");
+        lines.push("SUMMARY");
+        lines.push(`Subtotal: ${formatUGX(subtotal)}`);
+        lines.push(`Estimated delivery: ${formatUGX(delivery)}`);
+        lines.push(`Estimated total: ${formatUGX(total)}`);
+
+        return lines.join("\n");
+      }
+
+      async function loadImageAsDataUrl(url) {
+        const response = await fetch(url);
+        const blob = await response.blob();
+        return await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onloadend = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(blob);
+        });
+      }
+
+      async function generateInvoicePdf() {
+        const cart = getNormalizedCart();
+        if (!cart.length) throw new Error("Your cart is empty.");
+
+        const details = readCheckoutDetails();
+        const prefs = getPrefs();
+        const chosenDelivery = getEffectiveDeliveryChoice();
+        const subtotal = getCartSubtotal(cart);
+        const delivery = getDeliveryCost(chosenDelivery);
+        const installationFee = chosenDelivery === "installation" ? delivery : 0;
+        const transport = chosenDelivery === "installation" ? 0 : delivery;
+        const vat = 0;
+        const total = subtotal + delivery;
+        const orderRef = getOrCreateOrderReference();
+        const validity = getLargeOrderValidity(cart);
+        const invoiceNo = onlyDigits(orderRef).slice(-4) || "0100";
+        const dateToken = getDateToken();
+        const { jsPDF } = window.jspdf;
+
+        const doc = new jsPDF({ unit: "pt", format: "a4" });
+        const pageWidth = doc.internal.pageSize.getWidth();
+        const pageHeight = doc.internal.pageSize.getHeight();
+        const margin = 38;
+        const blue = [11,112,165];
+        const yellow = [242,214,75];
+        const dark = [35,35,35];
+        const gray = [90,90,90];
+        const lightGray = [230,230,230];
+
+        doc.setFillColor(244,244,244);
+        doc.rect(0, 0, pageWidth, pageHeight, "F");
+
+        try {
+          const logoData = await loadImageAsDataUrl(LOGO_PATH);
+          doc.addImage(logoData, "SVG", margin + 5, 28, 150, 100);
+        } catch (error) {
+          doc.setFontSize(28);
+          doc.setTextColor(...blue);
+          doc.text("Kamog Artistry", margin + 10, 78);
+        }
+
+        doc.setTextColor(...dark);
+        doc.setFont("helvetica","bold");
+        doc.setFontSize(14);
+        doc.text("Kampala - Uganda", 235, 64);
+        doc.text("P.O.Box 201929", 235, 84);
+        doc.text("+256 775 251 445", 235, 112);
+        doc.setFont("helvetica","italic");
+        doc.text("info@kamogartistry.com", 235, 140);
+        doc.setFont("helvetica","normal");
+        doc.text("TIN No: 1056418149", 235, 168);
+
+        doc.saveGraphicsState();
+        doc.setTextColor(...blue);
+        doc.setFont("helvetica","bold");
+        doc.setFontSize(38);
+        doc.text("INVOICE", 503, 176, { angle: 270 });
+        doc.restoreGraphicsState();
+
+        doc.setFillColor(...yellow);
+        doc.rect(560, 42, 150, 24, "F");
+        doc.rect(560, 95, 150, 24, "F");
+        doc.setTextColor(...dark);
+        doc.setFont("helvetica","bold");
+        doc.setFontSize(14);
+        doc.text("INVOICE No.", 635, 59, { align: "center" });
+        doc.text("DATE:", 635, 112, { align: "center" });
+
+        doc.setDrawColor(...dark);
+        doc.rect(592, 73, 102, 30);
+        doc.rect(575, 126, 120, 30);
+        doc.setTextColor(220, 40, 40);
+        doc.setFontSize(16);
+        doc.text(`No: ${invoiceNo}`, 643, 93, { align: "center" });
+        doc.setTextColor(...dark);
+        doc.setFont("courier","bold");
+        doc.setFontSize(18);
+        doc.text(dateToken, 635, 147, { align: "center", charSpace: 4 });
+
+        doc.setDrawColor(242, 194, 0);
+        doc.setLineWidth(2);
+        doc.line(0, 203, pageWidth, 203);
+
+        const labelX = 50, valueX = 145, rightLabelX = 415, rightValueX = 565;
+        let y = 242;
+        const rowGap = 34;
+
+        function dottedRow(label, value, x1, x2, yPos) {
+          doc.setTextColor(...dark);
+          doc.setFont("helvetica","normal");
+          doc.setFontSize(16);
+          doc.text(label, x1, yPos);
+          doc.setTextColor(...blue);
+          doc.text(String(value || "-"), x2, yPos);
+        }
+
+        dottedRow("NAME:", details.customerName || "-", labelX, valueX, y);
+        doc.setDrawColor(90,90,90); doc.setLineDash([2,3], 0); doc.line(140, y + 4, 710, y + 4);
+        y += rowGap;
+        dottedRow("COMPANY NAME:", details.companyName || "-", labelX, 230, y);
+        doc.line(208, y + 4, 710, y + 4);
+        y += rowGap;
+        dottedRow("ADDRESS:", details.customerLocation || details.deliveryAddress || "-", labelX, 130, y);
+        doc.text("CONTACT:", rightLabelX, y);
+        doc.setTextColor(...blue);
+        doc.text(details.customerPhone || "-", rightValueX, y);
+        doc.setTextColor(...dark);
+        doc.line(122, y + 4, 405, y + 4);
+        doc.line(495, y + 4, 710, y + 4);
+        y += rowGap;
+        dottedRow("VALIDITY:", validity, labelX, 145, y);
+        doc.text("INVOICE REF. NO:", rightLabelX, y);
+        doc.setTextColor(...blue);
+        doc.text(orderRef, 570, y);
+        doc.setTextColor(...dark);
+        doc.line(136, y + 4, 405, y + 4);
+        doc.line(546, y + 4, 710, y + 4);
+        doc.setLineDash([], 0);
+
+        const tableTop = 315;
+        const descX = 50, unitX = 390, qtyX = 515, totalX = 610, tableRight = 710;
+        doc.setFillColor(...blue);
+        doc.rect(0, tableTop, pageWidth, 38, "F");
+        doc.setTextColor(255,255,255);
+        doc.setFont("helvetica","bold");
+        doc.setFontSize(16);
+        doc.text("DESCRIPTION", descX, tableTop + 25);
+        doc.text("UNIT COST", unitX, tableTop + 25);
+        doc.text("QTY", qtyX, tableTop + 25);
+        doc.text("TOTAL (UGX)", totalX, tableTop + 25);
+
+        doc.setDrawColor(255,255,255);
+        doc.line(370, tableTop, 370, tableTop + 38);
+        doc.line(495, tableTop, 495, tableTop + 38);
+        doc.line(575, tableTop, 575, tableTop + 38);
+
+        let rowY = tableTop + 55;
+        doc.setTextColor(20,110,190);
+        doc.setFont("helvetica","normal");
+        doc.setFontSize(15);
+
+        const maxRows = 9;
+        const itemsToPrint = cart.slice(0, maxRows);
+        itemsToPrint.forEach((item) => {
+          const itemName = doc.splitTextToSize(item.name, 290)[0];
+          doc.text(itemName, descX, rowY);
+          doc.text((item.price || 0).toLocaleString("en-UG"), unitX + 55, rowY, { align: "right" });
+          doc.text(String(item.qty), qtyX + 45, rowY, { align: "right" });
+          doc.text((item.price * item.qty).toLocaleString("en-UG"), totalX + 80, rowY, { align: "right" });
+          doc.setDrawColor(120,120,120);
+          doc.line(descX, rowY + 18, tableRight, rowY + 18);
+          rowY += 32;
+        });
+
+        while (itemsToPrint.length < maxRows && rowY < 640) {
+          doc.setDrawColor(160,160,160);
+          doc.line(descX, rowY + 18, tableRight, rowY + 18);
+          rowY += 32;
+          itemsToPrint.push({});
+        }
+
+        doc.setTextColor(220, 40, 40);
+        doc.setFontSize(12);
+        doc.text("T&C note: 70% advance payment required", 54, 650);
+        doc.text("to commence production.", 100, 666);
+
+        doc.setTextColor(...dark);
+        doc.setFont("helvetica","normal");
+        doc.setFontSize(14);
+        doc.text("Payment Info:", 52, 706);
+        doc.setFillColor(255, 204, 0);
+        doc.rect(52, 720, 44, 30, "F");
+        doc.setTextColor(...dark);
+        doc.setFontSize(9);
+        doc.text("MTN", 61, 735);
+        doc.text("MoMo", 58, 746);
+        doc.setFont("helvetica","bold");
+        doc.setFontSize(12);
+        doc.text("0775 251 445", 114, 737);
+        doc.setFont("helvetica","normal");
+        doc.setFontSize(10);
+        doc.text("Etyang Benard", 114, 752);
+
+        const totalsXLabel = 392;
+        const totalsXValue = 698;
+        const totalsTop = 650;
+        doc.setTextColor(...dark);
+        doc.setFont("helvetica","normal");
+        doc.setFontSize(16);
+        const totalRows = [
+          ["Subtotal:", subtotal],
+          ["Transport:", transport],
+          ["Installation Fee:", installationFee],
+          ["VAT 18% (inclusive)", vat]
+        ];
+        totalRows.forEach((row, idx) => {
+          const yy = totalsTop + idx * 34;
+          doc.text(row[0], totalsXLabel, yy);
+          doc.text((row[1] || 0).toLocaleString("en-UG"), totalsXValue, yy, { align: "right" });
+          doc.setDrawColor(120,120,120);
+          doc.line(totalsXLabel - 20, yy + 12, 710, yy + 12);
+        });
+
+        doc.setFillColor(...blue);
+        doc.rect(totalsXLabel - 20, totalsTop + 136, 130, 34, "F");
+        doc.setTextColor(255,255,255);
+        doc.setFont("helvetica","bold");
+        doc.text("TOTAL", totalsXLabel + 4, totalsTop + 159);
+        doc.setTextColor(...blue);
+        doc.text(`${(total).toLocaleString("en-UG")}/=`, totalsXValue, totalsTop + 159, { align: "right" });
+
+        doc.setTextColor(...gray);
+        doc.setFont("helvetica","italic");
+        doc.setFontSize(12);
+        doc.text("“Bringing Your Imagination To Life”", 78, 836);
+
+        doc.setDrawColor(242, 194, 0);
+        doc.setLineWidth(3);
+        doc.line(0, 852, 420, 852);
+        doc.line(570, 852, pageWidth, 852);
+
+        doc.setTextColor(...dark);
+        doc.setFont("helvetica","normal");
+        doc.setFontSize(12);
+        doc.text("▣ Design", 48, 871);
+        doc.text("▣ Print", 118, 871);
+        doc.text("▣ Brand", 187, 871);
+        doc.text("▣ FineArts", 257, 871);
+
+        doc.setDrawColor(...blue);
+        doc.setLineWidth(1.5);
+        doc.line(430, 848, 535, 848);
+        doc.setFontSize(12);
+        doc.text("For: Kamog Artistry", 458, 868, { align: "center" });
+        doc.text("(U) Ltd", 483, 884, { align: "center" });
+
+        const fileName = `${orderRef}.pdf`;
+        doc.save(fileName);
+        return fileName;
+      }
+
+      async function handleCheckout(channel) {
+        if (!validateForm()) return;
+        if (!window.jspdf || !window.jspdf.jsPDF) {
+          showToast("PDF unavailable", "The invoice library failed to load. Please refresh and try again.");
+          return;
+        }
+
+        try {
+          saveCheckoutDetails();
+          const pdfName = await generateInvoicePdf();
+          const message = buildOrderMessage();
+
+          if (channel === "whatsapp") {
+            showToast("Invoice downloaded", `Opening WhatsApp. Attach ${pdfName} if needed.`);
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            setTimeout(() => { window.location.href = url; }, 600);
+            return;
+          }
+
+          const subject = encodeURIComponent(`Marketplace Checkout Order ${getOrCreateOrderReference()} - Kamog Artistry`);
+          const body = encodeURIComponent(`${message}\n\nInvoice PDF downloaded separately: ${pdfName}`);
+          showToast("Invoice downloaded", `Opening email. Attach ${pdfName} if needed.`);
+          setTimeout(() => { window.location.href = `mailto:${SALES_EMAIL}?subject=${subject}&body=${body}`; }, 600);
+        } catch (error) {
+          showToast("Checkout error", error.message || "Unable to generate invoice PDF.");
+        }
+      }
+
+      function bindEvents() {
+        [
+          els.customerName, els.customerPhone, els.customerEmail, els.companyName,
+          els.customerLocation, els.preferredContact, els.neededBy, els.deliveryMethod,
+          els.deliveryAddress, els.checkoutNotes
+        ].forEach((field) => {
+          field.addEventListener("input", () => { saveCheckoutDetails(); updateSummary(); });
+          field.addEventListener("change", () => { saveCheckoutDetails(); updateSummary(); });
+        });
+
+        els.completeCheckoutBtn.addEventListener("click", () => handleCheckout("whatsapp"));
+        els.emailCheckoutBtn.addEventListener("click", () => handleCheckout("email"));
+      }
+
+      let toastTimer = null;
+      function showToast(title, text) {
+        els.checkoutToastTitle.textContent = title;
+        els.checkoutToastText.textContent = text;
+        els.checkoutToast.classList.add("is-visible");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => els.checkoutToast.classList.remove("is-visible"), 2600);
+      }
+
+      function boot() {
+        hydrateCheckoutDetails();
+        renderItems();
+        updateSummary();
+        bindEvents();
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
+    })();
+  </script>
+</body>
+</html>
