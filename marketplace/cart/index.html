@@ -815,311 +815,351 @@
     })();
   </script>
 
-  <script>
-    (() => {
-      'use strict';
+<script>
+  (() => {
+    'use strict';
 
-      const CART_KEY = 'kamog_cart';
-      const PREFS_KEY = 'kamog_cart_preferences';
-      const DEFAULT_IMAGE = '/assets/img/og/home-og.jpg';
+    const CART_KEY = 'kamog_cart';
+    const PREFS_KEY = 'kamog_cart_preferences';
+    const DEFAULT_IMAGE = '/assets/img/og/home-og.jpg';
 
-      const els = {
-        cartItemsContainer: document.getElementById('cartItemsContainer'),
-        summaryItemCount: document.getElementById('summaryItemCount'),
-        summarySubtotal: document.getElementById('summarySubtotal'),
-        summaryDelivery: document.getElementById('summaryDelivery'),
-        summaryArtwork: document.getElementById('summaryArtwork'),
-        summaryTotal: document.getElementById('summaryTotal'),
-        heroItemCount: document.getElementById('heroItemCount'),
-        heroSubtotal: document.getElementById('heroSubtotal'),
-        orderNotes: document.getElementById('order-notes'),
-        artworkStatus: document.getElementById('artwork-status'),
-        deliveryChoice: document.getElementById('delivery-choice'),
-        saveStatus: document.getElementById('saveStatus'),
-        clearCartBtn: document.getElementById('clearCartBtn'),
-        heroCheckoutBtn: document.getElementById('heroCheckoutBtn'),
-        proceedCheckoutBtn: document.getElementById('proceedCheckoutBtn')
+    const els = {
+      cartItemsContainer: document.getElementById('cartItemsContainer'),
+      summaryItemCount: document.getElementById('summaryItemCount'),
+      summarySubtotal: document.getElementById('summarySubtotal'),
+      summaryDelivery: document.getElementById('summaryDelivery'),
+      summaryArtwork: document.getElementById('summaryArtwork'),
+      summaryTotal: document.getElementById('summaryTotal'),
+      heroItemCount: document.getElementById('heroItemCount'),
+      heroSubtotal: document.getElementById('heroSubtotal'),
+      orderNotes: document.getElementById('order-notes'),
+      artworkStatus: document.getElementById('artwork-status'),
+      deliveryChoice: document.getElementById('delivery-choice'),
+      saveStatus: document.getElementById('saveStatus'),
+      clearCartBtn: document.getElementById('clearCartBtn'),
+      heroCheckoutBtn: document.getElementById('heroCheckoutBtn'),
+      proceedCheckoutBtn: document.getElementById('proceedCheckoutBtn')
+    };
+
+    function safeJsonParse(value, fallback) {
+      try {
+        const parsed = JSON.parse(value);
+        return parsed == null ? fallback : parsed;
+      } catch (error) {
+        return fallback;
+      }
+    }
+
+    function getCart() {
+      const parsed = safeJsonParse(localStorage.getItem(CART_KEY), []);
+      return Array.isArray(parsed) ? parsed : [];
+    }
+
+    function saveCart(cart) {
+      const safeCart = Array.isArray(cart) ? cart : [];
+      localStorage.setItem(CART_KEY, JSON.stringify(safeCart));
+      updateCartCountBadges();
+    }
+
+    function getPrefs() {
+      const parsed = safeJsonParse(localStorage.getItem(PREFS_KEY), {
+        orderNotes: '',
+        artworkStatus: '',
+        deliveryChoice: 'pickup'
+      });
+
+      return {
+        orderNotes: String(parsed.orderNotes || ''),
+        artworkStatus: String(parsed.artworkStatus || ''),
+        deliveryChoice: String(parsed.deliveryChoice || 'pickup')
       };
+    }
 
-      function safeJsonParse(value, fallback) {
-        try { return JSON.parse(value); } catch (error) { return fallback; }
+    function savePrefs(prefs) {
+      localStorage.setItem(PREFS_KEY, JSON.stringify({ ...getPrefs(), ...prefs }));
+      if (els.saveStatus) {
+        els.saveStatus.textContent = 'Preferences saved.';
+        clearTimeout(savePrefs._timer);
+        savePrefs._timer = setTimeout(() => {
+          els.saveStatus.textContent = 'Preferences save automatically.';
+        }, 1500);
       }
+    }
 
-      function getCart() {
-        const parsed = safeJsonParse(localStorage.getItem(CART_KEY), []);
-        return Array.isArray(parsed) ? parsed : [];
+    function formatUGX(amount) {
+      return 'UGX ' + (Number(amount) || 0).toLocaleString('en-UG');
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function currencyToNumber(value) {
+      if (typeof value === 'number') return value;
+      const cleaned = String(value || '').replace(/,/g, '').replace(/[^\d.]/g, '');
+      const parsed = Number(cleaned);
+      return Number.isFinite(parsed) ? parsed : 0;
+    }
+
+    function getPathname(value) {
+      try {
+        return new URL(value, window.location.origin).pathname;
+      } catch (error) {
+        return String(value || '');
       }
+    }
 
-      function saveCart(cart) {
-        localStorage.setItem(CART_KEY, JSON.stringify(cart));
-        updateCartCountBadges();
-      }
+    function normalizeAssetPath(value) {
+      if (!value) return '';
+      const path = getPathname(value);
+      if (!path) return '';
+      if (/\.(webp|png|jpe?g|gif|svg|avif)$/i.test(path)) return path;
+      return '';
+    }
 
-      function getPrefs() {
-        return safeJsonParse(localStorage.getItem(PREFS_KEY), {
-          orderNotes: '',
-          artworkStatus: '',
-          deliveryChoice: 'pickup'
-        });
-      }
+    function deriveImageFromProductUrl(url) {
+      const pathname = getPathname(url);
+      const match = pathname.match(/^\/marketplace\/products\/([^\/]+)\/([^\/]+)\/?$/i);
+      if (!match) return '';
+      const category = match[1];
+      const slug = match[2];
+      return `/assets/img/products/${category}/${slug}/cover.webp`;
+    }
 
-      function savePrefs(prefs) {
-        localStorage.setItem(PREFS_KEY, JSON.stringify({ ...getPrefs(), ...prefs }));
-        if (els.saveStatus) {
-          els.saveStatus.textContent = 'Preferences saved.';
-          clearTimeout(savePrefs._timer);
-          savePrefs._timer = setTimeout(() => {
-            els.saveStatus.textContent = 'Preferences save automatically.';
-          }, 1500);
-        }
-      }
+    function deriveImageFromItem(item) {
+      const explicitImage = normalizeAssetPath(item.image || item.cover || item.thumbnail || '');
+      if (explicitImage) return explicitImage;
 
-      function formatUGX(amount) {
-        return 'UGX ' + (Number(amount) || 0).toLocaleString('en-UG');
-      }
+      const derivedFromUrl = deriveImageFromProductUrl(item.url || item.productUrl || '');
+      if (derivedFromUrl) return derivedFromUrl;
 
-      function escapeHtml(value) {
-        return String(value ?? '')
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#039;');
-      }
-
-      function currencyToNumber(value) {
-        if (typeof value === 'number') return value;
-        const cleaned = String(value || '').replace(/,/g, '').replace(/[^\d.]/g, '');
-        const parsed = Number(cleaned);
-        return Number.isFinite(parsed) ? parsed : 0;
-      }
-
-      function getPathname(value) {
-        try {
-          return new URL(value, window.location.origin).pathname;
-        } catch (error) {
-          return String(value || '');
-        }
-      }
-
-      function normalizeAssetPath(value) {
-        if (!value) return '';
-        const path = getPathname(value);
-        if (!path) return '';
-        if (/\.(webp|png|jpe?g|gif|svg|avif)$/i.test(path)) return path;
-        return '';
-      }
-
-      function deriveImageFromProductUrl(url) {
-        const pathname = getPathname(url);
-        const match = pathname.match(/^\/marketplace\/products\/([^\/]+)\/([^\/]+)\/?$/i);
-        if (!match) return '';
-        const category = match[1];
-        const slug = match[2];
+      const category = String(item.category || item.group || '').trim().replace(/^\/+|\/+$/g, '');
+      const slug = String(item.slug || item.id || item.sku || '').trim().replace(/^\/+|\/+$/g, '');
+      if (category && slug) {
         return `/assets/img/products/${category}/${slug}/cover.webp`;
       }
 
-      function deriveImageFromItem(item) {
-        const explicitImage = normalizeAssetPath(item.image || item.cover || item.thumbnail || '');
-        if (explicitImage) return explicitImage;
+      return DEFAULT_IMAGE;
+    }
 
-        const derivedFromUrl = deriveImageFromProductUrl(item.url || item.productUrl || '');
-        if (derivedFromUrl) return derivedFromUrl;
+    function normalizeItem(item, index) {
+      const qty = Math.max(1, Number(item.qty ?? item.quantity ?? 1) || 1);
+      const price = currencyToNumber(item.price || item.unitPrice || 0);
+      const url = item.url || item.productUrl || '/marketplace/';
 
-        const category = String(item.category || item.group || '').trim().replace(/^\/+|\/+$/g, '');
-        const slug = String(item.slug || item.id || item.sku || '').trim().replace(/^\/+|\/+$/g, '');
-        if (category && slug) {
-          return `/assets/img/products/${category}/${slug}/cover.webp`;
-        }
+      return {
+        id: item.id || item.sku || item.slug || ('item-' + (index + 1)),
+        sku: item.sku || item.id || '',
+        slug: item.slug || item.id || item.sku || '',
+        name: item.name || 'Marketplace Product',
+        price,
+        qty,
+        quantity: qty,
+        image: deriveImageFromItem(item),
+        url,
+        description: item.description || '',
+        notes: item.notes || '',
+        options: item.options && typeof item.options === 'object' ? item.options : {},
+        currency: item.currency || 'UGX',
+        category: item.category || ''
+      };
+    }
 
-        return DEFAULT_IMAGE;
+    function getNormalizedCart() {
+      return getCart().map(normalizeItem);
+    }
+
+    function updateCartCountBadges() {
+      const count = getNormalizedCart().reduce((sum, item) => sum + item.qty, 0);
+      document.querySelectorAll('[data-cart-count], .cart-count, .cart-badge, #cartCount, #heroCartCount, .count').forEach((node) => {
+        node.textContent = String(count);
+      });
+    }
+
+    function getDeliveryCost(choice) {
+      switch (choice) {
+        case 'kampala': return 15000;
+        case 'outside-kampala': return 30000;
+        case 'installation': return 50000;
+        default: return 0;
+      }
+    }
+
+    function getArtworkSummary(status) {
+      if (!status) return 'To be confirmed';
+      if (status === 'Artwork ready and upload available') return 'No design support assumed';
+      if (status === 'Need minor artwork cleanup') return 'May attract minor charge';
+      if (status === 'Need full design support') return 'Design charges may apply';
+      if (status === 'Will send artwork after checkout') return 'Pending artwork submission';
+      return 'To be confirmed';
+    }
+
+    function getItemCount(cart) {
+      return cart.reduce((sum, item) => sum + item.qty, 0);
+    }
+
+    function getSubtotal(cart) {
+      return cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    }
+
+    function renderOptionFields(item) {
+      const entries = Object.entries(item.options || {});
+      if (!entries.length) {
+        return '<div class="field"><label>Saved options</label><input type="text" value="No saved options yet" disabled></div>';
       }
 
-      function normalizeItem(item, index) {
-        const qty = Math.max(1, Number(item.qty || item.quantity || 1) || 1);
-        const price = currencyToNumber(item.price || item.unitPrice || 0);
-        const url = item.url || item.productUrl || '/marketplace/';
-        return {
-          id: item.id || item.sku || item.slug || ('item-' + (index + 1)),
-          sku: item.sku || item.id || '',
-          slug: item.slug || item.id || item.sku || '',
-          name: item.name || 'Marketplace Product',
-          price,
-          qty,
-          image: deriveImageFromItem(item),
-          url,
-          description: item.description || '',
-          notes: item.notes || '',
-          options: item.options && typeof item.options === 'object' ? item.options : {},
-          currency: item.currency || 'UGX'
-        };
+      return entries.map(([key, value]) => `
+        <div class="field">
+          <label>${escapeHtml(key)}</label>
+          <input type="text" value="${escapeHtml(value)}" data-action="option-change" data-id="${escapeHtml(item.id)}" data-option-key="${escapeHtml(key)}">
+        </div>
+      `).join('');
+    }
+
+    function renderEmptyState() {
+      els.cartItemsContainer.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon">🛒</div>
+          <h3>Your cart is empty</h3>
+          <p>Browse apparels, merchandise, banners, stationery and signage, then add products here to review before checkout.</p>
+          <a class="btn btn-primary" href="/marketplace/categories/">Browse Products</a>
+        </div>
+      `;
+    }
+
+    function renderCartItems() {
+      const cart = getNormalizedCart();
+      if (!cart.length) {
+        renderEmptyState();
+        return;
       }
 
-      function getNormalizedCart() {
-        return getCart().map(normalizeItem);
-      }
+      els.cartItemsContainer.innerHTML = cart.map((item) => {
+        const lineTotal = item.price * item.qty;
+        return `
+          <article class="cart-item">
+            <div class="item-media">
+              <img loading="lazy" decoding="async" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" width="900" height="900" onerror="this.onerror=null;this.src='${DEFAULT_IMAGE}';">
+            </div>
+            <div class="item-body">
+              <div class="item-top">
+                <div>
+                  <h3 class="item-title"><a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a></h3>
+                  <p class="item-desc">${escapeHtml(item.description || 'Selected marketplace product.')}</p>
+                </div>
+                <div class="item-price">${formatUGX(lineTotal)}<small>${formatUGX(item.price)} each</small></div>
+              </div>
 
-      function updateCartCountBadges() {
-        const count = getNormalizedCart().reduce((sum, item) => sum + item.qty, 0);
-        document.querySelectorAll('[data-cart-count], .cart-count, .cart-badge, #cartCount, #heroCartCount').forEach((node) => {
-          node.textContent = String(count);
-        });
-      }
+              <div class="item-grid">
+                ${renderOptionFields(item)}
+                <div class="field" style="grid-column:1 / -1;">
+                  <label>Item notes</label>
+                  <textarea data-action="notes-change" data-id="${escapeHtml(item.id)}" placeholder="Color, size mix, print placement, delivery note or any special instruction.">${escapeHtml(item.notes || '')}</textarea>
+                </div>
+              </div>
 
-      function getDeliveryCost(choice) {
-        switch (choice) {
-          case 'kampala': return 15000;
-          case 'outside-kampala': return 30000;
-          case 'installation': return 50000;
-          default: return 0;
-        }
-      }
-
-      function getArtworkSummary(status) {
-        if (!status) return 'To be confirmed';
-        if (status === 'Artwork ready and upload available') return 'No design support assumed';
-        if (status === 'Need minor artwork cleanup') return 'May attract minor charge';
-        if (status === 'Need full design support') return 'Design charges may apply';
-        if (status === 'Will send artwork after checkout') return 'Pending artwork submission';
-        return 'To be confirmed';
-      }
-
-      function getItemCount(cart) {
-        return cart.reduce((sum, item) => sum + item.qty, 0);
-      }
-
-      function getSubtotal(cart) {
-        return cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-      }
-
-      function renderOptionFields(item) {
-        const entries = Object.entries(item.options || {});
-        if (!entries.length) {
-          return '<div class="field"><label>Saved options</label><input type="text" value="No saved options yet" disabled></div>';
-        }
-
-        return entries.map(([key, value]) => `
-          <div class="field">
-            <label>${escapeHtml(key)}</label>
-            <input type="text" value="${escapeHtml(value)}" data-action="option-change" data-id="${escapeHtml(item.id)}" data-option-key="${escapeHtml(key)}">
-          </div>
-        `).join('');
-      }
-
-      function renderEmptyState() {
-        els.cartItemsContainer.innerHTML = `
-          <div class="empty-state">
-            <div class="empty-icon">🛒</div>
-            <h3>Your cart is empty</h3>
-            <p>Browse apparels, merchandise, banners, stationery and signage, then add products here to review before checkout.</p>
-            <a class="btn btn-primary" href="/marketplace/categories/">Browse Products</a>
-          </div>
+              <div class="item-footer">
+                <div class="qty-box" aria-label="Quantity selector">
+                  <button class="qty-btn" type="button" data-action="decrease" data-id="${escapeHtml(item.id)}" aria-label="Reduce quantity">−</button>
+                  <input class="qty-input" type="number" min="1" value="${item.qty}" data-action="qty-input" data-id="${escapeHtml(item.id)}" aria-label="Quantity">
+                  <button class="qty-btn" type="button" data-action="increase" data-id="${escapeHtml(item.id)}" aria-label="Increase quantity">+</button>
+                </div>
+                <div class="item-actions">
+                  <a class="text-btn" href="${escapeHtml(item.url)}">Open product</a>
+                  <button class="text-btn danger" type="button" data-action="remove" data-id="${escapeHtml(item.id)}">Remove</button>
+                </div>
+              </div>
+            </div>
+          </article>
         `;
-      }
+      }).join('');
+    }
 
-      function renderCartItems() {
-        const cart = getNormalizedCart();
-        if (!cart.length) {
-          renderEmptyState();
-          return;
+    function renderSummary() {
+      const cart = getNormalizedCart();
+      const prefs = getPrefs();
+      const count = getItemCount(cart);
+      const subtotal = getSubtotal(cart);
+      const delivery = getDeliveryCost(prefs.deliveryChoice);
+      const total = subtotal + delivery;
+
+      els.summaryItemCount.textContent = String(count);
+      els.summarySubtotal.textContent = formatUGX(subtotal);
+      els.summaryDelivery.textContent = formatUGX(delivery);
+      els.summaryArtwork.textContent = getArtworkSummary(prefs.artworkStatus);
+      els.summaryTotal.textContent = formatUGX(total);
+      els.heroItemCount.textContent = String(count);
+      els.heroSubtotal.textContent = formatUGX(subtotal);
+
+      const empty = count === 0;
+      if (els.proceedCheckoutBtn) {
+        if (empty) {
+          els.proceedCheckoutBtn.setAttribute('aria-disabled', 'true');
+          els.proceedCheckoutBtn.classList.add('is-disabled');
+          els.proceedCheckoutBtn.href = '#';
+        } else {
+          els.proceedCheckoutBtn.removeAttribute('aria-disabled');
+          els.proceedCheckoutBtn.classList.remove('is-disabled');
+          els.proceedCheckoutBtn.href = '/marketplace/checkout/';
         }
-
-        els.cartItemsContainer.innerHTML = cart.map((item) => {
-          const lineTotal = item.price * item.qty;
-          return `
-            <article class="cart-item">
-              <div class="item-media">
-                <img loading="lazy" decoding="async" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" width="900" height="900" onerror="this.onerror=null;this.src='${DEFAULT_IMAGE}';">
-              </div>
-              <div class="item-body">
-                <div class="item-top">
-                  <div>
-                    <h3 class="item-title"><a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a></h3>
-                    <p class="item-desc">${escapeHtml(item.description || 'Selected marketplace product.')}</p>
-                  </div>
-                  <div class="item-price">${formatUGX(lineTotal)}<small>${formatUGX(item.price)} each</small></div>
-                </div>
-
-                <div class="item-grid">
-                  ${renderOptionFields(item)}
-                  <div class="field" style="grid-column:1 / -1;">
-                    <label>Item notes</label>
-                    <textarea data-action="notes-change" data-id="${escapeHtml(item.id)}" placeholder="Color, size mix, print placement, delivery note or any special instruction.">${escapeHtml(item.notes || '')}</textarea>
-                  </div>
-                </div>
-
-                <div class="item-footer">
-                  <div class="qty-box" aria-label="Quantity selector">
-                    <button class="qty-btn" type="button" data-action="decrease" data-id="${escapeHtml(item.id)}" aria-label="Reduce quantity">−</button>
-                    <input class="qty-input" type="number" min="1" value="${item.qty}" data-action="qty-input" data-id="${escapeHtml(item.id)}" aria-label="Quantity">
-                    <button class="qty-btn" type="button" data-action="increase" data-id="${escapeHtml(item.id)}" aria-label="Increase quantity">+</button>
-                  </div>
-                  <div class="item-actions">
-                    <a class="text-btn" href="${escapeHtml(item.url)}">Open product</a>
-                    <button class="text-btn danger" type="button" data-action="remove" data-id="${escapeHtml(item.id)}">Remove</button>
-                  </div>
-                </div>
-              </div>
-            </article>
-          `;
-        }).join('');
       }
 
-      function renderSummary() {
-        const cart = getNormalizedCart();
-        const prefs = getPrefs();
-        const count = getItemCount(cart);
-        const subtotal = getSubtotal(cart);
-        const delivery = getDeliveryCost(prefs.deliveryChoice);
-        const total = subtotal + delivery;
+      if (els.heroCheckoutBtn) {
+        if (empty) {
+          els.heroCheckoutBtn.setAttribute('aria-disabled', 'true');
+          els.heroCheckoutBtn.classList.add('is-disabled');
+          els.heroCheckoutBtn.href = '#';
+        } else {
+          els.heroCheckoutBtn.removeAttribute('aria-disabled');
+          els.heroCheckoutBtn.classList.remove('is-disabled');
+          els.heroCheckoutBtn.href = '/marketplace/checkout/';
+        }
+      }
 
-        els.summaryItemCount.textContent = String(count);
-        els.summarySubtotal.textContent = formatUGX(subtotal);
-        els.summaryDelivery.textContent = formatUGX(delivery);
-        els.summaryArtwork.textContent = getArtworkSummary(prefs.artworkStatus);
-        els.summaryTotal.textContent = formatUGX(total);
-        els.heroItemCount.textContent = String(count);
-        els.heroSubtotal.textContent = formatUGX(subtotal);
-
-        const empty = count === 0;
-        els.proceedCheckoutBtn.toggleAttribute('disabled', empty);
-        els.heroCheckoutBtn.toggleAttribute('disabled', empty);
+      if (els.clearCartBtn) {
         els.clearCartBtn.disabled = empty;
       }
+    }
 
-      function renderPrefs() {
-        const prefs = getPrefs();
-        els.orderNotes.value = prefs.orderNotes || '';
-        els.artworkStatus.value = prefs.artworkStatus || '';
-        els.deliveryChoice.value = prefs.deliveryChoice || 'pickup';
-      }
+    function renderPrefs() {
+      const prefs = getPrefs();
+      if (els.orderNotes) els.orderNotes.value = prefs.orderNotes || '';
+      if (els.artworkStatus) els.artworkStatus.value = prefs.artworkStatus || '';
+      if (els.deliveryChoice) els.deliveryChoice.value = prefs.deliveryChoice || 'pickup';
+    }
 
-      function rerender() {
-        renderCartItems();
-        renderSummary();
-        updateCartCountBadges();
-      }
+    function rerender() {
+      renderCartItems();
+      renderSummary();
+      updateCartCountBadges();
+    }
 
-      function updateItem(itemId, mutator) {
-        const cart = getNormalizedCart();
-        const updated = cart.map((item) => item.id === itemId ? mutator({ ...item, options: { ...item.options } }) : item);
-        saveCart(updated);
-        rerender();
-      }
+    function updateItem(itemId, mutator) {
+      const cart = getNormalizedCart();
+      const updated = cart.map((item) => item.id === itemId ? mutator({ ...item, options: { ...item.options } }) : item);
+      saveCart(updated);
+      rerender();
+    }
 
-      function removeItem(itemId) {
-        const updated = getNormalizedCart().filter((item) => item.id !== itemId);
-        saveCart(updated);
-        rerender();
-      }
+    function removeItem(itemId) {
+      const updated = getNormalizedCart().filter((item) => item.id !== itemId);
+      saveCart(updated);
+      rerender();
+    }
 
-      function clearCart() {
-        if (!window.confirm('Are you sure you want to clear all items from the cart?')) return;
-        saveCart([]);
-        rerender();
-      }
+    function clearCart() {
+      if (!window.confirm('Are you sure you want to clear all items from the cart?')) return;
+      saveCart([]);
+      rerender();
+    }
 
-      function bindEvents() {
+    function bindEvents() {
+      if (els.cartItemsContainer) {
         els.cartItemsContainer.addEventListener('click', (event) => {
           const trigger = event.target.closest('[data-action]');
           if (!trigger) return;
@@ -1127,8 +1167,11 @@
           const id = trigger.getAttribute('data-id');
           if (!id) return;
 
-          if (action === 'increase') updateItem(id, (item) => ({ ...item, qty: item.qty + 1 }));
-          if (action === 'decrease') updateItem(id, (item) => ({ ...item, qty: Math.max(1, item.qty - 1) }));
+          if (action === 'increase') updateItem(id, (item) => ({ ...item, qty: item.qty + 1, quantity: item.qty + 1 }));
+          if (action === 'decrease') updateItem(id, (item) => {
+            const qty = Math.max(1, item.qty - 1);
+            return { ...item, qty, quantity: qty };
+          });
           if (action === 'remove') removeItem(id);
         });
 
@@ -1140,7 +1183,7 @@
 
           if (action === 'qty-input') {
             const qty = Math.max(1, Number(target.value) || 1);
-            updateItem(id, (item) => ({ ...item, qty }));
+            updateItem(id, (item) => ({ ...item, qty, quantity: qty }));
             return;
           }
 
@@ -1158,46 +1201,53 @@
             });
           }
         });
-
-        const persistPrefs = () => {
-          savePrefs({
-            orderNotes: els.orderNotes.value.trim(),
-            artworkStatus: els.artworkStatus.value,
-            deliveryChoice: els.deliveryChoice.value
-          });
-          renderSummary();
-        };
-
-        els.orderNotes.addEventListener('input', persistPrefs);
-        els.artworkStatus.addEventListener('change', persistPrefs);
-        els.deliveryChoice.addEventListener('change', persistPrefs);
-        els.clearCartBtn.addEventListener('click', clearCart);
       }
 
-      window.KamogCart = {
-        getCart,
-        saveCart,
-        getPrefs,
-        savePrefs,
-        count: () => getItemCount(getNormalizedCart()),
-        total: () => getSubtotal(getNormalizedCart()),
-        formatUGX,
-        clear: clearCart
+      const persistPrefs = () => {
+        savePrefs({
+          orderNotes: els.orderNotes ? els.orderNotes.value.trim() : '',
+          artworkStatus: els.artworkStatus ? els.artworkStatus.value : '',
+          deliveryChoice: els.deliveryChoice ? els.deliveryChoice.value : 'pickup'
+        });
+        renderSummary();
       };
 
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-          renderPrefs();
-          rerender();
-          bindEvents();
-        });
-      } else {
+      if (els.orderNotes) els.orderNotes.addEventListener('input', persistPrefs);
+      if (els.artworkStatus) els.artworkStatus.addEventListener('change', persistPrefs);
+      if (els.deliveryChoice) els.deliveryChoice.addEventListener('change', persistPrefs);
+      if (els.clearCartBtn) els.clearCartBtn.addEventListener('click', clearCart);
+
+      window.addEventListener('storage', rerender);
+      document.addEventListener('kamog:cart-updated', rerender);
+      document.addEventListener('kamog:prefs-updated', () => {
+        renderPrefs();
+        renderSummary();
+      });
+    }
+
+    window.KamogCart = window.KamogCart || {};
+    window.KamogCart.getCart = getCart;
+    window.KamogCart.saveCart = saveCart;
+    window.KamogCart.getPrefs = getPrefs;
+    window.KamogCart.savePrefs = savePrefs;
+    window.KamogCart.count = () => getItemCount(getNormalizedCart());
+    window.KamogCart.total = () => getSubtotal(getNormalizedCart());
+    window.KamogCart.formatUGX = formatUGX;
+    window.KamogCart.clear = clearCart;
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
         renderPrefs();
         rerender();
         bindEvents();
-      }
-    })();
-  </script>
+      });
+    } else {
+      renderPrefs();
+      rerender();
+      bindEvents();
+    }
+  })();
+</script>
 
   <script>
     (() => {
