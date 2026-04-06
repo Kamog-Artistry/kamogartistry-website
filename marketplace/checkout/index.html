@@ -340,7 +340,7 @@
     <div class="loader-bar"></div>
   </div>
 
-  <header class="header header--mvp">
+   <header class="header header--mvp">
     <nav class="nav" aria-label="Primary navigation">
       <a aria-label="Go to homepage" href="/">
         <img
@@ -356,7 +356,9 @@
         <li><a href="/">Home</a></li>
 
         <li class="has-dropdown">
-          <a href="/about" aria-haspopup="true" aria-expanded="false">About</a>
+          <a href="/about" aria-haspopup="true" aria-expanded="false">
+            About <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
           <ul class="dropdown" aria-label="About submenu">
             <li><a href="/about">About Us</a></li>
             <li><a href="/about#our-process">Our Process</a></li>
@@ -366,7 +368,9 @@
         </li>
 
         <li class="has-dropdown">
-          <a href="/services" aria-haspopup="true" aria-expanded="false">Services</a>
+          <a href="/services" aria-haspopup="true" aria-expanded="false">
+            Services <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
           <ul class="dropdown" aria-label="Services submenu">
             <li><a href="/services/branding-kampala/">Branding</a></li>
             <li><a href="/services/graphic-design-kampala/">Graphic Design</a></li>
@@ -381,7 +385,9 @@
         </li>
 
         <li class="has-dropdown">
-          <a href="/marketplace/" aria-current="page" aria-haspopup="true" aria-expanded="false">Marketplace <span class="nav-caret" aria-hidden="true">▾</span></a>
+          <a href="/marketplace/" aria-current="page" aria-haspopup="true" aria-expanded="false">
+            Marketplace <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
           <ul class="dropdown" aria-label="Marketplace submenu">
             <li><a href="/marketplace/">Shop</a></li>
             <li><a href="/marketplace/category/apparels/">Apparels</a></li>
@@ -398,7 +404,9 @@
         <li><a href="/testimonials">Testimonials</a></li>
 
         <li class="has-dropdown">
-          <a href="/corporate-profile" aria-haspopup="true" aria-expanded="false">Corporate</a>
+          <a href="/corporate-profile" aria-haspopup="true" aria-expanded="false">
+            Corporate <span class="nav-caret" aria-hidden="true">▾</span>
+          </a>
           <ul class="dropdown" aria-label="Corporate submenu">
             <li><a href="/corporate-profile">Corporate Profile</a></li>
             <li><a href="/corporate-profile#compliance">Compliance</a></li>
@@ -1224,7 +1232,6 @@
         if (!cart.length) throw new Error("Your cart is empty.");
 
         const details = readCheckoutDetails();
-        const prefs = getPrefs();
         const chosenDelivery = getEffectiveDeliveryChoice();
         const subtotal = getCartSubtotal(cart);
         const delivery = getDeliveryCost(chosenDelivery);
@@ -1236,224 +1243,252 @@
         const validity = getLargeOrderValidity(cart);
         const invoiceNo = onlyDigits(orderRef).slice(-4) || "0100";
         const dateToken = getDateToken();
+        const printableInvoiceRef = orderRef.replace(/^KA-ORDER-/, "KA/").replace(/-/g, "/");
         const { jsPDF } = window.jspdf;
 
         const doc = new jsPDF({ unit: "pt", format: "a4" });
         const pageWidth = doc.internal.pageSize.getWidth();
         const pageHeight = doc.internal.pageSize.getHeight();
-        const margin = 38;
-        const blue = [11,112,165];
-        const yellow = [242,214,75];
-        const dark = [35,35,35];
-        const gray = [90,90,90];
-        const lightGray = [230,230,230];
+        const blue = [11, 112, 165];
+        const yellow = [242, 214, 75];
+        const dark = [35, 35, 35];
+        const gray = [110, 110, 110];
+        const bg = [244, 244, 244];
+        const red = [220, 40, 40];
 
-        doc.setFillColor(244,244,244);
+        const left = 42;
+        const right = pageWidth - 42;
+        const contentWidth = right - left;
+        const tableLeft = left;
+        const tableRight = right;
+        const descRight = 365;
+        const unitRight = 452;
+        const qtyRight = 505;
+        const totalRight = right - 10;
+
+        function fitText(value, maxWidth, fontName = "helvetica", fontStyle = "normal", fontSize = 14) {
+          const raw = String(value || "-").trim() || "-";
+          doc.setFont(fontName, fontStyle);
+          doc.setFontSize(fontSize);
+          let output = raw;
+          while (output.length > 1 && doc.getTextWidth(output) > maxWidth) {
+            output = output.slice(0, -2).trimEnd() + "…";
+          }
+          return output;
+        }
+
+        function drawDetailLine(label, value, x1, x2, y, lineEndX) {
+          const fitted = fitText(value, Math.max(40, lineEndX - x2 - 4), "helvetica", "normal", 14);
+          doc.setTextColor(...dark);
+          doc.setFont("helvetica", "normal");
+          doc.setFontSize(14);
+          doc.text(label, x1, y);
+          doc.setTextColor(...blue);
+          doc.text(fitted, x2, y);
+          const textWidth = doc.getTextWidth(fitted);
+          doc.setTextColor(...dark);
+          doc.setDrawColor(95, 95, 95);
+          doc.setLineDash([1.5, 2.5], 0);
+          const lineStartX = Math.min(lineEndX - 8, x2 + textWidth + 8);
+          if (lineEndX > lineStartX) {
+            doc.line(lineStartX, y + 3, lineEndX, y + 3);
+          }
+          doc.setLineDash([], 0);
+        }
+
+        function drawAmountRow(label, value, y, isTotal = false) {
+          if (isTotal) {
+            doc.setFillColor(...blue);
+            doc.rect(335, y - 18, 105, 34, "F");
+            doc.setTextColor(255, 255, 255);
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(15);
+            doc.text("TOTAL", 365, y + 4, { align: "center" });
+            doc.setTextColor(...blue);
+            doc.text(`${Number(value || 0).toLocaleString("en-UG")}/=`, totalRight, y + 4, { align: "right" });
+            doc.setDrawColor(120, 120, 120);
+            doc.line(440, y + 16, tableRight, y + 16);
+            return;
+          }
+
+          doc.setTextColor(...dark);
+          doc.setFont("helvetica", "normal");
+          doc.setFontSize(15);
+          doc.text(label, 365, y);
+          doc.setTextColor(...blue);
+          doc.text(Number(value || 0).toLocaleString("en-UG"), totalRight, y, { align: "right" });
+          doc.setDrawColor(120, 120, 120);
+          doc.line(350, y + 12, tableRight, y + 12);
+        }
+
+        doc.setFillColor(...bg);
         doc.rect(0, 0, pageWidth, pageHeight, "F");
 
         try {
           const logoData = await loadImageAsDataUrl(LOGO_PATH);
-          doc.addImage(logoData, "SVG", margin + 5, 28, 150, 100);
+          doc.addImage(logoData, "SVG", left + 6, 52, 122, 86);
         } catch (error) {
-          doc.setFontSize(28);
+          doc.setFont("helvetica", "bold");
+          doc.setFontSize(24);
+          doc.setTextColor(...dark);
+          doc.text("Kamog Artistry", left + 8, 98);
+          doc.setFontSize(18);
           doc.setTextColor(...blue);
-          doc.text("Kamog Artistry", margin + 10, 78);
+          doc.text("(U) Ltd", left + 48, 124);
         }
 
         doc.setTextColor(...dark);
-        doc.setFont("helvetica","bold");
+        doc.setFont("helvetica", "normal");
         doc.setFontSize(14);
-        doc.text("Kampala - Uganda", 235, 64);
-        doc.text("P.O.Box 201929", 235, 84);
-        doc.text("+256 775 251 445", 235, 112);
-        doc.setFont("helvetica","italic");
-        doc.text("info@kamogartistry.com", 235, 140);
-        doc.setFont("helvetica","normal");
-        doc.text("TIN No: 1056418149", 235, 168);
+        doc.text("Kampala - Uganda", 210, 82);
+        doc.text("P.O.Box 201929", 210, 104);
+        doc.text("+256 775 251 445", 210, 136);
+        doc.setFont("helvetica", "italic");
+        doc.text("info@kamogartistry.com", 210, 168);
+        doc.setFont("helvetica", "normal");
+        doc.text("TIN No: 1056418149", 210, 200);
 
         doc.saveGraphicsState();
         doc.setTextColor(...blue);
-        doc.setFont("helvetica","bold");
-        doc.setFontSize(38);
-        doc.text("INVOICE", 503, 176, { angle: 270 });
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(34);
+        doc.text("INVOICE", 448, 192, { angle: 270 });
         doc.restoreGraphicsState();
 
         doc.setFillColor(...yellow);
-        doc.rect(560, 42, 150, 24, "F");
-        doc.rect(560, 95, 150, 24, "F");
+        doc.rect(458, 56, 126, 24, "F");
+        doc.rect(458, 122, 126, 24, "F");
         doc.setTextColor(...dark);
-        doc.setFont("helvetica","bold");
+        doc.setFont("helvetica", "bold");
         doc.setFontSize(14);
-        doc.text("INVOICE No.", 635, 59, { align: "center" });
-        doc.text("DATE:", 635, 112, { align: "center" });
+        doc.text("INVOICE No.", 521, 73, { align: "center" });
+        doc.text("DATE:", 521, 139, { align: "center" });
 
         doc.setDrawColor(...dark);
-        doc.rect(592, 73, 102, 30);
-        doc.rect(575, 126, 120, 30);
-        doc.setTextColor(220, 40, 40);
-        doc.setFontSize(16);
-        doc.text(`No: ${invoiceNo}`, 643, 93, { align: "center" });
+        doc.rect(483, 88, 82, 28);
+        doc.rect(472, 154, 102, 30);
+        doc.setTextColor(...red);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(17);
+        doc.text(`No: ${invoiceNo}`, 524, 107, { align: "center" });
         doc.setTextColor(...dark);
-        doc.setFont("courier","bold");
-        doc.setFontSize(18);
-        doc.text(dateToken, 635, 147, { align: "center", charSpace: 4 });
+        doc.setFont("courier", "bold");
+        doc.setFontSize(16);
+        doc.text(dateToken, 523, 174, { align: "center", charSpace: 2.5 });
 
         doc.setDrawColor(242, 194, 0);
         doc.setLineWidth(2);
-        doc.line(0, 203, pageWidth, 203);
+        doc.line(0, 226, pageWidth, 226);
 
-        const labelX = 50, valueX = 145, rightLabelX = 415, rightValueX = 565;
-        let y = 242;
+        const leftColEnd = 300;
+        const rightColStart = 330;
+        const rightColEnd = right;
+        let y = 272;
         const rowGap = 34;
 
-        function dottedRow(label, value, x1, x2, yPos) {
-          doc.setTextColor(...dark);
-          doc.setFont("helvetica","normal");
-          doc.setFontSize(16);
-          doc.text(label, x1, yPos);
-          doc.setTextColor(...blue);
-          doc.text(String(value || "-"), x2, yPos);
-        }
+        drawDetailLine("NAME:", details.customerName || "-", left, 96, y, rightColEnd);
+        y += rowGap;
+        drawDetailLine("COMPANY NAME:", details.companyName || "-", left, 152, y, rightColEnd);
+        y += rowGap;
+        drawDetailLine("ADDRESS:", details.customerLocation || details.deliveryAddress || "-", left, 110, y, leftColEnd);
+        drawDetailLine("CONTACT:", details.customerPhone || "-", rightColStart, 412, y, rightColEnd);
+        y += rowGap;
+        drawDetailLine("VALIDITY:", validity, left, 116, y, leftColEnd);
+        drawDetailLine("INVOICE REF. NO:", printableInvoiceRef, rightColStart, 472, y, rightColEnd);
 
-        dottedRow("NAME:", details.customerName || "-", labelX, valueX, y);
-        doc.setDrawColor(90,90,90); doc.setLineDash([2,3], 0); doc.line(140, y + 4, 710, y + 4);
-        y += rowGap;
-        dottedRow("COMPANY NAME:", details.companyName || "-", labelX, 230, y);
-        doc.line(208, y + 4, 710, y + 4);
-        y += rowGap;
-        dottedRow("ADDRESS:", details.customerLocation || details.deliveryAddress || "-", labelX, 130, y);
-        doc.text("CONTACT:", rightLabelX, y);
-        doc.setTextColor(...blue);
-        doc.text(details.customerPhone || "-", rightValueX, y);
-        doc.setTextColor(...dark);
-        doc.line(122, y + 4, 405, y + 4);
-        doc.line(495, y + 4, 710, y + 4);
-        y += rowGap;
-        dottedRow("VALIDITY:", validity, labelX, 145, y);
-        doc.text("INVOICE REF. NO:", rightLabelX, y);
-        doc.setTextColor(...blue);
-        doc.text(orderRef, 570, y);
-        doc.setTextColor(...dark);
-        doc.line(136, y + 4, 405, y + 4);
-        doc.line(546, y + 4, 710, y + 4);
-        doc.setLineDash([], 0);
-
-        const tableTop = 315;
-        const descX = 50, unitX = 390, qtyX = 515, totalX = 610, tableRight = 710;
+        const tableTop = 366;
         doc.setFillColor(...blue);
-        doc.rect(0, tableTop, pageWidth, 38, "F");
-        doc.setTextColor(255,255,255);
-        doc.setFont("helvetica","bold");
-        doc.setFontSize(16);
-        doc.text("DESCRIPTION", descX, tableTop + 25);
-        doc.text("UNIT COST", unitX, tableTop + 25);
-        doc.text("QTY", qtyX, tableTop + 25);
-        doc.text("TOTAL (UGX)", totalX, tableTop + 25);
+        doc.rect(0, tableTop, pageWidth, 40, "F");
+        doc.setTextColor(255, 255, 255);
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(14);
+        doc.text("DESCRIPTION", tableLeft + 4, tableTop + 25);
+        doc.text("UNIT COST", 408, tableTop + 25, { align: "center" });
+        doc.text("QTY", 478, tableTop + 25, { align: "center" });
+        doc.text("TOTAL (UGX)", 548, tableTop + 25, { align: "center" });
+        doc.setDrawColor(255, 255, 255);
+        doc.line(descRight, tableTop, descRight, tableTop + 40);
+        doc.line(unitRight, tableTop, unitRight, tableTop + 40);
+        doc.line(qtyRight, tableTop, qtyRight, tableTop + 40);
 
-        doc.setDrawColor(255,255,255);
-        doc.line(370, tableTop, 370, tableTop + 38);
-        doc.line(495, tableTop, 495, tableTop + 38);
-        doc.line(575, tableTop, 575, tableTop + 38);
+        let rowY = tableTop + 62;
+        const rowHeight = 38;
+        const maxRows = 7;
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(12);
+        doc.setTextColor(20, 110, 190);
 
-        let rowY = tableTop + 55;
-        doc.setTextColor(20,110,190);
-        doc.setFont("helvetica","normal");
-        doc.setFontSize(15);
-
-        const maxRows = 9;
         const itemsToPrint = cart.slice(0, maxRows);
         itemsToPrint.forEach((item) => {
-          const itemName = doc.splitTextToSize(item.name, 290)[0];
-          doc.text(itemName, descX, rowY);
-          doc.text((item.price || 0).toLocaleString("en-UG"), unitX + 55, rowY, { align: "right" });
-          doc.text(String(item.qty), qtyX + 45, rowY, { align: "right" });
-          doc.text((item.price * item.qty).toLocaleString("en-UG"), totalX + 80, rowY, { align: "right" });
-          doc.setDrawColor(120,120,120);
-          doc.line(descX, rowY + 18, tableRight, rowY + 18);
-          rowY += 32;
+          const itemLines = doc.splitTextToSize(item.name || "Item", 270);
+          const itemName = itemLines[0] || "Item";
+          doc.text(itemName, tableLeft + 4, rowY);
+          doc.text((item.price || 0).toLocaleString("en-UG"), unitRight - 12, rowY, { align: "right" });
+          doc.text(String(item.qty || 0), qtyRight - 12, rowY, { align: "right" });
+          doc.text((item.price * item.qty).toLocaleString("en-UG"), totalRight, rowY, { align: "right" });
+          doc.setDrawColor(120, 120, 120);
+          doc.line(tableLeft, rowY + 20, tableRight, rowY + 20);
+          rowY += rowHeight;
         });
 
-        while (itemsToPrint.length < maxRows && rowY < 640) {
-          doc.setDrawColor(160,160,160);
-          doc.line(descX, rowY + 18, tableRight, rowY + 18);
-          rowY += 32;
-          itemsToPrint.push({});
+        for (let i = itemsToPrint.length; i < maxRows; i += 1) {
+          doc.setDrawColor(160, 160, 160);
+          doc.line(tableLeft, rowY + 20, tableRight, rowY + 20);
+          rowY += rowHeight;
         }
 
-        doc.setTextColor(220, 40, 40);
-        doc.setFontSize(12);
-        doc.text("T&C note: 70% advance payment required", 54, 650);
-        doc.text("to commence production.", 100, 666);
+        doc.setTextColor(...red);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(11);
+        doc.text("T&C note: 70% advance payment required", tableLeft + 4, 714);
+        doc.text("to commence production.", tableLeft + 58, 730);
 
         doc.setTextColor(...dark);
-        doc.setFont("helvetica","normal");
-        doc.setFontSize(14);
-        doc.text("Payment Info:", 52, 706);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(13);
+        doc.text("Payment Info:", tableLeft + 2, 770);
         doc.setFillColor(255, 204, 0);
-        doc.rect(52, 720, 44, 30, "F");
+        doc.rect(tableLeft + 2, 788, 26, 18, "F");
         doc.setTextColor(...dark);
-        doc.setFontSize(9);
-        doc.text("MTN", 61, 735);
-        doc.text("MoMo", 58, 746);
-        doc.setFont("helvetica","bold");
-        doc.setFontSize(12);
-        doc.text("0775 251 445", 114, 737);
-        doc.setFont("helvetica","normal");
+        doc.setFontSize(7);
+        doc.text("MTN", tableLeft + 7, 796);
+        doc.text("MoMo", tableLeft + 5, 804);
+        doc.setFont("helvetica", "bold");
         doc.setFontSize(10);
-        doc.text("Etyang Benard", 114, 752);
+        doc.text("0775 251 445", tableLeft + 42, 802);
+        doc.setFont("helvetica", "normal");
+        doc.text("Etyang Benard", tableLeft + 42, 817);
 
-        const totalsXLabel = 392;
-        const totalsXValue = 698;
-        const totalsTop = 650;
-        doc.setTextColor(...dark);
-        doc.setFont("helvetica","normal");
-        doc.setFontSize(16);
-        const totalRows = [
-          ["Subtotal:", subtotal],
-          ["Transport:", transport],
-          ["Installation Fee:", installationFee],
-          ["VAT 18% (inclusive)", vat]
-        ];
-        totalRows.forEach((row, idx) => {
-          const yy = totalsTop + idx * 34;
-          doc.text(row[0], totalsXLabel, yy);
-          doc.text((row[1] || 0).toLocaleString("en-UG"), totalsXValue, yy, { align: "right" });
-          doc.setDrawColor(120,120,120);
-          doc.line(totalsXLabel - 20, yy + 12, 710, yy + 12);
-        });
-
-        doc.setFillColor(...blue);
-        doc.rect(totalsXLabel - 20, totalsTop + 136, 130, 34, "F");
-        doc.setTextColor(255,255,255);
-        doc.setFont("helvetica","bold");
-        doc.text("TOTAL", totalsXLabel + 4, totalsTop + 159);
-        doc.setTextColor(...blue);
-        doc.text(`${(total).toLocaleString("en-UG")}/=`, totalsXValue, totalsTop + 159, { align: "right" });
+        drawAmountRow("Subtotal:", subtotal, 720);
+        drawAmountRow("Transport:", transport, 756);
+        drawAmountRow("Installation Fee:", installationFee, 792);
+        drawAmountRow("VAT 18% (inclusive)", vat, 828);
+        drawAmountRow("TOTAL", total, 864, true);
 
         doc.setTextColor(...gray);
-        doc.setFont("helvetica","italic");
+        doc.setFont("helvetica", "italic");
         doc.setFontSize(12);
-        doc.text("“Bringing Your Imagination To Life”", 78, 836);
+        doc.text("“Bringing Your Imagination To Life”", 66, pageHeight - 36);
 
         doc.setDrawColor(242, 194, 0);
         doc.setLineWidth(3);
-        doc.line(0, 852, 420, 852);
-        doc.line(570, 852, pageWidth, 852);
+        doc.line(0, pageHeight - 14, 210, pageHeight - 14);
+        doc.line(455, pageHeight - 14, pageWidth, pageHeight - 14);
 
         doc.setTextColor(...dark);
-        doc.setFont("helvetica","normal");
-        doc.setFontSize(12);
-        doc.text("▣ Design", 48, 871);
-        doc.text("▣ Print", 118, 871);
-        doc.text("▣ Brand", 187, 871);
-        doc.text("▣ FineArts", 257, 871);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(11);
+        doc.text("• Design", 18, pageHeight - 2);
+        doc.text("• Print", 84, pageHeight - 2);
+        doc.text("• Brand", 140, pageHeight - 2);
+        doc.text("• FineArts", 202, pageHeight - 2);
 
         doc.setDrawColor(...blue);
-        doc.setLineWidth(1.5);
-        doc.line(430, 848, 535, 848);
-        doc.setFontSize(12);
-        doc.text("For: Kamog Artistry", 458, 868, { align: "center" });
-        doc.text("(U) Ltd", 483, 884, { align: "center" });
+        doc.setLineWidth(1.2);
+        doc.line(390, pageHeight - 18, 470, pageHeight - 18);
+        doc.setFontSize(10.5);
+        doc.text("For: Kamog Artistry", 430, pageHeight + 2, { align: "center" });
+        doc.text("(U) Ltd", 430, pageHeight + 16, { align: "center" });
 
         const fileName = `${orderRef}.pdf`;
         doc.save(fileName);
