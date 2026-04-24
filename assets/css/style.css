@@ -869,3 +869,160 @@ img{
     color:#f28c28;
   }
 }
+
+
+
+
+/* =========================
+   KAMOG MODERN UI UPGRADE
+   Add at END of style.css
+========================= */
+
+:root{
+  --brand-blue:#016698;
+  --brand-blue-2:#2f6bff;
+  --brand-orange:#ff8500;
+  --brand-dark:#013144;
+  --brand-ink:#082f42;
+  --brand-soft:#f6f9ff;
+
+  --radius-lg:32px;
+  --radius-md:22px;
+  --shadow-soft:0 18px 50px rgba(0,0,0,.12);
+  --shadow-hover:0 28px 80px rgba(0,0,0,.16);
+}
+
+/* smoother page */
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(900px 500px at 10% 0%, rgba(47,107,255,.18), transparent 60%),
+    var(--brand-dark);
+}
+
+/* premium header */
+.header{
+  background:rgba(1,102,152,.9);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.nav{
+  padding:12px 18px;
+}
+
+/* modern hero */
+.hero{
+  min-height:92vh;
+  padding:120px 20px 80px;
+  background:
+    radial-gradient(800px 480px at 18% 25%, rgba(47,107,255,.38), transparent 60%),
+    radial-gradient(700px 420px at 85% 20%, rgba(255,133,0,.28), transparent 58%),
+    linear-gradient(135deg,#013144 0%,#061522 100%);
+}
+
+.hero h1{
+  font-size:clamp(2.4rem, 6vw, 5rem);
+  letter-spacing:-.05em;
+  line-height:.98;
+}
+
+.hero p{
+  max-width:760px;
+  margin:18px auto 26px;
+  font-size:clamp(1rem, 2vw, 1.18rem);
+}
+
+/* better sections */
+.section{
+  padding:clamp(70px, 8vw, 120px) 20px;
+}
+
+.light{
+  background:linear-gradient(180deg,#f8fbff,#eef5ff);
+}
+
+/* premium cards */
+.card{
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-soft);
+  border:1px solid rgba(1,49,68,.08);
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-hover);
+  border-color:rgba(47,107,255,.22);
+}
+
+/* buttons */
+.btn-primary,
+.btn-secondary,
+.footer-cta{
+  border-radius:999px;
+  transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.footer-cta:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  box-shadow:0 14px 34px rgba(47,107,255,.28);
+}
+
+/* portfolio cards */
+.portfolio-preview,
+.portfolio-item{
+  border-radius:26px;
+}
+
+.portfolio-preview img,
+.portfolio-item img{
+  transition:transform .35s ease;
+}
+
+.portfolio-preview:hover img,
+.portfolio-item:hover img{
+  transform:scale(1.045);
+}
+
+/* faster, smoother animations */
+.animate{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .5s ease, transform .5s ease;
+  will-change:opacity, transform;
+}
+
+.animate.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    scroll-behavior:auto !important;
+    transition-duration:.01ms !important;
+  }
+
+  .animate{
+    opacity:1 !important;
+    transform:none !important;
+  }
+}
