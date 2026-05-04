@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Graphic Design Kampala, Uganda | Company Profiles, Brochures, Catalogs, Reports, Proposals & Print-Ready Artwork — Kamog Artistry (U) Ltd</title>
+  <title>Graphic Design Kampala | Company Profiles, Brochures, Catalogs, Reports, Proposals & Print-Ready Artwork — Kamog Artistry (U) Ltd</title>
 
-  <meta name="description" content="Professional graphic design in Kampala, Uganda by Kamog Artistry (U) Ltd for company profiles, brochures, catalogs, exhibition catalogs, reports, proposals, presentations, menus, posters, flyers, brand templates and print-ready artwork." />
+  <meta name="description" content="Graphic design services in Kampala by Kamog Artistry (U) Ltd for company profiles, brochures, catalogues, art exhibition catalogues, reports, business proposals, presentations, flyers, posters, menus, brand templates and print-ready artwork." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#0b6fbf" />
   <meta name="author" content="Kamog Artistry (U) Ltd" />
@@ -22,15 +22,15 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kamog Artistry (U) Ltd" />
-  <meta property="og:title" content="Graphic Design Kampala, Uganda | Company Profiles, Brochures, Catalogs, Reports & Print-Ready Artwork" />
-  <meta property="og:description" content="Graphic design services in Kampala for company profiles, brochures, catalogs, exhibition catalogs, reports, proposals, presentations, flyers, posters, menus and print-ready artwork." />
+  <meta property="og:title" content="Graphic Design Kampala | Profiles, Brochures, Catalogues, Proposals & Print-Ready Design" />
+  <meta property="og:description" content="Professional graphic design in Kampala for serious business documents, catalogues, proposals, marketing materials and print-ready artwork." />
   <meta property="og:url" content="https://kamogartistry.com/services/graphic-design-kampala/" />
   <meta property="og:image" content="https://kamogartistry.com/assets/img/services/graphic-design-kampala/hero.webp" />
-  <meta property="og:image:alt" content="Graphic design services in Kampala Uganda including company profiles brochures catalogs reports proposals and print-ready artwork by Kamog Artistry" />
+  <meta property="og:image:alt" content="Graphic design services in Kampala Uganda including company profiles brochures catalogues reports proposals and print-ready artwork by Kamog Artistry" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Graphic Design Kampala | Kamog Artistry (U) Ltd" />
-  <meta name="twitter:description" content="Company profiles, brochures, catalogs, exhibition catalogs, reports, proposals, presentations, flyers, posters, menus and print-ready artwork in Kampala, Uganda." />
+  <meta name="twitter:description" content="Company profiles, brochures, catalogues, art exhibition catalogues, reports, proposals, presentations, flyers, posters, menus and print-ready artwork in Kampala, Uganda." />
   <meta name="twitter:image" content="https://kamogartistry.com/assets/img/services/graphic-design-kampala/hero.webp" />
 
   <link rel="stylesheet" href="/assets/css/style.css" />
@@ -40,6 +40,8 @@
       --km-blue:#0b6fbf;
       --km-orange:#f28c28;
       --km-ink:#08354a;
+      --km-soft:#eef7ff;
+      --km-line:rgba(8,53,74,.12);
     }
 
     html{ scroll-behavior:smooth; }
@@ -57,7 +59,7 @@
     a.card-link, a.card-link *{ text-decoration:none !important; color:inherit !important; }
     a.card-link:hover{ transform:translateY(-2px); transition:transform .15s ease; }
 
-    .content-wrap{ max-width:1100px; margin:0 auto; padding:0 16px; }
+    .content-wrap{ max-width:1120px; margin:0 auto; padding:0 16px; }
 
     .breadcrumbs{
       opacity:.9;
@@ -85,6 +87,7 @@
       color:#fff;
       font-weight:800;
       font-size:.95rem;
+      text-decoration:none !important;
     }
 
     .mini-cta{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:14px; }
@@ -142,6 +145,40 @@
       margin-top:16px;
     }
 
+    .conversion-band{
+      border:1px solid rgba(242,140,40,.28);
+      background:linear-gradient(135deg, rgba(242,140,40,.12), rgba(11,111,191,.08));
+      border-radius:22px;
+      padding:18px;
+      margin-top:18px;
+    }
+
+    .problem-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .problem-card{
+      background:#fff;
+      border:1px solid var(--km-line);
+      border-radius:18px;
+      padding:16px;
+      box-shadow:0 10px 22px rgba(0,0,0,.055);
+      height:100%;
+    }
+    .problem-card strong{
+      display:block;
+      color:var(--km-ink);
+      font-size:1rem;
+      margin-bottom:6px;
+    }
+    .problem-card p{
+      opacity:.88;
+      margin:0 0 12px;
+      line-height:1.58;
+    }
+
     .micro-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
@@ -173,6 +210,65 @@
       border-radius:14px;
       margin-bottom:12px;
       object-fit:cover;
+    }
+
+    .cluster-group{
+      border:1px solid rgba(8,53,74,.1);
+      background:#fff;
+      border-radius:22px;
+      padding:18px;
+      margin-top:18px;
+      box-shadow:0 10px 24px rgba(0,0,0,.055);
+    }
+    .cluster-group h3{
+      margin:0;
+      color:var(--km-ink);
+      font-size:1.25rem;
+    }
+    .cluster-group > p{
+      margin:8px 0 0;
+      opacity:.88;
+      max-width:920px;
+      line-height:1.65;
+    }
+
+    .cluster-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+    .service-card{
+      border:1px solid rgba(8,53,74,.1);
+      background:linear-gradient(180deg, #fff, rgba(11,111,191,.025));
+      border-radius:18px;
+      padding:14px;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .service-card h4{
+      margin:0;
+      font-size:1.02rem;
+      line-height:1.35;
+    }
+    .service-card p{
+      margin:0;
+      opacity:.88;
+      line-height:1.58;
+    }
+    .service-card .intent{
+      display:inline-block;
+      width:max-content;
+      max-width:100%;
+      padding:5px 9px;
+      border-radius:999px;
+      background:rgba(242,140,40,.12);
+      border:1px solid rgba(242,140,40,.22);
+      font-weight:900;
+      color:var(--km-ink);
+      font-size:.85rem;
     }
 
     .portfolio-grid{
@@ -414,7 +510,7 @@
     "url":"https://kamogartistry.com/services/graphic-design-kampala/",
     "isPartOf":{"@id":"https://kamogartistry.com/#website"},
     "about":{"@id":"https://kamogartistry.com/#organization"},
-    "description":"Graphic design hub in Kampala for company profiles, brochures, catalogs, exhibition catalogs, reports, proposals, presentations, posters, flyers, menus, brand templates and print-ready artwork."
+    "description":"Graphic design hub in Kampala for company profiles, brochures, catalogues, art exhibition catalogues, reports, proposals, presentations, posters, flyers, menus, brand templates and print-ready artwork."
   }
   </script>
 
@@ -423,9 +519,9 @@
     "@context":"https://schema.org",
     "@type":"WebPage",
     "@id":"https://kamogartistry.com/services/graphic-design-kampala/#webpage",
-    "name":"Graphic Design Kampala",
+    "name":"Graphic Design Kampala | Profiles, Brochures, Catalogues, Proposals & Print-Ready Design",
     "url":"https://kamogartistry.com/services/graphic-design-kampala/",
-    "description":"Graphic design services in Kampala by Kamog Artistry (U) Ltd for company profiles, brochures, catalogs, exhibition catalogs, reports, proposals, presentations, menus, flyers, posters and print-ready artwork.",
+    "description":"Graphic design services in Kampala by Kamog Artistry (U) Ltd for company profiles, brochures, catalogues, art exhibition catalogues, reports, proposals, presentations, menus, flyers, posters and print-ready artwork.",
     "isPartOf":{"@id":"https://kamogartistry.com/#website"},
     "about":{"@id":"https://kamogartistry.com/#organization"},
     "primaryImageOfPage":{
@@ -433,7 +529,7 @@
       "@id":"https://kamogartistry.com/services/graphic-design-kampala/#primaryimage",
       "url":"https://kamogartistry.com/assets/img/services/graphic-design-kampala/hero.webp",
       "contentUrl":"https://kamogartistry.com/assets/img/services/graphic-design-kampala/hero.webp",
-      "description":"Graphic design services in Kampala Uganda including company profiles brochures catalogs reports proposals and print-ready artwork by Kamog Artistry"
+      "description":"Graphic design services in Kampala Uganda including company profiles brochures catalogues reports proposals and print-ready artwork by Kamog Artistry"
     }
   }
   </script>
@@ -465,10 +561,6 @@
       "addressLocality":"Kampala",
       "addressCountry":"UG"
     },
-    "geo":{
-      "@type":"GeoCoordinates",
-      "addressCountry":"UG"
-    },
     "areaServed":["Kampala","Wakiso","Mukono","Uganda"],
     "sameAs":[
       "https://www.facebook.com/611977605339985",
@@ -493,7 +585,9 @@
       "Company Profile Design Kampala",
       "Brochure Design Kampala",
       "Catalog Design Kampala",
-      "Exhibition Catalog Design Kampala",
+      "Art Exhibition Catalogue Design Kampala",
+      "Product Catalogue Design Kampala",
+      "Lookbook Design Kampala",
       "Business Proposal Design Kampala",
       "Report Design Kampala",
       "Presentation Design Kampala",
@@ -502,9 +596,10 @@
       "Menu Design Kampala",
       "Brand Template Design Kampala",
       "Print-Ready Artwork Kampala",
+      "Prepress File Fixing Kampala",
       "Design Retainer Kampala"
     ],
-    "description":"Professional graphic design in Kampala for company profiles, brochures, catalogs, exhibition catalogs, proposals, presentations, reports, menus, flyers, posters and print-ready artwork."
+    "description":"Professional graphic design in Kampala for company profiles, brochures, catalogues, art exhibition catalogues, proposals, presentations, reports, menus, flyers, posters, brand templates and print-ready artwork."
   }
   </script>
 
@@ -513,22 +608,71 @@
     "@context":"https://schema.org",
     "@type":"ItemList",
     "@id":"https://kamogartistry.com/services/graphic-design-kampala/#clusters",
-    "name":"Graphic Design Services in Kampala — Cluster Pages",
+    "name":"Graphic Design Services in Kampala — Commercial Design Cluster",
     "itemListOrder":"https://schema.org/ItemListOrderAscending",
-    "numberOfItems":12,
+    "numberOfItems":17,
     "itemListElement":[
-      { "@type":"ListItem", "position":1, "name":"Brand Template Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/brand-template-design-kampala/" },
-      { "@type":"ListItem", "position":2, "name":"Brochure Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/brochure-design-kampala/" },
-      { "@type":"ListItem", "position":3, "name":"Business Proposal Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/business-proposal-design-kampala/" },
-      { "@type":"ListItem", "position":4, "name":"Catalog Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/catalog-design-kampala/" },
-      { "@type":"ListItem", "position":5, "name":"Company Profile Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/company-profile-design-kampala/" },
-      { "@type":"ListItem", "position":6, "name":"Design Retainer Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/design-retainer-kampala/" },
+      { "@type":"ListItem", "position":1, "name":"Company Profile Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/company-profile-design-kampala/" },
+      { "@type":"ListItem", "position":2, "name":"Business Proposal Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/business-proposal-design-kampala/" },
+      { "@type":"ListItem", "position":3, "name":"Report Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/report-design-kampala/" },
+      { "@type":"ListItem", "position":4, "name":"Presentation Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/presentation-design-kampala/" },
+      { "@type":"ListItem", "position":5, "name":"Brand Template Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/brand-template-design-kampala/" },
+      { "@type":"ListItem", "position":6, "name":"Brochure Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/brochure-design-kampala/" },
       { "@type":"ListItem", "position":7, "name":"Flyer Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/flyer-design-kampala/" },
-      { "@type":"ListItem", "position":8, "name":"Menu Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/menu-design-kampala/" },
-      { "@type":"ListItem", "position":9, "name":"Poster Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/poster-design-kampala/" },
-      { "@type":"ListItem", "position":10, "name":"Presentation Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/presentation-design-kampala/" },
-      { "@type":"ListItem", "position":11, "name":"Print-Ready Artwork Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/print-ready-artwork-kampala/" },
-      { "@type":"ListItem", "position":12, "name":"Report Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/report-design-kampala/" }
+      { "@type":"ListItem", "position":8, "name":"Poster Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/poster-design-kampala/" },
+      { "@type":"ListItem", "position":9, "name":"Menu Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/menu-design-kampala/" },
+      { "@type":"ListItem", "position":10, "name":"Catalog Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/catalog-design-kampala/" },
+      { "@type":"ListItem", "position":11, "name":"Art Exhibition Catalogue Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/catalog-design-kampala/" },
+      { "@type":"ListItem", "position":12, "name":"Product Catalogue Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/catalog-design-kampala/" },
+      { "@type":"ListItem", "position":13, "name":"Lookbook Design Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/catalog-design-kampala/" },
+      { "@type":"ListItem", "position":14, "name":"Print-Ready Artwork Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/print-ready-artwork-kampala/" },
+      { "@type":"ListItem", "position":15, "name":"Prepress File Fixing Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/print-ready-artwork-kampala/" },
+      { "@type":"ListItem", "position":16, "name":"Design Retainer Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/design-retainer-kampala/" },
+      { "@type":"ListItem", "position":17, "name":"Graphic Design Pricing Kampala", "url":"https://kamogartistry.com/services/graphic-design-kampala/pricing/" }
+    ]
+  }
+  </script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "@id":"https://kamogartistry.com/services/graphic-design-kampala/#case-studies",
+    "name":"Graphic Design Kampala Relevant Case Studies",
+    "itemListElement":[
+      {
+        "@type":"CreativeWork",
+        "position":1,
+        "name":"Papan SSD Company Profile, Calendars and Business Cards",
+        "url":"https://kamogartistry.com/portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan",
+        "image":"https://kamogartistry.com/assets/img/portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan/14_company_profile_calendar_business_cards_grouped_papan_ssd_kamog_artistry_u_ltd.webp",
+        "creator":{"@id":"https://kamogartistry.com/#organization"}
+      },
+      {
+        "@type":"CreativeWork",
+        "position":2,
+        "name":"RBM Partnership to End Malaria and Ministry of Health Uganda Event Branding",
+        "url":"https://kamogartistry.com/portfolio/rbm-partnership-end-malaria-ministry-health-uganda-event-branding-kampala",
+        "image":"https://kamogartistry.com/assets/img/portfolio/rbm-partnership-end-malaria-ministry-health-uganda-event-branding-kampala/07_international_client_trying_scarf_sample_sheraton_kampala_kamog_artistry_u_ltd.webp",
+        "creator":{"@id":"https://kamogartistry.com/#organization"}
+      },
+      {
+        "@type":"CreativeWork",
+        "position":3,
+        "name":"Create and Cook Competition Campaign Design",
+        "url":"https://kamogartistry.com/portfolio/create-and-cook-competition",
+        "image":"https://kamogartistry.com/assets/img/portfolio/thumbnails/create-and-cook-competition-thumb.jpg",
+        "creator":{"@id":"https://kamogartistry.com/#organization"}
+      },
+      {
+        "@type":"CreativeWork",
+        "position":4,
+        "name":"Blue Crane Renewable Energy Company Profile Design",
+        "url":"https://kamogartistry.com/portfolio/blue-crane-renewable-energy-company-profile-design",
+        "image":"https://kamogartistry.com/assets/img/portfolio/thumbnails/blue-crane-renewable-energy-company-profile-design-thumb.jpg",
+        "creator":{"@id":"https://kamogartistry.com/#organization"}
+      }
     ]
   }
   </script>
@@ -553,7 +697,7 @@
       {
         "@type":"ImageObject",
         "contentUrl":"https://kamogartistry.com/assets/img/services/graphic-design-kampala/03_graphic-design-kampala_kamog_artistry_u_ltd.webp",
-        "description":"exhibition catalog page layout design for academic and portfolio presentation in Kampala Uganda"
+        "description":"art exhibition catalogue page layout design for academic portfolio and gallery presentation in Kampala Uganda"
       },
       {
         "@type":"ImageObject",
@@ -595,15 +739,23 @@
         "name":"What graphic design services do you offer in Kampala?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"We design company profiles, brochures, catalogs, exhibition catalogs, flyers, posters, menus, reports, proposals, presentations, brand templates and print-ready artwork for businesses, NGOs and institutions in Kampala, Uganda."
+          "text":"We design company profiles, brochures, catalogues, art exhibition catalogues, product catalogues, flyers, posters, menus, reports, proposals, presentations, brand templates and print-ready artwork for businesses, NGOs, institutions, schools, restaurants, events and product brands in Kampala, Uganda."
         }
       },
       {
         "@type":"Question",
-        "name":"Can you redesign an existing company profile or brochure?",
+        "name":"Which graphic design service should I choose for my project?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Yes. Share your current file and content updates, and we will modernize the layout, typography and structure while keeping the design aligned to your brand."
+          "text":"Choose company profile design for business introduction, proposal design for tenders and formal submissions, catalogue design for product lists or exhibitions, report design for annual and institutional documents, presentation design for investor or boardroom slides, and print-ready artwork if your printer needs corrected production files."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Can you redesign an existing company profile, brochure, catalogue or proposal?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. Share your current file and content updates, and we can modernise the structure, typography, layout, image treatment and brand consistency while preparing the final file for digital sharing or printing."
         }
       },
       {
@@ -611,7 +763,15 @@
         "name":"Do you provide print-ready artwork files for printers?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Yes. We prepare correct print specifications including bleed, margins, safe zones and resolution, then export print-ready files and digital versions where needed."
+          "text":"Yes. We prepare print specifications including bleed, margins, safe zones, image resolution, page setup and export settings, then supply print-ready PDFs and digital versions where needed."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Can you design art exhibition catalogues and product catalogues?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Yes. We design art exhibition catalogues, product catalogues, academic catalogues, lookbooks and structured publication layouts with clear contents pages, image hierarchy, captions, sections and print-ready preparation."
         }
       },
       {
@@ -619,7 +779,7 @@
         "name":"Can you design pitch decks and corporate presentations?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Yes. We create pitch decks and corporate presentations with clean hierarchy, strong layout structure and consistent branding."
+          "text":"Yes. We create pitch decks and corporate presentations with clear story flow, strong slide hierarchy, clean visual systems and consistent branding."
         }
       },
       {
@@ -627,23 +787,15 @@
         "name":"Do you offer monthly design support for businesses?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Yes. We provide design retainer support for businesses that need ongoing monthly design work, quick turnarounds and consistent brand execution."
+          "text":"Yes. We provide design retainer support for businesses that need ongoing monthly design work, faster turnarounds and consistent brand execution across marketing, documents and campaign materials."
         }
       },
       {
         "@type":"Question",
-        "name":"How long does a brochure or company profile take?",
+        "name":"Can you handle both design and printing?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Turnaround depends on page count, content readiness and revision rounds. Share your scope and deadline and we will advise the most practical design schedule."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Can you design catalogs for products, exhibitions or academic presentations?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Yes. We design catalogs for products, exhibitions, academic showcases and institutional presentation with clear structure, strong hierarchy and easier browsing across multiple pages."
+          "text":"Yes. We can design the material, prepare the print-ready artwork and connect the approved file to printing and finishing through Kamog Artistry printing services."
         }
       },
       {
@@ -651,7 +803,7 @@
         "name":"How do we start a graphic design project?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"Send your brief, content or draft, preferred size, intended use and deadline. We review the scope, suggest the best format and confirm the next steps."
+          "text":"Send your brief, content or draft, preferred size, intended use, deadline and whether the final output is for digital use, print or both. We review the scope and advise the best design path."
         }
       }
     ]
@@ -696,75 +848,76 @@
         <span style="opacity:.92;font-weight:900;color:#fff">Graphic Design Kampala</span>
       </div>
 
-      <div class="hero-badge">Kampala • Wakiso • Mukono • Corporate Design • Catalog Design • Print-Ready Artwork</div>
+      <div class="hero-badge">Kampala • Business Documents • Catalogues • Campaign Design • Print-Ready Artwork</div>
 
-      <h1>Graphic Design in Kampala, Uganda</h1>
+      <h1>Graphic Design Services in Kampala for Business, Marketing &amp; Print</h1>
 
-      <p style="opacity:.92;margin-top:12px;max-width:980px;">
-        Professional <strong>graphic design in Kampala</strong> for businesses, NGOs, institutions and growing brands.
-        We design <strong>company profiles</strong>, <strong>brochures</strong>, <strong>catalogs</strong>, <strong>exhibition catalogs</strong>,
-        <strong>reports</strong>, <strong>proposals</strong>, <strong>presentations</strong>, <strong>posters</strong>, <strong>flyers</strong>, <strong>menus</strong>
-        and <strong>print-ready artwork</strong> with clean structure, strong hierarchy and consistent branding.
+      <p style="opacity:.94;margin-top:12px;max-width:990px;">
+        Need a <strong>company profile, brochure, catalogue, proposal, report, flyer, poster, menu, pitch deck or print-ready file</strong> that looks serious enough for real business?
+        Kamog Artistry designs professional graphic design work in Kampala with strong structure, clean visual hierarchy, brand consistency and production-ready file preparation.
       </p>
 
-      <div style="margin-top:12px;max-width:980px;">
-        <p style="opacity:.92;margin:0;">Popular design focus areas:</p>
+      <p style="opacity:.9;margin-top:10px;max-width:990px;">
+        We are not here for random layouts that only look good on screen. We build business-facing designs that help you sell, submit, present, print and distribute with confidence — from corporate documents and catalogues to campaign materials and final artwork handoff.
+      </p>
+
+      <div class="conversion-band">
+        <strong style="color:#fff;font-size:1.05rem;">One studio for design, artwork preparation and print handoff.</strong>
+        <div style="opacity:.92;margin-top:6px;color:#fff;line-height:1.65;">
+          Start with the right design page, prepare the content properly, approve the layout, then move into print-ready artwork or production without losing quality between designer, client and printer.
+        </div>
+      </div>
+
+      <div style="margin-top:14px;max-width:990px;">
+        <p style="opacity:.92;margin:0;">Fast entry points:</p>
 
         <div style="margin-top:8px;line-height:1.75;opacity:.95;">
           <a class="hero-link" href="/services/graphic-design-kampala/company-profile-design-kampala/"><strong>Company profiles</strong></a>
           <span style="opacity:.75;color:#fff;"> • </span>
-
           <a class="hero-link" href="/services/graphic-design-kampala/brochure-design-kampala/"><strong>Brochures</strong></a>
           <span style="opacity:.75;color:#fff;"> • </span>
-
-          <a class="hero-link" href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>Catalogs</strong></a>
+          <a class="hero-link" href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>Catalogues</strong></a>
           <span style="opacity:.75;color:#fff;"> • </span>
-
+          <a class="hero-link" href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>Art exhibition catalogues</strong></a>
+          <span style="opacity:.75;color:#fff;"> • </span>
           <a class="hero-link" href="/services/graphic-design-kampala/business-proposal-design-kampala/"><strong>Business proposals</strong></a>
           <span style="opacity:.75;color:#fff;"> • </span>
-
-          <a class="hero-link" href="/services/graphic-design-kampala/presentation-design-kampala/"><strong>Presentations</strong></a>
-          <span style="opacity:.75;color:#fff;"> • </span>
-
           <a class="hero-link" href="/services/graphic-design-kampala/report-design-kampala/"><strong>Reports</strong></a>
           <span style="opacity:.75;color:#fff;"> • </span>
-
+          <a class="hero-link" href="/services/graphic-design-kampala/presentation-design-kampala/"><strong>Presentations</strong></a>
+          <span style="opacity:.75;color:#fff;"> • </span>
           <a class="hero-link" href="/services/graphic-design-kampala/flyer-design-kampala/"><strong>Flyers</strong></a>
           <span style="opacity:.75;color:#fff;"> • </span>
-
           <a class="hero-link" href="/services/graphic-design-kampala/poster-design-kampala/"><strong>Posters</strong></a>
           <span style="opacity:.75;color:#fff;"> • </span>
-
           <a class="hero-link" href="/services/graphic-design-kampala/menu-design-kampala/"><strong>Menus</strong></a>
           <span style="opacity:.75;color:#fff;"> • </span>
-
-          <a class="hero-link" href="/services/graphic-design-kampala/brand-template-design-kampala/"><strong>Brand templates</strong></a>
-          <span style="opacity:.75;color:#fff;"> • </span>
-
           <a class="hero-link" href="/services/graphic-design-kampala/print-ready-artwork-kampala/"><strong>Print-ready artwork</strong></a>
         </div>
 
         <p style="opacity:.9;margin-top:10px;">
-          Need a full brand system before design execution?
+          Need full identity first?
           Start with <a class="hero-link" href="/services/branding-kampala/"><strong>Branding Kampala</strong></a>.
-          Need production after design?
+          Need production after approval?
           Continue to <a class="hero-link" href="/services/printing-services-kampala/"><strong>Printing Services Kampala</strong></a>.
         </p>
       </div>
 
       <div class="hero-actions" style="margin-top:18px;">
         <a class="btn-primary" href="/contact">Request Graphic Design Quote</a>
-        <a class="btn-secondary" href="/portfolio">View Portfolio</a>
+        <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp Your Brief</a>
       </div>
 
       <div class="mini-cta">
-        <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">WhatsApp Your Brief</a>
-        <a class="btn-secondary" href="/contact#free-consult">Free 10-Min Consultation</a>
+        <a class="btn-secondary" href="/portfolio">View Portfolio</a>
+        <a class="btn-secondary" href="/services/graphic-design-kampala/pricing/">View Pricing Guide</a>
         <a class="btn-secondary" href="/contact#upload-artwork">Upload Content / Draft</a>
       </div>
 
       <figure style="margin:18px auto 0;max-width:980px;">
-        <img src="/assets/img/services/graphic-design-kampala/hero.webp" alt="Graphic design services in Kampala Uganda including company profiles brochures catalogs reports proposals and print-ready artwork by Kamog Artistry" width="980" height="560" decoding="async" />
+        <img src="/assets/img/services/graphic-design-kampala/hero.webp"
+             alt="Graphic design services in Kampala Uganda including company profiles brochures catalogues reports proposals and print-ready artwork by Kamog Artistry"
+             width="980" height="560" decoding="async" />
       </figure>
 
       <p class="note" style="margin-top:14px;">
@@ -779,16 +932,18 @@
 
   <section class="section light animate" id="summary" style="padding-top:52px;">
     <div class="content-wrap">
-      <h2>Design That Looks Professional and Communicates Clearly</h2>
+      <h2>Design Built to Win Trust, Not Just Fill Space</h2>
       <p style="opacity:.9;max-width:980px;">
-        Strong design is not only visual. It helps people understand your message quickly, trust your business and move through information without confusion.
-        We focus on hierarchy, spacing, typography, brand consistency and practical file preparation for both digital use and printing.
+        Strong graphic design helps clients, funders, procurement teams, investors, customers and stakeholders understand your message faster.
+        We design with structure, spacing, typography, brand discipline and practical file preparation so your materials are easier to read, easier to trust and easier to use.
       </p>
+
       <p style="opacity:.88;max-width:980px;">
-        From company profiles and brochures to exhibition catalogs, reports and proposals, our goal is to produce design work that feels credible, polished and ready for real business use in Kampala and beyond.
+        This hub connects every major graphic design service under Kamog Artistry: formal business documents, marketing and sales materials, product and exhibition catalogues, print-ready artwork and ongoing monthly design support.
       </p>
 
       <div class="pill-row" style="justify-content:flex-start;">
+        <a class="pill" href="#solution-finder">Find Your Service</a>
         <a class="pill" href="#clusters">Design Services</a>
         <a class="pill" href="#capabilities">Capabilities</a>
         <a class="pill" href="#process">Process</a>
@@ -797,16 +952,15 @@
         <a class="pill" href="#proof">Proof</a>
         <a class="pill" href="#portfolio">Portfolio</a>
         <a class="pill" href="#gallery">Gallery</a>
-        <a class="pill" href="#related-services">Related Services</a>
         <a class="pill" href="#pricing">Pricing</a>
         <a class="pill" href="#faqs">FAQs</a>
       </div>
 
       <div class="cta-strip">
         <div style="min-width:260px">
-          <strong>Need a design project started this week?</strong>
+          <strong>Not sure which service you need?</strong>
           <div style="opacity:.86;margin-top:6px">
-            Send the document type, approximate page count, your content status and deadline. We’ll recommend the best structure and workflow.
+            Send the goal, content status, deadline and final use. We’ll direct you to the right design path before quoting.
           </div>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -817,125 +971,256 @@
     </div>
   </section>
 
+  <section class="section light animate" id="solution-finder">
+    <div class="content-wrap">
+      <h2>What Type of Design Do You Need?</h2>
+      <p style="opacity:.9;max-width:980px;">
+        Start from the business problem. This makes it easier to choose the right service and avoid paying for the wrong kind of design.
+      </p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <strong>Tender or procurement submission?</strong>
+          <p>Use a structured proposal layout with stronger hierarchy, formal formatting and clear business presentation.</p>
+          <a class="btn-secondary" href="/services/graphic-design-kampala/business-proposal-design-kampala/">Business Proposal Design</a>
+        </div>
+
+        <div class="problem-card">
+          <strong>Need to introduce your company?</strong>
+          <p>Use a polished profile that explains who you are, what you do, why you are credible and how to contact you.</p>
+          <a class="btn-secondary" href="/services/graphic-design-kampala/company-profile-design-kampala/">Company Profile Design</a>
+        </div>
+
+        <div class="problem-card">
+          <strong>Have many products, artworks or listings?</strong>
+          <p>Use a catalogue system with sections, contents, image hierarchy, captions and print-ready publication flow.</p>
+          <a class="btn-secondary" href="/services/graphic-design-kampala/catalog-design-kampala/">Catalogue Design</a>
+        </div>
+
+        <div class="problem-card">
+          <strong>Promoting an event, offer or campaign?</strong>
+          <p>Use a flyer or poster layout built for faster attention, clearer message priority and stronger public visibility.</p>
+          <a class="btn-secondary" href="/services/graphic-design-kampala/flyer-design-kampala/">Flyer Design</a>
+        </div>
+
+        <div class="problem-card">
+          <strong>Presenting to investors or a board?</strong>
+          <p>Use a clean presentation system with better flow, stronger slide hierarchy and consistent brand visuals.</p>
+          <a class="btn-secondary" href="/services/graphic-design-kampala/presentation-design-kampala/">Presentation Design</a>
+        </div>
+
+        <div class="problem-card">
+          <strong>Printer rejected your file?</strong>
+          <p>Use prepress correction to fix bleed, margins, sizing, resolution and export settings before production.</p>
+          <a class="btn-secondary" href="/services/graphic-design-kampala/print-ready-artwork-kampala/">Print-Ready Artwork</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section light animate" id="capabilities">
     <div class="content-wrap">
       <h2>Graphic Design Capabilities</h2>
 
       <p style="opacity:.9;max-width:980px;">
-        Whether you need a formal corporate document, a sales-focused marketing piece, an exhibition catalog, an academic presentation layout or neatly prepared artwork for production,
-        we help shape the content into a layout that feels clear, credible and brand-aligned.
+        We group graphic design around how clients actually use it: serious documents, marketing materials, publication layouts, print preparation and ongoing design support.
       </p>
 
       <div class="grid" style="margin-top:18px;">
         <div class="card">
-          <h3>Corporate Communication Design</h3>
+          <h3>Business &amp; Corporate Document Design</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Company profiles, business proposals, reports and presentations designed to look polished, trustworthy and easy to review.
+            Company profiles, business proposals, reports, presentations and brand templates designed for meetings, submissions, procurement, stakeholder review and formal communication.
           </p>
         </div>
 
         <div class="card">
-          <h3>Editorial &amp; Catalog Layout Design</h3>
+          <h3>Marketing &amp; Sales Material Design</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Brochures, catalogs, exhibition catalogs and multi-page layouts designed for structured reading, organized listings and stronger presentation.
+            Brochures, flyers, posters and menus designed to communicate quickly, guide attention and support sales conversations, campaigns, events and customer-facing use.
           </p>
         </div>
 
         <div class="card">
-          <h3>Print-Ready File Preparation</h3>
+          <h3>Catalogue, Publication &amp; Print-Ready Design</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Correct bleed, margins, image resolution and export settings for reliable handoff to print production and fewer costly errors.
+            Product catalogues, art exhibition catalogues, lookbooks and production-ready artwork prepared with stronger editorial structure and commercial print awareness.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section light animate" id="clusters">
-    <div class="content-wrap">
-      <h2>Graphic Design Services in Kampala (Choose a Focus Area)</h2>
-      <p style="opacity:.9;max-width:980px;">
-        Start with the design type you need now. If your project will also be printed, you can move from the relevant design page into
-        <a href="/services/printing-services-kampala/"><strong>Printing Services Kampala</strong></a> or a matching production page.
-      </p>
+<section class="section light animate" id="clusters">
+  <div class="content-wrap">
+    <h2>Find the Right Graphic Design Service for Your Project</h2>
+    <p style="opacity:.9;max-width:980px;">
+      These are the main graphic design clusters under this hub. Each service is organised by client intent, with clear paths into branding, printing or production where useful.
+    </p>
 
-      <div class="grid" style="margin-top:18px; align-items:stretch;">
+    <div class="cluster-group">
+      <h3>1. Business &amp; Corporate Documents</h3>
+      <p>For businesses, NGOs, institutions and teams that need formal materials for credibility, proposals, reporting, presentations and stakeholder communication.</p>
 
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/brand-template-design-kampala/hero.webp" alt="Brand template design in Kampala for editable branded documents presentations proposals and marketing materials" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/brand-template-design-kampala/">Brand Template Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Editable branded templates for proposals, letterheads, presentations, social posts and internal communication.</p>
-        </div>
-
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/brochure-design-kampala/hero.webp" alt="Brochure design in Kampala with structured editorial layouts for business communication and marketing" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/brochure-design-kampala/">Brochure Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Clean brochure layouts that explain services clearly and support sales meetings, handouts and reception display.</p>
-        </div>
-
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/business-proposal-design-kampala/hero.webp" alt="Business proposal design in Kampala for tenders client submissions and corporate presentations" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/business-proposal-design-kampala/">Business Proposal Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Professional proposals with strong structure, polished presentation and better readability for formal submissions.</p>
-        </div>
-
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/catalog-design-kampala/hero.webp" alt="Catalog design in Kampala for product catalogs exhibition catalogs academic catalogs and organized multi page listings" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/catalog-design-kampala/">Catalog Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Catalogs designed for products, exhibitions, academic showcases and service listings with clearer structure and easier browsing.</p>
-        </div>
-
-        <div class="card">
+      <div class="cluster-grid">
+        <div class="service-card">
           <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/company-profile-design-kampala/hero.webp" alt="Company profile design in Kampala for corporate capability presentation and business credibility" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/company-profile-design-kampala/">Company Profile Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Corporate profiles that present your story, capabilities, services and credibility in a polished format.</p>
+          <span class="intent">Business introduction</span>
+          <h4><a href="/services/graphic-design-kampala/company-profile-design-kampala/">Company Profile Design Kampala</a></h4>
+          <p>Corporate profiles that present your story, services, team, capability and proof in a polished business document.</p>
         </div>
 
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/design-retainer-kampala/hero.webp" alt="Monthly graphic design retainer in Kampala for ongoing brand communication and marketing support" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/design-retainer-kampala/">Design Retainer Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Ongoing monthly design support for teams that need consistent output, faster turnaround and brand continuity.</p>
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/business-proposal-design-kampala/hero.webp" alt="Business proposal design in Kampala for tenders client submissions and corporate presentations" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Tender / submission</span>
+          <h4><a href="/services/graphic-design-kampala/business-proposal-design-kampala/">Business Proposal Design Kampala</a></h4>
+          <p>Proposal layouts for tenders, client submissions, partnerships, projects, pricing and formal business opportunities.</p>
         </div>
 
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/flyer-design-kampala/hero.webp" alt="Flyer design in Kampala for promotional campaigns events offers and business marketing communication" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/flyer-design-kampala/">Flyer Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Flyers designed for quick understanding, better visual flow and strong promotional messaging.</p>
-        </div>
-
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/menu-design-kampala/hero.webp" alt="Menu design in Kampala for restaurants cafes hospitality brands and cleaner customer presentation" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/menu-design-kampala/">Menu Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Restaurant and café menus designed for readability, cleaner sectioning and a more polished customer experience.</p>
-        </div>
-
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/poster-design-kampala/hero.webp" alt="Poster design in Kampala for events promotions public visibility and campaign communication" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/poster-design-kampala/">Poster Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Poster layouts built for visibility, stronger message hierarchy and cleaner reading from a distance.</p>
-        </div>
-
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/presentation-design-kampala/hero.webp" alt="Presentation design in Kampala for pitch decks corporate reports and professional slide communication" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/presentation-design-kampala/">Presentation Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Pitch decks and corporate presentations designed for clarity, cleaner slide flow and stronger audience engagement.</p>
-        </div>
-
-        <div class="card">
-          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/print-ready-artwork-kampala/hero.webp" alt="Print ready artwork setup in Kampala with bleed safe margins crop marks and production checks" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/print-ready-artwork-kampala/">Print-Ready Artwork Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Artwork prepared properly for production with bleed, safe zones, image checks and reliable export settings.</p>
-        </div>
-
-        <div class="card">
+        <div class="service-card">
           <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/report-design-kampala/hero.webp" alt="Report design in Kampala for annual reports project reports institutional documents and business presentation" width="980" height="560" loading="lazy" decoding="async" />
-          <h3><a href="/services/graphic-design-kampala/report-design-kampala/">Report Design Kampala</a></h3>
-          <p style="opacity:.88;margin-top:10px;">Annual reports, project reports and institutional documents designed for readability, credibility and cleaner structure.</p>
+          <span class="intent">Annual / donor / project reporting</span>
+          <h4><a href="/services/graphic-design-kampala/report-design-kampala/">Report Design Kampala</a></h4>
+          <p>Annual reports, project reports, donor reports and institutional publications with cleaner reading flow and stronger hierarchy.</p>
         </div>
 
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/presentation-design-kampala/hero.webp" alt="Presentation design in Kampala for pitch decks corporate reports and professional slide communication" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Boardroom / investor presentation</span>
+          <h4><a href="/services/graphic-design-kampala/presentation-design-kampala/">Presentation Design Kampala</a></h4>
+          <p>Pitch decks, corporate slide decks and stakeholder presentations designed for clarity, confidence and visual discipline.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/brand-template-design-kampala/hero.webp" alt="Brand template design in Kampala for editable branded documents presentations proposals and marketing materials" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Reusable brand consistency</span>
+          <h4><a href="/services/graphic-design-kampala/brand-template-design-kampala/">Brand Template Design Kampala</a></h4>
+          <p>Editable templates for proposals, presentations, social posts, letterheads and recurring business communication.</p>
+        </div>
       </div>
     </div>
-  </section>
+
+    <div class="cluster-group">
+      <h3>2. Marketing &amp; Sales Materials</h3>
+      <p>For campaigns, promotions, service explanations, hospitality brands, events and sales teams that need client-facing visual materials.</p>
+
+      <div class="cluster-grid">
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/brochure-design-kampala/hero.webp" alt="Brochure design in Kampala with structured editorial layouts for business communication and marketing" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Service explanation / sales handout</span>
+          <h4><a href="/services/graphic-design-kampala/brochure-design-kampala/">Brochure Design Kampala</a></h4>
+          <p>Brochures for services, products, institutions and campaigns with stronger structure and sales-ready presentation.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/flyer-design-kampala/hero.webp" alt="Flyer design in Kampala for promotional campaigns events offers and business marketing communication" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Campaign / offer promotion</span>
+          <h4><a href="/services/graphic-design-kampala/flyer-design-kampala/">Flyer Design Kampala</a></h4>
+          <p>Flyers built for quick attention, clear offers, event visibility, WhatsApp sharing and print distribution.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/poster-design-kampala/hero.webp" alt="Poster design in Kampala for events promotions public visibility and campaign communication" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Event / public visibility</span>
+          <h4><a href="/services/graphic-design-kampala/poster-design-kampala/">Poster Design Kampala</a></h4>
+          <p>Posters for events, campaigns, launches and public announcements where message hierarchy and visibility matter.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/menu-design-kampala/hero.webp" alt="Menu design in Kampala for restaurants cafes hospitality brands and cleaner customer presentation" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Restaurant / café sales tool</span>
+          <h4><a href="/services/graphic-design-kampala/menu-design-kampala/">Menu Design Kampala</a></h4>
+          <p>Menus designed for readability, category clarity, pricing structure and a better customer experience.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cluster-group">
+      <h3>3. Product, Catalogue &amp; Publication Design</h3>
+      <p>For brands, institutions, artists, galleries, exhibitors, schools and businesses with structured content, product lists, artworks or publication-style layouts.</p>
+
+      <div class="cluster-grid">
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/catalog-design-kampala/hero.webp" alt="Catalog design in Kampala for product catalogs exhibition catalogs academic catalogs and organized multi page listings" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Products / services / listings</span>
+          <h4><a href="/services/graphic-design-kampala/catalog-design-kampala/">Catalogue Design Kampala</a></h4>
+          <p>Product catalogues, service catalogues and publication-style documents with clean sections and print-ready structure.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/catalog-design-kampala/hero.webp" alt="Art exhibition catalogue design in Kampala for galleries artists exhibitions and publication layouts" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Gallery / artist / exhibition publication</span>
+          <h4><a href="/services/graphic-design-kampala/catalog-design-kampala/">Art Exhibition Catalogue Design</a></h4>
+          <p>Art exhibition catalogues with covers, contents pages, artist information, captions, artwork spreads and polished publication flow.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/catalog-design-kampala/hero.webp" alt="Product catalogue design in Kampala for wholesale product ranges SKUs descriptions and pricing tables" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Wholesale / product range</span>
+          <h4><a href="/services/graphic-design-kampala/catalog-design-kampala/">Product Catalogue Design</a></h4>
+          <p>Commercial catalogues for product ranges, SKUs, descriptions, categories, pricing tables and sales presentation.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/catalog-design-kampala/hero.webp" alt="Lookbook design in Kampala for fashion lifestyle product presentation and visual storytelling" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Fashion / product storytelling</span>
+          <h4><a href="/services/graphic-design-kampala/catalog-design-kampala/">Lookbook Design</a></h4>
+          <p>Lookbook-style layouts for fashion, lifestyle, product presentation and visual storytelling.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cluster-group">
+      <h3>4. Print Production Support</h3>
+      <p>For clients who need artwork corrected, exported or prepared correctly before sending to print or production.</p>
+
+      <div class="cluster-grid">
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/print-ready-artwork-kampala/hero.webp" alt="Print ready artwork setup in Kampala with bleed safe margins crop marks and production checks" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Ready for press</span>
+          <h4><a href="/services/graphic-design-kampala/print-ready-artwork-kampala/">Print-Ready Artwork Kampala</a></h4>
+          <p>Final production files with bleed, safe margins, page setup, resolution checks and correct export preparation.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/print-ready-artwork-kampala/hero.webp" alt="Prepress file fixing in Kampala for rejected PDFs missing bleed low resolution images and wrong sizing" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Rejected file fix</span>
+          <h4><a href="/services/graphic-design-kampala/print-ready-artwork-kampala/">Prepress File Fixing</a></h4>
+          <p>Correction for printer-rejected PDFs, missing bleed, low-resolution images, wrong sizing and poor file setup.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/print-ready-artwork-kampala/hero.webp" alt="Design and printing handoff in Kampala for approved artwork print production and finishing" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Design + production workflow</span>
+          <h4><a href="/services/printing-services-kampala/">Design + Printing Handoff</a></h4>
+          <p>Move approved designs into printing, finishing and production through Kamog Artistry’s connected print services.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cluster-group">
+      <h3>5. Ongoing Design Support</h3>
+      <p>For businesses that need repeated monthly design output without restarting the process every time.</p>
+
+      <div class="cluster-grid">
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/design-retainer-kampala/hero.webp" alt="Monthly graphic design retainer in Kampala for ongoing brand communication and marketing support" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Monthly support</span>
+          <h4><a href="/services/graphic-design-kampala/design-retainer-kampala/">Design Retainer Kampala</a></h4>
+          <p>Ongoing design support for monthly documents, flyers, posters, social graphics, campaign materials and brand communication.</p>
+        </div>
+
+        <div class="service-card">
+          <img class="cluster-thumb" src="/assets/img/services/graphic-design-kampala/design-retainer-kampala/hero.webp" alt="Monthly marketing design support in Kampala for consistent branded marketing materials and faster turnaround" width="980" height="560" loading="lazy" decoding="async" />
+          <span class="intent">Campaign continuity</span>
+          <h4><a href="/services/graphic-design-kampala/design-retainer-kampala/">Monthly Marketing Design Support</a></h4>
+          <p>Useful for businesses that need consistent branded marketing materials, faster turnaround and better visual control.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <section class="section light animate" id="process">
     <div class="content-wrap">
@@ -943,31 +1228,44 @@
 
       <div class="grid" style="margin-top:18px;">
         <div class="card">
-          <h3>1) Brief, Objective &amp; Content Review</h3>
+          <h3>1) Brief, Goal &amp; Content Review</h3>
           <p style="opacity:.88;margin-top:10px;">
-            We confirm the purpose of the design, target audience, preferred format, page count, available content and deadline.
+            We confirm what the design must achieve, who will read it, whether it is for print or digital use, and what content is ready.
           </p>
         </div>
 
         <div class="card">
-          <h3>2) Structure &amp; Layout Direction</h3>
+          <h3>2) Structure Before Decoration</h3>
           <p style="opacity:.88;margin-top:10px;">
-            We organize the content into clear sections, define hierarchy, plan image placement and shape the overall reading flow.
+            We organize headings, sections, page flow, image use and content hierarchy before polishing the look.
           </p>
         </div>
 
         <div class="card">
-          <h3>3) Review &amp; Refinement</h3>
+          <h3>3) Design, Review &amp; Refinement</h3>
           <p style="opacity:.88;margin-top:10px;">
-            We refine typography, alignment, spacing, consistency and visual balance based on your feedback.
+            We refine typography, spacing, alignment, colour, visual emphasis and brand consistency based on the approved direction.
           </p>
         </div>
 
         <div class="card">
-          <h3>4) Final Export for Digital or Print</h3>
+          <h3>4) Final Export, Print Setup or Handoff</h3>
           <p style="opacity:.88;margin-top:10px;">
-            We prepare the final files for the intended use, including print-ready exports where production is required.
+            We prepare digital versions, print-ready PDFs or production handoff files depending on how the final design will be used.
           </p>
+        </div>
+      </div>
+
+      <div class="cta-strip" style="margin-top:18px;">
+        <div style="min-width:260px">
+          <strong>Have rough content but no structure?</strong>
+          <div style="opacity:.86;margin-top:6px">
+            Send what you have. We can help organise the content into the right document flow before layout design begins.
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn-primary" href="/contact">Start Project</a>
+          <a class="btn-secondary" href="https://wa.me/256775251445" target="_blank" rel="noopener">Send on WhatsApp</a>
         </div>
       </div>
     </div>
@@ -979,37 +1277,45 @@
 
       <div class="grid" style="margin-top:18px;">
         <div class="card">
-          <h3>Editable Working Files</h3>
+          <h3>Professional Layout Design</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Where agreed, we can organize source files and reusable layouts for future updates and internal continuity.
+            Clean layouts for documents, catalogues, presentations, campaigns and marketing materials with stronger hierarchy and brand control.
           </p>
         </div>
 
         <div class="card">
           <h3>Print-Ready PDFs</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Final exports with bleed, safe margins and clean resolution for smoother handoff to production.
+            Final exports prepared with bleed, safe margins, correct sizing, image quality and production-aware setup where required.
           </p>
         </div>
 
         <div class="card">
           <h3>Digital Sharing Versions</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Optimized digital copies for email, WhatsApp, presentations and online sharing where needed.
+            Optimized PDFs or image exports for email, WhatsApp, websites, presentations and online sharing.
           </p>
         </div>
-      </div>
 
-      <div class="cta-strip">
-        <div style="min-width:260px">
-          <strong>Need both design and printing?</strong>
-          <div style="opacity:.86;margin-top:6px">
-            After design approval, continue into <a href="/services/printing-services-kampala/"><strong>Printing Services Kampala</strong></a> for coordinated production.
-          </div>
+        <div class="card">
+          <h3>Editable Working Files</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Where agreed, we can package source files and reusable templates for future updates and internal continuity.
+          </p>
         </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn-primary" href="/services/printing-services-kampala/">View Printing Services</a>
-          <a class="btn-secondary" href="/contact">Start a Project</a>
+
+        <div class="card">
+          <h3>Design + Print Support</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Approved artwork can move into <a href="/services/printing-services-kampala/"><strong>Printing Services Kampala</strong></a> for production, finishing and delivery support.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Brand-Aligned Systems</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            We keep colour, typography, layout rhythm, logo use and visual tone consistent across multiple pieces.
+          </p>
         </div>
       </div>
     </div>
@@ -1022,12 +1328,13 @@
       <div class="card" style="margin-top:16px;">
         <ul class="list-clean" style="margin-top:0;">
           <li><strong>Corporate &amp; SMEs</strong> — company profiles, proposals, brochures, reports and presentations</li>
-          <li><strong>NGOs &amp; development projects</strong> — reports, proposals, training materials and communication pieces</li>
-          <li><strong>Retail &amp; FMCG</strong> — catalogs, brochures, flyers, posters and product communication materials</li>
-          <li><strong>Hospitality</strong> — menus, table materials, posters and promotional collateral</li>
-          <li><strong>Education &amp; training</strong> — manuals, exhibition catalogs, reports, brochures and presentation decks</li>
+          <li><strong>NGOs &amp; development projects</strong> — donor reports, proposals, project publications and training materials</li>
+          <li><strong>Retail, wholesale &amp; FMCG</strong> — product catalogues, brochures, flyers, posters and sales materials</li>
+          <li><strong>Artists, galleries &amp; exhibitions</strong> — art exhibition catalogues, artist profiles, event posters and publication layouts</li>
+          <li><strong>Hospitality</strong> — menus, table materials, posters, flyers and promotional collateral</li>
+          <li><strong>Education &amp; training</strong> — manuals, catalogues, reports, brochures and presentation decks</li>
           <li><strong>Events &amp; campaigns</strong> — posters, flyers, presentation assets and branded communication</li>
-          <li><strong>Real estate &amp; professional services</strong> — company profiles, brochures, proposals and marketing sheets</li>
+          <li><strong>Real estate &amp; professional services</strong> — profiles, brochures, proposals, pitch decks and marketing sheets</li>
         </ul>
 
         <p style="opacity:.88;margin-top:12px;">
@@ -1044,23 +1351,36 @@
 
       <div class="micro-grid" style="margin-top:16px;">
         <div class="card micro">
-          <span class="badge-inline">Corporate-Ready Quality</span>
-          <p style="opacity:.88;margin:0;">Clean hierarchy, stronger typography and layouts that feel professional in meetings, submissions, procurement and sales use.</p>
+          <span class="badge-inline">Business-Ready Quality</span>
+          <p style="opacity:.88;margin:0;">We design for meetings, submissions, sales, procurement, boardrooms, exhibitions and real client-facing use.</p>
+        </div>
+
+        <div class="card micro">
+          <span class="badge-inline">Structure First</span>
+          <p style="opacity:.88;margin:0;">We improve document flow, reading order, section hierarchy and page rhythm before visual polish.</p>
         </div>
 
         <div class="card micro">
           <span class="badge-inline">Brand Consistency</span>
-          <p style="opacity:.88;margin:0;">We keep colors, logo usage, spacing and visual tone aligned across pages and across different document types.</p>
+          <p style="opacity:.88;margin:0;">Colours, logo usage, spacing and visual tone stay aligned across documents, campaigns and marketing materials.</p>
         </div>
 
         <div class="card micro">
           <span class="badge-inline">Print-Safe Thinking</span>
-          <p style="opacity:.88;margin:0;">Design decisions are made with production in mind, so the final result still looks polished after printing.</p>
+          <p style="opacity:.88;margin:0;">Design decisions consider production from the start, reducing avoidable problems during printing and finishing.</p>
         </div>
+      </div>
 
-        <div class="card micro">
-          <span class="badge-inline">Structured Layout Systems</span>
-          <p style="opacity:.88;margin:0;">From exhibition catalogs to company profiles and reports, we build layouts that improve flow, readability and professional presentation.</p>
+      <div class="cta-strip" style="margin-top:18px;">
+        <div style="min-width:260px">
+          <strong>Need more than one design item?</strong>
+          <div style="opacity:.86;margin-top:6px">
+            We can build a connected design package: profile, brochure, proposal, catalogue, presentation and print-ready artwork.
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn-primary" href="/contact">Request Package Quote</a>
+          <a class="btn-secondary" href="/services/graphic-design-kampala/pricing/">Pricing Guide</a>
         </div>
       </div>
     </div>
@@ -1068,73 +1388,94 @@
 
   <section class="section light animate" id="portfolio">
     <div class="content-wrap">
-      <h2>Portfolio Examples</h2>
+      <h2>Relevant Graphic Design Case Studies</h2>
       <p style="opacity:.9;max-width:980px;margin-top:8px;">
-        A few relevant projects where structure, brand consistency and professional presentation mattered.
+        These projects show how Kamog Artistry applies structured design, brand consistency, campaign thinking, print preparation and professional presentation across real client work.
       </p>
 
       <div class="portfolio-grid">
 
         <article class="portfolio-card">
           <figure>
-            <a class="card-link" href="/portfolio/blue-crane-renewable-energy-company-profile-design.html">
+            <a class="card-link" href="/portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan">
               <img
-                src="/assets/img/portfolio/blue-crane-renewable-energy-company-profile-design/01_cover_mockup.webp"
-                alt="Blue Crane Renewable Energy company profile design case study cover"
+                src="/assets/img/portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan/14_company_profile_calendar_business_cards_grouped_papan_ssd_kamog_artistry_u_ltd.webp"
+                alt="Papan SSD company profile calendars and business cards design case study by Kamog Artistry"
                 width="980" height="560"
                 loading="lazy" decoding="async"
               />
             </a>
           </figure>
-          <h3><a href="/portfolio/blue-crane-renewable-energy-company-profile-design.html">Blue Crane Renewable Energy — Company Profile Design</a></h3>
+          <h3><a href="/portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan">Papan SSD — Company Profile, Calendars &amp; Business Cards</a></h3>
           <p class="portfolio-meta">
-            Corporate profile design focused on layout clarity, visual hierarchy and a stronger professional brand presentation.
+            A strong corporate communication project showing how company profile design, branded stationery and printed business materials can work together as one professional visual system.
           </p>
           <div class="portfolio-links">
-            <a class="btn-secondary" href="/services/graphic-design-kampala/company-profile-design-kampala/">Related: Company Profile Design</a>
-            <a class="btn-secondary" href="/services/graphic-design-kampala/report-design-kampala/">Related: Report Design</a>
+            <a class="btn-secondary" href="/services/graphic-design-kampala/company-profile-design-kampala/">Company Profile Design</a>
+            <a class="btn-secondary" href="/services/branded-stationery-uganda/">Branded Stationery</a>
           </div>
         </article>
 
         <article class="portfolio-card">
           <figure>
-            <a class="card-link" href="/portfolio/sbl-intel-systems">
+            <a class="card-link" href="/portfolio/rbm-partnership-end-malaria-ministry-health-uganda-event-branding-kampala">
               <img
-                src="/assets/img/portfolio/sbl-intel-systems/cover.webp"
-                alt="SBL Intel Systems corporate brand assets case study cover"
+                src="/assets/img/portfolio/rbm-partnership-end-malaria-ministry-health-uganda-event-branding-kampala/07_international_client_trying_scarf_sample_sheraton_kampala_kamog_artistry_u_ltd.webp"
+                alt="RBM Partnership to End Malaria Ministry of Health Uganda event branding and campaign design case study by Kamog Artistry"
                 width="980" height="560"
                 loading="lazy" decoding="async"
               />
             </a>
           </figure>
-          <h3><a href="/portfolio/sbl-intel-systems">SBL Intel Systems — Corporate Brand Assets</a></h3>
+          <h3><a href="/portfolio/rbm-partnership-end-malaria-ministry-health-uganda-event-branding-kampala">RBM Partnership / Ministry of Health Uganda — Event Branding</a></h3>
           <p class="portfolio-meta">
-            Brand-led communication materials executed with cleaner structure, stronger consistency and professional visual standards.
+            A public-facing event branding project relevant to posters, flyers, branded presentation assets, campaign visibility and structured communication for institutional events.
           </p>
           <div class="portfolio-links">
-            <a class="btn-secondary" href="/services/graphic-design-kampala/brand-template-design-kampala/">Related: Brand Templates</a>
-            <a class="btn-secondary" href="/services/graphic-design-kampala/presentation-design-kampala/">Related: Presentation Design</a>
+            <a class="btn-secondary" href="/services/graphic-design-kampala/poster-design-kampala/">Poster Design</a>
+            <a class="btn-secondary" href="/services/event-branding-kampala/">Event Branding</a>
           </div>
         </article>
 
         <article class="portfolio-card">
           <figure>
-            <a class="card-link" href="/portfolio/rokastars-film-productions">
+            <a class="card-link" href="/portfolio/create-and-cook-competition">
               <img
-                src="/assets/img/portfolio/rokastars-film-productions/cover.webp"
-                alt="Rokastars Film Productions campaign creative case study cover"
+                src="/assets/img/portfolio/thumbnails/create-and-cook-competition-thumb.jpg"
+                alt="Create and Cook Competition campaign design and promotional graphics case study by Kamog Artistry"
                 width="980" height="560"
                 loading="lazy" decoding="async"
               />
             </a>
           </figure>
-          <h3><a href="/portfolio/rokastars-film-productions">Rokastars Film Productions — Campaign Visibility</a></h3>
+          <h3><a href="/portfolio/create-and-cook-competition">Create and Cook Competition — Campaign &amp; Promotional Design</a></h3>
           <p class="portfolio-meta">
-            Marketing and campaign creatives that needed stronger hierarchy, cleaner messaging and polished visual execution.
+            A campaign-driven project demonstrating visual consistency across promotional graphics, event communication, audience engagement materials and branded marketing design.
           </p>
           <div class="portfolio-links">
-            <a class="btn-secondary" href="/services/graphic-design-kampala/poster-design-kampala/">Related: Poster Design</a>
-            <a class="btn-secondary" href="/services/graphic-design-kampala/flyer-design-kampala/">Related: Flyer Design</a>
+            <a class="btn-secondary" href="/services/graphic-design-kampala/flyer-design-kampala/">Flyer Design</a>
+            <a class="btn-secondary" href="/services/graphic-design-kampala/poster-design-kampala/">Poster Design</a>
+          </div>
+        </article>
+
+        <article class="portfolio-card">
+          <figure>
+            <a class="card-link" href="/portfolio/blue-crane-renewable-energy-company-profile-design">
+              <img
+                src="/assets/img/portfolio/thumbnails/blue-crane-renewable-energy-company-profile-design-thumb.jpg"
+                alt="Blue Crane Renewable Energy company profile and report style publication design case study by Kamog Artistry"
+                width="980" height="560"
+                loading="lazy" decoding="async"
+              />
+            </a>
+          </figure>
+          <h3><a href="/portfolio/blue-crane-renewable-energy-company-profile-design">Blue Crane Renewable Energy — Company Profile Publication</a></h3>
+          <p class="portfolio-meta">
+            A structured corporate publication showing strong page hierarchy, editorial layout discipline, infographic treatment and professional document presentation.
+          </p>
+          <div class="portfolio-links">
+            <a class="btn-secondary" href="/services/graphic-design-kampala/report-design-kampala/">Report Design</a>
+            <a class="btn-secondary" href="/services/graphic-design-kampala/company-profile-design-kampala/">Company Profile Design</a>
           </div>
         </article>
 
@@ -1142,14 +1483,14 @@
 
       <div class="cta-strip" style="margin-top:18px;">
         <div style="min-width:260px">
-          <strong>Want to see more real work?</strong>
+          <strong>Want design that works across documents, events and print?</strong>
           <div style="opacity:.86;margin-top:6px">
-            Browse additional case studies across branding, design, print and rollout work.
+            We can connect company profiles, flyers, posters, catalogues, branded stationery, event visuals and print-ready artwork into one consistent brand system.
           </div>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <a class="btn-primary" href="/portfolio">Browse Portfolio</a>
-          <a class="btn-secondary" href="/testimonials">Read Testimonials</a>
+          <a class="btn-secondary" href="/contact">Request Design Quote</a>
         </div>
       </div>
     </div>
@@ -1159,7 +1500,7 @@
     <div class="content-wrap">
       <h2>Graphic Design Gallery</h2>
       <p style="opacity:.9;max-width:980px;margin-top:8px;">
-        These visuals show document layouts, editorial structure, catalog presentation, proposals, reports, branded communication and print-ready design work. Click any image to open it full on this page.
+        These visuals show document layouts, editorial structure, catalogue presentation, proposals, reports, branded communication and print-ready design work. Click any image to open it full on this page.
       </p>
 
       <div class="gallery-grid">
@@ -1187,10 +1528,10 @@
         <a class="gallery-link"
            href="/assets/img/services/graphic-design-kampala/03_graphic-design-kampala_kamog_artistry_u_ltd.webp"
            data-lightbox="graphic-design-gallery"
-           data-caption="Exhibition catalog page layout design"
-           aria-label="Open full image of exhibition catalog page layout design">
+           data-caption="Art exhibition catalogue page layout design"
+           aria-label="Open full image of art exhibition catalogue page layout design">
           <img src="/assets/img/services/graphic-design-kampala/03_graphic-design-kampala_kamog_artistry_u_ltd.webp"
-               alt="exhibition catalog page layout design for academic and portfolio presentation in Kampala Uganda"
+               alt="art exhibition catalogue page layout design for academic portfolio and gallery presentation in Kampala Uganda"
                loading="lazy" decoding="async" />
         </a>
 
@@ -1217,10 +1558,10 @@
         <a class="gallery-link"
            href="/assets/img/services/graphic-design-kampala/06_graphic-design-kampala_kamog_artistry_u_ltd.webp"
            data-lightbox="graphic-design-gallery"
-           data-caption="Print ready artwork layout"
-           aria-label="Open full image of print ready artwork layout">
+           data-caption="Print-ready artwork layout"
+           aria-label="Open full image of print-ready artwork layout">
           <img src="/assets/img/services/graphic-design-kampala/06_graphic-design-kampala_kamog_artistry_u_ltd.webp"
-               alt="print ready artwork layout with bleed crop marks and margin guides"
+               alt="print-ready artwork layout with bleed crop marks and margin guides"
                loading="lazy" decoding="async" />
         </a>
 
@@ -1247,8 +1588,8 @@
       </div>
 
       <p class="gallery-support">
-        This gallery helps show the range of graphic design support we handle in Kampala, from company profiles, brochures and exhibition catalogs to proposals, reports, presentations and production-ready artwork. If you need related support beyond design itself, explore
-        <a href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>Catalog Design Kampala</strong></a>,
+        This gallery helps show the range of graphic design support we handle in Kampala, from company profiles, brochures and art exhibition catalogues to proposals, reports, presentations and production-ready artwork. If you need related support beyond design itself, explore
+        <a href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>Catalogue Design Kampala</strong></a>,
         <a href="/services/graphic-design-kampala/company-profile-design-kampala/"><strong>Company Profile Design Kampala</strong></a>,
         <a href="/services/printing-services-kampala/"><strong>Printing Services Kampala</strong></a>
         and <a href="/services/branding-kampala/"><strong>Branding Kampala</strong></a>.
@@ -1262,10 +1603,10 @@
 
       <div class="card" style="margin-top:16px;">
         <ul class="list-clean" style="margin-top:0;">
-          <li><a href="/services/graphic-design-kampala/pricing/"><strong>Graphic Design Pricing</strong></a> — General pricing guidance for brochures, catalogs, profiles, reports, proposals and other design services.</li>
+          <li><a href="/services/graphic-design-kampala/pricing/"><strong>Graphic Design Pricing</strong></a> — General pricing guidance for brochures, catalogues, profiles, reports, proposals and other design services.</li>
           <li><a href="/services/graphic-design-kampala/company-profile-design-kampala/"><strong>Company Profile Design Kampala</strong></a> — Best for formal corporate capability presentation and business credibility documents.</li>
           <li><a href="/services/graphic-design-kampala/brochure-design-kampala/"><strong>Brochure Design Kampala</strong></a> — Ideal for sales handouts, service explainers and structured marketing communication.</li>
-          <li><a href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>Catalog Design Kampala</strong></a> — For product catalogs, exhibition catalogs and organized multi-page listings.</li>
+          <li><a href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>Catalogue Design Kampala</strong></a> — For product catalogues, art exhibition catalogues and organized multi-page listings.</li>
           <li><a href="/services/graphic-design-kampala/business-proposal-design-kampala/"><strong>Business Proposal Design Kampala</strong></a> — For tenders, formal submissions and polished client-facing proposal documents.</li>
           <li><a href="/services/graphic-design-kampala/presentation-design-kampala/"><strong>Presentation Design Kampala</strong></a> — Useful for pitch decks, board presentations and institutional slide communication.</li>
           <li><a href="/services/graphic-design-kampala/report-design-kampala/"><strong>Report Design Kampala</strong></a> — Suitable for annual reports, project reports and institutional publications.</li>
@@ -1285,18 +1626,33 @@
 
       <div class="grid" style="margin-top:18px;">
         <div class="card">
+          <h3>Design Type &amp; Business Use</h3>
+          <p style="opacity:.88;margin-top:10px;">A flyer, company profile, proposal, catalogue, report or pitch deck each needs a different level of structure and design attention.</p>
+        </div>
+
+        <div class="card">
           <h3>Page Count &amp; Layout Complexity</h3>
-          <p style="opacity:.88;margin-top:10px;">Longer documents, denser content, tables, charts and multi-section layouts take more design time.</p>
+          <p style="opacity:.88;margin-top:10px;">Longer documents, dense content, tables, charts, captions, product lists and multi-section layouts take more design time.</p>
         </div>
 
         <div class="card">
           <h3>Content Readiness</h3>
-          <p style="opacity:.88;margin-top:10px;">Well-prepared text, images and brand assets make the process faster. We can also help structure rough content.</p>
+          <p style="opacity:.88;margin-top:10px;">Well-prepared text, images and brand assets make the process faster. Rough content may need additional structure before layout begins.</p>
+        </div>
+
+        <div class="card">
+          <h3>Print-Ready Requirements</h3>
+          <p style="opacity:.88;margin-top:10px;">Files going to print may require bleed, safe margins, image checks, export setup and finishing-aware preparation.</p>
         </div>
 
         <div class="card">
           <h3>Deadline &amp; Revision Scope</h3>
           <p style="opacity:.88;margin-top:10px;">Rush timelines, many stakeholder reviews or heavy revision rounds can affect scheduling and pricing.</p>
+        </div>
+
+        <div class="card">
+          <h3>Design + Printing Package</h3>
+          <p style="opacity:.88;margin-top:10px;">If you need design, print-ready artwork and final production, we can quote the workflow as one coordinated package.</p>
         </div>
       </div>
 
@@ -1321,7 +1677,7 @@
       <div class="card" style="margin-top:16px;">
         <p style="opacity:.9;margin:0;">
           Explore our <a href="/blog"><strong>Insights</strong></a> for practical guidance on preparing company profile content,
-          brochure structure, catalogs, proposals and other business communication materials.
+          brochure structure, catalogues, proposals and other business communication materials.
         </p>
       </div>
     </div>
@@ -1336,17 +1692,33 @@
         <div class="card">
           <h3>What graphic design services do you offer in Kampala?</h3>
           <p style="opacity:.88;margin-top:10px;">
-            We design company profiles, brochures, catalogs, flyers, posters, menus, reports, proposals, presentations, brand templates and
+            We design company profiles, brochures, catalogues, art exhibition catalogues, flyers, posters, menus, reports, proposals, presentations, brand templates and
             <a href="/services/graphic-design-kampala/print-ready-artwork-kampala/"><strong>print-ready artwork</strong></a>.
           </p>
         </div>
 
         <div class="card">
-          <h3>Can you redesign an existing company profile or brochure?</h3>
+          <h3>Which graphic design service should I choose?</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Yes. Share the current file plus the updated content and we’ll modernize the structure, typography and visual presentation through
-            <a href="/services/graphic-design-kampala/company-profile-design-kampala/"><strong>company profile design</strong></a> or
-            <a href="/services/graphic-design-kampala/brochure-design-kampala/"><strong>brochure design</strong></a>.
+            Choose <a href="/services/graphic-design-kampala/company-profile-design-kampala/"><strong>company profile design</strong></a> for business introduction,
+            <a href="/services/graphic-design-kampala/business-proposal-design-kampala/"><strong>proposal design</strong></a> for tenders,
+            <a href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>catalogue design</strong></a> for product or exhibition lists,
+            and <a href="/services/graphic-design-kampala/print-ready-artwork-kampala/"><strong>print-ready artwork</strong></a> if your file needs production setup.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Can you redesign an existing company profile, brochure or catalogue?</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Yes. Share the current file plus the updated content and we’ll modernize the structure, typography and visual presentation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Do you design art exhibition catalogues?</h3>
+          <p style="opacity:.88;margin-top:10px;">
+            Yes. We design art exhibition catalogues with covers, contents pages, artist information, artwork spreads, captions and print-ready publication structure through
+            <a href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>catalogue design</strong></a>.
           </p>
         </div>
 
@@ -1378,20 +1750,10 @@
         </div>
 
         <div class="card">
-          <h3>How long does a brochure or company profile take?</h3>
+          <h3>Can you handle both design and printing?</h3>
           <p style="opacity:.88;margin-top:10px;">
-            Timing depends on page count, content readiness and revision rounds. Send your deadline and approximate scope on
-            <a href="https://wa.me/256775251445" target="_blank" rel="noopener"><strong>WhatsApp</strong></a>
-            for quicker guidance.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Can you design catalogs for products, exhibitions or academic presentations?</h3>
-          <p style="opacity:.88;margin-top:10px;">
-            Yes. We design catalogs and multi-page layouts through
-            <a href="/services/graphic-design-kampala/catalog-design-kampala/"><strong>catalog design</strong></a>
-            for products, exhibitions and academic presentation with cleaner hierarchy and easier browsing.
+            Yes. We can design the material, prepare print-ready files and connect the approved artwork to
+            <a href="/services/printing-services-kampala/"><strong>Printing Services Kampala</strong></a>.
           </p>
         </div>
 
