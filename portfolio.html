@@ -561,6 +561,42 @@
       box-shadow:0 8px 22px rgba(2,18,32,.10);
     }
     .featured-controls button:hover{background:rgba(11,111,191,.08)}
+
+    .featured-slide-content h3{
+      margin:0 0 12px;
+    }
+    .featured-slide-content small,
+    .featured-slide-content p{
+      display:none;
+    }
+
+
+    .featured-slide .featured-slide-content{
+      transform:translateY(18px);
+      opacity:.88;
+      transition:transform .45s ease, opacity .45s ease;
+      will-change:transform, opacity;
+    }
+    .featured-slide.is-active .featured-slide-content{
+      transform:translateY(0);
+      opacity:1;
+    }
+    .featured-slide.is-active span{
+      animation:featuredLinkIn .45s ease both;
+    }
+    @keyframes featuredLinkIn{
+      from{opacity:0; transform:translateX(-10px)}
+      to{opacity:1; transform:translateX(0)}
+    }
+    @media (prefers-reduced-motion: reduce){
+      .featured-slide .featured-slide-content,
+      .featured-slide.is-active span{
+        animation:none!important;
+        transition:none!important;
+        transform:none!important;
+      }
+    }
+
     @media (min-width:900px){
       .featured-slider{grid-auto-columns:minmax(640px, 76%)}
       .featured-slide{min-height:430px}
@@ -612,8 +648,7 @@
         </p>
 
         <p style="opacity:.9;margin-top:14px">
-          We execute most projects in <strong>Kampala</strong> and <strong>Wakiso</strong>, with delivery and project support across <strong>Mukono</strong> and greater Uganda.
-          Many projects are completed around key areas like <strong>Kololo</strong>, <strong>Najjera</strong>, <strong>Ntinda</strong>, <strong>Lugogo</strong>, <strong>Munyonyo</strong> and other business zones.
+          Our production base supports projects across <strong>Kampala</strong>, <strong>Wakiso</strong>, <strong>Mukono</strong> and wider Uganda, with selected <strong>B2B printing, branding and delivery coordination for regional clients</strong>. Some projects are local installations; others are designed, printed, packed and prepared for delivery beyond Kampala, including cross-border corporate work.
         </p>
 
         <p style="opacity:.85;margin-top:10px">
@@ -670,12 +705,10 @@
       <div class="featured-slider-wrap" aria-label="Featured portfolio case studies">
         <div class="featured-slider" id="featuredSlider">
 
-          <a class="featured-slide" href="portfolio/tooke-birdc-uma-2025">
+          <a class="featured-slide is-active" href="portfolio/tooke-birdc-uma-2025">
             <img src="assets/img/portfolio/thumbnails/tooke-birdc-uma-2025-thumb.jpg" alt="TOOKE BIRDC UMA 2025 exhibition branding case study in Kampala" loading="eager" decoding="async" fetchpriority="high" onerror="this.style.display='none';" />
             <div class="featured-slide-content">
-              <small>Event Branding • Exhibition Production • Kampala</small>
               <h3>TOOKE / BIRDC — UMA 2025</h3>
-              <p>Backdrops, tent branding, stand banners, frames and field installation delivered for UMA Show Grounds visibility.</p>
               <span>Open case study →</span>
             </div>
           </a>
@@ -683,9 +716,7 @@
           <a class="featured-slide" href="portfolio/voltech-branding">
             <img src="assets/img/portfolio/thumbnails/voltech-branding-thumb.jpg" alt="Voltech Engineering rebrand and office branding case study" loading="lazy" decoding="async" onerror="this.style.display='none';" />
             <div class="featured-slide-content">
-              <small>Corporate Branding • Signage • Vehicle Branding</small>
               <h3>Voltech Engineering — Rebrand & Office Branding</h3>
-              <p>Logo redesign, office glass branding, signage, safety signs, apparel and vehicle branding rollout.</p>
               <span>Open case study →</span>
             </div>
           </a>
@@ -693,9 +724,7 @@
           <a class="featured-slide" href="portfolio/modva-updf-spouses-desk">
             <img src="assets/img/portfolio/thumbnails/modva-updf-spouses-desk-thumb.jpg" alt="MODVA UPDF Spouses Desk labels and branded items case study" loading="lazy" decoding="async" onerror="this.style.display='none';" />
             <div class="featured-slide-content">
-              <small>Packaging • Labels • Recognition Materials</small>
               <h3>MODVA — UPDF Spouses Desk</h3>
-              <p>Product labels, mockups, awards and branded items prepared through a production-ready workflow.</p>
               <span>Open case study →</span>
             </div>
           </a>
@@ -703,9 +732,7 @@
           <a class="featured-slide" href="portfolio/rbm-partnership-end-malaria-ministry-health-uganda-event-branding-kampala">
             <img src="/assets/img/portfolio/rbm-partnership-end-malaria-ministry-health-uganda-event-branding-kampala/07_international_client_trying_scarf_sample_sheraton_kampala_kamog_artistry_u_ltd.webp" alt="RBM Partnership to End Malaria conference branding in Kampala" loading="lazy" decoding="async" onerror="this.style.display='none';" />
             <div class="featured-slide-content">
-              <small>Conference Branding • Scarves • Banner Printing</small>
               <h3>RBM Partnership to End Malaria</h3>
-              <p>Custom scarves, pull up banners, tear drops and conference branding support for Sheraton Kampala delivery.</p>
               <span>Open case study →</span>
             </div>
           </a>
@@ -713,9 +740,7 @@
           <a class="featured-slide" href="portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan">
             <img src="/assets/img/portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan/14_company_profile_calendar_business_cards_grouped_papan_ssd_kamog_artistry_u_ltd.webp" alt="PAPAN SSD company profile calendars and business cards case study" loading="lazy" decoding="async" onerror="this.style.display='none';" />
             <div class="featured-slide-content">
-              <small>Corporate Profile • Calendars • South Sudan</small>
               <h3>PAPAN SSD — Company Profile, Calendars & Cards</h3>
-              <p>A coordinated company profile, custom calendar and business card production project delivered from Kampala to Juba.</p>
               <span>Open case study →</span>
             </div>
           </a>
@@ -723,9 +748,7 @@
           <a class="featured-slide" href="portfolio/abundance-herbal-products">
             <img src="assets/img/portfolio/thumbnails/abundance-herbal-products-thumb.jpg" alt="Abundance Herbal Products labels and packaging case study" loading="lazy" decoding="async" onerror="this.style.display='none';" />
             <div class="featured-slide-content">
-              <small>Packaging • Labels • Print-Ready Design</small>
               <h3>Abundance Herbal Products</h3>
-              <p>Label system design and production-ready files for oils, jelly, ointments and herbal product presentation.</p>
               <span>Open case study →</span>
             </div>
           </a>
@@ -733,9 +756,7 @@
           <a class="featured-slide" href="portfolio/yabx-christmas-package">
             <img src="assets/img/portfolio/thumbnails/yabx-christmas-package-thumb.jpg" alt="YABX corporate Christmas gift package case study" loading="lazy" decoding="async" onerror="this.style.display='none';" />
             <div class="featured-slide-content">
-              <small>Merchandise • Packaging • Corporate Gifts</small>
               <h3>YABX — Corporate Christmas Gift Package</h3>
-              <p>Branded notebook, custom bottle, logo pen, greeting card and gift bag designed for corporate appreciation.</p>
               <span>Open case study →</span>
             </div>
           </a>
@@ -743,9 +764,7 @@
           <a class="featured-slide" href="portfolio/birdc-photo-frames-kololo-nrm">
             <img src="assets/img/portfolio/thumbnails/birdc-photo-frames-kololo-nrm-thumb.jpg" alt="BIRDC photo frames Kololo NRM campaign production case study" loading="lazy" decoding="async" onerror="this.style.display='none';" />
             <div class="featured-slide-content">
-              <small>Event Printing • Foam Board • Finishing</small>
               <h3>BIRDC — Photo Frames, Kololo NRM Campaign</h3>
-              <p>Vinyl application on foam board, cutting, finishing and campaign photo frame production workflow.</p>
               <span>Open case study →</span>
             </div>
           </a>
@@ -1662,14 +1681,81 @@
     (function(){
       const slider = document.getElementById('featuredSlider');
       if(!slider) return;
+
+      const slides = Array.from(slider.querySelectorAll('.featured-slide'));
       const prev = document.querySelector('[data-featured-prev]');
       const next = document.querySelector('[data-featured-next]');
-      function move(direction){
-        const amount = Math.max(280, Math.floor(slider.clientWidth * 0.82));
-        slider.scrollBy({left: direction * amount, behavior: 'smooth'});
+      let index = 0;
+      let timer = null;
+
+      function setActive(i){
+        index = (i + slides.length) % slides.length;
+        slides.forEach((slide, n) => {
+          slide.classList.toggle('is-active', n === index);
+          slide.setAttribute('aria-current', n === index ? 'true' : 'false');
+        });
       }
-      if(prev) prev.addEventListener('click', function(){ move(-1); });
-      if(next) next.addEventListener('click', function(){ move(1); });
+
+      function goTo(i, smooth = true){
+        if(!slides.length) return;
+        setActive(i);
+        slider.scrollTo({
+          left: slides[index].offsetLeft - slider.offsetLeft,
+          behavior: smooth ? 'smooth' : 'auto'
+        });
+      }
+
+      function nextSlide(){
+        goTo(index + 1);
+      }
+
+      function previousSlide(){
+        goTo(index - 1);
+      }
+
+      function startAuto(){
+        stopAuto();
+        timer = window.setInterval(nextSlide, 3600);
+      }
+
+      function stopAuto(){
+        if(timer){
+          window.clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      if(prev) prev.addEventListener('click', function(){ previousSlide(); startAuto(); });
+      if(next) next.addEventListener('click', function(){ nextSlide(); startAuto(); });
+
+      slider.addEventListener('mouseenter', stopAuto);
+      slider.addEventListener('mouseleave', startAuto);
+      slider.addEventListener('focusin', stopAuto);
+      slider.addEventListener('focusout', startAuto);
+
+      slider.addEventListener('scroll', function(){
+        window.requestAnimationFrame(function(){
+          let nearest = 0;
+          let best = Infinity;
+          slides.forEach((slide, i) => {
+            const distance = Math.abs((slide.offsetLeft - slider.offsetLeft) - slider.scrollLeft);
+            if(distance < best){
+              best = distance;
+              nearest = i;
+            }
+          });
+          setActive(nearest);
+        });
+      }, {passive:true});
+
+      document.addEventListener('visibilitychange', function(){
+        if(document.hidden) stopAuto();
+        else startAuto();
+      });
+
+      setActive(0);
+      goTo(0, false);
+      startAuto();
     })();
   </script>
 
