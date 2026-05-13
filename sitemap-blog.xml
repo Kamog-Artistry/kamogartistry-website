@@ -1,37 +1,39 @@
-xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- BLOG POSTS -->
-  <url>
-    <loc>https://kamogartistry.com/blog/3d-signage-vs-light-boxes-uganda/</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
+ <url>
+  <loc>https://kamogartistry.com/blog/branding-printing-signage-in-uganda-practical-guide/</loc>
+  <lastmod>2026-05-13</lastmod>
+</url>
 
-  <url>
-    <loc>https://kamogartistry.com/blog/branding-checklist-for-kampala-businesses/</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
+<url>
+  <loc>https://kamogartistry.com/blog/branding-checklist-for-kampala-businesses/</loc>
+  <lastmod>2026-05-13</lastmod>
+</url>
 
-  <url>
-    <loc>https://kamogartistry.com/blog/branding-printing-signage-in-uganda-practical-guide/</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
+<url>
+  <loc>https://kamogartistry.com/blog/print-file-formats-uganda/</loc>
+  <lastmod>2026-05-13</lastmod>
+</url>
 
-  <url>
-    <loc>https://kamogartistry.com/blog/flyer-vs-brochure-printing-kampala/</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
+<url>
+  <loc>https://kamogartistry.com/blog/3d-signage-vs-light-boxes-uganda/</loc>
+  <lastmod>2026-05-13</lastmod>
+</url>
 
-  <url>
-    <loc>https://kamogartistry.com/blog/print-file-formats-uganda/</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
+<url>
+  <loc>https://kamogartistry.com/blog/signage-cost-uganda/</loc>
+  <lastmod>2026-05-13</lastmod>
+</url>
 
-  <url>
-    <loc>https://kamogartistry.com/blog/signage-cost-uganda/</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
+<url>
+  <loc>https://kamogartistry.com/blog/flyer-vs-brochure-printing-kampala/</loc>
+  <lastmod>2026-05-13</lastmod>
+</url>
+
+<url>
+  <loc>https://kamogartistry.com/blog/waka-waka-uganda-film-festival-2026-nominations/</loc>
+  <lastmod>2026-05-13</lastmod>
+</url>
 
 </urlset>
-
