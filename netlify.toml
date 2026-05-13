@@ -112,6 +112,36 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/w/metroplex"
+  to = "/portfolio/waka-waka-movie-screening-tour-branding-kampala#metroplex-naalya
+  status = 301
+  force = true
+
+  
+[[redirects]]
+  from = "/w/arena"
+  to = "/portfolio/waka-waka-movie-screening-tour-branding-kampala#arena-mall
+  status = 301
+  force = true
+
+  
+[[redirects]]
+  from = "/w/acacia"
+  to = "/portfolio/waka-waka-movie-screening-tour-branding-kampala#cinemax-acacia
+  status = 301
+  force = true
+
+  
+[[redirects]]
+  from = "/w/numax"
+  to = "/portfolio/waka-waka-movie-screening-tour-branding-kampala#numax-cinema
+  status = 301
+  force = true
+
+  
+
+
 
 
 
