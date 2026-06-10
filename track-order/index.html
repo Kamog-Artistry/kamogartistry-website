@@ -482,16 +482,16 @@
       font-weight:900;
     }
 
-    .tracking-actions .whatsapp-btn{
-      background:#25D366;
-      color:#ffffff!important;
-      box-shadow:0 10px 22px rgba(37,211,102,.18);
+
+    .tracking-actions.hero-actions{
+      margin-top:20px;
+      justify-content:center;
     }
 
-    .tracking-actions .quote-btn{
-      background:var(--km-blue);
-      color:#ffffff!important;
-      box-shadow:0 10px 22px rgba(11,111,191,.18);
+    .tracking-actions.hero-actions .btn-primary,
+    .tracking-actions.hero-actions .btn-secondary{
+      min-height:48px;
+      text-decoration:none!important;
     }
 
     .info-grid{
@@ -549,7 +549,19 @@
         grid-template-columns:repeat(2,minmax(0,1fr));
       }
 
-      .info-grid{
+  
+    .tracking-actions.hero-actions{
+      margin-top:20px;
+      justify-content:center;
+    }
+
+    .tracking-actions.hero-actions .btn-primary,
+    .tracking-actions.hero-actions .btn-secondary{
+      min-height:48px;
+      text-decoration:none!important;
+    }
+
+    .info-grid{
         grid-template-columns:1fr;
       }
     }
@@ -601,37 +613,6 @@
       }
     }
   }
-
-  /* Tracking page button text visibility fix */
-.section.light .tracking-actions a.whatsapp-btn,
-.section.light .tracking-actions a.whatsapp-btn:visited,
-.section.light .tracking-actions a.whatsapp-btn:hover,
-.section.light .tracking-actions a.whatsapp-btn:focus,
-.section.light .tracking-actions a.whatsapp-btn:active,
-.section.light .tracking-actions a.quote-btn,
-.section.light .tracking-actions a.quote-btn:visited,
-.section.light .tracking-actions a.quote-btn:hover,
-.section.light .tracking-actions a.quote-btn:focus,
-.section.light .tracking-actions a.quote-btn:active{
-  color:#ffffff !important;
-  -webkit-text-fill-color:#ffffff !important;
-  text-decoration:none !important;
-  opacity:1 !important;
-}
-
-.section.light .tracking-actions a.whatsapp-btn{
-  background:#25D366 !important;
-}
-
-.section.light .tracking-actions a.quote-btn{
-  background:var(--km-blue) !important;
-}
-
-.section.light .tracking-actions a.whatsapp-btn:hover,
-.section.light .tracking-actions a.quote-btn:hover{
-  transform:translateY(-1px);
-  filter:brightness(1.03);
-}
   </script>
 </head>
 
@@ -656,7 +637,7 @@
     </a>
 
     <ul class="nav-links" id="navLinks">
-      <li><a aria-current="page" href="/">Home</a></li>
+      <li><a href="/">Home</a></li>
 
       <li class="has-dropdown">
         <a href="/about" aria-haspopup="true" aria-expanded="false">
@@ -826,10 +807,10 @@
 
           <div class="order-grid" id="orderGrid"></div>
 
-          <div class="tracking-actions">
-            <a class="whatsapp-btn" id="whatsappOrderLink" href="https://wa.me/256775251445" target="_blank" rel="noopener">Ask on WhatsApp</a>
-            <a class="quote-btn" href="/contact">Request Another Quote</a>
-          </div>
+          <div class="tracking-actions hero-actions">
+  <a class="btn-primary" id="whatsappOrderLink" href="https://wa.me/256775251445" target="_blank" rel="noopener">Ask on WhatsApp</a>
+  <a class="btn-secondary" href="/contact">Request Another Quote</a>
+</div>
         </div>
       </div>
     </div>
