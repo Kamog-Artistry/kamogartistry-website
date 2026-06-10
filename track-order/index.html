@@ -433,7 +433,7 @@
 
     .step-list{
       display:grid;
-      grid-template-columns:repeat(5,minmax(0,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
       gap:10px;
     }
 
@@ -751,7 +751,7 @@
           <h2 id="order-tracking-title">Enter Your Order Reference Number</h2>
           <p style="opacity:.88;margin-top:10px;max-width:820px;margin-left:auto;margin-right:auto">
             Use the tracking number shared by Kamog Artistry, for example
-            <strong>KA-PR-2026-001</strong>. The status displayed here is pulled from our order tracking register.
+            <strong>KA-ORD-PR-2026-001</strong>. The status displayed here is pulled from our order tracking register.
           </p>
         </div>
 
@@ -763,7 +763,7 @@
             name="ref"
             type="text"
             inputmode="text"
-            placeholder="Enter Order Ref e.g. KA-PR-2026-001"
+            placeholder="Enter Order Ref e.g. KA-ORD-PR-2026-001"
             aria-describedby="trackingHelp"
             required
           />
@@ -771,7 +771,7 @@
         </form>
 
         <p class="tracking-help" id="trackingHelp">
-          Your order reference usually starts with <code>KA</code>, for example <code>KA-PR-2026-001</code>.
+          Your order reference usually starts with <code>KA</code>, for example <code>KA-ORD-PR-2026-001</code>.
           If you do not have a tracking number, contact us on WhatsApp with your name and order details.
         </p>
 
@@ -797,20 +797,23 @@
           <div class="status-steps" aria-label="Order progress stages">
             <h3>Order Progress</h3>
             <div class="step-list" id="stepList">
-              <div class="step-item" data-step="Order Received">Order Received</div>
-              <div class="step-item" data-step="Artwork / Design Stage">Artwork / Design</div>
-              <div class="step-item" data-step="In Production">In Production</div>
+              <div class="step-item" data-step="Order Received">Received</div>
+              <div class="step-item" data-step="Details Under Review">Review</div>
+              <div class="step-item" data-step="Artwork / Design Stage">Design</div>
+              <div class="step-item" data-step="Client Approval Needed">Approval / Pre-Press</div>
+              <div class="step-item" data-step="In Production">Production</div>
+              <div class="step-item" data-step="Finishing &amp; Quality Check">Finishing / QC</div>
               <div class="step-item" data-step="Ready for Pickup">Ready / Dispatch</div>
-              <div class="step-item" data-step="Delivered">Delivered</div>
+              <div class="step-item" data-step="Completed">Completed</div>
             </div>
           </div>
 
           <div class="order-grid" id="orderGrid"></div>
 
           <div class="tracking-actions hero-actions">
-  <a class="btn-primary" id="whatsappOrderLink" href="https://wa.me/256775251445" target="_blank" rel="noopener">Ask on WhatsApp</a>
-  <a class="btn-secondary" href="/contact">Request Another Quote</a>
-</div>
+            <a class="btn-primary" id="whatsappOrderLink" href="https://wa.me/256775251445" target="_blank" rel="noopener">Ask on WhatsApp</a>
+            <a class="btn-secondary" href="/contact">Request Another Quote</a>
+          </div>
         </div>
       </div>
     </div>
@@ -986,7 +989,7 @@
 <script src="/assets/js/animations.js" defer></script>
 
 <script>
-  const ORDER_API_URL = "https://script.google.com/macros/s/AKfycbyIIEhjBynOUkDRvWhcz_w7Cglb3Kpwb69D_MuTSVk13vzLAaVjy9VhB2BmooEXng/exec";
+  const ORDER_API_URL = "https://script.google.com/macros/s/AKfycbzgfxALTn2BiUTEk6zsfRI4NE_zeswLYSalLo-4xg/exec";
 
   const form = document.getElementById("track-order-form");
   const input = document.getElementById("orderRef");
@@ -1005,6 +1008,7 @@
 
   const stepOrder = [
     "Order Received",
+    "Details Under Review",
     "Artwork / Design Stage",
     "Client Approval Needed",
     "Pre-Press / Production Checks",
@@ -1049,63 +1053,69 @@
   function getStatusClass(status) {
     const lower = String(status || "").toLowerCase();
 
-    if (lower.includes("hold") || lower.includes("pending")) return "is-hold";
-    if (lower.includes("delivered") || lower.includes("completed")) return "is-delivered";
     if (lower.includes("cancel")) return "is-error";
+    if (lower.includes("hold") || lower.includes("pending") || lower.includes("rescheduled")) return "is-hold";
+    if (lower.includes("delivered") || lower.includes("completed") || lower.includes("picked up")) return "is-delivered";
 
     return "";
   }
 
   function updateStepper(currentStatus, deliveryStatus) {
-    const current = cleanText(currentStatus);
-    const delivery = cleanText(deliveryStatus);
+    const current = cleanText(currentStatus).toLowerCase();
+    const delivery = cleanText(deliveryStatus).toLowerCase();
     const steps = document.querySelectorAll(".step-item");
 
-    let activeIndex = stepOrder.findIndex(step => step.toLowerCase() === current.toLowerCase());
+    const progressMap = {
+      "order received": "Order Received",
+      "details under review": "Details Under Review",
+      "artwork / design stage": "Artwork / Design Stage",
+      "client approval needed": "Client Approval Needed",
+      "pre-press / production checks": "Client Approval Needed",
+      "in production": "In Production",
+      "finishing & quality check": "Finishing & Quality Check",
+      "ready for pickup": "Ready for Pickup",
+      "out for delivery": "Ready for Pickup",
+      "delivered": "Completed",
+      "completed": "Completed"
+    };
 
-    if (activeIndex === -1 && delivery.toLowerCase().includes("out for delivery")) {
-      activeIndex = stepOrder.indexOf("Out for Delivery");
+    let mappedStep = progressMap[current];
+
+    if (!mappedStep && current.includes("review")) mappedStep = "Details Under Review";
+    if (!mappedStep && current.includes("design")) mappedStep = "Artwork / Design Stage";
+    if (!mappedStep && current.includes("approval")) mappedStep = "Client Approval Needed";
+    if (!mappedStep && current.includes("pre-press")) mappedStep = "Client Approval Needed";
+    if (!mappedStep && current.includes("production")) mappedStep = "In Production";
+    if (!mappedStep && current.includes("finishing")) mappedStep = "Finishing & Quality Check";
+    if (!mappedStep && current.includes("quality")) mappedStep = "Finishing & Quality Check";
+    if (!mappedStep && current.includes("ready")) mappedStep = "Ready for Pickup";
+    if (!mappedStep && current.includes("delivery")) mappedStep = "Ready for Pickup";
+    if (!mappedStep && current.includes("delivered")) mappedStep = "Completed";
+    if (!mappedStep && current.includes("completed")) mappedStep = "Completed";
+
+    if (delivery.includes("ready")) mappedStep = "Ready for Pickup";
+    if (delivery.includes("out for delivery")) mappedStep = "Ready for Pickup";
+    if (delivery.includes("delivered")) mappedStep = "Completed";
+    if (delivery.includes("picked up")) mappedStep = "Completed";
+    if (delivery.includes("completed")) mappedStep = "Completed";
+
+    if (current.includes("hold") || current.includes("cancel")) {
+      mappedStep = "";
     }
 
-    if (activeIndex === -1 && delivery.toLowerCase().includes("delivered")) {
-      activeIndex = stepOrder.indexOf("Delivered");
-    }
-
-    if (activeIndex === -1 && current.toLowerCase().includes("production")) {
-      activeIndex = stepOrder.indexOf("In Production");
-    }
-
-    if (activeIndex === -1 && current.toLowerCase().includes("ready")) {
-      activeIndex = stepOrder.indexOf("Ready for Pickup");
-    }
-
-    if (activeIndex === -1) activeIndex = 0;
+    const visibleSteps = Array.from(steps).map(step => step.getAttribute("data-step"));
+    const activeIndex = visibleSteps.indexOf(mappedStep);
 
     steps.forEach((stepEl, index) => {
       stepEl.classList.remove("is-done", "is-current");
 
-      const label = stepEl.getAttribute("data-step");
-      let stepIndex = stepOrder.indexOf(label);
+      if (activeIndex === -1) return;
 
-      if (label === "Ready for Pickup" && current.toLowerCase().includes("out for delivery")) {
-        stepIndex = stepOrder.indexOf("Out for Delivery");
-      }
-
-      if (index < activeIndex || stepIndex < activeIndex) {
+      if (index < activeIndex) {
         stepEl.classList.add("is-done");
       }
 
-      if (label === "Ready for Pickup") {
-        const isReadyStage =
-          current.toLowerCase().includes("ready") ||
-          current.toLowerCase().includes("out for delivery") ||
-          delivery.toLowerCase().includes("ready") ||
-          delivery.toLowerCase().includes("out for delivery");
-
-        if (isReadyStage && activeIndex >= stepOrder.indexOf("Ready for Pickup")) {
-          stepEl.classList.add("is-current");
-        }
-      } else if (stepIndex === activeIndex) {
+      if (index === activeIndex) {
         stepEl.classList.add("is-current");
       }
     });
