@@ -601,6 +601,37 @@
       }
     }
   }
+
+  /* Tracking page button text visibility fix */
+.section.light .tracking-actions a.whatsapp-btn,
+.section.light .tracking-actions a.whatsapp-btn:visited,
+.section.light .tracking-actions a.whatsapp-btn:hover,
+.section.light .tracking-actions a.whatsapp-btn:focus,
+.section.light .tracking-actions a.whatsapp-btn:active,
+.section.light .tracking-actions a.quote-btn,
+.section.light .tracking-actions a.quote-btn:visited,
+.section.light .tracking-actions a.quote-btn:hover,
+.section.light .tracking-actions a.quote-btn:focus,
+.section.light .tracking-actions a.quote-btn:active{
+  color:#ffffff !important;
+  -webkit-text-fill-color:#ffffff !important;
+  text-decoration:none !important;
+  opacity:1 !important;
+}
+
+.section.light .tracking-actions a.whatsapp-btn{
+  background:#25D366 !important;
+}
+
+.section.light .tracking-actions a.quote-btn{
+  background:var(--km-blue) !important;
+}
+
+.section.light .tracking-actions a.whatsapp-btn:hover,
+.section.light .tracking-actions a.quote-btn:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.03);
+}
   </script>
 </head>
 
