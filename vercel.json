@@ -1,0 +1,136 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self' https:; img-src 'self' https: data:; style-src 'self' https: 'unsafe-inline'; script-src 'self' https: 'unsafe-inline'; font-src 'self' https: data:; connect-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self' https:; frame-ancestors 'none';"
+        }
+      ]
+    },
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/img/icons/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/printing-services-kampala",
+      "destination": "/services/printing-services-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/signage-fabrication-uganda",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/seeta-high-school-receipt-book-printing-workshop",
+      "destination": "/portfolio/",
+      "permanent": true
+    },
+    {
+      "source": "/vehicle-branding-kampala",
+      "destination": "/services/vehicle-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-identity-design-kampala",
+      "destination": "/services/branding-kampala/corporate-brand-identity-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/large-format-printing-kampala",
+      "destination": "/services/printing-services-kampala/large-format-printing-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/signage-fabrication",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/branded-stationery-uganda",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/w/emt",
+      "destination": "/portfolio/waka-waka-movie-screening-tour-branding-kampala#emt-makerere",
+      "permanent": true
+    },
+    {
+      "source": "/w/metroplex",
+      "destination": "/portfolio/waka-waka-movie-screening-tour-branding-kampala#metroplex-naalya",
+      "permanent": true
+    },
+    {
+      "source": "/w/arena",
+      "destination": "/portfolio/waka-waka-movie-screening-tour-branding-kampala#arena-mall",
+      "permanent": true
+    },
+    {
+      "source": "/w/acacia",
+      "destination": "/portfolio/waka-waka-movie-screening-tour-branding-kampala#cinemax-acacia",
+      "permanent": true
+    },
+    {
+      "source": "/w/numax",
+      "destination": "/portfolio/waka-waka-movie-screening-tour-branding-kampala#numax-cinema",
+      "permanent": true
+    }
+  ]
+}
