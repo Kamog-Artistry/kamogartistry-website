@@ -131,6 +131,11 @@
       "source": "/w/numax",
       "destination": "/portfolio/waka-waka-movie-screening-tour-branding-kampala#numax-cinema",
       "permanent": true
+    },
+    {
+      "source": "/menu/equinox",
+      "destination": "/portfolio/equinox-restaurant-menu-design-kisasi-kulambiro/digital-menu/",
+      "permanent": true
     }
   ]
 }
