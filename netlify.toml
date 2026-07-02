@@ -135,6 +135,15 @@
   force = true
 
 # ------------------------------------
+# Equinox Restaurant Menu QR Redirect
+# ------------------------------------
+[[redirects]]
+  from = "/menu/equinox"
+  to = "/portfolio/equinox-restaurant-menu-design-kisasi-kulambiro/digital-menu/"
+  status = 301
+  force = true
+  
+# ------------------------------------
 # Long-term image caching
 # ------------------------------------
 [[headers]]
