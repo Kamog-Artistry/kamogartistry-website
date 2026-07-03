@@ -68,23 +68,13 @@
       "permanent": true
     },
     {
-      "source": "/signage-fabrication-uganda",
-      "destination": "/services/signage-and-branding-kampala/",
+      "source": "/printing-services-kampala.html",
+      "destination": "/services/printing-services-kampala/",
       "permanent": true
     },
     {
-      "source": "/portfolio/seeta-high-school-receipt-book-printing-workshop",
-      "destination": "/portfolio/",
-      "permanent": true
-    },
-    {
-      "source": "/vehicle-branding-kampala",
-      "destination": "/services/vehicle-branding-kampala/",
-      "permanent": true
-    },
-    {
-      "source": "/corporate-identity-design-kampala",
-      "destination": "/services/branding-kampala/corporate-brand-identity-design-kampala/",
+      "source": "/printing-uganda",
+      "destination": "/services/printing-services-kampala/",
       "permanent": true
     },
     {
@@ -93,7 +83,137 @@
       "permanent": true
     },
     {
+      "source": "/services/printing/receipt-book-printing-kampala/",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printing/banner-printing-kampala/",
+      "destination": "/services/printing-services-kampala/banner-printing-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printing/sticker-printing-kampala/",
+      "destination": "/services/printing-services-kampala/sticker-printing-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printing/flyer-printing-kampala/",
+      "destination": "/services/printing-services-kampala/flyer-printing-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printing/booklet-printing-kampala/",
+      "destination": "/services/printing-services-kampala/book-printing-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printing/business-card-printing-kampala/",
+      "destination": "/services/printing-services-kampala/business-card-printing-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/printing/promotional-materials-printing-kampala/",
+      "destination": "/services/printing-services-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/branded-stationery-uganda",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/branded-stationery-uganda.html",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/stationery-branding-kampala/",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branded-stationery-uganda/company-stamp-design-uganda/",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branded-stationery-uganda/delivery-note-printing-uganda/",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branded-stationery-uganda/branded-notepads-uganda/",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branded-stationery-uganda/desk-name-tags-uganda/",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branded-stationery-uganda/quotation-book-printing-uganda/",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branded-stationery-uganda/receipt-book-printing-uganda/",
+      "destination": "/services/branded-stationery-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/signage-fabrication-uganda",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
       "source": "/signage-fabrication",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/signage-uganda",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/signage-kampala",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/signage-fabrication-uganda/",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/signage-and-branding-kampala/directional-signage-kampala/",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/signage-and-branding-kampala/signage-installation-kampala/",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/signage-and-branding-kampala/floor-graphics-kampala/",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/signage-and-branding-kampala/wall-branding-kampala/",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/signage-and-branding-kampala/wayfinding-signage-kampala/",
+      "destination": "/services/signage-and-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/signage-and-branding-kampala/shop-front-signage-kampala/",
       "destination": "/services/signage-and-branding-kampala/",
       "permanent": true
     },
@@ -103,8 +223,359 @@
       "permanent": true
     },
     {
-      "source": "/branded-stationery-uganda",
-      "destination": "/services/branded-stationery-uganda/",
+      "source": "/services/custom-merchandise-uganda/promotional-pens-uganda/",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-merchandise-uganda/keyholders-lanyards-uganda/",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-merchandise-uganda/branded-tshirts-uganda/",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-merchandise-uganda/branded-bags-uganda/",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-merchandise-uganda/corporate-gift-packages-uganda/",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-merchandise-uganda/branded-umbrellas-uganda/",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-merchandise-uganda/custom-gift-box-packaging-uganda/",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/custom-merchandise-uganda/branded-notebooks-uganda/",
+      "destination": "/services/custom-merchandise-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/event-flyer-poster-printing-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/event-banner-printing-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/event-backdrop-printing-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/event-stage-branding-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/exhibition-stand-design-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/conference-booth-branding-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/event-badge-lanyard-printing-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/event-directional-signage-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/step-and-repeat-backdrop-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/event-merchandise-giveaways-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/event-branding-kampala/event-programme-printing-kampala/",
+      "destination": "/services/event-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/branding-kampala",
+      "destination": "/services/branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/logo-design-uganda",
+      "destination": "/services/branding-kampala/logo-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-identity-design-kampala",
+      "destination": "/services/branding-kampala/corporate-brand-identity-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/brand-strategy-consulting-kampala/",
+      "destination": "/services/branding-kampala/brand-strategy-consulting-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/brand-rollout-management-kampala/",
+      "destination": "/services/branding-kampala/brand-rollout-management-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/brand-guidelines-design-kampala/",
+      "destination": "/services/branding-kampala/brand-guidelines-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/logo-design-kampala/",
+      "destination": "/services/branding-kampala/logo-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/product-label-design-kampala/",
+      "destination": "/services/branding-kampala/product-label-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/corporate-brand-identity-design-kampala/",
+      "destination": "/services/branding-kampala/corporate-brand-identity-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/rebranding-services-kampala/",
+      "destination": "/services/branding-kampala/rebranding-services-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/packaging-design-kampala/",
+      "destination": "/services/branding-kampala/packaging-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/social-media-brand-design-kampala/",
+      "destination": "/services/branding-kampala/social-media-brand-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/startup-branding-packages-kampala/",
+      "destination": "/services/branding-kampala/startup-branding-packages-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/event-branding-design-kampala/",
+      "destination": "/services/branding-kampala/event-branding-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/services/branding/sme-brand-development-kampala/",
+      "destination": "/services/branding-kampala/sme-brand-development-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/vehicle-branding-kampala",
+      "destination": "/services/vehicle-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/vehicle-branding-uganda",
+      "destination": "/services/vehicle-branding-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/corporate-profile-documents-kampala",
+      "destination": "/services/graphic-design-kampala/company-profile-design-kampala/",
+      "permanent": true
+    },
+    {
+      "source": "/post",
+      "has": [
+        {
+          "type": "query",
+          "key": "post",
+          "value": "best-file-formats-for-print-uganda"
+        }
+      ],
+      "destination": "/blog/print-file-formats-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/post",
+      "has": [
+        {
+          "type": "query",
+          "key": "post",
+          "value": "creative-industry-trends"
+        }
+      ],
+      "destination": "/blog/creative-industry-trends/",
+      "permanent": true
+    },
+    {
+      "source": "/post.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "post",
+          "value": "signage-cost-uganda"
+        }
+      ],
+      "destination": "/blog/signage-cost-uganda/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/branding-printing-signage-guide-uganda/",
+      "destination": "/blog/branding-printing-signage-in-uganda-practical-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/signage",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/events",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/branding",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vehicle-branding",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/printing",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/post",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/kiosa-ramadan-2025",
+      "destination": "/portfolio/kiosa",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/create-and-cook",
+      "destination": "/portfolio/create-and-cook-competition",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/seeta-high-school-workshop-receipt-book-printing",
+      "destination": "/portfolio/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/seeta-high-school-receipt-book-printing-workshop",
+      "destination": "/portfolio/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/create-and-cook-competition.html",
+      "destination": "/portfolio/create-and-cook-competition",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/sme-branding-showcase.html",
+      "destination": "/portfolio/sme-branding-showcase",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/tooke-birdc-uma-2025.html",
+      "destination": "/portfolio/tooke-birdc-uma-2025",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/sbl-intel-systems.html",
+      "destination": "/portfolio/sbl-intel-systems",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/rokastars-film-productions.html",
+      "destination": "/portfolio/rokastars-film-productions",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/ability-pharmacy.html",
+      "destination": "/portfolio/ability-pharmacy",
+      "permanent": true
+    },
+    {
+      "source": "/marketplace/products/signage/single-pole-road-light-box-signage/index.html",
+      "destination": "/marketplace/products/",
+      "permanent": true
+    },
+    {
+      "source": "/marketplace/products/signage/double-sided-road-light-box-signage/index.html",
+      "destination": "/marketplace/products/",
+      "permanent": true
+    },
+    {
+      "source": "/marketplace/products/signage/light-box-signage-single-side/index.html",
+      "destination": "/marketplace/products/",
+      "permanent": true
+    },
+    {
+      "source": "/marketplace/category/banners/",
+      "destination": "/marketplace/categories/",
+      "permanent": true
+    },
+    {
+      "source": "/marketplace/category/signage/",
+      "destination": "/marketplace/categories/",
+      "permanent": true
+    },
+    {
+      "source": "/licensing/",
+      "destination": "/compliance",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials.html",
+      "destination": "/testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
       "permanent": true
     },
     {
