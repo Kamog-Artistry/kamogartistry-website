@@ -619,11 +619,7 @@
       "destination": "/compliance",
       "permanent": true
     },
-    {
-      "source": "/privacy-policy",
-      "destination": "/privacy",
-      "permanent": true
-    },
+   
     {
       "source": "/testimonials.html",
       "destination": "/testimonials",
