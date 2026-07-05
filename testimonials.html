@@ -18,10 +18,16 @@
   <link rel="canonical" href="https://kamogartistry.com/testimonials" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="https://kamogartistry.com/sitemap.xml" />
 
+  <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg">
+
   <!-- Performance -->
   <link rel="preconnect" href="https://kamogartistry.com" />
   <link rel="dns-prefetch" href="https://kamogartistry.com" />
-  <link rel="preload" as="image" href="/assets/img/hero/testimonials-cover.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/img/og/testimonials-og.webp" fetchpriority="high" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -31,21 +37,21 @@
   <meta property="og:description"
     content="Client feedback on branding, graphic design, printing, signage, clean finishing, turnaround and reliable execution by Kamog Artistry (U) Ltd in Kampala, Uganda." />
   <meta property="og:url" content="https://kamogartistry.com/testimonials" />
-  <meta property="og:image" content="https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg" />
-  <meta property="og:image:secure_url" content="https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg" />
-  <meta property="og:image:width" content="1400" />
-  <meta property="og:image:height" content="700" />
+  <meta property="og:image" content="https://kamogartistry.com/assets/img/og/testimonials-og.webp" />
+  <meta property="og:image:secure_url" content="https://kamogartistry.com/assets/img/og/testimonials-og.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="650" />
   <meta property="og:image:alt"
-    content="Kamog Artistry (U) Ltd testimonials page cover showing trusted branding, printing and signage execution in Kampala, Uganda" />
+    content="Kamog Artistry (U) Ltd testimonials page OG showing trusted branding, printing and signage execution in Kampala, Uganda" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Client Testimonials | Branding, Graphic Design, Printing & Signage Company in Kampala, Uganda | Kamog Artistry (U) Ltd" />
   <meta name="twitter:description"
     content="Read client feedback on branding, graphic design, printing, signage, finishing quality and reliable execution by Kamog Artistry (U) Ltd." />
-  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg" />
+  <meta name="twitter:image" content="https://kamogartistry.com/assets/img/og/testimonials-og.webp" />
   <meta name="twitter:image:alt"
-    content="Kamog Artistry (U) Ltd testimonials page cover showing trusted branding, printing and signage execution in Kampala, Uganda" />
+    content="Kamog Artistry (U) Ltd testimonials page OG showing trusted branding, printing and signage execution in Kampala, Uganda" />
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -93,7 +99,7 @@
         "description":"Client testimonials for Kamog Artistry (U) Ltd covering branding, graphic design, printing, signage, finishing quality, turnaround and execution support.",
         "isPartOf":{"@id":"https://kamogartistry.com/#website"},
         "about":{"@id":"https://kamogartistry.com/#organization"},
-        "primaryImageOfPage":{"@id":"https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg#heroimage"},
+        "primaryImageOfPage":{"@id":"https://kamogartistry.com/assets/img/og/testimonials-og.webp#heroimage"},
         "breadcrumb":{"@id":"https://kamogartistry.com/testimonials#breadcrumb"}
       },
       {
@@ -104,17 +110,17 @@
         "description":"Client testimonials for Kamog Artistry (U) Ltd covering branding, graphic design, printing, signage, finishing quality, turnaround and execution support.",
         "isPartOf":{"@id":"https://kamogartistry.com/#website"},
         "about":{"@id":"https://kamogartistry.com/#organization"},
-        "primaryImageOfPage":{"@id":"https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg#heroimage"},
+        "primaryImageOfPage":{"@id":"https://kamogartistry.com/assets/img/og/testimonials-og.webp#heroimage"},
         "breadcrumb":{"@id":"https://kamogartistry.com/testimonials#breadcrumb"}
       },
       {
         "@type":"ImageObject",
-        "@id":"https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg#heroimage",
-        "url":"https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg",
-        "contentUrl":"https://kamogartistry.com/assets/img/hero/testimonials-cover.jpg",
-        "width":"1400",
-        "height":"700",
-        "name":"Kamog Artistry testimonials page cover image",
+        "@id":"https://kamogartistry.com/assets/img/og/testimonials-og.webp#heroimage",
+        "url":"https://kamogartistry.com/assets/img/og/testimonials-og.webp",
+        "contentUrl":"https://kamogartistry.com/assets/img/og/testimonials-og.webp",
+        "width":"1200",
+        "height":"650",
+        "name":"Kamog Artistry testimonials page OG image",
         "caption":"Client testimonials for Kamog Artistry (U) Ltd in Kampala, Uganda."
       },
       {
@@ -414,8 +420,172 @@
       opacity:.95;
     }
     .footer a.footer-cta, .footer a.footer-cta:visited{text-decoration:none !important}
+
+
+    .review-snapshot{
+      max-width:1050px;
+      margin:22px auto 0;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .google-score-card,
+    .public-proof-card{
+      background:#fff;
+      color:var(--km-ink);
+      border:1px solid var(--km-line);
+      border-radius:22px;
+      box-shadow:var(--km-shadow);
+      padding:24px;
+    }
+    .score-row{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .score-number{
+      font-size:3rem;
+      line-height:1;
+      font-weight:900;
+      color:var(--km-ink);
+    }
+    .stars{color:#f6b700;font-size:1.35rem;letter-spacing:1px;font-weight:900}
+    .review-grid,
+    .letter-grid,
+    .proof-case-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+      max-width:1100px;
+      margin:22px auto 0;
+    }
+    .letter-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .review-card,
+    .letter-card,
+    .proof-case-card{
+      background:#fff;
+      color:var(--km-ink);
+      border:1px solid var(--km-line);
+      border-radius:20px;
+      box-shadow:var(--km-shadow);
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-height:100%;
+    }
+    .review-card blockquote,
+    .letter-card blockquote{
+      margin:0;
+      opacity:.92;
+      line-height:1.65;
+      font-size:1rem;
+    }
+    .source-note{
+      margin-top:auto;
+      opacity:.75;
+      font-size:.92rem;
+    }
+    .review-author{font-weight:900;margin:0;color:var(--km-ink)}
+    .mini-label{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      width:max-content;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(11,111,191,.08);
+      border:1px solid rgba(11,111,191,.16);
+      font-weight:800;
+      font-size:.88rem;
+      color:var(--km-ink);
+    }
+    .letter-card .btn-secondary,
+    .proof-case-card .btn-secondary,
+    .public-proof-card .btn-secondary,
+    .review-card .btn-secondary{
+      margin-top:auto;
+      width:max-content;
+      max-width:100%;
+      background:var(--km-blue) !important;
+      border-color:var(--km-blue) !important;
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+    }
+    .section.light .cta-card .btn-secondary,
+    .section.light .hero-actions .btn-secondary{
+      background:var(--km-blue) !important;
+      border-color:var(--km-blue) !important;
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+      box-shadow:0 10px 22px rgba(11,111,191,.20);
+    }
+    @media (max-width:980px){
+      .review-snapshot{grid-template-columns:1fr;}
+      .review-grid,.proof-case-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .letter-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:620px){
+      .review-grid,.proof-case-grid{grid-template-columns:1fr;}
+      .score-number{font-size:2.4rem;}
+    }
+
+  
+    .section-title-center{max-width:980px;margin:0 auto 18px;text-align:center}
+    .review-snapshot{
+      max-width:1050px;margin:22px auto 0;display:grid;
+      grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch;
+    }
+    .google-score-card,.public-proof-card,.review-card,.letter-card,.proof-case-card{
+      background:#fff;color:var(--km-ink);border:1px solid var(--km-line);
+      border-radius:22px;box-shadow:var(--km-shadow);padding:24px;
+    }
+    .score-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .score-number{font-size:3rem;line-height:1;font-weight:900;color:var(--km-ink)}
+    .stars{color:#f6b700;font-size:1.35rem;letter-spacing:1px;font-weight:900}
+    .review-grid,.proof-case-grid,.value-grid{
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;
+      max-width:1100px;margin:22px auto 0;
+    }
+    .letter-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:1100px;margin:22px auto 0}
+    .review-card,.letter-card,.proof-case-card{display:flex;flex-direction:column;gap:10px;min-height:100%}
+    .review-card blockquote,.letter-card blockquote{margin:0;opacity:.92;line-height:1.65;font-size:1rem}
+    .source-note{margin-top:auto;opacity:.75;font-size:.92rem}
+    .review-author{font-weight:900;margin:0;color:var(--km-ink)}
+    .mini-label{
+      display:inline-flex;align-items:center;gap:6px;width:max-content;padding:6px 10px;
+      border-radius:999px;background:rgba(11,111,191,.08);border:1px solid rgba(11,111,191,.16);
+      font-weight:800;font-size:.88rem;color:var(--km-ink);
+    }
+    .letter-card .btn-secondary,.proof-case-card .btn-secondary,.public-proof-card .btn-secondary,.review-card .btn-secondary{
+      margin-top:auto;width:max-content;max-width:100%;background:var(--km-blue)!important;
+      border-color:var(--km-blue)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;
+    }
+    .section.light .cta-card .btn-secondary,.section.light .hero-actions .btn-secondary{
+      background:var(--km-blue)!important;border-color:var(--km-blue)!important;color:#fff!important;
+      -webkit-text-fill-color:#fff!important;box-shadow:0 10px 22px rgba(11,111,191,.20);
+    }
+    .client-logo-fallback strong{display:none}
+    .business-badge-card{
+      max-width:760px;margin:24px auto 0;text-align:center;background:#fff;color:var(--km-ink);
+      border:1px solid var(--km-line);border-radius:22px;box-shadow:var(--km-shadow);padding:22px;
+    }
+    .business-badge-card img{margin:12px auto 0}
+    @media (max-width:980px){
+      .review-snapshot{grid-template-columns:1fr}
+      .review-grid,.proof-case-grid,.value-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .letter-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:620px){
+      .review-grid,.proof-case-grid,.value-grid{grid-template-columns:1fr}
+      .score-number{font-size:2.4rem}
+    }
+
   </style>
 </head>
+
 
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -441,21 +611,26 @@
     </nav>
   </header>
 
+  
   <main id="main">
 
     <section class="hero case-hero">
       <div class="hero-inner">
-        <div class="hero-badge">Client Testimonials • Kampala, Uganda</div>
+        <div class="hero-badge">Google Reviews • Client Feedback • Written Recommendations</div>
 
-        <h1>Client Testimonials for Branding, Graphic Design, Printing &amp; Signage in Kampala, Uganda</h1>
+        <h1>Client Testimonials &amp; Review Proof</h1>
 
         <p>
-          Kamog Artistry (U) Ltd is trusted by businesses, institutions and event teams for <strong>branding</strong>, <strong>graphic design</strong>, <strong>printing</strong>, <strong>signage</strong>, <strong>vehicle branding</strong>, <strong>event branding</strong>, <strong>branded stationery</strong> and reliable production support in Kampala and across Uganda.
+          See what clients say after working with Kamog Artistry (U) Ltd on <strong>branding</strong>, <strong>graphic design</strong>,
+          <strong>printing</strong>, <strong>signage</strong>, <strong>event branding</strong>, <strong>vehicle branding</strong>,
+          <strong>corporate stationery</strong>, <strong>custom merchandise</strong> and production work in Kampala and across Uganda.
         </p>
 
         <div style="margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-          <a href="/portfolio" class="btn-secondary">View Portfolio</a>
-          <a href="/contact" class="btn-primary">Request a Quote</a>
+          <a href="#google-reviews" class="btn-secondary">Read Google Reviews</a>
+          <a href="#written-recommendations" class="btn-secondary">View Recommendations</a>
+          <a href="/portfolio/" class="btn-secondary">View Case Studies</a>
+          <a href="/contact/request-quotation/" class="btn-primary">Request Quotation</a>
         </div>
 
         <p class="hero-quicklinks">
@@ -473,77 +648,126 @@
 
         <div class="hero-highlights">
           <div class="hero-highlight">
-            <strong>Clean finishing</strong>
-            <span>Professional output that looks ready for use</span>
+            <strong>4.6 Google rating</strong>
+            <span>Snapshot from 17 public Google reviews</span>
           </div>
           <div class="hero-highlight">
-            <strong>Reliable execution</strong>
-            <span>From design stage to delivery or installation</span>
+            <strong>Written recommendations</strong>
+            <span>Available upon request for project reference</span>
           </div>
           <div class="hero-highlight">
-            <strong>Repeat trust</strong>
-            <span>Clients return for print, branding and signage support</span>
+            <strong>Work you can verify</strong>
+            <span>Feedback connected to real portfolio projects</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section light animate">
-      <div style="max-width:1000px;margin:auto;text-align:center">
-        <h2>Why These Testimonials Matter</h2>
-
-        <p style="opacity:.9;margin-top:12px">
-          Testimonials help show how work performs after delivery, not just how it looks in a mockup. They reveal what clients actually noticed: communication, finishing, reliability, professionalism and brand consistency.
-        </p>
-
-        <div class="trust-grid">
-          <div class="trust-card">
-            <h3>Brand confidence</h3>
-            <p style="opacity:.88;margin-top:10px">
-              Clients often comment on how the final work improved presentation and credibility.
+    <section class="section light animate" id="google-reviews">
+      <div class="wrap-wide">
+        <div class="card">
+          <div class="section-title-center">
+            <h2>Google Review Snapshot</h2>
+            <p style="opacity:.88;margin-top:10px;max-width:920px;margin-left:auto;margin-right:auto">
+              Our Google Business Profile currently shows a <strong>4.6 rating from 17 public reviews</strong>.
+              The strongest comments point to the same things clients ask about before ordering: creativity,
+              clean execution, customer care, timely delivery, communication and attention to detail.
             </p>
           </div>
 
-          <div class="trust-card">
-            <h3>Execution quality</h3>
-            <p style="opacity:.88;margin-top:10px">
-              Reviews highlight clean production, better finishing and dependable output.
-            </p>
-          </div>
+          <div class="review-snapshot">
+            <div class="google-score-card">
+              <div class="score-row">
+                <span class="score-number">4.6</span>
+                <span class="stars" aria-label="4.6 out of 5 stars">★★★★★</span>
+                <strong>17 public reviews</strong>
+              </div>
+              <p style="opacity:.86;margin-top:12px">
+                Use the review excerpts below as quick social proof, then verify the actual work through our
+                <a href="/portfolio/">portfolio case studies</a>.
+              </p>
+              <p style="opacity:.72;margin-top:10px">
+                Rating snapshot from Google Business Profile. Public ratings can change over time, so this is presented visibly on the page and not used as AggregateRating schema.
+              </p>
+            </div>
 
-          <div class="trust-card">
-            <h3>Service relevance</h3>
-            <p style="opacity:.88;margin-top:10px">
-              Feedback connects directly to <a href="/services/branding-kampala/">branding</a>, <a href="/services/graphic-design-kampala/">graphic design</a>, <a href="/services/printing-services-kampala/">printing</a> and <a href="/services/signage-and-branding-kampala/">signage</a>.
-            </p>
+            <div class="public-proof-card">
+              <h3>What clients keep mentioning</h3>
+              <p style="opacity:.88;margin-top:10px">
+                Quality work, prompt delivery, neat finishing, communication, creativity and confidence that the final item matches what was ordered.
+              </p>
+              <a class="btn-secondary" href="/contact/">Choose Contact Route</a>
+            </div>
           </div>
-
-          <div class="trust-card">
-            <h3>Decision support</h3>
-            <p style="opacity:.88;margin-top:10px">
-              If you are comparing suppliers, this page gives a clearer sense of what clients value most.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-routes">
-          <a href="/services/branding-kampala/">Branding Services</a>
-          <a href="/services/graphic-design-kampala/">Graphic Design</a>
-          <a href="/services/printing-services-kampala/">Printing Services</a>
-          <a href="/services/branded-stationery-uganda/">Branded Stationery</a>
-          <a href="/services/custom-merchandise-uganda/">Custom Merchandise</a>
-          <a href="/services/vehicle-branding-kampala/">Vehicle Branding</a>
-          <a href="/services/event-branding-kampala/">Event Branding</a>
         </div>
       </div>
     </section>
 
-    <section class="section light animate">
-      <h2 style="margin-bottom:20px">Featured Review</h2>
+    <section class="section light animate" id="featured-google-reviews">
+      <div class="wrap-wide">
+        <div class="card">
+          <div class="section-title-center">
+            <h2>Selected Public Google Reviews</h2>
+            <p style="opacity:.88;margin-top:10px;max-width:920px;margin-left:auto;margin-right:auto">
+              These excerpts are selected from public Google feedback and kept short for quick reading. They support, but do not replace, direct project proof.
+            </p>
+          </div>
+
+          <div class="review-grid">
+            <article class="review-card">
+              <span class="mini-label">Google • 5-star</span>
+              <blockquote>“Great experience working with Kamog Artistry! Their creativity and attention to detail truly shine through in their work. Highly recommend their services for any art or design needs.”</blockquote>
+              <p class="review-author">Andrew Da junior</p>
+              <p class="source-note">Source: Google Business Profile</p>
+            </article>
+
+            <article class="review-card">
+              <span class="mini-label">Google • 5-star</span>
+              <blockquote>“They provide excellent customer care, pay attention to detail, and ensure client satisfaction. Their work is neat, creative, and delivered on time.”</blockquote>
+              <p class="review-author">Waswa Ikoba</p>
+              <p class="source-note">Source: Google Business Profile</p>
+            </article>
+
+            <article class="review-card">
+              <span class="mini-label">Google • 5-star</span>
+              <blockquote>“Through cooperation and good communication with the team, I got exactly what I ordered. For quality work that meets the client’s expectations, I highly recommend Kamog Artistry U Limited.”</blockquote>
+              <p class="review-author">Namuddu Maria Desire</p>
+              <p class="source-note">Source: Google Business Profile</p>
+            </article>
+
+            <article class="review-card">
+              <span class="mini-label">Google • 5-star</span>
+              <blockquote>“I recently ordered custom magic mugs from Kamog Artistry, and I’m very impressed with the quality and execution of their work. From start to finish, the experience was professional and well-organized.”</blockquote>
+              <p class="review-author">Mariam Nans</p>
+              <p class="source-note">Source: Google Business Profile • Related: <a href="/services/custom-merchandise-uganda/">Custom Merchandise</a></p>
+            </article>
+
+            <article class="review-card">
+              <span class="mini-label">Google • 5-star</span>
+              <blockquote>“For quality work and timely delivery, I recommend Kamog Artistry.”</blockquote>
+              <p class="review-author">Ssali Derrick</p>
+              <p class="source-note">Source: Google Business Profile</p>
+            </article>
+
+            <article class="review-card">
+              <span class="mini-label">Google • 5-star</span>
+              <blockquote>“For professional designs and timely delivery, trust Kamog Artistry (U) Ltd.”</blockquote>
+              <p class="review-author">Elsie Birungi</p>
+              <p class="source-note">Source: Google Business Profile • Related: <a href="/services/graphic-design-kampala/">Graphic Design</a></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light animate" id="featured-review">
+      <h2 style="margin-bottom:20px">Direct Client Feedback</h2>
 
       <div class="testimonial-box animate">
-        <p id="testimonialText" style="font-size:1.05rem;line-height:1.7;margin:0"></p>
-        <h4 id="testimonialAuthor" style="margin-top:14px"></h4>
+        <p id="testimonialText" style="font-size:1.05rem;line-height:1.7;margin:0">
+          Kamog Artistry elevated our brand presence beyond expectations.
+        </p>
+        <h4 id="testimonialAuthor" style="margin-top:14px">— Capsada Co. Ltd</h4>
 
         <div class="testimonial-controls" style="margin-top:10px">
           <button type="button" onclick="prevTestimonial()" aria-label="Previous testimonial">‹</button>
@@ -556,117 +780,175 @@
         </div>
 
         <p style="opacity:.75;margin-top:12px;text-align:center">
-          Helpful reviews usually mention the service delivered, the finishing quality, the communication and the final result.
+          Helpful feedback usually mentions the service delivered, finishing quality, communication, timeline and final result.
         </p>
       </div>
     </section>
 
-    <section class="section light animate">
-      <h2>More Client Feedback</h2>
-
-      <div class="grid" style="margin-top:22px;max-width:1000px;margin-left:auto;margin-right:auto">
+    <section class="section light animate" id="more-client-feedback">
+      <div class="wrap-wide">
         <div class="card">
-          <p style="opacity:.9;line-height:1.7;margin:0">
-            “Their creativity and professionalism stand out. Clean finishing and strong brand consistency.”
-          </p>
-          <p style="opacity:.8;margin-top:10px"><strong>Voltech Engineering Services</strong></p>
-          <p style="opacity:.84;margin-top:10px">
-            Related page: <a href="/services/branding-kampala/">Branding Kampala</a>
-          </p>
-        </div>
+          <div class="section-title-center">
+            <h2>More Client Feedback</h2>
+            <p style="opacity:.88;margin-top:10px">
+              We retained the original feedback cards and connected them to relevant service routes so visitors can move from trust proof to action.
+            </p>
+          </div>
 
-        <div class="card">
-          <p style="opacity:.9;line-height:1.7;margin:0">
-            “Excellent execution from design to installation. Timelines were respected and the outcome was impressive.”
-          </p>
-          <p style="opacity:.8;margin-top:10px"><strong>BIRDC / Exhibition Branding</strong></p>
-          <p style="opacity:.84;margin-top:10px">
-            Related page: <a href="/services/event-branding-kampala/">Event Branding Kampala</a>
-          </p>
-        </div>
+          <div class="review-grid">
+            <article class="review-card">
+              <span class="mini-label">Client feedback</span>
+              <blockquote>“Their creativity and professionalism stand out. Clean finishing and strong brand consistency.”</blockquote>
+              <p class="review-author">Voltech Engineering Services</p>
+              <p class="source-note">Related page: <a href="/services/branding-kampala/">Branding Kampala</a></p>
+              <a class="btn-secondary" href="/portfolio/voltech-branding/">View related project</a>
+            </article>
 
-        <div class="card">
-          <p style="opacity:.9;line-height:1.7;margin:0">
-            “High-quality print and branding work. Professional communication and reliable delivery.”
-          </p>
-          <p style="opacity:.8;margin-top:10px"><strong>Ability Pharmacy</strong></p>
-          <p style="opacity:.84;margin-top:10px">
-            Related page: <a href="/services/signage-and-branding-kampala/">Signage &amp; Branding Kampala</a>
-          </p>
-        </div>
-      </div>
+            <article class="review-card">
+              <span class="mini-label">Client feedback</span>
+              <blockquote>“Excellent execution from design to installation. Timelines were respected and the outcome was impressive.”</blockquote>
+              <p class="review-author">BIRDC / Exhibition Branding</p>
+              <p class="source-note">Related page: <a href="/services/event-branding-kampala/">Event Branding Kampala</a></p>
+              <a class="btn-secondary" href="/portfolio/tooke-birdc-uma-2025/">View related project</a>
+            </article>
 
-      <div class="card" style="margin-top:22px;max-width:1000px;margin-left:auto;margin-right:auto">
-        <h3 style="margin:0 0 8px">Want the same results?</h3>
-        <p style="opacity:.88;margin:0">
-          Start with our <a href="/services">services</a>, browse <a href="/portfolio">case studies</a>, or send your brief through <a href="/contact">contact</a> for a quote. For high-intent project starts, visit <a href="/services/branding-kampala/">Branding Kampala</a>, <a href="/services/graphic-design-kampala/">Graphic Design Kampala</a>, <a href="/services/printing-services-kampala/">Printing Services Kampala</a>, <a href="/services/signage-and-branding-kampala/">Signage &amp; Branding Kampala</a> or <a href="/services/event-branding-kampala/">Event Branding Kampala</a>.
-        </p>
+            <article class="review-card">
+              <span class="mini-label">Client feedback</span>
+              <blockquote>“High-quality print and branding work. Professional communication and reliable delivery.”</blockquote>
+              <p class="review-author">Ability Pharmacy</p>
+              <p class="source-note">Related page: <a href="/services/signage-and-branding-kampala/">Signage &amp; Branding Kampala</a></p>
+              <a class="btn-secondary" href="/portfolio/ability-pharmacy/">View related project</a>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section light animate">
-      <h2>Why Businesses Read Our Testimonials Before Choosing Us</h2>
-
-      <div class="grid" style="max-width:1000px;margin:22px auto 0">
+    <section class="section light animate" id="written-recommendations">
+      <div class="wrap-wide">
         <div class="card">
-          <h3>Real project proof</h3>
-          <p style="opacity:.88;margin-top:10px">
-            Testimonials help show how our <a href="/services/branding-kampala/">branding</a>, <a href="/services/graphic-design-kampala/">graphic design</a>, <a href="/services/printing-services-kampala/">printing</a> and <a href="/services/signage-and-branding-kampala/">signage services</a> perform after delivery, not just in concept.
-          </p>
+          <div class="section-title-center">
+            <h2>Written Recommendations from Corporate Clients</h2>
+            <p style="opacity:.88;margin-top:10px;max-width:930px;margin-left:auto;margin-right:auto">
+              Some clients issue formal recommendation letters after a project. Selected references are summarised below.
+              Full copies and additional references can be requested depending on your project type, procurement need or verification process.
+            </p>
+          </div>
+
+          <div class="letter-grid">
+            <article class="letter-card">
+              <span class="mini-label">Written recommendation</span>
+              <h3>Voltech Engineering Services Co. Ltd</h3>
+              <blockquote>
+                Voltech recommended Kamog Artistry for branding, signage and installation work, highlighting durable materials,
+                clean finishing, professional execution and suitability for high-traffic operational spaces.
+              </blockquote>
+              <p class="source-note">Summary from written recommendation • 28th December 2025 • Technical Director</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:auto">
+                <a class="btn-secondary" href="/portfolio/voltech-branding/">View related project</a>
+                <a class="btn-secondary" href="/contact/document-request-form/">Request reference copy</a>
+              </div>
+            </article>
+
+            <article class="letter-card">
+              <span class="mini-label">Written recommendation</span>
+              <h3>PAPAN SSD Ltd</h3>
+              <blockquote>
+                PAPAN SSD recommended Kamog Artistry for design, branding and print production, noting clear visual outputs,
+                good communication, timeline discipline, consistent quality and attention to detail.
+              </blockquote>
+              <p class="source-note">Summary from written recommendation • 14th April 2026 • Chief Executive Officer</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:auto">
+                <a class="btn-secondary" href="/portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan/">View related project</a>
+                <a class="btn-secondary" href="/contact/document-request-form/">Request reference copy</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="card" style="max-width:1000px;margin:22px auto 0">
+            <h3 style="margin:0 0 8px">Need references for procurement or supplier verification?</h3>
+            <p style="opacity:.88;margin:0">
+              Recommendation letters are available upon request where appropriate. Use the
+              <a href="/contact/document-request-form/">Document Request Form</a> and mention the service category you need verified
+              — for example signage installation, branding rollout, print production, merchandise or corporate stationery.
+            </p>
+          </div>
         </div>
+      </div>
+    </section>
 
+    <section class="section light animate" id="proof-through-work">
+      <div class="wrap-wide">
         <div class="card">
-          <h3>Decision confidence</h3>
-          <p style="opacity:.88;margin-top:10px">
-            Clients often want proof of finishing quality, communication, reliability and consistency before ordering. This page helps answer those concerns.
-          </p>
-        </div>
+          <div class="section-title-center">
+            <h2>Verify the Work Behind the Feedback</h2>
+            <p style="opacity:.88;margin-top:10px;max-width:920px;margin-left:auto;margin-right:auto">
+              Reviews are stronger when they are connected to real work. These case studies show the production context behind client trust.
+            </p>
+          </div>
 
-        <div class="card">
-          <h3>Service relevance</h3>
-          <p style="opacity:.88;margin-top:10px">
-            Different testimonials connect naturally to <a href="/services/event-branding-kampala/">event branding</a>, <a href="/services/vehicle-branding-kampala/">vehicle branding</a>, <a href="/services/branded-stationery-uganda/">branded stationery</a> and other high-intent service pages.
-          </p>
+          <div class="proof-case-grid">
+            <article class="proof-case-card">
+              <h3>Voltech Engineering</h3>
+              <p style="opacity:.86;margin-top:4px">Rebrand, office graphics, signage, vehicle branding, safety signs and supporting print items.</p>
+              <a class="btn-secondary" href="/portfolio/voltech-branding/">Open case study</a>
+            </article>
+            <article class="proof-case-card">
+              <h3>PAPAN SSD</h3>
+              <p style="opacity:.86;margin-top:4px">Company profile, calendars and business cards produced in Kampala and prepared for Juba delivery.</p>
+              <a class="btn-secondary" href="/portfolio/papan-ssd-company-profile-calendars-business-cards-south-sudan/">Open case study</a>
+            </article>
+            <article class="proof-case-card">
+              <h3>Tooke Run 2026</h3>
+              <p style="opacity:.86;margin-top:4px">PVC banners, media walls, field branding, selfie frames and live event-ground setup.</p>
+              <a class="btn-secondary" href="/portfolio/tooke-run-2026-event-branding-bushenyi/">Open case study</a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section light animate">
       <div style="margin-top:10px;text-align:center">
-        <h3 style="margin-bottom:20px">Trusted by Clients Across Industries</h3>
+        <h2 style="margin-bottom:20px">Trusted by Clients Across Industries</h2>
 
         <p style="opacity:.85;max-width:700px;margin:0 auto 18px">
-          We have supported organizations and businesses across engineering, healthcare, education, hospitality, retail and creative industries.
+          Our work has served engineering teams, healthcare brands, schools, hospitality businesses, retailers, creative teams, finance institutions and growing SMEs.
         </p>
 
         <p style="opacity:.75;max-width:800px;margin:0 auto 26px">
-          Below is a selection of client brands we have supported through branding, design, printing and signage production.
+          Below is a fuller selection of client brands and organisations connected to our branding, design, printing, signage, stationery, merchandise, digital and production work.
         </p>
 
         <div class="grid" style="max-width:1000px;margin:auto">
-          <div class="card client-logo-card"><img src="/assets/img/clients/01_Voltech.png" alt="Voltech" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/02_Tooke.png" alt="Tooke" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/03_MODVA.png" alt="MODVA" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/04_SBL.png" alt="SBL" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/05_EasyXport.png" alt="EasyXport" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/01_Voltech.png" alt="Voltech" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/02_Tooke.png" alt="Tooke" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/03_MODVA.png" alt="MODVA" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/04_SBL.png" alt="SBL" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/05_EasyXport.png" alt="EasyXport" width="150" height="64" loading="lazy" decoding="async"></div>
 
-          <div class="card client-logo-card"><img src="/assets/img/clients/06_MOTMH.png" alt="MOTMH" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/07_Abundance.png" alt="Abundance" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/08_LMN.png" alt="LMN" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/08_ROKASTARS.png" alt="ROKASTARS" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/09_YABX.png" alt="YABX" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/06_MOTMH.png" alt="MOTMH" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/07_Abundance.png" alt="Abundance" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/08_LMN.png" alt="LMN" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/08_ROKASTARS.png" alt="ROKASTARS" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/09_YABX.png" alt="YABX" width="150" height="64" loading="lazy" decoding="async"></div>
 
-          <div class="card client-logo-card"><img src="/assets/img/clients/10.png" alt="Client 10" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/10_CAPSADA.png" alt="Capsada" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/10_LEGACY_FASHIONS.png" alt="Legacy Fashions" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/10_Nyanzo.png" alt="Nyanzo Service Station" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/10_Seeka_Energy.png" alt="Seeka Energy" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/10.png" alt="Client 10" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/10_CAPSADA.png" alt="Capsada" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/10_LEGACY_FASHIONS.png" alt="Legacy Fashions" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/10_Nyanzo.png" alt="Nyanzo Service Station" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/10_Seeka_Energy.png" alt="Seeka Energy" width="150" height="64" loading="lazy" decoding="async"></div>
 
-          <div class="card client-logo-card"><img src="/assets/img/clients/11_OWM.png" alt="OWM" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/12_Tann.png" alt="Tann" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/13_Netpark.png" alt="Netpark" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/13_NOZOTEK.png" alt="Nozotek" width="150" height="64" loading="lazy" decoding="async"></div>
-          <div class="card client-logo-card"><img src="/assets/img/clients/14_PAPAN_SSD.png" alt="PAPAN SSD" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/11_OWM.png" alt="OWM" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/12_Tann.png" alt="Tann" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/13_Netpark.png" alt="Netpark" width="150" height="64" loading="lazy" decoding="async"></div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/13_NOZOTEK.png" alt="Nozotek" width="150" height="64" loading="lazy" decoding="async"></div>
+          
+          <div class="card client-logo-card client-logo-fallback">
+            <img onerror="this.style.display='none';this.nextElementSibling.style.display='block';" src="/assets/img/clients/liberation-community-finance.png" alt="Liberation Community Finance Ltd" width="150" height="64" loading="lazy" decoding="async">
+            <strong style="display:none;text-align:center;color:#08354a;font-size:.92rem;line-height:1.25">Liberation<br>Community Finance</strong>
+          </div>
+          <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/14_PAPAN_SSD.png" alt="PAPAN SSD" width="150" height="64" loading="lazy" decoding="async"></div>
         </div>
 
         <div style="margin-top:18px">
@@ -677,86 +959,81 @@
 
         <div id="clientsMore" class="clients-more" style="margin-top:18px">
           <div class="grid" style="max-width:1000px;margin:auto">
-            <div class="card client-logo-card"><img src="/assets/img/clients/15_PK.png" alt="PK" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/16_KH.png" alt="KH" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/17_MG.png" alt="MG" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/18_All_Parents.png" alt="All Parents" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/19_RHSS.png" alt="RHSS" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/15_PK.png" alt="PK" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/16_KH.png" alt="KH" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/17_MG.png" alt="MG" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/18_All_Parents.png" alt="All Parents" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/19_RHSS.png" alt="RHSS" width="150" height="64" loading="lazy" decoding="async"></div>
 
-            <div class="card client-logo-card"><img src="/assets/img/clients/20_Talisstar.png" alt="Talisstar" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/21_Hope_Ceremonials.png" alt="Hope Ceremonials" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/22_Al_Bashir.png" alt="Al Bashir" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/23_Chillzone.png" alt="Chillzone" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/24_wags.png" alt="Wags" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/20_Talisstar.png" alt="Talisstar" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/21_Hope_Ceremonials.png" alt="Hope Ceremonials" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/22_Al_Bashir.png" alt="Al Bashir" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/23_Chillzone.png" alt="Chillzone" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/24_wags.png" alt="Wags" width="150" height="64" loading="lazy" decoding="async"></div>
 
-            <div class="card client-logo-card"><img src="/assets/img/clients/B_J_RESTAURANT.png" alt="B &amp; J Restaurant" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/CHOSEN_BEAUTY_PARLOUR.png" alt="Chosen Beauty Parlour" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/CRANE_FILM.png" alt="Crane Film" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/Da_Wizzy-01.png" alt="Da Wizzy" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/DIVINE_&_Cakes.png" alt="Divine &amp; Cakes" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/B_J_RESTAURANT.png" alt="B &amp; J Restaurant" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/CHOSEN_BEAUTY_PARLOUR.png" alt="Chosen Beauty Parlour" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/CRANE_FILM.png" alt="Crane Film" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/Da_Wizzy-01.png" alt="Da Wizzy" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/DIVINE_&_Cakes.png" alt="Divine &amp; Cakes" width="150" height="64" loading="lazy" decoding="async"></div>
 
-            <div class="card client-logo-card"><img src="/assets/img/clients/GOK.png" alt="GOK" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/Kamp_Travel.png" alt="Kamp Travel" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/keem_logo.png" alt="Keem" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/Legacy_ushers.png" alt="Legacy Ushers" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/Luna_Collections.png" alt="Luna Collections" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/GOK.png" alt="GOK" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/Kamp_Travel.png" alt="Kamp Travel" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/keem_logo.png" alt="Keem" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/Legacy_ushers.png" alt="Legacy Ushers" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/Luna_Collections.png" alt="Luna Collections" width="150" height="64" loading="lazy" decoding="async"></div>
 
-            <div class="card client-logo-card"><img src="/assets/img/clients/MECHANLINK.png" alt="Mechanlink" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/MI_GADGETS_LOGO.png" alt="MI Gadgets" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/POWER_OF_HOLY_SPIRIT.png" alt="Power of Holy Spirit" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/RAM_COLLECTIONZ.png" alt="RAM Collectionz" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/RealArtist.png" alt="RealArtist" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/MECHANLINK.png" alt="Mechanlink" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/MI_GADGETS_LOGO.png" alt="MI Gadgets" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/POWER_OF_HOLY_SPIRIT.png" alt="Power of Holy Spirit" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/RAM_COLLECTIONZ.png" alt="RAM Collectionz" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/RealArtist.png" alt="RealArtist" width="150" height="64" loading="lazy" decoding="async"></div>
 
-            <div class="card client-logo-card"><img src="/assets/img/clients/SPENSA.png" alt="Spensa" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/STONE_PROMOTIONS.png" alt="Stone Promotions" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/Team_Kawumbi.png" alt="Team Kawumbi" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/The_Beauty_Sport.png" alt="The Beauty Sport" width="150" height="64" loading="lazy" decoding="async"></div>
-            <div class="card client-logo-card"><img src="/assets/img/clients/THE_TAP.png" alt="The Tap" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/SPENSA.png" alt="Spensa" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/STONE_PROMOTIONS.png" alt="Stone Promotions" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/Team_Kawumbi.png" alt="Team Kawumbi" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/The_Beauty_Sport.png" alt="The Beauty Sport" width="150" height="64" loading="lazy" decoding="async"></div>
+            <div class="card client-logo-card"><img onerror="this.closest('.client-logo-card').style.display='none';" src="/assets/img/clients/THE_TAP.png" alt="The Tap" width="150" height="64" loading="lazy" decoding="async"></div>
           </div>
 
           <p style="opacity:.7;margin-top:18px;max-width:800px;margin-left:auto;margin-right:auto">
-            Client logos are shown for portfolio credibility. Some projects may be represented without naming for confidentiality.
+            Client logos are shown for portfolio credibility and service context. Some projects may be represented without naming where confidentiality or procurement limits apply.
           </p>
         </div>
+      </div>
+
+      <div class="business-badge-card">
+        <h3>External Business Profile Badge</h3>
+        <p style="opacity:.86;margin-top:8px">
+          Kamog Artistry (U) Ltd also appears on external business listing platforms as part of our growing public credibility footprint.
+        </p>
+        <a href="https://businessfirms.co/company/kamog-artistry-u-ltd" target="_blank" rel="noopener">
+          <img src="https://businessfirms.co/images/bfirms-certified.png"
+               alt="Business Firms Certified Badge - Kamog Artistry (U) Ltd"
+               width="200" height="220" loading="lazy" decoding="async">
+        </a>
       </div>
 
       <div class="card cta-card" style="margin-top:28px">
         <h2 style="margin-bottom:10px">Need results like these?</h2>
         <p style="opacity:.85;margin-bottom:18px">
-          Share your goal, deadline and budget range and we will recommend the best design and production pathway for your project.
+          Send your goal, item type, quantity, deadline and location. We will recommend the right creative, print, signage or production route before quoting.
         </p>
 
         <div class="hero-actions">
-          <a href="/contact" class="btn-primary">Send Inquiry</a>
+          <a href="/contact/request-quotation/" class="btn-primary">Request Quotation</a>
+          <a href="/contact/document-request-form/" class="btn-secondary">Request Reference Documents</a>
           <a href="https://wa.me/256775251445" target="_blank" rel="noopener" class="btn-secondary">Chat on WhatsApp</a>
         </div>
 
         <p style="opacity:.82;margin-top:14px">
-          If you are comparing options, start with <a href="/services">services</a>, then review <a href="/portfolio">case studies</a>.
+          If you are comparing options, start with <a href="/services/">services</a>, review <a href="/portfolio/">case studies</a>, or use the <a href="/contact/">contact routes</a>.
         </p>
       </div>
-
-      <div style="text-align:center;margin-top:28px">
-
-  <a href="https://businessfirms.co/company/kamog-artistry-u-ltd" target="_blank" rel="noopener">
-
-    <img
-      src="https://businessfirms.co/images/bfirms-certified.png"
-      alt="Business Firms Certified Badge - Kamog Artistry (U) Ltd"
-      width="200"
-      height="220"
-      loading="lazy"
-      decoding="async"
-      style="margin:auto;display:block"
-    >
-
-  </a>
-
-      </div>
-      
     </section>
 
   </main>
+
 
   <footer class="footer">
     <div class="footer-wrap">
