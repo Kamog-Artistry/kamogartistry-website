@@ -2,23 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://kamogartistry.com/marketplace/</loc>
+    <loc>https://kamogartistry.com/marketplace</loc>
     <lastmod>2026-05-13</lastmod>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/marketplace/products/</loc>
+    <loc>https://kamogartistry.com/marketplace/products</loc>
     <lastmod>2026-05-13</lastmod>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/marketplace/categories/</loc>
+    <loc>https://kamogartistry.com/marketplace/categories</loc>
     <lastmod>2026-05-13</lastmod>
   </url>
 
   <url>
-    <loc>https://kamogartistry.com/marketplace/category/signage/</loc>
+    <loc>https://kamogartistry.com/marketplace/category/signage</loc>
     <lastmod>2026-05-13</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/marketplace/category/apparels</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/marketplace/category/branded-merchandise</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+
+  <url>
+    <loc>https://kamogartistry.com/marketplace/category/stationery</loc>
+    <lastmod>2026-07-29</lastmod>
   </url>
 
 </urlset>
