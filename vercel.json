@@ -83,6 +83,11 @@
       "permanent": true
     },
     {
+      "source": "/services/large-format-printing-kampala",
+      "destination": "/services/printing-services-kampala/large-format-printing-kampala",
+      "permanent": true
+    },
+    {
       "source": "/branded-stationery-uganda",
       "destination": "/services/branded-stationery-uganda",
       "permanent": true
@@ -184,7 +189,7 @@
     },
     {
       "source": "/services/printing/promotional-materials-printing-kampala",
-      "destination": "/services/printing-services-kampala",
+      "destination": "/services/custom-merchandise-uganda/promotional-items-uganda",
       "permanent": true
     },
     {
@@ -254,42 +259,42 @@
     },
     {
       "source": "/services/custom-merchandise-uganda/promotional-pens-uganda",
-      "destination": "/services/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/promotional-items-uganda",
       "permanent": true
     },
     {
       "source": "/services/custom-merchandise-uganda/keyholders-lanyards-uganda",
-      "destination": "/services/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/promotional-items-uganda",
       "permanent": true
     },
     {
       "source": "/services/custom-merchandise-uganda/branded-tshirts-uganda",
-      "destination": "/services/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/branded-apparel-uganda",
       "permanent": true
     },
     {
       "source": "/services/custom-merchandise-uganda/branded-bags-uganda",
-      "destination": "/services/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/promotional-items-uganda",
       "permanent": true
     },
     {
       "source": "/services/custom-merchandise-uganda/corporate-gift-packages-uganda",
-      "destination": "/services/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/corporate-gifts-uganda",
       "permanent": true
     },
     {
       "source": "/services/custom-merchandise-uganda/branded-umbrellas-uganda",
-      "destination": "/services/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/promotional-items-uganda",
       "permanent": true
     },
     {
       "source": "/services/custom-merchandise-uganda/custom-gift-box-packaging-uganda",
-      "destination": "/services/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/branded-gift-boxes-packaging-uganda",
       "permanent": true
     },
     {
       "source": "/services/custom-merchandise-uganda/branded-notebooks-uganda",
-      "destination": "/services/custom-merchandise-uganda",
+      "destination": "/services/custom-merchandise-uganda/promotional-items-uganda",
       "permanent": true
     },
     {
@@ -428,7 +433,19 @@
           "value": "creative-industry-trends"
         }
       ],
-      "destination": "/blog/creative-industry-trends",
+      "destination": "/blog/branding-printing-signage-in-uganda-practical-guide",
+      "permanent": true
+    },
+    {
+      "source": "/post.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "post",
+          "value": "creative-industry-trends"
+        }
+      ],
+      "destination": "/blog/branding-printing-signage-in-uganda-practical-guide",
       "permanent": true
     },
     {
@@ -486,6 +503,11 @@
     },
     {
       "source": "/blog/branding-printing-signage-guide-uganda",
+      "destination": "/blog/branding-printing-signage-in-uganda-practical-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog/creative-industry-trends",
       "destination": "/blog/branding-printing-signage-in-uganda-practical-guide",
       "permanent": true
     },
@@ -591,17 +613,17 @@
     },
     {
       "source": "/marketplace/products/signage/single-pole-road-light-box-signage/index.html",
-      "destination": "/marketplace/products",
+      "destination": "/marketplace/category/signage",
       "permanent": true
     },
     {
       "source": "/marketplace/products/signage/double-sided-road-light-box-signage/index.html",
-      "destination": "/marketplace/products",
+      "destination": "/marketplace/category/signage",
       "permanent": true
     },
     {
       "source": "/marketplace/products/signage/light-box-signage-single-side/index.html",
-      "destination": "/marketplace/products",
+      "destination": "/marketplace/category/signage",
       "permanent": true
     },
     {
